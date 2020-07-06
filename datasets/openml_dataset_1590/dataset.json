@@ -1,0 +1,18 @@
+{
+  "id": 1590,
+  "added_by": "Z-Xbeova",
+  "data_name": "adult",
+  "source": "openml",
+  "target": "class",
+  "number_of_instances": 48842,
+  "number_of_features": 13,
+  "number_of_numeric_features": 4,
+  "number_of_categorical_features": 9,
+  "number_of_missings": 6465,
+  "number_of_instances_with_missings": 3620,
+  "number_of_features_with_missings": 3,
+  "number_of_numeric_features_with_missings": 0,
+  "numeric_features_with_missings": [],
+  "number_of_categorical_features_with_missings": 3,
+  "categorical_features_with_missings": ["workclass", "occupation", "native.country"]
+}

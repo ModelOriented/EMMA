@@ -1,0 +1,18 @@
+{
+  "id": 4,
+  "added_by": "MaroonBlue",
+  "data_name": "labor",
+  "source": "openml",
+  "target": "class",
+  "number_of_instances": 57,
+  "number_of_features": 17,
+  "number_of_numeric_features": 8,
+  "number_of_categorical_features": 9,
+  "number_of_missings": 326,
+  "number_of_instances_with_missings": 56,
+  "number_of_features_with_missings": 16,
+  "number_of_numeric_features_with_missings": 8,
+  "numeric_features_with_missings": ["duration", "wage.increase.first.year", "wage.increase.second.year", "wage.increase.third.year", "working.hours", "standby.pay", "shift.differential", "statutory.holidays"],
+  "number_of_categorical_features_with_missings": 8,
+  "categorical_features_with_missings": ["cost.of.living.adjustment", "pension", "education.allowance", "vacation", "longterm.disability.assistance", "contribution.to.dental.plan", "bereavement.assistance", "contribution.to.health.plan"]
+}

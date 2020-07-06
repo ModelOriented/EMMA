@@ -1,0 +1,18 @@
+{
+  "id": 55,
+  "added_by": "okcze",
+  "data_name": "hepatitis",
+  "source": "openml",
+  "target": "Class",
+  "number_of_instances": 155,
+  "number_of_features": 20,
+  "number_of_numeric_features": 6,
+  "number_of_categorical_features": 14,
+  "number_of_missings": 167,
+  "number_of_instances_with_missings": 75,
+  "number_of_features_with_missings": 15,
+  "number_of_numeric_features_with_missings": 5,
+  "numeric_features_with_missings": ["BILIRUBIN", "ALK_PHOSPHATE", "SGOT", "ALBUMIN", "PROTIME"],
+  "number_of_categorical_features_with_missings": 10,
+  "categorical_features_with_missings": ["STEROID", "FATIGUE", "MALAISE", "ANOREXIA", "LIVER_BIG", "LIVER_FIRM", "SPLEEN_PALPABLE", "SPIDERS", "ASCITES", "VARICES"]
+}

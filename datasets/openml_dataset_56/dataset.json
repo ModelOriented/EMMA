@@ -1,0 +1,18 @@
+{
+  "id": 56,
+  "added_by": "hazdula",
+  "data_name": "vote",
+  "source": "openml",
+  "target": "Class",
+  "number_of_instances": 435,
+  "number_of_features": 17,
+  "number_of_numeric_features": 0,
+  "number_of_categorical_features": 17,
+  "number_of_missings": 392,
+  "number_of_instances_with_missings": 203,
+  "number_of_features_with_missings": 16,
+  "number_of_numeric_features_with_missings": 0,
+  "numeric_features_with_missings": [],
+  "number_of_categorical_features_with_missings": 16,
+  "categorical_features_with_missings": ["handicapped.infants", "water.project.cost.sharing", "adoption.of.the.budget.resolution", "physician.fee.freeze", "el.salvador.aid", "religious.groups.in.schools", "anti.satellite.test.ban", "aid.to.nicaraguan.contras", "mx.missile", "immigration", "synfuels.corporation.cutback", "education.spending", "superfund.right.to.sue", "crime", "duty.free.exports", "export.administration.act.south.africa"]
+}
