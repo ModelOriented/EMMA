@@ -1,0 +1,18 @@
+{
+  "id": 6332,
+  "added_by": "ejowik",
+  "data_name": "cylinder-bands",
+  "source": "openml",
+  "target": "band_type",
+  "number_of_instances": 540,
+  "number_of_features": 34,
+  "number_of_numeric_features": 19,
+  "number_of_categorical_features": 15,
+  "number_of_missings": 887,
+  "number_of_instances_with_missings": 252,
+  "number_of_features_with_missings": 25,
+  "number_of_numeric_features_with_missings": 18,
+  "numeric_features_with_missings": ["proof_cut", "viscosity", "ink_temperature", "humifity", "roughness", "blade_pressure", "varnish_pct", "press_speed", "ink_pct", "solvent_pct", "ESA_Voltage", "ESA_Amperage", "wax", "hardener", "roller_durometer", "current_density", "anode_space_ratio", "chrome_content"],
+  "number_of_categorical_features_with_missings": 7,
+  "categorical_features_with_missings": ["grain_screened", "proof_on_ctd_ink", "solvent_type", "type_on_cylinder", "cylinder_size", "paper_mill_location", "plating_tank"]
+}

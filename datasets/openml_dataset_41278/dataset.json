@@ -1,0 +1,18 @@
+{
+  "id": 41278,
+  "added_by": "MaroonBlue",
+  "data_name": [],
+  "source": "openml",
+  "target": "job",
+  "number_of_instances": 45907,
+  "number_of_features": 20,
+  "number_of_numeric_features": 2,
+  "number_of_categorical_features": 18,
+  "number_of_missings": 139693,
+  "number_of_instances_with_missings": 43970,
+  "number_of_features_with_missings": 14,
+  "number_of_numeric_features_with_missings": 1,
+  "numeric_features_with_missings": "height",
+  "number_of_categorical_features_with_missings": 13,
+  "categorical_features_with_missings": ["body_type", "diet", "drinks", "drugs", "education", "ethnicity", "income", "offspring", "pets", "religion", "sign", "smokes", "speaks"]
+}

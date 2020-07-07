@@ -1,0 +1,18 @@
+{
+  "id": 40536,
+  "added_by": "PlentyCoups",
+  "data_name": "SpeedDating",
+  "source": "openml",
+  "target": "match",
+  "number_of_instances": 8378,
+  "number_of_features": 123,
+  "number_of_numeric_features": 59,
+  "number_of_categorical_features": 64,
+  "number_of_missings": 18570,
+  "number_of_instances_with_missings": 7330,
+  "number_of_features_with_missings": 61,
+  "number_of_numeric_features_with_missings": 58,
+  "numeric_features_with_missings": ["age", "age_o", "d_age", "importance_same_race", "importance_same_religion", "pref_o_attractive", "pref_o_sincere", "pref_o_intelligence", "pref_o_funny", "pref_o_ambitious", "pref_o_shared_interests", "attractive_o", "sinsere_o", "intelligence_o", "funny_o", "ambitous_o", "shared_interests_o", "attractive_important", "sincere_important", "intellicence_important", "funny_important", "ambtition_important", "shared_interests_important", "attractive", "sincere", "intelligence", "funny", "ambition", "attractive_partner", "sincere_partner", "intelligence_partner", "funny_partner", "ambition_partner", "shared_interests_partner", "sports", "tvsports", "exercise", "dining", "museums", "art", "hiking", "gaming", "clubbing", "reading", "tv", "theater", "movies", "concerts", "music", "shopping", "yoga", "interests_correlate", "expected_happy_with_sd_people", "expected_num_interested_in_me", "expected_num_matches", "like", "guess_prob_liked", "met"],
+  "number_of_categorical_features_with_missings": 3,
+  "categorical_features_with_missings": ["race", "race_o", "field"]
+}

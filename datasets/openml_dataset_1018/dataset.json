@@ -1,0 +1,18 @@
+{
+  "id": 1018,
+  "added_by": "jjanborowka",
+  "data_name": "ipums_la_99-small",
+  "source": "openml",
+  "target": "binaryClass",
+  "number_of_instances": 8844,
+  "number_of_features": 56,
+  "number_of_numeric_features": 15,
+  "number_of_categorical_features": 41,
+  "number_of_missings": 34843,
+  "number_of_instances_with_missings": 8844,
+  "number_of_features_with_missings": 14,
+  "number_of_numeric_features_with_missings": 0,
+  "numeric_features_with_missings": [],
+  "number_of_categorical_features_with_missings": 14,
+  "categorical_features_with_missings": ["ownershg", "chborn", "school", "educrec", "schltype", "empstatg", "labforce", "classwkg", "wkswork2", "hrswork2", "yrlastwk", "workedyr", "migrat5g", "vetstat"]
+}

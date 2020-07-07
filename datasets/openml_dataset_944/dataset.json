@@ -1,0 +1,18 @@
+{
+  "id": 944,
+  "added_by": "agatam1235",
+  "data_name": "echoMonths",
+  "source": "openml",
+  "target": "binaryClass",
+  "number_of_instances": 130,
+  "number_of_features": 10,
+  "number_of_numeric_features": 6,
+  "number_of_categorical_features": 4,
+  "number_of_missings": 97,
+  "number_of_instances_with_missings": 69,
+  "number_of_features_with_missings": 7,
+  "number_of_numeric_features_with_missings": 6,
+  "numeric_features_with_missings": ["age", "fractional", "epss", "lvdd", "wall_score", "wall_index"],
+  "number_of_categorical_features_with_missings": 1,
+  "categorical_features_with_missings": "alive_at_1"
+}

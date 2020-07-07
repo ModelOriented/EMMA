@@ -1,0 +1,18 @@
+{
+  "id": 27,
+  "added_by": "Z-Xbeova",
+  "data_name": "colic",
+  "source": "openml",
+  "target": "surgical_lesion",
+  "number_of_instances": 368,
+  "number_of_features": 20,
+  "number_of_numeric_features": 5,
+  "number_of_categorical_features": 15,
+  "number_of_missings": 1199,
+  "number_of_instances_with_missings": 307,
+  "number_of_features_with_missings": 18,
+  "number_of_numeric_features_with_missings": 5,
+  "numeric_features_with_missings": ["rectal_temperature", "pulse", "respiratory_rate", "packed_cell_volume", "total_protein"],
+  "number_of_categorical_features_with_missings": 13,
+  "categorical_features_with_missings": ["surgery", "temp_extremities", "peripheral_pulse", "mucous_membranes", "capillary_refill_time", "pain", "peristalsis", "abdominal_distension", "nasogastric_tube", "nasogastric_reflux", "rectal_examination", "abdomen", "outcome"]
+}

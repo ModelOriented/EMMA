@@ -1,0 +1,18 @@
+{
+  "id": 29,
+  "added_by": "jakwisn",
+  "data_name": "credit-approval",
+  "source": "openml",
+  "target": "class",
+  "number_of_instances": 690,
+  "number_of_features": 16,
+  "number_of_numeric_features": 6,
+  "number_of_categorical_features": 10,
+  "number_of_missings": 67,
+  "number_of_instances_with_missings": 37,
+  "number_of_features_with_missings": 7,
+  "number_of_numeric_features_with_missings": 2,
+  "numeric_features_with_missings": ["Age", "Zipcode"],
+  "number_of_categorical_features_with_missings": 5,
+  "categorical_features_with_missings": ["Sex", "Married", "BankCustomer", "EducationLevel", "Ethicity"]
+}
