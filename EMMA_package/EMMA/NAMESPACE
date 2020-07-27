@@ -1,2 +1,5 @@
 exportPattern("^[[:alpha:]]+")
 import(mice)
+import(missMDA)
+import(doParallel)
+import(missForest)

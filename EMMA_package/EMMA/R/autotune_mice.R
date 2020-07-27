@@ -10,9 +10,9 @@
 #' @param df data frame for imputation.
 #' @param m number of sets produced by mice.
 #' @param maxit maximum number of iteration for mice.
-#' @param coll_miss name of columns with missing values.
-#' @param coll_no_miss character vector. Names of columns without NA.
-#' @param coll_type character vector. Vector containing column type names.
+#' @param col_miss name of columns with missing values.
+#' @param col_no_miss character vector. Names of columns without NA.
+#' @param col_type character vector. Vector containing column type names.
 #' @param percent_of_missing numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)
 #' @param low_corr double betwen 0,1 default 0 lower boundry of correlation set.
 #' @param up_corr double between 0,1 default 1 upper boundary of correlation set. Both of these parameters work the same for a fraction of features.
@@ -22,16 +22,16 @@
 #' @param optimize_no_numeric if user wont to optimize when no numeric values exist in df. Default False.
 #' @param correlation If True correlation is using if Fales fraction of features. Default True.
 #' @param return_one One or many imputed sets will be returned. Default True.
-#' @param coll_0_1 Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).
+#' @param col_0_1 Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).
 #'
 #'
 #'
 #' @return Return imputed datasets or mids object containing multi imputation datasets.
-autotune_mice <- function(df,m=5,maxit=5,coll_miss,coll_no_miss,coll_type,percent_of_missing,low_corr=0,up_corr=1,methods_random=c('pmm'),iter,random.seed=123,optimize_no_numeric = F,correlation=T,return_one=T,coll_0_1 = F ){
+autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,percent_of_missing,low_corr=0,up_corr=1,methods_random=c('pmm'),iter,random.seed=123,optimize_no_numeric = F,correlation=T,return_one=T,col_0_1 = F ){
 
 
 
-  formula_cre <- formula_creating(df,coll_miss,coll_no_miss,coll_type,percent_of_missing)
+  formula_cre <- formula_creating(df,col_miss,col_no_miss,col_type,percent_of_missing)
   formula <- formula_cre[1]
   no_numeric <- as.logical(formula_cre[2])
 
@@ -60,7 +60,7 @@ autotune_mice <- function(df,m=5,maxit=5,coll_miss,coll_no_miss,coll_type,percen
   if (return_one){
     imputed_dataset <- complete(imp_final)
     # If user chose to return 0,1 columns
-    if (coll_0_1 ){
+    if (col_0_1 ){
       where_imputed <- as.data.frame(imp_final$where)[,imp_final$nmis>0]
       colnames(where_imputed) <- paste(colnames(where_imputed),'where',sep = '_')
       imputed_dataset <- cbind(imputed_dataset,where_imputed*1)

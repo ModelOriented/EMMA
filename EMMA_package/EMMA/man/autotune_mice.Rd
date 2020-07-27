@@ -8,9 +8,9 @@ autotune_mice(
   df,
   m = 5,
   maxit = 5,
-  coll_miss,
-  coll_no_miss,
-  coll_type,
+  col_miss,
+  col_no_miss,
+  col_type,
   percent_of_missing,
   low_corr = 0,
   up_corr = 1,
@@ -20,7 +20,7 @@ autotune_mice(
   optimize_no_numeric = F,
   correlation = T,
   return_one = T,
-  coll_0_1 = F
+  col_0_1 = F
 )
 }
 \arguments{
@@ -30,11 +30,11 @@ autotune_mice(
 
 \item{maxit}{maximum number of iteration for mice.}
 
-\item{coll_miss}{name of columns with missing values.}
+\item{col_miss}{name of columns with missing values.}
 
-\item{coll_no_miss}{character vector. Names of columns without NA.}
+\item{col_no_miss}{character vector. Names of columns without NA.}
 
-\item{coll_type}{character vector. Vector containing column type names.}
+\item{col_type}{character vector. Vector containing column type names.}
 
 \item{percent_of_missing}{numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)}
 
@@ -54,7 +54,7 @@ autotune_mice(
 
 \item{return_one}{One or many imputed sets will be returned. Default True.}
 
-\item{coll_0_1}{Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).}
+\item{col_0_1}{Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).}
 }
 \value{
 Return imputed datasets or mids object containing multi imputation datasets.

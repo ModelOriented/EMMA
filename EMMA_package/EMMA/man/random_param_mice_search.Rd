@@ -41,3 +41,7 @@ List with best correlation (or fraction ) at first place, best method at second,
 \description{
 This function perform random search and return values corresponding to best mean IMF (missing information fraction).
 }
+\details{
+Even if correlation is set at False correlation its still use to select best features. That mean problem with
+calculating correlation between categorical columns is still important.
+}

@@ -12,7 +12,7 @@
 #' @param random.seed radnom seed.
 #' @param correlation If True correlation is using if Fales fraction of features. Default True.
 #'
-#' @detalist Even if correlation is set at False correlation its still use to select best features. That mean problem with
+#' @details  Even if correlation is set at False correlation its still use to select best features. That mean problem with
 #' calculating correlation between categorical columns is still important.
 #'
 #' @return List with best correlation (or fraction ) at first place, best method at second, and results of every iteration at 3.
