@@ -6,7 +6,11 @@ Author: Who wrote it
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
-Imports: mice , missMDA , missForest , doParallel
+Imports: 
+	mice, 
+	missMDA, 
+	missForest, 
+	doParallel
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true

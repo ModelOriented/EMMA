@@ -17,7 +17,7 @@ autotune_mice(
   methods_random = c("pmm"),
   iter,
   random.seed = 123,
-  optimize_no_numeric = F,
+  optimize = T,
   correlation = T,
   return_one = T,
   col_0_1 = F
@@ -48,13 +48,13 @@ autotune_mice(
 
 \item{random.seed}{random seed.}
 
-\item{optimize_no_numeric}{if user wont to optimize when no numeric values exist in df. Default False.}
-
 \item{correlation}{If True correlation is using if Fales fraction of features. Default True.}
 
 \item{return_one}{One or many imputed sets will be returned. Default True.}
 
 \item{col_0_1}{Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).}
+
+\item{optimize_no_numeric}{if user wont to optimize.}
 }
 \value{
 Return imputed datasets or mids object containing multi imputation datasets.

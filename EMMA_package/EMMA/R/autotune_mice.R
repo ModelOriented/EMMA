@@ -43,7 +43,7 @@ formula_creating <- function(df,col_miss,col_no_miss,col_type,percent_of_missing
         predicted_value <- columns_missing_type_n_i[order(columns_missing$percent_of_missing),][1]}
       else {no_numeric <-  T }
       if (length(row.names(columns_missing_type[-1,]))>=3){
-        predicting_values <-  columns_missing_type[order(as.numeric(as.character(columns_missing_type$percent_of_missing)),decreasing = T),V2][1:3]
+        predicting_values <-  columns_missing_type[order(as.numeric(as.character(columns_missing_type$percent_of_missing)),decreasing = T),'V2'][1:3]
       }
       else{predicting_value <-setdiff(predicted_value,col_miss)}
     }
@@ -151,7 +151,7 @@ random_param_mice_search <- function(low_corr=0,up_corr=1,methods_random = c('pm
 #' @param methods_random set of methods to chose. Default 'pmm'.
 #' @param iter number of iteration for randomSearch.
 #' @param random.seed random seed.
-#' @param optimize_no_numeric if user wont to optimize when no numeric values exist in df. Default False.
+#' @param optimize_no_numeric if user wont to optimize.
 #' @param correlation If True correlation is using if Fales fraction of features. Default True.
 #' @param return_one One or many imputed sets will be returned. Default True.
 #' @param col_0_1 Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).
@@ -159,7 +159,7 @@ random_param_mice_search <- function(low_corr=0,up_corr=1,methods_random = c('pm
 #'
 #'
 #' @return Return imputed datasets or mids object containing multi imputation datasets.
-autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,percent_of_missing,low_corr=0,up_corr=1,methods_random=c('pmm'),iter,random.seed=123,optimize_no_numeric = F,correlation=T,return_one=T,col_0_1 = F ){
+autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,percent_of_missing,low_corr=0,up_corr=1,methods_random=c('pmm'),iter,random.seed=123,optimize = T,correlation=T,return_one=T,col_0_1 = F ){
 
 
 
@@ -168,7 +168,7 @@ autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,percent_o
   no_numeric <- as.logical(formula_cre[2])
 
   # If user chose to optimise no numeric dataset
-  if (!optimize_no_numeric){
+  if (optimize){
     params <- random_param_mice_search(df=df,low_corr = low_corr,up_corr = up_corr,methods_random = methods_random,formula = formula,no_numeric = no_numeric,random.seed = random.seed,iter=iter,correlation = correlation)
     #If user chose to use correlation
     if (correlation){
@@ -180,7 +180,7 @@ autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,percent_o
   }
 
 
-  if (optimize_no_numeric){
+  if (!optimize){
     if (correlation){
       imp_final <- mice(df,m=m,maxit = maxit,method = 'pmm',pred=quickpred(df, mincor=0.5,method = 'spearman'),seed = random.seed)
     }
