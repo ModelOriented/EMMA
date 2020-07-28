@@ -9,11 +9,11 @@ formula_creating(df,coll_miss,coll_no_miss,coll_type,percent_of_missing)
 \arguments{
 \item{df}{data.frame. Df to impute with column names and without target column.}
 
-\item{coll_miss}{character vector. Names of columns with NA.}
+\item{col_miss}{character vector. Names of columns with NA.}
 
-\item{coll_no_miss}{character vector. Names of columns without NA.}
+\item{col_no_miss}{character vector. Names of columns without NA.}
 
-\item{coll_type}{character vector. Vector containing column type names.}
+\item{col_type}{character vector. Vector containing column type names.}
 
 \item{percent_of_missing}{numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)}
 }
