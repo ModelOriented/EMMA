@@ -3,6 +3,9 @@ library(janitor)
 library(tidyselect)
 
 preprocess <- function(df, df_desc, df_oml) {
+  #df_oml - object from getOMLDataSet()
+  #df_desc == df_oml$desc
+  #df == df_oml$data
   
   id <- df_desc$id
   

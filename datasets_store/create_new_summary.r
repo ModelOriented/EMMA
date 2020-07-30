@@ -3,6 +3,9 @@ library(dplyr)
 library(mice)
 
 create_summary <- function(df_oml, df_desc, df){
+  #df_oml - object from getOMLDataSet()
+  #df_desc == df_oml$desc
+  #df == df_oml$data
   
   #Types of features
   categorical <- colnames(df)[sapply(df, is.factor)]
