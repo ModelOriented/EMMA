@@ -15,7 +15,7 @@ data_types_troubles <- c()
 miss_in_target <- c()
 
 i <- 1
-for(id in datasets$ID[155]){
+for(id in datasets$ID){
   
   df_oml <- getOMLDataSet(id)
   df_desc <- df_oml$desc
@@ -70,10 +70,16 @@ for(id in datasets$ID[155]){
 
 #Troubles detection (founded missings in target variable, no problems with data types)
 detected_miss_in_target <- read_csv("datasets_store/information_base/miss_in_target_troubles.csv")
+
 #Removing from selected data sets
 selected_datasets <- read_csv("./datasets_store/datasets_selection/selected_datasets.csv")
 selected_datasets <- selected_datasets[!selected_datasets$ID %in% detected_miss_in_target$X1, ]
 #write.csv(selected_datasets, "./datasets_store/datasets_selection/selected_datasets.csv")
+# for (id in detected_miss_in_target$X1) {
+#   file.remove(paste("./datasets_store/information_base/dataset_", id, ".json", sep = ""))
+#   file.remove(paste("./datasets_store/patterns_base/dataset_", id, ".csv", sep = ""))
+# }
+
 
 #example_json <- fromJSON("./datasets_store/information_base/dataset_25.json")
 #example_pattern <- read_csv("./datasets_store/patterns_base/dataset_25.csv")
