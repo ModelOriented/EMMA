@@ -1,0 +1,5 @@
+"","pattern_count","name","cylinders","displacement","weight","acceleration","model.year","binaryClass","horsepower","mpg","missings_count"
+"392",392,1,1,1,1,1,1,1,1,1,0
+"8",8,1,1,1,1,1,1,1,1,0,1
+"6",6,1,1,1,1,1,1,1,0,1,1
+"",NA,0,0,0,0,0,0,0,6,8,14

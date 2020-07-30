@@ -1,0 +1,5 @@
+"","pattern_count","site","daf","fruit","weight","storewt","pene","solids","brix","a.","egdd","fgdd","sweetness","flavour","dry.moist","fibre","heat_input_emerg","heat_input_flower","binaryClass","groundspot_a.","glucose","fructose","sucrose","total","glucose.fructose","starch","missings_count"
+"X50",50,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0
+"X1",1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,6
+"X1.1",1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1
+"X",NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,7

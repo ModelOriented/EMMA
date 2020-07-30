@@ -1,0 +1,10 @@
+"","pattern_count","Holiday","HolidayFlag","DayOfWeek","WeekOfYear","Day","Month","Year","PeriodOfDay","SystemLoadEA","SMPEA","SystemLoadEP2","SMPEP2","ForecastWindProduction","ActualWindProduction","CO2Intensity","ORKTemperature","ORKWindspeed","missings_count"
+"X37682",37682,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0
+"X30",30,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1
+"X26",26,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1
+"X267",267,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,2
+"X4",4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1
+"X2",2,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,2
+"X1",1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,3
+"X2.1",2,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,9
+"X",NA,0,0,0,0,0,0,0,0,2,2,2,2,5,5,7,295,299,619

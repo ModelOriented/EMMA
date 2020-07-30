@@ -1,0 +1,5 @@
+"","pattern_count","age","menopause","tumor.size","inv.nodes","deg.malig","breast","irradiat","Class","breast.quad","node.caps","missings_count"
+"263",263,1,1,1,1,1,1,1,1,1,1,0
+"8",8,1,1,1,1,1,1,1,1,1,0,1
+"1",1,1,1,1,1,1,1,1,1,0,1,1
+"",NA,0,0,0,0,0,0,0,0,1,8,9

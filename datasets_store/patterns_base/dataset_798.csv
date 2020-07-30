@@ -1,0 +1,5 @@
+"","pattern_count","age","sex","cp","trestbps","fbs","restecg","thalach","exang","oldpeak","slope","num","binaryClass","thal","ca","missings_count"
+"297",297,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0
+"4",4,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1
+"2",2,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1
+"",NA,0,0,0,0,0,0,0,0,0,0,0,0,2,4,6

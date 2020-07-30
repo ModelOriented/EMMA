@@ -1,0 +1,7 @@
+"","pattern_count","Airline","Flight","AirportFrom","AirportTo","DayOfWeek","Time","Length","codrna_X1","codrna_X2","codrna_X3","codrna_X4","codrna_X5","codrna_X6","codrna_X7","codrna_X8","age","fnlwgt","education","education.num","marital.status","relationship","race","sex","capitalgain","capitalloss","hoursperweek","Delay","native.country","workclass","occupation","missings_count"
+"726962",726962,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0
+"10",10,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1
+"3056",3056,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,2
+"945",945,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1
+"61",61,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,3
+"",NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1006,3117,3127,7250

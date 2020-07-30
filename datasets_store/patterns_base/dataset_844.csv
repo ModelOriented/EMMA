@@ -1,0 +1,5 @@
+"","pattern_count","age","menopause","inv.nodes","deg.malig","breast","irradiation","recurrence","binaryClass","breast.quad","node.caps","missings_count"
+"270",270,1,1,1,1,1,1,1,1,1,1,0
+"8",8,1,1,1,1,1,1,1,1,1,0,1
+"1",1,1,1,1,1,1,1,1,1,0,1,1
+"",NA,0,0,0,0,0,0,0,0,1,8,9

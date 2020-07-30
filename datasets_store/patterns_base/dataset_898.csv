@@ -1,0 +1,4 @@
+"","pattern_count","treatment_1","treatment_2","treatment_3","binaryClass","control_1","control_2","control_3","control_4","missings_count"
+"24",24,1,1,1,1,1,1,1,1,0
+"30",30,1,1,1,1,0,0,0,0,4
+"",NA,0,0,0,0,30,30,30,30,120
