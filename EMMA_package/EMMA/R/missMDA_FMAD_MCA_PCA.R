@@ -18,24 +18,28 @@
 
 
 
-missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=T,set_ncp=2,col_0_1=F,ncp.max=5,return_one = T,random.seed=123){
+missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=TRUE,set_ncp=2,col_0_1=FALSE,ncp.max=5,return_one = TRUE,random.seed=123){
 
 
   #Flags informing about data type
-  FMAD <-  F # mix
-  MCA <-  F # categorical
-  PCA <- F # numeric
+  FMAD <-  FALSE # mix
+  MCA <-  FALSE # categorical
+  PCA <- FALSE # numeric
 
-  if ('factor' %in% col_type & ( 'numeric' %in%col_type | 'intiger' %in%col_type)){FMAD <- T  }
-  if ('factor' %in%col_type & !( 'numeric' %in% col_type | 'intiger' %in% col_type)){MCA <- T}
-  if ( !('factor' %in%col_type) & ( 'numeric' %in%col_type | 'intiger' %in%col_type)){PCA <-T }
+  if ('factor' %in% col_type & ( 'numeric' %in%col_type | 'intiger' %in%col_type)){FMAD <- TRUE  }
+  if ('factor' %in%col_type & !( 'numeric' %in% col_type | 'intiger' %in% col_type)){MCA <- TRUE}
+  if ( !('factor' %in%col_type) & ( 'numeric' %in%col_type | 'intiger' %in%col_type)){PCA <-TRUE }
   # If optimize_npc set True
   if (optimize_ncp){
-
-    if(FMAD){ser_ncp <-estim_ncpFAMD(df,method = 'Regularized',ncp.max = ncp.max)$ncp }
+    Fail <- FALSE
+    tryCatch({
+    if(FMAD){set_ncp <-estim_ncpFAMD(df,method = 'Regularized',ncp.max = ncp.max)$ncp }
     if(MCA){set_ncp <- estim_ncpMCA(df,method = 'Regularized',ncp.max = ncp.max)$ncp}
     if(PCA){set_ncp <- estim_ncpPCA(df,method = 'Regularized',ncp.max = ncp.max)$ncp}
+    },error = function(e) { Fail <<- TRUE})
+    if (Fail){print('Fail to estimate ncp')}
   }
+
   if (return_one){
   # imputation
   if(FMAD){final <-imputeFAMD(df,ncp = set_ncp,method = 'Regularized',seed = random.seed)$completeObs }
@@ -50,7 +54,7 @@ missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=T,s
   }
   return(final)}
   if (!return_one){
-    if(FMAD){final <-MIFAMD(df,ncp = set_ncp) }
+    if(FMAD){final <-MIFAMD(df,ncp = set_ncp)$completeObs }
     if(MCA){final <- MIMCA(df,ncp = set_ncp)$completeObs}
     if(PCA){final <- MIPCA(df,ncp=set_ncp)$completeObs}
     return(final$res.MI)

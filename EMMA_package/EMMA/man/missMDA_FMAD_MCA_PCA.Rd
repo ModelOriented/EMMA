@@ -8,11 +8,11 @@ missMDA_FMAD_MCA_PCA(
   df,
   col_type,
   percent_of_missing,
-  optimize_ncp = T,
+  optimize_ncp = TRUE,
   set_ncp = 2,
-  col_0_1 = F,
+  col_0_1 = FALSE,
   ncp.max = 5,
-  return_one = T,
+  return_one = TRUE,
   random.seed = 123
 )
 }

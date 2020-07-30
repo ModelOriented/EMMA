@@ -43,9 +43,12 @@ missMDA_MFA <- function(df,col_type,percent_of_missing,random.seed=123,ncp =2 ,c
     }}
   groups <- groups[-1]
   type <- type[-1]
+  if (length(groups )==1 ){
 
+    groups <- c(floor(groups/2),groups-floor(groups/2))
+    type <- rep(type[1],2)
+  }
 # Imputation
-
 final <-  imputeMFA(df,group = groups,type = type,ncp = ncp,method = 'Regularized')$completeObs
 # adding 0_1 columns
 
