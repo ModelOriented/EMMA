@@ -10,6 +10,7 @@
 #' @param col_0_1 Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).
 #' @param random.seed random seed.
 #' @param ncp Number of dimensions used by algorithm. Default 2.
+#' @import missMDA
 #' @details MFA requires to select group type but numeric types can only be set as 'c' - centered and 's' - scale to unit variance.
 #' It's impossible to provide these conditions so numeric type is always set as 's'.
 #' @return Return one data.frame with imputed values.

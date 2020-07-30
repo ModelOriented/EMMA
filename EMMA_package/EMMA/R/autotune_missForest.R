@@ -12,6 +12,8 @@
 #' @param mtry_set integer vector. Vector contains numbers of variables randomly sampled at each split.
 #' @param parallel logical. If TRUE parallel calculation is using.
 #' @param turn_off_parallel logical. If TRUE parallel backend is turn off after imputation.
+#' @import missForest
+#' @import doParallel
 #' @param col_0_1 decide if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False.
 #'
 #' @return Return data.frame with imputed values.

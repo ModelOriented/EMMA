@@ -13,6 +13,7 @@
 #' @param return_one One or many imputed sets will be returned. Default True.
 #' @param random.seed random seed.
 #' @param ncp.max integer corresponding to the maximum number of components to test. Default 5.
+#' @import missMDA
 #'
 #' @return Retrun one imputed data.frame if retrun_one=True or list of imputed data.frames if retrun_one=False.
 
