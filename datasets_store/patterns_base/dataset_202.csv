@@ -1,9 +1,0 @@
-"","pattern_count","symboling","make","fuel.type","aspiration","body.style","drive.wheels","engine.location","wheel.base","length","width","height","curb.weight","engine.type","num.of.cylinders","engine.size","fuel.system","compression.ratio","city.mpg","highway.mpg","num.of.doors","peak.rpm","class","bore","stroke","price","normalized.losses","missings_count"
-"X159",159,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0
-"X34",34,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1
-"X4",4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,2
-"X4.1",4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,2
-"X2",2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,0,3
-"X1",1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1
-"X1.1",1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,0,2
-"X",NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,4,4,4,41,59
