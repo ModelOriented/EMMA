@@ -158,9 +158,10 @@ random_param_mice_search <- function(low_corr=0,up_corr=1,methods_random = c('pm
 #' @param col_0_1 Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).
 #' @param set_cor Correlation or fraction of featurs using if optimize= False
 #' @param set_method Method used if optimize=False
+#' @param verbose If FALSE funtion didn't print on console.
 #' @import mice
 #' @return Return imputed datasets or mids object containing multi imputation datasets.
-autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,set_cor=0.5,set_method='pmm',percent_of_missing,low_corr=0,up_corr=1,methods_random=c('pmm'),iter,random.seed=123,optimize = T,correlation=T,return_one=T,col_0_1 = F ){
+autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,set_cor=0.5,set_method='pmm',percent_of_missing,low_corr=0,up_corr=1,methods_random=c('pmm'),iter,random.seed=123,optimize = T,correlation=T,return_one=T,col_0_1 = F ,verbose=FALSE){
 
 
 
@@ -173,20 +174,20 @@ autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,set_cor=0
     params <- random_param_mice_search(df=df,low_corr = low_corr,up_corr = up_corr,methods_random = methods_random,formula = formula,no_numeric = no_numeric,random.seed = random.seed,iter=iter,correlation = correlation)
     #If user chose to use correlation
     if (correlation){
-      imp_final <- mice(df,m=m,maxit = maxit,method = as.character(params[2]),pred=quickpred(df, mincor=as.numeric(params[1]),method = 'spearman'),seed = random.seed)
+      imp_final <- mice(df,printFlag = verbose,m=m,maxit = maxit,method = as.character(params[2]),pred=quickpred(df, mincor=as.numeric(params[1]),method = 'spearman'),seed = random.seed)
     }
     if (!correlation){
-      imp_final <- mice(df,m=m,maxit = maxit,method = as.character(params[2]),pred=quickpred(df, minpuc = as.numeric(params[1]),method = 'spearman'),seed = random.seed)
+      imp_final <- mice(df,printFlag = verbose,m=m,maxit = maxit,method = as.character(params[2]),pred=quickpred(df, minpuc = as.numeric(params[1]),method = 'spearman'),seed = random.seed)
     }
   }
 
 
   if (!optimize){
     if (correlation){
-      imp_final <- mice(df,m=m,maxit = maxit,method = set_method,pred=quickpred(df, mincor=set_cor,method = 'spearman'),seed = random.seed)
+      imp_final <- mice(df,printFlag = verbose,m=m,maxit = maxit,method = set_method,pred=quickpred(df, mincor=set_cor,method = 'spearman'),seed = random.seed)
     }
     if (!correlation){
-      imp_final <- mice(df,m=m,maxit = maxit,method = set_method,pred=quickpred(df, minpuc = set_cor,method = 'spearman'),seed = random.seed)
+      imp_final <- mice(df,printFlag = verbose,m=m,maxit = maxit,method = set_method,pred=quickpred(df, minpuc = set_cor,method = 'spearman'),seed = random.seed)
     }
   }
   # If user chose to return one dataset

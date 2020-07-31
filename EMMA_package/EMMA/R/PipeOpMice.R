@@ -1,10 +1,12 @@
 #' Mice Imputation
 #'
-#' @description This class create object implements autotune_mice function for use in mlr3 pipelinies.
+#' @description This class create object implements autotune_mice function for use in mlr3 pipelinies. Object can be created with \code{\link{autotune_mice}} params.
+#'
+#'
+#'
 #' @import mlr3
 #' @import mlr3pipelines
-#'
-#' @param ... all params are from autotune_mice function.
+
 
 
 PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
@@ -72,7 +74,7 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                                                 methods_random = self$param_set$values$methods_random,random.seed = self$param_set$values$random.seed,
                                                                 optimize = self$param_set$values$optimize,
                                                                 correlation = self$param_set$values$correlation,col_0_1 = self$param_set$values$col_0_1
-                                                                )## Zastąp funkcją
+                                                                )
 
                                   data_imputed <- cbind(data_imputed,target_col)
                                   colnames(data_imputed)[ncol(data_imputed)] <- input[[1]]$target_names
@@ -112,7 +114,7 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                                                 methods_random = self$param_set$values$methods_random,random.seed = self$param_set$values$random.seed,
                                                                 optimize = self$param_set$values$optimize,
                                                                 correlation = self$param_set$values$correlation,col_0_1 = self$param_set$values$col_0_1
-                                  )## Zastąp funkcją
+                                  )
 
                                   data_imputed <- cbind(data_imputed,target_col)
                                   colnames(data_imputed)[ncol(data_imputed)] <- input[[1]]$target_names
@@ -128,41 +130,3 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                 }
                               )
 )
-# posum = PipeOpMice$new(m = 20)
-#
-#
-#
-# graph = posum%>>% learner_po
-# glrn1 = GraphLearner$new(graph)
-# glrn1$train(TaskClassif$new('test',test_data,'Class'))
-
-#glrn1$param_set$values
-
-#### TESTING TIME  ####
-# d<- ParamSet$new(list('set_corr'=ParamDbl$new('set_corr', lower = 0, upper = 1, special_vals = list(), default = 0.4, tags = '')))
-#
-#
-#
-# s<- ParamDbl$new('set_corr', lower = 0, upper = 1, special_vals = list(), default = 0.4, tags = '')
-# d
-# d$is_empty
-#
-# ps = ParamSet$new(list(
-#   ParamInt$new("imput_mice.m", lower = 5, upper = 12),
-#   ParamInt$new("imput_mice.iter", lower = 1, upper = 3)
-# ))
-#
-# hout = rsmp("holdout")
-# measure = msr("classif.ce")
-# evals20 = term("evals", n_evals = 20)
-#
-# instance = TuningInstance$new(
-#   task = test_taks,
-#   learner = glrn1,
-#   resampling = hout,
-#   measure = measure,
-#   param_set = ps,
-#   terminator = evals20
-# )
-# tuner = tnr("grid_search", resolution = 5)
-# tuner$tune(instance)

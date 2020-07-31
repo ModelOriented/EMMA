@@ -22,7 +22,8 @@ autotune_mice(
   optimize = T,
   correlation = T,
   return_one = T,
-  col_0_1 = F
+  col_0_1 = F,
+  verbose = FALSE
 )
 }
 \arguments{
@@ -61,6 +62,8 @@ autotune_mice(
 \item{return_one}{One or many imputed sets will be returned. Default True.}
 
 \item{col_0_1}{Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).}
+
+\item{verbose}{If FALSE funtion didn't print on console.}
 }
 \value{
 Return imputed datasets or mids object containing multi imputation datasets.
