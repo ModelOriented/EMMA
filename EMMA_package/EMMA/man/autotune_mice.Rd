@@ -11,6 +11,8 @@ autotune_mice(
   col_miss,
   col_no_miss,
   col_type,
+  set_cor = 0.5,
+  set_method = "pmm",
   percent_of_missing,
   low_corr = 0,
   up_corr = 1,
@@ -20,7 +22,8 @@ autotune_mice(
   optimize = T,
   correlation = T,
   return_one = T,
-  col_0_1 = F
+  col_0_1 = F,
+  verbose = FALSE
 )
 }
 \arguments{
@@ -36,6 +39,10 @@ autotune_mice(
 
 \item{col_type}{character vector. Vector containing column type names.}
 
+\item{set_cor}{Correlation or fraction of featurs using if optimize= False}
+
+\item{set_method}{Method used if optimize=False}
+
 \item{percent_of_missing}{numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)}
 
 \item{low_corr}{double betwen 0,1 default 0 lower boundry of correlation set.}
@@ -48,13 +55,15 @@ autotune_mice(
 
 \item{random.seed}{random seed.}
 
+\item{optimize}{if user wont to optimize.}
+
 \item{correlation}{If True correlation is using if Fales fraction of features. Default True.}
 
 \item{return_one}{One or many imputed sets will be returned. Default True.}
 
 \item{col_0_1}{Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).}
 
-\item{optimize_no_numeric}{if user wont to optimize.}
+\item{verbose}{If FALSE funtion didn't print on console.}
 }
 \value{
 Return imputed datasets or mids object containing multi imputation datasets.

@@ -8,6 +8,7 @@
 #' @param col_no_miss character vector. Names of columns without NA.
 #' @param col_type character vector. Vector containing column type names.
 #' @param percent_of_missing numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)
+#' @import mice
 #' @usage formula_creating(df,coll_miss,coll_no_miss,coll_type,percent_of_missing)
 #' @return List with formula object[1] and information if its no numeric value in dataset[2].
 
@@ -82,7 +83,7 @@ formula_creating <- function(df,col_miss,col_no_miss,col_type,percent_of_missing
 #' @param iter number of iteration for randomSearch.
 #' @param random.seed radnom seed.
 #' @param correlation If True correlation is using if Fales fraction of features. Default True.
-#'
+#' @import mice
 #' @details  Even if correlation is set at False correlation its still use to select best features. That mean problem with
 #' calculating correlation between categorical columns is still important.
 #'
@@ -151,15 +152,16 @@ random_param_mice_search <- function(low_corr=0,up_corr=1,methods_random = c('pm
 #' @param methods_random set of methods to chose. Default 'pmm'.
 #' @param iter number of iteration for randomSearch.
 #' @param random.seed random seed.
-#' @param optimize_no_numeric if user wont to optimize.
+#' @param optimize if user wont to optimize.
 #' @param correlation If True correlation is using if Fales fraction of features. Default True.
 #' @param return_one One or many imputed sets will be returned. Default True.
 #' @param col_0_1 Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).
-#'
-#'
-#'
+#' @param set_cor Correlation or fraction of featurs using if optimize= False
+#' @param set_method Method used if optimize=False
+#' @param verbose If FALSE funtion didn't print on console.
+#' @import mice
 #' @return Return imputed datasets or mids object containing multi imputation datasets.
-autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,percent_of_missing,low_corr=0,up_corr=1,methods_random=c('pmm'),iter,random.seed=123,optimize = T,correlation=T,return_one=T,col_0_1 = F ){
+autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,set_cor=0.5,set_method='pmm',percent_of_missing,low_corr=0,up_corr=1,methods_random=c('pmm'),iter,random.seed=123,optimize = T,correlation=T,return_one=T,col_0_1 = F ,verbose=FALSE){
 
 
 
@@ -172,20 +174,20 @@ autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,percent_o
     params <- random_param_mice_search(df=df,low_corr = low_corr,up_corr = up_corr,methods_random = methods_random,formula = formula,no_numeric = no_numeric,random.seed = random.seed,iter=iter,correlation = correlation)
     #If user chose to use correlation
     if (correlation){
-      imp_final <- mice(df,m=m,maxit = maxit,method = as.character(params[2]),pred=quickpred(df, mincor=as.numeric(params[1]),method = 'spearman'),seed = random.seed)
+      imp_final <- mice(df,printFlag = verbose,m=m,maxit = maxit,method = as.character(params[2]),pred=quickpred(df, mincor=as.numeric(params[1]),method = 'spearman'),seed = random.seed)
     }
     if (!correlation){
-      imp_final <- mice(df,m=m,maxit = maxit,method = as.character(params[2]),pred=quickpred(df, minpuc = as.numeric(params[1]),method = 'spearman'),seed = random.seed)
+      imp_final <- mice(df,printFlag = verbose,m=m,maxit = maxit,method = as.character(params[2]),pred=quickpred(df, minpuc = as.numeric(params[1]),method = 'spearman'),seed = random.seed)
     }
   }
 
 
   if (!optimize){
     if (correlation){
-      imp_final <- mice(df,m=m,maxit = maxit,method = 'pmm',pred=quickpred(df, mincor=0.5,method = 'spearman'),seed = random.seed)
+      imp_final <- mice(df,printFlag = verbose,m=m,maxit = maxit,method = set_method,pred=quickpred(df, mincor=set_cor,method = 'spearman'),seed = random.seed)
     }
     if (!correlation){
-      imp_final <- mice(df,m=m,maxit = maxit,method = 'pmm',pred=quickpred(df, minpuc = 0.5,method = 'spearman'),seed = random.seed)
+      imp_final <- mice(df,printFlag = verbose,m=m,maxit = maxit,method = set_method,pred=quickpred(df, minpuc = set_cor,method = 'spearman'),seed = random.seed)
     }
   }
   # If user chose to return one dataset

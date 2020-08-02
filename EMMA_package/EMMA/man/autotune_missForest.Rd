@@ -12,7 +12,11 @@ autotune_missForest(
   mtry_set = NULL,
   parallel = TRUE,
   turn_off_parallel = FALSE,
-  col_0_1 = FALSE
+  col_0_1 = FALSE,
+  optimize = TRUE,
+  ntree = 100,
+  mtry = NULL,
+  verbose = FALSE
 )
 }
 \arguments{
@@ -31,6 +35,14 @@ autotune_missForest(
 \item{turn_off_parallel}{logical. If TRUE parallel backend is turn off after imputation.}
 
 \item{col_0_1}{decide if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False.}
+
+\item{optimize}{optimize inside function}
+
+\item{ntree}{ntree from missForest function}
+
+\item{mtry}{mtry form missforest function}
+
+\item{verbose}{If FALSE funtion didn't print on console.}
 }
 \value{
 Return data.frame with imputed values.
