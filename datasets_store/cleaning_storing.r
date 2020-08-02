@@ -6,82 +6,81 @@ library(janitor)
 library(tidyselect)
 
 source("./datasets_store/create_new_summary.r")
+source("./datasets_store/preprocess.R")
 
 #Reading list of selected data sets
 datasets <- read_csv("./datasets_store/datasets_selection/selected_datasets.csv")
 
-check_type <- function(x){
-  is.numeric(x) | is.factor(x)
-}
-
 data_types_troubles <- c()
 miss_in_target <- c()
 
-#Temporary test on 20 datasets
-for(id in datasets$ID[1:20]){
+i <- 1
+for(id in datasets$ID){
   
   df_oml <- getOMLDataSet(id)
   df_desc <- df_oml$desc
   df <- df_oml$data
   
-  ### Preprocessing step ###
-  
-  #Columns to ignore according to tags
-  to_ignore <- df_desc$ignore.attribute
-  if(!is.na(to_ignore)){
-    df <- select(df, -all_of(to_ignore))  
+  if(id==940 | id==565){
+    #Spelling mistake in OML description
+    df_desc$ignore.attribute <- c('date', 'Q.E') 
+  }
+  if(id==41704){
+    #Spelling mistake in OML description
+    df_desc$ignore.attribute <- "instance_id" 
   }
   
-  #Removing row ID column according to tags
-  row_id <- df_desc$row.id.attribute
-  if(!is.na(row_id)){
-    df <- select(df, -all_of(row_id))  
+  
+  ### Preprocessing ###
+  cleaned_df <- preprocess(df, df_desc, df_oml)
+  df <- cleaned_df$df
+  
+  if(cleaned_df$data_types_troubles){
+    write.table( id,  
+                 file="./datasets_store/information_base/data_types_troubles.csv", 
+                 append = T, 
+                 sep=',', 
+                 row.names=F, 
+                 col.names=F )
   }
-  
-  #Data types
-  data_types_check <- sapply(df, check_type)
-  
-  if(any(!data_types_check)){
-    wrong_columns <- colnames(df)[!data_types_check]
-    
-    #Trying possible conversions
-    for(col in wrong_columns){
-      
-      if(is.logical(df[,col]) | is.character(df[,col])){
-        df[,col] <- as.factor(df[,col])
-      }else{
-        warning(paste("Data type trouble ID: ", as.character(id)))
-        data_types_troubles <- c(data_types_troubles, id)
-      }
-    }
+  if(cleaned_df$miss_in_target){
+    write.table( id,  
+                 file="./datasets_store/information_base/miss_in_target_troubles.csv", 
+                 append = T, 
+                 sep=',', 
+                 row.names=F, 
+                 col.names=F )
   }
-  
-  #Removing possible duplicate rows
-  df <- df[!duplicated(df), ]
-  
-  #Removing constant columns
-  df <- remove_constant(df)  
-  
-  #Removing empty columns
-  df <- remove_empty(df, "cols")
-  
-  #All to lowercase
-  df <- mutate_if(df, is.factor, function(x) factor(tolower(x)))
-  
-  #Missing values in target variable
-  target <- df_oml$target.features
-  if(any(is.na(df[, target]))){
-    miss_in_target <- c(miss_in_target, id)
-    warning(paste("Missing values in target variable ID: ", as.character(id)))
-  }
-  
-  #Categorical columns with high fraction of unique values
-  #?
   
   ### Collecting information step ###
-  json_summary <- create_summary(df_oml, df_desc, df)
+  summary <- create_summary(df_oml, df_desc, df)
+  json_summary <- summary$summary_json
+  missings_pattern <- summary$missings_pattern
+  
   write(json_summary, paste("./datasets_store/information_base/dataset_", id, ".json", sep = ""))
+  write.csv(missings_pattern, paste("./datasets_store/patterns_base/dataset_", id, ".csv", sep = ""))
+  
+  #Cleaning cache
+  i <- i+1
+  if(i==20){
+    clearOMLCache()
+    i <- 1
+  }
 }
 
+#Troubles detection (founded missings in target variable, no problems with data types)
+detected_miss_in_target <- read_csv("datasets_store/information_base/miss_in_target_troubles.csv")
+
+#Removing from selected data sets
+selected_datasets <- read_csv("./datasets_store/datasets_selection/selected_datasets.csv")
+selected_datasets <- selected_datasets[!selected_datasets$ID %in% detected_miss_in_target$X1, ]
+#write.csv(selected_datasets, "./datasets_store/datasets_selection/selected_datasets.csv")
+# for (id in detected_miss_in_target$X1) {
+#   file.remove(paste("./datasets_store/information_base/dataset_", id, ".json", sep = ""))
+#   file.remove(paste("./datasets_store/patterns_base/dataset_", id, ".csv", sep = ""))
+# }
+
+
 #example_json <- fromJSON("./datasets_store/information_base/dataset_25.json")
+#example_pattern <- read_csv("./datasets_store/patterns_base/dataset_25.csv")
 

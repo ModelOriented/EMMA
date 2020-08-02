@@ -1,0 +1,5 @@
+"","pattern_count","delay","vehicle_type","direction","stop_id","weekday","time","temp","windspeed_max","windspeed_avg","precipitation","dew_point","humidity","hour","dayminute","line_number","missings_count"
+"1434879",1434879,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0
+"33068",33068,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1
+"1",1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,8
+"",NA,0,0,0,0,0,0,1,1,1,1,1,1,1,1,33068,33076

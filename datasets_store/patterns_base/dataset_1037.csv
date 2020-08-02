@@ -1,0 +1,4 @@
+"","pattern_count","age","workclass","fnlwgt","education","educationNum","maritalStatus","occupation","relationship","race","sex","capitalGain","capitalLoss","hoursPerWeek","label","nativeCountry","missings_count"
+"4474",4474,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0
+"88",88,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1
+"",NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,88,88

@@ -1,0 +1,6 @@
+"","pattern_count","Manufacturer","Type","City_MPG","Highway_MPG","Air_Bags_standard","Drive_train_type","Engine_size","Horsepower","RPM","Engine_revolutions_per_mile","Manual_transmission_available","Fuel_tank_capacity","Passenger_capacity","Length","Wheelbase","Width","U.turn_space","Weight","Domestic","class","Number_of_cylinders","Rear_seat_room","Luggage_capacity","missings_count"
+"X82",82,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0
+"X9",9,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1
+"X1",1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,2
+"X1.1",1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,3
+"X",NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,11,14

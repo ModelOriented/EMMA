@@ -1,0 +1,6 @@
+"","pattern_count","body_weight","brain_weight","predation_index","sleep_exposure_index","danger_index","binaryClass","max_life_span","gestation_time","missings_count"
+"X55",55,1,1,1,1,1,1,1,1,0
+"X3",3,1,1,1,1,1,1,1,0,1
+"X3.1",3,1,1,1,1,1,1,0,1,1
+"X1",1,1,1,1,1,1,1,0,0,2
+"X",NA,0,0,0,0,0,0,4,4,8

@@ -1,0 +1,4 @@
+"","pattern_count","Clump_Thickness","Cell_Size_Uniformity","Cell_Shape_Uniformity","Marginal_Adhesion","Single_Epi_Cell_Size","Bland_Chromatin","Normal_Nucleoli","Mitoses","Class","Bare_Nuclei","missings_count"
+"449",449,1,1,1,1,1,1,1,1,1,1,0
+"14",14,1,1,1,1,1,1,1,1,1,0,1
+"",NA,0,0,0,0,0,0,0,0,0,14,14
