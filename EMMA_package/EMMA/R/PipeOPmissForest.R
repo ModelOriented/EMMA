@@ -73,10 +73,12 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
 
 
                                if (input[[1]]$task_type=='classif'){
-                                 input[[1]] <- TaskClassif$new(input[[1]]$id,data_imputed,input[[1]]$target_names,positive =input[[1]]$positive )
+                                 if (is.na(input[[1]]$positive)){
+                                   input[[1]] <- TaskClassif$new(input[[1]]$id,data_imputed,input[[1]]$target_names)}
+                                 else {input[[1]] <- TaskClassif$new(input[[1]]$id,data_imputed,input[[1]]$target_names,positive = input[[1]]$positive)}
                                }
                                if ( input[[1]]$task_type=='regr'){
-                                 input[[1]] <- TaskRegrf$new(input[[1]]$id,data_imputed,input[[1]]$target_names,positive =input[[1]]$positive )
+                                 input[[1]] <- TaskRegrf$new(input[[1]]$id,data_imputed,input[[1]]$target_names)
                                }
                                return(input)
                              },
@@ -108,10 +110,12 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                colnames(data_imputed)[ncol(data_imputed)] <- input[[1]]$target_names
 
                                if (input[[1]]$task_type=='classif'){
-                                 input[[1]] <- TaskClassif$new(input[[1]]$id,data_imputed,input[[1]]$target_names,positive =input[[1]]$positive )
+                                 if (is.na(input[[1]]$positive)){
+                                   input[[1]] <- TaskClassif$new(input[[1]]$id,data_imputed,input[[1]]$target_names)}
+                                 else {input[[1]] <- TaskClassif$new(input[[1]]$id,data_imputed,input[[1]]$target_names,positive = input[[1]]$positive)}
                                }
                                if ( input[[1]]$task_type=='regr'){
-                                 input[[1]] <- TaskRegrf$new(input[[1]]$id,data_imputed,input[[1]]$target_names,positive =input[[1]]$positive )
+                                 input[[1]] <- TaskRegrf$new(input[[1]]$id,data_imputed,input[[1]]$target_names)
                                }
 
                                return(input)

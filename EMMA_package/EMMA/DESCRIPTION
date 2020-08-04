@@ -14,7 +14,8 @@ Depends:
     doParallel,
     paradox,
     mlr3,
-    mlr3pipelines
+    mlr3pipelines,
+    Amelia
 Imports:
     mice,
     missForest,
