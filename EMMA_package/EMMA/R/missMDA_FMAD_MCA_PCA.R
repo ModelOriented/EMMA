@@ -12,15 +12,22 @@
 #' @param col_0_1 Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).
 #' @param return_one One or many imputed sets will be returned. Default True.
 #' @param random.seed random seed.
+#' @param coeff.ridge Value use in Regularized method.
 #' @param ncp.max integer corresponding to the maximum number of components to test. Default 5.
+#' @param maxiter maximal number of iteration in algortihm.
+#' @param method method used in imputation algoritm.
+#' @param threshold threshold for convergence.
 #' @import missMDA
 #'
 #' @return Retrun one imputed data.frame if retrun_one=True or list of imputed data.frames if retrun_one=False.
 
 
 
-missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=TRUE,set_ncp=2,col_0_1=FALSE,ncp.max=5,return_one = TRUE,random.seed=123){
+missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=TRUE,set_ncp=2,col_0_1=FALSE,ncp.max=5,return_one = TRUE,random.seed=123,maxiter=1000,
+                                 coeff.ridge=1,threshold=1e-6,method='Regularized'){
 
+
+  if (sum(is.na(df))==0){return(df)}
 
   #Flags informing about data type
   FMAD <-  FALSE # mix
@@ -34,21 +41,21 @@ missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=TRU
   if (optimize_ncp){
     Fail <- FALSE
     tryCatch({
-    if(FMAD){set_ncp <-estim_ncpFAMD(df,method = 'Regularized',ncp.max = ncp.max)$ncp }
-    if(MCA){set_ncp <- estim_ncpMCA(df,method = 'Regularized',ncp.max = ncp.max)$ncp}
-    if(PCA){set_ncp <- estim_ncpPCA(df,method = 'Regularized',ncp.max = ncp.max)$ncp}
+    if(FMAD){set_ncp <-estim_ncpFAMD(df,method = method,ncp.max = ncp.max)$ncp }
+    if(MCA){set_ncp <- estim_ncpMCA(df,method = method,ncp.max = ncp.max)$ncp}
+    if(PCA){set_ncp <- estim_ncpPCA(df,method = method,ncp.max = ncp.max)$ncp}
     },error = function(e) { Fail <<- TRUE})
     if (Fail){print('Fail to estimate ncp')}
   }
 
   if (return_one){
   # imputation
-  if(FMAD){final <-imputeFAMD(df,ncp = set_ncp,method = 'Regularized',seed = random.seed)$completeObs }
-  if(MCA){final <- imputeMCA(df,ncp = set_ncp,method = 'Regularized',seed = random.seed)$completeObs}
-  if(PCA){final <- imp(df,ncp=set_ncp,method = 'Regularized',seed = random.seed)$completeObs}
+  if(FMAD){final <-imputeFAMD(df,ncp = set_ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs }
+  if(MCA){final <- imputeMCA(df,ncp = set_ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs}
+  if(PCA){final <- imputePCA(df,ncp=set_ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs}
 
   # adding 0,1 cols
-  if (col_0_1){
+    if (col_0_1){
     columns_with_missing <-  (as.data.frame(is.na(df))*1)[,percent_of_missing>0]
     colnames(columns_with_missing) <- paste(colnames(columns_with_missing),'where',sep='_')
     final <- cbind(final,columns_with_missing)
@@ -61,5 +68,5 @@ missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=TRU
     return(final$res.MI)
   }
 }
-
+missMDA_FMAD_MCA_PCA(iris,c(rep('numeric',4),'factor'),c(0,0,0,0,0))
 

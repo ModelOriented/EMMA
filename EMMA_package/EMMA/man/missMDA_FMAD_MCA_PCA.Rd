@@ -13,7 +13,11 @@ missMDA_FMAD_MCA_PCA(
   col_0_1 = FALSE,
   ncp.max = 5,
   return_one = TRUE,
-  random.seed = 123
+  random.seed = 123,
+  maxiter = 1000,
+  coeff.ridge = 1,
+  threshold = 1e-06,
+  method = "Regularized"
 )
 }
 \arguments{
@@ -34,6 +38,14 @@ missMDA_FMAD_MCA_PCA(
 \item{return_one}{One or many imputed sets will be returned. Default True.}
 
 \item{random.seed}{random seed.}
+
+\item{maxiter}{maximal number of iteration in algortihm.}
+
+\item{coeff.ridge}{Value use in Regularized method.}
+
+\item{threshold}{threshold for convergence.}
+
+\item{method}{method used in imputation algoritm.}
 }
 \value{
 Retrun one imputed data.frame if retrun_one=True or list of imputed data.frames if retrun_one=False.

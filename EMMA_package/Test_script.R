@@ -9,7 +9,7 @@ library(doParallel)
 
 #Reading list of selected data sets
 read
-datasets <- read.csv("../datasets_store/datasets_selection/selected_datasets.csv")
+datasets <- read.csv("../../datasets_store/datasets_selection/selected_datasets.csv")
 
 check_type <- function(x){
   is.numeric(x) | is.factor(x)
@@ -22,7 +22,7 @@ out_file <- 'LOG_PIPELINIE'
 
 write(paste0('LOG',Sys.Date()),file = out_file)
 for(id in datasets$ID[1:20]){
-  id <- 25
+  id <- 179
   df_oml <- getOMLDataSet(id)
   df_desc <- df_oml$desc
   df <- df_oml$data

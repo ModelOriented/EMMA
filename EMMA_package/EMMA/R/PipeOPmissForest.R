@@ -11,10 +11,11 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                            inherit = PipeOp,  # inherit from PipeOp
                            public = list(
                              initialize = function(id = "imput_missForest", cores=NULL,ntree_set=c(100,200,500,1000),mtry_set=NULL,parallel=TRUE,
-                                                   turn_off_parallel=FALSE,col_0_1=FALSE,mtry=NULL,ntree=100,optimize=TRUE
+                                                   turn_off_parallel=FALSE,col_0_1=FALSE,mtry=NULL,ntree=100,optimize=TRUE,maxiter=20,maxnodes=NULL
                              ) {
                                super$initialize(id, param_vals = list(cores =cores,ntree_set =ntree_set,mtry_set=mtry_set,parallel=parallel,
-                                                                      turn_off_parallel=turn_off_parallel,col_0_1=col_0_1,mtry=mtry,ntree=ntree,optimize=optimize),
+                                                                      turn_off_parallel=turn_off_parallel,col_0_1=col_0_1,mtry=mtry,ntree=ntree,optimize=optimize,
+                                                                      maxiter=maxiter,maxnodes=maxnodes),
                                                 param_set= ParamSet$new(list(
                                                   'ntree_set'=ParamUty$new('ntree_set', default = c(100,200,500,1000), tags = 'missForest'),
                                                   'cores'=ParamUty$new('cores',default = NULL,tags='missForest'),
@@ -24,7 +25,9 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                                   'col_0_1'=ParamLgl$new('col_0_1',default = F,tags='missForest'),
                                                   'mtry'=ParamUty$new('mtry',default = NULL,tags='missForest'),
                                                   'ntree'=ParamInt$new('ntree',lower = 10,upper = Inf,default = 100,tags='missForest'),
-                                                  'optimize'=ParamLgl$new('optimize',default = TRUE,tags='missForest')
+                                                  'optimize'=ParamLgl$new('optimize',default = TRUE,tags='missForest'),
+                                                  'maxiter'=ParamInt$new('maxiter',lower = 5,upper = Inf,default = 20,tags='missForest'),
+                                                  'maxnodes'=ParamUty$new('maxnodes',default = NULL,tags='missForest')
 
 
 
@@ -65,7 +68,8 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                                                    ntree_set = self$param_set$values$ntree_set,mtry_set = self$param_set$values$mtry_set,
                                                                    parallel = self$param_set$values$parallel,turn_off_parallel = self$param_set$values$turn_off_parallel,
                                                                    col_0_1 = self$param_set$values$col_0_1,optimize = self$param_set$values$optimize,
-                                                                   ntree = self$param_set$values$ntree,mtry = self$param_set$values$mtry)
+                                                                   ntree = self$param_set$values$ntree,mtry = self$param_set$values$mtry,
+                                                                   maxiter=self$param_set$values$maxiter,maxnodes=self$param_set$values$maxnodes)
 
 
                                data_imputed <- cbind(data_imputed,target_col)
@@ -104,7 +108,8 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                                                    ntree_set = self$param_set$values$ntree_set,mtry_set = self$param_set$values$mtry_set,
                                                                    parallel = self$param_set$values$parallel,turn_off_parallel = self$param_set$values$turn_off_parallel,
                                                                    col_0_1 = self$param_set$values$col_0_1,optimize = self$param_set$values$optimize,
-                                                                   ntree = self$param_set$values$ntree,mtry = self$param_set$values$mtry)
+                                                                   ntree = self$param_set$values$ntree,mtry = self$param_set$values$mtry,
+                                                                   maxiter=self$param_set$values$maxiter,maxnodes=self$param_set$values$maxnodes)
 
                                data_imputed <- cbind(data_imputed,target_col)
                                colnames(data_imputed)[ncol(data_imputed)] <- input[[1]]$target_names
@@ -122,4 +127,5 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                              }
                            )
 )
+
 

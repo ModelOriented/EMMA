@@ -42,7 +42,9 @@ This class create object implements autotune_missForest function for use in mlr3
   col_0_1 = FALSE,
   mtry = NULL,
   ntree = 100,
-  optimize = TRUE
+  optimize = TRUE,
+  maxiter = 20,
+  maxnodes = NULL
 )}\if{html}{\out{</div>}}
 }
 

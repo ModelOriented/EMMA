@@ -16,13 +16,15 @@
 #' @param ntree ntree from missForest function
 #' @param mtry mtry form missforest function
 #' @param verbose If FALSE funtion didn't print on console.
+#' @param maxiter maxiter form missForest function.
+#' @param maxnodes maxnodes from missForest function.
 #' @import missForest
 #' @import doParallel
 #' @param col_0_1 decide if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False.
 #'
 #' @return Return data.frame with imputed values.
 autotune_missForest <-function(df,percent_of_missing,cores=NULL,ntree_set =c(100,200,500,1000),mtry_set=NULL,parallel=TRUE,turn_off_parallel=FALSE,col_0_1=FALSE,
-                               optimize=TRUE,ntree=100,mtry=NULL,verbose=FALSE){
+                               optimize=TRUE,ntree=100,mtry=NULL,verbose=FALSE,maxiter=20,maxnodes=NULL){
 
   # Checking if parallel backed is runing and starting it if not
   if (parallel){
@@ -67,7 +69,7 @@ autotune_missForest <-function(df,percent_of_missing,cores=NULL,ntree_set =c(100
       skip_to_next <- FALSE
 
       tryCatch({
-        iteration <-  mean(missForest(df,maxiter = 20,ntree = i,mtry = j,parallelize=parallelize,verbose = verbose)$OOBerror)
+        iteration <-  mean(missForest(df,maxiter = maxiter,ntree = i,mtry = j,parallelize=parallelize,maxnodes = maxnodes,verbose = verbose)$OOBerror)
         if (iteration<best_OBB){
           best_OBB <- iteration
           best_params[1] <- i
@@ -83,12 +85,12 @@ autotune_missForest <-function(df,percent_of_missing,cores=NULL,ntree_set =c(100
   }
 
   #fianl imputation
-  final <- missForest(df,maxiter = 20,ntree = best_params[1],mtry = best_params[2],parallelize=parallelize,verbose = verbose)$ximp
+  final <- missForest(df,maxiter = maxiter,maxnodes = maxnodes,ntree = best_params[1],mtry = best_params[2],parallelize=parallelize,verbose = verbose)$ximp
   }
   if (!optimize){
     if (is.null(mtry)){
-    final <- missForest(df,maxiter = 20,ntree = ntree,mtry = floor(sqrt(ncol(df))),parallelize = parallelize,verbose = verbose)$ximp}
-    else{ final <- missForest(df,maxiter = 20,ntree = ntree,mtry = mtry,parallelize = parallelize,verbose = verbose)$ximp}
+    final <- missForest(df,maxiter = maxiter,ntree = ntree,maxnodes = maxnodes,mtry = floor(sqrt(ncol(df))),parallelize = parallelize,verbose = verbose)$ximp}
+    else{ final <- missForest(df,maxiter = maxiter,ntree = ntree,maxnodes = maxnodes,mtry = mtry,parallelize = parallelize,verbose = verbose)$ximp}
   }
   #adding 0_1_cols
   if (col_0_1){

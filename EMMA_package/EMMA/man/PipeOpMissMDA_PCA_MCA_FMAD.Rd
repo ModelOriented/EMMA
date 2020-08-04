@@ -38,7 +38,11 @@ This class create object implements missMDA_FMAD_MCA_PCA function for use in mlr
   set_ncp = 2,
   col_0_1 = F,
   ncp.max = 5,
-  random.seed = 123
+  random.seed = 123,
+  maxiter = 1000,
+  coeff.ridge = 1,
+  threshold = 1e-06,
+  method = "Regularized"
 )}\if{html}{\out{</div>}}
 }
 

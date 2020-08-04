@@ -16,7 +16,9 @@ autotune_missForest(
   optimize = TRUE,
   ntree = 100,
   mtry = NULL,
-  verbose = FALSE
+  verbose = FALSE,
+  maxiter = 20,
+  maxnodes = NULL
 )
 }
 \arguments{
@@ -43,6 +45,10 @@ autotune_missForest(
 \item{mtry}{mtry form missforest function}
 
 \item{verbose}{If FALSE funtion didn't print on console.}
+
+\item{maxiter}{maxiter form missForest function.}
+
+\item{maxnodes}{maxnodes from missForest function.}
 }
 \value{
 Return data.frame with imputed values.

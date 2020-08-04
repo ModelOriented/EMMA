@@ -10,13 +10,20 @@
 PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",lock_objects=FALSE,
                            inherit = PipeOp,  # inherit from PipeOp
                            public = list(
-                             initialize = function(id = "imput_missMDA_MCA_PCA_FMAD", optimize_ncp = T, set_ncp=2,col_0_1=F,ncp.max=5,random.seed=123
+                             initialize = function(id = "imput_missMDA_MCA_PCA_FMAD", optimize_ncp = T, set_ncp=2,col_0_1=F,ncp.max=5,random.seed=123,maxiter=1000,
+                                                   coeff.ridge=1,threshold=1e-06,method='Regularized'
                              ) {
-                               super$initialize(id, param_vals = list(optimize_ncp=optimize_ncp,set_ncp=set_ncp,col_0_1=col_0_1,ncp.max=ncp.max,random.seed=random.seed ),
+                               super$initialize(id, param_vals = list(optimize_ncp=optimize_ncp,set_ncp=set_ncp,col_0_1=col_0_1,ncp.max=ncp.max,random.seed=random.seed,
+                                                                      maxiter=maxiter,coeff.ridge=coeff.ridge,threshold=threshold,method=method),
                                                 param_set= ParamSet$new(list(
 
                                                   'set_ncp'=ParamInt$new('set_ncp',lower = 1,upper = Inf,default = 2,tags='PCA_MCA_FMAD'),
                                                   'ncp.max'=ParamInt$new('ncp.max',lower = 1,upper = Inf,default = 2,tags='PCA_MCA_FMAD'),
+                                                  'maxiter'=ParamInt$new('maxiter',lower =50,upper = Inf,default = 1000,tags = 'PCA_MCA_FMAD'),
+                                                  'coeff.ridge'=ParamDbl$new('coeff.ridge',lower = 0,upper = 1,default = 1,tags = 'PCA_MCA_FMAD'),
+                                                  'threshold'=ParamDbl$new('threshold',lower = 0,upper = 1,default = 1e-6,tags = 'PCA_MCA_FMAD'),
+                                                  'method'=ParamFct$new('method',levels = c('Regularized','EM'),default = 'Regularized',tags = 'PCA_MCA_FMAD'),
+
 
 
                                                   'random.seed'=ParamInt$new('random.seed',-Inf,Inf,default = 123,tags='PCA_MCA_FMAD'),
@@ -57,7 +64,9 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
 
                                data_imputed <- missMDA_FMAD_MCA_PCA(data_to_impute,col_type,percent_of_missing,optimize_ncp = self$param_set$values$optimize_ncp,
                                                                     set_ncp = self$param_set$values$set_ncp,col_0_1 = self$param_set$values$col_0_1,
-                                                                    ncp.max = self$param_set$values$ncp.max, random.seed = self$param_set$values$random.seed)
+                                                                    ncp.max = self$param_set$values$ncp.max, random.seed = self$param_set$values$random.seed,
+                                                                    maxiter =  self$param_set$values$maxiter,coeff.ridge =  self$param_set$values$coeff.ridge,
+                                                                    threshold =  self$param_set$values$threshold,method =  self$param_set$values$method)
 
                                data_imputed <- cbind(data_imputed,target_col)
                                colnames(data_imputed)[ncol(data_imputed)] <- input[[1]]$target_names
@@ -91,7 +100,9 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
 
                                data_imputed <- missMDA_FMAD_MCA_PCA(data_to_impute,col_type,percent_of_missing,optimize_ncp = self$param_set$values$optimize_ncp,
                                                                     set_ncp = self$param_set$values$set_ncp,col_0_1 = self$param_set$values$col_0_1,
-                                                                    ncp.max = self$param_set$values$ncp.max, random.seed = self$param_set$values$random.seed)
+                                                                    ncp.max = self$param_set$values$ncp.max, random.seed = self$param_set$values$random.seed,
+                                                                    maxiter =  self$param_set$values$maxiter,coeff.ridge =  self$param_set$values$coeff.ridge,
+                                                                    threshold =  self$param_set$values$threshold,method =  self$param_set$values$method)
 
 
 

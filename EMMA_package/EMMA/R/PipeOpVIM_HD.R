@@ -95,5 +95,4 @@ PipeOpVIM_HD <-  R6::R6Class("VIM_HD_imputation",lock_objects=FALSE,
                              }
                            )
 )
-test <- PipeOpVIM_HD$new()
-test$train(list(tsk('iris')))
+
