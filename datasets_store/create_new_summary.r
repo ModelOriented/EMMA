@@ -56,6 +56,8 @@ create_summary <- function(df_oml, df_desc, df){
                   'numeric_features' = numeric,
                   'variables_types' = sapply(df, class),
                   'categorical_features_info' = categorical_summary,
+                  'variables' = colnames(df),
+                  'tags' = df_desc$tags,
                   #Missing values information
                   'categorical_missings' = categorical_missings,
                   'numeric_missings' = numeric_missings,
@@ -63,8 +65,10 @@ create_summary <- function(df_oml, df_desc, df){
                   'no_of_instances_with_missings' = sum(number_of_missings_in_instances>0),
                   'no_of_features_with_missings' = nrow(missings_df),
                   'no_of_categorical_with_missings' = nrow(categorical_missings),
-                  'no_of_numeric_with_missings' = nrow(numeric_missings)
-                  )
+                  'no_of_numeric_with_missings' = nrow(numeric_missings),
+                  #Vectors of flux values have the same order as "variables" and "variables_types"
+                  'influx' = mice::flux(df)[, 2],
+                  'outflux' = mice::flux(df)[, 3])
 
   summary_json <- toJSON(summary, pretty = FALSE, auto_unbox = TRUE)
   return(list("summary_json" = summary_json, "missings_pattern" = missings_pattern))
