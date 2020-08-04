@@ -11,7 +11,6 @@ autotune_missForest(
   ntree_set = c(100, 200, 500, 1000),
   mtry_set = NULL,
   parallel = TRUE,
-  turn_off_parallel = FALSE,
   col_0_1 = FALSE,
   optimize = TRUE,
   ntree = 100,
@@ -33,8 +32,6 @@ autotune_missForest(
 \item{mtry_set}{integer vector. Vector contains numbers of variables randomly sampled at each split.}
 
 \item{parallel}{logical. If TRUE parallel calculation is using.}
-
-\item{turn_off_parallel}{logical. If TRUE parallel backend is turn off after imputation.}
 
 \item{col_0_1}{decide if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False.}
 

@@ -38,7 +38,6 @@ This class create object implements autotune_missForest function for use in mlr3
   ntree_set = c(100, 200, 500, 1000),
   mtry_set = NULL,
   parallel = TRUE,
-  turn_off_parallel = FALSE,
   col_0_1 = FALSE,
   mtry = NULL,
   ntree = 100,

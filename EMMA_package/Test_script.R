@@ -22,7 +22,7 @@ out_file <- 'LOG_PIPELINIE'
 
 write(paste0('LOG',Sys.Date()),file = out_file)
 for(id in datasets$ID[1:20]){
-  id <- 179
+  id <- 52
   df_oml <- getOMLDataSet(id)
   df_desc <- df_oml$desc
   df <- df_oml$data
