@@ -10,7 +10,11 @@ missMDA_MFA(
   percent_of_missing,
   random.seed = 123,
   ncp = 2,
-  col_0_1 = F
+  col_0_1 = F,
+  maxiter = 1000,
+  coeff.ridge = 1,
+  threshold = 1e-06,
+  method = "Regularized"
 )
 }
 \arguments{
@@ -25,6 +29,14 @@ missMDA_MFA(
 \item{ncp}{Number of dimensions used by algorithm. Default 2.}
 
 \item{col_0_1}{Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).}
+
+\item{maxiter}{maximal number of iteration in algortihm.}
+
+\item{coeff.ridge}{Value use in Regularized method.}
+
+\item{threshold}{threshold for convergence.}
+
+\item{method}{method used in imputation algoritm.}
 }
 \value{
 Return one data.frame with imputed values.

@@ -118,3 +118,4 @@ PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
                                  )
 )
 
+mlr_pipeops$add("Amelia_imputation", PipeOpAmelia)

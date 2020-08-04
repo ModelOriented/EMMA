@@ -10,6 +10,11 @@
 #' @param col_0_1 Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).
 #' @param random.seed random seed.
 #' @param ncp Number of dimensions used by algorithm. Default 2.
+#' @param coeff.ridge Value use in Regularized method.
+#'
+#' @param maxiter maximal number of iteration in algortihm.
+#' @param method method used in imputation algoritm.
+#' @param threshold threshold for convergence.
 #' @import missMDA
 #' @details MFA requires to select group type but numeric types can only be set as 'c' - centered and 's' - scale to unit variance.
 #' It's impossible to provide these conditions so numeric type is always set as 's'.
@@ -17,7 +22,10 @@
 
 
 
-missMDA_MFA <- function(df,col_type,percent_of_missing,random.seed=123,ncp =2 ,col_0_1=F){
+missMDA_MFA <- function(df,col_type,percent_of_missing,random.seed=123,ncp =2 ,col_0_1=F,maxiter=1000,
+                        coeff.ridge=1,threshold=1e-6,method='Regularized'){
+
+  if (sum(is.na(df))==0){return(df)}
 
   #Creating gropus
   col_type_simpler <-  ifelse(col_type=='factor','n','s')
@@ -50,7 +58,11 @@ missMDA_MFA <- function(df,col_type,percent_of_missing,random.seed=123,ncp =2 ,c
     type <- rep(type[1],2)
   }
 # Imputation
-final <-  imputeMFA(df,group = groups,type = type,ncp = ncp,method = 'Regularized')$completeObs
+  no_ok <- FALSE
+  tryCatch({
+final <-  imputeMFA(df,group = groups,type = type,ncp = ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge)$completeObs
+},error = function(e){no_ok <- TRUE})
+  if (no_ok){final <-  imputeMFA(df,group = groups,type = type,ncp = 1,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge)$completeObs}
 # adding 0_1 columns
 
 if (col_0_1){

@@ -13,13 +13,19 @@
 PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
                                            inherit = PipeOp,  # inherit from PipeOp
                                            public = list(
-                                             initialize = function(id = "imput_missMDA_MFA",col_0_1=F,ncp=2,random.seed=123
+                                             initialize = function(id = "imput_missMDA_MFA",col_0_1=F,ncp=2,random.seed=123,maxiter=1000,
+                                                                   coeff.ridge=1,threshold=1e-06,method='Regularized'
                                              ) {
-                                               super$initialize(id, param_vals = list(col_0_1=col_0_1,ncp=ncp,random.seed=random.seed ),
+                                               super$initialize(id, param_vals = list(col_0_1=col_0_1,ncp=ncp,random.seed=random.seed,
+                                                                                      maxiter=maxiter,coeff.ridge=coeff.ridge,threshold=threshold,method=method),
                                                                 param_set= ParamSet$new(list(
 
 
                                                                   'ncp'=ParamInt$new('ncp',lower = 1,upper = Inf,default = 2,tags='MFA'),
+                                                                  'maxiter'=ParamInt$new('maxiter',lower =50,upper = Inf,default = 1000,tags = 'MFA'),
+                                                                  'coeff.ridge'=ParamDbl$new('coeff.ridge',lower = 0,upper = 1,default = 1,tags = 'MFA'),
+                                                                  'threshold'=ParamDbl$new('threshold',lower = 0,upper = 1,default = 1e-6,tags = 'MFA'),
+                                                                  'method'=ParamFct$new('method',levels = c('Regularized','EM'),default = 'Regularized',tags = 'MFA'),
 
 
                                                                   'random.seed'=ParamInt$new('random.seed',-Inf,Inf,default = 123,tags='MFA'),
@@ -59,7 +65,9 @@ PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
 
 
                                                data_imputed <-missMDA_MFA(data_to_impute,col_type,percent_of_missing,random.seed = self$param_set$values$random.seed,
-                                                                          ncp = self$param_set$values$ncp,col_0_1 = self$param_set$values$col_0_1)
+                                                                          ncp = self$param_set$values$ncp,col_0_1 = self$param_set$values$col_0_1,
+                                                                          maxiter =  self$param_set$values$maxiter,coeff.ridge =  self$param_set$values$coeff.ridge,
+                                                                          threshold =  self$param_set$values$threshold,method =  self$param_set$values$method)
 
                                                data_imputed <- cbind(data_imputed,target_col)
                                                colnames(data_imputed)[ncol(data_imputed)] <- input[[1]]$target_names
@@ -92,7 +100,9 @@ PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
 
 
                                                data_imputed <-missMDA_MFA(data_to_impute,col_type,percent_of_missing,random.seed = self$param_set$values$random.seed,
-                                                                          ncp = self$param_set$values$ncp,col_0_1 = self$param_set$values$col_0_1)
+                                                                          ncp = self$param_set$values$ncp,col_0_1 = self$param_set$values$col_0_1,
+                                                                          maxiter =  self$param_set$values$maxiter,coeff.ridge =  self$param_set$values$coeff.ridge,
+                                                                          threshold =  self$param_set$values$threshold,method =  self$param_set$values$method)
 
 
                                                data_imputed <- cbind(data_imputed,target_col)
@@ -111,3 +121,6 @@ PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
                                              }
                                            )
 )
+
+mlr_pipeops$add("missMDA_MFAimputation", PipeOpMissMDA_MFA)
+
