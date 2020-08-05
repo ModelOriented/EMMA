@@ -26,8 +26,11 @@
 
 autotune_Amelia <- function(df,col_type,percent_of_missing,col_0_1=FALSE,parallel=TRUE,polytime=NULL,splinetime=NULL,intercs=FALSE,optimize_empir=FALSE,
                             empir=NULL,verbose=FALSE,return_one=TRUE,m=3) {
+
+  if (sum(is.na(df))==0){return(df)}
   # prepering information about categorical column
   categorical_col <-  colnames(df)[ifelse(col_type=='factor',T,F)]
+  if(length(categorical_col)==0){categorical_col <- NULL}
 
   # seting parallel options
   if(parallel){

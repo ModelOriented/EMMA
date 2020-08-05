@@ -10,9 +10,7 @@ autotune_VIM_kNN(
   k = 5,
   numFun = median,
   catFun = maxCat,
-  col_0_1 = FALSE,
-  optimize = FALSE,
-  number_of_try = 10
+  col_0_1 = FALSE
 )
 }
 \arguments{
@@ -24,10 +22,9 @@ autotune_VIM_kNN(
 
 \item{col_0_1}{decide if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False.}
 
-\item{optimize}{If True function try to optimize k. Its can be pointless in many casys becouse. Evalutaion funtion from VIM ist not vary sutible for this task.
-If False chosen k is used.}
+\item{numFUN}{function for aggregating the k Nearest Neighbours in the case of a numerical variable. Defoult median.}
 
-\item{number_of_try}{Number of k betwen 5 and one-thired of dataset rows teseted for best k.}
+\item{catFUN}{function for aggregating the k Nearest Neighbours in the case of a categorical variable. Defoult mode.}
 }
 \value{
 Return data.frame with imputed values.

@@ -6,24 +6,27 @@
 \description{
 This class create object implements autotune_mice function for use in mlr3 pipelinies. Object can be created with \code{\link{autotune_mice}} params.
 }
-\section{Super class}{
-\code{\link[mlr3pipelines:PipeOp]{mlr3pipelines::PipeOp}} -> \code{mice_imputation}
+\section{Super classes}{
+\code{\link[mlr3pipelines:PipeOp]{mlr3pipelines::PipeOp}} -> \code{\link[mlr3pipelines:PipeOpImpute]{mlr3pipelines::PipeOpImpute}} -> \code{mice_imputation}
 }
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
 \item \href{#method-new}{\code{PipeOpMice$new()}}
-\item \href{#method-train_internal}{\code{PipeOpMice$train_internal()}}
 \item \href{#method-predict_internal}{\code{PipeOpMice$predict_internal()}}
+\item \href{#method-train_internal}{\code{PipeOpMice$train_internal()}}
 \item \href{#method-clone}{\code{PipeOpMice$clone()}}
 }
 }
 \if{html}{
-\out{<details open ><summary>Inherited methods</summary>}
+\out{<details ><summary>Inherited methods</summary>}
 \itemize{
 \item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOp" data-id="predict">}\href{../../mlr3pipelines/html/PipeOp.html#method-predict}{\code{mlr3pipelines::PipeOp$predict()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOp" data-id="print">}\href{../../mlr3pipelines/html/PipeOp.html#method-print}{\code{mlr3pipelines::PipeOp$print()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOp" data-id="train">}\href{../../mlr3pipelines/html/PipeOp.html#method-train}{\code{mlr3pipelines::PipeOp$train()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOpImpute" data-id="impute">}\href{../../mlr3pipelines/html/PipeOpImpute.html#method-impute}{\code{mlr3pipelines::PipeOpImpute$impute()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOpImpute" data-id="select_cols">}\href{../../mlr3pipelines/html/PipeOpImpute.html#method-select_cols}{\code{mlr3pipelines::PipeOpImpute$select_cols()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOpImpute" data-id="train_imputer">}\href{../../mlr3pipelines/html/PipeOpImpute.html#method-train_imputer}{\code{mlr3pipelines::PipeOpImpute$train_imputer()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -43,19 +46,10 @@ This class create object implements autotune_mice function for use in mlr3 pipel
   methods_random = c("pmm"),
   iter = 5,
   random.seed = 123,
-  optimize = T,
+  optimize = F,
   correlation = T,
   col_0_1 = F
 )}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-train_internal"></a>}}
-\if{latex}{\out{\hypertarget{method-train_internal}{}}}
-\subsection{Method \code{train_internal()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{PipeOpMice$train_internal(input)}\if{html}{\out{</div>}}
 }
 
 }
@@ -65,6 +59,15 @@ This class create object implements autotune_mice function for use in mlr3 pipel
 \subsection{Method \code{predict_internal()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PipeOpMice$predict_internal(input)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-train_internal"></a>}}
+\if{latex}{\out{\hypertarget{method-train_internal}{}}}
+\subsection{Method \code{train_internal()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PipeOpMice$train_internal(input)}\if{html}{\out{</div>}}
 }
 
 }
