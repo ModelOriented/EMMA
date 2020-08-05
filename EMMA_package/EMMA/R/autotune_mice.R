@@ -163,7 +163,7 @@ random_param_mice_search <- function(low_corr=0,up_corr=1,methods_random = c('pm
 #' @return Return imputed datasets or mids object containing multi imputation datasets.
 autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,set_cor=0.5,set_method='pmm',percent_of_missing,low_corr=0,up_corr=1,methods_random=c('pmm'),iter,random.seed=123,optimize = T,correlation=T,return_one=T,col_0_1 = F ,verbose=FALSE){
 
-
+  if(sum(is.na(df))==0){return(df)}
 
   formula_cre <- formula_creating(df,col_miss,col_no_miss,col_type,percent_of_missing)
   formula <- formula_cre[1]

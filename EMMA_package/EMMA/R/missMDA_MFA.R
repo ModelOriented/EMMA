@@ -60,9 +60,11 @@ missMDA_MFA <- function(df,col_type,percent_of_missing,random.seed=123,ncp =2 ,c
 # Imputation
   no_ok <- FALSE
   tryCatch({
-final <-  imputeMFA(df,group = groups,type = type,ncp = ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge)$completeObs
-},error = function(e){no_ok <- TRUE})
-  if (no_ok){final <-  imputeMFA(df,group = groups,type = type,ncp = 1,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge)$completeObs}
+
+    final <-  imputeMFA(df,group = groups,type = type,ncp = ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge)$completeObs
+    },error = function(e){no_ok <<- TRUE}
+    )
+  if (no_ok | !exists('final')){final <-  imputeMFA(df,group = groups,type = type,ncp = 1,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge)$completeObs}
 # adding 0_1 columns
 
 if (col_0_1){

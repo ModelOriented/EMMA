@@ -1,6 +1,6 @@
-#' Mice Imputation
+#' VIM kNN Imputation
 #'
-#' @description This class create object implements autotune_VIM_hotdeck function for use in mlr3 pipelinies. Object can be created with \code{\link{autotune_VIM_hotdeck}} params.
+#' @description This class create object implements autotune_VIM_kNN function for use in mlr3 pipelinies. Object can be created with \code{\link{autotune_VIM_kNN}} params.
 #'
 #'
 #'
@@ -9,16 +9,18 @@
 
 
 
-PipeOpVIM_HD <-  R6::R6Class("VIM_HD_imputation",lock_objects=FALSE,
-                           inherit = PipeOpImpute,  # inherit from PipeOp
+PipeOpVIM_kNN <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,
+                           inherit = PipeOpImpute,
                            public = list(
-                             initialize = function(id = "imput_VIM_HD",col_0_1= FALSE
+                             initialize = function(id = "imput_VIM_kNN", k=5,numFun=median,catFun=maxCat,col_0_1=FALSE
                              ) {
-                               super$initialize(id, whole_task_dependent=TRUE, param_vals = list( col_0_1=col_0_1),
+                               super$initialize(id, whole_task_dependent=TRUE,param_vals = list(k=k,numFun=numFun,catFun=catFun,col_0_1=col_0_1 ),
                                                 param_set= ParamSet$new(list(
 
-                                                  'col_0_1'=ParamLgl$new('col_0_1',default = F,tags='VIM_HD')
-
+                                                  'k'=ParamInt$new('k',lower = 1,upper = Inf,default = 5,tags='VIM_kNN'),
+                                                  'numFun'=ParamUty$new('numFun',default = median,tags = 'VIM_kNN'),
+                                                  'catFun'=ParamUty$new('catFun',default = maxCat,tags = 'VIM_kNN'),
+                                                  'col_0_1'=ParamLgl$new('col_0_1',default = FALSE,tags = 'VIM_kNN')
 
                                                 ))
                                )
@@ -43,8 +45,8 @@ PipeOpVIM_HD <-  R6::R6Class("VIM_HD_imputation",lock_objects=FALSE,
                                  col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
-                                 data_imputed <- autotune_VIM_hotdeck(data_to_impute,percent_of_missing,self$param_set$values$col_0_1)
-
+                                 data_imputed <- autotune_VIM_kNN(data_to_impute,percent_of_missing ,k =self$param_set$values$k,numFun = self$param_set$values$numFun,
+                                                                  catFun = self$param_set$values$catFun,col_0_1 = self$param_set$values$col_0_1)
 
                                  data_imputed <- cbind(data_imputed,target_col)
                                  colnames(data_imputed)[ncol(data_imputed)] <- input[[1]]$target_names
@@ -59,11 +61,10 @@ PipeOpVIM_HD <-  R6::R6Class("VIM_HD_imputation",lock_objects=FALSE,
                                  return(input)
                                }
 
-                             },
 
-                             # PipeOp deriving classes must implement train_internal and
-                             # predict_internal; each taking an input list and returning
-                             # a list as output.
+
+
+                             },
                              predict_internal = function(input) {
 
                                p <- self$imp_function(input)
@@ -87,4 +88,4 @@ PipeOpVIM_HD <-  R6::R6Class("VIM_HD_imputation",lock_objects=FALSE,
 
                            )
 )
-mlr_pipeops$add("VIM_HD_imputation", PipeOpVIM_HD)
+mlr_pipeops$add("VIM_kNN_imputation", PipeOpVIM_kNN)

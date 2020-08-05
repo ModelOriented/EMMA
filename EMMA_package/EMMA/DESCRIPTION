@@ -15,7 +15,8 @@ Depends:
     paradox,
     mlr3,
     mlr3pipelines,
-    Amelia
+    Amelia,
+    VIM
 Imports:
     mice,
     missForest,
