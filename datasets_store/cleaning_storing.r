@@ -19,24 +19,22 @@ datasets <- datasets[datasets$task_type == "binary", ]
 #data_types_troubles <- c()
 #miss_in_target <- c()
 
-for(id in datasets$ID){
+for(id in datasets$ID[1:3]){
   
   df_oml <- getOMLDataSet(id)
-  df_desc <- df_oml$desc
-  df <- df_oml$data
   
   if(id==940 | id==565){
     #Spelling mistake in OML description
-    df_desc$ignore.attribute <- c('date', 'Q.E') 
+    df_oml$desc$ignore.attribute <- c('date', 'Q.E') 
   }
   if(id==41704){
     #Spelling mistake in OML description
-    df_desc$ignore.attribute <- "instance_id" 
+    df_oml$desc$ignore.attribute <- "instance_id" 
   }
   
   
   ### Preprocessing ###
-  cleaned_df <- preprocess(df, df_desc, df_oml)
+  cleaned_df <- preprocess(df_oml)
   df <- cleaned_df$df
   
   # Currently skipping steps which needed to be checked once
@@ -58,6 +56,7 @@ for(id in datasets$ID){
   # }
   
   ### Collecting information step ###
+  df_desc <- df_oml$desc
   summary <- create_summary(df_oml, df_desc, df)
   json_summary <- summary$summary_json
   missings_pattern <- summary$missings_pattern

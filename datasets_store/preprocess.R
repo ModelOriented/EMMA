@@ -2,11 +2,17 @@ library(dplyr)
 library(janitor)
 library(tidyselect)
 
-preprocess <- function(df, df_desc, df_oml) {
-  #df_oml - object from getOMLDataSet()
-  #df_desc == df_oml$desc
-  #df == df_oml$data
+preprocess <- function(df_oml, miss_in_var_threshold = 0.9) {
+  ### Params
+  # - df_oml: object from getOMLDataSet()
+  # - miss_in_var_threshold: values [0, 1]; defines threshold of missings in columns to remove 
+  ### Output
+  # - df: ready, cleaned dataframe
+  # - data_types_troubles: flag for column types trouble 
+  # - miss_in_target: flag for missing values in target variable
   
+  df <- df_oml$data
+  df_desc <- df_oml$desc
   id <- df_desc$id
   
   ### Preprocessing step ###
@@ -69,11 +75,13 @@ preprocess <- function(df, df_desc, df_oml) {
     warning(paste("Missing values in target variable ID: ", id))
   }
   
+  #Removing columns with % of missing higher than "miss_in_var_threshold"
+  df <- df[, which(colMeans(!is.na(df)) > miss_in_var_threshold)]
+  
   #Categorical columns with high fraction of unique values
   #?
   
   return(list("df" = df, 
               "data_types_troubles" = data_types_troubles, 
               "miss_in_target" = miss_in_target))
-  
 }
