@@ -50,11 +50,12 @@ autotune_missForest <-function(df,percent_of_missing,cores=NULL,ntree_set =c(100
     }
 
   }
-  if (optimize){
   # If parallel=TRUE
   parallelize <- 'no'
   if (parallel){
-  parallelize <-  'variables'}
+    parallelize <-  'variables'}
+  if (optimize){
+
 
 
   # Grid search using mean OBBerror
