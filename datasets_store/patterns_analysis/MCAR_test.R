@@ -37,4 +37,5 @@ for (id in sample_id) {
   })
 }
 
+result$mcar <- result$p_val>0.05
 #write.csv(result, file = "datasets_store/patterns_analysis/mcar_test_in_sample.csv", row.names = FALSE)
