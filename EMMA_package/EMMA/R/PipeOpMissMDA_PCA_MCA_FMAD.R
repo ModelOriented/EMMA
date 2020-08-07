@@ -34,7 +34,68 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
                                )
 
 
-                               self$imp_function <- function(data_to_impute){
+
+
+                               self$imputed <- FALSE
+                               self$column_counter <- NULL
+                               self$data_imputed <- NULL
+
+                             },
+
+                             train_imputer=function(feature, type, context){
+                                imp_function <- function(data_to_impute){
+
+
+
+
+                                 data_to_impute <- as.data.frame(data_to_impute)
+                                 # prepering arguments for function
+                                 col_type <- 1:ncol(data_to_impute)
+                                 for (i in col_type){
+                                   col_type[i] <- class(data_to_impute[,i])
+                                 }
+                                 percent_of_missing <- 1:ncol(data_to_impute)
+                                 for (i in percent_of_missing){
+                                   percent_of_missing[i] <- (sum(is.na(data_to_impute[,i]))/length(data_to_impute[,1]))*100
+                                 }
+                                 col_miss <- colnames(data_to_impute)[percent_of_missing>0]
+                                 col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
+
+                                 data_imputed <- missMDA_FMAD_MCA_PCA(data_to_impute,col_type,percent_of_missing,optimize_ncp = self$param_set$values$optimize_ncp,
+                                                                      set_ncp = self$param_set$values$set_ncp,col_0_1 = self$param_set$values$col_0_1,
+                                                                      ncp.max = self$param_set$values$ncp.max, random.seed = self$param_set$values$random.seed,
+                                                                      maxiter =  self$param_set$values$maxiter,coeff.ridge =  self$param_set$values$coeff.ridge,
+                                                                      threshold =  self$param_set$values$threshold,method =  self$param_set$values$method)
+
+
+
+
+
+                                 return(data_imputed)
+                                }
+
+                               self$imputed_predict <- TRUE
+                               self$flag <- 'train'
+                               if(!self$imputed){
+                                 self$column_counter <- ncol(context)+1
+                                 self$imputed <- TRUE
+                                 data_to_impute <- cbind(feature,context)
+                                 self$data_imputed <- imp_function(data_to_impute)
+                                 colnames(self$data_imputed) <- self$state$context_cols
+
+                               }
+                               if(self$imputed){
+                                 self$column_counter <- self$column_counter -1
+
+                               }
+                               if  (self$column_counter==0){
+                                 self$imputed <- FALSE
+                               }
+                               return(NULL)
+
+                             },
+                             impute=function(feature, type, model, context){
+                                imp_function <- function(data_to_impute){
 
 
 
@@ -64,37 +125,6 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
 
                                  return(data_imputed)
                                }
-
-                               self$imputed <- FALSE
-                               self$column_counter <- NULL
-                               self$data_imputed <- NULL
-
-                             },
-
-                             train_imputer=function(feature, type, context){
-
-                               self$imputed_predict <- TRUE
-                               self$flag <- 'train'
-                               if(!self$imputed){
-                                 self$column_counter <- ncol(context)+1
-                                 self$imputed <- TRUE
-                                 data_to_impute <- cbind(feature,context)
-                                 self$data_imputed <- self$imp_function(data_to_impute)
-                                 colnames(self$data_imputed) <- self$state$context_cols
-
-                               }
-                               if(self$imputed){
-                                 self$column_counter <- self$column_counter -1
-
-                               }
-                               if  (self$column_counter==0){
-                                 self$imputed <- FALSE
-                               }
-                               return(NULL)
-
-                             },
-                             impute=function(feature, type, model, context){
-
                                if (self$imputed){
                                  feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
 
@@ -107,7 +137,7 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
 
                                if(!self$imputed_predict){
                                  data_to_impute <- cbind(feature,context)
-                                 self$data_imputed <- self$imp_function(data_to_impute)
+                                 self$data_imputed <- imp_function(data_to_impute)
                                  colnames(self$data_imputed) <- self$state$context_cols
                                  self$imputed_predict <- TRUE
                                }

@@ -35,7 +35,16 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
 
                                )
 
-                               self$imp_function <- function(data_to_impute){
+
+
+                               self$imputed <- FALSE
+                               self$column_counter <- NULL
+                               self$data_imputed <- NULL
+
+                             },
+
+                             train_imputer=function(feature, type, context){
+                                imp_function <- function(data_to_impute){
 
 
 
@@ -66,15 +75,6 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
 
                                  return(data_imputed)
                                }
-
-                               self$imputed <- FALSE
-                               self$column_counter <- NULL
-                               self$data_imputed <- NULL
-
-                             },
-
-                             train_imputer=function(feature, type, context){
-
                                self$imputed_predict <- TRUE
                                self$flag <- 'train'
                                if(!self$imputed){
@@ -82,7 +82,7 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                  self$column_counter <- ncol(context)+1
                                  self$imputed <- TRUE
                                  data_to_impute <- cbind(feature,context)
-                                 self$data_imputed <- self$imp_function(data_to_impute)
+                                 self$data_imputed <- imp_function(data_to_impute)
                                  colnames(self$data_imputed) <- self$state$context_cols
 
                                }
@@ -97,7 +97,37 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
 
                              },
                              impute=function(feature, type, model, context){
+                                 imp_function <- function(data_to_impute){
 
+
+
+
+                                 data_to_impute <- as.data.frame(data_to_impute)
+                                 # prepering arguments for function
+                                 col_type <- 1:ncol(data_to_impute)
+                                 for (i in col_type){
+                                   col_type[i] <- class(data_to_impute[,i])
+                                 }
+                                 percent_of_missing <- 1:ncol(data_to_impute)
+                                 for (i in percent_of_missing){
+                                   percent_of_missing[i] <- (sum(is.na(data_to_impute[,i]))/length(data_to_impute[,1]))*100
+                                 }
+                                 col_miss <- colnames(data_to_impute)[percent_of_missing>0]
+                                 col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
+
+
+                                 data_imputed <- autotune_missForest(data_to_impute,percent_of_missing = percent_of_missing,cores = self$param_set$values$cores,
+                                                                     ntree_set = self$param_set$values$ntree_set,mtry_set = self$param_set$values$mtry_set,
+                                                                     parallel = self$param_set$values$parallel,
+                                                                     col_0_1 = self$param_set$values$col_0_1,optimize = self$param_set$values$optimize,
+                                                                     ntree = self$param_set$values$ntree,mtry = self$param_set$values$mtry,
+                                                                     maxiter=self$param_set$values$maxiter,maxnodes=self$param_set$values$maxnodes,verbose = F)
+
+
+
+
+                                 return(data_imputed)
+                               }
                                if (self$imputed){
                                  feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
 
@@ -111,7 +141,7 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                if(!self$imputed_predict){
 
                                  data_to_impute <- cbind(feature,context)
-                                 self$data_imputed <- self$imp_function(data_to_impute)
+                                 self$data_imputed <- imp_function(data_to_impute)
                                  colnames(self$data_imputed) <- self$state$context_cols
                                  self$imputed_predict <- TRUE
                                }

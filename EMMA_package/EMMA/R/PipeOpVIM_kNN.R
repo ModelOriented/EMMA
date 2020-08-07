@@ -25,7 +25,16 @@ PipeOpVIM_kNN <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,
                                                 ))
                                )
 
-                               self$imp_function <- function(data_to_impute){
+
+
+                               self$imputed <- FALSE
+                               self$column_counter <- NULL
+                               self$data_imputed <- NULL
+
+                             },
+
+                             train_imputer=function(feature, type, context){
+                                 imp_function <- function(data_to_impute){
 
 
 
@@ -52,22 +61,13 @@ PipeOpVIM_kNN <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,
 
                                  return(data_imputed)
                                }
-
-                               self$imputed <- FALSE
-                               self$column_counter <- NULL
-                               self$data_imputed <- NULL
-
-                             },
-
-                             train_imputer=function(feature, type, context){
-
                                self$imputed_predict <- TRUE
                                self$flag <- 'train'
                                if(!self$imputed){
                                  self$column_counter <- ncol(context)+1
                                  self$imputed <- TRUE
                                  data_to_impute <- cbind(feature,context)
-                                 self$data_imputed <- self$imp_function(data_to_impute)
+                                 self$data_imputed <- imp_function(data_to_impute)
                                  colnames(self$data_imputed) <- self$state$context_cols
 
                                }
@@ -82,7 +82,33 @@ PipeOpVIM_kNN <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,
 
                              },
                              impute=function(feature, type, model, context){
+                                imp_function <- function(data_to_impute){
 
+
+
+
+                                 data_to_impute <- as.data.frame(data_to_impute)
+                                 # prepering arguments for function
+                                 col_type <- 1:ncol(data_to_impute)
+                                 for (i in col_type){
+                                   col_type[i] <- class(data_to_impute[,i])
+                                 }
+                                 percent_of_missing <- 1:ncol(data_to_impute)
+                                 for (i in percent_of_missing){
+                                   percent_of_missing[i] <- (sum(is.na(data_to_impute[,i]))/length(data_to_impute[,1]))*100
+                                 }
+                                 col_miss <- colnames(data_to_impute)[percent_of_missing>0]
+                                 col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
+
+
+                                 data_imputed <- autotune_VIM_kNN(data_to_impute,percent_of_missing ,k =self$param_set$values$k,numFun = self$param_set$values$numFun,
+                                                                  catFun = self$param_set$values$catFun,col_0_1 = self$param_set$values$col_0_1)
+
+
+
+
+                                 return(data_imputed)
+                               }
                                if (self$imputed){
                                  feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
 
@@ -95,7 +121,7 @@ PipeOpVIM_kNN <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,
 
                                if(!self$imputed_predict){
                                  data_to_impute <- cbind(feature,context)
-                                 self$data_imputed <- self$imp_function(data_to_impute)
+                                 self$data_imputed <- imp_function(data_to_impute)
                                  colnames(self$data_imputed) <- self$state$context_cols
                                  self$imputed_predict <- TRUE
                                }
