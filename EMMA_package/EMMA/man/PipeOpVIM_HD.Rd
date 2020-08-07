@@ -2,7 +2,7 @@
 % Please edit documentation in R/PipeOpVIM_HD.R
 \name{PipeOpVIM_HD}
 \alias{PipeOpVIM_HD}
-\title{Mice Imputation}
+\title{Hot-Deck Imputation}
 \description{
 This class create object implements autotune_VIM_hotdeck function for use in mlr3 pipelinies. Object can be created with \code{\link{autotune_VIM_hotdeck}} params.
 }
@@ -13,8 +13,8 @@ This class create object implements autotune_VIM_hotdeck function for use in mlr
 \subsection{Public methods}{
 \itemize{
 \item \href{#method-new}{\code{PipeOpVIM_HD$new()}}
-\item \href{#method-predict_internal}{\code{PipeOpVIM_HD$predict_internal()}}
-\item \href{#method-train_internal}{\code{PipeOpVIM_HD$train_internal()}}
+\item \href{#method-train_imputer}{\code{PipeOpVIM_HD$train_imputer()}}
+\item \href{#method-impute}{\code{PipeOpVIM_HD$impute()}}
 \item \href{#method-clone}{\code{PipeOpVIM_HD$clone()}}
 }
 }
@@ -24,9 +24,9 @@ This class create object implements autotune_VIM_hotdeck function for use in mlr
 \item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOp" data-id="predict">}\href{../../mlr3pipelines/html/PipeOp.html#method-predict}{\code{mlr3pipelines::PipeOp$predict()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOp" data-id="print">}\href{../../mlr3pipelines/html/PipeOp.html#method-print}{\code{mlr3pipelines::PipeOp$print()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOp" data-id="train">}\href{../../mlr3pipelines/html/PipeOp.html#method-train}{\code{mlr3pipelines::PipeOp$train()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOpImpute" data-id="impute">}\href{../../mlr3pipelines/html/PipeOpImpute.html#method-impute}{\code{mlr3pipelines::PipeOpImpute$impute()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOpImpute" data-id="predict_internal">}\href{../../mlr3pipelines/html/PipeOpImpute.html#method-predict_internal}{\code{mlr3pipelines::PipeOpImpute$predict_internal()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOpImpute" data-id="select_cols">}\href{../../mlr3pipelines/html/PipeOpImpute.html#method-select_cols}{\code{mlr3pipelines::PipeOpImpute$select_cols()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOpImpute" data-id="train_imputer">}\href{../../mlr3pipelines/html/PipeOpImpute.html#method-train_imputer}{\code{mlr3pipelines::PipeOpImpute$train_imputer()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOpImpute" data-id="train_internal">}\href{../../mlr3pipelines/html/PipeOpImpute.html#method-train_internal}{\code{mlr3pipelines::PipeOpImpute$train_internal()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -40,20 +40,20 @@ This class create object implements autotune_VIM_hotdeck function for use in mlr
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-predict_internal"></a>}}
-\if{latex}{\out{\hypertarget{method-predict_internal}{}}}
-\subsection{Method \code{predict_internal()}}{
+\if{html}{\out{<a id="method-train_imputer"></a>}}
+\if{latex}{\out{\hypertarget{method-train_imputer}{}}}
+\subsection{Method \code{train_imputer()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{PipeOpVIM_HD$predict_internal(input)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{PipeOpVIM_HD$train_imputer(feature, type, context)}\if{html}{\out{</div>}}
 }
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-train_internal"></a>}}
-\if{latex}{\out{\hypertarget{method-train_internal}{}}}
-\subsection{Method \code{train_internal()}}{
+\if{html}{\out{<a id="method-impute"></a>}}
+\if{latex}{\out{\hypertarget{method-impute}{}}}
+\subsection{Method \code{impute()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{PipeOpVIM_HD$train_internal(input)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{PipeOpVIM_HD$impute(feature, type, model, context)}\if{html}{\out{</div>}}
 }
 
 }

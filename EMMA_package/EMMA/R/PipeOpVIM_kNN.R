@@ -25,14 +25,21 @@ PipeOpVIM_kNN <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,
                                                 ))
                                )
 
-                               self$imp_function <- function(input){
 
-                                 col_name <- input[[1]]$backend$colnames
-                                 data_to_impute <- as.data.frame(input[[1]]$data())
-                                 target_col <- data_to_impute[,input[[1]]$target_names]
 
-                                 data_to_impute <- data_to_impute[,ifelse(colnames(data_to_impute)==input[[1]]$target_names,FALSE,TRUE)]
+                               self$imputed <- FALSE
+                               self$column_counter <- NULL
+                               self$data_imputed <- NULL
 
+                             },
+
+                             train_imputer=function(feature, type, context){
+                                 imp_function <- function(data_to_impute){
+
+
+
+
+                                 data_to_impute <- as.data.frame(data_to_impute)
                                  # prepering arguments for function
                                  col_type <- 1:ncol(data_to_impute)
                                  for (i in col_type){
@@ -45,47 +52,98 @@ PipeOpVIM_kNN <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,
                                  col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
+
                                  data_imputed <- autotune_VIM_kNN(data_to_impute,percent_of_missing ,k =self$param_set$values$k,numFun = self$param_set$values$numFun,
                                                                   catFun = self$param_set$values$catFun,col_0_1 = self$param_set$values$col_0_1)
 
-                                 data_imputed <- cbind(data_imputed,target_col)
-                                 colnames(data_imputed)[ncol(data_imputed)] <- input[[1]]$target_names
 
 
-                                 data_backen <- as.data.frame(input[[1]]$backend$data(row=1:input[[1]]$backend$nrow,col=input[[1]]$backend$colnames))[,ifelse(input[[1]]$backend$primary_key==input[[1]]$backend$colnames,FALSE,TRUE)]
-                                 data_backen[input[[1]]$row_ids,] <- data_imputed
 
-                                 input[[1]]$backend <- as_data_backend(data_backen)
+                                 return(data_imputed)
+                               }
+                               self$imputed_predict <- TRUE
+                               self$flag <- 'train'
+                               if(!self$imputed){
+                                 self$column_counter <- ncol(context)+1
+                                 self$imputed <- TRUE
+                                 data_to_impute <- cbind(feature,context)
+                                 self$data_imputed <- imp_function(data_to_impute)
+                                 colnames(self$data_imputed) <- self$state$context_cols
+
+                               }
+                               if(self$imputed){
+                                 self$column_counter <- self$column_counter -1
+
+                               }
+                               if  (self$column_counter==0){
+                                 self$imputed <- FALSE
+                               }
+                               return(NULL)
+
+                             },
+                             impute=function(feature, type, model, context){
+                                imp_function <- function(data_to_impute){
 
 
-                                 return(input)
+
+
+                                 data_to_impute <- as.data.frame(data_to_impute)
+                                 # prepering arguments for function
+                                 col_type <- 1:ncol(data_to_impute)
+                                 for (i in col_type){
+                                   col_type[i] <- class(data_to_impute[,i])
+                                 }
+                                 percent_of_missing <- 1:ncol(data_to_impute)
+                                 for (i in percent_of_missing){
+                                   percent_of_missing[i] <- (sum(is.na(data_to_impute[,i]))/length(data_to_impute[,1]))*100
+                                 }
+                                 col_miss <- colnames(data_to_impute)[percent_of_missing>0]
+                                 col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
+
+
+                                 data_imputed <- autotune_VIM_kNN(data_to_impute,percent_of_missing ,k =self$param_set$values$k,numFun = self$param_set$values$numFun,
+                                                                  catFun = self$param_set$values$catFun,col_0_1 = self$param_set$values$col_0_1)
+
+
+
+
+                                 return(data_imputed)
+                               }
+                               if (self$imputed){
+                                 feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
+
+
+                               }
+                               if(nrow(self$data_imputed)!=nrow(context)){
+                                 self$imputed_predict <- FALSE
+                                 self$flag <- 'predict'
+                               }
+
+                               if(!self$imputed_predict){
+                                 data_to_impute <- cbind(feature,context)
+                                 self$data_imputed <- imp_function(data_to_impute)
+                                 colnames(self$data_imputed) <- self$state$context_cols
+                                 self$imputed_predict <- TRUE
                                }
 
 
+                               if (self$imputed_predict & self$flag=='predict' ){
+                                 feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
 
+                               }
 
-                             },
-                             predict_internal = function(input) {
+                               if(self$column_counter == 0 & self$flag=='train'){
+                                 feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
+                                 self$flag=='predict'
+                                 self$imputed_predict <- FALSE
+                               }
 
-                               p <- self$imp_function(input)
-
-
-
-                               return(p)
-
-                             },
-
-                             train_internal = function(input) {
-
-                               t<- self$imp_function(input)
-
-
-
-
-                               return(t)
-
+                               return(feature)
                              }
-
                            )
 )
 mlr_pipeops$add("VIM_kNN_imputation", PipeOpVIM_kNN)
+
+
+
+

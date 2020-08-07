@@ -14,7 +14,7 @@ missMDA_FMAD_MCA_PCA(
   ncp.max = 5,
   return_one = TRUE,
   random.seed = 123,
-  maxiter = 1000,
+  maxiter = 999,
   coeff.ridge = 1,
   threshold = 1e-06,
   method = "Regularized"

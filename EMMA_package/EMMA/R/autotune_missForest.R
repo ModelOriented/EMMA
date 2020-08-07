@@ -44,17 +44,20 @@ autotune_missForest <-function(df,percent_of_missing,cores=NULL,ntree_set =c(100
     }
     else{
       vector <- (mtry_set[1]:ncol(df))
-      mtry_set[2] <- flor(length(vector)/4)
+      mtry_set[2] <- floor(length(vector)/4)
       mtry_set[3] <- floor(2*length(vector)/4)
       mtry_set[4] <- floor(3*length(vector)/4)
     }
 
   }
-  if (optimize){
   # If parallel=TRUE
   parallelize <- 'no'
   if (parallel){
-  parallelize <-  'variables'}
+    parallelize <-  'variables'}
+  if (!is.null(cores)){
+  if(cores<=1){parallelize <- 'no'}}
+  if (optimize){
+
 
 
   # Grid search using mean OBBerror

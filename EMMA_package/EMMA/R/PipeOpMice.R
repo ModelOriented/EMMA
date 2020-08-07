@@ -36,14 +36,21 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                 ))
                                   )
 
-                                  self$imp_function <- function(input){
 
-                                    col_name <- input[[1]]$backend$colnames
-                                    data_to_impute <- as.data.frame(input[[1]]$data())
-                                    target_col <- data_to_impute[,input[[1]]$target_names]
 
-                                    data_to_impute <- data_to_impute[,ifelse(colnames(data_to_impute)==input[[1]]$target_names,FALSE,TRUE)]
+                                  self$imputed <- FALSE
+                                  self$column_counter <- NULL
+                                  self$data_imputed <- NULL
 
+                                },
+
+                                train_imputer=function(feature, type, context){
+                                  imp_function <- function(data_to_impute){
+
+
+
+
+                                    data_to_impute <- as.data.frame(data_to_impute)
                                     # prepering arguments for function
                                     col_type <- 1:ncol(data_to_impute)
                                     for (i in col_type){
@@ -63,66 +70,132 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                                                   set_cor = self$param_set$values$set_cor,set_method = self$param_set$values$set_method,
                                                                   methods_random = self$param_set$values$methods_random,random.seed = self$param_set$values$random.seed,
                                                                   optimize = self$param_set$values$optimize,
-                                                                  correlation = self$param_set$values$correlation,col_0_1 = self$param_set$values$col_0_1
+                                                                  correlation = self$param_set$values$correlation,col_0_1 = self$param_set$values$col_0_1,verbose = F
                                     )
 
-                                    data_imputed <- cbind(data_imputed,target_col)
-                                    colnames(data_imputed)[ncol(data_imputed)] <- input[[1]]$target_names
 
 
-                                    data_backen <- as.data.frame(input[[1]]$backend$data(row=1:input[[1]]$backend$nrow,col=input[[1]]$backend$colnames))[,ifelse(input[[1]]$backend$primary_key==input[[1]]$backend$colnames,FALSE,TRUE)]
-                                    data_backen[input[[1]]$row_ids,] <- data_imputed
-
-                                    input[[1]]$backend <- as_data_backend(data_backen)
 
 
-                                    return(input)
+                                    return(data_imputed)
+                                  }
+                                  self$imputed_predict <- TRUE
+                                  self$flag <- 'train'
+                                  if(!self$imputed){
+                                    self$column_counter <- ncol(context)+1
+                                    self$imputed <- TRUE
+                                    data_to_impute <- cbind(feature,context)
+                                    self$data_imputed <- imp_function(data_to_impute)
+                                    colnames(self$data_imputed) <- self$state$context_cols
+
+                                  }
+                                  if(self$imputed){
+                                    self$column_counter <- self$column_counter -1
+
+                                  }
+                                  if  (self$column_counter==0){
+                                    self$imputed <- FALSE
+                                  }
+                                  return(NULL)
+
+                                },
+                                impute=function(feature, type, model, context){
+                                  imp_function <- function(data_to_impute){
+
+
+                                    data_to_impute <- as.data.frame(data_to_impute)
+                                    # prepering arguments for function
+                                    col_type <- 1:ncol(data_to_impute)
+                                    for (i in col_type){
+                                      col_type[i] <- class(data_to_impute[,i])
+                                    }
+                                    percent_of_missing <- 1:ncol(data_to_impute)
+                                    for (i in percent_of_missing){
+                                      percent_of_missing[i] <- (sum(is.na(data_to_impute[,i]))/length(data_to_impute[,1]))*100
+                                    }
+                                    col_miss <- colnames(data_to_impute)[percent_of_missing>0]
+                                    col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
+
+                                    data_imputed <- autotune_mice(data_to_impute,col_miss = col_miss,col_no_miss = col_no_miss,col_type = col_type,
+                                                                  percent_of_missing = percent_of_missing,m=self$param_set$values$m,iter=self$param_set$values$iter,
+                                                                  maxit = self$param_set$values$maxit,
+                                                                  low_corr = self$param_set$values$low_corr,up_corr = self$param_set$values$up_corr,
+                                                                  set_cor = self$param_set$values$set_cor,set_method = self$param_set$values$set_method,
+                                                                  methods_random = self$param_set$values$methods_random,random.seed = self$param_set$values$random.seed,
+                                                                  optimize = self$param_set$values$optimize,
+                                                                  correlation = self$param_set$values$correlation,col_0_1 = self$param_set$values$col_0_1,verbose = F
+                                    )
+
+
+
+
+
+                                    return(data_imputed)
+                                  }
+                                  if (self$imputed){
+                                      feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
+
+
+                                  }
+                                    if(nrow(self$data_imputed)!=nrow(context)){
+                                      self$imputed_predict <- FALSE
+                                      self$flag <- 'predict'
+                                    }
+
+                                      if(!self$imputed_predict){
+                                    data_to_impute <- cbind(feature,context)
+                                    self$data_imputed <- imp_function(data_to_impute)
+                                    colnames(self$data_imputed) <- self$state$context_cols
+                                    self$imputed_predict <- TRUE
                                   }
 
 
+                                  if (self$imputed_predict & self$flag=='predict' ){
+                                    feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
 
+                                  }
 
-                                },
-                                predict_internal = function(input) {
+                                  if(self$column_counter == 0 & self$flag=='train'){
+                                    feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
+                                    self$flag=='predict'
+                                    self$imputed_predict <- FALSE
+                                  }
 
-                                  p <- self$imp_function(input)
-
-
-
-                                  return(p)
-
-                                },
-
-                                train_internal = function(input) {
-
-                                  t<- self$imp_function(input)
-
-
-
-
-                                  return(t)
-
+                                  return(feature)
                                 }
+
+
 
                               )
 )
 mlr_pipeops$add("mice_imputation", PipeOpMice)
-
-
-
-
-# learner_po = po("learner", learner = lrn("classif.log_reg"))
 #
-# graph =  test  %>>% learner_po
+#
+# test <- PipeOpMice$new()
+# graph =  test %>>% learner_po
 # glrn = GraphLearner$new(graph)
+# glrn$train(d)
+# resample(d, glrn, rsmp("cv"))
+# glrn$param_set$values = list(error_train = 1)
+# d<- TaskClassif$new('w',dataset,'Utility')
+# d$data()
+# glrn$param_set
 #
-# test <- PipeOpVIM_kNN$new()
-# test$train(list(test_task))
+# ps = ParamSet$new(list(
+#   ParamInt$new("imput_mice.m",lower = 1,upper = 10)
 #
-# resample(test_task, glrn, rsmp("cv"))
+# ))
 #
-# tsk('iris')$backend$primary_key
+# library("mlr3tuning")
+# instance = TuningInstance$new(
+#   task = d,
+#   learner = glrn,
+#   resampling = rsmp("holdout"),
+#   measure = msr("classif.ce"),
+#   param_set = ps,
+#   terminator = term("evals", n_evals = 20)
+# )
 #
-# test_task<- TaskClassif$new('test',data,target = 'band_type')
-# test_task
-
+# instance
+# tuner = tnr("random_search")
+# tuner$tune(instance)

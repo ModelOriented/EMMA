@@ -30,10 +30,12 @@ single_set_Pipeline <- function(df,id,col_type,percent_of_missing,out_file_locat
   missMDA_result_1 <- NULL
   missMDA_result_2 <- NULL
   missForest_result <- NULL
-
+  VIM_HD <- NULL
+  VIM_IRMI <- NULL
+  VIM_KNN <- NULL
   cat('Mice :',file = out_file_location,append = T)
   tryCatch({
-  mice_result <- autotune_mice(df,col_miss=col_miss,col_no_miss=col_no_miss,percent_of_missing=percent_of_missing,col_type = col_type,iter = 5)
+  mice_result <- autotune_mice(df,col_miss=col_miss,col_no_miss=col_no_miss,percent_of_missing=percent_of_missing,col_type = col_type,iter = 5,verbose = F)
   if (sum(is.na(mice_result))==0){write('OK',file = out_file_location,append = TRUE)}
   else{ write('NO Errors and no all data imputed',file = out_file_location,append =  TRUE )}
   },error = function(e) { write(as.character(e),file=out_file_location,append = TRUE)})
@@ -56,10 +58,33 @@ single_set_Pipeline <- function(df,id,col_type,percent_of_missing,out_file_locat
 
   cat('missForest :',file = out_file_location,append = TRUE,sep='')
   tryCatch({
-  missForest_result <- autotune_missForest(df,percent_of_missing,cores = cores)
+  missForest_result <- autotune_missForest(df,percent_of_missing,cores = cores,verbose = F)
   if (sum(is.na(missForest_result))==0){write('OK',file = out_file_location,append = TRUE)}
   else{ write('NO Errors and no all data imputed',file = out_file_location ,append = TRUE )}
   },error = function(e) { write(as.character(e),file=out_file_location,append = TRUE)})
+
+  cat('VIM_HD :',file = out_file_location,append = TRUE,sep='')
+  tryCatch({
+    VIM_HD <- autotune_VIM_hotdeck(df,percent_of_missing)
+    if (sum(is.na(VIM_HD))==0){write('OK',file = out_file_location,append = TRUE)}
+    else{ write('NO Errors and no all data imputed',file = out_file_location ,append = TRUE )}
+  },error = function(e) { write(as.character(e),file=out_file_location,append = TRUE)})
+
+  cat('VIM_KNN :',file = out_file_location,append = TRUE,sep='')
+  tryCatch({
+    VIM_KNN <- autotune_VIM_kNN(df,percent_of_missing)
+    if (sum(is.na(VIM_KNN))==0){write('OK',file = out_file_location,append = TRUE)}
+    else{ write('NO Errors and no all data imputed',file = out_file_location ,append = TRUE )}
+  },error = function(e) { write(as.character(e),file=out_file_location,append = TRUE)})
+
+  cat('VIM_Irmi :',file = out_file_location,append = TRUE,sep='')
+  tryCatch({
+    VIM_IRMI <- autotune_VIM_Irmi(df,percent_of_missing)
+    if (sum(is.na(VIM_IRMI))==0){write('OK',file = out_file_location,append = TRUE)}
+    else{ write('NO Errors and no all data imputed',file = out_file_location ,append = TRUE )}
+  },error = function(e) { write(as.character(e),file=out_file_location,append = TRUE)})
+
+
   write('----------------------',file = out_file_location,append = TRUE)
   return(list(mice_result,missMDA_result_1,missMDA_result_2,missForest_result))
 
