@@ -96,6 +96,7 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                   if  (self$column_counter==0){
                                     self$imputed <- FALSE
                                   }
+                                  self$train_s <- TRUE
                                   return(NULL)
 
                                 },
@@ -137,7 +138,7 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
 
 
                                   }
-                                    if(nrow(self$data_imputed)!=nrow(context)){
+                                    if((nrow(self$data_imputed)!=nrow(context) | !self$train_s ) & self$flag=='tarin'){
                                       self$imputed_predict <- FALSE
                                       self$flag <- 'predict'
                                     }
@@ -160,6 +161,7 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                     self$flag=='predict'
                                     self$imputed_predict <- FALSE
                                   }
+                                  self$train_s <- FALSE
 
                                   return(feature)
                                 }

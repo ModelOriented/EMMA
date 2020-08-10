@@ -2,7 +2,7 @@
 % Please edit documentation in R/autotune_VIM_Irmi.R
 \name{autotune_VIM_Irmi}
 \alias{autotune_VIM_Irmi}
-\title{Perform imputation using VIM packeg and irmi function}
+\title{Perform imputation using VIM package and irmi function}
 \usage{
 autotune_VIM_Irmi(
   df,

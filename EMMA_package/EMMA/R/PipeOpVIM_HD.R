@@ -75,6 +75,7 @@ PipeOpVIM_HD <-  R6::R6Class("VIM_HD_imputation",lock_objects=FALSE,
                                if  (self$column_counter==0){
                                  self$imputed <- FALSE
                                }
+                               self$train_s <- TRUE
                                return(NULL)
 
                              },
@@ -110,7 +111,7 @@ PipeOpVIM_HD <-  R6::R6Class("VIM_HD_imputation",lock_objects=FALSE,
 
 
                                }
-                               if(nrow(self$data_imputed)!=nrow(context)){
+                               if((nrow(self$data_imputed)!=nrow(context) | !self$train_s) & (self$flag=='train')){
                                  self$imputed_predict <- FALSE
                                  self$flag <- 'predict'
                                }
@@ -130,10 +131,11 @@ PipeOpVIM_HD <-  R6::R6Class("VIM_HD_imputation",lock_objects=FALSE,
 
                                if(self$column_counter == 0 & self$flag=='train'){
                                  feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
-                                 self$flag=='predict'
+                                 self$flag <- 'predict'
                                  self$imputed_predict <- FALSE
                                }
 
+                               self$train_s <- FALSE
                                return(feature)
                              }
 

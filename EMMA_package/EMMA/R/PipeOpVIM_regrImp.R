@@ -1,6 +1,6 @@
-#' IRMI Imputation
+#' Regression Imputation
 #'
-#' @description This class create object implements autotune_VIM_Irmi function for use in mlr3 pipelinies. Object can be created with \code{\link{autotune_VIM_Irmi}} params.
+#' @description This class create object implements autotune_VIM_regrImp function for use in mlr3 pipelinies. Object can be created with \code{\link{autotune_VIM_regrImp}} params.
 #'
 #'
 #'
@@ -9,22 +9,20 @@
 
 
 
-PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
+PipeOpVIM_regrImp <-  R6::R6Class("VIM_regrImp_imputation",lock_objects=FALSE,
                              inherit = PipeOpImpute,  # inherit from PipeOp
                              public = list(
-                               initialize = function(id = "imput_VIM_IRMI",eps=5,maxit=100,step=FALSE,robust=FALSE,init.method='kNN',force=FALSE,col_0_1= FALSE
+                               initialize = function(id = "imput_VIM_regrImp",col_0_1= FALSE,robust=FALSE,mod_cat=FALSE,use_imputed=FALSE
                                ) {
-                                 super$initialize(id, whole_task_dependent=TRUE, param_vals = list( col_0_1=col_0_1,eps=eps,maxit=maxit,step=step,robust=robust,
-                                                                                                    init.method=init.method,force=force),
+                                 super$initialize(id, whole_task_dependent=TRUE, param_vals = list( col_0_1=col_0_1,robust=robust,mod_cat=mod_cat,
+                                                                                                    use_imputed=use_imputed),
                                                   param_set= ParamSet$new(list(
 
-                                                    'col_0_1'=ParamLgl$new('col_0_1',default = F,tags='VIM_IRMI'),
-                                                    'eps'=ParamDbl$new('eps',lower = 0,upper = Inf,default = 5,tags = 'VIM_IRMI'),
-                                                    'maxit'=ParamInt$new('maxit',lower = 10,upper = Inf,default = 100,tags = 'VIM_IRMI'),
-                                                    'step'=ParamLgl$new('step',default = FALSE,tags = 'VIM_IRMI'),
-                                                    'robust'=ParamLgl$new('robust',default = FALSE,tags='VIM_IRMI'),
-                                                    'init.method'=ParamFct$new('init.method',levels = c('kNN','median'),default = 'kNN',tags = 'VIM_IRMI'),
-                                                    'force'=ParamLgl$new('force',default = FALSE,tags = 'VIM_IRMI')
+                                                    'col_0_1'=ParamLgl$new('col_0_1',default = F,tags='VIM_regrImp'),
+                                                    'robust'=ParamLgl$new('robust',default = F,tags = 'VIM_regrImp'),
+                                                    'mod_cat'=ParamLgl$new('mod_cat',default = F,tags='VIM_regrImp'),
+                                                    'use_imputed'=ParamLgl$new('use_imputed',default = F,tags = 'VIM_regrImp')
+
 
                                                   ))
                                  )
@@ -38,7 +36,7 @@ PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
                                },
 
                                train_imputer=function(feature, type, context){
-                                  imp_function <- function(data_to_impute){
+                                 imp_function <- function(data_to_impute){
 
 
 
@@ -58,9 +56,9 @@ PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
 
 
 
-                                   data_imputed <- autotune_VIM_Irmi(data_to_impute,percent_of_missing,eps = self$param_set$values$eps,maxit = self$param_set$values$maxit,
-                                                                     step = self$param_set$values$step,robust = self$param_set$values$robust,col_0_1 = self$param_set$values$col_0_1,
-                                                                     init.method = self$param_set$values$init.method,force = self$param_set$values$force)
+                                   data_imputed <- autotune_VIM_regrImp(data_to_impute,percent_of_missing = percent_of_missing,col_type = col_type,
+                                                                        col_0_1 = self$param_set$values$col_0_1,robust = self$param_set$values$robust,
+                                                                        mod_cat = self$param_set$values$mod_cat , use_imputed = self$param_set$values$use_imputed)
 
 
 
@@ -68,7 +66,6 @@ PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
                                  }
                                  self$imputed_predict <- TRUE
                                  self$flag <- 'train'
-
                                  if(!self$imputed){
                                    self$column_counter <- ncol(context)+1
                                    self$imputed <- TRUE
@@ -84,13 +81,12 @@ PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
                                  if  (self$column_counter==0){
                                    self$imputed <- FALSE
                                  }
-
                                  self$train_s <- TRUE
                                  return(NULL)
 
                                },
                                impute=function(feature, type, model, context){
-                                  imp_function <- function(data_to_impute){
+                                 imp_function <- function(data_to_impute){
 
 
 
@@ -105,24 +101,25 @@ PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
                                    for (i in percent_of_missing){
                                      percent_of_missing[i] <- (sum(is.na(data_to_impute[,i]))/length(data_to_impute[,1]))*100
                                    }
+                                   col_miss <- colnames(data_to_impute)[percent_of_missing>0]
+                                   col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
 
 
-                                   data_imputed <- autotune_VIM_Irmi(data_to_impute,percent_of_missing,eps = self$param_set$values$eps,maxit = self$param_set$values$maxit,
-                                                                     step = self$param_set$values$step,robust = self$param_set$values$robust,col_0_1 = self$param_set$values$col_0_1,
-                                                                     init.method = self$param_set$values$init.method,force = self$param_set$values$force)
+                                   data_imputed <- autotune_VIM_regrImp(data_to_impute,percent_of_missing = percent_of_missing,col_type = col_type,
+                                                                        col_0_1 = self$param_set$values$col_0_1,robust = self$param_set$values$robust,
+                                                                        mod_cat = self$param_set$values$mod_cat , use_imputed = self$param_set$values$use_imputed)
 
 
 
                                    return(data_imputed)
                                  }
-
-                                  if (self$imputed){
+                                 if (self$imputed){
                                    feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
 
 
                                  }
-                                 if((nrow(self$data_imputed)!=nrow(context) |  !self$train_s) & self$flag=='train'){
+                                 if((nrow(self$data_imputed)!=nrow(context) | !self$train_s) & (self$flag=='train')){
                                    self$imputed_predict <- FALSE
                                    self$flag <- 'predict'
                                  }
@@ -145,20 +142,11 @@ PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
                                    self$flag <- 'predict'
                                    self$imputed_predict <- FALSE
                                  }
-                                  self$train_s <- FALSE
 
+                                 self$train_s <- FALSE
                                  return(feature)
                                }
 
                              )
 )
-mlr_pipeops$add("VIM_IRMI_imputation", PipeOpVIM_IRMI)
-
-
-
-# test = PipeOpMissMDA_PCA_MCA_FMAD$new() %>>%  learner_po
-# glrn =GraphLearner$new(test)
-# test_task = TaskClassif$new('test',backend = df,target = df_oml$target.features)
-#
-#
-# d <- resample(test_task,glrn,rsmp('cv',folds=2L))
+mlr_pipeops$add("VIM_regrImp_imputation", PipeOpVIM_regrImp)

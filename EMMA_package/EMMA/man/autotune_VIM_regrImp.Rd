@@ -2,7 +2,7 @@
 % Please edit documentation in R/autotune_VIM_regrImp.R
 \name{autotune_VIM_regrImp}
 \alias{autotune_VIM_regrImp}
-\title{Perform imputation using VIM packeg and irmi function #### UNFINISHED}
+\title{Perform imputation using VIM package and regressionImp function.}
 \usage{
 autotune_VIM_regrImp(
   df,
@@ -11,31 +11,27 @@ autotune_VIM_regrImp(
   col_0_1 = F,
   robust = F,
   mod_cat = F,
-  verbose = T
+  use_imputed = F
 )
 }
 \arguments{
 \item{df}{data.frame. Df to impute with column names and without target column.}
 
+\item{col_type}{Character vector with types of columns.}
+
 \item{percent_of_missing}{numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)}
 
 \item{col_0_1}{Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).}
 
-\item{robust}{if TRUE, robust regression methods will be applied (it's impossible to set step=TRUE and robust=TRUE at the same time)}
+\item{robust}{TRUE/FALSE if robust regression should be used.}
 
-\item{eps}{threshold for convergency}
+\item{mod_cat}{TRUE/FALSE if TRUE for categorical variables the level with the highest prediction probability is selected, otherwise it is sampled according to the probabilities.}
 
-\item{maxit}{maximum number of iterations}
-
-\item{step}{stepwise model selection is applied when the parameter is set to TRUE}
-
-\item{init.method}{Method for initialization of missing values (kNN or median)}
-
-\item{force}{if TRUE, the algorithm tries to find a solution in any case, possible by using different robust methods automatically. (should be set FALSE for simulation)}
+\item{use_imputed}{TRUE/FALSe if TURE already imputed columns will be used to impute another.}
 }
 \value{
 Return one data.frame with imputed values.
 }
 \description{
-Function use IRMI (Iterative robust model-based imputation ) to impute missing data.
+Function use Regression models to impute missing data.
 }

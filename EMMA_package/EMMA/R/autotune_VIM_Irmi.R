@@ -1,4 +1,4 @@
-#' Perform imputation using VIM packeg and irmi function
+#' Perform imputation using VIM package and irmi function
 #'
 #' @description Function use IRMI (Iterative robust model-based imputation ) to impute missing data.
 #'

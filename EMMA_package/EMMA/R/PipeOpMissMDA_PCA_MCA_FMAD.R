@@ -10,7 +10,7 @@
 PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",lock_objects=FALSE,
                            inherit = PipeOpImpute,  # inherit from PipeOp
                            public = list(
-                             initialize = function(id = "imput_missMDA_MCA_PCA_FMAD", optimize_ncp = T, set_ncp=2,col_0_1=F,ncp.max=5,random.seed=123,maxiter=1000,
+                             initialize = function(id = "imput_missMDA_MCA_PCA_FMAD", optimize_ncp = T, set_ncp=2,col_0_1=F,ncp.max=5,random.seed=123,maxiter=999,
                                                    coeff.ridge=1,threshold=1e-06,method='Regularized'
                              ) {
                                super$initialize(id,whole_task_dependent=TRUE, param_vals = list(optimize_ncp=optimize_ncp,set_ncp=set_ncp,col_0_1=col_0_1,ncp.max=ncp.max,random.seed=random.seed,
@@ -91,6 +91,7 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
                                if  (self$column_counter==0){
                                  self$imputed <- FALSE
                                }
+                               self$train_s <- TRUE
                                return(NULL)
 
                              },
@@ -130,7 +131,7 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
 
 
                                }
-                               if(nrow(self$data_imputed)!=nrow(context)){
+                               if((nrow(self$data_imputed)!=nrow(context) | !self$train_s) & self$flag=='train') {
                                  self$imputed_predict <- FALSE
                                  self$flag <- 'predict'
                                }
@@ -153,6 +154,7 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
                                  self$flag=='predict'
                                  self$imputed_predict <- FALSE
                                }
+                                self$train_s <- FALSE
 
                                return(feature)
                              }

@@ -121,7 +121,7 @@ list_of_pipe <- c(PipeOpMice$new(),PipeOpMissMDA_MFA$new(),PipeOpMissMDA_PCA_MCA
 
 for(id in datasets_Ids){
 
-  df_oml <- getOMLDataSet(id)
+  df_oml <- getOMLDataSet(41162)
 
   df <- preprocess(df_oml,0.9)[[1]]
 
@@ -141,14 +141,13 @@ for(id in datasets_Ids){
   write('----------------------PIPLINE-----------------------',append = T,file=out_file)
   for (i in list_of_pipe){
     learner_po = po("learner", learner = lrn("classif.rpart"))
-    test = i  %>>%  learner_po
+    test = list_of_pipe[[6]] %>>%  learner_po
     glrn =GraphLearner$new(test)
     test_task = TaskClassif$new('test',backend = df,target = df_oml$target.features)
     cat(i$id,file = out_file,append = T)
-    tryCatch({
+
     resample(test_task,glrn,rsmp('cv',folds=2L))
-    write(':  OK',file = out_file,append = T)
-    },error = function(e) { write(as.character(e),file=out_file,append = TRUE)})
+
   }
 
 
