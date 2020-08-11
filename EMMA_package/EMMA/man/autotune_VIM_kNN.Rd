@@ -10,7 +10,8 @@ autotune_VIM_kNN(
   k = 5,
   numFun = median,
   catFun = maxCat,
-  col_0_1 = FALSE
+  col_0_1 = FALSE,
+  out_file = NULL
 )
 }
 \arguments{
@@ -21,6 +22,8 @@ autotune_VIM_kNN(
 \item{k}{Value of k use if optimize=FALSE}
 
 \item{col_0_1}{decide if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False.}
+
+\item{out_file}{Output log file location if file already exists log message will be added. If NULL no log will be produced.}
 
 \item{numFUN}{function for aggregating the k Nearest Neighbours in the case of a numerical variable. Defoult median.}
 

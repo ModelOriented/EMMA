@@ -17,7 +17,8 @@ autotune_missForest(
   mtry = NULL,
   verbose = FALSE,
   maxiter = 20,
-  maxnodes = NULL
+  maxnodes = NULL,
+  out_file = NULL
 )
 }
 \arguments{
@@ -46,6 +47,8 @@ autotune_missForest(
 \item{maxiter}{maxiter form missForest function.}
 
 \item{maxnodes}{maxnodes from missForest function.}
+
+\item{out_file}{Output log file location if file already exists log message will be added. If NULL no log will be produced.}
 }
 \value{
 Return data.frame with imputed values.

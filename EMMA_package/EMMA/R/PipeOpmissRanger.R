@@ -1,39 +1,35 @@
-#' missMDA_PCA_MCA_FMAD imputation
+#' missRanger Imputation
 #'
-#' @description This class create object implements missMDA_FMAD_MCA_PCA function for use in mlr3 pipelinies. Object can be created with \code{\link{missMDA_FMAD_MCA_PCA}} params.
+#' @description This class create object implements autotune_missRanger function for use in mlr3 pipelinies. Object can be created with \code{\link{autotune_missRanger}} params.
 #'
 #'
 #'
 #' @import mlr3
 #' @import mlr3pipelines
 
-PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",lock_objects=FALSE,
-                           inherit = PipeOpImpute,  # inherit from PipeOp
+
+
+PipeOpmissRanger <-  R6::R6Class("missRanger_imputation",lock_objects=FALSE,
+                           inherit = PipeOpImpute,
                            public = list(
-                             initialize = function(id = "imput_missMDA_MCA_PCA_FMAD", optimize_ncp = T, set_ncp=2,col_0_1=F,ncp.max=5,random.seed=123,maxiter=999,
-                                                   coeff.ridge=1,threshold=1e-06,method='Regularized',out_file=NULL
+                             initialize = function(id = "imput_missRanger", maxiter = 10,random.seed=123,mtry=NULL,num.trees=500,
+                                                   pmm.k=5,optimize=F,iter=10,col_0_1=F,out_file=NULL
                              ) {
-                               super$initialize(id,whole_task_dependent=TRUE, param_vals = list(optimize_ncp=optimize_ncp,set_ncp=set_ncp,col_0_1=col_0_1,ncp.max=ncp.max,random.seed=random.seed,
-                                                                      maxiter=maxiter,coeff.ridge=coeff.ridge,threshold=threshold,method=method,out_file=out_file),
+                               super$initialize(id, whole_task_dependent=TRUE,param_vals = list( maxiter=maxiter,random.seed=random.seed,mtry=mtry,num.trees=num.trees,
+                                                                                                 pmm.k=pmm.k,iter=iter,optimize=optimize,col_0_1=col_0_1,out_file=out_file),
                                                 param_set= ParamSet$new(list(
-
-                                                  'set_ncp'=ParamInt$new('set_ncp',lower = 1,upper = Inf,default = 2,tags='PCA_MCA_FMAD'),
-                                                  'ncp.max'=ParamInt$new('ncp.max',lower = 1,upper = Inf,default = 2,tags='PCA_MCA_FMAD'),
-                                                  'maxiter'=ParamInt$new('maxiter',lower =50,upper = Inf,default = 1000,tags = 'PCA_MCA_FMAD'),
-                                                  'coeff.ridge'=ParamDbl$new('coeff.ridge',lower = 0,upper = 1,default = 1,tags = 'PCA_MCA_FMAD'),
-                                                  'threshold'=ParamDbl$new('threshold',lower = 0,upper = 1,default = 1e-6,tags = 'PCA_MCA_FMAD'),
-                                                  'method'=ParamFct$new('method',levels = c('Regularized','EM'),default = 'Regularized',tags = 'PCA_MCA_FMAD'),
-                                                  'out_file'=ParamUty$new('out_file',default = NULL,tags = 'PCA_MCA_FMAD'),
-
-
-
-                                                  'random.seed'=ParamInt$new('random.seed',-Inf,Inf,default = 123,tags='PCA_MCA_FMAD'),
-                                                  'optimize_ncp'=ParamLgl$new('optimize_ncp',default = T,tags='PCA_MCA_FMAD'),
-                                                  'col_0_1'=ParamLgl$new('col_0_1',default = F,tags='PCA_MCA_FMAD')
+                                                  'maxiter'= ParamInt$new('maxiter',lower = 1,upper = Inf,default = 10,tags = 'missRanger'),
+                                                  'random.seed'=ParamInt$new('random.seed',default = 123,tags = 'missRanger'),
+                                                  'mtry'=ParamUty$new('mtry',default = NULL,tags = 'missRanger'),
+                                                  'num.trees'=ParamInt$new('num.trees',default = 500,lower = 10,upper = Inf,tags = 'missRanger'),
+                                                  'pmm.k'=ParamInt$new('pmm.k',lower = 0,upper = Inf,default = 5,tags = 'missRagner'),
+                                                  'optimize'=ParamLgl$new('optimize',default = F,tags = 'missRagner'),
+                                                  'iter'=ParamInt$new('iter',lower = 1,upper = Inf,default = 10,tags = 'missRanger'),
+                                                  'col_0_1'=ParamLgl$new('col_0_1',default = F,tags = 'missRanger'),
+                                                  'out_file'=ParamUty$new('out_file',default = NULL,tags = 'missRanger')
 
                                                 ))
                                )
-
 
 
 
@@ -44,7 +40,7 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
                              },
 
                              train_imputer=function(feature, type, context){
-                                imp_function <- function(data_to_impute){
+                               imp_function <- function(data_to_impute){
 
 
 
@@ -62,20 +58,19 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
                                  col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
-                                 data_imputed <- missMDA_FMAD_MCA_PCA(data_to_impute,col_type,percent_of_missing,optimize_ncp = self$param_set$values$optimize_ncp,
-                                                                      set_ncp = self$param_set$values$set_ncp,col_0_1 = self$param_set$values$col_0_1,
-                                                                      ncp.max = self$param_set$values$ncp.max, random.seed = self$param_set$values$random.seed,
-                                                                      maxiter =  self$param_set$values$maxiter,coeff.ridge =  self$param_set$values$coeff.ridge,
-                                                                      threshold =  self$param_set$values$threshold,method =  self$param_set$values$method,
-                                                                      out_file =self$param_set$values$out_file )
+                                 data_imputed <- autotune_missRanger(data_to_impute,percent_of_missing,maxiter = self$param_set$values$maxiter,
+                                                                     random.seed = self$param_set$values$random.seed,mtry = self$param_set$values$mtry,
+                                                                     num.trees = self$param_set$values$num.trees,col_0_1 = self$param_set$values$col_0_1,
+                                                                     out_file = self$param_set$values$out_file,optimize = self$param_set$values$optimize,
+                                                                     iter = self$param_set$values$iter,pmm.k = self$param_set$values$pmm.k)
+
 
 
 
 
 
                                  return(data_imputed)
-                                }
-
+                               }
                                self$imputed_predict <- TRUE
                                self$flag <- 'train'
                                if(!self$imputed){
@@ -98,9 +93,7 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
 
                              },
                              impute=function(feature, type, model, context){
-                                imp_function <- function(data_to_impute){
-
-
+                               imp_function <- function(data_to_impute){
 
 
                                  data_to_impute <- as.data.frame(data_to_impute)
@@ -116,13 +109,11 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
                                  col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
-                                 data_imputed <- missMDA_FMAD_MCA_PCA(data_to_impute,col_type,percent_of_missing,optimize_ncp = self$param_set$values$optimize_ncp,
-                                                                      set_ncp = self$param_set$values$set_ncp,col_0_1 = self$param_set$values$col_0_1,
-                                                                      ncp.max = self$param_set$values$ncp.max, random.seed = self$param_set$values$random.seed,
-                                                                      maxiter =  self$param_set$values$maxiter,coeff.ridge =  self$param_set$values$coeff.ridge,
-                                                                      threshold =  self$param_set$values$threshold,method =  self$param_set$values$method,
-                                                                      out_file =self$param_set$values$out_file)
-
+                                 data_imputed <- autotune_missRanger(data_to_impute,percent_of_missing,maxiter = self$param_set$values$maxiter,
+                                                                     random.seed = self$param_set$values$random.seed,mtry = self$param_set$values$mtry,
+                                                                     num.trees = self$param_set$values$num.trees,col_0_1 = self$param_set$values$col_0_1,
+                                                                     out_file = self$param_set$values$out_file,optimize = self$param_set$values$optimize,
+                                                                     iter = self$param_set$values$iter,pmm.k = self$param_set$values$pmm.k)
 
 
 
@@ -134,7 +125,7 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
 
 
                                }
-                               if((nrow(self$data_imputed)!=nrow(context) | !self$train_s) & self$flag=='train') {
+                               if((nrow(self$data_imputed)!=nrow(context) | !self$train_s ) & self$flag=='tarin'){
                                  self$imputed_predict <- FALSE
                                  self$flag <- 'predict'
                                }
@@ -157,16 +148,13 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
                                  self$flag=='predict'
                                  self$imputed_predict <- FALSE
                                }
-                                self$train_s <- FALSE
+                               self$train_s <- FALSE
 
                                return(feature)
                              }
 
+
+
                            )
 )
-
-
-mlr_pipeops$add("missMDA_MCA_PCA_FMAD_imputation", PipeOpMissMDA_PCA_MCA_FMAD)
-
-
-
+mlr_pipeops$add("missRanger_imputation", PipeOpmissRanger)

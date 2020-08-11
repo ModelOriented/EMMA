@@ -11,10 +11,11 @@
 #' @param random.seed random seed.
 #' @param ncp Number of dimensions used by algorithm. Default 2.
 #' @param coeff.ridge Value use in Regularized method.
-#'
+#' @param out_file  Output log file location if file already exists log message will be added. If NULL no log will be produced.
 #' @param maxiter maximal number of iteration in algortihm.
 #' @param method method used in imputation algoritm.
 #' @param threshold threshold for convergence.
+#'
 #' @import missMDA
 #' @details MFA requires to select group type but numeric types can only be set as 'c' - centered and 's' - scale to unit variance.
 #' It's impossible to provide these conditions so numeric type is always set as 's'.
@@ -23,7 +24,11 @@
 
 
 missMDA_MFA <- function(df,col_type,percent_of_missing,random.seed=123,ncp =2 ,col_0_1=F,maxiter=1000,
-                        coeff.ridge=1,threshold=1e-6,method='Regularized'){
+                        coeff.ridge=1,threshold=1e-6,method='Regularized',out_file=NULL){
+
+  if(!is.null(out_file)){
+    write('MFA',file = out_file,append = T)
+  }
 
   if (sum(is.na(df))==0){return(df)}
 
@@ -59,13 +64,26 @@ missMDA_MFA <- function(df,col_type,percent_of_missing,random.seed=123,ncp =2 ,c
   }
 # Imputation
   no_ok <- FALSE
+
   tryCatch({
 
     final <-  imputeMFA(df,group = groups,type = type,ncp = ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge)$completeObs
     },error = function(e){no_ok <<- TRUE}
     )
+  tryCatch({
   if (no_ok | !exists('final')){final <-  imputeMFA(df,group = groups,type = type,ncp = 1,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge)$completeObs}
-# adding 0_1 columns
+  if (!is.null(out_file)){
+    write('  OK',file = out_file,append = T)
+
+  }
+  },error=function(e){
+    if(!is.null(out_file)){
+      write(as.character(e),file = out_file,append = T)
+    }
+    stop(e)
+  })
+
+    # adding 0_1 columns
 
 if (col_0_1){
   columns_with_missing <-  (as.data.frame(is.na(df))*1)[,percent_of_missing>0]

@@ -12,16 +12,26 @@
 #' @param robust if TRUE, robust regression methods will be applied (it's impossible to set step=TRUE and robust=TRUE at the same time)
 #' @param init.method Method for initialization of missing values (kNN or median)
 #' @param force if TRUE, the algorithm tries to find a solution in any case, possible by using different robust methods automatically. (should be set FALSE for simulation)
+#' @param out_file  Output log file location if file already exists log message will be added. If NULL no log will be produced.
 #' @import VIM
 #'
 #' @return Return one data.frame with imputed values.
-autotune_VIM_Irmi <- function(df,percent_of_missing,eps=5,maxit=100,step=FALSE,robust=FALSE,init.method='kNN',force=FALSE,col_0_1=FALSE){
+autotune_VIM_Irmi <- function(df,percent_of_missing,eps=5,maxit=100,step=FALSE,robust=FALSE,init.method='kNN',force=FALSE,col_0_1=FALSE,out_file=NULL){
 
-
+  if(!is.null(out_file)){
+    write('VIM_IRMI',file = out_file,append = T)
+  }
 
   tryCatch({
+
     final <- irmi(df,eps=eps,maxit = maxit,step = step,robust = robust,init.method = init.method,force = force,imp_var = F)
+    if(!is.null(out_file)){
+      write('  OK ',file = out_file,append = T)
+    }
   },error = function(e){
+    if(!is.null((out_file))){
+      write(as.character(e),file = out_file,append = T)
+    }
     print('IRMI dont work on selcted params runing on defoult')
     final <- irmi(df,imp_var = F)
   })

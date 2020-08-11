@@ -43,7 +43,8 @@ This class create object implements autotune_VIM_Irmi function for use in mlr3 p
   robust = FALSE,
   init.method = "kNN",
   force = FALSE,
-  col_0_1 = FALSE
+  col_0_1 = FALSE,
+  out_file = NULL
 )}\if{html}{\out{</div>}}
 }
 

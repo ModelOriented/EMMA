@@ -14,7 +14,8 @@ autotune_softImpute(
   rank.max = 2,
   type = "als",
   thresh = 1e-05,
-  maxit = 100
+  maxit = 100,
+  out_file = NULL
 )
 }
 \arguments{
@@ -37,6 +38,8 @@ autotune_softImpute(
 \item{thresh}{Threshold for convergence.}
 
 \item{maxit}{Maximum number of iterations.}
+
+\item{out_file}{Output log file location if file alredy exist log messege will be added. If NULL no log will be produce.}
 }
 \value{
 Return one data.frame with imputed values.

@@ -13,6 +13,7 @@
 #' @param type Chose of algoritm 'als' or 'svd . Defoult 'als'.
 #' @param thresh Threshold for convergence.
 #' @param maxit Maximum number of iterations.
+#' @param out_file Output log file location if file alredy exist log messege will be added. If NULL no log will be produce.
 #'
 #' @import softImpute
 #' @imports VIM
@@ -20,7 +21,7 @@
 #' @return Return one data.frame with imputed values.
 
 
-autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun=maxCat,lambda=0,rank.max=2,type='als',thresh=1e-5,maxit=100){
+autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun=maxCat,lambda=0,rank.max=2,type='als',thresh=1e-5,maxit=100,out_file=NULL){
   column_order <- colnames(df)
   if(sum(is.na(df))==0){return(df)}
 
@@ -30,7 +31,10 @@ autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun
 
   #Prepering matrix
   matrix <- as.matrix(df[,ifelse(col_type=='numeric' | col_type=='integer',TRUE,FALSE)])
-
+  if(!is.null(out_file)){
+      write('softImpute',file = out_file,append = T)
+  }
+  tryCatch({
   if(is.null(lambda)){
     lambda <- floor(lambda0(matrix,thresh = thresh,maxit = maxit))
   }
@@ -53,6 +57,15 @@ autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun
   final <- cbind(as.data.frame(final),df[,ifelse(col_type=='numeric' | col_type=='integer',F,T),drop=F])
 
   final <- final[,column_order]
+  if(!is.null(out_file)){
+    write('OK',file = out_file,append = T)
+  }
+  },error=function(e){
+    if(is.null(out_file)){
+    write(as.character(e),file = out_file,append = T)
+    }
+    stop(e)
+  })
 
   if(col_0_1){
 

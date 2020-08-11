@@ -17,13 +17,14 @@
 #' @param verbose If FALSE funtion didn't print on console.
 #' @param maxiter maxiter form missForest function.
 #' @param maxnodes maxnodes from missForest function.
+#' @param out_file  Output log file location if file already exists log message will be added. If NULL no log will be produced.
 #' @import missForest
 #' @import doParallel
 #' @param col_0_1 decide if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False.
 #'
 #' @return Return data.frame with imputed values.
 autotune_missForest <-function(df,percent_of_missing,cores=NULL,ntree_set =c(100,200,500,1000),mtry_set=NULL,parallel=TRUE,col_0_1=FALSE,
-                               optimize=TRUE,ntree=100,mtry=NULL,verbose=FALSE,maxiter=20,maxnodes=NULL){
+                               optimize=TRUE,ntree=100,mtry=NULL,verbose=FALSE,maxiter=20,maxnodes=NULL,out_file=NULL){
 
   # Checking if parallel backed is runing and starting it if not
   if (parallel){
@@ -56,10 +57,13 @@ autotune_missForest <-function(df,percent_of_missing,cores=NULL,ntree_set =c(100
     parallelize <-  'variables'}
   if (!is.null(cores)){
   if(cores<=1){parallelize <- 'no'}}
-  if (optimize){
 
 
-
+  if(!is.null(out_file)){
+    write('missForest',file = out_file,append = T)
+  }
+  tryCatch({
+ if (optimize){
   # Grid search using mean OBBerror
   best_params <-  c(-11,-11)
   best_OBB <- 10
@@ -85,13 +89,25 @@ autotune_missForest <-function(df,percent_of_missing,cores=NULL,ntree_set =c(100
   }
 
   #fianl imputation
+
   final <- missForest(df,maxiter = maxiter,maxnodes = maxnodes,ntree = best_params[1],mtry = best_params[2],parallelize=parallelize,verbose = verbose)$ximp
-  }
+}
   if (!optimize){
     if (is.null(mtry)){
     final <- missForest(df,maxiter = maxiter,ntree = ntree,maxnodes = maxnodes,mtry = floor(sqrt(ncol(df))),parallelize = parallelize,verbose = verbose)$ximp}
     else{ final <- missForest(df,maxiter = maxiter,ntree = ntree,maxnodes = maxnodes,mtry = mtry,parallelize = parallelize,verbose = verbose)$ximp}
   }
+  if(!is.null(out_file)){
+    write(c(best_params[1],best_params[2]),file = out_file,append = T)
+    write(' OK',file = out_file,append = T)
+  }
+
+  },error=function(e){
+    if(!is.null(out_file)){
+      write(as.character(e),file = out_file,append = T)
+    }
+    stop(e)
+  })
   #adding 0_1_cols
   if (col_0_1){
     columns_with_missing <-  (as.data.frame(is.na(df))*1)[,percent_of_missing>0]
@@ -104,7 +120,7 @@ autotune_missForest <-function(df,percent_of_missing,cores=NULL,ntree_set =c(100
     registerDoSEQ()
   }
   return(final)
-}
+  }
 
 
 

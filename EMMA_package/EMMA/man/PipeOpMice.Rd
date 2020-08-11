@@ -48,7 +48,8 @@ This class create object implements autotune_mice function for use in mlr3 pipel
   random.seed = 123,
   optimize = F,
   correlation = T,
-  col_0_1 = F
+  col_0_1 = F,
+  out_file = NULL
 )}\if{html}{\out{</div>}}
 }
 

@@ -10,16 +10,20 @@
 #' @param robust TRUE/FALSE if robust regression should be used.
 #' @param mod_cat TRUE/FALSE if TRUE for categorical variables the level with the highest prediction probability is selected, otherwise it is sampled according to the probabilities.
 #' @param use_imputed TRUE/FALSe if TURE already imputed columns will be used to impute another.
+#' @param out_file  Output log file location if file already exists log message will be added. If NULL no log will be produced.
 #' @import VIM
 #'
 #' @return Return one data.frame with imputed values.
-autotune_VIM_regrImp <- function(df,col_type,percent_of_missing,col_0_1=F,robust=F,mod_cat=F,use_imputed=F){
-
-
+autotune_VIM_regrImp <- function(df,col_type,percent_of_missing,col_0_1=F,robust=F,mod_cat=F,use_imputed=F,out_file=NULL){
+  if (!is.null(out_file)){
+    write('regrImp',file = out_file,append = T)
+  }
+  tryCatch({
   # Cheking if imputation can be perform
   if(sum(percent_of_missing==0)==0){
     stop('No values with no missing values')
   }
+
   if (sum(is.na(df))==0){return(df)}
 
 
@@ -50,6 +54,16 @@ autotune_VIM_regrImp <- function(df,col_type,percent_of_missing,col_0_1=F,robust
 
 
   }
+  if(!is.null(out_file)){
+    write('  OK',file = out_file,append = T)
+  }
+  },error=function(e){
+    if(!is.null(out_file)){
+      write(as.character(e),file = out_file,append = T)
+    }
+    stop(e)
+
+  })
 
 
 

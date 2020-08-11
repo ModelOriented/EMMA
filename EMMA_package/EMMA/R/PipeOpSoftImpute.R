@@ -12,10 +12,12 @@
 PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
                                inherit = PipeOpImpute,  # inherit from PipeOp
                                public = list(
-                                 initialize = function(id = "imput_softImpute",col_0_1=F,cat_Fun=maxCat,lambda=0,rank.max=2,type='als',thresh=1e-5,maxit=100
+                                 initialize = function(id = "imput_softImpute",col_0_1=F,cat_Fun=maxCat,lambda=0,rank.max=2,type='als',thresh=1e-5,maxit=100,
+                                                       out_file=NULL
                                  ) {
                                    super$initialize(id, whole_task_dependent=TRUE, param_vals = list( col_0_1=col_0_1,cat_Fun=cat_Fun,lambda=lambda,
-                                                                                                      rank.max=rank.max,type=type,thresh,thresh,maxit=maxit),
+                                                                                                      rank.max=rank.max,type=type,thresh=thresh,maxit=maxit,
+                                                                                                      out_file=out_file),
                                                     param_set= ParamSet$new(list(
 
                                                       'col_0_1'=ParamLgl$new('col_0_1',default = F,tags='softImpute'),
@@ -24,7 +26,8 @@ PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
                                                       'rank.max'=ParamUty$new('rank.max',default = 2,tags = 'softImpute'),
                                                       'type'=ParamFct$new('type',levels = c('als','svd'),default = 'als',tags='softImpute'),
                                                       'thresh'=ParamDbl$new('thresh',upper = Inf,lower = 0,default = 1e-5,tags = 'softImpute'),
-                                                      'maxit'=ParamDbl$new('maxit',upper = Inf,lower = 1,default = 100,tags='softImpute')
+                                                      'maxit'=ParamDbl$new('maxit',upper = Inf,lower = 1,default = 100,tags='softImpute'),
+                                                      'out_file'=ParamUty$new('out_file',default = NULL,tags = 'softImpute')
                                                     ))
                                    )
 
@@ -61,7 +64,7 @@ PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
                                                                          col_0_1 = self$param_set$values$col_0_1,cat_Fun = self$param_set$values$cat_Fun,
                                                                          lambda = self$param_set$values$lambda,rank.max = self$param_set$values$rank.max,
                                                                          type = self$param_set$values$type,thresh = self$param_set$values$thresh,
-                                                                         maxit = self$param_set$values$maxit)
+                                                                         maxit = self$param_set$values$maxit,out_file =self$param_set$values$out_file)
 
 
 
@@ -113,7 +116,7 @@ PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
                                                                          col_0_1 = self$param_set$values$col_0_1,cat_Fun = self$param_set$values$cat_Fun,
                                                                          lambda = self$param_set$values$lambda,rank.max = self$param_set$values$rank.max,
                                                                          type = self$param_set$values$type,thresh = self$param_set$values$thresh,
-                                                                         maxit = self$param_set$values$maxit)
+                                                                         maxit = self$param_set$values$maxit,out_file =self$param_set$values$out_file)
 
 
 
@@ -133,7 +136,7 @@ PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
                                    if(!self$imputed_predict){
                                      data_to_impute <- cbind(feature,context)
                                      self$data_imputed <- imp_function(data_to_impute)
-                                     colnames(self$data_imputed) <- self$state$context_cols
+                                     colnames(self$data_imputed)[1] <- setdiff(self$state$context_cols,colnames(context))
                                      self$imputed_predict <- TRUE
                                    }
 
@@ -156,3 +159,4 @@ PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
                                )
 )
 mlr_pipeops$add("softImpute_imputation",PipeOpSoftImpute)
+PipeOpSoftImpute$new()

@@ -43,7 +43,8 @@ This class create object implements missMDA_MFA function for use in mlr3 pipelin
   maxiter = 1000,
   coeff.ridge = 1,
   threshold = 1e-06,
-  method = "Regularized"
+  method = "Regularized",
+  out_file = NULL
 )}\if{html}{\out{</div>}}
 }
 

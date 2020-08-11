@@ -35,7 +35,7 @@ This class create object implements autotune_VIM_hotdeck function for use in mlr
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{PipeOpVIM_HD$new(id = "imput_VIM_HD", col_0_1 = FALSE)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{PipeOpVIM_HD$new(id = "imput_VIM_HD", col_0_1 = FALSE, out_file = NULL)}\if{html}{\out{</div>}}
 }
 
 }

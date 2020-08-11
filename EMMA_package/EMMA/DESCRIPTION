@@ -4,8 +4,7 @@ Title: Evaluation of Methods for dealing with Missing data in Machine Learning a
 Version: 0.1.0
 Author: 
 Maintainer: Jan Borowski <janborowka7@gmail.com>
-Description: Package crate uniform interface for several advanced imputations missing data methods.
-Every available method can be used as a part of mlr3 pipelines whats allow easy tuning and performance evaluation. 
+Description: Package crate uniform interface for several advanced imputations missing data methods.Every available method can be used as a part of mlr3 pipelines whats allow easy tuning and performance evaluation. 
 License: What license is it under?
 Depends:
     mice,
@@ -17,7 +16,8 @@ Depends:
     mlr3pipelines,
     Amelia,
     VIM,
-    softImpute
+    softImpute,
+    missRanger
 Imports:
     mice,
     missForest,

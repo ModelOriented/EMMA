@@ -45,7 +45,8 @@ This class create object implements missMDA_FMAD_MCA_PCA function for use in mlr
   maxiter = 999,
   coeff.ridge = 1,
   threshold = 1e-06,
-  method = "Regularized"
+  method = "Regularized",
+  out_file = NULL
 )}\if{html}{\out{</div>}}
 }
 

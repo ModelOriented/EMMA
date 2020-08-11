@@ -14,11 +14,12 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                               public = list(
                                 initialize = function(id = "imput_mice", m=5,maxit=5,set_cor=0.5,
                                                       set_method='pmm',low_corr=0,up_corr=1,
-                                                      methods_random=c('pmm'),iter=5,random.seed=123,optimize = F,correlation=T,col_0_1=F
+                                                      methods_random=c('pmm'),iter=5,random.seed=123,optimize = F,correlation=T,col_0_1=F,out_file=NULL
                                                       ) {
                                   super$initialize(id, whole_task_dependent=TRUE,param_vals = list( m=m,maxit=maxit,set_cor=set_cor,
                                                                           set_method=set_method,low_corr=low_corr,up_corr=up_corr,
-                                                                          methods_random=methods_random,iter=iter,random.seed=random.seed,optimize = optimize,correlation=correlation,col_0_1=col_0_1),
+                                                                          methods_random=methods_random,iter=iter,random.seed=random.seed,optimize = optimize,correlation=correlation,col_0_1=col_0_1,
+                                                                          out_file=out_file),
                                                    param_set= ParamSet$new(list(
                                     'set_cor'=ParamDbl$new('set_cor', lower = 0, upper = 1, special_vals = list(), default = 0.4, tags = 'mice'),
                                     'iter'=ParamInt$new('iter',lower = 1,upper = Inf,default = 5,tags='mice'),
@@ -31,7 +32,8 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                     'random.seed'=ParamInt$new('random.seed',-Inf,Inf,default = 123,tags='mice'),
                                     'optimize'=ParamLgl$new('optimize',default = F,tags='mice'),
                                     'col_0_1'=ParamLgl$new('col_0_1',default = F,tags='mice'),
-                                    'correlation'=ParamLgl$new('correlation',default = T,tags='mice')
+                                    'correlation'=ParamLgl$new('correlation',default = T,tags='mice'),
+                                    'out_file'=ParamUty$new('out_file',default = NULL,tags = 'mice')
 
                                 ))
                                   )
@@ -70,7 +72,8 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                                                   set_cor = self$param_set$values$set_cor,set_method = self$param_set$values$set_method,
                                                                   methods_random = self$param_set$values$methods_random,random.seed = self$param_set$values$random.seed,
                                                                   optimize = self$param_set$values$optimize,
-                                                                  correlation = self$param_set$values$correlation,col_0_1 = self$param_set$values$col_0_1,verbose = F
+                                                                  correlation = self$param_set$values$correlation,col_0_1 = self$param_set$values$col_0_1,verbose = F,
+                                                                  out_file =self$param_set$values$out_file
                                     )
 
 
@@ -124,7 +127,8 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                                                   set_cor = self$param_set$values$set_cor,set_method = self$param_set$values$set_method,
                                                                   methods_random = self$param_set$values$methods_random,random.seed = self$param_set$values$random.seed,
                                                                   optimize = self$param_set$values$optimize,
-                                                                  correlation = self$param_set$values$correlation,col_0_1 = self$param_set$values$col_0_1,verbose = F
+                                                                  correlation = self$param_set$values$correlation,col_0_1 = self$param_set$values$col_0_1,verbose = F,
+                                                                  out_file =self$param_set$values$out_file
                                     )
 
 
@@ -146,7 +150,7 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                       if(!self$imputed_predict){
                                     data_to_impute <- cbind(feature,context)
                                     self$data_imputed <- imp_function(data_to_impute)
-                                    colnames(self$data_imputed) <- self$state$context_cols
+                                    colnames(self$data_imputed)[1] <- setdiff(self$state$context_cols,colnames(context))
                                     self$imputed_predict <- TRUE
                                   }
 
@@ -173,13 +177,13 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
 mlr_pipeops$add("mice_imputation", PipeOpMice)
 #
 #
-# test <- PipeOpMice$new()
+# test <- PipeOpmissForest$new()
 # graph =  test %>>% learner_po
 # glrn = GraphLearner$new(graph)
-# glrn$train(d)
+# #glrn$train(d)
 # resample(d, glrn, rsmp("cv"))
 # glrn$param_set$values = list(error_train = 1)
-# d<- TaskClassif$new('w',dataset,'Utility')
+# d<- TaskClassif$new('w',dataset,'binaryClass')
 # d$data()
 # glrn$param_set
 #

@@ -12,10 +12,11 @@
 PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
                              inherit = PipeOpImpute,  # inherit from PipeOp
                              public = list(
-                               initialize = function(id = "imput_VIM_IRMI",eps=5,maxit=100,step=FALSE,robust=FALSE,init.method='kNN',force=FALSE,col_0_1= FALSE
+                               initialize = function(id = "imput_VIM_IRMI",eps=5,maxit=100,step=FALSE,robust=FALSE,init.method='kNN',force=FALSE,col_0_1= FALSE,
+                                                     out_file=NULL
                                ) {
                                  super$initialize(id, whole_task_dependent=TRUE, param_vals = list( col_0_1=col_0_1,eps=eps,maxit=maxit,step=step,robust=robust,
-                                                                                                    init.method=init.method,force=force),
+                                                                                                    init.method=init.method,force=force,out_file=out_file),
                                                   param_set= ParamSet$new(list(
 
                                                     'col_0_1'=ParamLgl$new('col_0_1',default = F,tags='VIM_IRMI'),
@@ -24,7 +25,8 @@ PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
                                                     'step'=ParamLgl$new('step',default = FALSE,tags = 'VIM_IRMI'),
                                                     'robust'=ParamLgl$new('robust',default = FALSE,tags='VIM_IRMI'),
                                                     'init.method'=ParamFct$new('init.method',levels = c('kNN','median'),default = 'kNN',tags = 'VIM_IRMI'),
-                                                    'force'=ParamLgl$new('force',default = FALSE,tags = 'VIM_IRMI')
+                                                    'force'=ParamLgl$new('force',default = FALSE,tags = 'VIM_IRMI'),
+                                                    'out_file'=ParamUty$new('out_file',default = NULL,tags = 'VIM_IRMI')
 
                                                   ))
                                  )
@@ -60,7 +62,8 @@ PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
 
                                    data_imputed <- autotune_VIM_Irmi(data_to_impute,percent_of_missing,eps = self$param_set$values$eps,maxit = self$param_set$values$maxit,
                                                                      step = self$param_set$values$step,robust = self$param_set$values$robust,col_0_1 = self$param_set$values$col_0_1,
-                                                                     init.method = self$param_set$values$init.method,force = self$param_set$values$force)
+                                                                     init.method = self$param_set$values$init.method,force = self$param_set$values$force,
+                                                                     out_file =self$param_set$values$out_file)
 
 
 
@@ -110,7 +113,8 @@ PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
 
                                    data_imputed <- autotune_VIM_Irmi(data_to_impute,percent_of_missing,eps = self$param_set$values$eps,maxit = self$param_set$values$maxit,
                                                                      step = self$param_set$values$step,robust = self$param_set$values$robust,col_0_1 = self$param_set$values$col_0_1,
-                                                                     init.method = self$param_set$values$init.method,force = self$param_set$values$force)
+                                                                     init.method = self$param_set$values$init.method,force = self$param_set$values$force,
+                                                                     out_file =self$param_set$values$out_file)
 
 
 
@@ -130,7 +134,7 @@ PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
                                  if(!self$imputed_predict){
                                    data_to_impute <- cbind(feature,context)
                                    self$data_imputed <- imp_function(data_to_impute)
-                                   colnames(self$data_imputed) <- self$state$context_cols
+                                   colnames(self$data_imputed)[1] <- setdiff(self$state$context_cols,colnames(context))
                                    self$imputed_predict <- TRUE
                                  }
 

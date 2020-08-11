@@ -11,7 +11,8 @@ autotune_VIM_regrImp(
   col_0_1 = F,
   robust = F,
   mod_cat = F,
-  use_imputed = F
+  use_imputed = F,
+  out_file = NULL
 )
 }
 \arguments{
@@ -28,6 +29,8 @@ autotune_VIM_regrImp(
 \item{mod_cat}{TRUE/FALSE if TRUE for categorical variables the level with the highest prediction probability is selected, otherwise it is sampled according to the probabilities.}
 
 \item{use_imputed}{TRUE/FALSe if TURE already imputed columns will be used to impute another.}
+
+\item{out_file}{Output log file location if file already exists log message will be added. If NULL no log will be produced.}
 }
 \value{
 Return one data.frame with imputed values.

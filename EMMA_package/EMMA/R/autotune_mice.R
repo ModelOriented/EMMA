@@ -93,9 +93,12 @@ random_param_mice_search <- function(low_corr=0,up_corr=1,methods_random = c('pm
 
   set.seed(random.seed)
   corr <- runif(iter,0,1)
+  if (!is.null(methods_random)){
   met <- sample(methods_random,iter,replace = T)
-
-
+}
+  if(is.null(methods_random)){
+    met <- NULL
+  }
   # Performing random search and saving result
   result <- rep(1,iter)
 
@@ -149,7 +152,7 @@ random_param_mice_search <- function(low_corr=0,up_corr=1,methods_random = c('pm
 #' @param percent_of_missing numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)
 #' @param low_corr double betwen 0,1 default 0 lower boundry of correlation set.
 #' @param up_corr double between 0,1 default 1 upper boundary of correlation set. Both of these parameters work the same for a fraction of features.
-#' @param methods_random set of methods to chose. Default 'pmm'.
+#' @param methods_random set of methods to chose. Default 'pmm'. If seted on NULL defoult method is used : By default, the method uses pmm, predictive mean matching (numeric data) logreg, logistic regression imputation (binary data, factor with 2 levels) polyreg, polytomous regression imputation for unordered categorical data (factor > 2 levels) polr, proportional odds model for (ordered, > 2 levels).
 #' @param iter number of iteration for randomSearch.
 #' @param random.seed random seed.
 #' @param optimize if user wont to optimize.
@@ -157,11 +160,12 @@ random_param_mice_search <- function(low_corr=0,up_corr=1,methods_random = c('pm
 #' @param return_one One or many imputed sets will be returned. Default True.
 #' @param col_0_1 Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).
 #' @param set_cor Correlation or fraction of featurs using if optimize= False
-#' @param set_method Method used if optimize=False
+#' @param set_method Method used if optimize=False. If NULL defoult method is used (more in methods_random section ).
 #' @param verbose If FALSE funtion didn't print on console.
+#' @param out_file  Output log file location if file already exists log message will be added. If NULL no log will be produced.
 #' @import mice
 #' @return Return imputed datasets or mids object containing multi imputation datasets.
-autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,set_cor=0.5,set_method='pmm',percent_of_missing,low_corr=0,up_corr=1,methods_random=c('pmm'),iter,random.seed=123,optimize = T,correlation=T,return_one=T,col_0_1 = F ,verbose=FALSE){
+autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,set_cor=0.5,set_method='pmm',percent_of_missing,low_corr=0,up_corr=1,methods_random=c('pmm'),iter,random.seed=123,optimize = T,correlation=T,return_one=T,col_0_1 = F ,verbose=FALSE,out_file=NULL){
 
   if(sum(is.na(df))==0){return(df)}
 
@@ -170,19 +174,36 @@ autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,set_cor=0
   no_numeric <- as.logical(formula_cre[2])
 
   # If user chose to optimise no numeric dataset
+  tryCatch({
   if (optimize){
+    if(!is.null(out_file)){
+      write('MICE',file = out_file,append = T)
+    }
     params <- random_param_mice_search(df=df,low_corr = low_corr,up_corr = up_corr,methods_random = methods_random,formula = formula,no_numeric = no_numeric,random.seed = random.seed,iter=iter,correlation = correlation)
     #If user chose to use correlation
+    if (!is.null(out_file)){
+
+    write('correlation    method',file = out_file,append = T)
+    write(c(params[[1]],params[[2]]),file = out_file,append = T)
+
+    }
+
     if (correlation){
-      imp_final <- mice(df,printFlag = verbose,m=m,maxit = maxit,method = as.character(params[2]),pred=quickpred(df, mincor=as.numeric(params[1]),method = 'spearman'),seed = random.seed)
-    }
+
+      imp_final <- mice(df,printFlag = verbose,m=m,maxit = maxit,method = (params[[2]]),pred=quickpred(df, mincor=(params[[1]]),method = 'spearman'),seed = random.seed)
+
+      }
     if (!correlation){
-      imp_final <- mice(df,printFlag = verbose,m=m,maxit = maxit,method = as.character(params[2]),pred=quickpred(df, minpuc = as.numeric(params[1]),method = 'spearman'),seed = random.seed)
+      imp_final <- mice(df,printFlag = verbose,m=m,maxit = maxit,method = (params[[2]]),pred=quickpred(df, minpuc = (params[[1]]),method = 'spearman'),seed = random.seed)
     }
-  }
+
+
+
+    }
 
 
   if (!optimize){
+
     if (correlation){
       imp_final <- mice(df,printFlag = verbose,m=m,maxit = maxit,method = set_method,pred=quickpred(df, mincor=set_cor,method = 'spearman'),seed = random.seed)
     }
@@ -190,6 +211,15 @@ autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,set_cor=0
       imp_final <- mice(df,printFlag = verbose,m=m,maxit = maxit,method = set_method,pred=quickpred(df, minpuc = set_cor,method = 'spearman'),seed = random.seed)
     }
   }
+  if(!is.null(out_file)){
+    write('OK',file = out_file,append = T)
+  }
+  },error=function(e){
+    if(!is.null(out_file)){
+      write(as.character(e),file = out_file,append = T)
+    }
+    stop(e)
+  })
   # If user chose to return one dataset
   if (return_one){
     imputed_dataset <- complete(imp_final)
@@ -210,3 +240,6 @@ autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,set_cor=0
 
 
 }
+
+
+

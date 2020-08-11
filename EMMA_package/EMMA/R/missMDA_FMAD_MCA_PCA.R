@@ -17,14 +17,15 @@
 #' @param maxiter maximal number of iteration in algortihm.
 #' @param method method used in imputation algoritm.
 #' @param threshold threshold for convergence.
+#' @param out_file  Output log file location if file already exists log message will be added. If NULL no log will be produced.
 #' @import missMDA
 #'
 #' @return Retrun one imputed data.frame if retrun_one=True or list of imputed data.frames if retrun_one=False.
 
 
 
-missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=TRUE,set_ncp=2,col_0_1=FALSE,ncp.max=5,return_one = TRUE,random.seed=123,maxiter=999,
-                                 coeff.ridge=1,threshold=1e-6,method='Regularized'){
+missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=TRUE,set_ncp=2,col_0_1=FALSE,ncp.max=5,return_one = TRUE,random.seed=123,maxiter=998,
+                                 coeff.ridge=1,threshold=1e-6,method='Regularized',out_file=NULL){
 
 
   if (sum(is.na(df))==0){return(df)}
@@ -37,6 +38,14 @@ missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=TRU
   if ('factor' %in% col_type & ( 'numeric' %in%col_type | 'intiger' %in%col_type)){FMAD <- TRUE  }
   if ('factor' %in%col_type & !( 'numeric' %in% col_type | 'intiger' %in% col_type)){MCA <- TRUE}
   if ( !('factor' %in%col_type) & ( 'numeric' %in%col_type | 'intiger' %in%col_type)){PCA <-TRUE }
+
+  if(!is.null(out_file)){
+
+    write('FMAD MCA PCA',file = out_file,append = T)
+  }
+
+
+  tryCatch({
   # If optimize_npc set True
   if (optimize_ncp){
     Fail <- FALSE
@@ -54,6 +63,10 @@ missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=TRU
   if(MCA){final <- imputeMCA(df,ncp = set_ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs}
   if(PCA){final <- imputePCA(df,ncp=set_ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs}
 
+  if(!is.null(out_file)){
+    write('  OK',file = out_file,append = T)
+  }
+
   # adding 0,1 cols
     if (col_0_1){
     columns_with_missing <-  (as.data.frame(is.na(df))*1)[,percent_of_missing>0]
@@ -61,6 +74,12 @@ missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=TRU
     final <- cbind(final,columns_with_missing)
   }
   return(final)}
+  },error=function(e){
+    if(!is.null(out_file)){
+      write(as.character(e),file = out_file,append = T)
+    }
+    stop(e)
+  })
   if (!return_one){
     if(FMAD){final <-MIFAMD(df,ncp = set_ncp)$completeObs }
     if(MCA){final <- MIMCA(df,ncp = set_ncp)$completeObs}
@@ -68,5 +87,5 @@ missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=TRU
     return(final$res.MI)
   }
 }
-missMDA_FMAD_MCA_PCA(iris,c(rep('numeric',4),'factor'),c(0,0,0,0,0))
+
 

@@ -4,7 +4,7 @@
 \alias{autotune_VIM_hotdeck}
 \title{Hot-Deck imputation using VIM package.}
 \usage{
-autotune_VIM_hotdeck(df, percent_of_missing, col_0_1 = FALSE)
+autotune_VIM_hotdeck(df, percent_of_missing, col_0_1 = FALSE, out_file = NULL)
 }
 \arguments{
 \item{df}{data.frame. Df to impute with column names and without  target column.}
@@ -12,6 +12,8 @@ autotune_VIM_hotdeck(df, percent_of_missing, col_0_1 = FALSE)
 \item{percent_of_missing}{numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)}
 
 \item{col_0_1}{decide if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False.}
+
+\item{out_file}{Output log file location if file already exists log message will be added. If NULL no log will be produced.}
 }
 \value{
 Return data.frame with imputed values.
