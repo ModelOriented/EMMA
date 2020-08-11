@@ -1,0 +1,171 @@
+---
+title: "Combined report on missings patterns."
+author: "Piotr Fic"
+date: "11 08 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_knit$set(root.dir=normalizePath('../../../'))
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+```
+
+```{r packages}
+library(ggplot2)
+library(ggthemes)
+library(dplyr)
+library(scales)
+```
+
+```{r data_reading}
+data <- read.csv("datasets_store/patterns_analysis/readed_json_info.csv")[, -1]
+selected_df <- read.csv("datasets_store/datasets_selection/selected_datasets.csv")
+data <- data[data$id %in% selected_df$ID, ]
+data <- data[!is.na(data$name), ]
+patterns <- read.csv(file = "datasets_store/patterns_analysis/summary_of_patterns_in_all.csv")
+patterns <- patterns[patterns$id %in% data$id, ]
+```
+
+### Data used.
+
+- The report was created on the basis of information on 132 datasets, both from the regression and classification tasks.
+
+## Key information about distribution of missings.
+
+### *Figure 1*
+
+```{r percentage_of_missings}
+to_plot <- data
+to_plot$per_missings <- round(100*to_plot$no_missings/(to_plot$no_instances*to_plot$no_features), digits = 1)
+
+ggplot(to_plot, aes(per_missings))+
+  geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, 100, 5))+
+  xlab("% of missings")+
+  ylab("% of datasets")+
+  ggtitle("Histogram of percentage of missings among datasets.")+
+  scale_x_continuous(breaks = seq(0, 100, 5))+
+  scale_y_continuous(breaks = seq(0, 0.7, 0.1), labels = seq(0, 70, 10))+
+  theme_linedraw()
+```
+
+- Most of the datasets have missings percentage lower than 5%.
+- About 25% of datasets have a fraction of missings between 5% to 20%.
+- Higher percentages of missings occur in a small number of datasets.
+
+### *Figure 2*
+
+```{r percentage_instances_missings}
+to_plot <- data
+to_plot$per_instances_miss <- round(100*to_plot$no_instances_w_miss/to_plot$no_instances)
+
+ggplot(to_plot, aes(per_instances_miss))+
+  geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, 100, 5))+
+  xlab("% of instances with missings")+
+  ylab("% of datasets")+
+  ggtitle("Histogram of percentage of instances with missing values.")+
+  scale_x_continuous(breaks = seq(0, 100, 5))+
+  scale_y_continuous(breaks = seq(0, 0.3, 0.1), labels = seq(0, 30, 10), limits = c(0, 0.3))+
+  theme_linedraw()
+```
+
+- There are two dominant groups of occurrence of missings among instances.
+- The first group contains datasets where the percentage of instances with missings is lower than 15%.
+- The second group is formed by datasets with a very high percentage of instances with missings (above 90%).
+
+## Key information about distribution of missings patterns.
+
+### *Figure 3*
+
+```{r patterns_in_instances_fraction}
+to_plot <- data
+to_plot$fraction <- round(100*to_plot$no_of_patterns/to_plot$no_instances, digits = 1)
+
+ggplot(to_plot, aes(fraction))+
+  geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, 100, 5))+
+  xlab("no_of_patterns/no_of_instances [%]")+
+  ylab("% of datasets")+
+  ggtitle("Histogram of fraction of unique patterns to number of instances.")+
+  scale_x_continuous(breaks = seq(0, 100, by = 5))+
+  scale_y_continuous(breaks = seq(0, 0.8, 0.1), labels = seq(0, 80, 10), limits = c(0, 0.75))+
+  theme_linedraw()
+```
+
+- The figure above presents a dispersion of missings' pattern among datasets.
+- Most of the datasets have patterns which have less than 10% of unique combinations compared to  
+the number of instances in datasets.
+- There are very few datasets which have diverse patterns with a unique combination for most rows of the dataset.
+
+### *Figure 4*
+
+```{r variables_in_patterns}
+ggplot(patterns, aes(var_per))+
+  geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, 100, 5))+
+  xlab("% of variables in pattern")+
+  ylab("% of patterns")+
+  ggtitle("Histogram of percentage of variables in patterns.")+
+  scale_x_continuous(breaks = seq(0, 100, 5))+
+  scale_y_continuous(breaks = seq(0, 0.60, 0.10), labels = seq(0, 60, 10))+
+  theme_linedraw()
+```
+
+- Percentage of variables in the pattern means a fraction of variables in dataset's row which have missing values.  
+Different combinations of variables with missings create missings patterns.
+- Most of the missings patterns contain less than 10% of variables.
+- The second noticeable, but small group create patterns with the percentage of variables between 65% to 75%.
+
+### *Figure 5*
+
+```{r average_vars_in_patterns_by_dataset}
+group_by(patterns, id)%>%
+  summarise("average" = mean(var_per))%>%
+ggplot(aes(average))+
+  geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, 100, 5))+
+  xlab("average % of variables in pattern")+
+  ylab("% of datasets")+
+  ggtitle("Histogram of average percentage of variables in pattern by datasets.")+
+  scale_x_continuous(breaks = seq(0, 100, 5))+
+  scale_y_continuous(breaks = seq(0, 0.3, 0.1), labels = seq(0, 30, 10), limits = c(0, 0.3))+
+  theme_linedraw()
+
+```
+
+- On the figure above the percentage of variables in patterns is averaged for every dataset.
+- Averaging by datasets introduce more diversity in distribution.
+- Conclusions remain similar, most of the datasets have patterns which on average contain less than 25% of variables.
+
+### *Figure 6*
+
+```{r percentage_instances_in_patterns}
+ggplot(patterns, aes(x = row_per))+
+  geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, max(patterns$row_per), 2))+
+  xlab("% of instances in pattern")+
+  ylab("% of patterns")+
+  ggtitle("Histogram of percentage of instances in patterns.")+
+  scale_x_continuous(breaks = seq(0, max(patterns$row_per), 4))+
+  scale_y_continuous(breaks = seq(0, 1, 0.25), labels = seq(0, 100, 25))+
+  theme_linedraw()
+```
+
+- Almost all patterns seem to cover an only very small fraction of dataset's instances.
+
+### *Figure7*
+
+```{r average_percentage_instances_pattern}
+group_by(patterns, id)%>%
+  summarise("average" = mean(row_per))%>%
+ggplot(aes(x = average))+
+  geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, max(patterns$row_per), 2))+
+  xlab("average % of instances in pattern")+
+  ylab("% of datasets")+
+  ggtitle("Histogram of average percentage of instances in pattern by datasets.")+
+  scale_x_continuous(breaks = seq(0, max(patterns$row_per), 4))+
+  scale_y_continuous(breaks = seq(0, 0.5, 0.1), labels = seq(0, 50, 10))+
+  theme_linedraw()
+```
+
+- Calculating the average of a number of instances in patterns for each dataset help to see more diversity.
+- Still for most datasets a single pattern on average covers below 4% of instances.
+- However, some datasets have missings patters which on the average cover more than half of the instances in the dataset.
+
+<br></br>
+<br></br>
