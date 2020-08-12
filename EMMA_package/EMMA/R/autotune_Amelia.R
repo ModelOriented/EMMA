@@ -50,7 +50,7 @@ autotune_Amelia <- function(df,col_type,percent_of_missing,col_0_1=FALSE,paralle
     go_next <- FALSE
     flag <- FALSE
   tryCatch({
-    final <- amelia(df,m=m,noms = categorical_col,parallel = parallel,p2s = as.numeric(verbose),empri = i,polytime = polytime,splinetime = splinetime,intercs = intercs)
+    final <- Amelia::amelia(df,m=m,noms = categorical_col,parallel = parallel,p2s = as.numeric(verbose),empri = i,polytime = polytime,splinetime = splinetime,intercs = intercs)
     if(length(final$imputations$imp1)!=length(df)){
       stop('ERROR')
     }
@@ -73,7 +73,7 @@ autotune_Amelia <- function(df,col_type,percent_of_missing,col_0_1=FALSE,paralle
     if (is.null(empir) ){
       empir <- n_row*0.015
     }
-    final <- amelia(df,m=m,noms = categorical_col,parallel = parallel,p2s = as.numeric(verbose),empri = empir,polytime = polytime,splinetime = splinetime,intercs = intercs)
+    final <- Amelia::amelia(df,m=m,noms = categorical_col,parallel = parallel,p2s = as.numeric(verbose),empri = empir,polytime = polytime,splinetime = splinetime,intercs = intercs)
     if (return_one){
       final <- final$imputations$imp1
     }

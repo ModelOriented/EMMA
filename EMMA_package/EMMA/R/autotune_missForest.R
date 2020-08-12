@@ -29,8 +29,8 @@ autotune_missForest <-function(df,percent_of_missing,cores=NULL,ntree_set =c(100
   # Checking if parallel backed is runing and starting it if not
   if (parallel){
     veribles = ncol(df)
-    if (ceiling(detectCores()/2)>=veribles){cores <- (veribles-2)}
-    registerDoParallel(cores = cores)
+    if (ceiling(parallel::detectCores()/2)>=veribles){cores <- (veribles-2)}
+    doParallel::registerDoParallel(cores = cores)
   }
 
   # Prepering mtry_set if not given
@@ -73,7 +73,7 @@ autotune_missForest <-function(df,percent_of_missing,cores=NULL,ntree_set =c(100
       skip_to_next <- FALSE
 
       tryCatch({
-        iteration <-  mean(missForest(df,maxiter = maxiter,ntree = i,mtry = j,parallelize=parallelize,maxnodes = maxnodes,verbose = verbose)$OOBerror)
+        iteration <-  mean(missForest::missForest(df,maxiter = maxiter,ntree = i,mtry = j,parallelize=parallelize,maxnodes = maxnodes,verbose = verbose)$OOBerror)
         if (iteration<best_OBB){
           best_OBB <- iteration
           best_params[1] <- i
@@ -90,12 +90,12 @@ autotune_missForest <-function(df,percent_of_missing,cores=NULL,ntree_set =c(100
 
   #fianl imputation
 
-  final <- missForest(df,maxiter = maxiter,maxnodes = maxnodes,ntree = best_params[1],mtry = best_params[2],parallelize=parallelize,verbose = verbose)$ximp
+  final <- missForest::missForest(df,maxiter = maxiter,maxnodes = maxnodes,ntree = best_params[1],mtry = best_params[2],parallelize=parallelize,verbose = verbose)$ximp
 }
   if (!optimize){
     if (is.null(mtry)){
-    final <- missForest(df,maxiter = maxiter,ntree = ntree,maxnodes = maxnodes,mtry = floor(sqrt(ncol(df))),parallelize = parallelize,verbose = verbose)$ximp}
-    else{ final <- missForest(df,maxiter = maxiter,ntree = ntree,maxnodes = maxnodes,mtry = mtry,parallelize = parallelize,verbose = verbose)$ximp}
+    final <- missForest::missForest(df,maxiter = maxiter,ntree = ntree,maxnodes = maxnodes,mtry = floor(sqrt(ncol(df))),parallelize = parallelize,verbose = verbose)$ximp}
+    else{ final <- missForest::missForest(df,maxiter = maxiter,ntree = ntree,maxnodes = maxnodes,mtry = mtry,parallelize = parallelize,verbose = verbose)$ximp}
   }
   if(!is.null(out_file)){
     write(c(best_params[1],best_params[2]),file = out_file,append = T)
@@ -117,11 +117,10 @@ autotune_missForest <-function(df,percent_of_missing,cores=NULL,ntree_set =c(100
 
   # turn off paralllel
   if (parallel){
-    registerDoSEQ()
+    foreach::registerDoSEQ()
   }
   return(final)
   }
-
 
 
 

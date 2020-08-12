@@ -17,7 +17,7 @@ autotune_VIM_hotdeck <- function(df,percent_of_missing,col_0_1=FALSE,out_file=NU
     write('VIM_HD',file = out_file,append = T)
   }
   tryCatch({
-  final <- hotdeck(df,imp_var = FALSE)
+  final <- VIM::hotdeck(df,imp_var = FALSE)
   if(!is.null(out_file)){
     write('  OK',file = out_file,append = T)
   }},error=function(e){

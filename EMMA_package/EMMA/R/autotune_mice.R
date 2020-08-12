@@ -164,6 +164,7 @@ random_param_mice_search <- function(low_corr=0,up_corr=1,methods_random = c('pm
 #' @param verbose If FALSE funtion didn't print on console.
 #' @param out_file  Output log file location if file already exists log message will be added. If NULL no log will be produced.
 #' @import mice
+#' @importFrom mice complete
 #' @return Return imputed datasets or mids object containing multi imputation datasets.
 autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,set_cor=0.5,set_method='pmm',percent_of_missing,low_corr=0,up_corr=1,methods_random=c('pmm'),iter,random.seed=123,optimize = T,correlation=T,return_one=T,col_0_1 = F ,verbose=FALSE,out_file=NULL){
 
@@ -222,7 +223,7 @@ autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,set_cor=0
   })
   # If user chose to return one dataset
   if (return_one){
-    imputed_dataset <- complete(imp_final)
+    imputed_dataset <- mice::complete(imp_final)
     # If user chose to return 0,1 columns
     if (col_0_1 ){
       where_imputed <- as.data.frame(imp_final$where)[,imp_final$nmis>0]

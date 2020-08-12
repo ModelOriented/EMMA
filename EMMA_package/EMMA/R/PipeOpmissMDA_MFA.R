@@ -43,9 +43,9 @@ PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
                                                self$column_counter <- NULL
                                                self$data_imputed <- NULL
 
-                                             },
+                                             }),private=list(
 
-                                             train_imputer=function(feature, type, context){
+                                             .train_imputer=function(feature, type, context){
                                                  imp_function <- function(data_to_impute){
 
 
@@ -98,7 +98,7 @@ PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
                                                return(NULL)
 
                                              },
-                                             impute=function(feature, type, model, context){
+                                             .impute=function(feature, type, model, context){
                                                  imp_function <- function(data_to_impute){
 
 

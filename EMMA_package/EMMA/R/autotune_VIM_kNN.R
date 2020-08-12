@@ -18,12 +18,12 @@
 
 
 
-autotune_VIM_kNN <- function(df,percent_of_missing,k=5,numFun=median,catFun=maxCat,col_0_1=FALSE,out_file=NULL){
+autotune_VIM_kNN <- function(df,percent_of_missing,k=5,numFun=median,catFun=VIM::maxCat,col_0_1=FALSE,out_file=NULL){
   if(!is.null(out_file)){
     write('VIM_kNN',file = out_file,append = T)
   }
   tryCatch({
-  final <-  kNN(df,k=k,numFun = numFun,catFun = catFun,imp_var = F)
+  final <-  VIM::kNN(df,k=k,numFun = numFun,catFun = catFun,imp_var = F)
   if(!is.null(out_file)){
     write('  OK',file = out_file,append = T)
   }

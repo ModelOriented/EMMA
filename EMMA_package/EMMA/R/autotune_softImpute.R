@@ -21,27 +21,28 @@
 #' @return Return one data.frame with imputed values.
 
 
-autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun=maxCat,lambda=0,rank.max=2,type='als',thresh=1e-5,maxit=100,out_file=NULL){
+autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun=VIM::maxCat,lambda=0,rank.max=2,type='als',thresh=1e-5,maxit=100,out_file=NULL){
   column_order <- colnames(df)
   if(sum(is.na(df))==0){return(df)}
 
-  if(is.null(rank.max)){
-    rank.max <- min(dim(df))-1
-  }
+
 
   #Prepering matrix
-  matrix <- as.matrix(df[,ifelse(col_type=='numeric' | col_type=='integer',TRUE,FALSE)])
+  matrix <- as.matrix(df[,ifelse(col_type=='numeric' | col_type=='integer',TRUE,FALSE),drop=F])
   if(!is.null(out_file)){
       write('softImpute',file = out_file,append = T)
   }
   tryCatch({
   if(is.null(lambda)){
-    lambda <- floor(lambda0(matrix,thresh = thresh,maxit = maxit))
+    lambda <- floor(softImpute::lambda0(matrix,thresh = thresh,maxit = maxit))
   }
-
+    if(is.null(rank.max)){
+      rank.max <- min(dim(matrix))-1
+      if(rank.max<=0){rank.max <- 1}
+    }
   #Numeric Imputation
-  result <- softImpute(matrix,lambda = lambda,rank.max = rank.max,thresh = thresh,maxit = maxit)
-  final <- complete(matrix,result)
+  result <- softImpute::softImpute(matrix,lambda = lambda,rank.max = 2,thresh = thresh,maxit = maxit)
+  final <- softImpute::complete(matrix,result)
 
 
 
@@ -101,3 +102,5 @@ autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun
 #
 # wynik_test <- autotune_softImpute(test,col_type = col_type,percent_of_missing = percent_of_missing)
 # sum(is.na(df))
+
+

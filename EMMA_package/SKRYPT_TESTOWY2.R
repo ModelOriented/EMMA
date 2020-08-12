@@ -1,7 +1,7 @@
 library(dplyr)
 library(janitor)
 library(tidyselect)
-require(EMMA)
+library(EMMA)
 library(mlr3learners)
 library(OpenML)
 
@@ -115,13 +115,13 @@ miss_in_target <- c()
 
 
 
-list_of_pipe <- c(PipeOpMice$new(),PipeOpMissMDA_MFA$new(),PipeOpMissMDA_PCA_MCA_FMAD$new(),PipeOpmissForest$new(),PipeOpVIM_HD$new(),PipeOpVIM_IRMI$new(),
-                  PipeOpVIM_kNN$new())
+list_of_pipe <- c(PipeOpMice,PipeOpMissMDA_MFA,PipeOpMissMDA_PCA_MCA_FMAD,PipeOpmissForest,PipeOpVIM_HD,PipeOpVIM_IRMI,
+                  PipeOpVIM_kNN,PipeOpVIM_regrImp,PipeOpmissRanger)
 
 
 for(id in datasets_Ids){
 
-  df_oml <- getOMLDataSet(41162)
+  df_oml <- getOMLDataSet(id)
 
   df <- preprocess(df_oml,0.9)[[1]]
 
@@ -140,14 +140,19 @@ for(id in datasets_Ids){
   single_set_Pipeline(df,id,col_type,percent_of_missing,out_file_location = out_file,single_set = FALSE)
   write('----------------------PIPLINE-----------------------',append = T,file=out_file)
   for (i in list_of_pipe){
+    tryCatch({
     learner_po = po("learner", learner = lrn("classif.rpart"))
-    test = list_of_pipe[[6]] %>>%  learner_po
+    test_imp <- i$new()
+    test = test_imp %>>%  learner_po
     glrn =GraphLearner$new(test)
     test_task = TaskClassif$new('test',backend = df,target = df_oml$target.features)
-    cat(i$id,file = out_file,append = T)
+    cat(test_imp$id,file = out_file,append = T)
 
     resample(test_task,glrn,rsmp('cv',folds=2L))
-
+    write('ok',file=out_file,append = T)
+    },error=function(e){
+      write(as.character(e),file = out_file,append = T)
+    })
   }
 
 

@@ -41,9 +41,9 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
                                self$column_counter <- NULL
                                self$data_imputed <- NULL
 
-                             },
+                             }),private=list(
 
-                             train_imputer=function(feature, type, context){
+                             .train_imputer=function(feature, type, context){
                                 imp_function <- function(data_to_impute){
 
 
@@ -97,7 +97,7 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
                                return(NULL)
 
                              },
-                             impute=function(feature, type, model, context){
+                             .impute=function(feature, type, model, context){
                                 imp_function <- function(data_to_impute){
 
 

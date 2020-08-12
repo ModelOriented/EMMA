@@ -42,9 +42,9 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                self$column_counter <- NULL
                                self$data_imputed <- NULL
 
-                             },
+                             }),private=list(
 
-                             train_imputer=function(feature, type, context){
+                             .train_imputer=function(feature, type, context){
                                 imp_function <- function(data_to_impute){
 
 
@@ -84,6 +84,7 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                  self$column_counter <- ncol(context)+1
                                  self$imputed <- TRUE
                                  data_to_impute <- cbind(feature,context)
+
                                  self$data_imputed <- imp_function(data_to_impute)
                                  colnames(self$data_imputed) <- self$state$context_cols
 
@@ -99,7 +100,7 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                return(NULL)
 
                              },
-                             impute=function(feature, type, model, context){
+                             .impute=function(feature, type, model, context){
                                  imp_function <- function(data_to_impute){
 
 
@@ -145,6 +146,7 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                if(!self$imputed_predict){
 
                                  data_to_impute <- cbind(feature,context)
+
                                  self$data_imputed <- imp_function(data_to_impute)
                                  colnames(self$data_imputed)[1] <- setdiff(self$state$context_cols,colnames(context))
                                  self$imputed_predict <- TRUE
@@ -173,6 +175,14 @@ mlr_pipeops$add("missForest_imputation", PipeOpmissForest)
 
 
 # test <- PipeOpmissForest$new()
+# graph =  test %>>% learner_po
+# glrn = GraphLearner$new(graph)
+#
+# resample(d, glrn, rsmp("cv",folds=2L))
+# # # # glrn$param_set$values = list(error_train = 1)
+# d<- TaskClassif$new('w',df,colnames(df)[4])
+#
+# # test <- PipeOpmissForest$new()
 # graph =  test %>>% learner_po
 # glrn = GraphLearner$new(graph)
 # #glrn$train(d)

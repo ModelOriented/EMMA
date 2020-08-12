@@ -3,7 +3,6 @@
 #' @description This class create object implements autotune_softImpute function for use in mlr3 pipelinies. Object can be created with \code{\link{autotune_softImpute}} params.
 #'
 #'
-#'
 #' @import mlr3
 #' @import mlr3pipelines
 
@@ -37,9 +36,9 @@ PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
                                    self$column_counter <- NULL
                                    self$data_imputed <- NULL
 
-                                 },
+                                 }),private=list(
 
-                                 train_imputer=function(feature, type, context){
+                                 .train_imputer=function(feature, type, context){
                                    imp_function <- function(data_to_impute){
 
 
@@ -93,7 +92,7 @@ PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
                                    return(NULL)
 
                                  },
-                                 impute=function(feature, type, model, context){
+                                 .impute=function(feature, type, model, context){
                                    imp_function <- function(data_to_impute){
 
 
@@ -159,4 +158,4 @@ PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
                                )
 )
 mlr_pipeops$add("softImpute_imputation",PipeOpSoftImpute)
-PipeOpSoftImpute$new()
+

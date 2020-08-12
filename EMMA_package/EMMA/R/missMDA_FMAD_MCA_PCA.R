@@ -50,18 +50,18 @@ missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=TRU
   if (optimize_ncp){
     Fail <- FALSE
     tryCatch({
-    if(FMAD){set_ncp <-estim_ncpFAMD(df,method = method,ncp.max = ncp.max)$ncp }
-    if(MCA){set_ncp <- estim_ncpMCA(df,method = method,ncp.max = ncp.max)$ncp}
-    if(PCA){set_ncp <- estim_ncpPCA(df,method = method,ncp.max = ncp.max)$ncp}
+    if(FMAD){set_ncp <-missMDA::estim_ncpFAMD(df,method = method,ncp.max = ncp.max)$ncp }
+    if(MCA){set_ncp <- missMDA::estim_ncpMCA(df,method = method,ncp.max = ncp.max)$ncp}
+    if(PCA){set_ncp <- missMDA::estim_ncpPCA(df,method = method,ncp.max = ncp.max)$ncp}
     },error = function(e) { Fail <<- TRUE})
     if (Fail){print('Fail to estimate ncp')}
   }
 
   if (return_one){
   # imputation
-  if(FMAD){final <-imputeFAMD(df,ncp = set_ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs }
-  if(MCA){final <- imputeMCA(df,ncp = set_ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs}
-  if(PCA){final <- imputePCA(df,ncp=set_ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs}
+  if(FMAD){final <-missMDA::imputeFAMD(df,ncp = set_ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs }
+  if(MCA){final <- missMDA::imputeMCA(df,ncp = set_ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs}
+  if(PCA){final <- missMDA::imputePCA(df,ncp=set_ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs}
 
   if(!is.null(out_file)){
     write('  OK',file = out_file,append = T)
@@ -81,9 +81,9 @@ missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=TRU
     stop(e)
   })
   if (!return_one){
-    if(FMAD){final <-MIFAMD(df,ncp = set_ncp)$completeObs }
-    if(MCA){final <- MIMCA(df,ncp = set_ncp)$completeObs}
-    if(PCA){final <- MIPCA(df,ncp=set_ncp)$completeObs}
+    if(FMAD){final <-missMDA::MIFAMD(df,ncp = set_ncp)$completeObs }
+    if(MCA){final <- missMDA::MIMCA(df,ncp = set_ncp)$completeObs}
+    if(PCA){final <- missMDA::MIPCA(df,ncp=set_ncp)$completeObs}
     return(final$res.MI)
   }
 }

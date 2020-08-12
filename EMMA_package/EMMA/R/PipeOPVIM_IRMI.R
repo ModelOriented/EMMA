@@ -37,9 +37,9 @@ PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
                                  self$column_counter <- NULL
                                  self$data_imputed <- NULL
 
-                               },
+                               }),private=list(
 
-                               train_imputer=function(feature, type, context){
+                               .train_imputer=function(feature, type, context){
                                   imp_function <- function(data_to_impute){
 
 
@@ -92,7 +92,7 @@ PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
                                  return(NULL)
 
                                },
-                               impute=function(feature, type, model, context){
+                               .impute=function(feature, type, model, context){
                                   imp_function <- function(data_to_impute){
 
 
@@ -159,10 +159,10 @@ PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
 mlr_pipeops$add("VIM_IRMI_imputation", PipeOpVIM_IRMI)
 
 
+#
+# test <- PipeOpVIM_IRMI$new()
+# graph =  test %>>% learner_po
+# glrn = GraphLearner$new(graph)
+#
+# resample(test_task,glrn,rsmp('cv',folds=2L))
 
-# test = PipeOpMissMDA_PCA_MCA_FMAD$new() %>>%  learner_po
-# glrn =GraphLearner$new(test)
-# test_task = TaskClassif$new('test',backend = df,target = df_oml$target.features)
-#
-#
-# d <- resample(test_task,glrn,rsmp('cv',folds=2L))

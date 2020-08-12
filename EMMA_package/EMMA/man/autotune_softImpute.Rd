@@ -9,7 +9,7 @@ autotune_softImpute(
   percent_of_missing,
   col_type,
   col_0_1 = F,
-  cat_Fun = maxCat,
+  cat_Fun = VIM::maxCat,
   lambda = 0,
   rank.max = 2,
   type = "als",

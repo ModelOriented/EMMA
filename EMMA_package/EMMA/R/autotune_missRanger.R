@@ -53,7 +53,7 @@ autotune_missRanger <- function(df,percent_of_missing,maxiter=10,random.seed=123
       for (i in 1:iter){
         go_next <- FALSE
         tryCatch({
-        out <- capture.output(result <- missRanger(df,maxiter = maxiter,seed = random.seed,num.trees=num.trees[i],verbose = 2,pmm.k = pmm.k[i]))
+        out <- capture.output(result <- missRanger::missRanger(df,maxiter = maxiter,seed = random.seed,num.trees=num.trees[i],verbose = 2,pmm.k = pmm.k[i]))
 
         # Reading oob from last iteration
         curent_oob <- mean(as.numeric(strsplit(out[[length(out)]], split='\t')[[1]][-1]))
@@ -73,18 +73,18 @@ autotune_missRanger <- function(df,percent_of_missing,maxiter=10,random.seed=123
         write(best_param,file = out_file,append = T)
       }
     if(!is.null(mtry)){
-      final <- missRanger(df,maxiter = maxiter,seed = random.seed,num.trees=num.trees,sample.fraction=mtry,verbose = as.numeric(verbose),pmm.k = pmm.k)
+      final <- missRanger::missRanger(df,maxiter = maxiter,seed = random.seed,num.trees=num.trees,sample.fraction=mtry,verbose = as.numeric(verbose),pmm.k = pmm.k)
     }
-   else{final <- missRanger(df,maxiter = maxiter,seed = random.seed,num.trees=num.trees,verbose = as.numeric(verbose),pmm.k = pmm.k)}
+   else{final <- missRanger::missRanger(df,maxiter = maxiter,seed = random.seed,num.trees=num.trees,verbose = as.numeric(verbose),pmm.k = pmm.k)}
 
 
     }
     if(!optimize){
       if (is.null(mtry)){
 
-        final <- missRanger(df,maxiter = maxiter,seed = random.seed,num.trees=num.trees,verbose = as.numeric(verbose),pmm.k = pmm.k)
+        final <- missRanger::missRanger(df,maxiter = maxiter,seed = random.seed,num.trees=num.trees,verbose = as.numeric(verbose),pmm.k = pmm.k)
       }
-      else{final <- missRanger(df,maxiter = maxiter,seed = random.seed,num.trees=num.trees,verbose = as.numeric(verbose),sample.fraction=mtry/ncol(df),pmm.k = pmm.k)}
+      else{final <- missRanger::missRanger(df,maxiter = maxiter,seed = random.seed,num.trees=num.trees,verbose = as.numeric(verbose),sample.fraction=mtry/ncol(df),pmm.k = pmm.k)}
 
 
     }

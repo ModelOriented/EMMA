@@ -34,18 +34,18 @@ autotune_VIM_regrImp <- function(df,col_type,percent_of_missing,col_0_1=F,robust
     full_formula <- paste(colnames(df)[i],paste(colnames(df)[percent_of_missing==0],collapse = '+'),sep = '~')
 
     tryCatch({
-      final <- regressionImp(as.formula(full_formula),final,robust = robust,mod_cat = mod_cat,imp_var = F)
+      final <- VIM::regressionImp(as.formula(full_formula),final,robust = robust,mod_cat = mod_cat,imp_var = F)
       DONT_WORK <- FALSE
 
     },error=function(e){
       numeric_formula <- paste(colnames(df)[i],paste(colnames(df)[percent_of_missing==0 & col_type=='numeric'],collapse = '+'),sep = '~')
-      final <- regressionImp(as.formula(numeric_formula),final,robust = robust,mod_cat = mod_cat,imp_var = F)
+      final <- VIM::regressionImp(as.formula(numeric_formula),final,robust = robust,mod_cat = mod_cat,imp_var = F)
       DONT_WORK <- TRUE
     })
     if (DONT_WORK){
 
       final_formula <- paste(colnames(df)[i],paste(colnames(df)[percent_of_missing==0 & col_type=='numeric'][1],collapse = '+'),sep = '~')
-      final <- regressionImp(as.formula(numeric_formula_formula),final,robust = robust,mod_cat = mod_cat,imp_var = F)
+      final <- VIM::regressionImp(as.formula(numeric_formula_formula),final,robust = robust,mod_cat = mod_cat,imp_var = F)
     }
 
     if(use_imputed){

@@ -33,6 +33,9 @@ single_set_Pipeline <- function(df,id,col_type,percent_of_missing,out_file_locat
   VIM_HD <- NULL
   VIM_IRMI <- NULL
   VIM_KNN <- NULL
+  VIM_REGRIMP <- NULL
+  softImpute_res<- NULL
+  missRanger_res <- NULL
   cat('Mice :',file = out_file_location,append = T)
   tryCatch({
   mice_result <- autotune_mice(df,col_miss=col_miss,col_no_miss=col_no_miss,percent_of_missing=percent_of_missing,col_type = col_type,iter = 5,verbose = F)
@@ -84,6 +87,26 @@ single_set_Pipeline <- function(df,id,col_type,percent_of_missing,out_file_locat
     else{ write('NO Errors and no all data imputed',file = out_file_location ,append = TRUE )}
   },error = function(e) { write(as.character(e),file=out_file_location,append = TRUE)})
 
+  cat('VIM_regrImp :',file = out_file_location,append = TRUE,sep='')
+  tryCatch({
+    VIM_REGRIMP<- autotune_VIM_regrImp(df,percent_of_missing = percent_of_missing,col_type = col_type)
+    if (sum(is.na(VIM_REGRIMP))==0){write('OK',file = out_file_location,append = TRUE)}
+    else{ write('NO Errors and no all data imputed',file = out_file_location ,append = TRUE )}
+  },error = function(e) { write(as.character(e),file=out_file_location,append = TRUE)})
+
+  cat('softImpute :',file = out_file_location,append = TRUE,sep='')
+  tryCatch({
+    softImpute_res <- autotune_softImpute(df,percent_of_missing,col_type)
+    if (sum(is.na(softImpute_res))==0){write('OK',file = out_file_location,append = TRUE)}
+    else{ write('NO Errors and no all data imputed',file = out_file_location ,append = TRUE )}
+  },error = function(e) { write(as.character(e),file=out_file_location,append = TRUE)})
+
+  cat('missRanger :',file = out_file_location,append = TRUE,sep='')
+  tryCatch({
+    missRanger_res <- autotune_missRanger(df,percent_of_missing)
+    if (sum(is.na(missRanger_res))==0){write('OK',file = out_file_location,append = TRUE)}
+    else{ write('NO Errors and no all data imputed',file = out_file_location ,append = TRUE )}
+  },error = function(e) { write(as.character(e),file=out_file_location,append = TRUE)})
 
   write('----------------------',file = out_file_location,append = TRUE)
   return(list(mice_result,missMDA_result_1,missMDA_result_2,missForest_result))

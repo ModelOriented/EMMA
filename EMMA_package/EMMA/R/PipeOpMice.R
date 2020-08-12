@@ -44,9 +44,9 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                   self$column_counter <- NULL
                                   self$data_imputed <- NULL
 
-                                },
+                                }),private=list(
 
-                                train_imputer=function(feature, type, context){
+                                .train_imputer=function(feature, type, context){
                                   imp_function <- function(data_to_impute){
 
 
@@ -73,7 +73,7 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                                                   methods_random = self$param_set$values$methods_random,random.seed = self$param_set$values$random.seed,
                                                                   optimize = self$param_set$values$optimize,
                                                                   correlation = self$param_set$values$correlation,col_0_1 = self$param_set$values$col_0_1,verbose = F,
-                                                                  out_file =self$param_set$values$out_file
+                                                                  out_file =self$param_set$values$out_file,return_one = T
                                     )
 
 
@@ -88,6 +88,7 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                     self$column_counter <- ncol(context)+1
                                     self$imputed <- TRUE
                                     data_to_impute <- cbind(feature,context)
+
                                     self$data_imputed <- imp_function(data_to_impute)
                                     colnames(self$data_imputed) <- self$state$context_cols
 
@@ -103,7 +104,7 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                   return(NULL)
 
                                 },
-                                impute=function(feature, type, model, context){
+                                .impute=function(feature, type, model, context){
                                   imp_function <- function(data_to_impute){
 
 
@@ -128,7 +129,7 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                                                   methods_random = self$param_set$values$methods_random,random.seed = self$param_set$values$random.seed,
                                                                   optimize = self$param_set$values$optimize,
                                                                   correlation = self$param_set$values$correlation,col_0_1 = self$param_set$values$col_0_1,verbose = F,
-                                                                  out_file =self$param_set$values$out_file
+                                                                  out_file =self$param_set$values$out_file,return_one = T
                                     )
 
 
@@ -142,13 +143,14 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
 
 
                                   }
-                                    if((nrow(self$data_imputed)!=nrow(context) | !self$train_s ) & self$flag=='tarin'){
+                                    if((nrow(self$data_imputed)!=nrow(context) | !self$train_s ) & self$flag=='train'){
                                       self$imputed_predict <- FALSE
                                       self$flag <- 'predict'
                                     }
 
                                       if(!self$imputed_predict){
                                     data_to_impute <- cbind(feature,context)
+
                                     self$data_imputed <- imp_function(data_to_impute)
                                     colnames(self$data_imputed)[1] <- setdiff(self$state$context_cols,colnames(context))
                                     self$imputed_predict <- TRUE
@@ -177,14 +179,8 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
 mlr_pipeops$add("mice_imputation", PipeOpMice)
 #
 #
-# test <- PipeOpmissForest$new()
-# graph =  test %>>% learner_po
-# glrn = GraphLearner$new(graph)
-# #glrn$train(d)
-# resample(d, glrn, rsmp("cv"))
-# glrn$param_set$values = list(error_train = 1)
-# d<- TaskClassif$new('w',dataset,'binaryClass')
-# d$data()
+
+# # d$data()
 # glrn$param_set
 #
 # ps = ParamSet$new(list(

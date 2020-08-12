@@ -9,7 +9,7 @@ autotune_VIM_kNN(
   percent_of_missing,
   k = 5,
   numFun = median,
-  catFun = maxCat,
+  catFun = VIM::maxCat,
   col_0_1 = FALSE,
   out_file = NULL
 )
