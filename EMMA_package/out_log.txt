@@ -1,0 +1,53 @@
+LOG2020-08-13
+----------------------IMPUTACJE-----------------------
+Dataset id :4
+Mice :OK
+missMDA_FMAD_MCA_PCA :OK
+missMDA_MFA :OK
+missForest :OK
+VIM_HD :OK
+VIM_KNN :OK
+VIM_Irmi :OK
+VIM_regrImp :OK
+softImpute :OK
+missRanger :OK
+----------------------
+----------------------PIPLINE-----------------------
+imput_miceError in setdiff(predicted_value, col_miss): nie znaleziono obiektu 'predicted_value'
+
+imput_missMDA_MFAok
+imput_missMDA_MCA_PCA_FMADok
+imput_missForestok
+imput_VIM_HDok
+imput_VIM_IRMIok
+imput_VIM_kNNok
+imput_VIM_regrImpError in doTryCatch(return(expr), name, parentenv, handler): No values with no missing values
+
+imput_missRangerok
+----------------------IMPUTACJE-----------------------
+Dataset id :15
+Mice :OK
+missMDA_FMAD_MCA_PCA :OK
+missMDA_MFA :OK
+missForest :OK
+VIM_HD :OK
+VIM_KNN :OK
+VIM_Irmi :OK
+VIM_regrImp :OK
+softImpute :OK
+missRanger :OK
+----------------------
+----------------------PIPLINE-----------------------
+imput_miceok
+imput_missMDA_MFAok
+imput_missMDA_MCA_PCA_FMADok
+imput_missForestok
+imput_VIM_HDok
+imput_VIM_IRMIok
+imput_VIM_kNNok
+imput_VIM_regrImpok
+imput_missRangerok
+----------------------IMPUTACJE-----------------------
+Dataset id :25
+Mice :OK
+missMDA_FMAD_MCA_PCA :
