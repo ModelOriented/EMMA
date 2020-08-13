@@ -1,0 +1,4 @@
+"","pattern_count","Train_km","Pct_Mark_I","Accidents","SPAD_preventable","Other_preventable","Non_preventable","Fatalities","SPAD_fatalities","Other_fatalities","binaryClass","Year_grouped","Accidents_grouped","SPAD_grouped","Other_grouped","Non_grouped","Train_km_grouped","missings_count"
+"6",6,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0
+"25",25,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,6
+"",NA,0,0,0,0,0,0,0,0,0,0,25,25,25,25,25,25,150
