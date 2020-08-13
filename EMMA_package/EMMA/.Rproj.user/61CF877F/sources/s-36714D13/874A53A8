@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1597322396907.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "95|72|121|31|\n",
+    "hash" : "0",
+    "id" : "874A53A8",
+    "lastKnownWriteTime" : 1597323277,
+    "last_content_update" : 1597323277946,
+    "path" : "~/Pulpit/Job_repo/EMMA/EMMA_package/EMMA/R/PipeOpmissRanger.R",
+    "project_path" : "R/PipeOpmissRanger.R",
+    "properties" : {
+        "cursorPosition" : "153,30",
+        "scrollLine" : "142",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

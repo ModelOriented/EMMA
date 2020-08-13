@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1597217059152.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F76BACCB",
+    "lastKnownWriteTime" : 1597231854,
+    "last_content_update" : 1597231854,
+    "path" : "~/Pulpit/Job_repo/EMMA/EMMA_package/EMMA/R/PipeOpMice.R",
+    "project_path" : "R/PipeOpMice.R",
+    "properties" : {
+        "cursorPosition" : "72,116",
+        "scrollLine" : "145"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

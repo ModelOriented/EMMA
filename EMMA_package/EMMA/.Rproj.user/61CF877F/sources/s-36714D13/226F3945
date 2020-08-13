@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1597324016686.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "226F3945",
+    "lastKnownWriteTime" : 1597324585,
+    "last_content_update" : 1597324585256,
+    "path" : "~/Pulpit/Job_repo/EMMA/EMMA_package/EMMA/R/PipeOpMissMDA_PCA_MCA_FMAD.R",
+    "project_path" : "R/PipeOpMissMDA_PCA_MCA_FMAD.R",
+    "properties" : {
+        "cursorPosition" : "168,0",
+        "scrollLine" : "145",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 12,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
