@@ -13,7 +13,7 @@
 PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
                                            inherit = PipeOpImpute,  # inherit from PipeOp
                                            public = list(
-                                             initialize = function(id = "imput_missMDA_MFA",col_0_1=F,ncp=2,random.seed=123,maxiter=1000,
+                                             initialize = function(id = "imput_missMDA_MFA",col_0_1=F,ncp=2,random.seed=123,maxiter=998,
                                                                    coeff.ridge=1,threshold=1e-06,method='Regularized',out_file=NULL
                                              ) {
                                                super$initialize(id,whole_task_dependent=TRUE, param_vals = list(col_0_1=col_0_1,ncp=ncp,random.seed=random.seed,
@@ -23,7 +23,7 @@ PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
 
 
                                                                   'ncp'=ParamInt$new('ncp',lower = 1,upper = Inf,default = 2,tags='MFA'),
-                                                                  'maxiter'=ParamInt$new('maxiter',lower =50,upper = Inf,default = 1000,tags = 'MFA'),
+                                                                  'maxiter'=ParamInt$new('maxiter',lower =50,upper = Inf,default = 998,tags = 'MFA'),
                                                                   'coeff.ridge'=ParamDbl$new('coeff.ridge',lower = 0,upper = 1,default = 1,tags = 'MFA'),
                                                                   'threshold'=ParamDbl$new('threshold',lower = 0,upper = 1,default = 1e-6,tags = 'MFA'),
                                                                   'method'=ParamFct$new('method',levels = c('Regularized','EM'),default = 'Regularized',tags = 'MFA'),

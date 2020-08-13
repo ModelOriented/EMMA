@@ -9,12 +9,12 @@ License: What license is it under?
 Depends:
     mlr3,
     mlr3pipelines,
+    paradox,
     mice 
 Imports:
     missForest,
     missMDA,
     doParallel,
-    paradox,
     mlr3,
     mlr3pipelines,
     Amelia,

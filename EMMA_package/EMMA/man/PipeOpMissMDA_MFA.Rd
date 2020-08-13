@@ -35,7 +35,7 @@ This class create object implements missMDA_MFA function for use in mlr3 pipelin
   col_0_1 = F,
   ncp = 2,
   random.seed = 123,
-  maxiter = 1000,
+  maxiter = 998,
   coeff.ridge = 1,
   threshold = 1e-06,
   method = "Regularized",

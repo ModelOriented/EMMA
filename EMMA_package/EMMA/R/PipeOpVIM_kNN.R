@@ -12,14 +12,14 @@
 PipeOpVIM_kNN <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,
                            inherit = PipeOpImpute,
                            public = list(
-                             initialize = function(id = "imput_VIM_kNN", k=5,numFun=median,catFun=maxCat,col_0_1=FALSE,out_file=NULL
+                             initialize = function(id = "imput_VIM_kNN", k=5,numFun=median,catFun=VIM::maxCat,col_0_1=FALSE,out_file=NULL
                              ) {
                                super$initialize(id, whole_task_dependent=TRUE,param_vals = list(k=k,numFun=numFun,catFun=catFun,col_0_1=col_0_1,out_file=out_file ),
                                                 param_set= ParamSet$new(list(
 
                                                   'k'=ParamInt$new('k',lower = 1,upper = Inf,default = 5,tags='VIM_kNN'),
                                                   'numFun'=ParamUty$new('numFun',default = median,tags = 'VIM_kNN'),
-                                                  'catFun'=ParamUty$new('catFun',default = maxCat,tags = 'VIM_kNN'),
+                                                  'catFun'=ParamUty$new('catFun',default = VIM::maxCat,tags = 'VIM_kNN'),
                                                   'col_0_1'=ParamLgl$new('col_0_1',default = FALSE,tags = 'VIM_kNN'),
                                                   'out_file'=ParamUty$new('out_file',default = NULL,tags = 'VIM_kNN')
 

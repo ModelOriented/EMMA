@@ -30,23 +30,36 @@ autotune_VIM_regrImp <- function(df,col_type,percent_of_missing,col_0_1=F,robust
   final <- df
   iter_columns <-  (1:ncol(df))[percent_of_missing>0]
   for (i in iter_columns ){
-    DONT_WORK <- TRUE
+    error <- NULL
+    WORK <- FALSE
     full_formula <- paste(colnames(df)[i],paste(colnames(df)[percent_of_missing==0],collapse = '+'),sep = '~')
-
+    numeric_formula <- paste(colnames(df)[i],paste(colnames(df)[percent_of_missing==0 & col_type=='numeric'],collapse = '+'),sep = '~')
     tryCatch({
       final <- VIM::regressionImp(as.formula(full_formula),final,robust = robust,mod_cat = mod_cat,imp_var = F)
-      DONT_WORK <- FALSE
+      WORK <- TRUE
 
-    },error=function(e){
-      numeric_formula <- paste(colnames(df)[i],paste(colnames(df)[percent_of_missing==0 & col_type=='numeric'],collapse = '+'),sep = '~')
-      final <- VIM::regressionImp(as.formula(numeric_formula),final,robust = robust,mod_cat = mod_cat,imp_var = F)
-      DONT_WORK <- TRUE
-    })
-    if (DONT_WORK){
+    },error=function(e){error <- e})
 
-      final_formula <- paste(colnames(df)[i],paste(colnames(df)[percent_of_missing==0 & col_type=='numeric'][1],collapse = '+'),sep = '~')
-      final <- VIM::regressionImp(as.formula(numeric_formula_formula),final,robust = robust,mod_cat = mod_cat,imp_var = F)
+    if(!WORK & sum(percent_of_missing==0 & col_type=='numeric')>0){
+      tryCatch({
+      final <-  VIM::regressionImp(as.formula(numeric_formula),final,robust = robust,mod_cat = mod_cat,imp_var = F)
+      WORK <- TRUE},error=function(e){error <- e})
     }
+    if (!WORK){
+      tryCatch({
+      part_formula <- paste(colnames(df)[i],paste(colnames(df)[percent_of_missing==0][1],collapse = '+'),sep = '~')
+      final <-  VIM::regressionImp(as.formula(part_formula),final,robust = robust,mod_cat = mod_cat,imp_var = F)
+      WORK <- TRUE},error=function(e){error <- e})
+    }
+    if (!WORK & sum(percent_of_missing==0 & col_type=='numeric')>0){
+      tryCatch({
+      numeric_part_formula <- paste(colnames(df)[i],paste(colnames(df)[percent_of_missing==0 & col_type=='numeric'][1],collapse = '+'),sep = '~')
+      final <-  VIM::regressionImp(as.formula(part_formula),final,robust = robust,mod_cat = mod_cat,imp_var = F)
+      WORK <- TRUE},error=function(e){error <- e})
+
+    }
+    if (!WORK){stop(error)}
+
 
     if(use_imputed){
       percent_of_missing[i] <- 0
@@ -81,7 +94,7 @@ autotune_VIM_regrImp <- function(df,col_type,percent_of_missing,col_0_1=F,robust
 
 }
 
-
+#sum(is.na(autotune_VIM_regrImp(df,col_type,percent_of_missing)))
 
 # test <- df
 #

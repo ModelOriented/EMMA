@@ -34,7 +34,7 @@ This class create object implements autotune_VIM_kNN function for use in mlr3 pi
   id = "imput_VIM_kNN",
   k = 5,
   numFun = median,
-  catFun = maxCat,
+  catFun = VIM::maxCat,
   col_0_1 = FALSE,
   out_file = NULL
 )}\if{html}{\out{</div>}}

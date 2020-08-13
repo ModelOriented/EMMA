@@ -37,7 +37,7 @@ This class create object implements missMDA_FMAD_MCA_PCA function for use in mlr
   col_0_1 = F,
   ncp.max = 5,
   random.seed = 123,
-  maxiter = 999,
+  maxiter = 998,
   coeff.ridge = 1,
   threshold = 1e-06,
   method = "Regularized",

@@ -125,7 +125,7 @@ PipeOpmissRanger <-  R6::R6Class("missRanger_imputation",lock_objects=FALSE,
 
 
                                }
-                               if((nrow(self$data_imputed)!=nrow(context) | !self$train_s ) & self$flag=='tarin'){
+                               if((nrow(self$data_imputed)!=nrow(context) | !self$train_s ) & self$flag=='train'){
                                  self$imputed_predict <- FALSE
                                  self$flag <- 'predict'
                                }
@@ -158,3 +158,11 @@ PipeOpmissRanger <-  R6::R6Class("missRanger_imputation",lock_objects=FALSE,
                            )
 )
 mlr_pipeops$add("missRanger_imputation", PipeOpmissRanger)
+#
+# test_task <- TaskClassif$new('jebac policjie',df,colnames(df)[10])
+# test <- PipeOpmissRanger$new()
+# graph =  test %>>% learner_po
+# glrn = GraphLearner$new(graph)
+# #
+# resample(test_task,glrn,rsmp('cv',folds=2L))
+
