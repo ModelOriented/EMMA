@@ -148,7 +148,7 @@ ggplot(patterns, aes(x = row_per))+
 
 - Almost all patterns seem to cover an only very small fraction of dataset's instances.
 
-### *Figure7*
+### *Figure 7*
 
 ```{r average_percentage_instances_pattern}
 group_by(patterns, id)%>%
@@ -169,3 +169,90 @@ ggplot(aes(x = average))+
 
 <br></br>
 <br></br>
+
+## Decision tree
+
+Based on the above analysis, we can try to group data sets against key statistics.
+
+```{r tree_setup, include=FALSE}
+source("datasets_store/patterns_analysis/decision_tree.R")
+
+#Decision variables to choose:
+# - "per_missings", "per_instances_missings", "patterns_fraction", "avg_per_var_pattern", "avg_per_inst_pattern"
+```
+
+### *Tree 1*
+
+Splitting variables:
+
+- percentage of missings [10]
+- percentage of instances with missings [15, 90]
+- fraction of patterns in instances [10]
+
+```{r tree1, fig.width=12}
+decisions1 <- list(
+  "per_missings" = 10,
+  "per_instances_missings" = c(15, 90),
+  "patterns_fraction" = 10
+)
+
+tree1 <- decision_tree(df, decisions1)
+plot(tree1$tree)
+```
+
+### *Tree 2*
+
+Splitting variables:
+
+- percentage of missings [5]
+- percentage of instances with missings [35]
+- fraction of patterns in instances [10]
+
+```{r tree2, fig.width=12}
+decisions2 <- list(
+  "per_missings" = 5,
+  "per_instances_missings" = 35,
+  "patterns_fraction" = 10
+)
+
+tree2 <- decision_tree(df, decisions2)
+plot(tree2$tree)
+```
+
+### *Tree 3*
+
+Splitting variables:
+
+- percentage of missings [10]
+- percentage of instances with missings [35]
+- fraction of patterns in instances [10]
+
+```{r tree3, fig.width=12}
+decisions3 <- list(
+  "per_missings" = 5,
+  "per_instances_missings" = 35,
+  "patterns_fraction" = 10
+)
+
+tree3 <- decision_tree(df, decisions3)
+plot(tree3$tree)
+```
+
+### *Tree 4*
+
+Splitting variables:
+
+- percentage of missings [10]
+- percentage of instances with missings [35]
+- average percentage of variables in dataset's patterns [10, 25]
+
+```{r tree4, fig.width=12}
+decisions4 <- list(
+  "per_missings" = 10,
+  "per_instances_missings" = 35,
+  "avg_per_var_pattern" = c(10, 25)
+)
+
+tree4 <- decision_tree(df, decisions4)
+plot(tree4$tree)
+```
