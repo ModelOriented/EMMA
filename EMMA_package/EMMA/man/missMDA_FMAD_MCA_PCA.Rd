@@ -14,10 +14,11 @@ missMDA_FMAD_MCA_PCA(
   ncp.max = 5,
   return_one = TRUE,
   random.seed = 123,
-  maxiter = 999,
+  maxiter = 998,
   coeff.ridge = 1,
   threshold = 1e-06,
-  method = "Regularized"
+  method = "Regularized",
+  out_file = NULL
 )
 }
 \arguments{
@@ -46,6 +47,8 @@ missMDA_FMAD_MCA_PCA(
 \item{threshold}{threshold for convergence.}
 
 \item{method}{method used in imputation algoritm.}
+
+\item{out_file}{Output log file location if file already exists log message will be added. If NULL no log will be produced.}
 }
 \value{
 Retrun one imputed data.frame if retrun_one=True or list of imputed data.frames if retrun_one=False.

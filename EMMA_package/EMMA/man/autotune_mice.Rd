@@ -23,7 +23,8 @@ autotune_mice(
   correlation = T,
   return_one = T,
   col_0_1 = F,
-  verbose = FALSE
+  verbose = FALSE,
+  out_file = NULL
 )
 }
 \arguments{
@@ -41,7 +42,7 @@ autotune_mice(
 
 \item{set_cor}{Correlation or fraction of featurs using if optimize= False}
 
-\item{set_method}{Method used if optimize=False}
+\item{set_method}{Method used if optimize=False. If NULL defoult method is used (more in methods_random section ).}
 
 \item{percent_of_missing}{numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)}
 
@@ -49,7 +50,7 @@ autotune_mice(
 
 \item{up_corr}{double between 0,1 default 1 upper boundary of correlation set. Both of these parameters work the same for a fraction of features.}
 
-\item{methods_random}{set of methods to chose. Default 'pmm'.}
+\item{methods_random}{set of methods to chose. Default 'pmm'. If seted on NULL defoult method is used : By default, the method uses pmm, predictive mean matching (numeric data) logreg, logistic regression imputation (binary data, factor with 2 levels) polyreg, polytomous regression imputation for unordered categorical data (factor > 2 levels) polr, proportional odds model for (ordered, > 2 levels).}
 
 \item{iter}{number of iteration for randomSearch.}
 
@@ -64,6 +65,8 @@ autotune_mice(
 \item{col_0_1}{Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).}
 
 \item{verbose}{If FALSE funtion didn't print on console.}
+
+\item{out_file}{Output log file location if file already exists log message will be added. If NULL no log will be produced.}
 }
 \value{
 Return imputed datasets or mids object containing multi imputation datasets.

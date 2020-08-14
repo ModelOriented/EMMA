@@ -2,7 +2,7 @@
 % Please edit documentation in R/autotune_VIM_Irmi.R
 \name{autotune_VIM_Irmi}
 \alias{autotune_VIM_Irmi}
-\title{Perform imputation using VIM packeg and irmi function}
+\title{Perform imputation using VIM package and irmi function}
 \usage{
 autotune_VIM_Irmi(
   df,
@@ -13,7 +13,8 @@ autotune_VIM_Irmi(
   robust = FALSE,
   init.method = "kNN",
   force = FALSE,
-  col_0_1 = FALSE
+  col_0_1 = FALSE,
+  out_file = NULL
 )
 }
 \arguments{
@@ -34,6 +35,8 @@ autotune_VIM_Irmi(
 \item{force}{if TRUE, the algorithm tries to find a solution in any case, possible by using different robust methods automatically. (should be set FALSE for simulation)}
 
 \item{col_0_1}{Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).}
+
+\item{out_file}{Output log file location if file already exists log message will be added. If NULL no log will be produced.}
 }
 \value{
 Return one data.frame with imputed values.

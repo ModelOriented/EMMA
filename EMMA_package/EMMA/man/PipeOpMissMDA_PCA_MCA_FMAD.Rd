@@ -13,20 +13,15 @@ This class create object implements missMDA_FMAD_MCA_PCA function for use in mlr
 \subsection{Public methods}{
 \itemize{
 \item \href{#method-new}{\code{PipeOpMissMDA_PCA_MCA_FMAD$new()}}
-\item \href{#method-train_imputer}{\code{PipeOpMissMDA_PCA_MCA_FMAD$train_imputer()}}
-\item \href{#method-impute}{\code{PipeOpMissMDA_PCA_MCA_FMAD$impute()}}
 \item \href{#method-clone}{\code{PipeOpMissMDA_PCA_MCA_FMAD$clone()}}
 }
 }
 \if{html}{
-\out{<details ><summary>Inherited methods</summary>}
+\out{<details open ><summary>Inherited methods</summary>}
 \itemize{
 \item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOp" data-id="predict">}\href{../../mlr3pipelines/html/PipeOp.html#method-predict}{\code{mlr3pipelines::PipeOp$predict()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOp" data-id="print">}\href{../../mlr3pipelines/html/PipeOp.html#method-print}{\code{mlr3pipelines::PipeOp$print()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOp" data-id="train">}\href{../../mlr3pipelines/html/PipeOp.html#method-train}{\code{mlr3pipelines::PipeOp$train()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOpImpute" data-id="predict_internal">}\href{../../mlr3pipelines/html/PipeOpImpute.html#method-predict_internal}{\code{mlr3pipelines::PipeOpImpute$predict_internal()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOpImpute" data-id="select_cols">}\href{../../mlr3pipelines/html/PipeOpImpute.html#method-select_cols}{\code{mlr3pipelines::PipeOpImpute$select_cols()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOpImpute" data-id="train_internal">}\href{../../mlr3pipelines/html/PipeOpImpute.html#method-train_internal}{\code{mlr3pipelines::PipeOpImpute$train_internal()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -42,29 +37,12 @@ This class create object implements missMDA_FMAD_MCA_PCA function for use in mlr
   col_0_1 = F,
   ncp.max = 5,
   random.seed = 123,
-  maxiter = 1000,
+  maxiter = 998,
   coeff.ridge = 1,
   threshold = 1e-06,
-  method = "Regularized"
+  method = "Regularized",
+  out_file = NULL
 )}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-train_imputer"></a>}}
-\if{latex}{\out{\hypertarget{method-train_imputer}{}}}
-\subsection{Method \code{train_imputer()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{PipeOpMissMDA_PCA_MCA_FMAD$train_imputer(feature, type, context)}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-impute"></a>}}
-\if{latex}{\out{\hypertarget{method-impute}{}}}
-\subsection{Method \code{impute()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{PipeOpMissMDA_PCA_MCA_FMAD$impute(feature, type, model, context)}\if{html}{\out{</div>}}
 }
 
 }

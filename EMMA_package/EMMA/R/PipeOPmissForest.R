@@ -11,11 +11,11 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                            inherit = PipeOpImpute,  # inherit from PipeOp
                            public = list(
                              initialize = function(id = "imput_missForest", cores=NULL,ntree_set=c(100,200,500,1000),mtry_set=NULL,parallel=TRUE
-                                                  ,col_0_1=FALSE,mtry=NULL,ntree=100,optimize=FALSE,maxiter=20,maxnodes=NULL
+                                                  ,col_0_1=FALSE,mtry=NULL,ntree=100,optimize=FALSE,maxiter=20,maxnodes=NULL,out_file=NULL
                              ) {
                                super$initialize(id,whole_task_dependent=TRUE,param_vals = list(cores =cores,ntree_set =ntree_set,mtry_set=mtry_set,parallel=parallel,
                                                                       col_0_1=col_0_1,mtry=mtry,ntree=ntree,optimize=optimize,
-                                                                      maxiter=maxiter,maxnodes=maxnodes),
+                                                                      maxiter=maxiter,maxnodes=maxnodes,out_file=out_file),
                                                 param_set= ParamSet$new(list(
                                                   'ntree_set'=ParamUty$new('ntree_set', default = c(100,200,500,1000), tags = 'missForest'),
                                                   'cores'=ParamUty$new('cores',default = NULL,tags='missForest'),
@@ -26,7 +26,8 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                                   'ntree'=ParamInt$new('ntree',lower = 10,upper = Inf,default = 100,tags='missForest'),
                                                   'optimize'=ParamLgl$new('optimize',default = FALSE,tags='missForest'),
                                                   'maxiter'=ParamInt$new('maxiter',lower = 5,upper = Inf,default = 20,tags='missForest'),
-                                                  'maxnodes'=ParamUty$new('maxnodes',default = NULL,tags='missForest')
+                                                  'maxnodes'=ParamUty$new('maxnodes',default = NULL,tags='missForest'),
+                                                  'out_file'=ParamUty$new('out_file',default = NULL,tags = 'missForest')
 
 
 
@@ -41,9 +42,9 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                self$column_counter <- NULL
                                self$data_imputed <- NULL
 
-                             },
+                             }),private=list(
 
-                             train_imputer=function(feature, type, context){
+                             .train_imputer=function(feature, type, context){
                                 imp_function <- function(data_to_impute){
 
 
@@ -68,7 +69,8 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                                                      parallel = self$param_set$values$parallel,
                                                                      col_0_1 = self$param_set$values$col_0_1,optimize = self$param_set$values$optimize,
                                                                      ntree = self$param_set$values$ntree,mtry = self$param_set$values$mtry,
-                                                                     maxiter=self$param_set$values$maxiter,maxnodes=self$param_set$values$maxnodes,verbose = F)
+                                                                     maxiter=self$param_set$values$maxiter,maxnodes=self$param_set$values$maxnodes,verbose = F,
+                                                                     out_file =self$param_set$values$out_file)
 
 
 
@@ -82,6 +84,7 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                  self$column_counter <- ncol(context)+1
                                  self$imputed <- TRUE
                                  data_to_impute <- cbind(feature,context)
+
                                  self$data_imputed <- imp_function(data_to_impute)
                                  colnames(self$data_imputed) <- self$state$context_cols
 
@@ -93,10 +96,11 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                if  (self$column_counter==0){
                                  self$imputed <- FALSE
                                }
+                               self$train_s <- TRUE
                                return(NULL)
 
                              },
-                             impute=function(feature, type, model, context){
+                             .impute=function(feature, type, model, context){
                                  imp_function <- function(data_to_impute){
 
 
@@ -121,7 +125,8 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                                                      parallel = self$param_set$values$parallel,
                                                                      col_0_1 = self$param_set$values$col_0_1,optimize = self$param_set$values$optimize,
                                                                      ntree = self$param_set$values$ntree,mtry = self$param_set$values$mtry,
-                                                                     maxiter=self$param_set$values$maxiter,maxnodes=self$param_set$values$maxnodes,verbose = F)
+                                                                     maxiter=self$param_set$values$maxiter,maxnodes=self$param_set$values$maxnodes,verbose = F,
+                                                                     out_file =self$param_set$values$out_file)
 
 
 
@@ -133,7 +138,7 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
 
 
                                }
-                               if(nrow(self$data_imputed)!=nrow(context)){
+                               if((nrow(self$data_imputed)!=nrow(context) | !self$train_s) & self$flag=='train'){
                                  self$imputed_predict <- FALSE
                                  self$flag <- 'predict'
                                }
@@ -141,8 +146,9 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                if(!self$imputed_predict){
 
                                  data_to_impute <- cbind(feature,context)
+
                                  self$data_imputed <- imp_function(data_to_impute)
-                                 colnames(self$data_imputed) <- self$state$context_cols
+                                 colnames(self$data_imputed)[1] <- setdiff(self$state$context_cols,colnames(context))
                                  self$imputed_predict <- TRUE
                                }
 
@@ -157,6 +163,7 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                  self$flag=='predict'
                                  self$imputed_predict <- FALSE
                                }
+                               self$train_s <- FALSE
 
                                return(feature)
                              }
@@ -165,4 +172,19 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
 )
 
 mlr_pipeops$add("missForest_imputation", PipeOpmissForest)
+
+
+# test <- PipeOpmissForest$new()
+# graph =  test %>>% learner_po
+# glrn = GraphLearner$new(graph)
+#
+# resample(d, glrn, rsmp("cv",folds=2L))
+# # # # glrn$param_set$values = list(error_train = 1)
+# d<- TaskClassif$new('w',df,colnames(df)[4])
+#
+# # test <- PipeOpmissForest$new()
+# graph =  test %>>% learner_po
+# glrn = GraphLearner$new(graph)
+# #glrn$train(d)
+# resample(d, glrn, rsmp("cv"))
 

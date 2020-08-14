@@ -84,6 +84,7 @@ PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
                                      if  (self$column_counter==0){
                                        self$imputed <- FALSE
                                      }
+                                     self$train_s <- TRUE
                                      return(NULL)
 
                                    },
@@ -122,7 +123,7 @@ PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
 
 
                                      }
-                                     if(nrow(self$data_imputed)!=nrow(context)){
+                                     if((nrow(self$data_imputed)!=nrow(context) | !self$train_s) & self$flag=='train') {
                                        self$imputed_predict <- FALSE
                                        self$flag <- 'predict'
                                      }
@@ -145,6 +146,7 @@ PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
                                        self$flag=='predict'
                                        self$imputed_predict <- FALSE
                                      }
+                                      self$train_s <- FALSE
 
                                      return(feature)
                                    }

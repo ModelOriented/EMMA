@@ -1,6 +1,6 @@
-#' Hot-Deck Imputation
+#' missRanger Imputation
 #'
-#' @description This class create object implements autotune_VIM_hotdeck function for use in mlr3 pipelinies. Object can be created with \code{\link{autotune_VIM_hotdeck}} params.
+#' @description This class create object implements autotune_missRanger function for use in mlr3 pipelinies. Object can be created with \code{\link{autotune_missRanger}} params.
 #'
 #'
 #'
@@ -9,17 +9,24 @@
 
 
 
-PipeOpVIM_HD <-  R6::R6Class("VIM_HD_imputation",lock_objects=FALSE,
-                           inherit = PipeOpImpute,  # inherit from PipeOp
+PipeOpmissRanger <-  R6::R6Class("missRanger_imputation",lock_objects=FALSE,
+                           inherit = PipeOpImpute,
                            public = list(
-                             initialize = function(id = "imput_VIM_HD",col_0_1= FALSE,out_file=NULL
+                             initialize = function(id = "imput_missRanger", maxiter = 10,random.seed=123,mtry=NULL,num.trees=500,
+                                                   pmm.k=5,optimize=F,iter=10,col_0_1=F,out_file=NULL
                              ) {
-                               super$initialize(id, whole_task_dependent=TRUE, param_vals = list( col_0_1=col_0_1,out_file=out_file),
+                               super$initialize(id, whole_task_dependent=TRUE,param_vals = list( maxiter=maxiter,random.seed=random.seed,mtry=mtry,num.trees=num.trees,
+                                                                                                 pmm.k=pmm.k,iter=iter,optimize=optimize,col_0_1=col_0_1,out_file=out_file),
                                                 param_set= ParamSet$new(list(
-
-                                                  'col_0_1'=ParamLgl$new('col_0_1',default = F,tags='VIM_HD'),
-                                                  'out_file'=ParamUty$new('out_file',default = NULL,tags = 'VIM_HD')
-
+                                                  'maxiter'= ParamInt$new('maxiter',lower = 1,upper = Inf,default = 10,tags = 'missRanger'),
+                                                  'random.seed'=ParamInt$new('random.seed',default = 123,tags = 'missRanger'),
+                                                  'mtry'=ParamUty$new('mtry',default = NULL,tags = 'missRanger'),
+                                                  'num.trees'=ParamInt$new('num.trees',default = 500,lower = 10,upper = Inf,tags = 'missRanger'),
+                                                  'pmm.k'=ParamInt$new('pmm.k',lower = 0,upper = Inf,default = 5,tags = 'missRagner'),
+                                                  'optimize'=ParamLgl$new('optimize',default = F,tags = 'missRagner'),
+                                                  'iter'=ParamInt$new('iter',lower = 1,upper = Inf,default = 10,tags = 'missRanger'),
+                                                  'col_0_1'=ParamLgl$new('col_0_1',default = F,tags = 'missRanger'),
+                                                  'out_file'=ParamUty$new('out_file',default = NULL,tags = 'missRanger')
 
                                                 ))
                                )
@@ -33,7 +40,7 @@ PipeOpVIM_HD <-  R6::R6Class("VIM_HD_imputation",lock_objects=FALSE,
                              }),private=list(
 
                              .train_imputer=function(feature, type, context){
-                                imp_function <- function(data_to_impute){
+                               imp_function <- function(data_to_impute){
 
 
 
@@ -51,10 +58,14 @@ PipeOpVIM_HD <-  R6::R6Class("VIM_HD_imputation",lock_objects=FALSE,
                                  col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
+                                 data_imputed <- autotune_missRanger(data_to_impute,percent_of_missing,maxiter = self$param_set$values$maxiter,
+                                                                     random.seed = self$param_set$values$random.seed,mtry = self$param_set$values$mtry,
+                                                                     num.trees = self$param_set$values$num.trees,col_0_1 = self$param_set$values$col_0_1,
+                                                                     out_file = self$param_set$values$out_file,optimize = self$param_set$values$optimize,
+                                                                     iter = self$param_set$values$iter,pmm.k = self$param_set$values$pmm.k)
 
 
-                                 data_imputed <- autotune_VIM_hotdeck(data_to_impute,percent_of_missing,self$param_set$values$col_0_1,
-                                                                      out_file =self$param_set$values$out_file)
+
 
 
 
@@ -82,9 +93,7 @@ PipeOpVIM_HD <-  R6::R6Class("VIM_HD_imputation",lock_objects=FALSE,
 
                              },
                              .impute=function(feature, type, model, context){
-                                 imp_function <- function(data_to_impute){
-
-
+                               imp_function <- function(data_to_impute){
 
 
                                  data_to_impute <- as.data.frame(data_to_impute)
@@ -100,10 +109,12 @@ PipeOpVIM_HD <-  R6::R6Class("VIM_HD_imputation",lock_objects=FALSE,
                                  col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
+                                 data_imputed <- autotune_missRanger(data_to_impute,percent_of_missing,maxiter = self$param_set$values$maxiter,
+                                                                     random.seed = self$param_set$values$random.seed,mtry = self$param_set$values$mtry,
+                                                                     num.trees = self$param_set$values$num.trees,col_0_1 = self$param_set$values$col_0_1,
+                                                                     out_file = self$param_set$values$out_file,optimize = self$param_set$values$optimize,
+                                                                     iter = self$param_set$values$iter,pmm.k = self$param_set$values$pmm.k)
 
-
-                                 data_imputed <- autotune_VIM_hotdeck(data_to_impute,percent_of_missing,self$param_set$values$col_0_1,
-                                                                      out_file =self$param_set$values$out_file)
 
 
 
@@ -114,7 +125,7 @@ PipeOpVIM_HD <-  R6::R6Class("VIM_HD_imputation",lock_objects=FALSE,
 
 
                                }
-                               if((nrow(self$data_imputed)!=nrow(context) | !self$train_s) & (self$flag=='train')){
+                               if((nrow(self$data_imputed)!=nrow(context) | !self$train_s ) & self$flag=='train'){
                                  self$imputed_predict <- FALSE
                                  self$flag <- 'predict'
                                }
@@ -134,17 +145,24 @@ PipeOpVIM_HD <-  R6::R6Class("VIM_HD_imputation",lock_objects=FALSE,
 
                                if(self$column_counter == 0 & self$flag=='train'){
                                  feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
-                                 self$flag <- 'predict'
+                                 self$flag=='predict'
                                  self$imputed_predict <- FALSE
                                }
-
                                self$train_s <- FALSE
+
                                return(feature)
                              }
 
+
+
                            )
 )
-mlr_pipeops$add("VIM_HD_imputation", PipeOpVIM_HD)
-
-
+mlr_pipeops$add("missRanger_imputation", PipeOpmissRanger)
+#
+# test_task <- TaskClassif$new('jebac policjie',df,colnames(df)[10])
+# test <- PipeOpmissRanger$new()
+# graph =  test %>>% learner_po
+# glrn = GraphLearner$new(graph)
+# #
+# resample(test_task,glrn,rsmp('cv',folds=2L))
 

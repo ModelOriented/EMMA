@@ -1,27 +1,29 @@
 Package: EMMA
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Evaluation of Methods for dealing with Missing data in Machine Learning algorithms
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: 
+Maintainer: Jan Borowski <janborowka7@gmail.com>
+Description: Package crate uniform interface for several advanced imputations missing data methods.Every available method can be used as a part of mlr3 pipelines whats allow easy tuning and performance evaluation. 
 License: What license is it under?
 Depends:
-    mice,
+    mlr3,
+    mlr3pipelines,
+    paradox,
+    mice 
+Imports:
     missForest,
     missMDA,
     doParallel,
-    paradox,
     mlr3,
     mlr3pipelines,
     Amelia,
-    VIM
-Imports:
-    mice,
-    missForest,
-    missMDA,
-    doParallel
+    VIM,
+    softImpute,
+    missRanger,
+    mice 
+Remotes: github::mlr-org/mlr3pipelines
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1.9000
+

@@ -10,19 +10,20 @@
 PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",lock_objects=FALSE,
                            inherit = PipeOpImpute,  # inherit from PipeOp
                            public = list(
-                             initialize = function(id = "imput_missMDA_MCA_PCA_FMAD", optimize_ncp = T, set_ncp=2,col_0_1=F,ncp.max=5,random.seed=123,maxiter=1000,
-                                                   coeff.ridge=1,threshold=1e-06,method='Regularized'
+                             initialize = function(id = "imput_missMDA_MCA_PCA_FMAD", optimize_ncp = T, set_ncp=2,col_0_1=F,ncp.max=5,random.seed=123,maxiter=998,
+                                                   coeff.ridge=1,threshold=1e-06,method='Regularized',out_file=NULL
                              ) {
                                super$initialize(id,whole_task_dependent=TRUE, param_vals = list(optimize_ncp=optimize_ncp,set_ncp=set_ncp,col_0_1=col_0_1,ncp.max=ncp.max,random.seed=random.seed,
-                                                                      maxiter=maxiter,coeff.ridge=coeff.ridge,threshold=threshold,method=method),
+                                                                      maxiter=maxiter,coeff.ridge=coeff.ridge,threshold=threshold,method=method,out_file=out_file),
                                                 param_set= ParamSet$new(list(
 
                                                   'set_ncp'=ParamInt$new('set_ncp',lower = 1,upper = Inf,default = 2,tags='PCA_MCA_FMAD'),
                                                   'ncp.max'=ParamInt$new('ncp.max',lower = 1,upper = Inf,default = 2,tags='PCA_MCA_FMAD'),
-                                                  'maxiter'=ParamInt$new('maxiter',lower =50,upper = Inf,default = 1000,tags = 'PCA_MCA_FMAD'),
+                                                  'maxiter'=ParamInt$new('maxiter',lower =50,upper = Inf,default = 998,tags = 'PCA_MCA_FMAD'),
                                                   'coeff.ridge'=ParamDbl$new('coeff.ridge',lower = 0,upper = 1,default = 1,tags = 'PCA_MCA_FMAD'),
                                                   'threshold'=ParamDbl$new('threshold',lower = 0,upper = 1,default = 1e-6,tags = 'PCA_MCA_FMAD'),
                                                   'method'=ParamFct$new('method',levels = c('Regularized','EM'),default = 'Regularized',tags = 'PCA_MCA_FMAD'),
+                                                  'out_file'=ParamUty$new('out_file',default = NULL,tags = 'PCA_MCA_FMAD'),
 
 
 
@@ -40,9 +41,9 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
                                self$column_counter <- NULL
                                self$data_imputed <- NULL
 
-                             },
+                             }),private=list(
 
-                             train_imputer=function(feature, type, context){
+                             .train_imputer=function(feature, type, context){
                                 imp_function <- function(data_to_impute){
 
 
@@ -65,7 +66,8 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
                                                                       set_ncp = self$param_set$values$set_ncp,col_0_1 = self$param_set$values$col_0_1,
                                                                       ncp.max = self$param_set$values$ncp.max, random.seed = self$param_set$values$random.seed,
                                                                       maxiter =  self$param_set$values$maxiter,coeff.ridge =  self$param_set$values$coeff.ridge,
-                                                                      threshold =  self$param_set$values$threshold,method =  self$param_set$values$method)
+                                                                      threshold =  self$param_set$values$threshold,method =  self$param_set$values$method,
+                                                                      out_file =self$param_set$values$out_file )
 
 
 
@@ -91,10 +93,11 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
                                if  (self$column_counter==0){
                                  self$imputed <- FALSE
                                }
+                               self$train_s <- TRUE
                                return(NULL)
 
                              },
-                             impute=function(feature, type, model, context){
+                             .impute=function(feature, type, model, context){
                                 imp_function <- function(data_to_impute){
 
 
@@ -117,7 +120,8 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
                                                                       set_ncp = self$param_set$values$set_ncp,col_0_1 = self$param_set$values$col_0_1,
                                                                       ncp.max = self$param_set$values$ncp.max, random.seed = self$param_set$values$random.seed,
                                                                       maxiter =  self$param_set$values$maxiter,coeff.ridge =  self$param_set$values$coeff.ridge,
-                                                                      threshold =  self$param_set$values$threshold,method =  self$param_set$values$method)
+                                                                      threshold =  self$param_set$values$threshold,method =  self$param_set$values$method,
+                                                                      out_file =self$param_set$values$out_file)
 
 
 
@@ -130,7 +134,7 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
 
 
                                }
-                               if(nrow(self$data_imputed)!=nrow(context)){
+                               if((nrow(self$data_imputed)!=nrow(context) | !self$train_s) & self$flag=='train') {
                                  self$imputed_predict <- FALSE
                                  self$flag <- 'predict'
                                }
@@ -138,7 +142,7 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
                                if(!self$imputed_predict){
                                  data_to_impute <- cbind(feature,context)
                                  self$data_imputed <- imp_function(data_to_impute)
-                                 colnames(self$data_imputed) <- self$state$context_cols
+                                 colnames(self$data_imputed)[1] <- setdiff(self$state$context_cols,colnames(context))
                                  self$imputed_predict <- TRUE
                                }
 
@@ -153,6 +157,7 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
                                  self$flag=='predict'
                                  self$imputed_predict <- FALSE
                                }
+                                self$train_s <- FALSE
 
                                return(feature)
                              }
@@ -162,3 +167,11 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
 
 
 mlr_pipeops$add("missMDA_MCA_PCA_FMAD_imputation", PipeOpMissMDA_PCA_MCA_FMAD)
+
+
+# test <- PipeOpMissMDA_PCA_MCA_FMAD$new()
+# graph =  test %>>% learner_po
+# glrn = GraphLearner$new(graph)
+# test_task <- TaskClassif$new('jebac policjie',df,colnames(df)[9])
+# resample(test_task,glrn,rsmp('cv',folds=2L))
+

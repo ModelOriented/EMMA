@@ -14,7 +14,8 @@ missMDA_MFA(
   maxiter = 1000,
   coeff.ridge = 1,
   threshold = 1e-06,
-  method = "Regularized"
+  method = "Regularized",
+  out_file = NULL
 )
 }
 \arguments{
@@ -37,6 +38,8 @@ missMDA_MFA(
 \item{threshold}{threshold for convergence.}
 
 \item{method}{method used in imputation algoritm.}
+
+\item{out_file}{Output log file location if file already exists log message will be added. If NULL no log will be produced.}
 }
 \value{
 Return one data.frame with imputed values.

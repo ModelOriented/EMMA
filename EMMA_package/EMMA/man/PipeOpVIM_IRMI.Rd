@@ -13,20 +13,15 @@ This class create object implements autotune_VIM_Irmi function for use in mlr3 p
 \subsection{Public methods}{
 \itemize{
 \item \href{#method-new}{\code{PipeOpVIM_IRMI$new()}}
-\item \href{#method-train_imputer}{\code{PipeOpVIM_IRMI$train_imputer()}}
-\item \href{#method-impute}{\code{PipeOpVIM_IRMI$impute()}}
 \item \href{#method-clone}{\code{PipeOpVIM_IRMI$clone()}}
 }
 }
 \if{html}{
-\out{<details ><summary>Inherited methods</summary>}
+\out{<details open ><summary>Inherited methods</summary>}
 \itemize{
 \item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOp" data-id="predict">}\href{../../mlr3pipelines/html/PipeOp.html#method-predict}{\code{mlr3pipelines::PipeOp$predict()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOp" data-id="print">}\href{../../mlr3pipelines/html/PipeOp.html#method-print}{\code{mlr3pipelines::PipeOp$print()}}\out{</span>}
 \item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOp" data-id="train">}\href{../../mlr3pipelines/html/PipeOp.html#method-train}{\code{mlr3pipelines::PipeOp$train()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOpImpute" data-id="predict_internal">}\href{../../mlr3pipelines/html/PipeOpImpute.html#method-predict_internal}{\code{mlr3pipelines::PipeOpImpute$predict_internal()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOpImpute" data-id="select_cols">}\href{../../mlr3pipelines/html/PipeOpImpute.html#method-select_cols}{\code{mlr3pipelines::PipeOpImpute$select_cols()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="mlr3pipelines" data-topic="PipeOpImpute" data-id="train_internal">}\href{../../mlr3pipelines/html/PipeOpImpute.html#method-train_internal}{\code{mlr3pipelines::PipeOpImpute$train_internal()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -43,26 +38,9 @@ This class create object implements autotune_VIM_Irmi function for use in mlr3 p
   robust = FALSE,
   init.method = "kNN",
   force = FALSE,
-  col_0_1 = FALSE
+  col_0_1 = FALSE,
+  out_file = NULL
 )}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-train_imputer"></a>}}
-\if{latex}{\out{\hypertarget{method-train_imputer}{}}}
-\subsection{Method \code{train_imputer()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{PipeOpVIM_IRMI$train_imputer(feature, type, context)}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-impute"></a>}}
-\if{latex}{\out{\hypertarget{method-impute}{}}}
-\subsection{Method \code{impute()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{PipeOpVIM_IRMI$impute(feature, type, model, context)}\if{html}{\out{</div>}}
 }
 
 }
