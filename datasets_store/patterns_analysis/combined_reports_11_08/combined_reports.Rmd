@@ -72,9 +72,25 @@ ggplot(to_plot, aes(per_instances_miss))+
 - The first group contains datasets where the percentage of instances with missings is lower than 15%.
 - The second group is formed by datasets with a very high percentage of instances with missings (above 90%).
 
+### *Figure 3*
+
+```{r percentage_variables_missings}
+to_plot <- data
+to_plot$per_variables_miss <- round(100*(to_plot$no_cat_w_miss+to_plot$no_num_w_miss)/to_plot$no_features)
+
+ggplot(to_plot, aes(per_variables_miss))+
+  geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, 100, 5))+
+  xlab("% of variables with missings")+
+  ylab("% of datasets")+
+  ggtitle("Histogram of percentage of variables with missing values.")+
+  scale_x_continuous(breaks = seq(0, 100, 5))+
+  scale_y_continuous(breaks = seq(0, 0.2, 0.1), labels = seq(0, 20, 10), limits = c(0, 0.2))+
+  theme_linedraw()
+```
+
 ## Key information about distribution of missings patterns.
 
-### *Figure 3*
+### *Figure 4*
 
 ```{r patterns_in_instances_fraction}
 to_plot <- data
@@ -95,7 +111,7 @@ ggplot(to_plot, aes(fraction))+
 the number of instances in datasets.
 - There are very few datasets which have diverse patterns with a unique combination for most rows of the dataset.
 
-### *Figure 4*
+### *Figure 5*
 
 ```{r variables_in_patterns}
 ggplot(patterns, aes(var_per))+
@@ -113,7 +129,7 @@ Different combinations of variables with missings create missings patterns.
 - Most of the missings patterns contain less than 10% of variables.
 - The second noticeable, but small group create patterns with the percentage of variables between 65% to 75%.
 
-### *Figure 5*
+### *Figure 6*
 
 ```{r average_vars_in_patterns_by_dataset}
 group_by(patterns, id)%>%
@@ -133,7 +149,7 @@ ggplot(aes(average))+
 - Averaging by datasets introduce more diversity in distribution.
 - Conclusions remain similar, most of the datasets have patterns which on average contain less than 25% of variables.
 
-### *Figure 6*
+### *Figure 7*
 
 ```{r percentage_instances_in_patterns}
 ggplot(patterns, aes(x = row_per))+
@@ -148,7 +164,7 @@ ggplot(patterns, aes(x = row_per))+
 
 - Almost all patterns seem to cover an only very small fraction of dataset's instances.
 
-### *Figure 7*
+### *Figure 8*
 
 ```{r average_percentage_instances_pattern}
 group_by(patterns, id)%>%
@@ -178,7 +194,7 @@ Based on the above analysis, we can try to group data sets against key statistic
 source("datasets_store/patterns_analysis/decision_tree.R")
 
 #Decision variables to choose:
-# - "per_missings", "per_instances_missings", "patterns_fraction", "avg_per_var_pattern", "avg_per_inst_pattern"
+# - "per_missings", "per_variables_missings", "per_instances_missings", "patterns_fraction", "avg_per_var_pattern", "avg_per_inst_pattern"
 ```
 
 ### *Tree 1*
@@ -223,7 +239,7 @@ plot(tree2$tree)
 
 Splitting variables:
 
-- percentage of missings [10]
+- percentage of missings [5]
 - percentage of instances with missings [35]
 - fraction of patterns in instances [10]
 
@@ -242,17 +258,37 @@ plot(tree3$tree)
 
 Splitting variables:
 
-- percentage of missings [10]
-- percentage of instances with missings [35]
+- percentage of missings [5]
+- percentage of instances with missings [15]
 - average percentage of variables in dataset's patterns [10, 25]
 
 ```{r tree4, fig.width=12}
 decisions4 <- list(
-  "per_missings" = 10,
-  "per_instances_missings" = 35,
+  "per_missings" = 5,
+  "per_instances_missings" = 15,
   "avg_per_var_pattern" = c(10, 25)
 )
 
 tree4 <- decision_tree(df, decisions4)
 plot(tree4$tree)
 ```
+
+### *Tree 5*
+
+Splitting variables:
+
+- percentage of missings [5]
+- percentage of instances with missings [15]
+- percentage of variables with missings [15, 60]
+
+```{r tree5, fig.width=12}
+decisions5 <- list(
+  "per_missings" = 5,
+  "per_instances_missings" = c(15),
+  "per_variables_missings" = c(15, 60)
+)
+
+tree5 <- decision_tree(df, decisions5)
+plot(tree5$tree)
+```
+

@@ -17,6 +17,8 @@ df <- data
 df$per_missings <- round(100*df$no_missings/(df$no_instances*df$no_features), digits = 1)
 # % of instances with missings
 df$per_instances_missings <- round(100*df$no_instances_w_miss/df$no_instances, digits = 1)
+# % of variables with missings
+df$per_variables_missings <- round(100*(df$no_cat_w_miss+df$no_num_w_miss)/df$no_features, digits = 1)
 # % of unique patterns in number of instances 
 df$patterns_fraction <- round(100*df$no_of_patterns/df$no_instances, digits = 1)
 # average % of variables in patterns by dataset
@@ -28,7 +30,7 @@ avg_per_inst_pattern <- group_by(patterns, id)%>%
   summarise("avg_per_inst_pattern" = mean(row_per))
 df <- merge(df, avg_per_inst_pattern, by = "id")
 
-df <- df[, c("id", "per_missings", "per_instances_missings", "patterns_fraction", "avg_per_var_pattern", "avg_per_inst_pattern")]
+df <- df[, c("id", "per_missings", "per_variables_missings", "per_instances_missings", "patterns_fraction", "avg_per_var_pattern", "avg_per_inst_pattern")]
 
 
 decision_tree <- function(df, decisions){
@@ -78,12 +80,12 @@ decision_tree <- function(df, decisions){
 
 #Example of use
 #Decision variables to choose:
-# - "per_missings", "per_instances_missings", "patterns_fraction", "avg_per_var_pattern", "avg_per_inst_pattern"
+# - "per_missings", "per_variables_missings", "per_instances_missings", "patterns_fraction", "avg_per_var_pattern", "avg_per_inst_pattern"
 
 # decisions <- list(
-#   "per_missings" = 10,
-#   "per_instances_missings" = c(15, 90),
-#   "patterns_fraction" = 10
+#   "per_missings" = 5,
+#   "per_instances_missings" = c(15),
+#   "per_variables_missings" = c(15, 60)
 # )
 # 
 # result <- decision_tree(df, decisions)
