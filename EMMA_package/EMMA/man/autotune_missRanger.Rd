@@ -32,13 +32,13 @@ autotune_missRanger(
 
 \item{num.trees}{number of trees. If optimize == TRUE. Param set seq(10,num.trees,iter) will be used.}
 
-\item{verbose}{If FALSE function don't print on console.}
+\item{verbose}{If FALSE function doesn't print on console.}
 
 \item{col_0_1}{decide if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False.}
 
 \item{out_file}{Output log file location if file already exists log message will be added. If NULL no log will be produced.}
 
-\item{pmm.k}{Number of candidate non-missing values to sample from in the predictive meanmatching step. 0 to avoid this step. If optimize == TRUE param set sample(1:pmm.k,iter) will be used.}
+\item{pmm.k}{Number of candidate non-missing values to sample from in the predictive meanmatching step. 0 to avoid this step. If optimize == TRUE param set sample(1:pmm.k,iter) will be used. If pmm.k==0 missRanger == missForest.}
 
 \item{optimize}{If TRUE inside optimization will be performed.}
 
@@ -49,5 +49,4 @@ Return data.frame with imputed values.
 }
 \description{
 Function use missRenger package for data imputation. Function use OBBerror (more in missForest documentation) to perform random search.
-Best parameters to imputation are chosen form generated sets.
 }

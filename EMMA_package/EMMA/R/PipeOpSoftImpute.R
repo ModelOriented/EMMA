@@ -11,7 +11,7 @@
 PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
                                inherit = PipeOpImpute,  # inherit from PipeOp
                                public = list(
-                                 initialize = function(id = "imput_softImpute",col_0_1=F,cat_Fun=maxCat,lambda=0,rank.max=2,type='als',thresh=1e-5,maxit=100,
+                                 initialize = function(id = "imput_softImpute",col_0_1=F,cat_Fun=VIM::maxCat,lambda=0,rank.max=2,type='als',thresh=1e-5,maxit=100,
                                                        out_file=NULL
                                  ) {
                                    super$initialize(id, whole_task_dependent=TRUE, param_vals = list( col_0_1=col_0_1,cat_Fun=cat_Fun,lambda=lambda,
@@ -20,7 +20,7 @@ PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
                                                     param_set= ParamSet$new(list(
 
                                                       'col_0_1'=ParamLgl$new('col_0_1',default = F,tags='softImpute'),
-                                                      'cat_Fun'=ParamUty$new('cat_Fun',default = maxCat,tags = 'softImpute'),
+                                                      'cat_Fun'=ParamUty$new('cat_Fun',default = VIM::maxCat,tags = 'softImpute'),
                                                       'lambda'=ParamUty$new('lambda',default = 0,tags = 'softImpute'),
                                                       'rank.max'=ParamUty$new('rank.max',default = 2,tags = 'softImpute'),
                                                       'type'=ParamFct$new('type',levels = c('als','svd'),default = 'als',tags='softImpute'),

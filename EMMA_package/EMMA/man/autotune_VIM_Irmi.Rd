@@ -44,3 +44,6 @@ Return one data.frame with imputed values.
 \description{
 Function use IRMI (Iterative robust model-based imputation ) to impute missing data.
 }
+\details{
+Function can work with various different times depending on data size and structure. In some cases when selected param wouldn't work function try to run on default.  Most important param for both quality and reliability  its eps.
+}

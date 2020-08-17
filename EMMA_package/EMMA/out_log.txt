@@ -1,31 +1,6 @@
-LOG2020-08-13
+LOG2020-08-17
 ----------------------IMPUTACJE-----------------------
-Dataset id :4
-Mice :OK
-missMDA_FMAD_MCA_PCA :OK
-missMDA_MFA :OK
-missForest :OK
-VIM_HD :OK
-VIM_KNN :OK
-VIM_Irmi :OK
-VIM_regrImp :OK
-softImpute :OK
-missRanger :OK
-----------------------
-----------------------PIPLINE-----------------------
-imput_miceError in edit.setup(data, setup, ...): `mice` detected constant and/or collinear variables. No predictors were left after their removal.
-
-imput_missMDA_MFAok
-imput_missMDA_MCA_PCA_FMADok
-imput_missForestok
-imput_VIM_HDok
-imput_VIM_IRMIok
-imput_VIM_kNNok
-imput_VIM_regrImpError in doTryCatch(return(expr), name, parentenv, handler): No values with no missing values
-
-imput_missRangerok
-----------------------IMPUTACJE-----------------------
-Dataset id :15
+Dataset id :13
 Mice :OK
 missMDA_FMAD_MCA_PCA :OK
 missMDA_MFA :OK
@@ -39,44 +14,37 @@ missRanger :OK
 ----------------------
 ----------------------PIPLINE-----------------------
 imput_miceok
-imput_missMDA_MFAok
-imput_missMDA_MCA_PCA_FMADok
+imput_missMDA_MFAError in model.frame.default(Terms, newdata, na.action = na.action, xlev = attr(object, : factor A6 has new levels A6_r
+
+imput_missMDA_MCA_PCA_FMADError in impute(X, group = group, ncp = ncp, type = type, method = method, : The algorithm fails to converge. Choose a number of components (ncp) less or equal than 1 or a number of iterations (maxiter) less or equal than 997
+
 imput_missForestok
 imput_VIM_HDok
-imput_VIM_IRMIok
+imput_VIM_IRMIError in 1L:ncol(Y): argument ma długość 0
+
 imput_VIM_kNNok
 imput_VIM_regrImpok
 imput_missRangerok
-----------------------IMPUTACJE-----------------------
-Dataset id :25
-Mice :OK
-missMDA_FMAD_MCA_PCA :OK
-missMDA_MFA :OK
-missForest :Error in {: task 1 failed - "Can not handle categorical predictors with more than 53 categories."
-
-VIM_HD :OK
-VIM_KNN :OK
-VIM_Irmi :OK
-VIM_regrImp :OK
-softImpute :Error in cat(x, file = file, sep = c(rep.int(sep, ncolumns - 1), "\n"), : niepoprawne połączenie
-
-missRanger :OK
-----------------------
-----------------------PIPLINE-----------------------
+imput_softImputeok
+imput_missMDA_MFAimput_missMDA_MFAimput_missMDA_MFAimput_missMDA_MFAimput_missMDA_MFAimput_missMDA_MFAimput_missMDA_MFAimput_missMDA_MFAimput_missMDA_MFAimput_missMDA_MFA----------------------IMPUTACJE-----------------------
+Dataset id :13
+Mice :----------------------PIPLINE-----------------------
 imput_miceError in edit.setup(data, setup, ...): `mice` detected constant and/or collinear variables. No predictors were left after their removal.
 
-imput_missMDA_MFAError in apply(tabdisj[, (vec[i] + 1):vec[i + 1]], 1, which.max): 'dim(X)' musi mieć dodatnią długość
+imput_missMDA_MFAok
+imput_missMDA_MCA_PCA_FMADError in impute(X, group = group, ncp = ncp, type = type, method = method, : The algorithm fails to converge. Choose a number of components (ncp) less or equal than 1 or a number of iterations (maxiter) less or equal than 997
 
-imput_missMDA_MCA_PCA_FMADError in if (any(MM[[g]] < 0)) stop(paste("The algorithm fails to converge. Choose a number of components (ncp) less or equal than ", : brakuje wartości tam, gdzie wymagane jest TRUE/FALSE
-
-imput_missForestError in {: task 1 failed - "Can not handle categorical predictors with more than 53 categories."
-
+imput_missForestok
 imput_VIM_HDok
-imput_VIM_IRMIok
+imput_VIM_IRMIError in 1L:ncol(Y): argument ma długość 0
+
 imput_VIM_kNNok
-imput_VIM_regrImpok
+imput_VIM_regrImpError in doTryCatch(return(expr), name, parentenv, handler): 
+
 imput_missRangerok
-----------------------IMPUTACJE-----------------------
-Dataset id :38
-Mice :OK
-missMDA_FMAD_MCA_PCA :
+imput_softImputeok
+imput_miceok
+imput_missMDA_MFAok
+imput_missMDA_MCA_PCA_FMADError in model.frame.default(Terms, newdata, na.action = na.action, xlev = attr(object, : factor A7 has new levels A7_n
+
+imput_missForest

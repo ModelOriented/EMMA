@@ -1,7 +1,9 @@
 #' Perform imputation using MFA algorithm.
 #'
-#' @description Function use MFA (Multiple Factor Analysis) to impute missing data. Groups are created using original column order and taking as much variable to one group as possible.
-#' This method doesn't allow to Multiple Imputation. Function doesn't use any optimization teaching for ncp param.
+#' @description Function use MFA (Multiple Factor Analysis) to impute missing data.
+
+#' @details  Groups are created using the original column order and taking as much variable to one group as possible. MFA requires selecting group type but numeric types can only be set as 'c' - centered and 's' - scale to unit variance.
+#' It's impossible to provide these conditions so numeric type is always set as 's'.  Because of that imputation can depend from column order. In this function, no param is set automatically but if selected ncp don't work function will try use ncp=1.
 #'
 #'
 #' @param df data.frame. Df to impute with column names and without target column.
@@ -12,13 +14,11 @@
 #' @param ncp Number of dimensions used by algorithm. Default 2.
 #' @param coeff.ridge Value use in Regularized method.
 #' @param out_file  Output log file location if file already exists log message will be added. If NULL no log will be produced.
-#' @param maxiter maximal number of iteration in algortihm.
-#' @param method method used in imputation algoritm.
-#' @param threshold threshold for convergence.
+#' @param maxiter maximal number of iteration in algorithm.
+#' @param method used in imputation algorithm.
+#' @param threshold for convergence.
 #'
 #' @import missMDA
-#' @details MFA requires to select group type but numeric types can only be set as 'c' - centered and 's' - scale to unit variance.
-#' It's impossible to provide these conditions so numeric type is always set as 's'.
 #' @return Return one data.frame with imputed values.
 
 
@@ -65,6 +65,7 @@ missMDA_MFA <- function(df,col_type,percent_of_missing,random.seed=123,ncp =2 ,c
 # Imputation
   no_ok <- FALSE
 
+
   tryCatch({
 
     final <-  missMDA::imputeMFA(df,group = groups,type = type,ncp = ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge)$completeObs
@@ -82,6 +83,14 @@ missMDA_MFA <- function(df,col_type,percent_of_missing,random.seed=123,ncp =2 ,c
     }
     stop(e)
   })
+  for (i in colnames(df)[(col_type=='factor')]){
+
+    if(sum(levels(na.omit(df[,i]))==levels(final[,i]))!=length(levels(df[,i]))){
+
+      reg_exp <- paste0('.*',i)
+      levels(final[,i]) <- substr(sub(reg_exp, "", levels(final[,i])),start = 2,stop = 9999)
+    }
+  }
 
     # adding 0_1 columns
 

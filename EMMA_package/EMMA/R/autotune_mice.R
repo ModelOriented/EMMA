@@ -1,17 +1,16 @@
-#' Creating formula
+#' Creating a formula for use in mice imputation evaluation.
 #'
-#' @description This function create formula to use in with function form mice package.
-#' Also inform if its necessary to use gml instead of lm (no numeric values in dataset).
-#'
-#' @param df data.frame. Df to impute with column names and without target column.
+#' @description Function is used in \code{\link{autotune_mice}} but can be use sepraetly.
+#' @details Function create a formula as follows. It creates one of the formulas its next possible formula impossible possible formula is created: \cr 1. Numeric no missing ~ 3 numeric with most missing \cr 2. Numeric no missing ~ all available numeric with missing \cr 3. Numeric with less missing ~ 3 numeric with most missing \cr 4. Numeric with less missing ~ all available numeric with missing \cr 5. No numeric no missing ~ 3 most missing no numeric \cr 6. No numeric no missing ~ all available no numeric with missing \cr 7. No numeric with less missing ~ 3 no numeric with most missing \cr 8. No numeric with less missing ~ all available no numeric with missing.
+#' \cr For example, if its impossible to create formula 1 and 2 formula 3 will be created but if it's possible to create formula 1 and 5 formula 1 will be created.
+#' @param df data.frame. Data frame to impute missing values with column names.
 #' @param col_miss character vector. Names of columns with NA.
 #' @param col_no_miss character vector. Names of columns without NA.
-#' @param col_type character vector. Vector containing column type names.
+#' @param col_type character vector. A vector containing column type names.
 #' @param percent_of_missing numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)
 #' @import mice
 #' @usage formula_creating(df,coll_miss,coll_no_miss,coll_type,percent_of_missing)
 #' @return List with formula object[1] and information if its no numeric value in dataset[2].
-
 
 formula_creating <- function(df,col_miss,col_no_miss,col_type,percent_of_missing){
 
@@ -70,10 +69,11 @@ formula_creating <- function(df,col_miss,col_no_miss,col_type,percent_of_missing
 
 
 
-#' Performing randomSearch for selecting best method and correlation or fraction of features used to create prediction matrix.
+#' Performing randomSearch for selecting the best method and correlation or fraction of features used to create a prediction matrix.
 #'
-#' @description This function perform random search and return values corresponding to best mean IMF (missing information fraction).
-#'
+#' @description This function perform random search and return values corresponding to best mean MIF (missing information fraction). Function is mainly used in \code{\link{autotune_mice}} but can be use separately.
+#' @details Function use Random Search Technik to found the best param for mice imputation. To evaluate the next iteration logistic regression or linear regression (depending on available features) are used. Model is build using a formula from \code{\link{forumla_creating}} function. As metric MIF (missing information fraction) is used. Params combination with lowest (best) MIF is chosen. Even if a correlation is set at False correlation it's still used to select the best features. That main problem with
+#' calculating correlation between categorical columns is still important.
 #' @param low_corr double between 0,1 default 0 lower boundry of correlation set.
 #' @param up_corr double between 0,1 default 1 upper boundary of correlation set. Both of these parameters work the same for a fraction of features.
 #' @param methods_random set of methods to chose. Default 'pmm'.
@@ -84,8 +84,6 @@ formula_creating <- function(df,col_miss,col_no_miss,col_type,percent_of_missing
 #' @param random.seed radnom seed.
 #' @param correlation If True correlation is using if Fales fraction of features. Default True.
 #' @import mice
-#' @details  Even if correlation is set at False correlation its still use to select best features. That mean problem with
-#' calculating correlation between categorical columns is still important.
 #'
 #' @return List with best correlation (or fraction ) at first place, best method at second, and results of every iteration at 3.
 
@@ -136,10 +134,10 @@ random_param_mice_search <- function(low_corr=0,up_corr=1,methods_random = c('pm
 
 #' Automatical tuning of parameters and imputation using mice package.
 #'
-#' @description Function impute missing data using mice functions. First perform random search using linear models (generalized linear models if only
-#' categorical values are available). Using glm its problematic. Function allows user to skip optimization in that case but it can lead to errors.
+#' @description Function impute missing data using mice functions. First perform  random search using linear models (generalized linear models if only
+#' categorical values are available). Using glm its problematic. Function allows users to skip optimization in that case but it can lead to errors.
 #' Function optimize prediction matrix and method. Other mice parameters like number of sets(m) or max number of iterations(maxit) should be set
-#' as hight as possible for best results(higher values are required more time to perform imputation). If u chose to use one inputted dataset m is not important.
+#' as hight as possible for best results(higher values are required more time to perform imputation). If u chose to use one inputted dataset m is not important. More information can be found in \code{\link{random_param_mice_search}} and \code{\link{formula_creating}} and \code{\link[mice]{mice}}.
 #'
 #'
 #'
@@ -160,8 +158,8 @@ random_param_mice_search <- function(low_corr=0,up_corr=1,methods_random = c('pm
 #' @param return_one One or many imputed sets will be returned. Default True.
 #' @param col_0_1 Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).
 #' @param set_cor Correlation or fraction of featurs using if optimize= False
-#' @param set_method Method used if optimize=False. If NULL defoult method is used (more in methods_random section ).
-#' @param verbose If FALSE funtion didn't print on console.
+#' @param set_method Method used if optimize=False. If NULL default method is used (more in methods_random section ).
+#' @param verbose If FALSE function didn't print on console.
 #' @param out_file  Output log file location if file already exists log message will be added. If NULL no log will be produced.
 #' @import mice
 #' @importFrom mice complete

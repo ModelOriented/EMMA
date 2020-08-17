@@ -1,11 +1,11 @@
 #' Perform imputation using missForest form missForest package.
 #'
-#' @description Function use missForest package for data imputation. Function use OBBerror (more in missForest documentation) to perform grid search.
-#' Best parameters to imputation are chosen form given sets. Imputation use parallel calculation by default and use existing parallel backend if it's possible.
-#' If not function starts new parallel backend. !!!! Function doesn't turn off parallel backend by default after imputation. !!!!
+#' @description Function use missForest package for data imputation. OBBerror (more in  \code{\link{autotune_mice}}) is used to perform grid search.
+#' @details Function try to use parallel backend if it's possible. Half of the available cores are used or number pass as cores param. (Number of used cores can't be higher then number of variables in df. If it happened a number of cores will be set at ncol(df)-2 unless this number is <= 0 then cores =1).  To perform parallel calculation function use  \code{\link[doParallel]{registerDoParallel}} to create parallel backend.
+#' Creating backend can have significant time cost so for very small df cores=1 can speed up calculation. After calculation function turns off parallel backend. \cr \cr   Gride search is used to chose a sample for each tree and the number of trees can be turn off. Params in grid search have significant influence on imputation quality but function should work on any reasonable values of this parameter.
 #'
 #'
-#' @param df data.frame. Df to impute with column names and without  target column.
+#' @param df data.frame. Df to impute with column names.
 #' @param percent_of_missing numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)
 #' @param cores integer.  Number of threads used by parallel calculations. By default approximately half of available CPU cores.
 #' @param ntree_set integer vector. Vector contains numbers of tree for grid search.
@@ -27,10 +27,20 @@ autotune_missForest <-function(df,percent_of_missing,cores=NULL,ntree_set =c(100
                                optimize=TRUE,ntree=100,mtry=NULL,verbose=FALSE,maxiter=20,maxnodes=NULL,out_file=NULL){
 
   # Checking if parallel backed is runing and starting it if not
+ do_things <- function(){
+  if(is.null(cores)){
   if (parallel){
     veribles = ncol(df)
     if (ceiling(parallel::detectCores()/2)>=veribles){cores <- (veribles-2)}
     doParallel::registerDoParallel(cores = cores)
+  }
+  }
+  if(!is.null(cores)){
+    if (parallel){
+      veribles = ncol(df)
+      if (cores>=veribles){cores <- (veribles-2)}
+      doParallel::registerDoParallel(cores = cores)
+    }
   }
 
   # Prepering mtry_set if not given
@@ -119,9 +129,12 @@ autotune_missForest <-function(df,percent_of_missing,cores=NULL,ntree_set =c(100
   if (parallel){
     foreach::registerDoSEQ()
   }
-  return(final)
+
+
+  return(final)}
+  if (verbose){return(do_things())}
+  if(!verbose){
+    capture.output(final <- do_things())
+    return(final)
   }
-
-
-
-
+  }

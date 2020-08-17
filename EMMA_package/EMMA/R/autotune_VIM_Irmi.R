@@ -1,7 +1,8 @@
+
 #' Perform imputation using VIM package and irmi function
 #'
 #' @description Function use IRMI (Iterative robust model-based imputation ) to impute missing data.
-#'
+#' @details Function can work with various different times depending on data size and structure. In some cases when selected param wouldn't work function try to run on default.  Most important param for both quality and reliability  its eps.
 #'
 #' @param df data.frame. Df to impute with column names and without target column.
 #' @param percent_of_missing numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)
@@ -31,9 +32,19 @@ autotune_VIM_Irmi <- function(df,percent_of_missing,eps=5,maxit=100,step=FALSE,r
   },error = function(e){
     if(!is.null((out_file))){
       write(as.character(e),file = out_file,append = T)
+        write('IRMI dont work on selcted params runing on defoult',file = out_file,append = T)
     }
     print('IRMI dont work on selcted params runing on defoult')
-    final <- VIM::irmi(df,imp_var = F)
+
+    tryCatch({
+    final <- VIM::irmi(df,imp_var = F)},error=function(e){
+
+      if(!is.null((out_file))){
+        write(as.character(e),file = out_file,append = T)
+
+      }
+      stop(e)
+    })
   })
 
 

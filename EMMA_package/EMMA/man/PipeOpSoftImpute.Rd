@@ -33,7 +33,7 @@ This class create object implements autotune_softImpute function for use in mlr3
 \if{html}{\out{<div class="r">}}\preformatted{PipeOpSoftImpute$new(
   id = "imput_softImpute",
   col_0_1 = F,
-  cat_Fun = maxCat,
+  cat_Fun = VIM::maxCat,
   lambda = 0,
   rank.max = 2,
   type = "als",

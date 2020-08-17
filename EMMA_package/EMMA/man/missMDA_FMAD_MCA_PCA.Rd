@@ -54,6 +54,9 @@ missMDA_FMAD_MCA_PCA(
 Retrun one imputed data.frame if retrun_one=True or list of imputed data.frames if retrun_one=False.
 }
 \description{
-Function use missMDA package to perform data imputation. Function can found best number of dimensions for this imputation.
+Function use missMDA package to perform data imputation. Function can found the best number of dimensions for this imputation.
 User can choose whether to return one imputed dataset or list or imputed datasets form Multiple Imputation.
+}
+\details{
+Function use different algorithm to adjust for variable types in df. For only numeric data PCA will be used. MCA for only categorical and FMAD for mixed. If optimize==TRUE function will try to find optimal ncp if its not possible default ncp=2 will be used. In some cases ncp=1 will be used if ncp=2 don't work. For multiple imputations, if set ncp don't work error will be return.
 }
