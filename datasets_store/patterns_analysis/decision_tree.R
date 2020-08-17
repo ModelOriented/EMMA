@@ -71,9 +71,9 @@ decision_tree <- function(df, decisions){
   
   cols <- colourvalues::color_values(sum_up$leaf_size, alpha = 175)
   mapply(function(node, col) {SetNodeStyle(node, fillcolor = col)}, node = tree$leaves, col = cols)
-  SetNodeStyle(tree, style = "filled, rounded", shape = "box", fillcolor = "lightcyan", fontcolor = "black")
+  SetNodeStyle(tree, style = "filled, rounded", shape = "box", fillcolor = "cornsilk", fontcolor = "black")
   
-  return(list("df" = df, "tree" = tree))
+  return(list("df" = df, "tree" = tree, "cols" = cols))
 }
 
 

@@ -5,6 +5,15 @@ date: "11 08 2020"
 output: html_document
 ---
 
+<style type="text/css">
+.main-container {
+  max-width: 1800px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+</style>
+
+
 ```{r setup, include=FALSE}
 knitr::opts_knit$set(root.dir=normalizePath('../../../'))
 knitr::opts_chunk$set(echo = FALSE, message = FALSE)
@@ -15,6 +24,8 @@ library(ggplot2)
 library(ggthemes)
 library(dplyr)
 library(scales)
+library(patchwork)
+library(kableExtra)
 ```
 
 ```{r data_reading}
@@ -35,10 +46,9 @@ patterns <- patterns[patterns$id %in% data$id, ]
 ### *Figure 1*
 
 ```{r percentage_of_missings}
-to_plot <- data
-to_plot$per_missings <- round(100*to_plot$no_missings/(to_plot$no_instances*to_plot$no_features), digits = 1)
+data$per_missings <- round(100*data$no_missings/(data$no_instances*data$no_features), digits = 1)
 
-ggplot(to_plot, aes(per_missings))+
+p1 <- ggplot(data, aes(per_missings))+
   geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, 100, 5))+
   xlab("% of missings")+
   ylab("% of datasets")+
@@ -46,6 +56,7 @@ ggplot(to_plot, aes(per_missings))+
   scale_x_continuous(breaks = seq(0, 100, 5))+
   scale_y_continuous(breaks = seq(0, 0.7, 0.1), labels = seq(0, 70, 10))+
   theme_linedraw()
+p1
 ```
 
 - Most of the datasets have missings percentage lower than 5%.
@@ -55,10 +66,9 @@ ggplot(to_plot, aes(per_missings))+
 ### *Figure 2*
 
 ```{r percentage_instances_missings}
-to_plot <- data
-to_plot$per_instances_miss <- round(100*to_plot$no_instances_w_miss/to_plot$no_instances)
+data$per_instances_miss <- round(100*data$no_instances_w_miss/data$no_instances)
 
-ggplot(to_plot, aes(per_instances_miss))+
+p2 <- ggplot(data, aes(per_instances_miss))+
   geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, 100, 5))+
   xlab("% of instances with missings")+
   ylab("% of datasets")+
@@ -66,6 +76,7 @@ ggplot(to_plot, aes(per_instances_miss))+
   scale_x_continuous(breaks = seq(0, 100, 5))+
   scale_y_continuous(breaks = seq(0, 0.3, 0.1), labels = seq(0, 30, 10), limits = c(0, 0.3))+
   theme_linedraw()
+p2
 ```
 
 - There are two dominant groups of occurrence of missings among instances.
@@ -75,10 +86,9 @@ ggplot(to_plot, aes(per_instances_miss))+
 ### *Figure 3*
 
 ```{r percentage_variables_missings}
-to_plot <- data
-to_plot$per_variables_miss <- round(100*(to_plot$no_cat_w_miss+to_plot$no_num_w_miss)/to_plot$no_features)
+data$per_variables_miss <- round(100*(data$no_cat_w_miss+data$no_num_w_miss)/data$no_features)
 
-ggplot(to_plot, aes(per_variables_miss))+
+p3 <- ggplot(data, aes(per_variables_miss))+
   geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, 100, 5))+
   xlab("% of variables with missings")+
   ylab("% of datasets")+
@@ -86,6 +96,7 @@ ggplot(to_plot, aes(per_variables_miss))+
   scale_x_continuous(breaks = seq(0, 100, 5))+
   scale_y_continuous(breaks = seq(0, 0.2, 0.1), labels = seq(0, 20, 10), limits = c(0, 0.2))+
   theme_linedraw()
+p3
 ```
 
 ## Key information about distribution of missings patterns.
@@ -93,10 +104,9 @@ ggplot(to_plot, aes(per_variables_miss))+
 ### *Figure 4*
 
 ```{r patterns_in_instances_fraction}
-to_plot <- data
-to_plot$fraction <- round(100*to_plot$no_of_patterns/to_plot$no_instances, digits = 1)
+data$fraction <- round(100*data$no_of_patterns/data$no_instances, digits = 1)
 
-ggplot(to_plot, aes(fraction))+
+ggplot(data, aes(fraction))+
   geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, 100, 5))+
   xlab("no_of_patterns/no_of_instances [%]")+
   ylab("% of datasets")+
@@ -132,7 +142,7 @@ Different combinations of variables with missings create missings patterns.
 ### *Figure 6*
 
 ```{r average_vars_in_patterns_by_dataset}
-group_by(patterns, id)%>%
+p6 <- group_by(patterns, id)%>%
   summarise("average" = mean(var_per))%>%
 ggplot(aes(average))+
   geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, 100, 5))+
@@ -142,7 +152,7 @@ ggplot(aes(average))+
   scale_x_continuous(breaks = seq(0, 100, 5))+
   scale_y_continuous(breaks = seq(0, 0.3, 0.1), labels = seq(0, 30, 10), limits = c(0, 0.3))+
   theme_linedraw()
-
+p6
 ```
 
 - On the figure above the percentage of variables in patterns is averaged for every dataset.
@@ -193,8 +203,47 @@ Based on the above analysis, we can try to group data sets against key statistic
 ```{r tree_setup, include=FALSE}
 source("datasets_store/patterns_analysis/decision_tree.R")
 
+#Modification of figures to use with tree plots
+p1 <- p1+ggtitle("Percentage of missings")
+p2 <- p2+ggtitle("Instances with missings")
+p3 <- p3+ggtitle("Variables with missings")
+p6 <- p6+ggtitle("Variables in patterns")
+
 #Decision variables to choose:
 # - "per_missings", "per_variables_missings", "per_instances_missings", "patterns_fraction", "avg_per_var_pattern", "avg_per_inst_pattern"
+
+leaves_stats <- function(df, cols){
+  result <- list()
+  for (i in (1:max(df$group_id))) {
+    
+  avg <- filter(df, group_id == i)%>%
+    summarise_all(mean)
+  
+  st_dev <- filter(df, group_id == i)%>%
+    summarise_all(sd)
+  
+  avg <- t(avg[, -c(1,2,3)])
+  st_dev <- t(st_dev[, -c(1,2,3)])
+  #row.names(avg) <- c("%_missings", "%_vars_missings", "%_inst_missings", "%_patterns", "%_vars_patterns", "%_inst_patterns")
+  #row.names(st_dev) <- c("%_missings", "%_vars_missings", "%_inst_missings", "%_patterns", "%_vars_patterns", "%_inst_patterns")
+  row.names(avg) <- colnames(df[-c(1,2,3)])
+  row.names(st_dev) <- colnames(df[-c(1,2,3)])
+  
+  temp <- data.frame(avg, st_dev)
+  temp <- round(temp, 1)
+  colnames(temp) <- c(paste(i, "avg", sep = "_"), paste(i, "sd ", sep = "_"))
+  colnames(temp) <- cell_spec(colnames(temp), background = cols[i])
+  
+  if(i>1){
+    row.names(temp) <- NULL
+    result[[i]] <- temp
+  }else{
+    row.names(temp) <- colnames(df[-c(1,2,3)])
+    result[[i]] <- temp
+  }
+  }
+  return(result)
+}
 ```
 
 ### *Tree 1*
@@ -205,6 +254,7 @@ Splitting variables:
 - percentage of instances with missings [15, 90]
 - fraction of patterns in instances [10]
 
+<center>
 ```{r tree1, fig.width=12}
 decisions1 <- list(
   "per_missings" = 10,
@@ -215,6 +265,7 @@ decisions1 <- list(
 tree1 <- decision_tree(df, decisions1)
 plot(tree1$tree)
 ```
+</center>
 
 ### *Tree 2*
 
@@ -224,6 +275,7 @@ Splitting variables:
 - percentage of instances with missings [35]
 - fraction of patterns in instances [10]
 
+<center>
 ```{r tree2, fig.width=12}
 decisions2 <- list(
   "per_missings" = 5,
@@ -234,6 +286,7 @@ decisions2 <- list(
 tree2 <- decision_tree(df, decisions2)
 plot(tree2$tree)
 ```
+</center>
 
 ### *Tree 3*
 
@@ -243,6 +296,7 @@ Splitting variables:
 - percentage of instances with missings [35]
 - fraction of patterns in instances [10]
 
+<center>
 ```{r tree3, fig.width=12}
 decisions3 <- list(
   "per_missings" = 5,
@@ -253,6 +307,7 @@ decisions3 <- list(
 tree3 <- decision_tree(df, decisions3)
 plot(tree3$tree)
 ```
+</center>
 
 ### *Tree 4*
 
@@ -262,16 +317,29 @@ Splitting variables:
 - percentage of instances with missings [15]
 - average percentage of variables in dataset's patterns [10, 25]
 
-```{r tree4, fig.width=12}
+<center>
+```{r tree4, fig.width=12, fig.height=3}
 decisions4 <- list(
   "per_missings" = 5,
   "per_instances_missings" = 15,
   "avg_per_var_pattern" = c(10, 25)
 )
 
+p1 <- p1+geom_vline(xintercept = decisions4$per_missings, color = "#fc3d03", linetype = "twodash", size = 1.25)
+p2 <- p2+geom_vline(xintercept = decisions4$per_instances_missings, color = "#fc3d03", linetype = "twodash", size = 1.25)
+p6 <- p6+geom_vline(xintercept = decisions4$avg_per_var_pattern, color = "#fc3d03", linetype = "twodash", size = 1.25)
+
+p1+p2+p6
+```
+
+```{r, fig.width=14, fig.height=5}
 tree4 <- decision_tree(df, decisions4)
 plot(tree4$tree)
+
+result4 <- merge(tree4$df[, c("id", "group_id", "group_size")], df, by = "id")
+knitr::kable(leaves_stats(result4, tree4$cols), escape = FALSE)%>%kable_styling()
 ```
+</center>
 
 ### *Tree 5*
 
@@ -281,14 +349,27 @@ Splitting variables:
 - percentage of instances with missings [15]
 - percentage of variables with missings [15, 60]
 
-```{r tree5, fig.width=12}
+<center>
+```{r tree5, fig.width=12, fig.height=3}
 decisions5 <- list(
   "per_missings" = 5,
   "per_instances_missings" = c(15),
   "per_variables_missings" = c(15, 60)
 )
 
-tree5 <- decision_tree(df, decisions5)
-plot(tree5$tree)
+p1 <- p1+geom_vline(xintercept = decisions5$per_missings, color = "#fc3d03", linetype = "twodash", size = 1.25)
+p2 <- p2+geom_vline(xintercept = decisions5$per_instances_missings, color = "#fc3d03", linetype = "twodash", size = 1.25)
+p3 <- p3+geom_vline(xintercept = decisions5$per_variables_missings, color = "#fc3d03", linetype = "twodash", size = 1.25)
+
+p1+p2+p3
 ```
 
+```{r, fig.width=14, fig.height=5}
+tree5 <- decision_tree(df, decisions5)
+plot(tree5$tree)
+
+result5 <- merge(tree5$df[, c("id", "group_id", "group_size")], df, by = "id")
+
+knitr::kable(leaves_stats(result5, tree5$cols), escape = FALSE)%>%kable_styling()
+```
+</center>
