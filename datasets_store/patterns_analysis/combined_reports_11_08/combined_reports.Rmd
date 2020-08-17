@@ -22,10 +22,12 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE)
 ```{r packages}
 library(ggplot2)
 library(ggthemes)
+library(plyr)
 library(dplyr)
 library(scales)
 library(patchwork)
 library(kableExtra)
+library(dendextend)
 ```
 
 ```{r data_reading}
@@ -244,6 +246,24 @@ leaves_stats <- function(df, cols){
   }
   return(result)
 }
+
+clustering <- function(df, tree){
+  
+  row.names(df) <- df[, 1]
+  df <- df[,-1]
+  d <- dist(df)
+  hc <- hclust(d, method = "ward.D")
+  dend <- as.dendrogram(hc)
+  
+  num_groups <- tree$df$group_id
+  colors <-  mapvalues(num_groups, from = 1:max(num_groups), to = tree$cols)
+  or_colors <- colors[order.dendrogram(dend)]
+  labels_colors(dend) <- or_colors
+  dend <- color_branches(dend, col = or_colors)
+  
+  plot(dend)
+  colored_bars(dend = dend, colors = colors, "Tree leaves")
+}
 ```
 
 ### *Tree 1*
@@ -339,6 +359,12 @@ plot(tree4$tree)
 result4 <- merge(tree4$df[, c("id", "group_id", "group_size")], df, by = "id")
 knitr::kable(leaves_stats(result4, tree4$cols), escape = FALSE)%>%kable_styling()
 ```
+
+```{r, fig.width=10, fig.height=6}
+clustering(df, tree4)
+title("Hierarchical clustering result")
+```
+
 </center>
 
 ### *Tree 5*
@@ -371,5 +397,10 @@ plot(tree5$tree)
 result5 <- merge(tree5$df[, c("id", "group_id", "group_size")], df, by = "id")
 
 knitr::kable(leaves_stats(result5, tree5$cols), escape = FALSE)%>%kable_styling()
+```
+
+```{r, fig.width=10, fig.height=6}
+clustering(df, tree5)
+title("Hierarchical clustering result")
 ```
 </center>
