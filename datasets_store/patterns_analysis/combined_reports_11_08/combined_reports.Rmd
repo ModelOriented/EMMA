@@ -404,3 +404,20 @@ clustering(df, tree5)
 title("Hierarchical clustering result")
 ```
 </center>
+
+## Conclusions from decisions trees and clustering
+
+- there are two significant groups of datasets: the first with a low average percentage of missings and instances with missings, the second opposite with a high average of missings and instances with missings  
+
+- the third noticeable group are datasets with a low percentage of missings but scattered to a larger number of observations (middle subtree)  
+
+- statistics describing the distribution of deficiencies into variables introduce differentiation in each of the previously obtained sub-trees  
+
+- there is a tendency that datasets with a low number of missings have a low number of columns with missings and the opposite for datasets with a large number of missings  
+
+- hierarchical clustering results partially support grouping by decision trees, the extreme left and right branches of the tree form their own clusters  
+
+- it is difficult to analyze the middle subtrees, where the relationships are not easily interpreted, leaves are mixed among clusters
+
+<br></br>
+<br></br>
