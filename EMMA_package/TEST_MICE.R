@@ -139,6 +139,7 @@ for (id in datasets){
   test_imp <- PipeOpMice$new()
   test = test_imp %>>%  learner_po
   glrn =GraphLearner$new(test)
+
   test_task = TaskClassif$new('test',backend = df,target = df_oml$target.features)
 
   write('----random search----')
@@ -174,6 +175,6 @@ for (id in datasets){
   errors <-  instance$bmr$resample_result(i)
   cat(paste0('Corr :',cor, '   Use_CORR: ', use_cor),file = out_file,append = T)
   cat('     ERRORS : ',file = out_file,append = T)
-  write(length(errors$errors[,1]),file = out_file,append = T)
+  write(length(as.data.frame(errors$errors)[,1]),file = out_file,append = T)
   }
 }
