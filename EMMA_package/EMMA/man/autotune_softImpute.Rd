@@ -39,11 +39,14 @@ autotune_softImpute(
 
 \item{maxit}{Maximum number of iterations.}
 
-\item{out_file}{Output log file location if file alredy exist log messege will be added. If NULL no log will be produce.}
+\item{out_file}{Output log file location if file already exists log message will be added. If NULL no log will be produced.}
 }
 \value{
 Return one data.frame with imputed values.
 }
 \description{
 Function use softImpute to impute missing data it works only with numeric data. Columns with categorical values are imputed by a selected function.
+}
+\details{
+Function use algorithm base on matrix whats meaning if only one numeric column exists in dataset imputation algorithm don't work. In that case, this column will be imputed using a function for categorical columns. Because of this algorithm is working properly only with at least two numeric features in the dataset. To specify column type argument col_type is used so it's possible to forcefully use for example numeric factors in imputation. Action like this can led to errors and its not.
 }

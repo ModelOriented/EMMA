@@ -2,10 +2,40 @@
 % Please edit documentation in R/PipeOpSoftImpute.R
 \name{PipeOpSoftImpute}
 \alias{PipeOpSoftImpute}
-\title{softImpute Imputation}
+\title{PipeOpSoftImpute}
 \description{
-This class create object implements autotune_softImpute function for use in mlr3 pipelinies. Object can be created with \code{\link{autotune_softImpute}} params.
+Implements SoftImpute methods as mlr3 pipeline more about SoftImpute \code{\link{autotune_softImpute}}
 }
+\section{Input and Output Channels}{
+
+Input and output channels are inherited from \code{\link{PipeOpImpute}}.
+}
+
+\section{Parameters}{
+
+The parameters are the parameters inherited from [`PipeOpImpute`], as well as: \cr
+\itemize{
+\item \code{id} :: \code{character(1)}\cr
+Identifier of resulting object, default \code{"imput_softImpute"}.
+\item \code{lambda} :: \code{integer(1)}\cr
+nuclear-norm regularization parameter. If lambda=0, the algorithm reverts to "hardImpute", for which convergence is typically slower. If null lambda is set automatically at the highest possible values, default \code{0}.
+\item \code{rank.max} :: \code{integer(1)}\cr
+This restricts the rank of the solution. Defoult 2 if set as NULL rank.max=min(dim(X))-1, default \code{2}.
+\item \code{type} :: \code{character(1)}\cr
+Chose of algoritm 'als' or 'svd', defoult \code{'als'}.
+\item \code{thresh} :: \code{double(1)}\cr
+Threshold for convergence, default \code{1e-5}
+\item \code{maxit} :: \code{integer(1)}\cr
+Maximum number of iterations, default \code{100}.
+\item \code{col_0_1} :: \code{logical(1)}\cr
+Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
+\item \code{cat_Fun} :: \code{function(){}}\cr
+Function for aggregating the k Nearest Neighbours in the case of a categorical variable, default \code{VIM::maxCat}
+\item \code{out_fill} :: \code{character(1)}\cr
+Output log file location if file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
+}
+}
+
 \section{Super classes}{
 \code{\link[mlr3pipelines:PipeOp]{mlr3pipelines::PipeOp}} -> \code{\link[mlr3pipelines:PipeOpImpute]{mlr3pipelines::PipeOpImpute}} -> \code{softImpute_imputation}
 }
@@ -33,7 +63,7 @@ This class create object implements autotune_softImpute function for use in mlr3
 \if{html}{\out{<div class="r">}}\preformatted{PipeOpSoftImpute$new(
   id = "imput_softImpute",
   col_0_1 = F,
-  cat_Fun = maxCat,
+  cat_Fun = VIM::maxCat,
   lambda = 0,
   rank.max = 2,
   type = "als",

@@ -1,11 +1,37 @@
-#' IRMI Imputation
+#' @title PipeOpVIM_IRMI
+#' @name PipeOpVIM_IRMI
 #'
-#' @description This class create object implements autotune_VIM_Irmi function for use in mlr3 pipelinies. Object can be created with \code{\link{autotune_VIM_Irmi}} params.
+#' @description
+#' Implements IRMI methods as mlr3 pipeline more about VIM_IRMI \code{\link{autotune_VIM_Irmi}}
+#'
+#' @section Input and Output Channels:
+#' Input and output channels are inherited from \code{\link{PipeOpImpute}}.
 #'
 #'
+#' @section Parameters:
+#' The parameters are the parameters inherited from [`PipeOpImpute`], as well as: \cr
+#' \itemize{
+#' \item \code{id} :: \code{character(1)}\cr
+#' Identifier of resulting object, default \code{"imput_VIM_IRMI"}.
+#' \item \code{eps} :: \code{double(1)}\cr
+#' Threshold for convergency, default \code{5}.
+#' \item \code{maxit} :: \code{integer(1)}\cr
+#' Maximum number of iterations, default \code{100}
+#' \item \code{col_0_1} :: \code{logical(1)}\cr
+#' Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
+#' \item \code{step} :: \code{logical(1)}\cr
+#' Stepwise model selection is applied when the parameter is set to TRUE, defoult \code{FALSE}.
+#' \item \code{robust} :: \code{logical(1)}\cr
+#' 	If TRUE, robust regression methods will be applied (it's impossible to set step=TRUE and robust=TRUE at the same time), default \code{FALSE}.
+#' \item \code{init.method} :: \code{character(1)}\cr
+#' Method for initialization of missing values (kNN or median), default \code{'kNN'}.
+#' \item \code{force} :: \code{logical(1)}\cr
+#' If TRUE, the algorithm tries to find a solution in any case, possible by using different robust methods automatically. (should be set FALSE for simulation), defaault \code{FALSE}.
+#' \item \code{out_fill} :: \code{character(1)}\cr
+#' Output log file location if file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
+#'}
 #'
-#' @import mlr3
-#' @import mlr3pipelines
+#' @export
 
 
 

@@ -1,7 +1,12 @@
 #' Perform imputation using VIM package and regressionImp function.
 #'
 #' @description Function use Regression models to impute missing data.
-#'
+#' @details Function impute one column per iteration to allow more control of imputation. All columns with missing values can be imputed with different formulas. For every new column to imputation one of four formula is used \cr
+#' 1. col to impute ~ all columns without missing  \cr
+#' 2. col to impute ~ all numeric columns without missing \cr
+#' 3. col to impute ~ first of columns without missing \cr
+#' 4. col to impute ~ first of numeric columns without missing \cr
+#' For example, if formula 1 and 2 can't be used algorithm will try with formula 3. If all formula can't be used function will be stoped and error form tries with formula 4 or 3 presented. In some case, setting use_imputed on TRUE can solve this problem but in general its lower quality of imputation.
 #'
 #' @param df data.frame. Df to impute with column names and without target column.
 #' @param percent_of_missing numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)
@@ -114,7 +119,6 @@ autotune_VIM_regrImp <- function(df,col_type,percent_of_missing,col_0_1=F,robust
 # wynik_test <- autotune_VIM_regrImp(test,col_type = col_type,percent_of_missing)
 # sum(is.na(wynik_test))
 #
-
 
 
 

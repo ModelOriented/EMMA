@@ -101,7 +101,7 @@
     #######
     out_file <- paste0(OutLogLocation,outfilename)
 
-    datasets_Ids <- c(4,15,25,38,802,930,957,961,40945,41162)
+    datasets_Ids <- c(13,15,24,927,1111,1053)
 
     write(paste0('LOG',Sys.Date()),file = out_file)
 
@@ -116,7 +116,7 @@
 
 
     list_of_pipe <- c(PipeOpMice,PipeOpMissMDA_MFA,PipeOpMissMDA_PCA_MCA_FMAD,PipeOpmissForest,PipeOpVIM_HD,PipeOpVIM_IRMI,
-                      PipeOpVIM_kNN,PipeOpVIM_regrImp,PipeOpmissRanger)
+                      PipeOpVIM_kNN,PipeOpVIM_regrImp,PipeOpmissRanger,PipeOpSoftImpute)
 
 
     for(id in datasets_Ids){
@@ -136,8 +136,8 @@
       for ( i in percent_of_missing){
         percent_of_missing[i] <- (sum(is.na(df[,i]))/length(df[,1]))*100
       }
-      write('----------------------IMPUTACJE-----------------------',append = T,file=out_file)
-      single_set_Pipeline(df,id,col_type,percent_of_missing,out_file_location = out_file,single_set = FALSE)
+      # write('----------------------IMPUTACJE-----------------------',append = T,file=out_file)
+      # single_set_Pipeline(df,id,col_type,percent_of_missing,out_file_location = out_file,single_set = FALSE)
       write('----------------------PIPLINE-----------------------',append = T,file=out_file)
       for (i in list_of_pipe){
         tryCatch({
@@ -158,4 +158,10 @@
 
 
     }
+
+
+
+
+
+
 

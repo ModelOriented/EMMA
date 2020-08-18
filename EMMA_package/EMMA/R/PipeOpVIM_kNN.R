@@ -1,12 +1,31 @@
-#' VIM kNN Imputation
+#' @title PipeOpVIM_kNN
+#' @name PipeOpVIM_kNN
 #'
-#' @description This class create object implements autotune_VIM_kNN function for use in mlr3 pipelinies. Object can be created with \code{\link{autotune_VIM_kNN}} params.
+#' @description
+#' Implements KNN methods as mlr3 pipeline more about VIM_KNN \code{\link{autotune_VIM_kNN}}
+#'
+#' @section Input and Output Channels:
+#' Input and output channels are inherited from \code{\link{PipeOpImpute}}.
 #'
 #'
+#' @section Parameters:
+#' The parameters are the parameters inherited from [`PipeOpImpute`], as well as: \cr
+#' \itemize{
+#' \item \code{id} :: \code{character(1)}\cr
+#' Identifier of resulting object, default \code{"imput_VIM_kNN"}.
+#' \item \code{k} :: \code{intiger(1)}\cr
+#' Threshold for convergency, default \code{5}.
+#' \item \code{numFUN} :: \code{function(){}}\cr
+#' Function for aggregating the k Nearest Neighbours in the case of a numerical variable, default \code{media}.
+#' \item \code{col_0_1} :: \code{logical(1)}\cr
+#' Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
+#' \item \code{catFUN} :: \code{function(){}}\cr
+#' Function for aggregating the k Nearest Neighbours in the case of a categorical variable, default \code{VIM::maxCat}
+#' \item \code{out_fill} :: \code{character(1)}\cr
+#' Output log file location if file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
+#'}
 #'
-#' @import mlr3
-#' @import mlr3pipelines
-
+#' @export
 
 
 PipeOpVIM_kNN <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,

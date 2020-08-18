@@ -31,13 +31,13 @@ missMDA_MFA(
 
 \item{col_0_1}{Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).}
 
-\item{maxiter}{maximal number of iteration in algortihm.}
+\item{maxiter}{maximal number of iteration in algorithm.}
 
 \item{coeff.ridge}{Value use in Regularized method.}
 
-\item{threshold}{threshold for convergence.}
+\item{threshold}{for convergence.}
 
-\item{method}{method used in imputation algoritm.}
+\item{method}{used in imputation algorithm.}
 
 \item{out_file}{Output log file location if file already exists log message will be added. If NULL no log will be produced.}
 }
@@ -45,10 +45,9 @@ missMDA_MFA(
 Return one data.frame with imputed values.
 }
 \description{
-Function use MFA (Multiple Factor Analysis) to impute missing data. Groups are created using original column order and taking as much variable to one group as possible.
-This method doesn't allow to Multiple Imputation. Function doesn't use any optimization teaching for ncp param.
+Function use MFA (Multiple Factor Analysis) to impute missing data.
 }
 \details{
-MFA requires to select group type but numeric types can only be set as 'c' - centered and 's' - scale to unit variance.
-It's impossible to provide these conditions so numeric type is always set as 's'.
+Groups are created using the original column order and taking as much variable to one group as possible. MFA requires selecting group type but numeric types can only be set as 'c' - centered and 's' - scale to unit variance.
+It's impossible to provide these conditions so numeric type is always set as 's'.  Because of that imputation can depend from column order. In this function, no param is set automatically but if selected ncp don't work function will try use ncp=1.
 }

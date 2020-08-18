@@ -1,42 +1,17 @@
-LOG2020-08-13
-----------------------IMPUTACJE-----------------------
-Dataset id :4
-Mice :OK
-missMDA_FMAD_MCA_PCA :OK
-missMDA_MFA :OK
-missForest :OK
-VIM_HD :OK
-VIM_KNN :OK
-VIM_Irmi :OK
-VIM_regrImp :OK
-softImpute :OK
-missRanger :OK
-----------------------
+LOG2020-08-18
 ----------------------PIPLINE-----------------------
-imput_miceError in edit.setup(data, setup, ...): `mice` detected constant and/or collinear variables. No predictors were left after their removal.
-
+imput_miceok
 imput_missMDA_MFAok
 imput_missMDA_MCA_PCA_FMADok
 imput_missForestok
 imput_VIM_HDok
 imput_VIM_IRMIok
 imput_VIM_kNNok
-imput_VIM_regrImpError in doTryCatch(return(expr), name, parentenv, handler): No values with no missing values
+imput_VIM_regrImpError in doTryCatch(return(expr), name, parentenv, handler): 
 
 imput_missRangerok
-----------------------IMPUTACJE-----------------------
-Dataset id :15
-Mice :OK
-missMDA_FMAD_MCA_PCA :OK
-missMDA_MFA :OK
-missForest :OK
-VIM_HD :OK
-VIM_KNN :OK
-VIM_Irmi :OK
-VIM_regrImp :OK
-softImpute :OK
-missRanger :OK
-----------------------
+imput_softImputeError in cat(x, file = file, sep = c(rep.int(sep, ncolumns - 1), "\n"), : niepoprawne połączenie
+
 ----------------------PIPLINE-----------------------
 imput_miceok
 imput_missMDA_MFAok
@@ -47,36 +22,29 @@ imput_VIM_IRMIok
 imput_VIM_kNNok
 imput_VIM_regrImpok
 imput_missRangerok
-----------------------IMPUTACJE-----------------------
-Dataset id :25
-Mice :OK
-missMDA_FMAD_MCA_PCA :OK
-missMDA_MFA :OK
-missForest :Error in {: task 1 failed - "Can not handle categorical predictors with more than 53 categories."
-
-VIM_HD :OK
-VIM_KNN :OK
-VIM_Irmi :OK
-VIM_regrImp :OK
-softImpute :Error in cat(x, file = file, sep = c(rep.int(sep, ncolumns - 1), "\n"), : niepoprawne połączenie
-
-missRanger :OK
-----------------------
+imput_softImputeok
 ----------------------PIPLINE-----------------------
-imput_miceError in edit.setup(data, setup, ...): `mice` detected constant and/or collinear variables. No predictors were left after their removal.
-
-imput_missMDA_MFAError in apply(tabdisj[, (vec[i] + 1):vec[i + 1]], 1, which.max): 'dim(X)' musi mieć dodatnią długość
-
-imput_missMDA_MCA_PCA_FMADError in if (any(MM[[g]] < 0)) stop(paste("The algorithm fails to converge. Choose a number of components (ncp) less or equal than ", : brakuje wartości tam, gdzie wymagane jest TRUE/FALSE
-
-imput_missForestError in {: task 1 failed - "Can not handle categorical predictors with more than 53 categories."
-
+imput_miceok
+imput_missMDA_MFAok
+imput_missMDA_MCA_PCA_FMADok
+imput_missForestok
 imput_VIM_HDok
 imput_VIM_IRMIok
 imput_VIM_kNNok
 imput_VIM_regrImpok
 imput_missRangerok
-----------------------IMPUTACJE-----------------------
-Dataset id :38
-Mice :OK
-missMDA_FMAD_MCA_PCA :
+imput_softImputeok
+----------------------PIPLINE-----------------------
+imput_miceok
+imput_missMDA_MFAok
+imput_missMDA_MCA_PCA_FMADok
+imput_missForestok
+imput_VIM_HDok
+imput_VIM_IRMIok
+imput_VIM_kNNok
+imput_VIM_regrImpok
+imput_missRangerok
+imput_softImputeok
+----------------------PIPLINE-----------------------
+imput_miceok
+imput_missMDA_MFA

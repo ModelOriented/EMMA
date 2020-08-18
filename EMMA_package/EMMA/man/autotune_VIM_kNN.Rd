@@ -25,13 +25,12 @@ autotune_VIM_kNN(
 
 \item{out_file}{Output log file location if file already exists log message will be added. If NULL no log will be produced.}
 
-\item{numFUN}{function for aggregating the k Nearest Neighbours in the case of a numerical variable. Defoult median.}
+\item{numFUN}{function for aggregating the k Nearest Neighbours in the case of a numerical variable. Default median.}
 
-\item{catFUN}{function for aggregating the k Nearest Neighbours in the case of a categorical variable. Defoult mode.}
-}
-\value{
-Return data.frame with imputed values.
+\item{catFUN}{function for aggregating the k Nearest Neighbours in the case of a categorical variable. Default mode.}
 }
 \description{
-Function perform kNN function from VIM packge. Only K is tuned by function.
+Function perform kNN function from VIM packge.
+
+ @details  Function don't perform any inside param tuning. Users can change important param for kNN like number or nearest or aggregation functions.
 }

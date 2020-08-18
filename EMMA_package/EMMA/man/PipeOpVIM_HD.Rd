@@ -2,10 +2,26 @@
 % Please edit documentation in R/PipeOpVIM_HD.R
 \name{PipeOpVIM_HD}
 \alias{PipeOpVIM_HD}
-\title{Hot-Deck Imputation}
+\title{PipeOpVIM_HD}
 \description{
-This class create object implements autotune_VIM_hotdeck function for use in mlr3 pipelinies. Object can be created with \code{\link{autotune_VIM_hotdeck}} params.
+Implements Hot Deck methods as mlr3 pipeline more about VIM_HD \code{\link{autotune_VIM_hotdeck}}
 }
+\section{Input and Output Channels}{
+
+Input and output channels are inherited from \code{\link{PipeOpImpute}}.
+}
+
+\section{Parameters}{
+
+The parameters are the parameters inherited from [`PipeOpImpute`], as well as: \cr
+\itemize{
+\item \code{id} :: \code{character(1)}\cr
+Identifier of resulting object, default \code{"imput_VIM_HD"}.
+\item \code{out_fill} :: \code{character(1)}\cr
+Output log file location if file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
+}
+}
+
 \section{Super classes}{
 \code{\link[mlr3pipelines:PipeOp]{mlr3pipelines::PipeOp}} -> \code{\link[mlr3pipelines:PipeOpImpute]{mlr3pipelines::PipeOpImpute}} -> \code{VIM_HD_imputation}
 }

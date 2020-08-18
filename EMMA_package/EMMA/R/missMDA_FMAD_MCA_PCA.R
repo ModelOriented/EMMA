@@ -1,8 +1,8 @@
 #' Perform imputation using MCA, PCA, or FMAD algorithm.
 #'
-#' @description Function use missMDA package to perform data imputation. Function can found best number of dimensions for this imputation.
+#' @description Function use missMDA package to perform data imputation. Function can found the best number of dimensions for this imputation.
 #' User can choose whether to return one imputed dataset or list or imputed datasets form Multiple Imputation.
-#'
+#' @details Function use different algorithm to adjust for variable types in df. For only numeric data PCA will be used. MCA for only categorical and FMAD for mixed. If optimize==TRUE function will try to find optimal ncp if its not possible default ncp=2 will be used. In some cases ncp=1 will be used if ncp=2 don't work. For multiple imputations, if set ncp don't work error will be return.
 #'
 #' @param df data.frame. Df to impute with column names and without target column.
 #' @param col_type character vector. Vector containing column type names.
@@ -59,10 +59,21 @@ missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=TRU
 
   if (return_one){
   # imputation
+  tryCatch({
   if(FMAD){final <-missMDA::imputeFAMD(df,ncp = set_ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs }
   if(MCA){final <- missMDA::imputeMCA(df,ncp = set_ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs}
   if(PCA){final <- missMDA::imputePCA(df,ncp=set_ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs}
-
+    if(!is.null(out_file)){
+      write(paste0('ncp :',set_ncp),file = out_file,append = T)
+    }
+  },error=function(e){
+    if(FMAD){final <-missMDA::imputeFAMD(df,ncp = 1,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs }
+    if(MCA){final <- missMDA::imputeMCA(df,ncp = 1,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs}
+    if(PCA){final <- missMDA::imputePCA(df,ncp=1 ,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs}
+    if(!is.null(out_file)){
+      write('ncp:1',file = out_file,append = T)
+    }
+  })
   if(!is.null(out_file)){
     write('  OK',file = out_file,append = T)
   }
@@ -87,5 +98,9 @@ missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=TRU
     return(final$res.MI)
   }
 }
+
+
+
+
 
 

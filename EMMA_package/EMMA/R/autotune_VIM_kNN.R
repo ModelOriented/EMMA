@@ -1,20 +1,19 @@
 #' K nearest neighbor imputation using VIM package.
 #'
 #'
-#' @description Function perform kNN function from VIM packge. Only K is tuned by function.
+#' @description Function perform kNN function from VIM packge.
 #'
-#'
+#'  @details  Function don't perform any inside param tuning. Users can change important param for kNN like number or nearest or aggregation functions.
 #' @param df data.frame. Df to impute with column names and without  target column.
 #' @param percent_of_missing numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)
 #' @param k Value of k use if optimize=FALSE
-#' @param numFUN function for aggregating the k Nearest Neighbours in the case of a numerical variable. Defoult median.
-#' @param catFUN function for aggregating the k Nearest Neighbours in the case of a categorical variable. Defoult mode.
+#' @param numFUN function for aggregating the k Nearest Neighbours in the case of a numerical variable. Default median.
+#' @param catFUN function for aggregating the k Nearest Neighbours in the case of a categorical variable. Default mode.
 #' @param out_file  Output log file location if file already exists log message will be added. If NULL no log will be produced.
 #'
 #' @import VIM
 #' @param col_0_1 decide if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False.
 #'
-#' @return Return data.frame with imputed values.
 
 
 

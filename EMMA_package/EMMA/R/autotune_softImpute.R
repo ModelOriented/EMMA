@@ -1,7 +1,7 @@
 #' Perform imputation using softImpute package
 #'
 #' @description Function use softImpute to impute missing data it works only with numeric data. Columns with categorical values are imputed by a selected function.
-#'
+#' @details Function use algorithm base on matrix whats meaning if only one numeric column exists in dataset imputation algorithm don't work. In that case, this column will be imputed using a function for categorical columns. Because of this algorithm is working properly only with at least two numeric features in the dataset. To specify column type argument col_type is used so it's possible to forcefully use for example numeric factors in imputation. Action like this can led to errors and its not.
 #'
 #' @param df data.frame. Df to impute with column names and without target column.
 #' @param percent_of_missing numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)
@@ -13,12 +13,13 @@
 #' @param type Chose of algoritm 'als' or 'svd . Defoult 'als'.
 #' @param thresh Threshold for convergence.
 #' @param maxit Maximum number of iterations.
-#' @param out_file Output log file location if file alredy exist log messege will be added. If NULL no log will be produce.
+#' @param out_file Output log file location if file already exists log message will be added. If NULL no log will be produced.
 #'
 #' @import softImpute
 #' @imports VIM
 #'
 #' @return Return one data.frame with imputed values.
+
 
 
 autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun=VIM::maxCat,lambda=0,rank.max=2,type='als',thresh=1e-5,maxit=100,out_file=NULL){
@@ -41,9 +42,20 @@ autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun
       if(rank.max<=0){rank.max <- 1}
     }
   #Numeric Imputation
+  if (sum(col_type=='numeric')>1){
   result <- softImpute::softImpute(matrix,lambda = lambda,rank.max = 2,thresh = thresh,maxit = maxit)
   final <- softImpute::complete(matrix,result)
-
+  }
+  else {
+    print('Not enought numeric')
+    if(!is.null(out_file)){
+      write('Not engouht numeric impute with function',file = out_file,append = T)
+    }
+    j <- colnames(df)[col_type=='numeric']
+    col_to_imp <- df[,j]
+    col_to_imp[is.na(col_to_imp)] <- cat_Fun(col_to_imp)
+    j <- col_to_imp
+    final <- j}
 
 
   #Categorical Imputation
@@ -55,6 +67,8 @@ autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun
   }
 
   #conecting df back
+
+
   final <- cbind(as.data.frame(final),df[,ifelse(col_type=='numeric' | col_type=='integer',F,T),drop=F])
 
   final <- final[,column_order]
@@ -103,4 +117,5 @@ autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun
 # wynik_test <- autotune_softImpute(test,col_type = col_type,percent_of_missing = percent_of_missing)
 # sum(is.na(df))
 
+autotune_softImpute(df,percent_of_missing,col_type)
 

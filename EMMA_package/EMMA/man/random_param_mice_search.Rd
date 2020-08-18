@@ -2,7 +2,7 @@
 % Please edit documentation in R/autotune_mice.R
 \name{random_param_mice_search}
 \alias{random_param_mice_search}
-\title{Performing randomSearch for selecting best method and correlation or fraction of features used to create prediction matrix.}
+\title{Performing randomSearch for selecting the best method and correlation or fraction of features used to create a prediction matrix.}
 \usage{
 random_param_mice_search(
   low_corr = 0,
@@ -39,9 +39,9 @@ random_param_mice_search(
 List with best correlation (or fraction ) at first place, best method at second, and results of every iteration at 3.
 }
 \description{
-This function perform random search and return values corresponding to best mean IMF (missing information fraction).
+This function perform random search and return values corresponding to best mean MIF (missing information fraction). Function is mainly used in \code{\link{autotune_mice}} but can be use separately.
 }
 \details{
-Even if correlation is set at False correlation its still use to select best features. That mean problem with
+Function use Random Search Technik to found the best param for mice imputation. To evaluate the next iteration logistic regression or linear regression (depending on available features) are used. Model is build using a formula from \code{\link{forumla_creating}} function. As metric MIF (missing information fraction) is used. Params combination with lowest (best) MIF is chosen. Even if a correlation is set at False correlation it's still used to select the best features. That main problem with
 calculating correlation between categorical columns is still important.
 }

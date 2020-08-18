@@ -1,7 +1,7 @@
 #' Hot-Deck imputation using VIM package.
 #'
 #'
-#' @description Function perform hotdeck functio from VIM packge. Hotdeck dont have any parameters to tune so function is vary simple and fast
+#' @description Function perform hotdeck function from VIM package. Any tunable parameters aren't available in this algorithm.
 #'
 #'
 #' @param df data.frame. Df to impute with column names and without  target column.

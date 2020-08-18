@@ -1,7 +1,6 @@
 #' Perform imputation using missRenger form missRegnger package.
 #'
 #' @description Function use missRenger package for data imputation. Function use OBBerror (more in missForest documentation) to perform random search.
-#' Best parameters to imputation are chosen form generated sets.
 #'
 #' @param df data.frame. Df to impute with column names and without target column.
 #' @param percent_of_missing numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)
@@ -9,9 +8,9 @@
 #' @param random.seed random seed use in imputation
 #' @param mtry sample fraction use by missRanger. This param isn't optimized automatically. If NULL default value from ranger package will be used.
 #' @param num.trees number of trees. If optimize == TRUE. Param set seq(10,num.trees,iter) will be used.
-#' @param verbose If FALSE function don't print on console.
+#' @param verbose If FALSE function doesn't print on console.
 #' @param out_file Output log file location if file already exists log message will be added. If NULL no log will be produced.
-#' @param pmm.k Number of candidate non-missing values to sample from in the predictive meanmatching step. 0 to avoid this step. If optimize == TRUE param set sample(1:pmm.k,iter) will be used.
+#' @param pmm.k Number of candidate non-missing values to sample from in the predictive meanmatching step. 0 to avoid this step. If optimize == TRUE param set sample(1:pmm.k,iter) will be used. If pmm.k==0 missRanger == missForest.
 #' @param optimize If TRUE inside optimization will be performed.
 #' @param iter Number of iteration for a random search.
 #'

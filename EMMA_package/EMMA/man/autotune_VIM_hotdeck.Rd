@@ -19,5 +19,5 @@ autotune_VIM_hotdeck(df, percent_of_missing, col_0_1 = FALSE, out_file = NULL)
 Return data.frame with imputed values.
 }
 \description{
-Function perform hotdeck functio from VIM packge. Hotdeck dont have any parameters to tune so function is vary simple and fast
+Function perform hotdeck function from VIM package. Any tunable parameters aren't available in this algorithm.
 }

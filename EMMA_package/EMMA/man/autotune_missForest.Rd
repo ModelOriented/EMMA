@@ -22,7 +22,7 @@ autotune_missForest(
 )
 }
 \arguments{
-\item{df}{data.frame. Df to impute with column names and without  target column.}
+\item{df}{data.frame. Df to impute with column names.}
 
 \item{percent_of_missing}{numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)}
 
@@ -54,7 +54,9 @@ autotune_missForest(
 Return data.frame with imputed values.
 }
 \description{
-Function use missForest package for data imputation. Function use OBBerror (more in missForest documentation) to perform grid search.
-Best parameters to imputation are chosen form given sets. Imputation use parallel calculation by default and use existing parallel backend if it's possible.
-If not function starts new parallel backend. !!!! Function doesn't turn off parallel backend by default after imputation. !!!!
+Function use missForest package for data imputation. OBBerror (more in  \code{\link{autotune_mice}}) is used to perform grid search.
+}
+\details{
+Function try to use parallel backend if it's possible. Half of the available cores are used or number pass as cores param. (Number of used cores can't be higher then number of variables in df. If it happened a number of cores will be set at ncol(df)-2 unless this number is <= 0 then cores =1).  To perform parallel calculation function use  \code{\link[doParallel]{registerDoParallel}} to create parallel backend.
+Creating backend can have significant time cost so for very small df cores=1 can speed up calculation. After calculation function turns off parallel backend. \cr \cr   Gride search is used to chose a sample for each tree and the number of trees can be turn off. Params in grid search have significant influence on imputation quality but function should work on any reasonable values of this parameter.
 }
