@@ -54,7 +54,8 @@ autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun
     j <- colnames(df)[col_type=='numeric']
     col_to_imp <- df[,j]
     col_to_imp[is.na(col_to_imp)] <- cat_Fun(col_to_imp)
-    df[,j] <- col_to_imp}
+    j <- col_to_imp
+    final <- j}
 
 
   #Categorical Imputation
@@ -66,6 +67,8 @@ autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun
   }
 
   #conecting df back
+
+
   final <- cbind(as.data.frame(final),df[,ifelse(col_type=='numeric' | col_type=='integer',F,T),drop=F])
 
   final <- final[,column_order]
@@ -114,4 +117,5 @@ autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun
 # wynik_test <- autotune_softImpute(test,col_type = col_type,percent_of_missing = percent_of_missing)
 # sum(is.na(df))
 
+autotune_softImpute(df,percent_of_missing,col_type)
 

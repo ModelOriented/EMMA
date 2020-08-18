@@ -1,11 +1,31 @@
-#' Regression Imputation
+#' @title PipeOpVIM_regrImp
+#' @name PipeOpVIM_regrImp
 #'
-#' @description This class create object implements autotune_VIM_regrImp function for use in mlr3 pipelinies. Object can be created with \code{\link{autotune_VIM_regrImp}} params.
+#' @description
+#' Implements Regression Imputation methods as mlr3 pipeline more about RI \code{\link{autotune_VIM_regrImp}}
+#'
+#' @section Input and Output Channels:
+#' Input and output channels are inherited from \code{\link{PipeOpImpute}}.
 #'
 #'
+#' @section Parameters:
+#' The parameters are the parameters inherited from [`PipeOpImpute`], as well as: \cr
+#' \itemize{
+#' \item \code{id} :: \code{character(1)}\cr
+#' Identifier of resulting object, default \code{"imput_VIM_regrImp"}.
+#' \item \code{robust} :: \code{logical(1)}\cr
+#' TRUE/FALSE if robust regression should be used, default \code{FALSE}.
+#' \item \code{mod_cat} :: \code{logical(1)}\cr
+#' TTRUE/FALSE if TRUE for categorical variables the level with the highest prediction probability is selected, otherwise it is sampled according to the probabilities, default \code{FALSE}.
+#' \item \code{col_0_1} :: \code{logical(1)}\cr
+#' Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
+#' \item \code{use_imputed} :: \code{logical(1)}\cr
+#' TRUE/FALSe if TURE already imputed columns will be used to impute another, default \code{FALSE}.
+#' \item \code{out_fill} :: \code{character(1)}\cr
+#' Output log file location if file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
+#'}
 #'
-#' @import mlr3
-#' @import mlr3pipelines
+#' @export
 
 
 

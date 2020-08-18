@@ -1,11 +1,38 @@
-#' missMDA_MFA imputation
+#' @title PipeOpmissMDA_MFA
 #'
-#' @description This class create object implements missMDA_MFA function for use in mlr3 pipelinies. Object can be created with \code{\link{missMDA_MFA}} params.
+#' @name PipeOpmissMDA_MFA
+#'
+#' @description
+#' Implements MFA methods as mlr3 pipeline more about MFA \code{\link{missMDA_MFA}}
+#'
+#' @section Input and Output Channels:
+#' Input and output channels are inherited from \code{\link{PipeOpImpute}}.
 #'
 #'
+#' @section Parameters:
+#' The parameters are the parameters inherited from [`PipeOpImpute`], as well as: \cr
+#' \itemize{
+#' \item \code{id} :: \code{character(1)}\cr
+#' Identifier of resulting object, default \code{"imput_missMDA_MFA"}.
+#' \item \code{ncp} :: \code{integer(1)}\cr
+#' Number of dimensions used by algorithm, default \code{2}.
+#' \item \code{random.seed} :: \code{integer(1)}\cr
+#' Random seed, default \code{123}.
+#' \item \code{col_0_1} :: \code{logical(1)}\cr
+#' Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
+#' \item \code{maxiter} :: \code{integer(1)}\cr
+#' Maximal number of iteration in algorithm, default \code{998}.
+#' \item \code{coeff.ridge} :: \code{integer(1)}\cr
+#' Value use in Regularized method, default \code{1}.
+#' \item \code{threshold} :: \code{double(1)}\cr
+#' Threshold for convergence, default \code{1e-06}.
+#' \item \code{method} :: \code{character(1)}\cr
+#' Method used in imputation algorithm, default \code{'Regularized'}.
+#' \item \code{out_fill} :: \code{character(1)}\cr
+#' Output log file location if file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
+#'}
 #'
-#' @import mlr3
-#' @import mlr3pipelines
+#' @export
 
 
 
@@ -130,7 +157,9 @@ PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
                                                  return(data_imputed)
                                                }
                                                if (self$imputed){
+
                                                  feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
+
 
 
                                                }
@@ -170,4 +199,11 @@ PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
 
 mlr_pipeops$add("missMDA_MFAimputation", PipeOpMissMDA_MFA)
 
-
+#
+# test_imp <- PipeOpMissMDA_MFA$new()
+# test = test_imp %>>%  learner_po
+# glrn =GraphLearner$new(test)
+# test_task = TaskClassif$new('test',backend = df,target = df_oml$target.features)
+#
+#
+# resample(test_task,glrn,rsmp('cv',folds=2L))

@@ -101,7 +101,7 @@
     #######
     out_file <- paste0(OutLogLocation,outfilename)
 
-    datasets_Ids <- c(13,15,24,29,927,1111,1053)
+    datasets_Ids <- c(13,15,24,927,1111,1053)
 
     write(paste0('LOG',Sys.Date()),file = out_file)
 
@@ -121,7 +121,7 @@
 
     for(id in datasets_Ids){
 
-      df_oml <- getOMLDataSet(29)
+      df_oml <- getOMLDataSet(id)
 
       df <- preprocess(df_oml,0.9)[[1]]
 
@@ -136,8 +136,8 @@
       for ( i in percent_of_missing){
         percent_of_missing[i] <- (sum(is.na(df[,i]))/length(df[,1]))*100
       }
-      write('----------------------IMPUTACJE-----------------------',append = T,file=out_file)
-      single_set_Pipeline(df,id,col_type,percent_of_missing,out_file_location = out_file,single_set = FALSE)
+      # write('----------------------IMPUTACJE-----------------------',append = T,file=out_file)
+      # single_set_Pipeline(df,id,col_type,percent_of_missing,out_file_location = out_file,single_set = FALSE)
       write('----------------------PIPLINE-----------------------',append = T,file=out_file)
       for (i in list_of_pipe){
         tryCatch({

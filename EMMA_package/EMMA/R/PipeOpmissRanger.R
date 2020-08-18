@@ -1,11 +1,38 @@
-#' missRanger Imputation
+#' @title PipeOpmissRanger
 #'
-#' @description This class create object implements autotune_missRanger function for use in mlr3 pipelinies. Object can be created with \code{\link{autotune_missRanger}} params.
+#' @name PipeOpmissRanger
+#'
+#' @description
+#' Implements missRanger methods as mlr3 pipeline more about missRanger \code{\link{autotune_missRanger}}
+#'
+#' @section Input and Output Channels:
+#' Input and output channels are inherited from \code{\link{PipeOpImpute}}.
 #'
 #'
+#' @section Parameters:
+#' The parameters are the parameters inherited from [`PipeOpImpute`], as well as: \cr
+#' \itemize{
+#' \item \code{id} :: \code{character(1)}\cr
+#' Identifier of resulting object, default \code{"imput_missRanger"}.
+#' \item \code{mtry} :: \code{integer(1)}\cr
+#' sample fraction use by missRanger. This param isn't optimized automatically. If NULL default value from ranger package will be used, \code{NULL}.
+#' \item \code{num.trees} :: \code{integer(1)}\cr
+#' Number of trees. If optimize == TRUE. Param set seq(10,num.trees,iter) will be used, default \code{500}
+#' \item \code{col_0_1} :: \code{logical(1)}\cr
+#' Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
+#' \item \code{pmm.k} :: \code{integer(1)}\cr
+#' Number of candidate non-missing values to sample from in the predictive meanmatching step. 0 to avoid this step. If optimize == TRUE param set sample(1:pmm.k,iter) will be used. If pmm.k==0 missRanger == missForest, default \code{5}.
+#' \item \code{random.seed} :: \code{integer(1)}\cr
+#' Random seed, default \code{123}.
+#' \item \code{iter} :: \code{integer(1)}\cr
+#' Number of iteration for a random search, default \code{10}.
+#' \item \code{optimize} :: \code{logical(1)}\cr
+#'If set TRUE function will optimize parametrs of imputation automaticlly. If parametrs will be tune by other methode shoude be set as FALSE, default \code{FALSE}.
+#' \item \code{out_fill} :: \code{character(1)}\cr
+#' Output log file location if file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
+#'}
 #'
-#' @import mlr3
-#' @import mlr3pipelines
+#' @export
 
 
 

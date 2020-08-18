@@ -2,10 +2,46 @@
 % Please edit documentation in R/PipeOPmissForest.R
 \name{PipeOpmissForest}
 \alias{PipeOpmissForest}
-\title{missForest imputation}
+\title{PipeOpmissForest}
 \description{
-This class create object implements autotune_missForest function for use in mlr3 pipelinies. Object can be created with \code{\link{autotune_missForest}} params.
+Implements missForest methods as mlr3 pipeline more about missForest \code{\link{autotune_missForest}}
 }
+\section{Input and Output Channels}{
+
+Input and output channels are inherited from \code{\link{PipeOpImpute}}.
+}
+
+\section{Parameters}{
+
+The parameters are the parameters inherited from [`PipeOpImpute`], as well as: \cr
+\itemize{
+\item \code{id} :: \code{character(1)}\cr
+Identifier of resulting object, default \code{"imput_missForest"}.
+\item \code{cores} :: \code{integer(1)}\cr
+Number of threads used by parallel calculations. By default approximately half of available CPU cores, default \code{NULL}.
+\item \code{ntree_set} :: \code{integer(1)}\cr
+Vector contains numbers of tree for grid search, default \code{c(100,200,500,1000)}.
+\item \code{mtry_set} :: \code{integer(1)}\cr
+Vector contains numbers of variables randomly sampled at each split, default \code{NULL}.
+\item \code{parallel} :: \code{logical(1)}\cr
+If TRUE parallel calculation is using, default \code{TRUE}.
+\item \code{col_0_1} :: \code{logical(1)}\cr
+Decide if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{False}.
+\item \code{ntree} :: \code{integer(1)}\cr
+ntree from missForest function, default \code{100}.
+\item \code{optimize} :: \code{logical(1)}\cr
+If set TRUE function will optimize parametrs of imputation automaticlly. If parametrs will be tune by other methode shoude be set as FALSE, default \code{FALSE}.
+\item \code{mtry} :: \code{integer(1)}\cr
+mtry form missforest function, default \code{NULL}.
+\item \code{maxiter} :: \code{integer(1)}\cr
+maxiter form missForest function, default \code{20}.
+\item \code{maxnodes} :: \code{character(1)}\cr
+maxnodes from missForest function, default \code{NULL}
+\item \code{out_fill} :: \code{character(1)}\cr
+Output log file location if file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
+}
+}
+
 \section{Super classes}{
 \code{\link[mlr3pipelines:PipeOp]{mlr3pipelines::PipeOp}} -> \code{\link[mlr3pipelines:PipeOpImpute]{mlr3pipelines::PipeOpImpute}} -> \code{missForest_imputation}
 }
