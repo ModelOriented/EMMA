@@ -101,7 +101,7 @@
     #######
     out_file <- paste0(OutLogLocation,outfilename)
 
-    datasets_Ids <- c(13,15,24,927,1111,1053)
+    datasets_Ids <- c(4,15,25,38,802,930,957,961,40954,41162)
 
     write(paste0('LOG',Sys.Date()),file = out_file)
 
@@ -136,28 +136,34 @@
       for ( i in percent_of_missing){
         percent_of_missing[i] <- (sum(is.na(df[,i]))/length(df[,1]))*100
       }
+      tryCatch({
+     print( sum(is.na(autotune_Amelia(df,col_type,percent_of_missing))))
+    },error=function(e){
+      print(as.character(e))
+    })
       # write('----------------------IMPUTACJE-----------------------',append = T,file=out_file)
       # single_set_Pipeline(df,id,col_type,percent_of_missing,out_file_location = out_file,single_set = FALSE)
-      write('----------------------PIPLINE-----------------------',append = T,file=out_file)
-      for (i in list_of_pipe){
-        tryCatch({
-        learner_po = po("learner", learner = lrn("classif.rpart"))
-        test_imp <- i$new()
-        test = test_imp %>>%  learner_po
-        glrn =GraphLearner$new(test)
-        test_task = TaskClassif$new('test',backend = df,target = df_oml$target.features)
-        cat(test_imp$id,file = out_file,append = T)
-
-        resample(test_task,glrn,rsmp('cv',folds=2L))
-        write('ok',file=out_file,append = T)
-        },error=function(e){
-          write(as.character(e),file = out_file,append = T)
-        })
-      }
+      # write('----------------------PIPLINE-----------------------',append = T,file=out_file)
+      # for (i in list_of_pipe){
+      #   tryCatch({
+      #   learner_po = po("learner", learner = lrn("classif.rpart"))
+      #   test_imp <- i$new()
+      #   test = test_imp %>>%  learner_po
+      #   glrn =GraphLearner$new(test)
+      #   test_task = TaskClassif$new('test',backend = df,target = df_oml$target.features)
+      #   cat(test_imp$id,file = out_file,append = T)
+      #
+      #   resample(test_task,glrn,rsmp('cv',folds=2L))
+      #   write('ok',file=out_file,append = T)
+      #   },error=function(e){
+      #     write(as.character(e),file = out_file,append = T)
+      #   })
+      # }
 
 
 
     }
+
 
 
 
