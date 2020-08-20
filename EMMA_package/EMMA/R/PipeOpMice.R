@@ -173,6 +173,7 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
 
                                     return(data_imputed)
                                   }
+
                                   if (self$imputed){
                                       feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
 
@@ -212,27 +213,4 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                               )
 )
 mlr_pipeops$add("mice_imputation", PipeOpMice)
-#
-#
 
-# # d$data()
-# glrn$param_set
-#
-# ps = ParamSet$new(list(
-#   ParamInt$new("imput_mice.m",lower = 1,upper = 10)
-#
-# ))
-#
-# library("mlr3tuning")
-# instance = TuningInstance$new(
-#   task = d,
-#   learner = glrn,
-#   resampling = rsmp("holdout"),
-#   measure = msr("classif.ce"),
-#   param_set = ps,
-#   terminator = term("evals", n_evals = 20)
-# )
-#
-# instance
-# tuner = tnr("random_search")
-# tuner$tune(instance)

@@ -98,24 +98,5 @@ autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun
 
 
 
-#
-# test <- df
-#
-# col_type <- 1:ncol(test)
-#
-# for (i in col_type){
-#   col_type[i] <- class(test[,i])
-#
-# }
-#
-# percent_of_missing <- 1:ncol(test)
-#
-# for (i in percent_of_missing){
-#   percent_of_missing[i] <- (sum(is.na(test[,i]))/length(test[,1]))*100
-# }
-#
-# wynik_test <- autotune_softImpute(test,col_type = col_type,percent_of_missing = percent_of_missing)
-# sum(is.na(df))
 
-autotune_softImpute(df,percent_of_missing,col_type)
 

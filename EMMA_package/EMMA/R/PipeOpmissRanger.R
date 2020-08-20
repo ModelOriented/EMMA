@@ -185,11 +185,4 @@ PipeOpmissRanger <-  R6::R6Class("missRanger_imputation",lock_objects=FALSE,
                            )
 )
 mlr_pipeops$add("missRanger_imputation", PipeOpmissRanger)
-#
-
-# test <- PipeOpmissRanger$new()
-# graph =  test %>>% learner_po
-# glrn = GraphLearner$new(graph)
-# #
-# resample(test_task,glrn,rsmp('cv',folds=2L))
 

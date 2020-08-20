@@ -171,6 +171,7 @@ PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
                                                if(!self$imputed_predict){
                                                  data_to_impute <- cbind(feature,context)
                                                  colnames(data_to_impute)[1] <- setdiff(self$state$context_cols,colnames(context))
+                                                 # its important to keep the same columns order
                                                  data_to_impute <- as.data.frame(data_to_impute)[,self$state$context_cols]
                                                  self$data_imputed <- imp_function(data_to_impute)
 
@@ -199,11 +200,4 @@ PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
 
 mlr_pipeops$add("missMDA_MFAimputation", PipeOpMissMDA_MFA)
 
-#
-# test_imp <- PipeOpMissMDA_MFA$new()
-# test = test_imp %>>%  learner_po
-# glrn =GraphLearner$new(test)
-# test_task = TaskClassif$new('test',backend = df,target = df_oml$target.features)
-#
-#
-# resample(test_task,glrn,rsmp('cv',folds=2L))
+

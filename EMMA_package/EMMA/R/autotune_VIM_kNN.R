@@ -21,6 +21,7 @@ autotune_VIM_kNN <- function(df,percent_of_missing,k=5,numFun=median,catFun=VIM:
   if(!is.null(out_file)){
     write('VIM_kNN',file = out_file,append = T)
   }
+  print(k)
   tryCatch({
   final <-  VIM::kNN(df,k=k,numFun = numFun,catFun = catFun,imp_var = F)
   if(!is.null(out_file)){
@@ -41,6 +42,5 @@ autotune_VIM_kNN <- function(df,percent_of_missing,k=5,numFun=median,catFun=VIM:
   }
   return(final)
 }
-
 
 

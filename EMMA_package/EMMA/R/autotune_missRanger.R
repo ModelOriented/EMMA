@@ -116,16 +116,7 @@ autotune_missRanger <- function(df,percent_of_missing,maxiter=10,random.seed=123
 }
 
 
-# test <- data
-#
-# percent_of_missing <- 1:ncol(test)
-#
-# for (i in percent_of_missing){
-#
-#   percent_of_missing[i] <- (sum(is.na(test[,i]))/nrow(test))*100
-#
-# }
-# autotune_missRanger(test,percent_of_missing,out_file = 'test_cdcdcdc',pmm.k = 100)
+
 
 
 

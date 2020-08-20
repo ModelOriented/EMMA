@@ -1,0 +1,12 @@
+data_id,iter,fold,error
+1e16,9999999999999,99999999999999,NA
+802,2,1,`mice` detected constant and/or collinear variables. No predictors were left after their removal.
+802,2,2,argument jest długości zero
+802,2,3,argument jest długości zero
+802,2,4,argument jest długości zero
+802,2,5,argument jest długości zero
+802,2,6,`mice` detected constant and/or collinear variables. No predictors were left after their removal.
+802,2,7,argument jest długości zero
+802,2,8,argument jest długości zero
+802,2,9,argument jest długości zero
+802,2,10,argument jest długości zero
