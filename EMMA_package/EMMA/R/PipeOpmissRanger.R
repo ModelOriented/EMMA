@@ -1,0 +1,195 @@
+#' @title PipeOpmissRanger
+#'
+#' @name PipeOpmissRanger
+#'
+#' @description
+#' Implements missRanger methods as mlr3 pipeline more about missRanger \code{\link{autotune_missRanger}}
+#'
+#' @section Input and Output Channels:
+#' Input and output channels are inherited from \code{\link{PipeOpImpute}}.
+#'
+#'
+#' @section Parameters:
+#' The parameters are the parameters inherited from [`PipeOpImpute`], as well as: \cr
+#' \itemize{
+#' \item \code{id} :: \code{character(1)}\cr
+#' Identifier of resulting object, default \code{"imput_missRanger"}.
+#' \item \code{mtry} :: \code{integer(1)}\cr
+#' sample fraction use by missRanger. This param isn't optimized automatically. If NULL default value from ranger package will be used, \code{NULL}.
+#' \item \code{num.trees} :: \code{integer(1)}\cr
+#' Number of trees. If optimize == TRUE. Param set seq(10,num.trees,iter) will be used, default \code{500}
+#' \item \code{col_0_1} :: \code{logical(1)}\cr
+#' Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
+#' \item \code{pmm.k} :: \code{integer(1)}\cr
+#' Number of candidate non-missing values to sample from in the predictive meanmatching step. 0 to avoid this step. If optimize == TRUE param set sample(1:pmm.k,iter) will be used. If pmm.k==0 missRanger == missForest, default \code{5}.
+#' \item \code{random.seed} :: \code{integer(1)}\cr
+#' Random seed, default \code{123}.
+#' \item \code{iter} :: \code{integer(1)}\cr
+#' Number of iteration for a random search, default \code{10}.
+#' \item \code{optimize} :: \code{logical(1)}\cr
+#'If set TRUE function will optimize parametrs of imputation automaticlly. If parametrs will be tune by other methode shoude be set as FALSE, default \code{FALSE}.
+#' \item \code{out_fill} :: \code{character(1)}\cr
+#' Output log file location if file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
+#'}
+#'
+#' @export
+
+
+
+PipeOpmissRanger <-  R6::R6Class("missRanger_imputation",lock_objects=FALSE,
+                           inherit = PipeOpImpute,
+                           public = list(
+                             initialize = function(id = "imput_missRanger", maxiter = 10,random.seed=123,mtry=NULL,num.trees=500,
+                                                   pmm.k=5,optimize=F,iter=10,col_0_1=F,out_file=NULL
+                             ) {
+                               super$initialize(id, whole_task_dependent=TRUE,param_vals = list( maxiter=maxiter,random.seed=random.seed,mtry=mtry,num.trees=num.trees,
+                                                                                                 pmm.k=pmm.k,iter=iter,optimize=optimize,col_0_1=col_0_1,out_file=out_file),
+                                                param_set= ParamSet$new(list(
+                                                  'maxiter'= ParamInt$new('maxiter',lower = 1,upper = Inf,default = 10,tags = 'missRanger'),
+                                                  'random.seed'=ParamInt$new('random.seed',default = 123,tags = 'missRanger'),
+                                                  'mtry'=ParamUty$new('mtry',default = NULL,tags = 'missRanger'),
+                                                  'num.trees'=ParamInt$new('num.trees',default = 500,lower = 10,upper = Inf,tags = 'missRanger'),
+                                                  'pmm.k'=ParamInt$new('pmm.k',lower = 0,upper = Inf,default = 5,tags = 'missRagner'),
+                                                  'optimize'=ParamLgl$new('optimize',default = F,tags = 'missRagner'),
+                                                  'iter'=ParamInt$new('iter',lower = 1,upper = Inf,default = 10,tags = 'missRanger'),
+                                                  'col_0_1'=ParamLgl$new('col_0_1',default = F,tags = 'missRanger'),
+                                                  'out_file'=ParamUty$new('out_file',default = NULL,tags = 'missRanger')
+
+                                                ))
+                               )
+
+
+
+                               self$imputed <- FALSE
+                               self$column_counter <- NULL
+                               self$data_imputed <- NULL
+
+                             }),private=list(
+
+                             .train_imputer=function(feature, type, context){
+                               imp_function <- function(data_to_impute){
+
+
+
+
+                                 data_to_impute <- as.data.frame(data_to_impute)
+                                 # prepering arguments for function
+                                 col_type <- 1:ncol(data_to_impute)
+                                 for (i in col_type){
+                                   col_type[i] <- class(data_to_impute[,i])
+                                 }
+                                 percent_of_missing <- 1:ncol(data_to_impute)
+                                 for (i in percent_of_missing){
+                                   percent_of_missing[i] <- (sum(is.na(data_to_impute[,i]))/length(data_to_impute[,1]))*100
+                                 }
+                                 col_miss <- colnames(data_to_impute)[percent_of_missing>0]
+                                 col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
+
+                                 data_imputed <- autotune_missRanger(data_to_impute,percent_of_missing,maxiter = self$param_set$values$maxiter,
+                                                                     random.seed = self$param_set$values$random.seed,mtry = self$param_set$values$mtry,
+                                                                     num.trees = self$param_set$values$num.trees,col_0_1 = self$param_set$values$col_0_1,
+                                                                     out_file = self$param_set$values$out_file,optimize = self$param_set$values$optimize,
+                                                                     iter = self$param_set$values$iter,pmm.k = self$param_set$values$pmm.k)
+
+
+
+
+
+
+                                 return(data_imputed)
+                               }
+                               self$imputed_predict <- TRUE
+                               self$flag <- 'train'
+                               if(!self$imputed){
+                                 self$column_counter <- ncol(context)+1
+                                 self$imputed <- TRUE
+                                 data_to_impute <- cbind(feature,context)
+                                 self$data_imputed <- imp_function(data_to_impute)
+                                 colnames(self$data_imputed) <- self$state$context_cols
+
+                               }
+                               if(self$imputed){
+                                 self$column_counter <- self$column_counter -1
+
+                               }
+                               if  (self$column_counter==0){
+                                 self$imputed <- FALSE
+                               }
+                               self$train_s <- TRUE
+                               return(NULL)
+
+                             },
+                             .impute=function(feature, type, model, context){
+                               imp_function <- function(data_to_impute){
+
+
+                                 data_to_impute <- as.data.frame(data_to_impute)
+                                 # prepering arguments for function
+                                 col_type <- 1:ncol(data_to_impute)
+                                 for (i in col_type){
+                                   col_type[i] <- class(data_to_impute[,i])
+                                 }
+                                 percent_of_missing <- 1:ncol(data_to_impute)
+                                 for (i in percent_of_missing){
+                                   percent_of_missing[i] <- (sum(is.na(data_to_impute[,i]))/length(data_to_impute[,1]))*100
+                                 }
+                                 col_miss <- colnames(data_to_impute)[percent_of_missing>0]
+                                 col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
+
+                                 data_imputed <- autotune_missRanger(data_to_impute,percent_of_missing,maxiter = self$param_set$values$maxiter,
+                                                                     random.seed = self$param_set$values$random.seed,mtry = self$param_set$values$mtry,
+                                                                     num.trees = self$param_set$values$num.trees,col_0_1 = self$param_set$values$col_0_1,
+                                                                     out_file = self$param_set$values$out_file,optimize = self$param_set$values$optimize,
+                                                                     iter = self$param_set$values$iter,pmm.k = self$param_set$values$pmm.k)
+
+
+
+
+                                 return(data_imputed)
+                               }
+                               if (self$imputed){
+                                 feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
+
+
+                               }
+                               if((nrow(self$data_imputed)!=nrow(context) | !self$train_s ) & self$flag=='train'){
+                                 self$imputed_predict <- FALSE
+                                 self$flag <- 'predict'
+                               }
+
+                               if(!self$imputed_predict){
+                                 data_to_impute <- cbind(feature,context)
+                                 self$data_imputed <- imp_function(data_to_impute)
+                                 colnames(self$data_imputed)[1] <- setdiff(self$state$context_cols,colnames(context))
+                                 self$imputed_predict <- TRUE
+                               }
+
+
+                               if (self$imputed_predict & self$flag=='predict' ){
+                                 feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
+
+                               }
+
+                               if(self$column_counter == 0 & self$flag=='train'){
+                                 feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
+                                 self$flag=='predict'
+                                 self$imputed_predict <- FALSE
+                               }
+                               self$train_s <- FALSE
+
+                               return(feature)
+                             }
+
+
+
+                           )
+)
+mlr_pipeops$add("missRanger_imputation", PipeOpmissRanger)
+#
+
+# test <- PipeOpmissRanger$new()
+# graph =  test %>>% learner_po
+# glrn = GraphLearner$new(graph)
+# #
+# resample(test_task,glrn,rsmp('cv',folds=2L))
+
