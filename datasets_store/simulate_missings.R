@@ -95,7 +95,7 @@ simulate_missings <- function(df,
         #Generating rows indexes of missings for each column
         rows_sample <- replicate(n = no_cols_missings, sample(size = no_missings_by_col, nrow(df)))
         rows_sample <- as.vector(rows_sample)
-        #Generate row indexes of missings
+        #Generate column indexes of missings
         cols_sample <- rep(cols_missings, each = no_missings_by_col)
         
         index <- matrix(ncol = 2, c(rows_sample, cols_sample))
