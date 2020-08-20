@@ -2,7 +2,7 @@
 % Please edit documentation in R/single_set_Pipeline.R
 \name{single_set_Pipeline}
 \alias{single_set_Pipeline}
-\title{Pipline for one data set}
+\title{Pipline for one data set. FUNCTION FOR TESTING}
 \usage{
 single_set_Pipeline(
   df,

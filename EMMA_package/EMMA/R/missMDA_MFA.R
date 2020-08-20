@@ -67,11 +67,12 @@ missMDA_MFA <- function(df,col_type,percent_of_missing,random.seed=123,ncp =2 ,c
 
 
   tryCatch({
-
+# tryning with selected ncp
     final <-  missMDA::imputeMFA(df,group = groups,type = type,ncp = ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge)$completeObs
     },error = function(e){no_ok <<- TRUE}
     )
   tryCatch({
+    #trying with ncp =1
   if (no_ok | !exists('final')){final <-  missMDA::imputeMFA(df,group = groups,type = type,ncp = 1,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge)$completeObs}
   if (!is.null(out_file)){
     write('  OK',file = out_file,append = T)

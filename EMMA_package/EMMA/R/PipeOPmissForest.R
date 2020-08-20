@@ -207,17 +207,4 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
 mlr_pipeops$add("missForest_imputation", PipeOpmissForest)
 
 
-# test <- PipeOpmissForest$new()
-# graph =  test %>>% learner_po
-# glrn = GraphLearner$new(graph)
-#
-# resample(d, glrn, rsmp("cv",folds=2L))
-# # # # glrn$param_set$values = list(error_train = 1)
-# d<- TaskClassif$new('w',df,colnames(df)[4])
-#
-# # test <- PipeOpmissForest$new()
-# graph =  test %>>% learner_po
-# glrn = GraphLearner$new(graph)
-# #glrn$train(d)
-# resample(d, glrn, rsmp("cv"))
 

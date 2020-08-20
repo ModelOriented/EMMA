@@ -185,10 +185,4 @@ PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
 mlr_pipeops$add("VIM_IRMI_imputation", PipeOpVIM_IRMI)
 
 
-#
-# test <- PipeOpVIM_IRMI$new()
-# graph =  test %>>% learner_po
-# glrn = GraphLearner$new(graph)
-#
-# resample(test_task,glrn,rsmp('cv',folds=2L))
 

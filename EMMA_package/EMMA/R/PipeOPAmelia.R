@@ -37,7 +37,7 @@
 PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
                                  inherit = PipeOpImpute,  # inherit from PipeOp
                                  public = list(
-                                   initialize = function(id = "imput_Amelia", col_0_1=FALSE,polytime=NULL,splinetime=NULL,intercs=FALSE,empir=NULL,m=3,parallel=TRUE,out_file
+                                   initialize = function(id = "imput_Amelia", col_0_1=FALSE,polytime=NULL,splinetime=NULL,intercs=FALSE,empir=NULL,m=3,parallel=TRUE,out_file=FALSE
                                    ) {
                                      super$initialize(id, whole_task_dependent=TRUE,param_vals = list(col_0_1=col_0_1,polytime=polytime,splinetime=splinetime,intercs=intercs,empir=empir,m=m,parallel=parallel,out_file=out_file),
                                                       param_set= ParamSet$new(list(
@@ -87,7 +87,7 @@ PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
                                          data_imputed <- autotune_Amelia(data_to_impute,col_type,percent_of_missing,col_0_1 = self$param_set$values$col_0_1,
                                                                           parallel = self$param_set$values$parallel,polytime = self$param_set$values$polytime,
                                                                           splinetime = self$param_set$values$splinetime, intercs = self$param_set$values$intercs,
-                                                                          empir = self$param_set$values$empir,m=self$param_set$values$m,optimize_empir = F,
+                                                                          empir = self$param_set$values$empir,m=self$param_set$values$m,
                                                                          out_file= self$param_set$values$out_file)
 
 
@@ -139,7 +139,7 @@ PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
                                          data_imputed <- autotune_Amelia(data_to_impute,col_type,percent_of_missing,col_0_1 = self$param_set$values$col_0_1,
                                                                          parallel = self$param_set$values$parallel,polytime = self$param_set$values$polytime,
                                                                          splinetime = self$param_set$values$splinetime, intercs = self$param_set$values$intercs,
-                                                                         empir = self$param_set$values$empir,m=self$param_set$values$m,optimize_empir = F,
+                                                                         empir = self$param_set$values$empir,m=self$param_set$values$m,
                                                                          out_file=self$param_set$values$out_file)
 
 
