@@ -11,7 +11,7 @@ library("mlr3tuning")
 
 out_file <- 'log_mice.txt' #out put file location
 n <- 10 # Number of try for RandomSearch
-datasets <-c(13,15,25,38,802,930,957,961,40954,41162) # datasets ID for test
+datasets <-c(15,25,38,802,930,957,961,40954,41162) # datasets ID for test
 error_csv_location <- 'errors.csv'
 
 #### Pre PROCESING ####

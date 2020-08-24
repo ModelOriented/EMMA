@@ -106,9 +106,9 @@ random_param_mice_search <- function(low_corr=0,up_corr=1,methods_random = c('pm
     tryCatch(
       {
         if (correlation){
-          inputation <- mice(df,method = met[i],pred=quickpred(df, mincor=corr[i],method = 'spearman'),seed = random.seed)}
+          inputation <- mice::mice(df,method = met[i],pred=mice::quickpred(df, mincor=corr[i],method = 'spearman'),seed = random.seed)}
         if (!correlation){
-          inputation <- mice(df,method = met[i],pred=quickpred(df, minpuc=corr[i],method = 'spearman'),seed = random.seed)
+          inputation <- mice::mice(df,method = met[i],pred=mice::quickpred(df, minpuc=corr[i],method = 'spearman'),seed = random.seed)
         }
 
         if (as.logical(no_numeric[1])){
@@ -118,7 +118,7 @@ random_param_mice_search <- function(low_corr=0,up_corr=1,methods_random = c('pm
 
           fit <- with(inputation,expr = lm((as.formula(as.character(formula)))))
         }
-        result[i] <- mean(tidy(pool(fit))$fmi)
+        result[i] <- mean(mice::tidy(mice::pool(fit))$fmi)
 
       }, error = function(e) { skip_to_next <<- TRUE})
     if(skip_to_next) { next }
@@ -189,11 +189,11 @@ autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,set_cor=0
 
     if (correlation){
 
-      imp_final <- mice(df,printFlag = verbose,m=m,maxit = maxit,method = (params[[2]]),pred=quickpred(df, mincor=(params[[1]]),method = 'spearman'),seed = random.seed)
+      imp_final <- mice::mice(df,printFlag = verbose,m=m,maxit = maxit,method = (params[[2]]),pred=mice::quickpred(df, mincor=(params[[1]]),method = 'spearman'),seed = random.seed)
 
       }
     if (!correlation){
-      imp_final <- mice(df,printFlag = verbose,m=m,maxit = maxit,method = (params[[2]]),pred=quickpred(df, minpuc = (params[[1]]),method = 'spearman'),seed = random.seed)
+      imp_final <- mice::mice(df,printFlag = verbose,m=m,maxit = maxit,method = (params[[2]]),pred=mice::quickpred(df, minpuc = (params[[1]]),method = 'spearman'),seed = random.seed)
     }
 
 
@@ -204,10 +204,10 @@ autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,set_cor=0
   if (!optimize){
 
     if (correlation){
-      imp_final <- mice(df,printFlag = verbose,m=m,maxit = maxit,method = set_method,pred=quickpred(df, mincor=set_cor,method = 'spearman'),seed = random.seed)
+      imp_final <- mice::mice(df,printFlag = verbose,m=m,maxit = maxit,method = set_method,pred=mice::quickpred(df, mincor=set_cor,method = 'spearman'),seed = random.seed)
     }
     if (!correlation){
-      imp_final <- mice(df,printFlag = verbose,m=m,maxit = maxit,method = set_method,pred=quickpred(df, minpuc = set_cor,method = 'spearman'),seed = random.seed)
+      imp_final <- mice::mice(df,printFlag = verbose,m=m,maxit = maxit,method = set_method,pred=mice::quickpred(df, minpuc = set_cor,method = 'spearman'),seed = random.seed)
     }
   }
   if(!is.null(out_file)){
