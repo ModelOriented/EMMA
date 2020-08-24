@@ -37,7 +37,7 @@
 PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
                                  inherit = PipeOpImpute,  # inherit from PipeOp
                                  public = list(
-                                   initialize = function(id = "imput_Amelia", col_0_1=FALSE,polytime=NULL,splinetime=NULL,intercs=FALSE,empir=NULL,m=3,parallel=TRUE,out_file=FALSE
+                                   initialize = function(id = "imput_Amelia", col_0_1=FALSE,polytime=NULL,splinetime=NULL,intercs=FALSE,empir=NULL,m=3,parallel=TRUE,out_file=NULL
                                    ) {
                                      super$initialize(id, whole_task_dependent=TRUE,param_vals = list(col_0_1=col_0_1,polytime=polytime,splinetime=splinetime,intercs=intercs,empir=empir,m=m,parallel=parallel,out_file=out_file),
                                                       param_set= ParamSet$new(list(
@@ -81,8 +81,7 @@ PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
                                          for (i in percent_of_missing){
                                            percent_of_missing[i] <- (sum(is.na(data_to_impute[,i]))/length(data_to_impute[,1]))*100
                                          }
-                                         col_miss <- colnames(data_to_impute)[percent_of_missing>0]
-                                         col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
+
 
                                          data_imputed <- autotune_Amelia(data_to_impute,col_type,percent_of_missing,col_0_1 = self$param_set$values$col_0_1,
                                                                           parallel = self$param_set$values$parallel,polytime = self$param_set$values$polytime,
@@ -188,3 +187,9 @@ PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
 )
 
 mlr_pipeops$add("Amelia_imputation", PipeOpAmelia)
+
+# test_task <- TaskClassif$new('test',df,'binaryClass')
+# op <- PipeOpAmelia$new()
+# pipe <- op %>>% learner_po
+# grln <- GraphLearner$new(pipe)
+# pipe$train(test_task)
