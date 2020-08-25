@@ -1,4 +1,4 @@
-INFO  [15:05:22.242] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.xgboost' on task 'Task 13: breast-cancer (Supervised Classification)' (iter 1/1) 
+INFO  [16:22:17.736] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.xgboost' on task 'Task 13: breast-cancer (Supervised Classification)' (iter 1/1) 
 Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
 Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
 Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
@@ -12,15 +12,21 @@ Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
 * Errors: 0 in 0 iterations
 
 
+                task                                            task_id            learner                                  learner_id
+1: <TaskClassif[44]> Task 13: breast-cancer (Supervised Classification) <GraphLearner[31]> imput_VIM_IRMI.encodeimpact.classif.xgboost
+                resampling resampling_id iteration prediction classif.ce
+1: <ResamplingHoldout[19]>       holdout         1  <list[1]>  0.4210526
 
 
 
-INFO  [15:05:25.485] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.xgboost' on task 'Task 3793: colleges_usnews (Supervised Classification)' (iter 1/1) 
-Error : Processed output task during prediction of imput_VIM_IRMI does not match output task during training.
-INFO  [15:06:32.073] Retrieving JSON {url: https://www.openml.org/api/v1/json/task/3667}
-INFO  [15:06:32.187] Retrieving JSON {url: https://www.openml.org/api/v1/json/data/802}
-INFO  [15:06:32.265] Downloading ARFF {url: https://www.openml.org/data/v1/download/53336/pbcseq.arff}
-INFO  [15:06:32.872] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.xgboost' on task 'Task 3667: pbcseq (Supervised Classification)' (iter 1/1) 
+Ostrzeżenie w poleceniu 'sink()': brak 'sink' do usunięcia
+INFO  [16:22:54.395] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.xgboost' on task 'Task 3793: colleges_usnews (Supervised Classification)' (iter 1/1) 
+BŁĄD: Processed output task during prediction of imput_VIM_IRMI does not match output task during training.
+
+
+
+Ostrzeżenie w poleceniu 'sink()': brak 'sink' do usunięcia
+INFO  [16:24:37.821] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.xgboost' on task 'Task 3667: pbcseq (Supervised Classification)' (iter 1/1) 
 Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
 Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
 Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
@@ -333,6 +339,11 @@ Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
 * Errors: 0 in 0 iterations
 
 
+                task                                       task_id            learner                                  learner_id
+1: <TaskClassif[44]> Task 3667: pbcseq (Supervised Classification) <GraphLearner[31]> imput_VIM_IRMI.encodeimpact.classif.xgboost
+                resampling resampling_id iteration prediction classif.ce
+1: <ResamplingHoldout[19]>       holdout         1  <list[1]>  0.3626543
 
 
 
+Ostrzeżenie w poleceniu 'sink()': brak 'sink' do usunięcia
