@@ -99,26 +99,7 @@ autotune_VIM_regrImp <- function(df,col_type,percent_of_missing,col_0_1=F,robust
 
 }
 
-#sum(is.na(autotune_VIM_regrImp(df,col_type,percent_of_missing)))
 
-# test <- df
-#
-# col_type <- 1:ncol(test)
-#
-# for (i in col_type){
-#   col_type[i] <- class(test[,i])
-#
-# }
-#
-# percent_of_missing <- 1:ncol(test)
-#
-# for (i in percent_of_missing){
-#   percent_of_missing[i] <- (sum(is.na(test[,i]))/length(test[,1]))*100
-# }
-#
-# wynik_test <- autotune_VIM_regrImp(test,col_type = col_type,percent_of_missing)
-# sum(is.na(wynik_test))
-#
 
 
 

@@ -1,4 +1,4 @@
-#' Pipline for one data set
+#' Pipline for one data set. FUNCTION FOR TESTING
 #'
 #' @description Function is Work in progress.
 #'

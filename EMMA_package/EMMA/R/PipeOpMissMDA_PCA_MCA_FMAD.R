@@ -203,6 +203,6 @@ mlr_pipeops$add("missMDA_MCA_PCA_FMAD_imputation", PipeOpMissMDA_PCA_MCA_FMAD)
 # test <- PipeOpMissMDA_PCA_MCA_FMAD$new()
 # graph =  test %>>% learner_po
 # glrn = GraphLearner$new(graph)
-# test_task <- TaskClassif$new('jebac policjie',df,colnames(df)[9])
+
 # resample(test_task,glrn,rsmp('cv',folds=2L))
 

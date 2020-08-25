@@ -55,7 +55,7 @@ autotune_Amelia <- function(df,col_type,percent_of_missing,col_0_1=FALSE,paralle
           }
         }
     }
-
+  # Avoiding situtation when amelia dont impute and dont throwe errors            c
   if(class(final)!='data.frame' & class(final)!='amelia'){
     stop('ERROR')
   }
@@ -66,7 +66,7 @@ autotune_Amelia <- function(df,col_type,percent_of_missing,col_0_1=FALSE,paralle
     }
     stop(e)
   })
-
+  #adding 0_1 col
   if(col_0_1 & return_one){
 
       columns_with_missing <-  (as.data.frame(is.na(df))*1)[,percent_of_missing>0]
@@ -77,5 +77,4 @@ autotune_Amelia <- function(df,col_type,percent_of_missing,col_0_1=FALSE,paralle
   return(final)
 
 }
-
 
