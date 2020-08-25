@@ -11,6 +11,7 @@ Depends:
     mlr3pipelines,
     paradox
 Imports:
+    mlr3learners,
     missForest,
     missMDA,
     doParallel,

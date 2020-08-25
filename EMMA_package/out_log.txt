@@ -1,5 +1,0 @@
-LOG2020-08-20
-----------------------IMPUTACJE-----------------------
-Dataset id :4
-Mice :OK
-missMDA_FMAD_MCA_PCA :
