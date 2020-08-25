@@ -107,7 +107,7 @@ write(paste0('LOG_micetest',Sys.Date()),file = out_file)
 #### TEST LOOP ###
 for (id in datasets){
 
-  df_oml <- getOMLDataSet(id)
+  df_oml <- getOMLDataSet(40954)
 
   df <- preprocess(df_oml,0.9)[[1]]
 

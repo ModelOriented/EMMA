@@ -1,4 +1,0 @@
-LOG_micetest2020-08-24
--------------------------15---------------------------------
-Imputation on whole dataset  :OK
-----random search----

@@ -7,7 +7,7 @@
 
     ##### DO ZMIANY#####
     OutLogLocation <- getwd()
-    outfilename <- '/out_log.txt'
+    outfilename <- '/test_test_log.txt'
 
     preprocess <- function(df_oml, miss_in_var_threshold = 0.9) {
       ### Params
@@ -115,13 +115,12 @@
 
 
 
-    list_of_pipe <- c(PipeOpMice,PipeOpMissMDA_MFA,PipeOpMissMDA_PCA_MCA_FMAD,PipeOpmissForest,PipeOpVIM_HD,PipeOpVIM_IRMI,
-                      PipeOpVIM_kNN,PipeOpVIM_regrImp,PipeOpmissRanger,PipeOpSoftImpute)
+    list_of_pipe <- c(PipeOpMice,PipeOpTEST)
 
 
     for(id in datasets_Ids){
 
-      df_oml <- getOMLDataSet(	944)
+      df_oml <- getOMLDataSet(id)
 
       df <- preprocess(df_oml,0.9)[[1]]
 
@@ -137,12 +136,11 @@
         percent_of_missing[i] <- (sum(is.na(df[,i]))/length(df[,1]))*100
       }
       tryCatch({
-     print( sum(is.na(autotune_Amelia(df,col_type,percent_of_missing,empir = 0))))
+
     },error=function(e){
       print(as.character(e))
     })
-      write('----------------------IMPUTACJE-----------------------',append = T,file=out_file)
-      single_set_Pipeline(df,id,col_type,percent_of_missing,out_file_location = out_file,single_set = FALSE)
+
       write('----------------------PIPLINE-----------------------',append = T,file=out_file)
       for (i in list_of_pipe){
         tryCatch({

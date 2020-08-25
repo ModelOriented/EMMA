@@ -79,7 +79,7 @@ PipeOpPmm <-  R6::R6Class("pmm_imputation",lock_objects=FALSE,
                                 df <- as.data.frame(df)
 
 
-
+                                params <- list()
                                 # First mice loop
                                  for (i in 1:(self$param_set$values$m+1)){
 
@@ -89,13 +89,15 @@ PipeOpPmm <-  R6::R6Class("pmm_imputation",lock_objects=FALSE,
                                      #### SELECTING METHOD ####
                                      numeric <- FALSE
                                      factor <- FALSE
-
+                                     factor_2 <- F
 
 
                                      if (class(df[,j]) %in% c("factor", "ordered", "character")) {
                                        d <- as.factor(df[,j])
 
-                                       factor <- T
+
+                                       if (length(levels(d))<=2){factor_2 <- T}
+                                       else{factor <- T}
                                      }
                                      else{numeric <- T}
                                      ry <- !where_df[,j]
@@ -136,8 +138,8 @@ PipeOpPmm <-  R6::R6Class("pmm_imputation",lock_objects=FALSE,
 
                                      }
                                      if(factor){
-                                        if(sum(is.na(df[,j]))==0 & i < (self$param_set$values$m+1)){next}
-                                        polreg <- lrn('classif.multinom')
+                                        if(sum(!ry)==0 & i < (self$param_set$values$m+1)){next}
+                                        polreg <- mlr3learners::LearnerClassifMultinom$new()
                                         train_task <- TaskClassif$new('task',df[ry,],colnames(df)[j])
 
                                         capture.output(polreg$train(train_task))
@@ -148,8 +150,25 @@ PipeOpPmm <-  R6::R6Class("pmm_imputation",lock_objects=FALSE,
                                         }
                                         else{
 
-                                        df[!ry,j] <- polreg$predict(TaskClassif$new('task',df[!ry,],colnames(df)[j]))
+                                        df[!ry,j] <- polreg$predict(TaskClassif$new('task',df[!ry,],colnames(df)[j]))$response
                                         }
+
+                                     }
+                                     if(factor_2){
+                                       if(sum(!ry)==0 & i < (self$param_set$values$m+1)){next}
+                                       polreg <- mlr3learners::LearnerClassifLogReg$new()
+                                       train_task <- TaskClassif$new('task',df[ry,],colnames(df)[j])
+
+                                       capture.output(polreg$train(train_task))
+
+                                       if(i == (self$param_set$values$m+1)){
+
+                                         params[[colnames(df)[j]]] <- polreg
+                                       }
+                                       else{
+
+                                         df[!ry,j] <- polreg$predict(TaskClassif$new('task',df[!ry,],colnames(df)[j]))$response
+                                       }
 
                                      }
 
@@ -158,6 +177,17 @@ PipeOpPmm <-  R6::R6Class("pmm_imputation",lock_objects=FALSE,
 
 
                                  }
+                                df <- lapply(df, FUN=function(x){
+                                  if(class(x ) %in% c("factor", "ordered", "character")){
+                                    x <- as.factor(x)
+                                    x  <- as.integer(x)
+                                  }
+                                  x
+                                })
+
+
+                                df <- as.data.frame(df)
+
                                 self$model_n <- list('params'=params,'data_n' =df)
                                 self$trained_n <- T
                                 }
@@ -173,21 +203,25 @@ PipeOpPmm <-  R6::R6Class("pmm_imputation",lock_objects=FALSE,
                                 # Column number
 
 
-
+                                if(!self$imputed){
 
                                ry <- !is.na(feature)
                                f_name <- setdiff(self$state$context_cols,colnames(context))
+                               for (i in 1:self$param_set$values$m){
 
                                #### SELECTING METHOD ####
                                numeric <- FALSE
                                factor <- FALSE
+                               factor_2 <- F
 
 
 
                                if (class(feature) %in% c("factor", "ordered", "character")) {
                                  feature <- as.factor(feature)
 
-                                factor <- T
+
+                                if (length(levels(feature))<=2){factor_2 <- T}
+                                else{factor <- T}
                                }
                                else{numeric <- T}
 
@@ -197,6 +231,16 @@ PipeOpPmm <-  R6::R6Class("pmm_imputation",lock_objects=FALSE,
                                  f_param <- self$model_n$params[[f_name]]
 
                                  yhatobs <- as.matrix(self$model_n$data_n[,ifelse(colnames(self$model_n$data_n)==f_name,F,T)]) %*% f_param$coef
+
+                                 df <- lapply(context, FUN=function(x){
+                                   if(class(x ) %in% c("factor", "ordered", "character")){
+                                     x <- as.factor(x)
+                                     x  <- as.integer(x)
+                                   }
+                                   x
+                                 })
+                                 context <- as.data.frame(df)
+
                                  yhatmis <- as.matrix(context[!ry, , drop = FALSE]) %*% f_param$beta
 
 
@@ -207,23 +251,30 @@ PipeOpPmm <-  R6::R6Class("pmm_imputation",lock_objects=FALSE,
                                if (factor){
 
 
-                                 feature[!ry] <- self$model_n$params[[f_name]]$predict(TaskClassif$new('test',as.data.frame(cbind(feature,context)))[!ry,],'feature')
+                                 feature[!ry] <- self$model_n$params[[f_name]]$predict(TaskClassif$new('test',as.data.frame(cbind(feature,context))[!ry,],'feature'))$response
 
                                }
 
-                                return(feature)
-                                }
+
+                               if (factor_2){
+
+
+                                feature[!ry] <- self$model_n$params[[f_name]]$predict(TaskClassif$new('test',as.data.frame(cbind(feature,context))[!ry,],'feature'))$response
+
+                               }
+                               return(feature)
+                                }}}
 
 
 
 
                              )
 )
-#  test_pmm <- PipeOpPmm$new()
+ test_pmm <- PipeOpPmm$new()
 # #
-#  gr <- test_pmm %>>% learner_po
+  gr <- test_pmm %>>% lrn('classif.rpart')
 # #
-# grln <- GraphLearner$new(gr)
+ grln <- GraphLearner$new(gr)
 # # glrn$encapsulate =c(train='evalute',predict='evalute')
 # #
 # # glrn
@@ -233,4 +284,7 @@ PipeOpPmm <-  R6::R6Class("pmm_imputation",lock_objects=FALSE,
 #
 #
 #
-# resample(TaskClassif$new('t',df,colnames(df)[ncol(df)]),grln,rsmp('cv',folds=2))
+ resample(TaskClassif$new('t',df,colnames(df)[ncol(df)]),grln,rsmp('cv',folds=10))
+
+
+
