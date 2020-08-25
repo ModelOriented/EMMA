@@ -1,13 +1,22 @@
-library(data.table)
+#' Generate MCAR missings in dataset.
+#' 
+#' @description Function generates random missing values in given dataset 
+#' according to set parameters.
+#'
+#' @param df Data.frame or data.table where missing values will be generated
+#' @param per_missings Overall percentage of missing values generated in dataset. Must be set every time.
+#' @param per_instances_missings Percentage of instances which will have missing values.
+#' @param per_variables_missings Percentage of variables which will have missing values.
+#' @param variables_with_missings Only when `per_variables_missings` is `NULL`. 
+#' Vector of column indexes where missings will be generated.
+#'
+#' @return Dataset with generated missings.
 
 simulate_missings <- function(df, 
                               per_missings,
                               per_instances_missings = NULL,
                               per_variables_missings = NULL, 
                               variables_with_missings = NULL){
-  
-  #Function to generate missing observation in datasets according to 
-  #schemes from decisions trees obtained in the exploratory analysis
   
   if(missing(per_missings)){
     warning("Please define percentage of missings")
@@ -146,7 +155,7 @@ simulate_missings <- function(df,
           
           all_index <- matrix(ncol = 2, c(rep(rows_sample, each = no_cols_missings), rep(cols_missings, times = no_rows_missing)))
           
-          index_diff <- fsetdiff(as.data.table(all_index), as.data.table(index))
+          index_diff <- data.table::fsetdiff(as.data.table(all_index), as.data.table(index))
           over_sample <- index_diff[sample(size = (no_missings-no_rows_missing), nrow(index_diff)), ]
           index <- rbind(index, as.matrix(over_sample))
           
@@ -160,7 +169,7 @@ simulate_missings <- function(df,
           
           all_index <- matrix(ncol = 2, c(rep(rows_sample, each = no_cols_missings), rep(cols_missings, times = no_rows_missing)))
           
-          index_diff <- fsetdiff(as.data.table(all_index), as.data.table(index))
+          index_diff <- data.table::fsetdiff(as.data.table(all_index), as.data.table(index))
           over_sample <- index_diff[sample(size = (no_missings-no_cols_missings), nrow(index_diff)), ]
           index <- rbind(index, as.matrix(over_sample))
           
@@ -171,86 +180,4 @@ simulate_missings <- function(df,
     }
   return(df)
 }
-
-#Tests
-#' library(OpenML)
-#' datasets <- listOMLDataSets()
-#' datasets <- datasets%>%
-#'   filter(number.of.instances > 100, number.of.missing.values == 0, number.of.instances<1000, data.id<1000)
-#' datasets <- datasets[sample(size = 10, nrow(datasets)), "data.id"]
-#' 
-#' param1 <- list("per_missings" = 1,
-#'                "per_instances_missings" = NULL,
-#'                "per_variables_missings" = NULL, 
-#'                "variables_with_missings" = NULL)
-#' param2 <- list("per_missings" = 25,
-#'                "per_instances_missings" = NULL,
-#'                "per_variables_missings" = NULL, 
-#'                "variables_with_missings" = NULL)
-#' param3 <- list("per_missings" = 5,
-#'                "per_instances_missings" = 40,
-#'                "per_variables_missings" = NULL, 
-#'                "variables_with_missings" = NULL)
-#' param4 <- list("per_missings" = 10,
-#'                "per_instances_missings" = 25,
-#'                "per_variables_missings" = NULL, 
-#'                "variables_with_missings" = NULL)
-#' param5 <- list("per_missings" = 1,
-#'                "per_instances_missings" = 5,
-#'                "per_variables_missings" = 80, 
-#'                "variables_with_missings" = NULL)
-#' param6 <- list("per_missings" = 5,
-#'                "per_instances_missings" = 10,
-#'                "per_variables_missings" = 50, 
-#'                "variables_with_missings" = NULL)
-#' param7 <- list("per_missings" = 5,
-#'                "per_instances_missings" = 20,
-#'                "per_variables_missings" = NULL, 
-#'                "variables_with_missings" = c(1,2,3))
-#' 
-#' r <- c()
-#' par <- param7
-#' for (id in datasets) {
-#'   
-#'   try({
-#'   
-#'   df_dow <- getOMLDataSet(id)$data
-#'   df <- simulate_missings(df = df_dow, 
-#'                           per_missings = par$per_missings,
-#'                           per_instances_missings = par$per_instances_missings,
-#'                           per_variables_missings = par$per_variables_missings,
-#'                           variables_with_missings = par$variables_with_missings)
-#'   
-#'   #Missing values
-#'   shadow_data <- is.na(df)
-#'   number_of_missings_in_features <- colSums(shadow_data)
-#'   number_of_missings_in_instances <- rowSums(shadow_data)
-#'   #'no_of_missings'
-#'   v1 <- sum(shadow_data)/(nrow(df)*ncol(df))
-#'   #'no_of_instances_with_missings'
-#'   v2 <- sum(number_of_missings_in_instances>0)/nrow(df)
-#'   #'no_of_features_with_missings'
-#'   v3 <- sum(number_of_missings_in_features>0)/ncol(df)
-#'   
-#'   vec <- c(v1, v2, v3)
-#'   r <- cbind(r, vec)
-#'   
-#'   })
-#' }
-
-
-#' data_test <- data.frame("x" = seq(1, 100), "y" = seq(101, 200), "z" = seq(101, 200), "w" = seq(101, 200))
-# df <- data_test
-# df <- simulate_missings(df_dow, per_missings = 1, per_variables_missings = NULL, per_instances_missings = NULL)
-#' 
-#' #Missing values
-#' shadow_data <- is.na(df)
-#' number_of_missings_in_features <- colSums(shadow_data)
-#' number_of_missings_in_instances <- rowSums(shadow_data)
-#' #'no_of_missings'
-#' sum(shadow_data)/(nrow(df)*ncol(df))
-#' #'no_of_instances_with_missings'
-#' sum(number_of_missings_in_instances>0)/nrow(df)
-#' #'no_of_features_with_missings'
-#' sum(number_of_missings_in_features>0)/ncol(df)
 
