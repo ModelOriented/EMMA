@@ -1,4 +1,4 @@
-library(dplyr)
+library(data.table)
 
 simulate_missings <- function(df, 
                               per_missings,
@@ -22,7 +22,6 @@ simulate_missings <- function(df,
   
   per_missings <- per_missings/100
   no_missings <- floor(per_missings*nrow(df)*ncol(df))
-  
     
     if(is.null(per_instances_missings) & (is.null(per_variables_missings) & is.null(variables_with_missings))){
       #Usage 1: only "per_missings" set
@@ -147,7 +146,7 @@ simulate_missings <- function(df,
           
           all_index <- matrix(ncol = 2, c(rep(rows_sample, each = no_cols_missings), rep(cols_missings, times = no_rows_missing)))
           
-          index_diff <- anti_join(as.data.frame(all_index), as.data.frame(index))
+          index_diff <- fsetdiff(as.data.table(all_index), as.data.table(index))
           over_sample <- index_diff[sample(size = (no_missings-no_rows_missing), nrow(index_diff)), ]
           index <- rbind(index, as.matrix(over_sample))
           
@@ -161,7 +160,7 @@ simulate_missings <- function(df,
           
           all_index <- matrix(ncol = 2, c(rep(rows_sample, each = no_cols_missings), rep(cols_missings, times = no_rows_missing)))
           
-          index_diff <- anti_join(as.data.frame(all_index), as.data.frame(index), )
+          index_diff <- fsetdiff(as.data.table(all_index), as.data.table(index))
           over_sample <- index_diff[sample(size = (no_missings-no_cols_missings), nrow(index_diff)), ]
           index <- rbind(index, as.matrix(over_sample))
           
