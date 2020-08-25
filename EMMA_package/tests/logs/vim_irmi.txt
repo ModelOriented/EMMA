@@ -1,0 +1,338 @@
+INFO  [15:05:22.242] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.xgboost' on task 'Task 13: breast-cancer (Supervised Classification)' (iter 1/1) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+
+
+<ResampleResult> of 1 iterations
+* Task: Task 13: breast-cancer (Supervised Classification)
+* Learner: imput_VIM_IRMI.encodeimpact.classif.xgboost
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+
+
+
+INFO  [15:05:25.485] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.xgboost' on task 'Task 3793: colleges_usnews (Supervised Classification)' (iter 1/1) 
+Error : Processed output task during prediction of imput_VIM_IRMI does not match output task during training.
+INFO  [15:06:32.073] Retrieving JSON {url: https://www.openml.org/api/v1/json/task/3667}
+INFO  [15:06:32.187] Retrieving JSON {url: https://www.openml.org/api/v1/json/data/802}
+INFO  [15:06:32.265] Downloading ARFF {url: https://www.openml.org/data/v1/download/53336/pbcseq.arff}
+INFO  [15:06:32.872] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.xgboost' on task 'Task 3667: pbcseq (Supervised Classification)' (iter 1/1) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+
+
+<ResampleResult> of 1 iterations
+* Task: Task 3667: pbcseq (Supervised Classification)
+* Learner: imput_VIM_IRMI.encodeimpact.classif.xgboost
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+
+
+
