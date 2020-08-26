@@ -115,8 +115,8 @@
 
 
 
-    list_of_pipe <- c(PipeOpMice,PipeOpTEST)
-
+    list_of_pipe <- c(PipeOpMice_T,PipeOpAmelia_T,PipeOpmissForest_T,PipeOpmissRanger_T,PipeOpMissMDA_MFA_T,PipeOpMissMDA_PCA_MCA_FMAD_T,PipeOpVIM_HD_T,
+                      PipeOpVIM_IRMI_T,PipeOpVIM_kNN_T,PipeOpVIM_regrImp_T)
 
     for(id in datasets_Ids){
 

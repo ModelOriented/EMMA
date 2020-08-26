@@ -270,21 +270,21 @@ PipeOpPmm <-  R6::R6Class("pmm_imputation",lock_objects=FALSE,
 
                              )
 )
- test_pmm <- PipeOpPmm$new()
+#  test_pmm <- PipeOpPmm$new()
+# # #
+#   gr <- test_pmm %>>% lrn('classif.rpart')
+# # #
+#  grln <- GraphLearner$new(gr)
+# # # glrn$encapsulate =c(train='evalute',predict='evalute')
+# # #
+# # # glrn
+# # #
+# # # summary(as.data.frame(test_task$data()))
+# # # sum(is.na(df))
 # #
-  gr <- test_pmm %>>% lrn('classif.rpart')
 # #
- grln <- GraphLearner$new(gr)
-# # glrn$encapsulate =c(train='evalute',predict='evalute')
 # #
-# # glrn
-# #
-# # summary(as.data.frame(test_task$data()))
-# # sum(is.na(df))
-#
-#
-#
- resample(TaskClassif$new('t',df,colnames(df)[ncol(df)]),grln,rsmp('cv',folds=10))
+#  resample(TaskClassif$new('t',df,colnames(df)[ncol(df)]),grln,rsmp('cv',folds=10))
 
 
 
