@@ -19,13 +19,13 @@
 #' \item \code{maxit} :: \code{integer(1)}\cr
 #' maximum number of iteration for mice, default \code{5}.
 #' \item \code{set_corr} :: \code{double(1)}\cr
-#' Correlation or fraction of featurs using if optimize= False, default \code{0.5}.
+#' Correlation or fraction of featurs using if optimize= False. When correlation == F  its represent a fraction of features to use in imputation for each variable.  default \code{0.5}.
 #' \item \code{set_method} :: \code{character(1)}\cr
 #' Method used if optimize=False. If NULL default method is used (more in methods_random section ), default \code{'pmm'}.
 #' \item \code{low_corr} :: \code{double(1)}\cr
-#' double betwen 0,1 default 0 lower boundry of correlation set, default \code{0}.
+#' double betwen 0,1 default 0 lower boundry of correlation used in inner optimization (used only when optimize == TRUE), default \code{0}.
 #' \item \code{up_corr} :: \code{double(1)}\cr
-#' double between 0,1 default 1 upper boundary of correlation set. Both of these parameters work the same for a fraction of features.,defoult \code{1}.
+#' double between 0,1 default 1 upper boundary of correlation set used in inner optimization (used only when optimize == TRUE). Both of these parameters work the same for a fraction of features if correlation == FALSE.,defoult \code{1}.
 #' \item \code{methods_random} :: \code{character(1)}\cr
 #' set of methods to chose. Default 'pmm'. If seted on NULL defoult method is used : By default, the method uses pmm, predictive mean matching (numeric data) logreg, logistic regression imputation (binary data, factor with 2 levels) polyreg, polytomous regression imputation for unordered categorical data (factor > 2 levels) polr, proportional odds model for (ordered, > 2 levels), default \code{c('pmm')}
 #' \item \code{iter} :: \code{integer(1)}\cr
@@ -74,13 +74,14 @@ PipeOpMice_T <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                   )
 
 
-                             
-                                  
+
+
                                 }),private=list(
 
                                   .train_task=function(task){
-                                    
-                                    data_to_impute =as.data.frame( task$data())
+
+                                    data_to_impute <- as.data.frame( task$data(cols = task$feature_names))
+                                    targer <- as.data.frame(task$data(cols = task$target_names))
                                     col_type <- 1:ncol(data_to_impute)
                                     for (i in col_type){
                                       col_type[i] <- class(data_to_impute[,i])
@@ -91,7 +92,7 @@ PipeOpMice_T <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                     }
                                     col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                     col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
-                                    
+
                                     data_imputed <- autotune_mice(data_to_impute,col_miss = col_miss,col_no_miss = col_no_miss,col_type = col_type,
                                                                   percent_of_missing = percent_of_missing,m=self$param_set$values$m,iter=self$param_set$values$iter,
                                                                   maxit = self$param_set$values$maxit,
@@ -102,12 +103,13 @@ PipeOpMice_T <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                                                   correlation = self$param_set$values$correlation,col_0_1 = self$param_set$values$col_0_1,verbose = F,
                                                                   out_file =self$param_set$values$out_file,return_one = T
                                     )
-                                    
-                                    task$cbind(as.data.table(data_imputed))
-                                    
+
+                                    task$cbind(as.data.table(cbind(targer,data_imputed)))
+
                                   },
                                   .predict_task=function(task){
-                                    data_to_impute =as.data.frame( task$data())
+                                    data_to_impute <- as.data.frame( task$data(cols = task$feature_names))
+                                    targer <- as.data.frame(task$data(cols = task$target_names))
                                     col_type <- 1:ncol(data_to_impute)
                                     for (i in col_type){
                                       col_type[i] <- class(data_to_impute[,i])
@@ -116,11 +118,11 @@ PipeOpMice_T <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                     for (i in percent_of_missing){
                                       percent_of_missing[i] <- (sum(is.na(data_to_impute[,i]))/length(data_to_impute[,1]))*100
                                     }
-                                    
-                                    
+
+
                                     col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                     col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
-                                    
+
                                     data_imputed <- autotune_mice(data_to_impute,col_miss = col_miss,col_no_miss = col_no_miss,col_type = col_type,
                                                                   percent_of_missing = percent_of_missing,m=self$param_set$values$m,iter=self$param_set$values$iter,
                                                                   maxit = self$param_set$values$maxit,
@@ -131,11 +133,11 @@ PipeOpMice_T <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                                                   correlation = self$param_set$values$correlation,col_0_1 = self$param_set$values$col_0_1,verbose = F,
                                                                   out_file =self$param_set$values$out_file,return_one = T
                                     )
-                                    
-                                    
-                                    
-                                    
-                                    task$cbind(as.data.table(data_imputed))
+
+
+
+
+                                    task$cbind(as.data.table(cbind(targer,data_imputed)))
                                   }
 
                               )

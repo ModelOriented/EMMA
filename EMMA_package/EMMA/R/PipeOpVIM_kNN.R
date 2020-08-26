@@ -155,7 +155,7 @@ PipeOpVIM_kNN <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,
 
                                if(self$column_counter == 0 & self$flag=='train'){
                                  feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
-                                 self$flag=='predict'
+                                 self$flag <- 'predict'
                                  self$imputed_predict <- FALSE
                                }
                                 self$train_s <- FALSE

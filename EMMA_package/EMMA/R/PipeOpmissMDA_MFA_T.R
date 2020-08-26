@@ -66,15 +66,16 @@ PipeOpMissMDA_MFA_T <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
                                                )
 
 
-                                               
-                                               
-                                               
+
+
+
 
                                              }),private=list(
 
                                                .train_task=function(task){
-                                                 
-                                                 data_to_impute =as.data.frame( task$data())
+
+                                                 data_to_impute <- as.data.frame( task$data(cols = task$feature_names))
+                                                 targer <- as.data.frame(task$data(cols = task$target_names))
                                                  col_type <- 1:ncol(data_to_impute)
                                                  for (i in col_type){
                                                    col_type[i] <- class(data_to_impute[,i])
@@ -85,18 +86,18 @@ PipeOpMissMDA_MFA_T <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
                                                  }
                                                  col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
-                                                 
+
                                                  data_imputed <- missMDA_MFA(data_to_impute,col_type,percent_of_missing,random.seed = self$param_set$values$random.seed,
                                                                              ncp = self$param_set$values$ncp,col_0_1 = self$param_set$values$col_0_1,
                                                                              maxiter =  self$param_set$values$maxiter,coeff.ridge =  self$param_set$values$coeff.ridge,
                                                                              threshold =  self$param_set$values$threshold,method =  self$param_set$values$method,
                                                                              out_file =self$param_set$values$out_file)
-                                                 
-                                                 task$cbind(as.data.table(data_imputed))
-                                                 
+
+                                                 task$cbind(as.data.table(cbind(targer,data_imputed)))
                                                },
                                                .predict_task=function(task){
-                                                 data_to_impute =as.data.frame( task$data())
+                                                 data_to_impute <- as.data.frame( task$data(cols = task$feature_names))
+                                                 targer <- as.data.frame(task$data(cols = task$target_names))
                                                  col_type <- 1:ncol(data_to_impute)
                                                  for (i in col_type){
                                                    col_type[i] <- class(data_to_impute[,i])
@@ -105,28 +106,27 @@ PipeOpMissMDA_MFA_T <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
                                                  for (i in percent_of_missing){
                                                    percent_of_missing[i] <- (sum(is.na(data_to_impute[,i]))/length(data_to_impute[,1]))*100
                                                  }
-                                                 
-                                                 
+
+
                                                  col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
-                                                 
+
                                                  data_imputed <- missMDA_MFA(data_to_impute,col_type,percent_of_missing,random.seed = self$param_set$values$random.seed,
                                                                              ncp = self$param_set$values$ncp,col_0_1 = self$param_set$values$col_0_1,
                                                                              maxiter =  self$param_set$values$maxiter,coeff.ridge =  self$param_set$values$coeff.ridge,
                                                                              threshold =  self$param_set$values$threshold,method =  self$param_set$values$method,
                                                                              out_file =self$param_set$values$out_file)
-                                                 
-                                                 
-                                                 
-                                                 
-                                                 task$cbind(as.data.table(data_imputed))
-                                                 
-                                                 
-                                                 
-                                                 
-                                                 
+
+
+
+
+                                                 task$cbind(as.data.table(cbind(targer,data_imputed)))
+
+
+
+
                                                }
-                                               
+
                                            )
 )
 

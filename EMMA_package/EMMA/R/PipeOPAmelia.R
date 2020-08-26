@@ -3,7 +3,7 @@
 #' @name PipeOpAmelia
 #'
 #' @description
-#' Implements EMB methods as mlr3 pipeline more about amelia \code{\link{autotune_Amelia}}
+#' Implements EMB methods as mlr3 pipeline more about amelia \code{\link{autotune_Amelia}} or \url{https://cran.r-project.org/web/packages/Amelia/Amelia.pdf}
 #'
 #' @section Input and Output Channels:
 #' Input and output channels are inherited from \code{\link{PipeOpImpute}}.
@@ -21,13 +21,13 @@
 #' \item \code{splinetime} :: \code{integer(1)}\cr
 #' interger value of 0 or greater to control cubic smoothing splines of time. Values between 0 and 3 create a simple polynomial of time (identical to the polytime argument). Values k greater than 3 create a spline with an additional k-3 knotpoints, default \code{NULL}.
 #' \item \code{intercs} :: \code{logical(1)}\cr
-#' Method used if optimize=False. If NULL default method is used (more in methods_random section ), default \code{FALSE}.
+#' Variable indicating if the time effects of polytime should vary across the cross-section., default \code{FALSE}.
 #' \item \code{empir} :: \code{double(1)}\cr
-#' Parameter pass to amelia function. If empir dont set  empir=nrow(df)*0.015, default \code{NULL}.
+#' Number indicating level of the empirical (or ridge) prior. This prior shrinks the covariances of the data, but keeps the means and variances the same for problems of high missingness, small N's or large correlations among the variables. Should be kept small, perhaps 0.5 to 1 percent of the rows of the data; a reasonable upper bound is around 10 percent of the rows of the data. If empir dont set  empir=nrow(df)*0.015, default \code{NULL}.
 #' \item \code{parallel} :: \code{double(1)}\cr
 #' If true parallel calculation is used, default \code{TRUE}.
 #' \item \code{col_0_1} :: \code{logical(1)}\cr
-#' 	Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, Default \code{FALSE}.
+#' Decides if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, Default \code{FALSE}.
 #' \item \code{out_fill} :: \code{character(1)}\cr
 #' Output log file location if file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
 #'}
@@ -63,6 +63,9 @@ PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
                                      self$column_counter <- NULL
                                      self$data_imputed <- NULL
 
+
+
+
                                    }),private=list(
 
                                      .train_imputer=function(feature, type, context){
@@ -81,16 +84,15 @@ PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
                                          for (i in percent_of_missing){
                                            percent_of_missing[i] <- (sum(is.na(data_to_impute[,i]))/length(data_to_impute[,1]))*100
                                          }
+                                         col_miss <- colnames(data_to_impute)[percent_of_missing>0]
+                                         col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
 
                                          data_imputed <- autotune_Amelia(data_to_impute,col_type,percent_of_missing,col_0_1 = self$param_set$values$col_0_1,
-                                                                          parallel = self$param_set$values$parallel,polytime = self$param_set$values$polytime,
-                                                                          splinetime = self$param_set$values$splinetime, intercs = self$param_set$values$intercs,
-                                                                          empir = self$param_set$values$empir,m=self$param_set$values$m,
+                                                                         parallel = self$param_set$values$parallel,polytime = self$param_set$values$polytime,
+                                                                         splinetime = self$param_set$values$splinetime, intercs = self$param_set$values$intercs,
+                                                                         empir = self$param_set$values$empir,m=self$param_set$values$m,
                                                                          out_file= self$param_set$values$out_file)
-
-
-
 
 
 
@@ -99,6 +101,7 @@ PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
                                        self$imputed_predict <- TRUE
                                        self$flag <- 'train'
                                        if(!self$imputed){
+
                                          self$column_counter <- ncol(context)+1
                                          self$imputed <- TRUE
                                          data_to_impute <- cbind(feature,context)
@@ -122,6 +125,8 @@ PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
                                        imp_function <- function(data_to_impute){
 
 
+
+
                                          data_to_impute <- as.data.frame(data_to_impute)
                                          # prepering arguments for function
                                          col_type <- 1:ncol(data_to_impute)
@@ -135,11 +140,12 @@ PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
                                          col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                          col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
+
                                          data_imputed <- autotune_Amelia(data_to_impute,col_type,percent_of_missing,col_0_1 = self$param_set$values$col_0_1,
                                                                          parallel = self$param_set$values$parallel,polytime = self$param_set$values$polytime,
                                                                          splinetime = self$param_set$values$splinetime, intercs = self$param_set$values$intercs,
                                                                          empir = self$param_set$values$empir,m=self$param_set$values$m,
-                                                                         out_file=self$param_set$values$out_file)
+                                                                         out_file= self$param_set$values$out_file)
 
 
 
@@ -151,12 +157,13 @@ PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
 
 
                                        }
-                                       if((nrow(self$data_imputed)!=nrow(context) | !self$train_s ) & self$flag=='train'){
+                                       if((nrow(self$data_imputed)!=nrow(context) | !self$train_s) & self$flag=='train'){
                                          self$imputed_predict <- FALSE
                                          self$flag <- 'predict'
                                        }
 
                                        if(!self$imputed_predict){
+
                                          data_to_impute <- cbind(feature,context)
 
                                          self$data_imputed <- imp_function(data_to_impute)
@@ -172,7 +179,7 @@ PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
 
                                        if(self$column_counter == 0 & self$flag=='train'){
                                          feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
-                                         self$flag=='predict'
+                                         self$flag <- 'predict'
                                          self$imputed_predict <- FALSE
                                        }
                                        self$train_s <- FALSE
@@ -192,4 +199,15 @@ mlr_pipeops$add("Amelia_imputation", PipeOpAmelia)
 # op <- PipeOpAmelia$new()
 # pipe <- op %>>% learner_po
 # grln <- GraphLearner$new(pipe)
-# pipe$train(test_task)
+# # pipe$train(test_task)
+#
+#
+# #
+# graph <- PipeOpVIM_regrImp$new() %>>% pipe_encoding %>>% pipe_model
+#  graph_learner <- GraphLearner$new(graph)
+#  task <- mlr3oml::OMLTask$new(id = id)
+#  task <- task$task
+# #
+# #
+#  resample(task,graph_learner,rsmp("holdout"))
+#

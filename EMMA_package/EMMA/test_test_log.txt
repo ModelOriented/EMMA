@@ -13,7 +13,4 @@ imput_VIM_regrImpok
 ----------------------PIPLINE-----------------------
 imput_miceok
 imput_Ameliaok
-imput_missForestok
-imput_missRangerok
-imput_missMDA_MFAok
-imput_missMDA_MCA_PCA_FMAD
+imput_missForest
