@@ -1,0 +1,43 @@
+INFO  [16:53:48.024] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 13: breast-cancer (Supervised Classification)' (iter 1/1) 
+[1] "Not enought numeric"
+[1] "Not enought numeric"
+
+
+<ResampleResult> of 1 iterations
+* Task: Task 13: breast-cancer (Supervised Classification)
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task                                            task_id            learner                                   learner_id
+1: <TaskClassif[44]> Task 13: breast-cancer (Supervised Classification) <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet
+                resampling resampling_id iteration prediction classif.ce
+1: <ResamplingHoldout[19]>       holdout         1  <list[1]>  0.3157895
+
+
+
+INFO  [16:53:49.630] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3793: colleges_usnews (Supervised Classification)' (iter 1/1) 
+[1] "Not enought numeric"
+Error in cat(x, file = file, sep = c(rep.int(sep, ncolumns - 1), "\n"),  : 
+  niepoprawne połączenie
+
+
+
+INFO  [16:53:50.829] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3667: pbcseq (Supervised Classification)' (iter 1/1) 
+
+
+<ResampleResult> of 1 iterations
+* Task: Task 3667: pbcseq (Supervised Classification)
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task                                       task_id            learner                                   learner_id
+1: <TaskClassif[44]> Task 3667: pbcseq (Supervised Classification) <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet
+                resampling resampling_id iteration prediction classif.ce
+1: <ResamplingHoldout[19]>       holdout         1  <list[1]>  0.3703704
+
+
+

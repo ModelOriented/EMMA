@@ -9,14 +9,18 @@ library(mlr3learners)
 library(mlr3oml)
 
 ### Simple tests on single pipes
-task1 <- getOMLTask(task.id = 13)
-task2 <- getOMLTask(task.id = 3793)
-task3 <- getOMLTask(task.id = 3667)
+# task1 <- getOMLTask(task.id = 13)
+# task2 <- getOMLTask(task.id = 3793)
+# task3 <- getOMLTask(task.id = 3667)
 
-for (i in c(13, 3793, 3667)) {
+pipes <- c(PipeOpAmelia_T, PipeOpVIM_IRMI_T, PipeOpmissForest_T, PipeOpMice_T, PipeOpSoftImpute_T, PipeOpVIM_HD_T,
+           PipeOpVIM_kNN_T, PipeOpVIM_regrImp_T, PipeOpmissRanger_T)
+
+for (j in 1:(length(pipes))) {
+  for (i in c(13, 3793, 3667)) {
 
 #Take pipe
-pipe_imp <- EMMA::PipeOpMice$new()
+pipe_imp <- pipes[[j]]$new()
 #Check params and docs
 # ?PipeOpMice
 #?PipeOpmissRanger
@@ -30,7 +34,7 @@ graph_learner <- GraphLearner$new(graph)
 split <- rsmp("holdout")
 
 #Test
-f <- file("EMMA_package/tests/logs/softimpute.txt", open = "a")
+f <- file(paste("EMMA_package/tests/logs_pipe_preproc/", pipe_imp$id, ".txt", sep = ""), open = "a")
 task <- mlr3oml::OMLTask$new(id = i)
 task <- task$task
 
@@ -50,9 +54,8 @@ print(rr$score())
 }
 
 write(file = f, "\n\n")
-sink()
-sink()
-rm(list = ls())
-
+sink(type = "message")
+sink(type = "output")
+rm(list = "rr")
 }
-
+}
