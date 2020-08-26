@@ -7,7 +7,7 @@
 
     ##### DO ZMIANY#####
     OutLogLocation <- getwd()
-    outfilename <- '/out_log.txt'
+    outfilename <- '/test_test_log.txt'
 
     preprocess <- function(df_oml, miss_in_var_threshold = 0.9) {
       ### Params
@@ -115,8 +115,7 @@
 
 
 
-    list_of_pipe <- c(PipeOpMice,PipeOpMissMDA_MFA,PipeOpMissMDA_PCA_MCA_FMAD,PipeOpmissForest,PipeOpVIM_HD,PipeOpVIM_IRMI,
-                      PipeOpVIM_kNN,PipeOpVIM_regrImp,PipeOpmissRanger,PipeOpSoftImpute)
+    list_of_pipe <- c(PipeOpMice,PipeOpTEST)
 
 
     for(id in datasets_Ids){
@@ -137,28 +136,27 @@
         percent_of_missing[i] <- (sum(is.na(df[,i]))/length(df[,1]))*100
       }
       tryCatch({
-     print( sum(is.na(autotune_Amelia(df,col_type,percent_of_missing))))
+
     },error=function(e){
       print(as.character(e))
     })
-      # write('----------------------IMPUTACJE-----------------------',append = T,file=out_file)
-      # single_set_Pipeline(df,id,col_type,percent_of_missing,out_file_location = out_file,single_set = FALSE)
-      # write('----------------------PIPLINE-----------------------',append = T,file=out_file)
-      # for (i in list_of_pipe){
-      #   tryCatch({
-      #   learner_po = po("learner", learner = lrn("classif.rpart"))
-      #   test_imp <- i$new()
-      #   test = test_imp %>>%  learner_po
-      #   glrn =GraphLearner$new(test)
-      #   test_task = TaskClassif$new('test',backend = df,target = df_oml$target.features)
-      #   cat(test_imp$id,file = out_file,append = T)
-      #
-      #   resample(test_task,glrn,rsmp('cv',folds=2L))
-      #   write('ok',file=out_file,append = T)
-      #   },error=function(e){
-      #     write(as.character(e),file = out_file,append = T)
-      #   })
-      # }
+
+      write('----------------------PIPLINE-----------------------',append = T,file=out_file)
+      for (i in list_of_pipe){
+        tryCatch({
+        learner_po = po("learner", learner = lrn("classif.rpart"))
+        test_imp <- i$new()
+        test = test_imp %>>%  learner_po
+        glrn =GraphLearner$new(test)
+        test_task = TaskClassif$new('test',backend = df,target = df_oml$target.features)
+        cat(test_imp$id,file = out_file,append = T)
+
+        resample(test_task,glrn,rsmp('cv',folds=2L))
+        write('ok',file=out_file,append = T)
+        },error=function(e){
+          write(as.character(e),file = out_file,append = T)
+        })
+      }
 
 
 

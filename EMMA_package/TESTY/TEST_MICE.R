@@ -11,8 +11,8 @@ library("mlr3tuning")
 
 out_file <- 'log_mice.txt' #out put file location
 n <- 10 # Number of try for RandomSearch
-datasets <- c(13,15,24,927,1111,1053) # datasets ID for test
-
+datasets <-c(15,25,38,802,930,957,961,40954,41162) # datasets ID for test
+error_csv_location <- 'errors.csv'
 
 #### Pre PROCESING ####
 preprocess <- function(df_oml, miss_in_var_threshold = 0.9) {
@@ -107,7 +107,7 @@ write(paste0('LOG_micetest',Sys.Date()),file = out_file)
 #### TEST LOOP ###
 for (id in datasets){
 
-  df_oml <- getOMLDataSet(id)
+  df_oml <- getOMLDataSet(40954)
 
   df <- preprocess(df_oml,0.9)[[1]]
 
@@ -125,56 +125,82 @@ for (id in datasets){
   write(paste0('-------------------------',id,'---------------------------------'),file = out_file,append = T)
 
   cat('Imputation on whole dataset  :',file = out_file,append = T)
+
   tryCatch({
     autotune_mice(df,col_miss = colnames(df)[percent_of_missing>0],col_no_miss =colnames(df)[percent_of_missing==0],percent_of_missing = percent_of_missing,col_type = col_type,
                   optimize = F)
     write('OK',file = out_file,append = T)
   },error=function(e){
     write(as.character(e),file = out_file,append = T)
-  }
 
+  }
   )
 
-  learner_po = po("learner", learner = lrn("classif.rpart"))
+
+
+
+
+  write('----random search----',file = out_file,append = T)
+
+
+
+
+
+
+
+
+
+
+  iteration <- 1
+  fold <- 99999999999999
+  iter <- 9999999999999
+  error <- NA
+  data_id <- 9999999999999999
+  Errors_CSV <- data.frame(data_id,iter,fold,error)
+  write_csv(Errors_CSV,path = error_csv_location)
+  ##### RADNOM SEARCH WRITED BY ME #####
+  for (i in 1:n){
+  test_task = TaskClassif$new('test',backend = df,target = df_oml$target.features)
   test_imp <- PipeOpMice$new()
+  learner_po = po("learner", learner = lrn("classif.rpart"))
   test = test_imp %>>%  learner_po
   glrn =GraphLearner$new(test)
+  glrn$encapsulate <- c(train='evaluate',predict='evaluate')
 
-  test_task = TaskClassif$new('test',backend = df,target = df_oml$target.features)
+  glrn$param_set$values$imput_mice.set_cor <- runif(1)
+  glrn$param_set$values$imput_mice.correlation <- sample(c(T,F),1)
 
-  write('----random search----')
+  d<- resample(test_task,glrn,rsmp('cv'))
 
-  tune_ps<- ParamSet$new(params = list(
-    ParamDbl$new('imput_mice.set_cor',lower = 0.01,upper = 0.99),
-    ParamLgl$new('imput_mice.correlation',special_vals = list(T,F)))
-  )
+  #NUMBER OF ERRORS
+  n_error <- nrow(as.data.frame(d$errors))
 
-
-
-  glrn$encapsulate = c(train='evaluate',predict='evaluate')
-
-  instance = TuningInstance$new(
-    task = test_task,
-    learner = glrn,
-    resampling = rsmp('cv',folds=10L),
-    measure = msr('classif.ce'),
-
-    param_set = tune_ps,
-    terminator = term("evals", n_evals = n)
-
-  )
-  tuner <- TunerRandomSearch$new()
+  massure <- msr('classif.acc')
+  score <- massure$aggregate(d)
+  cor <- glrn$param_set$values$imput_mice.set_cor
+  use_cor <-  glrn$param_set$values$imput_mice.correlation
 
 
-  tuner$tune(instance)
-  for (i in 1:n){
-  cor <- instance$bmr$rr_data$tune_x[i][[1]][[1]]
-  use_cor <-  instance$bmr$rr_data$tune_x[[i]][[2]]
-
-
-  errors <-  instance$bmr$resample_result(i)
+  cat(paste0(i,'  :'),file = out_file,append = T)
   cat(paste0('Corr :',cor, '   Use_CORR: ', use_cor),file = out_file,append = T)
+  cat(paste0('  SCORE:',score),file = out_file,append = T)
   cat('     ERRORS : ',file = out_file,append = T)
-  write(length(as.data.frame(errors$errors)[,1]),file = out_file,append = T)
+  write(n_error,file = out_file,append = T)
+  for (j in 0:n_error){
+    if(j==0){next}
+    errors <- as.data.frame(d$errors)$msg[j]
+
+    write_csv(data.frame(id,i,j,as.character(errors)),path = error_csv_location,append = T)
+
   }
+
+
+
+
+  }
+
+
+
+
 }
+

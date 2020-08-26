@@ -69,7 +69,7 @@ Output log file location if file already exists log message will be added. If NU
   empir = NULL,
   m = 3,
   parallel = TRUE,
-  out_file
+  out_file = NULL
 )}\if{html}{\out{</div>}}
 }
 
