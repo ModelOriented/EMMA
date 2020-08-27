@@ -1,0 +1,43 @@
+INFO  [22:43:26.773] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 13: breast-cancer (Supervised Classification)' (iter 1/1) 
+Ostrzeżenie w poleceniu 'levels(na.omit(df[, i])) == levels(final[, i])':
+  długość dłuszego obiektu nie jest wielokrotnością długości krótszego obiektu
+Ostrzeżenie w poleceniu 'levels(na.omit(df[, i])) == levels(final[, i])':
+  długość dłuszego obiektu nie jest wielokrotnością długości krótszego obiektu
+Ostrzeżenie w poleceniu 'levels(na.omit(df[, i])) == levels(final[, i])':
+  długość dłuszego obiektu nie jest wielokrotnością długości krótszego obiektu
+Ostrzeżenie w poleceniu 'levels(na.omit(df[, i])) == levels(final[, i])':
+  długość dłuszego obiektu nie jest wielokrotnością długości krótszego obiektu
+Ostrzeżenie w poleceniu 'levels(na.omit(df[, i])) == levels(final[, i])':
+  długość dłuszego obiektu nie jest wielokrotnością długości krótszego obiektu
+Ostrzeżenie w poleceniu 'levels(na.omit(df[, i])) == levels(final[, i])':
+  długość dłuszego obiektu nie jest wielokrotnością długości krótszego obiektu
+
+
+<ResampleResult> of 1 iterations
+* Task: Task 13: breast-cancer (Supervised Classification)
+* Learner: imput_missMDA_MFA.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task                                            task_id            learner                                    learner_id
+1: <TaskClassif[44]> Task 13: breast-cancer (Supervised Classification) <GraphLearner[31]> imput_missMDA_MFA.encodeimpact.classif.glmnet
+                resampling resampling_id iteration prediction classif.ce
+1: <ResamplingHoldout[19]>       holdout         1  <list[1]>  0.2526316
+
+
+
+INFO  [22:43:30.185] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3793: colleges_usnews (Supervised Classification)' (iter 1/1) 
+Ostrzeżenie w poleceniu 'levels(na.omit(df[, i])) == levels(final[, i])':
+  długość dłuszego obiektu nie jest wielokrotnością długości krótszego obiektu
+Error in y %*% rep(1, nc) : niezgodne argumenty
+
+
+
+INFO  [22:43:32.458] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3667: pbcseq (Supervised Classification)' (iter 1/1) 
+Ostrzeżenie w poleceniu 'levels(na.omit(df[, i])) == levels(final[, i])':
+  długość dłuszego obiektu nie jest wielokrotnością długości krótszego obiektu
+Error in y %*% rep(1, nc) : niezgodne argumenty
+
+
+
