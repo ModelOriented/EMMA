@@ -1,0 +1,233 @@
+INFO  [15:06:51.782] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 1/5) 
+randomForest 4.6-14
+Type rfNews() to see new features/changes/bug fixes.
+INFO  [15:06:53.897] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 2/5) 
+INFO  [15:06:55.132] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 3/5) 
+INFO  [15:06:56.221] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 4/5) 
+INFO  [15:06:57.622] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3543: irish (Supervised Classification)
+* Learner: imput_missForest.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+     0.006 
+
+
+INFO  [15:07:00.134] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3722: hungarian (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+INFO  [15:07:05.868] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3722: hungarian (Supervised Classification)' (iter 2/5) 
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Error in `[.data.frame`(final, , i) : nie wybrano kolumn
+
+
+INFO  [15:07:11.079] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 1/5) 
+INFO  [15:07:16.743] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 2/5) 
+INFO  [15:07:22.204] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 3/5) 
+INFO  [15:07:32.952] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 4/5) 
+INFO  [15:07:39.213] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 29: credit-approval (Supervised Classification)
+* Learner: imput_missForest.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1478261 
+
+
+INFO  [15:07:47.108] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 1/5) 
+Error in { : 
+  task 1 failed - "Can not handle categorical predictors with more than 53 categories."
+
+
+INFO  [15:07:48.802] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 14954: cylinder-bands (Supervised Classification)' (iter 1/5) 
+Error in { : 
+  task 1 failed - "Can not handle categorical predictors with more than 53 categories."
+
+
+INFO  [15:07:50.249] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+INFO  [15:07:51.736] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 2/5) 
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+INFO  [15:07:54.083] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 3/5) 
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+INFO  [15:07:56.404] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 4/5) 
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+INFO  [15:07:58.819] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 5/5) 
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 48: heart-c (Supervised Classification)
+* Learner: imput_missForest.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1551913 
+
+
+INFO  [15:08:02.454] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3561: profb (Supervised Classification)' (iter 1/5) 
+Error in `[<-.data.frame`(`*tmp*`, misi, res$varInd, value = structure(c(1L,  : 
+  zamiana ma 537 wierszy, dane mają 513
+
+
+INFO  [15:08:04.475] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 1/5) 
+INFO  [15:08:10.793] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 2/5) 
+INFO  [15:08:19.245] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 3/5) 
+INFO  [15:08:24.443] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 4/5) 
+INFO  [15:08:32.284] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3675: pbc (Supervised Classification)
+* Learner: imput_missForest.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2729489 
+
+
+INFO  [15:08:42.643] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 1/5) 
+INFO  [15:08:43.412] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 2/5) 
+INFO  [15:08:44.106] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 3/5) 
+INFO  [15:08:44.855] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 4/5) 
+INFO  [15:08:45.533] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3847: analcatdata_draft (Supervised Classification)
+* Learner: imput_missForest.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.08752314 
+
+
+INFO  [15:08:47.667] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 1/5) 
+INFO  [15:08:50.099] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 2/5) 
+INFO  [15:08:53.416] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 3/5) 
+INFO  [15:08:56.095] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 4/5) 
+INFO  [15:08:58.027] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3838: autos (Supervised Classification)
+* Learner: imput_missForest.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+  0.195122 
+
+
+Successful evaluation: 6/10 tasks
+
+

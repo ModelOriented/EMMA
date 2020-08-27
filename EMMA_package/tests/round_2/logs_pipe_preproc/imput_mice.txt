@@ -1,0 +1,147 @@
+INFO  [15:09:01.927] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 1/5) 
+INFO  [15:09:02.880] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 2/5) 
+Ostrzeżenie: Number of logged events: 25
+INFO  [15:09:03.729] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 3/5) 
+INFO  [15:09:04.492] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 4/5) 
+Ostrzeżenie: Number of logged events: 23
+INFO  [15:09:05.294] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 5/5) 
+Ostrzeżenie: Number of logged events: 35
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3543: irish (Supervised Classification)
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+     0.008 
+
+
+INFO  [15:09:07.716] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3722: hungarian (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 51
+Error in lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs,  : 
+  wartość NA/NaN/Inf w wywołaniu obcej funcji (argument 5)
+
+
+INFO  [15:09:10.176] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 26
+Error in lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs,  : 
+  wartość NA/NaN/Inf w wywołaniu obcej funcji (argument 5)
+
+
+INFO  [15:09:12.836] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 79
+Ostrzeżenie: Number of logged events: 55
+INFO  [15:09:19.058] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 2/5) 
+Ostrzeżenie: Number of logged events: 86
+Ostrzeżenie: Number of logged events: 100
+INFO  [15:09:26.361] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 3/5) 
+Ostrzeżenie: Number of logged events: 90
+Ostrzeżenie: Number of logged events: 95
+INFO  [15:09:34.119] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 4/5) 
+Ostrzeżenie: Number of logged events: 76
+Ostrzeżenie: Number of logged events: 83
+INFO  [15:09:41.096] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 5/5) 
+Ostrzeżenie: Number of logged events: 104
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3830: cars (Supervised Classification)
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2734718 
+
+
+INFO  [15:09:48.659] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 14954: cylinder-bands (Supervised Classification)' (iter 1/5) 
+Error in solve.default(xtx + diag(pen)) : 
+  system jest obliczeniowo osobliwy: numer odwrotnego warunku = 1.64783e-16
+
+
+INFO  [15:09:50.670] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 50
+INFO  [15:09:51.765] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 2/5) 
+INFO  [15:09:52.848] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 3/5) 
+Ostrzeżenie: Number of logged events: 25
+INFO  [15:09:53.800] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 4/5) 
+INFO  [15:09:54.681] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 5/5) 
+Ostrzeżenie: Number of logged events: 25
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 48: heart-c (Supervised Classification)
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1516393 
+
+
+INFO  [15:09:56.932] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3561: profb (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 1
+Error in lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs,  : 
+  wartość NA/NaN/Inf w wywołaniu obcej funcji (argument 5)
+
+
+INFO  [15:09:58.801] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 1/5) 
+INFO  [15:10:01.050] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 2/5) 
+INFO  [15:10:03.655] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 3/5) 
+INFO  [15:10:05.756] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 4/5) 
+INFO  [15:10:07.907] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3675: pbc (Supervised Classification)
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2894435 
+
+
+INFO  [15:10:11.373] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 1/5) 
+INFO  [15:10:11.908] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 2/5) 
+Error in edit.setup(data, setup, ...) : 
+  `mice` detected constant and/or collinear variables. No predictors were left after their removal.
+
+
+INFO  [15:10:13.249] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 229
+Ostrzeżenie: Number of logged events: 191
+INFO  [15:10:18.088] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 2/5) 
+Ostrzeżenie: Number of logged events: 242
+Ostrzeżenie: Number of logged events: 110
+INFO  [15:10:21.902] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 3/5) 
+Ostrzeżenie: Number of logged events: 229
+Ostrzeżenie: Number of logged events: 375
+INFO  [15:10:27.648] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 4/5) 
+Ostrzeżenie: Number of logged events: 198
+Ostrzeżenie: Number of logged events: 157
+INFO  [15:10:32.075] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 5/5) 
+Ostrzeżenie: Number of logged events: 211
+Ostrzeżenie: Number of logged events: 135
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3838: autos (Supervised Classification)
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1707317 
+
+
+Successful evaluation: 5/10 tasks
+
+
