@@ -27,7 +27,7 @@
 #' \item \code{maxiter} :: \code{integer(1)}\cr
 #' Maximal number of iteration in algortihm, default \code{998}.
 #' \item \code{coeff.ridge} :: \code{double(1)}\cr
-#' Method used in imputation algorithm, default \code{1}.
+#' Value use in Regularized method, default \code{1}.
 #' \item \code{threshold} :: \code{double(1)}\cr
 #' Threshold for convergence, default \code{1e-6}.
 #' \item \code{method} :: \code{character(1)}\cr

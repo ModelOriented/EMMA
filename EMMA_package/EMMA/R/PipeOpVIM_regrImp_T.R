@@ -114,7 +114,6 @@ PipeOpVIM_regrImp_T <-  R6::R6Class("VIM_regrImp_imputation",lock_objects=FALSE,
                                  }
                              )
 )
-mlr_pipeops$add("VIM_regrImp_imputation", PipeOpVIM_regrImp_T)
 
 
-resample(task,graph_learner,rsmp("holdout"))
+

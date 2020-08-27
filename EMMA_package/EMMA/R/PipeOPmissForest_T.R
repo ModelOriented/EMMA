@@ -89,7 +89,7 @@ PipeOpmissForest_T <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                  }
 
 
-                                 data_imputed <- autotune_missForest(data_to_impute,percent_of_missing = percent_of_missing,cores = self$param_set$values$cores,
+                                 data_imputed <- autotune_missForest(data_to_impute,col_type,percent_of_missing = percent_of_missing,cores = self$param_set$values$cores,
                                                                      ntree_set = self$param_set$values$ntree_set,mtry_set = self$param_set$values$mtry_set,
                                                                      parallel = self$param_set$values$parallel,
                                                                      col_0_1 = self$param_set$values$col_0_1,optimize = self$param_set$values$optimize,
@@ -114,7 +114,7 @@ PipeOpmissForest_T <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
 
 
 
-                                 data_imputed <- autotune_missForest(data_to_impute,percent_of_missing = percent_of_missing,cores = self$param_set$values$cores,
+                                 data_imputed <- autotune_missForest(data_to_impute,col_type,percent_of_missing = percent_of_missing,cores = self$param_set$values$cores,
                                                                      ntree_set = self$param_set$values$ntree_set,mtry_set = self$param_set$values$mtry_set,
                                                                      parallel = self$param_set$values$parallel,
                                                                      col_0_1 = self$param_set$values$col_0_1,optimize = self$param_set$values$optimize,

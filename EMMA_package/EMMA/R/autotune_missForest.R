@@ -23,7 +23,7 @@
 #' @param col_0_1 decide if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False.
 #'
 #' @return Return data.frame with imputed values.
-autotune_missForest <-function(df,percent_of_missing,cores=NULL,ntree_set =c(100,200,500,1000),mtry_set=NULL,parallel=TRUE,col_0_1=FALSE,
+autotune_missForest <-function(df,col_type,percent_of_missing,cores=NULL,ntree_set =c(100,200,500,1000),mtry_set=NULL,parallel=TRUE,col_0_1=FALSE,
                                optimize=TRUE,ntree=100,mtry=NULL,verbose=FALSE,maxiter=20,maxnodes=NULL,out_file=NULL){
 
   # Checking if parallel backed is runing and starting it if not
@@ -132,9 +132,13 @@ autotune_missForest <-function(df,percent_of_missing,cores=NULL,ntree_set =c(100
 
 
   return(final)}
+
   if (verbose){return(do_things())}
   if(!verbose){
     capture.output(final <- do_things())
+    for (i in colnames(final)[col_type=='integer']){
+      final[,i] <- as.integer(final[,i])
+    }
     return(final)
   }
   }
