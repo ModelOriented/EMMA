@@ -174,4 +174,3 @@ PipeOpVIM_regrImp <-  R6::R6Class("VIM_regrImp_imputation",lock_objects=FALSE,
 )
 mlr_pipeops$add("VIM_regrImp_imputation", PipeOpVIM_regrImp)
 
-

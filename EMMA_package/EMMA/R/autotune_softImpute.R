@@ -42,7 +42,7 @@ autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun
       if(rank.max<=0){rank.max <- 1}
     }
   #Numeric Imputation
-  if (sum(col_type=='numeric')>1){
+  if (sum(col_type=='numeric' | col_type=='integer')>1){
   result <- softImpute::softImpute(matrix,lambda = lambda,rank.max = 2,thresh = thresh,maxit = maxit)
   final <- softImpute::complete(matrix,result)
   }
@@ -51,7 +51,7 @@ autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun
     if(!is.null(out_file)){
       write('Not engouht numeric impute with function',file = out_file,append = T)
     }
-    j <- colnames(df)[col_type=='numeric']
+    j <- colnames(df)[col_type=='numeric' | col_type=='integer']
     col_to_imp <- df[,j]
     col_to_imp[is.na(col_to_imp)] <- cat_Fun(col_to_imp)
     j <- col_to_imp

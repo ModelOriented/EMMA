@@ -19,13 +19,13 @@
 #' \item \code{maxit} :: \code{integer(1)}\cr
 #' maximum number of iteration for mice, default \code{5}.
 #' \item \code{set_corr} :: \code{double(1)}\cr
-#' Correlation or fraction of featurs using if optimize= False, default \code{0.5}.
+#' Correlation or fraction of featurs using if optimize= False. When correlation == F  its represent a fraction of features to use in imputation for each variable.  default \code{0.5}.
 #' \item \code{set_method} :: \code{character(1)}\cr
 #' Method used if optimize=False. If NULL default method is used (more in methods_random section ), default \code{'pmm'}.
 #' \item \code{low_corr} :: \code{double(1)}\cr
-#' double betwen 0,1 default 0 lower boundry of correlation set, default \code{0}.
+#' double betwen 0,1 default 0 lower boundry of correlation used in inner optimization (used only when optimize == TRUE), default \code{0}.
 #' \item \code{up_corr} :: \code{double(1)}\cr
-#' double between 0,1 default 1 upper boundary of correlation set. Both of these parameters work the same for a fraction of features.,defoult \code{1}.
+#' double between 0,1 default 1 upper boundary of correlation set used in inner optimization (used only when optimize == TRUE). Both of these parameters work the same for a fraction of features if correlation == FALSE.,defoult \code{1}.
 #' \item \code{methods_random} :: \code{character(1)}\cr
 #' set of methods to chose. Default 'pmm'. If seted on NULL defoult method is used : By default, the method uses pmm, predictive mean matching (numeric data) logreg, logistic regression imputation (binary data, factor with 2 levels) polyreg, polytomous regression imputation for unordered categorical data (factor > 2 levels) polr, proportional odds model for (ordered, > 2 levels), default \code{c('pmm')}
 #' \item \code{iter} :: \code{integer(1)}\cr
@@ -43,7 +43,6 @@
 #'}
 #'
 #' @export
-
 PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                               inherit = PipeOpImpute,
                               public = list(
@@ -200,7 +199,7 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
 
                                   if(self$column_counter == 0 & self$flag=='train'){
                                     feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
-                                    self$flag=='predict'
+                                    self$flag <- 'predict'
                                     self$imputed_predict <- FALSE
                                   }
                                   self$train_s <- FALSE
@@ -213,4 +212,6 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                               )
 )
 mlr_pipeops$add("mice_imputation", PipeOpMice)
+
+
 

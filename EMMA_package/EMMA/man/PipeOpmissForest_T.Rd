@@ -18,11 +18,11 @@ The parameters are the parameters inherited from [`PipeOpTaskPreproc`], as well 
 \item \code{id} :: \code{character(1)}\cr
 Identifier of resulting object, default \code{"imput_missForest"}.
 \item \code{cores} :: \code{integer(1)}\cr
-Number of threads used by parallel calculations. By default approximately half of available CPU cores, default \code{NULL}.
+Number of threads used by parallel calculations. If NULL approximately half of available CPU cores will be used, default \code{NULL}.
 \item \code{ntree_set} :: \code{integer(1)}\cr
-Vector contains numbers of tree for grid search, default \code{c(100,200,500,1000)}.
+Vector contains numbers of tree for grid search, used only when optimize == TRUE,default \code{c(100,200,500,1000)}.
 \item \code{mtry_set} :: \code{integer(1)}\cr
-Vector contains numbers of variables randomly sampled at each split, default \code{NULL}.
+Vector contains numbers of variables randomly sampled at each split, used only when optimize == TRUE, default \code{NULL}.
 \item \code{parallel} :: \code{logical(1)}\cr
 If TRUE parallel calculation is using, default \code{TRUE}.
 \item \code{col_0_1} :: \code{logical(1)}\cr

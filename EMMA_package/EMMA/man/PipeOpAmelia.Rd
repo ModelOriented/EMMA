@@ -4,7 +4,7 @@
 \alias{PipeOpAmelia}
 \title{PipeOpAmelia}
 \description{
-Implements EMB methods as mlr3 pipeline more about amelia \code{\link{autotune_Amelia}}
+Implements EMB methods as mlr3 pipeline more about amelia \code{\link{autotune_Amelia}} or \url{https://cran.r-project.org/web/packages/Amelia/Amelia.pdf}
 }
 \section{Input and Output Channels}{
 
@@ -24,13 +24,13 @@ Integer between 0 and 3 indicating what power of polynomial should be included i
 \item \code{splinetime} :: \code{integer(1)}\cr
 interger value of 0 or greater to control cubic smoothing splines of time. Values between 0 and 3 create a simple polynomial of time (identical to the polytime argument). Values k greater than 3 create a spline with an additional k-3 knotpoints, default \code{NULL}.
 \item \code{intercs} :: \code{logical(1)}\cr
-Method used if optimize=False. If NULL default method is used (more in methods_random section ), default \code{FALSE}.
+Variable indicating if the time effects of polytime should vary across the cross-section., default \code{FALSE}.
 \item \code{empir} :: \code{double(1)}\cr
-Parameter pass to amelia function. If empir dont set  empir=nrow(df)*0.015, default \code{NULL}.
+Number indicating level of the empirical (or ridge) prior. This prior shrinks the covariances of the data, but keeps the means and variances the same for problems of high missingness, small N's or large correlations among the variables. Should be kept small, perhaps 0.5 to 1 percent of the rows of the data; a reasonable upper bound is around 10 percent of the rows of the data. If empir dont set  empir=nrow(df)*0.015, default \code{NULL}.
 \item \code{parallel} :: \code{double(1)}\cr
 If true parallel calculation is used, default \code{TRUE}.
 \item \code{col_0_1} :: \code{logical(1)}\cr
-	Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, Default \code{FALSE}.
+Decides if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, Default \code{FALSE}.
 \item \code{out_fill} :: \code{character(1)}\cr
 Output log file location if file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
 }

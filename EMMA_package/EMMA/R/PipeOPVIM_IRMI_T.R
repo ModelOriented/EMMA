@@ -18,15 +18,15 @@
 #' \item \code{maxit} :: \code{integer(1)}\cr
 #' Maximum number of iterations, default \code{100}
 #' \item \code{col_0_1} :: \code{logical(1)}\cr
-#' Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
+#' Decides if add bonus column informing where imputation has been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
 #' \item \code{step} :: \code{logical(1)}\cr
-#' Stepwise model selection is applied when the parameter is set to TRUE, defoult \code{FALSE}.
+#' Stepwise model selection is applied when the parameter is set to TRUE, default \code{FALSE}.
 #' \item \code{robust} :: \code{logical(1)}\cr
 #' 	If TRUE, robust regression methods will be applied (it's impossible to set step=TRUE and robust=TRUE at the same time), default \code{FALSE}.
 #' \item \code{init.method} :: \code{character(1)}\cr
 #' Method for initialization of missing values (kNN or median), default \code{'kNN'}.
 #' \item \code{force} :: \code{logical(1)}\cr
-#' If TRUE, the algorithm tries to find a solution in any case, possible by using different robust methods automatically. (should be set FALSE for simulation), defaault \code{FALSE}.
+#' If TRUE, the algorithm tries to find a solution in any case, possible by using different robust methods automatically. (should be set FALSE for simulation), default \code{FALSE}.
 #' \item \code{out_fill} :: \code{character(1)}\cr
 #' Output log file location if file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
 #'}
@@ -65,7 +65,8 @@ PipeOpVIM_IRMI_T <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
 
                                  .train_task=function(task){
 
-                                   data_to_impute =as.data.frame( task$data())
+                                   data_to_impute <- as.data.frame( task$data(cols = task$feature_names))
+                                   targer <- as.data.frame(task$data(cols = task$target_names))
                                    col_type <- 1:ncol(data_to_impute)
                                    for (i in col_type){
                                      col_type[i] <- class(data_to_impute[,i])
@@ -82,11 +83,12 @@ PipeOpVIM_IRMI_T <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
                                                                      init.method = self$param_set$values$init.method,force = self$param_set$values$force,
                                                                      out_file =self$param_set$values$out_file)
 
-                                   task$cbind(as.data.table(data_imputed))
+                                   task$cbind(as.data.table(cbind(targer,data_imputed)))
 
                                  },
                                  .predict_task=function(task){
-                                   data_to_impute =as.data.frame( task$data())
+                                   data_to_impute <- as.data.frame( task$data(cols = task$feature_names))
+                                   targer <- as.data.frame(task$data(cols = task$target_names))
                                    col_type <- 1:ncol(data_to_impute)
                                    for (i in col_type){
                                      col_type[i] <- class(data_to_impute[,i])
@@ -107,7 +109,7 @@ PipeOpVIM_IRMI_T <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
 
 
 
-                                   task$cbind(as.data.table(data_imputed))
+                                   task$cbind(as.data.table(cbind(targer,data_imputed)))
 
 
 
@@ -118,6 +120,5 @@ PipeOpVIM_IRMI_T <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
                              )
 )
 mlr_pipeops$add("VIM_IRMI_imputation", PipeOpVIM_IRMI_T)
-
 
 

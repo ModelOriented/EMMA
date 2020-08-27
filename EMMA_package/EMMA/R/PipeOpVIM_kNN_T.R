@@ -45,16 +45,17 @@ PipeOpVIM_kNN_T <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,
                                                 ))
                                )
 
-                          
-                               
-                               
+
+
+
 
 
                              }),private=list(
 
                                .train_task=function(task){
-                                 
-                                 data_to_impute =as.data.frame( task$data())
+
+                                 data_to_impute <- as.data.frame( task$data(cols = task$feature_names))
+                                 targer <- as.data.frame(task$data(cols = task$target_names))
                                  col_type <- 1:ncol(data_to_impute)
                                  for (i in col_type){
                                    col_type[i] <- class(data_to_impute[,i])
@@ -65,15 +66,15 @@ PipeOpVIM_kNN_T <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,
                                  }
                                  col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
-                                 
+
                                  data_imputed <- autotune_VIM_kNN(data_to_impute,percent_of_missing ,k =self$param_set$values$k,numFun = self$param_set$values$numFun,
                                                                   catFun = self$param_set$values$catFun,col_0_1 = self$param_set$values$col_0_1,out_file =self$param_set$values$out_file)
-                                 
-                                 task$cbind(as.data.table(data_imputed))
-                                 
+
+                                 task$cbind(as.data.table(cbind(targer,data_imputed)))
                                },
                                .predict_task=function(task){
-                                 data_to_impute =as.data.frame( task$data())
+                                 data_to_impute <- as.data.frame( task$data(cols = task$feature_names))
+                                 targer <- as.data.frame(task$data(cols = task$target_names))
                                  col_type <- 1:ncol(data_to_impute)
                                  for (i in col_type){
                                    col_type[i] <- class(data_to_impute[,i])
@@ -82,24 +83,24 @@ PipeOpVIM_kNN_T <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,
                                  for (i in percent_of_missing){
                                    percent_of_missing[i] <- (sum(is.na(data_to_impute[,i]))/length(data_to_impute[,1]))*100
                                  }
-                                 
-                                 
+
+
                                  col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
-                                 
+
                                  data_imputed <- autotune_VIM_kNN(data_to_impute,percent_of_missing ,k =self$param_set$values$k,numFun = self$param_set$values$numFun,
                                                                   catFun = self$param_set$values$catFun,col_0_1 = self$param_set$values$col_0_1,out_file =self$param_set$values$out_file)
-                                 
-                                 
-                                 
-                                 
-                                 
-                                 task$cbind(as.data.table(data_imputed))
-                                 
-                                 
-                                 
-                                 
-                                 
+
+
+
+
+
+                                 task$cbind(as.data.table(cbind(targer,data_imputed)))
+
+
+
+
+
                                }
                            )
 )

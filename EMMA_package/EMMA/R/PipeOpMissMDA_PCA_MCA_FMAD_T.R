@@ -73,7 +73,8 @@ PipeOpMissMDA_PCA_MCA_FMAD_T <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",l
                              }),private=list(
                                .train_task=function(task){
 
-                                 data_to_impute =as.data.frame( task$data())
+                                 data_to_impute <- as.data.frame( task$data(cols = task$feature_names))
+                                 targer <- as.data.frame(task$data(cols = task$target_names))
                                  col_type <- 1:ncol(data_to_impute)
                                  for (i in col_type){
                                    col_type[i] <- class(data_to_impute[,i])
@@ -93,11 +94,12 @@ PipeOpMissMDA_PCA_MCA_FMAD_T <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",l
                                                                       out_file =self$param_set$values$out_file )
 
 
-                                 task$cbind(as.data.table(data_imputed))
+                                 task$cbind(as.data.table(cbind(targer,data_imputed)))
 
                                },
                                .predict_task=function(task){
-                                 data_to_impute =as.data.frame( task$data())
+                                 data_to_impute <- as.data.frame( task$data(cols = task$feature_names))
+                                 targer <- as.data.frame(task$data(cols = task$target_names))
                                  col_type <- 1:ncol(data_to_impute)
                                  for (i in col_type){
                                    col_type[i] <- class(data_to_impute[,i])
@@ -121,7 +123,7 @@ PipeOpMissMDA_PCA_MCA_FMAD_T <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",l
 
 
 
-                                 task$cbind(as.data.table(data_imputed))
+                                 task$cbind(as.data.table(cbind(targer,data_imputed)))
 
 
 

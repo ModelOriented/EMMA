@@ -15,11 +15,11 @@
 #' \item \code{id} :: \code{character(1)}\cr
 #' Identifier of resulting object, default \code{"imput_missForest"}.
 #' \item \code{cores} :: \code{integer(1)}\cr
-#' Number of threads used by parallel calculations. By default approximately half of available CPU cores, default \code{NULL}.
+#' Number of threads used by parallel calculations. If NULL approximately half of available CPU cores will be used, default \code{NULL}.
 #' \item \code{ntree_set} :: \code{integer(1)}\cr
-#' Vector contains numbers of tree for grid search, default \code{c(100,200,500,1000)}.
+#' Vector contains numbers of tree for grid search, used only when optimize == TRUE,default \code{c(100,200,500,1000)}.
 #' \item \code{mtry_set} :: \code{integer(1)}\cr
-#' Vector contains numbers of variables randomly sampled at each split, default \code{NULL}.
+#' Vector contains numbers of variables randomly sampled at each split, used only when optimize == TRUE, default \code{NULL}.
 #' \item \code{parallel} :: \code{logical(1)}\cr
 #' If TRUE parallel calculation is using, default \code{TRUE}.
 #' \item \code{col_0_1} :: \code{logical(1)}\cr
@@ -70,14 +70,15 @@ PipeOpmissForest_T <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                )
 
 
-                               
-                               
+
+
 
                              }),private=list(
 
                                .train_task=function(task){
-                                 
-                                 data_to_impute =as.data.frame( task$data())
+
+                                 data_to_impute <- as.data.frame( task$data(cols = task$feature_names))
+                                 targer <- as.data.frame(task$data(cols = task$target_names))
                                  col_type <- 1:ncol(data_to_impute)
                                  for (i in col_type){
                                    col_type[i] <- class(data_to_impute[,i])
@@ -86,8 +87,8 @@ PipeOpmissForest_T <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                  for (i in percent_of_missing){
                                    percent_of_missing[i] <- (sum(is.na(data_to_impute[,i]))/length(data_to_impute[,1]))*100
                                  }
-                                 
-                                 
+
+
                                  data_imputed <- autotune_missForest(data_to_impute,percent_of_missing = percent_of_missing,cores = self$param_set$values$cores,
                                                                      ntree_set = self$param_set$values$ntree_set,mtry_set = self$param_set$values$mtry_set,
                                                                      parallel = self$param_set$values$parallel,
@@ -95,12 +96,13 @@ PipeOpmissForest_T <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                                                      ntree = self$param_set$values$ntree,mtry = self$param_set$values$mtry,
                                                                      maxiter=self$param_set$values$maxiter,maxnodes=self$param_set$values$maxnodes,verbose = F,
                                                                      out_file =self$param_set$values$out_file)
-                                 
-                                 task$cbind(as.data.table(data_imputed))
-                                 
+
+                                 task$cbind(as.data.table(cbind(targer,data_imputed)))
+
                                },
                                .predict_task=function(task){
-                                 data_to_impute =as.data.frame( task$data())
+                                 data_to_impute <- as.data.frame( task$data(cols = task$feature_names))
+                                 targer <- as.data.frame(task$data(cols = task$target_names))
                                  col_type <- 1:ncol(data_to_impute)
                                  for (i in col_type){
                                    col_type[i] <- class(data_to_impute[,i])
@@ -109,9 +111,9 @@ PipeOpmissForest_T <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                  for (i in percent_of_missing){
                                    percent_of_missing[i] <- (sum(is.na(data_to_impute[,i]))/length(data_to_impute[,1]))*100
                                  }
-                                 
-                                
-                                 
+
+
+
                                  data_imputed <- autotune_missForest(data_to_impute,percent_of_missing = percent_of_missing,cores = self$param_set$values$cores,
                                                                      ntree_set = self$param_set$values$ntree_set,mtry_set = self$param_set$values$mtry_set,
                                                                      parallel = self$param_set$values$parallel,
@@ -119,18 +121,18 @@ PipeOpmissForest_T <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                                                      ntree = self$param_set$values$ntree,mtry = self$param_set$values$mtry,
                                                                      maxiter=self$param_set$values$maxiter,maxnodes=self$param_set$values$maxnodes,verbose = F,
                                                                      out_file =self$param_set$values$out_file)
-                                 
-                                 
-                                 
-                                 
-                                 task$cbind(as.data.table(data_imputed))
-                                 
-                                 
-                                 
-                                 
-                                 
+
+
+
+
+                                 task$cbind(as.data.table(cbind(targer,data_imputed)))
+
+
+
+
+
                                }
-                               
+
 
                            )
 )

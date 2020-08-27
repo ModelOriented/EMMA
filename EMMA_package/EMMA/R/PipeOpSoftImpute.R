@@ -14,25 +14,24 @@
 #' \item \code{id} :: \code{character(1)}\cr
 #' Identifier of resulting object, default \code{"imput_softImpute"}.
 #' \item \code{lambda} :: \code{integer(1)}\cr
-#' nuclear-norm regularization parameter. If lambda=0, the algorithm reverts to "hardImpute", for which convergence is typically slower. If null lambda is set automatically at the highest possible values, default \code{0}.
+#' Nuclear-norm regularization parameter. If lambda=0, the algorithm reverts to "hardImpute", for which convergence is typically slower. If NULL lambda is set automatically at the highest possible values, default \code{0}.
 #' \item \code{rank.max} :: \code{integer(1)}\cr
 #' This restricts the rank of the solution. Defoult 2 if set as NULL rank.max=min(dim(X))-1, default \code{2}.
 #' \item \code{type} :: \code{character(1)}\cr
-#' Chose of algoritm 'als' or 'svd', defoult \code{'als'}.
+#' Two algorithms are implements, type="svd" or the default type="als". The "svd" algorithm repeatedly computes the svd of the completed matrix, and soft thresholds its singular values. Each new soft-thresholded svd is used to re-impute the missing entries. For large matrices of class "Incomplete", the svd is achieved by an efficient form of alternating orthogonal ridge regression. The "als" algorithm uses this same alternating ridge regression, but updates the imputation at each step, leading to quite substantial speedups in some cases. The "als" approach does not currently have the same theoretical convergence guarantees as the "svd" approach, defoult \code{'als'}.
 #' \item \code{thresh} :: \code{double(1)}\cr
 #' Threshold for convergence, default \code{1e-5}
 #' \item \code{maxit} :: \code{integer(1)}\cr
 #' Maximum number of iterations, default \code{100}.
 #' \item \code{col_0_1} :: \code{logical(1)}\cr
-#' Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
+#' Decides if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
 #' \item \code{cat_Fun} :: \code{function(){}}\cr
-#' Function for aggregating the k Nearest Neighbours in the case of a categorical variable, default \code{VIM::maxCat}
+#' Function for aggregating the k Nearest Neighbours in the case of a categorical variable. Can be ever function with input=not_numeric_vector and output=atomic_object  default \code{VIM::maxCat}
 #' \item \code{out_fill} :: \code{character(1)}\cr
 #' Output log file location if file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
 #'}
 #'
 #' @export
-
 
 
 
@@ -67,6 +66,7 @@ PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
                                  }),private=list(
 
                                  .train_imputer=function(feature, type, context){
+
                                    imp_function <- function(data_to_impute){
 
 
@@ -187,3 +187,6 @@ PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
 )
 mlr_pipeops$add("softImpute_imputation",PipeOpSoftImpute)
 
+#resample(TaskClassif$new('t',as.data.frame(task$data()),'binaryClass'),graph_learner,rsmp("holdout"))
+# d<- PipeOpSoftImpute$new()
+# d$train(list(task))
