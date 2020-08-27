@@ -1,0 +1,332 @@
+INFO  [14:57:31.307] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable Type_schoolvocational is perfectly collinear with another variable in the data.
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable Type_schoolvocational is perfectly collinear with another variable in the data.
+
+INFO  [14:57:31.861] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 2/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable Type_schoolvocational is perfectly collinear with another variable in the data.
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable Type_schoolvocational is perfectly collinear with another variable in the data.
+
+INFO  [14:57:32.466] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 3/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable Type_schoolvocational is perfectly collinear with another variable in the data.
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable Type_schoolvocational is perfectly collinear with another variable in the data.
+
+
+
+The resulting variance matrix was not invertible.   Please check your data for highly collinear variables.
+
+INFO  [14:57:33.226] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 4/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable Type_schoolvocational is perfectly collinear with another variable in the data.
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable Type_schoolvocational is perfectly collinear with another variable in the data.
+
+INFO  [14:57:34.037] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 5/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable Type_schoolvocational is perfectly collinear with another variable in the data.
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable Type_schoolvocational is perfectly collinear with another variable in the data.
+
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3543: irish (Supervised Classification)
+* Learner: imput_Amelia.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+     0.008 
+
+
+INFO  [14:57:37.314] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 3722: hungarian (Supervised Classification)' (iter 1/5) 
+Amelia Error Code:  4 
+ The data has a column that is completely missing or only has one,observation.  Remove these columns: ca 
+Error in try({ : ERROR
+
+
+INFO  [14:57:38.587] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variables (or variable with levels) A5p, A5gg are perfectly collinear with another variable in the data.
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable A5p is perfectly collinear with another variable in the data.
+
+INFO  [14:57:39.555] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 2/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variables (or variable with levels) A5p, A5gg are perfectly collinear with another variable in the data.
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variables (or variable with levels) A5p, A5gg are perfectly collinear with another variable in the data.
+
+INFO  [14:57:40.534] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 3/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variables (or variable with levels) A5p, A5gg are perfectly collinear with another variable in the data.
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variables (or variable with levels) A5p, A7dd, A7ff are perfectly collinear with another variable in the data.
+
+INFO  [14:57:41.738] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 4/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variables (or variable with levels) A5p, A5gg are perfectly collinear with another variable in the data.
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variables (or variable with levels) A5p, A5gg, A7j are perfectly collinear with another variable in the data.
+
+INFO  [14:57:43.012] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 5/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variables (or variable with levels) A5p, A5gg are perfectly collinear with another variable in the data.
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variables (or variable with levels) A5p, A7j, A7ff are perfectly collinear with another variable in the data.
+
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 29: credit-approval (Supervised Classification)
+* Learner: imput_Amelia.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+  0.142029 
+
+
+INFO  [14:57:45.406] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 1/5) 
+Amelia Error Code:  36 
+ The number of categories in the nominal variable 'name' is greater than one-third of the observations. 
+Error in try({ : ERROR
+
+
+INFO  [14:57:46.758] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 14954: cylinder-bands (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Amelia Error Code:  43 
+ You have a variable in your dataset that does not vary.  Please remove this variable. Variables that do not vary:  cylinder_division, ink_color 
+Error in try({ : ERROR
+
+
+INFO  [14:57:48.084] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie w poleceniu 'amelia.prep(x = x, m = m, idvars = idvars, empri = empri, ts = ts, ':
+  You have a small number of observations, relative to the number, of variables in the imputation model.  Consider removing some variables, or reducing the order of time polynomials to reduce the number of parameters.
+
+error: inv_sympd(): matrix is singular or not positive definite
+
+error: inv_sympd(): matrix is singular or not positive definite
+
+error: inv_sympd(): matrix is singular or not positive definite
+
+error: inv_sympd(): matrix is singular or not positive definite
+
+
+The resulting variance matrix was not invertible.   Please check your data for highly collinear variables.
+
+Error in try({ : ERROR
+
+
+INFO  [14:57:49.855] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 3561: profb (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Amelia Error Code:  43 
+ You have a variable in your dataset that does not vary.  Please remove this variable. Variables that do not vary:  Overtime 
+Error in try({ : ERROR
+
+
+INFO  [14:57:51.157] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 1/5) 
+INFO  [14:57:51.682] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 2/5) 
+INFO  [14:57:52.348] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 3/5) 
+INFO  [14:57:52.948] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 4/5) 
+INFO  [14:57:53.646] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3675: pbc (Supervised Classification)
+* Learner: imput_Amelia.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2968445 
+
+
+INFO  [14:57:55.727] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+INFO  [14:57:56.195] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 2/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+INFO  [14:57:57.041] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 3/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+INFO  [14:57:57.346] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 4/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+INFO  [14:57:58.320] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 5/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amelia.prep(x = x, m = m, idvars = idvars, empri = empri, ts = ts, ':
+  You have a small number of observations, relative to the number, of variables in the imputation model.  Consider removing some variables, or reducing the order of time polynomials to reduce the number of parameters.
+
+
+The resulting variance matrix was not invertible.   Please check your data for highly collinear variables.
+
+Error in try({ : ERROR
+
+
+INFO  [14:57:59.713] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Error in `contrasts<-`(`*tmp*`, value = contr.funs[1 + isOF[nn]]) : 
+  contrasts can be applied only to factors with 2 or more levels
+
+
+Successful evaluation: 3/10 tasks
+
+
