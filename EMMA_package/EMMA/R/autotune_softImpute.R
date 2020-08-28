@@ -45,6 +45,7 @@ autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun
   if (sum(col_type=='numeric' | col_type=='integer')>1){
   result <- softImpute::softImpute(matrix,lambda = lambda,rank.max = 2,thresh = thresh,maxit = maxit)
   final <- softImpute::complete(matrix,result)
+
   }
   else {
     print('Not enought numeric')
@@ -62,7 +63,7 @@ autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun
   iter_vec <- colnames(df)[col_type=='factor' & percent_of_missing>0]
   for (i in iter_vec){
     col_to_imp <- df[,i]
-    col_to_imp[is.na(col_to_imp)] <- cat_Fun(col_to_imp)
+    col_to_imp[is.na(col_to_imp)] <- cat_Fun(col_to_imp[!is.na(col_to_imp)])
     df[,i] <- col_to_imp
   }
 
@@ -98,6 +99,7 @@ autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun
 
 
 }
+
 
 
 
