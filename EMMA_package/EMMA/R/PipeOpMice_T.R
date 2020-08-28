@@ -10,36 +10,36 @@
 #'
 #'
 #' @section Parameters:
-#' The parameters are the parameters inherited from [`PipeOpTaskPreproc`], as well as: \cr
+#' The parameters include inherited from [`PipeOpTaskPreproc`], as well as: \cr
 #' \itemize{
 #' \item \code{id} :: \code{character(1)}\cr
 #' Identifier of resulting object, default \code{"imput_mice"}.
 #' \item \code{m} :: \code{integer(1)}\cr
-#' number of sets produced by mice, default \code{5}.
+#' Number of datasets produced by mice, default \code{5}.
 #' \item \code{maxit} :: \code{integer(1)}\cr
-#' maximum number of iteration for mice, default \code{5}.
+#' Maximum number of iterations for mice, default \code{5}.
 #' \item \code{set_corr} :: \code{double(1)}\cr
-#' Correlation or fraction of featurs using if optimize= False. When correlation == F  its represent a fraction of features to use in imputation for each variable.  default \code{0.5}.
+#' Correlation or fraction of features used when optimize=FALSE. When correlation=FALSE, it represents a fraction of features to use in imputation for each variable, default \code{0.5}.
 #' \item \code{set_method} :: \code{character(1)}\cr
-#' Method used if optimize=False. If NULL default method is used (more in methods_random section ), default \code{'pmm'}.
+#' Method used if optimize=FALSE. If NULL default method is used (more in methods_random section), default \code{'pmm'}.
 #' \item \code{low_corr} :: \code{double(1)}\cr
-#' double betwen 0,1 default 0 lower boundry of correlation used in inner optimization (used only when optimize == TRUE), default \code{0}.
+#' Double between 0-1. Lower boundary of correlation used in inner optimization (used only when optimize=TRUE), default \code{0}.
 #' \item \code{up_corr} :: \code{double(1)}\cr
-#' double between 0,1 default 1 upper boundary of correlation set used in inner optimization (used only when optimize == TRUE). Both of these parameters work the same for a fraction of features if correlation == FALSE.,defoult \code{1}.
+#' Double between 0-1. Upper boundary of correlation used in inner optimization (used only when optimize=TRUE). Both of these parameters work the same for a fraction of features if correlation=FALSE,default \code{1}.
 #' \item \code{methods_random} :: \code{character(1)}\cr
-#' set of methods to chose. Default 'pmm'. If seted on NULL defoult method is used : By default, the method uses pmm, predictive mean matching (numeric data) logreg, logistic regression imputation (binary data, factor with 2 levels) polyreg, polytomous regression imputation for unordered categorical data (factor > 2 levels) polr, proportional odds model for (ordered, > 2 levels), default \code{c('pmm')}
+#' Set of methods to choose. Default 'pmm'. If set on NULL, default method is used. Methods: "pmm"-predictive mean matching (numeric data), "logreg"-logistic regression imputation (binary data, factor with 2 levels), "polyreg"-polytomous regression imputation for unordered categorical data (factor > 2 levels), "polr"-proportional odds model for (ordered, > 2 levels), default \code{c('pmm')}.
 #' \item \code{iter} :: \code{integer(1)}\cr
-#' number of iteration for randomSearch, default \code{5}.
+#' Number of iteration for random search, default \code{5}.
 #' \item \code{random.seed} :: \code{integer(1)}\cr
-#' random seed, default \code{123}.
+#' Random seed, default \code{123}.
 #' \item \code{optimize} :: \code{logical(1)}\cr
-#' If set TRUE function will optimize parametrs of imputation automaticlly. If parametrs will be tune by other methode shoude be set as FALSE, default \code{FALSE}.
+#' If set TRUE, function will optimize parameters of imputation automatically. If parameters will be tuned by other method, should be set to FALSE, default \code{FALSE}.
 #' \item \code{correlation} :: \code{logical(1)}\cr
-#' If True correlation is using if Fales fraction of features, default \code{TRUE}.
+#' If set TRUE correlation is used, if set FALSE then fraction of features, default \code{TRUE}.
 #' \item \code{col_0_1} :: \code{logical(1)}\cr
-#'  if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, Default \code{FALSE}.
+#' Decides whether to add a bonus column informing where values were imputed. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
 #' \item \code{out_fill} :: \code{character(1)}\cr
-#' Output log file location if file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
+#' Output log file location. If file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
 #'}
 #'
 #' @export
