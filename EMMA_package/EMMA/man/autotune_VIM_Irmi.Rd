@@ -6,6 +6,7 @@
 \usage{
 autotune_VIM_Irmi(
   df,
+  col_type,
   percent_of_missing,
   eps = 5,
   maxit = 100,
