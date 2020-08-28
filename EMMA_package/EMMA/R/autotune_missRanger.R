@@ -27,7 +27,12 @@ autotune_missRanger <- function(df,percent_of_missing,maxiter=10,random.seed=123
     write('missRanger',file = out_file,append = T)
   }
   if(sum(is.na(df))==0){return(df)}
-
+  if(sum(percent_of_missing==100)>0){
+    if(!is.null(out_file)){
+      write('Feature contains only NA',file = out_file,append = T)
+    }
+    stop('Feature contains only NA')
+  }
 
   if(!is.null(pmm.k)){
     if(!optimize & pmm.k==0){
