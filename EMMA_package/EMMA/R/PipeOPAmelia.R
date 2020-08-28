@@ -203,11 +203,9 @@ mlr_pipeops$add("Amelia_imputation", PipeOpAmelia)
 #
 #
 # #
-# graph <- PipeOpVIM_regrImp$new() %>>% pipe_encoding %>>% pipe_model
-#  graph_learner <- GraphLearner$new(graph)
-#  task <- mlr3oml::OMLTask$new(id = id)
-#  task <- task$task
-# #
-# #
+
+
+
+
 #  resample(task,graph_learner,rsmp("holdout"))
 #

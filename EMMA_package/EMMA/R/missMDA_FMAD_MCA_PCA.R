@@ -35,9 +35,9 @@ missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=TRU
   MCA <-  FALSE # categorical
   PCA <- FALSE # numeric
 
-  if ('factor' %in% col_type & ( 'numeric' %in%col_type | 'intiger' %in%col_type)){FMAD <- TRUE  }
-  if ('factor' %in%col_type & !( 'numeric' %in% col_type | 'intiger' %in% col_type)){MCA <- TRUE}
-  if ( !('factor' %in%col_type) & ( 'numeric' %in%col_type | 'intiger' %in%col_type)){PCA <-TRUE }
+  if ('factor' %in% col_type & ( 'numeric' %in%col_type | 'integer' %in%col_type)){FMAD <- TRUE  }
+  if ('factor' %in%col_type & !( 'numeric' %in% col_type | 'integer' %in% col_type)){MCA <- TRUE}
+  if ( !('factor' %in%col_type) & ( 'numeric' %in%col_type | 'integer' %in%col_type)){PCA <-TRUE }
 
   if(!is.null(out_file)){
 
@@ -54,7 +54,12 @@ missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=TRU
     if(MCA){set_ncp <- missMDA::estim_ncpMCA(df,method = method,ncp.max = ncp.max)$ncp}
     if(PCA){set_ncp <- missMDA::estim_ncpPCA(df,method = method,ncp.max = ncp.max)$ncp}
     },error = function(e) { Fail <<- TRUE})
-    if (Fail){print('Fail to estimate ncp')}
+    if (Fail){print('Fail to estimate ncp')
+
+      if(!is.null(out_file)){
+
+        write('Fail to estimate ncp',file = out_file,append = T)
+      }}
   }
 
   if (return_one){
@@ -83,7 +88,11 @@ missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=TRU
     columns_with_missing <-  (as.data.frame(is.na(df))*1)[,percent_of_missing>0]
     colnames(columns_with_missing) <- paste(colnames(columns_with_missing),'where',sep='_')
     final <- cbind(final,columns_with_missing)
-  }
+    }
+    for (i in colnames(final)[col_type=='integer']){
+      final[,i] <- as.integer(final[,i])
+    }
+
   return(final)}
   },error=function(e){
     if(!is.null(out_file)){

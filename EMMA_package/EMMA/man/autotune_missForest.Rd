@@ -6,6 +6,7 @@
 \usage{
 autotune_missForest(
   df,
+  col_type,
   percent_of_missing,
   cores = NULL,
   ntree_set = c(100, 200, 500, 1000),
