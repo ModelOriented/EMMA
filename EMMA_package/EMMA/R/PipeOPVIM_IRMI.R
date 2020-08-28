@@ -184,4 +184,3 @@ PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
 )
 mlr_pipeops$add("VIM_IRMI_imputation", PipeOpVIM_IRMI)
 
-

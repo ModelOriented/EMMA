@@ -21,7 +21,7 @@
 #' \item \code{mtry_set} :: \code{integer(1)}\cr
 #' Vector contains numbers of variables randomly sampled at each split, used only when optimize == TRUE, default \code{NULL}.
 #' \item \code{parallel} :: \code{logical(1)}\cr
-#' If TRUE parallel calculation is using, default \code{TRUE}.
+#' If TRUE parallel calculation is using, default \code{FALSE}.
 #' \item \code{col_0_1} :: \code{logical(1)}\cr
 #' Decide if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{False}.
 #' \item \code{ntree} :: \code{integer(1)}\cr
@@ -43,7 +43,7 @@
 PipeOpmissForest_T <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                            inherit = PipeOpTaskPreproc,  # inherit from PipeOp
                            public = list(
-                             initialize = function(id = "imput_missForest", cores=NULL,ntree_set=c(100,200,500,1000),mtry_set=NULL,parallel=TRUE
+                             initialize = function(id = "imput_missForest", cores=NULL,ntree_set=c(100,200,500,1000),mtry_set=NULL,parallel=FALSE
                                                   ,col_0_1=FALSE,mtry=NULL,ntree=100,optimize=FALSE,maxiter=20,maxnodes=NULL,out_file=NULL
                              ) {
                                super$initialize(id,param_vals = list(cores =cores,ntree_set =ntree_set,mtry_set=mtry_set,parallel=parallel,
@@ -53,7 +53,7 @@ PipeOpmissForest_T <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                                   'ntree_set'=ParamUty$new('ntree_set', default = c(100,200,500,1000), tags = 'missForest'),
                                                   'cores'=ParamUty$new('cores',default = NULL,tags='missForest'),
                                                   'mtry_set'=ParamUty$new('mtry_set',default = NULL,tags='missForest'),
-                                                  'parallel'=ParamLgl$new('parallel',default = TRUE,tags = 'missForest'),
+                                                  'parallel'=ParamLgl$new('parallel',default = FALSE,tags = 'missForest'),
                                                   'col_0_1'=ParamLgl$new('col_0_1',default = F,tags='missForest'),
                                                   'mtry'=ParamUty$new('mtry',default = NULL,tags='missForest'),
                                                   'ntree'=ParamInt$new('ntree',lower = 10,upper = Inf,default = 100,tags='missForest'),
