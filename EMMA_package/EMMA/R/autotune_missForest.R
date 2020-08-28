@@ -72,6 +72,12 @@ autotune_missForest <-function(df,col_type,percent_of_missing,cores=NULL,ntree_s
   if(!is.null(out_file)){
     write('missForest',file = out_file,append = T)
   }
+  if(sum(percent_of_missing==100)>0){
+    if(!is.null(out_file)){
+      write('column with only missing values error',file = out_file,append = T)
+    }
+    stop('column with only missing values error')
+  }
   tryCatch({
  if (optimize){
   # Grid search using mean OBBerror
