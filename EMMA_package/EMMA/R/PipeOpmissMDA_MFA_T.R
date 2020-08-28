@@ -1,16 +1,16 @@
-#' @title PipeOpmissMDA_MFA
+#' @title PipeOpmissMDA_MFA_T
 #'
-#' @name PipeOpmissMDA_MFA
+#' @name PipeOpmissMDA_MFA_T
 #'
 #' @description
 #' Implements MFA methods as mlr3 pipeline more about MFA \code{\link{missMDA_MFA}}
 #'
 #' @section Input and Output Channels:
-#' Input and output channels are inherited from \code{\link{PipeOpImpute}}.
+#' Input and output channels are inherited from \code{\link{PipeOpTaskPreproc}}.
 #'
 #'
 #' @section Parameters:
-#' The parameters are the parameters inherited from [`PipeOpImpute`], as well as: \cr
+#' The parameters are the parameters inherited from [`PipeOpTaskPreproc`], as well as: \cr
 #' \itemize{
 #' \item \code{id} :: \code{character(1)}\cr
 #' Identifier of resulting object, default \code{"imput_missMDA_MFA"}.
@@ -37,13 +37,13 @@
 
 
 
-PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
-                                           inherit = PipeOpImpute,  # inherit from PipeOp
+PipeOpMissMDA_MFA_T <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
+                                           inherit = PipeOpTaskPreproc,  # inherit from PipeOp
                                            public = list(
                                              initialize = function(id = "imput_missMDA_MFA",col_0_1=F,ncp=2,random.seed=123,maxiter=998,
                                                                    coeff.ridge=1,threshold=1e-06,method='Regularized',out_file=NULL
                                              ) {
-                                               super$initialize(id,whole_task_dependent=TRUE, param_vals = list(col_0_1=col_0_1,ncp=ncp,random.seed=random.seed,
+                                               super$initialize(id, param_vals = list(col_0_1=col_0_1,ncp=ncp,random.seed=random.seed,
                                                                                       maxiter=maxiter,coeff.ridge=coeff.ridge,threshold=threshold,method=method,
                                                                                       out_file=out_file),
                                                                 param_set= ParamSet$new(list(
@@ -66,20 +66,16 @@ PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
                                                )
 
 
-                                               self$imputed <- FALSE
-                                               self$column_counter <- NULL
-                                               self$data_imputed <- NULL
+
+
+
 
                                              }),private=list(
 
-                                             .train_imputer=function(feature, type, context){
-                                                 imp_function <- function(data_to_impute){
+                                               .train_task=function(task){
 
-
-
-
-                                                 data_to_impute <- as.data.frame(data_to_impute)
-                                                 # prepering arguments for function
+                                                 data_to_impute <- as.data.frame( task$data(cols = task$feature_names))
+                                                 targer <- as.data.frame(task$data(cols = task$target_names))
                                                  col_type <- 1:ncol(data_to_impute)
                                                  for (i in col_type){
                                                    col_type[i] <- class(data_to_impute[,i])
@@ -97,42 +93,11 @@ PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
                                                                              threshold =  self$param_set$values$threshold,method =  self$param_set$values$method,
                                                                              out_file =self$param_set$values$out_file)
 
-
-
-
-
-                                                 return(data_imputed)
-                                               }
-
-                                               self$imputed_predict <- TRUE
-                                               self$flag <- 'train'
-                                               if(!self$imputed){
-                                                 self$column_counter <- ncol(context)+1
-                                                 self$imputed <- TRUE
-                                                 data_to_impute <- cbind(feature,context)
-                                                 self$data_imputed <- imp_function(data_to_impute)
-                                                 colnames(self$data_imputed) <- self$state$context_cols
-
-                                               }
-                                               if(self$imputed){
-                                                 self$column_counter <- self$column_counter -1
-
-                                               }
-                                               if  (self$column_counter==0){
-                                                 self$imputed <- FALSE
-                                               }
-                                               self$train_s <- TRUE
-                                               return(NULL)
-
-                                             },
-                                             .impute=function(feature, type, model, context){
-                                                 imp_function <- function(data_to_impute){
-
-
-
-
-                                                 data_to_impute <- as.data.frame(data_to_impute)
-                                                 # prepering arguments for function
+                                                 task$cbind(as.data.table(cbind(targer,data_imputed)))
+                                               },
+                                               .predict_task=function(task){
+                                                 data_to_impute <- as.data.frame( task$data(cols = task$feature_names))
+                                                 targer <- as.data.frame(task$data(cols = task$target_names))
                                                  col_type <- 1:ncol(data_to_impute)
                                                  for (i in col_type){
                                                    col_type[i] <- class(data_to_impute[,i])
@@ -141,6 +106,8 @@ PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
                                                  for (i in percent_of_missing){
                                                    percent_of_missing[i] <- (sum(is.na(data_to_impute[,i]))/length(data_to_impute[,1]))*100
                                                  }
+
+
                                                  col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
@@ -153,51 +120,16 @@ PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
 
 
 
+                                                 task$cbind(as.data.table(cbind(targer,data_imputed)))
 
-                                                 return(data_imputed)
-                                               }
-                                               if (self$imputed){
-
-                                                 feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
 
 
 
                                                }
-                                               if((nrow(self$data_imputed)!=nrow(context) | !self$train_s) & self$flag=='train') {
-                                                 self$imputed_predict <- FALSE
-                                                 self$flag <- 'predict'
-                                               }
 
-                                               if(!self$imputed_predict){
-                                                 data_to_impute <- cbind(feature,context)
-                                                 colnames(data_to_impute)[1] <- setdiff(self$state$context_cols,colnames(context))
-                                                 # its important to keep the same columns order
-                                                 data_to_impute <- as.data.frame(data_to_impute)[,self$state$context_cols]
-                                                 self$data_imputed <- imp_function(data_to_impute)
-
-
-
-                                                 self$imputed_predict <- TRUE
-                                               }
-
-
-                                               if (self$imputed_predict & self$flag=='predict' ){
-                                                 feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
-
-                                               }
-
-                                               if(self$column_counter == 0 & self$flag=='train'){
-                                                 feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
-                                                 self$flag <- 'predict'
-                                                 self$imputed_predict <- FALSE
-                                               }
-                                                 self$train_s <- FALSE
-
-                                               return(feature)
-                                             }
                                            )
 )
 
-mlr_pipeops$add("missMDA_MFAimputation", PipeOpMissMDA_MFA)
+mlr_pipeops$add("missMDA_MFAimputation", PipeOpMissMDA_MFA_T)
 
 

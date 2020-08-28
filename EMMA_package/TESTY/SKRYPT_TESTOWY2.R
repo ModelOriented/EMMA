@@ -115,12 +115,12 @@
 
 
 
-    list_of_pipe <- c(PipeOpMice,PipeOpTEST)
-
+    list_of_pipe <- c(PipeOpMice,PipeOpAmelia,PipeOpmissForest,PipeOpmissRanger,PipeOpMissMDA_MFA,PipeOpMissMDA_PCA_MCA_FMAD,PipeOpVIM_HD,
+                      PipeOpVIM_IRMI,PipeOpVIM_kNN,PipeOpVIM_regrImp)
 
     for(id in datasets_Ids){
 
-      df_oml <- getOMLDataSet(id)
+      df_oml <- getOMLDataSet(3793)
 
       df <- preprocess(df_oml,0.9)[[1]]
 
@@ -168,4 +168,4 @@
 
 
 
-
+PipeOp
