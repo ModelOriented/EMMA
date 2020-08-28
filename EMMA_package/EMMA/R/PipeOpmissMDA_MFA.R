@@ -201,3 +201,4 @@ PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
 mlr_pipeops$add("missMDA_MFAimputation", PipeOpMissMDA_MFA)
 
 
+
