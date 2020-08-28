@@ -38,14 +38,14 @@ formula_creating <- function(df,col_miss,col_no_miss,col_type,percent_of_missing
 
     else{
       columns_missing_type <- as.data.frame(cbind(percent_of_missing,colnames(df),col_type))
-      columns_missing_type_n_i <- columns_missing_type[columns_missing_type$coll_type=='numeric' | columns_missing_type$coll_type == 'initger',]
+      columns_missing_type_n_i <- columns_missing_type[columns_missing_type$col_type=='numeric' | columns_missing_type$col_type == 'initger',]
       if (length(row.names(columns_missing_type_n_i))>=1) {
-        predicted_value <- columns_missing_type_n_i[order(columns_missing$percent_of_missing),][1]}
+        predicted_value <- columns_missing_type_n_i[order(columns_missing_type$percent_of_missing),'V2'][1]}
       else {no_numeric <-  T }
       if (length(row.names(columns_missing_type[-1,]))>=3){
         predicting_values <-  columns_missing_type[order(as.numeric(as.character(columns_missing_type$percent_of_missing)),decreasing = T),'V2'][1:3]
       }
-      else{predicting_value <-setdiff(predicted_value,col_miss)}
+      else{predicting_values <-setdiff(col_miss,as.character(predicted_value))}
     }
 
 
@@ -72,7 +72,7 @@ formula_creating <- function(df,col_miss,col_no_miss,col_type,percent_of_missing
 #' Performing randomSearch for selecting the best method and correlation or fraction of features used to create a prediction matrix.
 #'
 #' @description This function perform random search and return values corresponding to best mean MIF (missing information fraction). Function is mainly used in \code{\link{autotune_mice}} but can be use separately.
-#' @details Function use Random Search Technik to found the best param for mice imputation. To evaluate the next iteration logistic regression or linear regression (depending on available features) are used. Model is build using a formula from \code{\link{forumla_creating}} function. As metric MIF (missing information fraction) is used. Params combination with lowest (best) MIF is chosen. Even if a correlation is set at False correlation it's still used to select the best features. That main problem with
+#' @details Function use Random Search Technik to found the best param for mice imputation. To evaluate the next iteration logistic regression or linear regression (depending on available features) are used. Model is build using a formula from \code{\link{formula_creating}} function. As metric MIF (missing information fraction) is used. Params combination with lowest (best) MIF is chosen. Even if a correlation is set at False correlation it's still used to select the best features. That main problem with
 #' calculating correlation between categorical columns is still important.
 #' @param low_corr double between 0,1 default 0 lower boundry of correlation set.
 #' @param up_corr double between 0,1 default 1 upper boundary of correlation set. Both of these parameters work the same for a fraction of features.

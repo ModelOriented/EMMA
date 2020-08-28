@@ -23,11 +23,12 @@
 #' @param col_0_1 decide if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False.
 #'
 #' @return Return data.frame with imputed values.
-autotune_missForest <-function(df,percent_of_missing,cores=NULL,ntree_set =c(100,200,500,1000),mtry_set=NULL,parallel=TRUE,col_0_1=FALSE,
+autotune_missForest <-function(df,col_type,percent_of_missing,cores=NULL,ntree_set =c(100,200,500,1000),mtry_set=NULL,parallel=TRUE,col_0_1=FALSE,
                                optimize=TRUE,ntree=100,mtry=NULL,verbose=FALSE,maxiter=20,maxnodes=NULL,out_file=NULL){
 
   # Checking if parallel backed is runing and starting it if not
- do_things <- function(){
+ do_things <- function(df,col_type,percent_of_missing,cores=NULL,ntree_set =c(100,200,500,1000),mtry_set=NULL,parallel=TRUE,col_0_1=FALSE,
+                       optimize=TRUE,ntree=100,mtry=NULL,maxiter=20,maxnodes=NULL,out_file=NULL){
   if(is.null(cores)){
   if (parallel){
     veribles = ncol(df)
@@ -64,13 +65,19 @@ autotune_missForest <-function(df,percent_of_missing,cores=NULL,ntree_set =c(100
   # If parallel=TRUE
   parallelize <- 'no'
   if (parallel){
-    parallelize <-  'variables'}
+    parallelize <-  'forest'}
   if (!is.null(cores)){
   if(cores<=1){parallelize <- 'no'}}
 
 
   if(!is.null(out_file)){
     write('missForest',file = out_file,append = T)
+  }
+  if(sum(percent_of_missing==100)>0){
+    if(!is.null(out_file)){
+      write('column with only missing values error',file = out_file,append = T)
+    }
+    stop('column with only missing values error')
   }
   tryCatch({
  if (optimize){
@@ -132,9 +139,18 @@ autotune_missForest <-function(df,percent_of_missing,cores=NULL,ntree_set =c(100
 
 
   return(final)}
-  if (verbose){return(do_things())}
+
+  if (verbose){return(do_things(df=df,col_type=col_type,percent_of_missing=percent_of_missing,cores=cores,ntree_set =ntree_set,mtry_set=mtry_set,parallel=parallel,col_0_1=col_0_1,
+                                optimize=optimize,ntree=ntree,mtry=mtry,maxiter=maxiter,maxnodes=maxnodes,out_file=out_file))}
   if(!verbose){
-    capture.output(final <- do_things())
+    capture.output(final <- do_things(df=df,col_type=col_type,percent_of_missing=percent_of_missing,cores=cores,ntree_set =ntree_set,mtry_set=mtry_set,parallel=parallel,col_0_1=col_0_1,
+                                      optimize=optimize,ntree=ntree,mtry=mtry,maxiter=maxiter,maxnodes=maxnodes,out_file=out_file))
+    for (i in colnames(final)[col_type=='integer']){
+      final[,i] <- as.integer(final[,i])
+    }
     return(final)
   }
   }
+
+
+

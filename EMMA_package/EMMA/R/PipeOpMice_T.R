@@ -1,16 +1,16 @@
-#' @title PipeOpMice
+#' @title PipeOpMice_T
 #'
-#' @name PipeOpMice
+#' @name PipeOpMice_T
 #'
 #' @description
 #' Implements mice methods as mlr3 pipeline more about mice \code{\link{autotune_mice}}
 #'
 #' @section Input and Output Channels:
-#' Input and output channels are inherited from \code{\link{PipeOpImpute}}.
+#' Input and output channels are inherited from \code{\link{PipeOpTaskPreproc}}.
 #'
 #'
 #' @section Parameters:
-#' The parameters are the parameters inherited from [`PipeOpImpute`], as well as: \cr
+#' The parameters are the parameters inherited from [`PipeOpTaskPreproc`], as well as: \cr
 #' \itemize{
 #' \item \code{id} :: \code{character(1)}\cr
 #' Identifier of resulting object, default \code{"imput_mice"}.
@@ -43,14 +43,15 @@
 #'}
 #'
 #' @export
-PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
-                              inherit = PipeOpImpute,
+
+PipeOpMice_T <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
+                              inherit = PipeOpTaskPreproc,
                               public = list(
                                 initialize = function(id = "imput_mice", m=5,maxit=5,set_cor=0.5,
                                                       set_method='pmm',low_corr=0,up_corr=1,
                                                       methods_random=c('pmm'),iter=5,random.seed=123,optimize = F,correlation=F,col_0_1=F,out_file=NULL
                                                       ) {
-                                  super$initialize(id, whole_task_dependent=TRUE,param_vals = list( m=m,maxit=maxit,set_cor=set_cor,
+                                  super$initialize(id, param_vals = list( m=m,maxit=maxit,set_cor=set_cor,
                                                                           set_method=set_method,low_corr=low_corr,up_corr=up_corr,
                                                                           methods_random=methods_random,iter=iter,random.seed=random.seed,optimize = optimize,correlation=correlation,col_0_1=col_0_1,
                                                                           out_file=out_file),
@@ -74,20 +75,13 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
 
 
 
-                                  self$imputed <- FALSE
-                                  self$column_counter <- NULL
-                                  self$data_imputed <- NULL
 
                                 }),private=list(
 
-                                .train_imputer=function(feature, type, context){
-                                  imp_function <- function(data_to_impute){
+                                  .train_task=function(task){
 
-
-
-
-                                    data_to_impute <- as.data.frame(data_to_impute)
-                                    # prepering arguments for function
+                                    data_to_impute <- as.data.frame( task$data(cols = task$feature_names))
+                                    targer <- as.data.frame(task$data(cols = task$target_names))
                                     col_type <- 1:ncol(data_to_impute)
                                     for (i in col_type){
                                       col_type[i] <- class(data_to_impute[,i])
@@ -110,40 +104,12 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                                                   out_file =self$param_set$values$out_file,return_one = T
                                     )
 
+                                    task$cbind(as.data.table(cbind(targer,data_imputed)))
 
-
-
-
-                                    return(data_imputed)
-                                  }
-                                  self$imputed_predict <- TRUE
-                                  self$flag <- 'train'
-                                  if(!self$imputed){
-                                    self$column_counter <- ncol(context)+1
-                                    self$imputed <- TRUE
-                                    data_to_impute <- cbind(feature,context)
-
-                                    self$data_imputed <- imp_function(data_to_impute)
-                                    colnames(self$data_imputed) <- self$state$context_cols
-
-                                  }
-                                  if(self$imputed){
-                                    self$column_counter <- self$column_counter -1
-
-                                  }
-                                  if  (self$column_counter==0){
-                                    self$imputed <- FALSE
-                                  }
-                                  self$train_s <- TRUE
-                                  return(NULL)
-
-                                },
-                                .impute=function(feature, type, model, context){
-                                  imp_function <- function(data_to_impute){
-
-
-                                    data_to_impute <- as.data.frame(data_to_impute)
-                                    # prepering arguments for function
+                                  },
+                                  .predict_task=function(task){
+                                    data_to_impute <- as.data.frame( task$data(cols = task$feature_names))
+                                    targer <- as.data.frame(task$data(cols = task$target_names))
                                     col_type <- 1:ncol(data_to_impute)
                                     for (i in col_type){
                                       col_type[i] <- class(data_to_impute[,i])
@@ -152,6 +118,8 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                     for (i in percent_of_missing){
                                       percent_of_missing[i] <- (sum(is.na(data_to_impute[,i]))/length(data_to_impute[,1]))*100
                                     }
+
+
                                     col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                     col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
@@ -169,49 +137,10 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
 
 
 
-
-                                    return(data_imputed)
+                                    task$cbind(as.data.table(cbind(targer,data_imputed)))
                                   }
-
-                                  if (self$imputed){
-                                      feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
-
-
-                                  }
-                                    if((nrow(self$data_imputed)!=nrow(context) | !self$train_s ) & self$flag=='train'){
-                                      self$imputed_predict <- FALSE
-                                      self$flag <- 'predict'
-                                    }
-
-                                      if(!self$imputed_predict){
-                                    data_to_impute <- cbind(feature,context)
-
-                                    self$data_imputed <- imp_function(data_to_impute)
-                                    colnames(self$data_imputed)[1] <- setdiff(self$state$context_cols,colnames(context))
-                                    self$imputed_predict <- TRUE
-                                  }
-
-
-                                  if (self$imputed_predict & self$flag=='predict' ){
-                                    feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
-
-                                  }
-
-                                  if(self$column_counter == 0 & self$flag=='train'){
-                                    feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
-                                    self$flag <- 'predict'
-                                    self$imputed_predict <- FALSE
-                                  }
-                                  self$train_s <- FALSE
-
-                                  return(feature)
-                                }
-
-
 
                               )
 )
-mlr_pipeops$add("mice_imputation", PipeOpMice)
-
-
+mlr_pipeops$add("mice_imputation", PipeOpMice_T)
 

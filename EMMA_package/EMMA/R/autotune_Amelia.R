@@ -26,6 +26,7 @@
 autotune_Amelia <- function(df,col_type,percent_of_missing,col_0_1=FALSE,parallel=TRUE,polytime=NULL,splinetime=NULL,intercs=FALSE,
                             empir=NULL,verbose=FALSE,return_one=TRUE,m=3,out_file=NULL) {
   if(!is.null(out_file)){write('Amelia  ',file = out_file,append = T)}
+  col_0_1 <- F
 
   if (sum(is.na(df))==0){return(df)}
   # prepering information about categorical column
@@ -74,6 +75,11 @@ autotune_Amelia <- function(df,col_type,percent_of_missing,col_0_1=FALSE,paralle
       final <- cbind(final,columns_with_missing)
 
   }
+
+  for (i in colnames(final)[col_type=='integer']){
+    final[,i] <- as.integer(final[,i])
+  }
+
   return(final)
 
 }

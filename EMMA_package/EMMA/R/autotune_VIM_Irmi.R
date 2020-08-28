@@ -17,7 +17,7 @@
 #' @import VIM
 #'
 #' @return Return one data.frame with imputed values.
-autotune_VIM_Irmi <- function(df,percent_of_missing,eps=5,maxit=100,step=FALSE,robust=FALSE,init.method='kNN',force=FALSE,col_0_1=FALSE,out_file=NULL){
+autotune_VIM_Irmi <- function(df,col_type,percent_of_missing,eps=5,maxit=100,step=FALSE,robust=FALSE,init.method='kNN',force=FALSE,col_0_1=FALSE,out_file=NULL){
 
   if(!is.null(out_file)){
     write('VIM_IRMI',file = out_file,append = T)
@@ -56,6 +56,10 @@ autotune_VIM_Irmi <- function(df,percent_of_missing,eps=5,maxit=100,step=FALSE,r
     final <- cbind(final,columns_with_missing)
 
   }
+  for (i in colnames(final)[col_type=='integer']){
+    final[,i] <- as.integer(final[,i])
+  }
+
 
   return(final)
 

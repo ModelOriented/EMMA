@@ -1,15 +1,15 @@
-#' @title PipeOpSoftImpute
-#' @name PipeOpSoftImpute
+#' @title PipeOpSoftImpute_T
+#' @name PipeOpSoftImpute_T
 #'
 #' @description
 #' Implements SoftImpute methods as mlr3 pipeline more about SoftImpute \code{\link{autotune_softImpute}}
 #'
 #' @section Input and Output Channels:
-#' Input and output channels are inherited from \code{\link{PipeOpImpute}}.
+#' Input and output channels are inherited from \code{\link{PipeOpTaskPreproc}}.
 #'
 #'
 #' @section Parameters:
-#' The parameters are the parameters inherited from [`PipeOpImpute`], as well as: \cr
+#' The parameters are the parameters inherited from [`PipeOpTaskPreproc`], as well as: \cr
 #' \itemize{
 #' \item \code{id} :: \code{character(1)}\cr
 #' Identifier of resulting object, default \code{"imput_softImpute"}.
@@ -35,13 +35,14 @@
 
 
 
-PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
-                               inherit = PipeOpImpute,  # inherit from PipeOp
+
+PipeOpSoftImpute_T <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
+                               inherit = PipeOpTaskPreproc,  # inherit from PipeOp
                                public = list(
                                  initialize = function(id = "imput_softImpute",col_0_1=F,cat_Fun=VIM::maxCat,lambda=0,rank.max=2,type='als',thresh=1e-5,maxit=100,
                                                        out_file=NULL
                                  ) {
-                                   super$initialize(id, whole_task_dependent=TRUE, param_vals = list( col_0_1=col_0_1,cat_Fun=cat_Fun,lambda=lambda,
+                                   super$initialize(id,  param_vals = list( col_0_1=col_0_1,cat_Fun=cat_Fun,lambda=lambda,
                                                                                                       rank.max=rank.max,type=type,thresh=thresh,maxit=maxit,
                                                                                                       out_file=out_file),
                                                     param_set= ParamSet$new(list(
@@ -59,21 +60,13 @@ PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
 
 
 
-                                   self$imputed <- FALSE
-                                   self$column_counter <- NULL
-                                   self$data_imputed <- NULL
 
                                  }),private=list(
 
-                                 .train_imputer=function(feature, type, context){
+                                   .train_task=function(task){
 
-                                   imp_function <- function(data_to_impute){
-
-
-
-
-                                     data_to_impute <- as.data.frame(data_to_impute)
-                                     # prepering arguments for function
+                                     data_to_impute <- as.data.frame( task$data(cols = task$feature_names))
+                                     targer <- as.data.frame(task$data(cols = task$target_names))
                                      col_type <- 1:ncol(data_to_impute)
                                      for (i in col_type){
                                        col_type[i] <- class(data_to_impute[,i])
@@ -85,49 +78,18 @@ PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
                                      col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                      col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
-
-
                                      data_imputed <- autotune_softImpute(data_to_impute,percent_of_missing = percent_of_missing,col_type = col_type,
                                                                          col_0_1 = self$param_set$values$col_0_1,cat_Fun = self$param_set$values$cat_Fun,
                                                                          lambda = self$param_set$values$lambda,rank.max = self$param_set$values$rank.max,
                                                                          type = self$param_set$values$type,thresh = self$param_set$values$thresh,
                                                                          maxit = self$param_set$values$maxit,out_file =self$param_set$values$out_file)
 
+                                     task$cbind(as.data.table(cbind(targer,data_imputed)))
 
-
-                                     return(data_imputed)
-                                   }
-                                   self$imputed_predict <- TRUE
-                                   self$flag <- 'train'
-
-                                   if(!self$imputed){
-                                     self$column_counter <- ncol(context)+1
-                                     self$imputed <- TRUE
-                                     data_to_impute <- cbind(feature,context)
-                                     self$data_imputed <- imp_function(data_to_impute)
-                                     colnames(self$data_imputed) <- self$state$context_cols
-
-                                   }
-                                   if(self$imputed){
-                                     self$column_counter <- self$column_counter -1
-
-                                   }
-                                   if  (self$column_counter==0){
-                                     self$imputed <- FALSE
-                                   }
-
-                                   self$train_s <- TRUE
-                                   return(NULL)
-
-                                 },
-                                 .impute=function(feature, type, model, context){
-                                   imp_function <- function(data_to_impute){
-
-
-
-
-                                     data_to_impute <- as.data.frame(data_to_impute)
-                                     # prepering arguments for function
+                                   },
+                                   .predict_task=function(task){
+                                     data_to_impute <- as.data.frame( task$data(cols = task$feature_names))
+                                     targer <- as.data.frame(task$data(cols = task$target_names))
                                      col_type <- 1:ncol(data_to_impute)
                                      for (i in col_type){
                                        col_type[i] <- class(data_to_impute[,i])
@@ -138,6 +100,8 @@ PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
                                      }
 
 
+                                     col_miss <- colnames(data_to_impute)[percent_of_missing>0]
+                                     col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
                                      data_imputed <- autotune_softImpute(data_to_impute,percent_of_missing = percent_of_missing,col_type = col_type,
                                                                          col_0_1 = self$param_set$values$col_0_1,cat_Fun = self$param_set$values$cat_Fun,
@@ -147,46 +111,14 @@ PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
 
 
 
-                                     return(data_imputed)
-                                   }
-
-                                   if (self$imputed){
-                                     feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
+                                     task$cbind(as.data.table(cbind(targer,data_imputed)))
 
 
-                                   }
-                                   if((nrow(self$data_imputed)!=nrow(context) |  !self$train_s) & self$flag=='train'){
-                                     self$imputed_predict <- FALSE
-                                     self$flag <- 'predict'
-                                   }
-
-                                   if(!self$imputed_predict){
-                                     data_to_impute <- cbind(feature,context)
-                                     self$data_imputed <- imp_function(data_to_impute)
-                                     colnames(self$data_imputed)[1] <- setdiff(self$state$context_cols,colnames(context))
-                                     self$imputed_predict <- TRUE
-                                   }
 
 
-                                   if (self$imputed_predict & self$flag=='predict' ){
-                                     feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
 
                                    }
-
-                                   if(self$column_counter == 0 & self$flag=='train'){
-                                     feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
-                                     self$flag <- 'predict'
-                                     self$imputed_predict <- FALSE
-                                   }
-                                   self$train_s <- FALSE
-
-                                   return(feature)
-                                 }
-
                                )
 )
-mlr_pipeops$add("softImpute_imputation",PipeOpSoftImpute)
+mlr_pipeops$add("softImpute_imputation",PipeOpSoftImpute_T)
 
-#resample(TaskClassif$new('t',as.data.frame(task$data()),'binaryClass'),graph_learner,rsmp("holdout"))
-# d<- PipeOpSoftImpute$new()
-# d$train(list(task))
