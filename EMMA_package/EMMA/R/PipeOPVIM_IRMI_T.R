@@ -78,7 +78,7 @@ PipeOpVIM_IRMI_T <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
                                    col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                    col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
-                                   data_imputed <- autotune_VIM_Irmi(data_to_impute,percent_of_missing,eps = self$param_set$values$eps,maxit = self$param_set$values$maxit,
+                                   data_imputed <- autotune_VIM_Irmi(data_to_impute,col_type,percent_of_missing,eps = self$param_set$values$eps,maxit = self$param_set$values$maxit,
                                                                      step = self$param_set$values$step,robust = self$param_set$values$robust,col_0_1 = self$param_set$values$col_0_1,
                                                                      init.method = self$param_set$values$init.method,force = self$param_set$values$force,
                                                                      out_file =self$param_set$values$out_file)
@@ -102,7 +102,7 @@ PipeOpVIM_IRMI_T <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
                                    col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                    col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
-                                   data_imputed <- autotune_VIM_Irmi(data_to_impute,percent_of_missing,eps = self$param_set$values$eps,maxit = self$param_set$values$maxit,
+                                   data_imputed <- autotune_VIM_Irmi(data_to_impute,col_type,percent_of_missing,eps = self$param_set$values$eps,maxit = self$param_set$values$maxit,
                                                                      step = self$param_set$values$step,robust = self$param_set$values$robust,col_0_1 = self$param_set$values$col_0_1,
                                                                      init.method = self$param_set$values$init.method,force = self$param_set$values$force,
                                                                      out_file =self$param_set$values$out_file)
