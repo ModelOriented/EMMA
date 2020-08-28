@@ -89,7 +89,10 @@ autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun
     final <- cbind(final,columns_with_missing)
 
   }
-
+  # converting back to integer
+  for (i in colnames(final)[col_type=='integer']){
+    final[,i] <- as.integer(final[,i])
+  }
   return(final)
 
 
