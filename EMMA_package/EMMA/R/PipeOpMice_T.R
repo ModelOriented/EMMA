@@ -27,7 +27,7 @@
 #' \item \code{up_corr} :: \code{double(1)}\cr
 #' Double between 0-1. Upper boundary of correlation used in inner optimization (used only when optimize=TRUE). Both of these parameters work the same for a fraction of features if correlation=FALSE,default \code{1}.
 #' \item \code{methods_random} :: \code{character(1)}\cr
-#' Set of methods to choose. Default 'pmm'. If set on NULL, default method is used. Methods: "pmm"-predictive mean matching (numeric data), "logreg"-logistic regression imputation (binary data, factor with 2 levels), "polyreg"-polytomous regression imputation for unordered categorical data (factor > 2 levels), "polr"-proportional odds model for (ordered, > 2 levels), default \code{c('pmm')}.
+#' Set of methods to choose. Default 'pmm'. If set on NULL, mice uses default combination of methods, which depends on columns types: "pmm"-predictive mean matching (numeric data), "logreg"-logistic regression imputation (binary data, factor with 2 levels), "polyreg"-polytomous regression imputation for unordered categorical data (factor > 2 levels), "polr"-proportional odds model for (ordered, > 2 levels), default \code{c('pmm')}.
 #' \item \code{iter} :: \code{integer(1)}\cr
 #' Number of iteration for random search, default \code{5}.
 #' \item \code{random.seed} :: \code{integer(1)}\cr
