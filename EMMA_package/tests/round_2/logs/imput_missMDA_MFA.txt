@@ -1,0 +1,127 @@
+INFO  [16:48:30.581] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 1/5) 
+INFO  [16:48:32.741] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 2/5) 
+INFO  [16:48:33.233] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 3/5) 
+INFO  [16:48:33.582] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 4/5) 
+INFO  [16:48:33.909] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3543: irish (Supervised Classification)
+* Learner: imput_missMDA_MFA.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+PROBABLY LEFT MISSINGS AFTER IMPUTATION!
+
+
+INFO  [16:48:35.386] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3722: hungarian (Supervised Classification)' (iter 1/5) 
+Error in eigen(crossprod(X, X), symmetric = TRUE) : 
+  wartość nieskończona lub brakuje wartości w 'x'
+
+
+INFO  [16:48:36.539] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 1/5) 
+INFO  [16:48:38.143] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 2/5) 
+INFO  [16:48:39.065] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 3/5) 
+INFO  [16:48:39.821] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 4/5) 
+INFO  [16:48:40.490] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 29: credit-approval (Supervised Classification)
+* Learner: imput_missMDA_MFA.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1391304 
+
+
+INFO  [16:48:42.256] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 1/5) 
+INFO  [16:48:43.089] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 2/5) 
+INFO  [16:48:43.898] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 3/5) 
+INFO  [16:48:44.894] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 4/5) 
+INFO  [16:48:45.612] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3830: cars (Supervised Classification)
+* Learner: imput_missMDA_MFA.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2632942 
+
+
+INFO  [16:48:47.713] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 14954: cylinder-bands (Supervised Classification)' (iter 1/5) 
+Error in if (any(MM[[g]] < 0)) stop(paste("The algorithm fails to converge. Choose a number of components (ncp) less or equal than ",  : 
+  brakuje wartości tam, gdzie wymagane jest TRUE/FALSE
+
+
+INFO  [16:48:48.941] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 1/5) 
+INFO  [16:48:49.280] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 2/5) 
+INFO  [16:48:49.719] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 3/5) 
+INFO  [16:48:50.120] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 4/5) 
+INFO  [16:48:50.541] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 48: heart-c (Supervised Classification)
+* Learner: imput_missMDA_MFA.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+PROBABLY LEFT MISSINGS AFTER IMPUTATION!
+
+
+INFO  [16:48:51.941] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3561: profb (Supervised Classification)' (iter 1/5) 
+Error in if (any(MM[[g]] < 0)) stop(paste("The algorithm fails to converge. Choose a number of components (ncp) less or equal than ",  : 
+  brakuje wartości tam, gdzie wymagane jest TRUE/FALSE
+
+
+INFO  [16:48:53.068] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 1/5) 
+INFO  [16:48:53.693] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 2/5) 
+INFO  [16:48:54.346] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 3/5) 
+INFO  [16:48:55.006] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 4/5) 
+INFO  [16:48:55.917] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3675: pbc (Supervised Classification)
+* Learner: imput_missMDA_MFA.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.4567986 
+
+
+INFO  [16:48:57.596] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 1/5) 
+INFO  [16:48:57.818] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 2/5) 
+INFO  [16:48:58.098] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 3/5) 
+INFO  [16:48:58.429] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 4/5) 
+INFO  [16:48:58.708] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3847: analcatdata_draft (Supervised Classification)
+* Learner: imput_missMDA_MFA.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.08744909 
+
+
+INFO  [16:49:00.032] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 1/5) 
+INFO  [16:49:00.823] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 2/5) 
+INFO  [16:49:01.618] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 3/5) 
+Error in apply(tabdisj[, (vec[i] + 1):vec[i + 1]], 1, which.max) : 
+  'dim(X)' musi mieć dodatnią długość
+
+
+Successful evaluation: 4/10 tasks
+
+
