@@ -2,7 +2,7 @@
 % Please edit documentation in R/PipeOPmissForest.R
 \name{PipeOpmissForest}
 \alias{PipeOpmissForest}
-\title{PipeOpmissForest}
+\title{PipeOpmissFores}
 \description{
 Implements missForest methods as mlr3 pipeline more about missForest \code{\link{autotune_missForest}}
 }
@@ -24,7 +24,7 @@ Vector contains numbers of tree for grid search, used only when optimize == TRUE
 \item \code{mtry_set} :: \code{integer(1)}\cr
 Vector contains numbers of variables randomly sampled at each split, used only when optimize == TRUE, default \code{NULL}.
 \item \code{parallel} :: \code{logical(1)}\cr
-If TRUE parallel calculation is using, default \code{TRUE}.
+If TRUE parallel calculation is using, default \code{FALSE}.
 \item \code{col_0_1} :: \code{logical(1)}\cr
 Decide if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{False}.
 \item \code{ntree} :: \code{integer(1)}\cr
@@ -71,7 +71,7 @@ Output log file location if file already exists log message will be added. If NU
   cores = NULL,
   ntree_set = c(100, 200, 500, 1000),
   mtry_set = NULL,
-  parallel = TRUE,
+  parallel = F,
   col_0_1 = FALSE,
   mtry = NULL,
   ntree = 100,

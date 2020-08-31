@@ -106,5 +106,4 @@ PipeOpVIM_kNN_T <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,
 )
 mlr_pipeops$add("VIM_kNN_imputation", PipeOpVIM_kNN_T)
 
-resample(task,graph_learner,rsmp("cv",folds=5))
 

@@ -50,7 +50,7 @@ autotune_mice(
 
 \item{up_corr}{double between 0,1 default 1 upper boundary of correlation set. Both of these parameters work the same for a fraction of features.}
 
-\item{methods_random}{set of methods to chose. Default 'pmm'. If seted on NULL defoult method is used : By default, the method uses pmm, predictive mean matching (numeric data) logreg, logistic regression imputation (binary data, factor with 2 levels) polyreg, polytomous regression imputation for unordered categorical data (factor > 2 levels) polr, proportional odds model for (ordered, > 2 levels).}
+\item{methods_random}{set of methods to chose. Default 'pmm'. If seted on NULL this methods are used predictive mean matching (numeric data) logreg, logistic regression imputation (binary data, factor with 2 levels) polyreg, polytomous regression imputation for unordered categorical data (factor > 2 levels) polr, proportional odds model for (ordered, > 2 levels).}
 
 \item{iter}{number of iteration for randomSearch.}
 

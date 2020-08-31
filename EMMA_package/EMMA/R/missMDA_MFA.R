@@ -87,13 +87,19 @@ missMDA_MFA <- function(df,col_type,percent_of_missing,random.seed=123,ncp =2 ,c
   })
   for (i in colnames(df)[(col_type=='factor')]){
 
-    if(setequal(levels(na.omit(df[,i])),levels(final[,i]))){
+    if(!setequal(as.character(unique(na.omit(df[,i]))),levels(final[,i]))){
 
       reg_exp <- paste0('.*',i)
       levels(final[,i]) <- substr(sub(reg_exp, "", levels(final[,i])),start = 2,stop = 9999)
     }
   }
+  for (i in colnames(df)[(col_type=='factor')]){
 
+    if(!setequal(levels(na.omit(df[,i])),levels(final[,i]))){
+
+      levels(final[,i]) <- c(levels(na.omit(df[,i])))
+    }
+  }
     # adding 0_1 columns
 
 if (col_0_1){

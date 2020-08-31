@@ -30,7 +30,7 @@ double betwen 0,1 default 0 lower boundry of correlation used in inner optimizat
 \item \code{up_corr} :: \code{double(1)}\cr
 double between 0,1 default 1 upper boundary of correlation set used in inner optimization (used only when optimize == TRUE). Both of these parameters work the same for a fraction of features if correlation == FALSE.,defoult \code{1}.
 \item \code{methods_random} :: \code{character(1)}\cr
-set of methods to chose. Default 'pmm'. If seted on NULL defoult method is used : By default, the method uses pmm, predictive mean matching (numeric data) logreg, logistic regression imputation (binary data, factor with 2 levels) polyreg, polytomous regression imputation for unordered categorical data (factor > 2 levels) polr, proportional odds model for (ordered, > 2 levels), default \code{c('pmm')}
+set of methods to chose. Default 'pmm'. If seted on NULL this methods are used predictive mean matching (numeric data) logreg, logistic regression imputation (binary data, factor with 2 levels) polyreg, polytomous regression imputation for unordered categorical data (factor > 2 levels) polr, proportional odds model for (ordered, > 2 levels).
 \item \code{iter} :: \code{integer(1)}\cr
 number of iteration for randomSearch, default \code{5}.
 \item \code{random.seed} :: \code{integer(1)}\cr
