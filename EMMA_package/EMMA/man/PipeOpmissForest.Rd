@@ -2,7 +2,7 @@
 % Please edit documentation in R/PipeOPmissForest.R
 \name{PipeOpmissForest}
 \alias{PipeOpmissForest}
-\title{PipeOpmissForest}
+\title{PipeOpmissFores}
 \description{
 Implements missForest methods as mlr3 pipeline more about missForest \code{\link{autotune_missForest}}
 }
