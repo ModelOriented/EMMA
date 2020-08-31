@@ -70,7 +70,9 @@ PipeOpVIM_kNN_T <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,
                                  data_imputed <- autotune_VIM_kNN(data_to_impute,percent_of_missing ,k =self$param_set$values$k,numFun = self$param_set$values$numFun,
                                                                   catFun = self$param_set$values$catFun,col_0_1 = self$param_set$values$col_0_1,out_file =self$param_set$values$out_file)
 
-                                 task$cbind(as.data.table(cbind(targer,data_imputed)))
+                                 data_imputed <-  cbind(data_imputed,task$row_ids)
+                                 colnames(data_imputed)[ncol(data_imputed)] <- task$backend$primary_key
+                                 task$cbind(as.data.table(data_imputed))
                                },
                                .predict_task=function(task){
                                  data_to_impute <- as.data.frame( task$data(cols = task$feature_names))
@@ -95,7 +97,9 @@ PipeOpVIM_kNN_T <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,
 
 
 
-                                 task$cbind(as.data.table(cbind(targer,data_imputed)))
+                                 data_imputed <-  cbind(data_imputed,task$row_ids)
+                                 colnames(data_imputed)[ncol(data_imputed)] <- task$backend$primary_key
+                                 task$cbind(as.data.table(data_imputed))
 
 
 

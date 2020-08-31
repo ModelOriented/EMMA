@@ -94,7 +94,9 @@ PipeOpMissMDA_PCA_MCA_FMAD_T <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",l
                                                                       out_file =self$param_set$values$out_file )
 
 
-                                 task$cbind(as.data.table(cbind(targer,data_imputed)))
+                                 data_imputed <-  cbind(data_imputed,task$row_ids)
+                                 colnames(data_imputed)[ncol(data_imputed)] <- task$backend$primary_key
+                                 task$cbind(as.data.table(data_imputed))
 
                                },
                                .predict_task=function(task){
@@ -110,8 +112,6 @@ PipeOpMissMDA_PCA_MCA_FMAD_T <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",l
                                  }
 
 
-                                 col_miss <- colnames(data_to_impute)[percent_of_missing>0]
-                                 col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
                                  data_imputed <- missMDA_FMAD_MCA_PCA(data_to_impute,col_type,percent_of_missing,optimize_ncp = self$param_set$values$optimize_ncp,
                                                                       set_ncp = self$param_set$values$set_ncp,col_0_1 = self$param_set$values$col_0_1,
                                                                       ncp.max = self$param_set$values$ncp.max, random.seed = self$param_set$values$random.seed,
@@ -123,7 +123,9 @@ PipeOpMissMDA_PCA_MCA_FMAD_T <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",l
 
 
 
-                                 task$cbind(as.data.table(cbind(targer,data_imputed)))
+                                 data_imputed <-  cbind(data_imputed,task$row_ids)
+                                 colnames(data_imputed)[ncol(data_imputed)] <- task$backend$primary_key
+                                 task$cbind(as.data.table(data_imputed))
 
 
 
@@ -142,4 +144,5 @@ mlr_pipeops$add("missMDA_MCA_PCA_FMAD_imputation", PipeOpMissMDA_PCA_MCA_FMAD_T)
 # glrn = GraphLearner$new(graph)
 
 # resample(test_task,glrn,rsmp('cv',folds=2L))
+
 
