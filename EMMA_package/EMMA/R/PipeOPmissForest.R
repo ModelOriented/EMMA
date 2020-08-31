@@ -1,4 +1,4 @@
-#' @title PipeOpmissFores
+#' @title PipeOpmissForest
 #'
 #' @name PipeOpmissForest
 #'
