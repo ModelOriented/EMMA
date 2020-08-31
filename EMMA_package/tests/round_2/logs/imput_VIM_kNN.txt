@@ -1,0 +1,283 @@
+INFO  [22:13:31.833] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 1/5) 
+[1] 5
+[1] 5
+INFO  [22:13:32.415] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 2/5) 
+[1] 5
+[1] 5
+INFO  [22:13:32.915] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 3/5) 
+[1] 5
+[1] 5
+INFO  [22:13:33.443] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 4/5) 
+[1] 5
+[1] 5
+INFO  [22:13:33.958] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 5/5) 
+[1] 5
+[1] 5
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3543: irish (Supervised Classification)
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+      0.01 
+
+
+INFO  [22:13:35.522] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3722: hungarian (Supervised Classification)' (iter 1/5) 
+[1] 5
+[1] 5
+Ostrzeżenie w poleceniu 'FUN(newX[, i], ...)':
+  brak argumentów w min; zwracanie wartości Inf
+Ostrzeżenie w poleceniu 'FUN(newX[, i], ...)':
+  brak argumentów w max; zwracanie wartości -Inf
+INFO  [22:13:36.895] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3722: hungarian (Supervised Classification)' (iter 2/5) 
+[1] 5
+[1] 5
+INFO  [22:13:38.048] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3722: hungarian (Supervised Classification)' (iter 3/5) 
+[1] 5
+[1] 5
+Ostrzeżenie w poleceniu 'VIM::kNN(df, k = k, numFun = numFun, catFun = catFun, imp_var = F)':
+  All observations of feature are missing, therefore the variable will not be imputed!
+
+Ostrzeżenie w poleceniu 'FUN(newX[, i], ...)':
+  brak argumentów w min; zwracanie wartości Inf
+Ostrzeżenie w poleceniu 'FUN(newX[, i], ...)':
+  brak argumentów w max; zwracanie wartości -Inf
+Ostrzeżenie w poleceniu 'FUN(newX[, i], ...)':
+  brak argumentów w min; zwracanie wartości Inf
+Ostrzeżenie w poleceniu 'FUN(newX[, i], ...)':
+  brak argumentów w max; zwracanie wartości -Inf
+Ostrzeżenie w poleceniu 'FUN(newX[, i], ...)':
+  brak argumentów w min; zwracanie wartości Inf
+Ostrzeżenie w poleceniu 'FUN(newX[, i], ...)':
+  brak argumentów w max; zwracanie wartości -Inf
+Error in indexNA2s[, variable[j]] : indeks jest poza granicami
+
+
+INFO  [22:13:40.073] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 1/5) 
+[1] 5
+[1] 5
+INFO  [22:13:40.770] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 2/5) 
+[1] 5
+[1] 5
+INFO  [22:13:41.759] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 3/5) 
+[1] 5
+[1] 5
+INFO  [22:13:42.918] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 4/5) 
+[1] 5
+[1] 5
+INFO  [22:13:43.816] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 5/5) 
+[1] 5
+[1] 5
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 29: credit-approval (Supervised Classification)
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1362319 
+
+
+INFO  [22:13:45.929] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 1/5) 
+[1] 5
+[1] 5
+INFO  [22:13:46.485] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 2/5) 
+[1] 5
+[1] 5
+INFO  [22:13:47.029] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 3/5) 
+[1] 5
+[1] 5
+INFO  [22:13:47.781] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 4/5) 
+[1] 5
+[1] 5
+INFO  [22:13:48.566] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 5/5) 
+[1] 5
+[1] 5
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3830: cars (Supervised Classification)
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2586871 
+
+
+INFO  [22:13:51.090] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 14954: cylinder-bands (Supervised Classification)' (iter 1/5) 
+[1] 5
+[1] 5
+INFO  [22:13:53.801] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 14954: cylinder-bands (Supervised Classification)' (iter 2/5) 
+[1] 5
+[1] 5
+INFO  [22:13:56.501] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 14954: cylinder-bands (Supervised Classification)' (iter 3/5) 
+[1] 5
+[1] 5
+INFO  [22:13:59.139] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 14954: cylinder-bands (Supervised Classification)' (iter 4/5) 
+[1] 5
+[1] 5
+INFO  [22:14:01.327] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 14954: cylinder-bands (Supervised Classification)' (iter 5/5) 
+[1] 5
+[1] 5
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 14954: cylinder-bands (Supervised Classification)
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+      0.45 
+
+
+INFO  [22:14:04.500] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 1/5) 
+[1] 5
+INFO  [22:14:04.955] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 2/5) 
+[1] 5
+[1] 5
+INFO  [22:14:05.480] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 3/5) 
+[1] 5
+[1] 5
+INFO  [22:14:06.005] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 4/5) 
+[1] 5
+[1] 5
+INFO  [22:14:06.511] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 5/5) 
+[1] 5
+[1] 5
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 48: heart-c (Supervised Classification)
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2340984 
+
+
+INFO  [22:14:07.979] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3561: profb (Supervised Classification)' (iter 1/5) 
+[1] 5
+[1] 5
+INFO  [22:14:09.095] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3561: profb (Supervised Classification)' (iter 2/5) 
+[1] 5
+[1] 5
+INFO  [22:14:10.053] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3561: profb (Supervised Classification)' (iter 3/5) 
+[1] 5
+[1] 5
+INFO  [22:14:11.410] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3561: profb (Supervised Classification)' (iter 4/5) 
+[1] 5
+[1] 5
+INFO  [22:14:12.593] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3561: profb (Supervised Classification)' (iter 5/5) 
+[1] 5
+[1] 5
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3561: profb (Supervised Classification)
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.3422112 
+
+
+INFO  [22:14:14.759] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 1/5) 
+[1] 5
+[1] 5
+INFO  [22:14:16.137] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 2/5) 
+[1] 5
+[1] 5
+INFO  [22:14:17.867] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 3/5) 
+[1] 5
+[1] 5
+INFO  [22:14:19.629] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 4/5) 
+[1] 5
+[1] 5
+INFO  [22:14:21.243] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 5/5) 
+[1] 5
+[1] 5
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3675: pbc (Supervised Classification)
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.4497992 
+
+
+INFO  [22:14:23.863] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 1/5) 
+[1] 5
+INFO  [22:14:24.058] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 2/5) 
+[1] 5
+INFO  [22:14:24.660] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 3/5) 
+[1] 5
+INFO  [22:14:25.105] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 4/5) 
+[1] 5
+INFO  [22:14:25.331] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 5/5) 
+[1] 5
+Ostrzeżenie w poleceniu 'VIM::kNN(df, k = k, numFun = numFun, catFun = catFun, imp_var = F)':
+  Nothing to impute, because no NA are present (also after using makeNA)
+[1] 5
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3847: analcatdata_draft (Supervised Classification)
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.08748612 
+
+
+INFO  [22:14:27.210] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 1/5) 
+[1] 5
+[1] 5
+INFO  [22:14:28.037] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 2/5) 
+[1] 5
+[1] 5
+INFO  [22:14:29.113] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 3/5) 
+[1] 5
+[1] 5
+INFO  [22:14:30.292] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 4/5) 
+[1] 5
+[1] 5
+INFO  [22:14:31.346] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 5/5) 
+[1] 5
+[1] 5
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3838: autos (Supervised Classification)
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.5463415 
+
+
+Successful evaluation: 9/10 tasks
+
+

@@ -1,0 +1,39 @@
+INFO  [22:46:44.866] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 13: breast-cancer (Supervised Classification)' (iter 1/1) 
+
+
+<ResampleResult> of 1 iterations
+* Task: Task 13: breast-cancer (Supervised Classification)
+* Learner: imput_missMDA_MFA.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+PROBABLY LEFT MISSINGS AFTER IMPUTATION!
+
+
+
+INFO  [22:46:48.202] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3793: colleges_usnews (Supervised Classification)' (iter 1/1) 
+
+
+<ResampleResult> of 1 iterations
+* Task: Task 3793: colleges_usnews (Supervised Classification)
+* Learner: imput_missMDA_MFA.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+PROBABLY LEFT MISSINGS AFTER IMPUTATION!
+
+
+
+INFO  [22:46:51.390] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task 'Task 3667: pbcseq (Supervised Classification)' (iter 1/1) 
+
+
+<ResampleResult> of 1 iterations
+* Task: Task 3667: pbcseq (Supervised Classification)
+* Learner: imput_missMDA_MFA.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+PROBABLY LEFT MISSINGS AFTER IMPUTATION!
+
+
+
+Successful evaluation: 0/3 tasks
+
+

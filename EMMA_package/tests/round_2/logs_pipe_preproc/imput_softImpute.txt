@@ -1,0 +1,173 @@
+INFO  [15:10:37.309] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie w poleceniu 'softImpute::softImpute(matrix, lambda = lambda, rank.max = 2, ':
+  rank.max should not exceed min(dim(x))-1; changed to  1
+Ostrzeżenie w poleceniu 'softImpute::softImpute(matrix, lambda = lambda, rank.max = 2, ':
+  rank.max should not exceed min(dim(x))-1; changed to  1
+INFO  [15:10:37.505] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 2/5) 
+Ostrzeżenie w poleceniu 'softImpute::softImpute(matrix, lambda = lambda, rank.max = 2, ':
+  rank.max should not exceed min(dim(x))-1; changed to  1
+Ostrzeżenie w poleceniu 'softImpute::softImpute(matrix, lambda = lambda, rank.max = 2, ':
+  rank.max should not exceed min(dim(x))-1; changed to  1
+INFO  [15:10:38.210] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 3/5) 
+Ostrzeżenie w poleceniu 'softImpute::softImpute(matrix, lambda = lambda, rank.max = 2, ':
+  rank.max should not exceed min(dim(x))-1; changed to  1
+Ostrzeżenie w poleceniu 'softImpute::softImpute(matrix, lambda = lambda, rank.max = 2, ':
+  rank.max should not exceed min(dim(x))-1; changed to  1
+INFO  [15:10:38.692] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 4/5) 
+Ostrzeżenie w poleceniu 'softImpute::softImpute(matrix, lambda = lambda, rank.max = 2, ':
+  rank.max should not exceed min(dim(x))-1; changed to  1
+Ostrzeżenie w poleceniu 'softImpute::softImpute(matrix, lambda = lambda, rank.max = 2, ':
+  rank.max should not exceed min(dim(x))-1; changed to  1
+INFO  [15:10:39.143] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 5/5) 
+Ostrzeżenie w poleceniu 'softImpute::softImpute(matrix, lambda = lambda, rank.max = 2, ':
+  rank.max should not exceed min(dim(x))-1; changed to  1
+Ostrzeżenie w poleceniu 'softImpute::softImpute(matrix, lambda = lambda, rank.max = 2, ':
+  rank.max should not exceed min(dim(x))-1; changed to  1
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3543: irish (Supervised Classification)
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+     0.012 
+
+
+INFO  [15:10:41.032] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3722: hungarian (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, is.na(col_to_imp), value = "NA's")':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, is.na(col_to_imp), value = "NA's")':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Error in lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs,  : 
+  wartość NA/NaN/Inf w wywołaniu obcej funcji (argument 5)
+
+
+INFO  [15:10:42.325] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 1/5) 
+INFO  [15:10:42.523] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 2/5) 
+INFO  [15:10:43.240] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 3/5) 
+INFO  [15:10:43.762] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 4/5) 
+INFO  [15:10:44.233] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 29: credit-approval (Supervised Classification)
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1318841 
+
+
+INFO  [15:10:45.901] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 1/5) 
+INFO  [15:10:46.358] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 2/5) 
+INFO  [15:10:46.874] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 3/5) 
+INFO  [15:10:47.339] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 4/5) 
+INFO  [15:10:47.817] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3830: cars (Supervised Classification)
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+  0.280819 
+
+
+INFO  [15:10:49.676] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 14954: cylinder-bands (Supervised Classification)' (iter 1/5) 
+INFO  [15:10:50.190] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 14954: cylinder-bands (Supervised Classification)' (iter 2/5) 
+INFO  [15:10:50.791] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 14954: cylinder-bands (Supervised Classification)' (iter 3/5) 
+INFO  [15:10:51.073] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 14954: cylinder-bands (Supervised Classification)' (iter 4/5) 
+INFO  [15:10:51.879] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 14954: cylinder-bands (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 14954: cylinder-bands (Supervised Classification)
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2759259 
+
+
+INFO  [15:10:53.631] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 1/5) 
+INFO  [15:10:53.872] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 2/5) 
+INFO  [15:10:54.637] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 3/5) 
+INFO  [15:10:54.838] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 4/5) 
+INFO  [15:10:55.668] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 48: heart-c (Supervised Classification)
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1816393 
+
+
+INFO  [15:10:57.359] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3561: profb (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, is.na(col_to_imp), value = "NA's")':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, is.na(col_to_imp), value = "NA's")':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Error in lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs,  : 
+  wartość NA/NaN/Inf w wywołaniu obcej funcji (argument 5)
+
+
+INFO  [15:10:58.686] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 1/5) 
+INFO  [15:10:59.227] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 2/5) 
+INFO  [15:10:59.701] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 3/5) 
+INFO  [15:11:00.168] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 4/5) 
+INFO  [15:11:00.706] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3675: pbc (Supervised Classification)
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.3157774 
+
+
+INFO  [15:11:02.420] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie w poleceniu 'softImpute::softImpute(matrix, lambda = lambda, rank.max = 2, ':
+  rank.max should not exceed min(dim(x))-1; changed to  1
+Error : Processed output task during prediction of imput_softImpute does not match output task during training.
+
+
+INFO  [15:11:04.026] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 1/5) 
+INFO  [15:11:04.776] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 2/5) 
+INFO  [15:11:05.517] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 3/5) 
+INFO  [15:11:06.227] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 4/5) 
+INFO  [15:11:06.818] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3838: autos (Supervised Classification)
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2146341 
+
+
+Successful evaluation: 7/10 tasks
+
+
