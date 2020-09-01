@@ -53,8 +53,8 @@ autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun
       write('Not engouht numeric impute with function',file = out_file,append = T)
     }
     j <- colnames(df)[col_type=='numeric' | col_type=='integer']
-    col_to_imp <- df[,j]
-    col_to_imp[is.na(col_to_imp)] <- cat_Fun(col_to_imp)
+    col_to_imp <- df[,j,drop=F]
+    col_to_imp[is.na(col_to_imp),] <- cat_Fun(na.omit(col_to_imp[[j]]))
     j <- col_to_imp
     final <- j}
 
