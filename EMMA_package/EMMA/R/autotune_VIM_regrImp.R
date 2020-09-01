@@ -106,10 +106,11 @@ autotune_VIM_regrImp <- function(df,col_type,percent_of_missing,col_0_1=F,robust
 
   }
   # converting back to integer
+  if(exists('final')){
   for (i in colnames(final)[col_type=='integer']){
     final[,i] <- as.integer(final[,i])
   }
-
+  }
 
   return(final)
 
