@@ -79,7 +79,8 @@ preprocess <- function(df_oml, miss_in_var_threshold = 0.9) {
   df <- df[, which(colMeans(!is.na(df)) > miss_in_var_threshold)]
   
   #Categorical columns with high fraction of unique values
-  #?
+  factor30 <- sapply(df, function(x) class(x) == "factor" & nlevels(x) > 30)
+  df <- df[, !factor30]
   
   return(list("df" = df, 
               "data_types_troubles" = data_types_troubles, 
