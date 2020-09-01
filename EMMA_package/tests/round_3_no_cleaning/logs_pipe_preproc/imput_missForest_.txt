@@ -1,0 +1,202 @@
+INFO  [09:41:44.396] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '2079' (iter 1/5) 
+INFO  [09:41:54.833] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '2079' (iter 2/5) 
+INFO  [09:42:02.185] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '2079' (iter 3/5) 
+INFO  [09:42:10.586] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '2079' (iter 4/5) 
+INFO  [09:42:19.602] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '2079' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 2079
+* Learner: imput_missForest.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+  0.349237 
+
+
+INFO  [09:42:28.988] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '35' (iter 1/5) 
+INFO  [09:42:30.443] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '35' (iter 2/5) 
+INFO  [09:42:32.085] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '35' (iter 3/5) 
+INFO  [09:42:33.423] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '35' (iter 4/5) 
+INFO  [09:42:34.813] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '35' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 35
+* Learner: imput_missForest.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.03272862 
+
+
+INFO  [09:42:37.527] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '3802' (iter 1/5) 
+INFO  [09:42:38.886] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '3802' (iter 2/5) 
+INFO  [09:42:39.617] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '3802' (iter 3/5) 
+INFO  [09:42:40.970] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '3802' (iter 4/5) 
+INFO  [09:42:42.090] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '3802' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3802
+* Learner: imput_missForest.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.01323671 
+
+
+INFO  [09:42:45.129] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '3705' (iter 1/5) 
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+INFO  [09:42:47.349] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '3705' (iter 2/5) 
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+INFO  [09:42:49.870] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '3705' (iter 3/5) 
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+INFO  [09:42:52.846] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '3705' (iter 4/5) 
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+INFO  [09:42:55.733] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '3705' (iter 5/5) 
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+
+
+<ResampleResult> of 5 iterations
+* Task: 3705
+* Learner: imput_missForest.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.05853659 
+
+
+INFO  [09:42:59.806] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '3807' (iter 1/5) 
+INFO  [09:43:00.977] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '3807' (iter 2/5) 
+INFO  [09:43:01.872] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '3807' (iter 3/5) 
+INFO  [09:43:02.958] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '3807' (iter 4/5) 
+INFO  [09:43:04.176] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '3807' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3807
+* Learner: imput_missForest.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2076923 
+
+
+INFO  [09:43:06.335] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '3604' (iter 1/5) 
+Error in randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry,  : 
+  Can not handle categorical predictors with more than 53 categories.
+
+
+INFO  [09:43:07.483] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '190403' (iter 1/5) 
+INFO  [09:43:08.115] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '190403' (iter 2/5) 
+INFO  [09:43:08.850] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '190403' (iter 3/5) 
+INFO  [09:43:09.505] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '190403' (iter 4/5) 
+INFO  [09:43:10.149] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '190403' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 190403
+* Learner: imput_missForest.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.0395122 
+
+
+INFO  [09:43:11.934] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '54' (iter 1/5) 
+INFO  [09:43:13.614] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '54' (iter 2/5) 
+INFO  [09:43:15.794] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '54' (iter 3/5) 
+INFO  [09:43:17.968] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '54' (iter 4/5) 
+INFO  [09:43:19.676] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '54' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 54
+* Learner: imput_missForest.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+  0.116129 
+
+
+INFO  [09:43:23.901] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '3547' (iter 1/5) 
+Error in randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry,  : 
+  Can not handle categorical predictors with more than 53 categories.
+
+
+INFO  [09:43:25.199] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task '5' (iter 1/5) 
+Error in lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs,  : 
+  one multinomial or binomial class has 1 or 0 observations; not allowed
+
+
+Successful evaluation: 7/10 tasks
+
+

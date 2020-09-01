@@ -1,0 +1,2423 @@
+INFO  [10:18:48.242] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '2079' (iter 1/5) 
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+INFO  [10:18:55.329] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '2079' (iter 2/5) 
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+INFO  [10:19:03.638] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '2079' (iter 3/5) 
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+INFO  [10:19:10.592] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '2079' (iter 4/5) 
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+INFO  [10:19:18.900] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '2079' (iter 5/5) 
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+
+
+<ResampleResult> of 5 iterations
+* Task: 2079
+* Learner: imput_VIM_IRMI.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.3736257 
+
+
+INFO  [10:19:26.450] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '35' (iter 1/5) 
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+INFO  [10:19:28.775] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '35' (iter 2/5) 
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'useLM(x_reg, ndata, index, mixed_tf, mixed_constant, factors, ':
+  The residual scale could not be computed, probably due to a rank deficient model. It is set to 1
+
+INFO  [10:19:31.366] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '35' (iter 3/5) 
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+INFO  [10:19:32.663] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '35' (iter 4/5) 
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+INFO  [10:19:34.030] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '35' (iter 5/5) 
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'useLM(x_reg, ndata, index, mixed_tf, mixed_constant, factors, ':
+  The residual scale could not be computed, probably due to a rank deficient model. It is set to 1
+
+
+
+<ResampleResult> of 5 iterations
+* Task: 35
+* Learner: imput_VIM_IRMI.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.03006294 
+
+
+INFO  [10:19:36.873] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3802' (iter 1/5) 
+INFO  [10:19:37.642] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3802' (iter 2/5) 
+No missings in x. Nothing to impute
+Ostrzeżenie w poleceniu 'kNN(x, imp_var = FALSE, mixed = mixed, mixed.constant = mixed.constant)':
+  Nothing to impute, because no NA are present (also after using makeNA)
+INFO  [10:19:38.253] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3802' (iter 3/5) 
+No missings in x. Nothing to impute
+Ostrzeżenie w poleceniu 'kNN(x, imp_var = FALSE, mixed = mixed, mixed.constant = mixed.constant)':
+  Nothing to impute, because no NA are present (also after using makeNA)
+INFO  [10:19:38.841] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3802' (iter 4/5) 
+INFO  [10:19:39.873] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3802' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3802
+* Learner: imput_VIM_IRMI.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.01333333 
+
+
+INFO  [10:19:42.037] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3705' (iter 1/5) 
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+INFO  [10:19:47.762] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3705' (iter 2/5) 
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+INFO  [10:20:01.299] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3705' (iter 3/5) 
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+INFO  [10:20:21.513] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3705' (iter 4/5) 
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+INFO  [10:20:32.285] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3705' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3705
+* Learner: imput_VIM_IRMI.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.05365854 
+
+
+INFO  [10:20:34.690] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3807' (iter 1/5) 
+INFO  [10:20:35.272] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3807' (iter 2/5) 
+INFO  [10:20:35.623] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3807' (iter 3/5) 
+INFO  [10:20:36.406] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3807' (iter 4/5) 
+INFO  [10:20:36.948] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3807' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3807
+* Learner: imput_VIM_IRMI.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2153846 
+
+
+INFO  [10:20:38.511] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3604' (iter 1/5) 
+No missings in x. Nothing to impute
+Ostrzeżenie w poleceniu 'kNN(x, imp_var = FALSE, mixed = mixed, mixed.constant = mixed.constant)':
+  Nothing to impute, because no NA are present (also after using makeNA)
+INFO  [10:20:39.076] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3604' (iter 2/5) 
+INFO  [10:20:39.834] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3604' (iter 3/5) 
+No missings in x. Nothing to impute
+Ostrzeżenie w poleceniu 'kNN(x, imp_var = FALSE, mixed = mixed, mixed.constant = mixed.constant)':
+  Nothing to impute, because no NA are present (also after using makeNA)
+INFO  [10:20:40.653] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3604' (iter 4/5) 
+Ostrzeżenie w poleceniu 'multinom(form, data = x_reg, summ = 2, maxit = 50, trace = FALSE, ':
+  group ‘0’ is empty
+Ostrzeżenie w poleceniu 'multinom(form, data = x_reg, summ = 2, maxit = 50, trace = FALSE, ':
+  group ‘0’ is empty
+INFO  [10:20:41.956] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3604' (iter 5/5) 
+Ostrzeżenie w poleceniu 'multinom(form, data = x_reg, summ = 2, maxit = 50, trace = FALSE, ':
+  group ‘0’ is empty
+Ostrzeżenie w poleceniu 'multinom(form, data = x_reg, summ = 2, maxit = 50, trace = FALSE, ':
+  group ‘0’ is empty
+No missings in x. Nothing to impute
+Ostrzeżenie w poleceniu 'kNN(x, imp_var = FALSE, mixed = mixed, mixed.constant = mixed.constant)':
+  Nothing to impute, because no NA are present (also after using makeNA)
+
+
+<ResampleResult> of 5 iterations
+* Task: 3604
+* Learner: imput_VIM_IRMI.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+  0.174359 
+
+
+INFO  [10:20:45.712] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '190403' (iter 1/5) 
+Ostrzeżenie w poleceniu 'multinom(form, data = x_reg, summ = 2, maxit = 50, trace = FALSE, ':
+  groups ‘1’ ‘2’ are empty
+Ostrzeżenie w poleceniu 'multinom(form, data = x_reg, summ = 2, maxit = 50, trace = FALSE, ':
+  groups ‘1’ ‘2’ are empty
+INFO  [10:20:46.592] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '190403' (iter 2/5) 
+Ostrzeżenie w poleceniu 'multinom(form, data = x_reg, summ = 2, maxit = 50, trace = FALSE, ':
+  groups ‘1’ ‘2’ ‘4’ are empty
+Ostrzeżenie w poleceniu 'multinom(form, data = x_reg, summ = 2, maxit = 50, trace = FALSE, ':
+  groups ‘1’ ‘2’ ‘4’ are empty
+INFO  [10:20:47.560] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '190403' (iter 3/5) 
+Ostrzeżenie w poleceniu 'multinom(form, data = x_reg, summ = 2, maxit = 50, trace = FALSE, ':
+  groups ‘0’ ‘1’ ‘2’ ‘4’ are empty
+Ostrzeżenie w poleceniu 'multinom(form, data = x_reg, summ = 2, maxit = 50, trace = FALSE, ':
+  groups ‘0’ ‘1’ ‘2’ ‘4’ are empty
+INFO  [10:20:48.524] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '190403' (iter 4/5) 
+Ostrzeżenie w poleceniu 'multinom(form, data = x_reg, summ = 2, maxit = 50, trace = FALSE, ':
+  group ‘2’ is empty
+Ostrzeżenie w poleceniu 'multinom(form, data = x_reg, summ = 2, maxit = 50, trace = FALSE, ':
+  group ‘2’ is empty
+Ostrzeżenie w poleceniu 'multinom(form, data = x_reg, summ = 2, maxit = 50, trace = FALSE, ':
+  groups ‘1’ ‘4’ ‘6’ are empty
+Ostrzeżenie w poleceniu 'multinom(form, data = x_reg, summ = 2, maxit = 50, trace = FALSE, ':
+  groups ‘1’ ‘4’ ‘6’ are empty
+INFO  [10:20:49.895] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '190403' (iter 5/5) 
+Ostrzeżenie w poleceniu 'multinom(form, data = x_reg, summ = 2, maxit = 50, trace = FALSE, ':
+  group ‘1’ is empty
+Ostrzeżenie w poleceniu 'multinom(form, data = x_reg, summ = 2, maxit = 50, trace = FALSE, ':
+  group ‘1’ is empty
+Ostrzeżenie w poleceniu 'multinom(form, data = x_reg, summ = 2, maxit = 50, trace = FALSE, ':
+  group ‘2’ is empty
+Ostrzeżenie w poleceniu 'multinom(form, data = x_reg, summ = 2, maxit = 50, trace = FALSE, ':
+  group ‘2’ is empty
+
+
+<ResampleResult> of 5 iterations
+* Task: 190403
+* Learner: imput_VIM_IRMI.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.05564103 
+
+
+INFO  [10:20:52.584] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '54' (iter 1/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [10:21:00.867] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '54' (iter 2/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [10:21:03.327] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '54' (iter 3/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [10:21:07.746] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '54' (iter 4/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [10:21:14.927] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '54' (iter 5/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+
+
+<ResampleResult> of 5 iterations
+* Task: 54
+* Learner: imput_VIM_IRMI.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1548387 
+
+
+INFO  [10:21:25.259] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3547' (iter 1/5) 
+INFO  [10:21:25.971] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3547' (iter 2/5) 
+INFO  [10:21:26.728] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3547' (iter 3/5) 
+INFO  [10:21:27.441] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3547' (iter 4/5) 
+INFO  [10:21:28.139] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '3547' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3547
+* Learner: imput_VIM_IRMI.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2536284 
+
+
+INFO  [10:21:30.214] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '5' (iter 1/5) 
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'useLM(x_reg, ndata, index, mixed_tf, mixed_constant, factors, ':
+  The residual scale could not be computed, probably due to a rank deficient model. It is set to 1
+
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'useLM(x_reg, ndata, index, mixed_tf, mixed_constant, factors, ':
+  The residual scale could not be computed, probably due to a rank deficient model. It is set to 1
+
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'useLM(x_reg, ndata, index, mixed_tf, mixed_constant, factors, ':
+  The residual scale could not be computed, probably due to a rank deficient model. It is set to 1
+
+INFO  [10:21:58.732] Applying learner 'imput_VIM_IRMI.encodeimpact.classif.glmnet' on task '5' (iter 2/5) 
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = 1, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(object, newdata, se.fit, scale = residual.scale, type = if (type == ':
+  prediction from a rank-deficient fit may be misleading
+Error in lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs,  : 
+  one multinomial or binomial class has 1 or 0 observations; not allowed
+
+
+Successful evaluation: 9/10 tasks
+
+
