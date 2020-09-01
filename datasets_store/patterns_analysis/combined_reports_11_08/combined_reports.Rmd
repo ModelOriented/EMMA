@@ -1,0 +1,423 @@
+---
+title: "Combined report on missings patterns."
+author: "Piotr Fic"
+date: "11 08 2020"
+output: html_document
+---
+
+<style type="text/css">
+.main-container {
+  max-width: 1800px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+</style>
+
+
+```{r setup, include=FALSE}
+knitr::opts_knit$set(root.dir=normalizePath('../../../'))
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+```
+
+```{r packages}
+library(ggplot2)
+library(ggthemes)
+library(plyr)
+library(dplyr)
+library(scales)
+library(patchwork)
+library(kableExtra)
+library(dendextend)
+```
+
+```{r data_reading}
+data <- read.csv("datasets_store/patterns_analysis/readed_json_info.csv")[, -1]
+selected_df <- read.csv("datasets_store/datasets_selection/selected_datasets.csv")
+data <- data[data$id %in% selected_df$ID, ]
+data <- data[!is.na(data$name), ]
+patterns <- read.csv(file = "datasets_store/patterns_analysis/summary_of_patterns_in_all.csv")
+patterns <- patterns[patterns$id %in% data$id, ]
+```
+
+### Data used.
+
+- The report was created on the basis of information on 132 datasets, both from the regression and classification tasks.
+
+## Key information about distribution of missings.
+
+### *Figure 1*
+
+```{r percentage_of_missings}
+data$per_missings <- round(100*data$no_missings/(data$no_instances*data$no_features), digits = 1)
+
+p1 <- ggplot(data, aes(per_missings))+
+  geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, 100, 5))+
+  xlab("% of missings")+
+  ylab("% of datasets")+
+  ggtitle("Histogram of percentage of missings among datasets.")+
+  scale_x_continuous(breaks = seq(0, 100, 5))+
+  scale_y_continuous(breaks = seq(0, 0.7, 0.1), labels = seq(0, 70, 10))+
+  theme_linedraw()
+p1
+```
+
+- Most of the datasets have missings percentage lower than 5%.
+- About 25% of datasets have a fraction of missings between 5% to 20%.
+- Higher percentages of missings occur in a small number of datasets.
+
+### *Figure 2*
+
+```{r percentage_instances_missings}
+data$per_instances_miss <- round(100*data$no_instances_w_miss/data$no_instances)
+
+p2 <- ggplot(data, aes(per_instances_miss))+
+  geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, 100, 5))+
+  xlab("% of instances with missings")+
+  ylab("% of datasets")+
+  ggtitle("Histogram of percentage of instances with missing values.")+
+  scale_x_continuous(breaks = seq(0, 100, 5))+
+  scale_y_continuous(breaks = seq(0, 0.3, 0.1), labels = seq(0, 30, 10), limits = c(0, 0.3))+
+  theme_linedraw()
+p2
+```
+
+- There are two dominant groups of occurrence of missings among instances.
+- The first group contains datasets where the percentage of instances with missings is lower than 15%.
+- The second group is formed by datasets with a very high percentage of instances with missings (above 90%).
+
+### *Figure 3*
+
+```{r percentage_variables_missings}
+data$per_variables_miss <- round(100*(data$no_cat_w_miss+data$no_num_w_miss)/data$no_features)
+
+p3 <- ggplot(data, aes(per_variables_miss))+
+  geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, 100, 5))+
+  xlab("% of variables with missings")+
+  ylab("% of datasets")+
+  ggtitle("Histogram of percentage of variables with missing values.")+
+  scale_x_continuous(breaks = seq(0, 100, 5))+
+  scale_y_continuous(breaks = seq(0, 0.2, 0.1), labels = seq(0, 20, 10), limits = c(0, 0.2))+
+  theme_linedraw()
+p3
+```
+
+## Key information about distribution of missings patterns.
+
+### *Figure 4*
+
+```{r patterns_in_instances_fraction}
+data$fraction <- round(100*data$no_of_patterns/data$no_instances, digits = 1)
+
+ggplot(data, aes(fraction))+
+  geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, 100, 5))+
+  xlab("no_of_patterns/no_of_instances [%]")+
+  ylab("% of datasets")+
+  ggtitle("Histogram of fraction of unique patterns to number of instances.")+
+  scale_x_continuous(breaks = seq(0, 100, by = 5))+
+  scale_y_continuous(breaks = seq(0, 0.8, 0.1), labels = seq(0, 80, 10), limits = c(0, 0.75))+
+  theme_linedraw()
+```
+
+- The figure above presents a dispersion of missings' pattern among datasets.
+- Most of the datasets have patterns which have less than 10% of unique combinations compared to  
+the number of instances in datasets.
+- There are very few datasets which have diverse patterns with a unique combination for most rows of the dataset.
+
+### *Figure 5*
+
+```{r variables_in_patterns}
+ggplot(patterns, aes(var_per))+
+  geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, 100, 5))+
+  xlab("% of variables in pattern")+
+  ylab("% of patterns")+
+  ggtitle("Histogram of percentage of variables in patterns.")+
+  scale_x_continuous(breaks = seq(0, 100, 5))+
+  scale_y_continuous(breaks = seq(0, 0.60, 0.10), labels = seq(0, 60, 10))+
+  theme_linedraw()
+```
+
+- Percentage of variables in the pattern means a fraction of variables in dataset's row which have missing values.  
+Different combinations of variables with missings create missings patterns.
+- Most of the missings patterns contain less than 10% of variables.
+- The second noticeable, but small group create patterns with the percentage of variables between 65% to 75%.
+
+### *Figure 6*
+
+```{r average_vars_in_patterns_by_dataset}
+p6 <- group_by(patterns, id)%>%
+  summarise("average" = mean(var_per))%>%
+ggplot(aes(average))+
+  geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, 100, 5))+
+  xlab("average % of variables in pattern")+
+  ylab("% of datasets")+
+  ggtitle("Histogram of average percentage of variables in pattern by datasets.")+
+  scale_x_continuous(breaks = seq(0, 100, 5))+
+  scale_y_continuous(breaks = seq(0, 0.3, 0.1), labels = seq(0, 30, 10), limits = c(0, 0.3))+
+  theme_linedraw()
+p6
+```
+
+- On the figure above the percentage of variables in patterns is averaged for every dataset.
+- Averaging by datasets introduce more diversity in distribution.
+- Conclusions remain similar, most of the datasets have patterns which on average contain less than 25% of variables.
+
+### *Figure 7*
+
+```{r percentage_instances_in_patterns}
+ggplot(patterns, aes(x = row_per))+
+  geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, max(patterns$row_per), 2))+
+  xlab("% of instances in pattern")+
+  ylab("% of patterns")+
+  ggtitle("Histogram of percentage of instances in patterns.")+
+  scale_x_continuous(breaks = seq(0, max(patterns$row_per), 4))+
+  scale_y_continuous(breaks = seq(0, 1, 0.25), labels = seq(0, 100, 25))+
+  theme_linedraw()
+```
+
+- Almost all patterns seem to cover an only very small fraction of dataset's instances.
+
+### *Figure 8*
+
+```{r average_percentage_instances_pattern}
+group_by(patterns, id)%>%
+  summarise("average" = mean(row_per))%>%
+ggplot(aes(x = average))+
+  geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, max(patterns$row_per), 2))+
+  xlab("average % of instances in pattern")+
+  ylab("% of datasets")+
+  ggtitle("Histogram of average percentage of instances in pattern by datasets.")+
+  scale_x_continuous(breaks = seq(0, max(patterns$row_per), 4))+
+  scale_y_continuous(breaks = seq(0, 0.5, 0.1), labels = seq(0, 50, 10))+
+  theme_linedraw()
+```
+
+- Calculating the average of a number of instances in patterns for each dataset help to see more diversity.
+- Still for most datasets a single pattern on average covers below 4% of instances.
+- However, some datasets have missings patters which on the average cover more than half of the instances in the dataset.
+
+<br></br>
+<br></br>
+
+## Decision tree
+
+Based on the above analysis, we can try to group data sets against key statistics.
+
+```{r tree_setup, include=FALSE}
+source("datasets_store/patterns_analysis/decision_tree.R")
+
+#Modification of figures to use with tree plots
+p1 <- p1+ggtitle("Percentage of missings")
+p2 <- p2+ggtitle("Instances with missings")
+p3 <- p3+ggtitle("Variables with missings")
+p6 <- p6+ggtitle("Variables in patterns")
+
+#Decision variables to choose:
+# - "per_missings", "per_variables_missings", "per_instances_missings", "patterns_fraction", "avg_per_var_pattern", "avg_per_inst_pattern"
+
+leaves_stats <- function(df, cols){
+  result <- list()
+  for (i in (1:max(df$group_id))) {
+    
+  avg <- filter(df, group_id == i)%>%
+    summarise_all(mean)
+  
+  st_dev <- filter(df, group_id == i)%>%
+    summarise_all(sd)
+  
+  avg <- t(avg[, -c(1,2,3)])
+  st_dev <- t(st_dev[, -c(1,2,3)])
+  #row.names(avg) <- c("%_missings", "%_vars_missings", "%_inst_missings", "%_patterns", "%_vars_patterns", "%_inst_patterns")
+  #row.names(st_dev) <- c("%_missings", "%_vars_missings", "%_inst_missings", "%_patterns", "%_vars_patterns", "%_inst_patterns")
+  row.names(avg) <- colnames(df[-c(1,2,3)])
+  row.names(st_dev) <- colnames(df[-c(1,2,3)])
+  
+  temp <- data.frame(avg, st_dev)
+  temp <- round(temp, 1)
+  colnames(temp) <- c(paste(i, "avg", sep = "_"), paste(i, "sd ", sep = "_"))
+  colnames(temp) <- cell_spec(colnames(temp), background = cols[i])
+  
+  if(i>1){
+    row.names(temp) <- NULL
+    result[[i]] <- temp
+  }else{
+    row.names(temp) <- colnames(df[-c(1,2,3)])
+    result[[i]] <- temp
+  }
+  }
+  return(result)
+}
+
+clustering <- function(df, tree){
+  
+  row.names(df) <- df[, 1]
+  df <- df[,-1]
+  d <- dist(df)
+  hc <- hclust(d, method = "ward.D")
+  dend <- as.dendrogram(hc)
+  
+  num_groups <- tree$df$group_id
+  colors <-  mapvalues(num_groups, from = 1:max(num_groups), to = tree$cols)
+  or_colors <- colors[order.dendrogram(dend)]
+  labels_colors(dend) <- or_colors
+  dend <- color_branches(dend, col = or_colors)
+  
+  plot(dend)
+  colored_bars(dend = dend, colors = colors, "Tree leaves")
+}
+```
+
+### *Tree 1*
+
+Splitting variables:
+
+- percentage of missings [10]
+- percentage of instances with missings [15, 90]
+- fraction of patterns in instances [10]
+
+<center>
+```{r tree1, fig.width=12}
+decisions1 <- list(
+  "per_missings" = 10,
+  "per_instances_missings" = c(15, 90),
+  "patterns_fraction" = 10
+)
+
+tree1 <- decision_tree(df, decisions1)
+plot(tree1$tree)
+```
+</center>
+
+### *Tree 2*
+
+Splitting variables:
+
+- percentage of missings [5]
+- percentage of instances with missings [35]
+- fraction of patterns in instances [10]
+
+<center>
+```{r tree2, fig.width=12}
+decisions2 <- list(
+  "per_missings" = 5,
+  "per_instances_missings" = 35,
+  "patterns_fraction" = 10
+)
+
+tree2 <- decision_tree(df, decisions2)
+plot(tree2$tree)
+```
+</center>
+
+### *Tree 3*
+
+Splitting variables:
+
+- percentage of missings [5]
+- percentage of instances with missings [35]
+- fraction of patterns in instances [10]
+
+<center>
+```{r tree3, fig.width=12}
+decisions3 <- list(
+  "per_missings" = 5,
+  "per_instances_missings" = 35,
+  "patterns_fraction" = 10
+)
+
+tree3 <- decision_tree(df, decisions3)
+plot(tree3$tree)
+```
+</center>
+
+### *Tree 4*
+
+Splitting variables:
+
+- percentage of missings [5]
+- percentage of instances with missings [15]
+- average percentage of variables in dataset's patterns [10, 25]
+
+<center>
+```{r tree4, fig.width=12, fig.height=3}
+decisions4 <- list(
+  "per_missings" = 5,
+  "per_instances_missings" = 15,
+  "avg_per_var_pattern" = c(10, 25)
+)
+
+p1 <- p1+geom_vline(xintercept = decisions4$per_missings, color = "#fc3d03", linetype = "twodash", size = 1.25)
+p2 <- p2+geom_vline(xintercept = decisions4$per_instances_missings, color = "#fc3d03", linetype = "twodash", size = 1.25)
+p6 <- p6+geom_vline(xintercept = decisions4$avg_per_var_pattern, color = "#fc3d03", linetype = "twodash", size = 1.25)
+
+p1+p2+p6
+```
+
+```{r, fig.width=14, fig.height=5}
+tree4 <- decision_tree(df, decisions4)
+plot(tree4$tree)
+
+result4 <- merge(tree4$df[, c("id", "group_id", "group_size")], df, by = "id")
+knitr::kable(leaves_stats(result4, tree4$cols), escape = FALSE)%>%kable_styling()
+```
+
+```{r, fig.width=10, fig.height=6}
+clustering(df, tree4)
+title("Hierarchical clustering result")
+```
+
+</center>
+
+### *Tree 5*
+
+Splitting variables:
+
+- percentage of missings [5]
+- percentage of instances with missings [15]
+- percentage of variables with missings [15, 60]
+
+<center>
+```{r tree5, fig.width=12, fig.height=3}
+decisions5 <- list(
+  "per_missings" = 5,
+  "per_instances_missings" = c(15),
+  "per_variables_missings" = c(15, 60)
+)
+
+p1 <- p1+geom_vline(xintercept = decisions5$per_missings, color = "#fc3d03", linetype = "twodash", size = 1.25)
+p2 <- p2+geom_vline(xintercept = decisions5$per_instances_missings, color = "#fc3d03", linetype = "twodash", size = 1.25)
+p3 <- p3+geom_vline(xintercept = decisions5$per_variables_missings, color = "#fc3d03", linetype = "twodash", size = 1.25)
+
+p1+p2+p3
+```
+
+```{r, fig.width=14, fig.height=5}
+tree5 <- decision_tree(df, decisions5)
+plot(tree5$tree)
+
+result5 <- merge(tree5$df[, c("id", "group_id", "group_size")], df, by = "id")
+
+knitr::kable(leaves_stats(result5, tree5$cols), escape = FALSE)%>%kable_styling()
+```
+
+```{r, fig.width=10, fig.height=6}
+clustering(df, tree5)
+title("Hierarchical clustering result")
+```
+</center>
+
+## Conclusions from decisions trees and clustering
+
+- there are two significant groups of datasets: the first with a low average percentage of missings and instances with missings, the second opposite with a high average of missings and instances with missings  
+
+- the third noticeable group are datasets with a low percentage of missings but scattered to a larger number of observations (middle subtree)  
+
+- statistics describing the distribution of deficiencies into variables introduce differentiation in each of the previously obtained sub-trees  
+
+- there is a tendency that datasets with a low number of missings have a low number of columns with missings and the opposite for datasets with a large number of missings  
+
+- hierarchical clustering results partially support grouping by decision trees, the extreme left and right branches of the tree form their own clusters  
+
+- it is difficult to analyze the middle subtrees, where the relationships are not easily interpreted, leaves are mixed among clusters
+
+<br></br>
+<br></br>

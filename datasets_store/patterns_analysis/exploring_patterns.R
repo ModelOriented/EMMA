@@ -1,8 +1,8 @@
 library(jsonlite)
 
-#selected <- read.csv(file = "datasets_store/datasets_selection/selected_datasets.csv")
+selected <- read.csv(file = "datasets_store/datasets_selection/selected_datasets.csv")$ID
 #selected <- selected[selected$task_type == "binary", "ID"]
-selected <- read.csv("datasets_store/datasets_test_sample.csv")$id
+#selected <- read.csv("datasets_store/datasets_test_sample.csv")$id
 
 summary <- data.frame("id" = c(), "var_per" = c(), "row_per" = c(), "miss_per" = c(), 
                       "num_per" = c(), "cat_per" = c(), "miss_inst_per" = c())
@@ -44,4 +44,7 @@ for (id in selected) {
   summary <- rbind(summary, single_summary)
 }
 
+
 #write.csv(summary, file = "datasets_store/patterns_analysis/summary_of_patterns_in_sample.csv", row.names = FALSE)
+#write.csv(summary, file = "datasets_store/patterns_analysis/summary_of_patterns_in_all.csv", row.names = FALSE)
+
