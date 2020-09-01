@@ -9,20 +9,20 @@
 #'
 #'
 #' @section Parameters:
-#' The parameters are the parameters inherited from [`PipeOpTaskPreproc`], as well as: \cr
+#' The parameters include inherited from [`PipeOpTaskPreproc`], as well as: \cr
 #' \itemize{
 #' \item \code{id} :: \code{character(1)}\cr
 #' Identifier of resulting object, default \code{"imput_VIM_kNN"}.
 #' \item \code{k} :: \code{intiger(1)}\cr
-#' Threshold for convergency, default \code{5}.
+#' Threshold for convergence, default \code{5}.
 #' \item \code{numFUN} :: \code{function(){}}\cr
-#' Function for aggregating the k Nearest Neighbours in the case of a numerical variable.  Can be ever function with input=numeric_vector and output=atomic_object, default \code{median}.
+#' Function for aggregating the k Nearest Neighbors in case of numerical variables. It can be any function with input=numeric_vector and output=atomic_object, default \code{median}.
 #' \item \code{col_0_1} :: \code{logical(1)}\cr
-#' Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
+#' Decides whether to add a bonus column informing where values were imputed. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
 #' \item \code{catFUN} :: \code{function(){}}\cr
-#' Function for aggregating the k Nearest Neighbours in the case of a categorical variable.  Can be ever function with input=not_numeric_vector and output=atomic_object, default \code{VIM::maxCat}
+#' Function for aggregating the k Nearest Neighbours in case of categorical variables. It can be any function with input=not_numeric_vector and output=atomic_object, default \code{VIM::maxCat}
 #' \item \code{out_fill} :: \code{character(1)}\cr
-#' Output log file location if file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
+#' Output log file location. If file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
 #'}
 #'
 #' @export
