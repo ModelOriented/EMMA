@@ -168,6 +168,58 @@ autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,set_cor=0
 
   if(sum(is.na(df))==0){return(df)}
 
+
+  #### Bonus single column imputation
+  single_col_imp <- function(df,index_y,methode){
+
+    #### selecting imputation function
+    function_to_impute <- 0
+    if(!is.null(methode)){
+      if(methode=='pmm'){function_to_impute <- mice::mice.impute.pmm}
+      if(methode=='midastouch'){function_to_impute <- mice::mice.impute.midastouch}
+      if(methode=='sample'){function_to_impute <- mice::mice.impute.sample}
+      if(methode=='cart'){function_to_impute <- mice::mice.impute.cart}
+      if(methode=='rf'){function_to_impute <- mice::mice.impute.rf}
+
+    }
+    if(is.null(methode)){
+      if(class(df[,index_y])=='factor'){
+        if(length(levels(df[,index_y]))==2){
+          function_to_impute <- mice::mice.impute.logreg
+        }
+        else{function_to_impute <- mice::mice.impute.polyreg}
+      }
+      if(class(df[,index_y])=='order'){function_to_impute <- mice::mice.impute.polr}
+      if(is(df[,index_y],'numeric')){function_to_impute <- mice::mice.impute.pmm}
+
+    }
+
+
+    #### Prepering data frame
+    df_n <- df
+    df_n <- lapply(df_n, function(x){
+      if(class(x)=='factor'){return(as.integer(x))}
+      return(x)
+    })
+    df_n <- as.data.frame(df_n)
+
+    #### imputation
+    vector_to_impute <- df[,index_y]
+
+    ry <- !is.na(vector_to_impute)
+
+    x <- as.matrix(df_n[,-index_y])
+
+    vector_to_impute[!ry] <- function_to_impute(vector_to_impute,ry,x)
+    return(vector_to_impute)
+
+  }
+
+
+
+
+
+
   formula_cre <- formula_creating(df,col_miss,col_no_miss,col_type,percent_of_missing)
   formula <- formula_cre[1]
   no_numeric <- as.logical(formula_cre[2])
@@ -223,6 +275,22 @@ autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,set_cor=0
   if (return_one){
     imputed_dataset <- mice::complete(imp_final)
     # If user chose to return 0,1 columns
+    if(optimize){
+      for (i in (1:ncol(df))[percent_of_missing>0]){
+        if(sum(is.na(imputed_dataset[,i]))>0){
+          imputed_dataset[,i] <- single_col_imp(imputed_dataset,i,params[[2]])
+        }
+      }
+    }
+    if(!optimize){
+      for (i in (1:ncol(df))[percent_of_missing>0]){
+        if(sum(is.na(imputed_dataset[,i]))>0){
+          imputed_dataset[,i] <- single_col_imp(imputed_dataset,i,set_method)
+        }
+      }
+    }
+
+
     if (col_0_1 ){
       where_imputed <- as.data.frame(imp_final$where)[,imp_final$nmis>0]
       colnames(where_imputed) <- paste(colnames(where_imputed),'where',sep = '_')
