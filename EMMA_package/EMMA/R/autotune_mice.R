@@ -228,7 +228,13 @@ autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,set_cor=0
       colnames(where_imputed) <- paste(colnames(where_imputed),'where',sep = '_')
       imputed_dataset <- cbind(imputed_dataset,where_imputed*1)
     }
+    for (i in colnames(df)[(col_type=='factor')]){
 
+      if(!setequal(levels(na.omit(df[,i])),levels(imputed_dataset[,i]))){
+
+        levels(imputed_dataset[,i]) <- c(levels(na.omit(df[,i])))
+      }
+    }
     return(imputed_dataset)
   }
   if(!return_one){

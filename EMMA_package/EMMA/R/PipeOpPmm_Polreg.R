@@ -25,256 +25,242 @@
 #'
 #' @export
 
-PipeOpPmm <-  R6::R6Class("pmm_imputation",lock_objects=FALSE,
-                           inherit = PipeOpImpute,
-                           public = list(
-                             initialize = function(id = "imput_pmm",m=5,donors=5
-                             ) {
-                               super$initialize(id, whole_task_dependent=TRUE,param_vals=list(m=m,donors=donors),
-                                                param_set = ParamSet$new(list('m'=ParamInt$new('m',lower = 1,upper = 50,default = 5),
-                                                                              'donors'=ParamInt$new('donors',lower = 1,upper = 20,default = 5)))
-                                            )
+PipeOpPmm <-  R6::R6Class("mice_self_imputation",lock_objects=FALSE,
+                                   inherit = PipeOpTaskPreproc,  # inherit from PipeOp
+                                   public = list(
+                                     initialize = function(id = "imput_mice_self",m=5
+                                     ) {
+                                       super$initialize(id,param_vals=list(m=5),param_set =ParamSet$new(list('m'=ParamInt$new('m',lower = 1,upper = 100,default = 5)))
+
+
+
+                                                        )
 
 
 
 
 
 
-                               self$trained <- FALSE
 
-                             }),private=list(
+                                     }),private=list(
 
-                               .train_imputer=function(feature, type, context){
-                                 #### RESETING MODEL AFTER IMPUTATION
-                                 if(setdiff(self$state$context_cols,colnames(context))==self$state$context_cols[[1]]){
-                                   self$trained <- F
-                                 }
-                                if (!self$trained){
+                                       .train_task=function(task){
 
-                                ####  Creting df
-                                df <- as.data.frame(cbind(feature,context))
-                                colnames(df)[1] <- setdiff(self$state$context_cols,colnames(context))
+                                         data_to_impute <- as.data.frame( task$data(cols = task$feature_names))
+                                         targer <- as.data.frame(task$data(cols = task$target_names))
+
+                                         #### Data Imputation ####
+
+                                         # missing data position
+                                         where_miss <- is.na(data_to_impute)
 
 
-                                where_df <- as.data.frame(is.na(df))
+                                         # Random data imputation
+                                         data_to_impute <- lapply(data_to_impute, function(x){
+
+                                           x[is.na(x)] <- sample(x[!is.na(x)],sum(is.na(x)),replace = T)
+                                           x
+
+                                         })
+                                         data_to_impute <- as.data.frame(data_to_impute)
+
+                                         modles <- list()
+
+                                         # First mice loop
+                                         for (i in 1:(self$param_set$values$m+1)){
 
 
-
-                                ### Random valu sampling
-                                df <- lapply(df,function(x){
-
-                                  rx <- !is.na(x)
-                                  if( class(x)=='factor'){
-
-                                    x[!rx] <- sample(x[rx],sum(!rx),replace = T)
-                                    return(as.factor(x))
-
-                                  }
-                                  else{
-                                  x[!rx] <- sample(x[rx],sum(!rx),replace = T)
-                                  return(x)
-                                  }
-
-                                })
-                                df <- as.data.frame(df)
-
-
-                                params <- list()
-                                # First mice loop
-                                 for (i in 1:(self$param_set$values$m+1)){
-
-                                   #Second mice loop
-                                   for (j in 1:ncol(df)){
-
-                                     #### SELECTING METHOD ####
-                                     numeric <- FALSE
-                                     factor <- FALSE
-                                     factor_2 <- F
-
-
-                                     if (class(df[,j]) %in% c("factor", "ordered", "character")) {
-                                       d <- as.factor(df[,j])
-
-
-                                       if (length(levels(d))<=2){factor_2 <- T}
-                                       else{factor <- T}
-                                     }
-                                     else{numeric <- T}
-                                     ry <- !where_df[,j]
-                                     if (numeric){
+                                           ### Second mice loop
+                                           for (j in 1:ncol(data_to_impute)){
 
 
 
-                                      df_n <- df
-                                     # to intiger
-                                     df_n <- lapply(df_n, FUN=function(x){
-                                       if(class(x ) %in% c("factor", "ordered", "character")){
-                                         x <- as.factor(x)
-                                         x  <- as.integer(x)
+                                           numeric <- F
+                                           factor <- F
+                                           factor_2 <- F
+
+                                           ### Chosing model
+                                           vector_to_impute <- data_to_impute[,j]
+                                           ry <- !where_miss[,j]
+                                           if(class(vector_to_impute)=='factor'){
+                                             if(length(levels(na.omit(vector_to_impute)))==2){factor_2 <- T}
+                                             else{factor <- T}
+                                           }
+                                           else{numeric <- T}
+
+
+                                           ### numeric
+                                           if(numeric){
+
+
+                                             numeric_df <- data_to_impute
+
+                                             ### converting factor to int
+                                             numeric_df <- lapply(numeric_df, function(x){
+
+                                               if(class(x)=='factor'){return(as.integer(x))}
+                                               return(x)
+                                             })
+                                             numeric_df <- as.data.frame(numeric_df)
+
+                                             #### performin alghoritm
+                                             par <- mice::norm.draw(vector_to_impute,ry,as.matrix(numeric_df[,-j]))
+
+                                             if(i == (self$param_set$values$m+1)){
+                                               modles[[colnames(data_to_impute)[j]]] <- par
+                                               next
+                                             }
+                                             if(sum(!ry)==0){next}
+
+
+                                             yhatobs <- as.matrix(numeric_df[,-j][ry, , drop = FALSE]) %*% par$coef
+                                             yhatmis <- as.matrix(numeric_df[,-j][!ry, , drop = FALSE]) %*% par$beta
+
+                                             idx  <- .Call("_mice_matcher", PACKAGE = "mice", yhatobs, yhatmis,self$param_set$values$donors)
+
+                                             data_to_impute[,j][!ry] <- numeric_df[,j][ry][idx]
+
+
+                                           }
+
+                                           #### factor
+                                           if (factor ){
+                                             if(sum(!ry)==0 & i < (self$param_set$values$m+1)){next}
+
+                                             polreg <- mlr3learners::LearnerClassifMultinom$new()
+                                             train_task <- TaskClassif$new('task',data_to_impute[ry,],colnames(data_to_impute)[j])
+
+                                             capture.output(polreg$train(train_task))
+
+
+                                           if(i == (self$param_set$values$m+1)){
+
+                                             models[[colnames(data_to_impute)[j]]] <- polreg
+                                           }
+                                           else{
+
+                                             data_to_impute[!ry,j] <- polreg$predict(TaskClassif$new('task',data_to_impute[!ry,],colnames(df)[j]))$response
+                                           }
+
+
+
+                                           }
+
+                                          ####
+                                           if(factor_2){
+
+                                             if(sum(!ry)==0 & i < (self$param_set$values$m+1)){next}
+                                             polreg <- mlr3learners::LearnerClassifLogReg$new()
+                                             train_task <- TaskClassif$new('task',data_to_impute[ry,],colnames(data_to_impute)[j])
+
+                                             capture.output(polreg$train(train_task))
+
+                                             if(i == (self$param_set$values$m+1)){
+
+                                               models[[colnames(data_to_impute)[j]]] <- polreg
+                                             }
+                                             else{
+
+                                               data_to_impute[!ry,j] <- polreg$predict(TaskClassif$new('task',data_to_impute[!ry,],colnames(data_to_impute)[j]))$response
+                                             }
+
+                                           }
+                                           }
+                                         }
+                                         data_imputed <- data_to_impute
+
+                                         self$model <- list('col_mods'=models,'train_data'=numeric_df)
+
+
+                                         data_imputed <-  cbind(data_imputed,task$row_ids)
+                                         colnames(data_imputed)[ncol(data_imputed)] <- task$backend$primary_key
+                                         task$cbind(as.data.table(data_imputed))
+
+                                       },
+                                       .predict_task=function(task){
+                                         data_to_impute <- as.data.frame( task$data(cols = task$feature_names))
+
+
+                                         train_data <- self$model$train_data
+                                         where_miss <- is.na(data_to_impute)
+                                         # Random imputation with train data
+
+                                         for (i in 1:ncol(data_to_impute)){
+
+                                           data_to_impute[is.na(data_to_impute[,i]),i] <- sample(train_data[,i],sum(is.na(data_to_impute[,i])),replace = T)
+
+
+                                         }
+
+
+                                         # Only outer mice loop
+                                         for( i in 1:self$param_set$values$m){
+
+                                           for (j in 1:ncol(data_to_impute)){
+
+                                           numeric <- F
+                                           factor <- F
+                                           factor_2 <- F
+
+                                           ### Chosing model
+                                           vector_to_impute <- df[[,j]]
+                                           ry <- !where_miss[,j]
+                                           if(class(vector_to_impute)=='factor'){
+                                             if(length(levels(na.omit(vector_to_impute)))==2){factor_2 <- T}
+                                             else{factor <- T}
+                                           }
+                                           else{numeric <- T}
+
+                                            if(numeric){
+
+                                              if(sum(!ry)==0){next}
+
+
+
+                                              par <- models$col_mods[[colnames(data_to_impute)[j]]]
+
+                                              yhatobs <- as.matrix(train_data[,-j]) %*% par$coef
+                                              yhatmis <- as.matrix(data_to_impute[,-j][!ry, , drop = FALSE]) %*% par$beta
+
+                                              idx  <- .Call("_mice_matcher", PACKAGE = "mice", yhatobs, yhatmis,self$param_set$values$donors)
+
+                                              data_to_impute[,j][!ry] <- numeric_df[,j][idx]
+
+                                            }
+                                           if(factor){
+
+                                             if(sum(!ry)==0){next}
+
+                                             data_to_impute[!ry,j]<- modles$col_mods[[colnames(data_to_impute)[j]]]$predict(TaskClassif$new('task',data_to_impute[!ry,],colnames(data_to_impute)[j]))$response
+
+                                           }
+                                           if (factor_2){
+                                             if(sum(!ry)==0){next}
+
+                                             data_to_impute[!ry,j]<- modles$col_mods[[colnames(data_to_impute)[j]]]$predict(TaskClassif$new('task',data_to_impute[!ry,],colnames(data_to_impute)[j]))$response
+                                           }
+
+                                           }
+                                         }
+                                         data_imputed <- data_to_impute
+
+
+
+
+                                         data_imputed <-  cbind(data_imputed,task$row_ids)
+                                         colnames(data_imputed)[ncol(data_imputed)] <- task$backend$primary_key
+                                         task$cbind(as.data.table(data_imputed))
                                        }
-                                       x
-                                     })
 
 
-                                     df_n <- as.data.frame(df_n)
-
-                                     y <- df_n[,j]
-                                     par <- mice::norm.draw(y,ry,as.matrix(df_n[,-j]))
-
-                                     if(i == (self$param_set$values$m+1)){
-
-                                       params[[colnames(df)[j]]] <- par
-                                     }
-                                     else{
-                                       if(sum(!ry)==0){next}
-
-                                       yhatobs <- as.matrix(df_n[,-j][ry, , drop = FALSE]) %*% par$coef
-                                       yhatmis <- as.matrix(df_n[,-j][!ry, , drop = FALSE]) %*% par$beta
-
-                                       idx  <- .Call("_mice_matcher", PACKAGE = "mice", yhatobs, yhatmis,self$param_set$values$donors)
-
-                                       df[,j][!ry] <- df_n[,j][ry][idx]
-                                     }
-
-                                     }
-                                     if(factor){
-                                        if(sum(!ry)==0 & i < (self$param_set$values$m+1)){next}
-                                        polreg <- mlr3learners::LearnerClassifMultinom$new()
-                                        train_task <- TaskClassif$new('task',df[ry,],colnames(df)[j])
-
-                                        capture.output(polreg$train(train_task))
-
-                                        if(i == (self$param_set$values$m+1)){
-
-                                          params[[colnames(df)[j]]] <- polreg
-                                        }
-                                        else{
-
-                                        df[!ry,j] <- polreg$predict(TaskClassif$new('task',df[!ry,],colnames(df)[j]))$response
-                                        }
-
-                                     }
-                                     if(factor_2){
-                                       if(sum(!ry)==0 & i < (self$param_set$values$m+1)){next}
-                                       polreg <- mlr3learners::LearnerClassifLogReg$new()
-                                       train_task <- TaskClassif$new('task',df[ry,],colnames(df)[j])
-
-                                       capture.output(polreg$train(train_task))
-
-                                       if(i == (self$param_set$values$m+1)){
-
-                                         params[[colnames(df)[j]]] <- polreg
-                                       }
-                                       else{
-
-                                         df[!ry,j] <- polreg$predict(TaskClassif$new('task',df[!ry,],colnames(df)[j]))$response
-                                       }
-
-                                     }
-
-
-                                     }
-
-
-                                 }
-                                df <- lapply(df, FUN=function(x){
-                                  if(class(x ) %in% c("factor", "ordered", "character")){
-                                    x <- as.factor(x)
-                                    x  <- as.integer(x)
-                                  }
-                                  x
-                                })
-
-
-                                df <- as.data.frame(df)
-
-                                self$model_n <- list('params'=params,'data_n' =df)
-                                self$trained_n <- T
-                                }
-
-
-
-
-
-                                return(NULL)
-                               }
-                               ,
-                                .impute=function(feature, type, model, context){
-                                # Column number
-
-
-                                if(!self$imputed){
-
-                               ry <- !is.na(feature)
-                               f_name <- setdiff(self$state$context_cols,colnames(context))
-                               for (i in 1:self$param_set$values$m){
-
-                               #### SELECTING METHOD ####
-                               numeric <- FALSE
-                               factor <- FALSE
-                               factor_2 <- F
-
-
-
-                               if (class(feature) %in% c("factor", "ordered", "character")) {
-                                 feature <- as.factor(feature)
-
-
-                                if (length(levels(feature))<=2){factor_2 <- T}
-                                else{factor <- T}
-                               }
-                               else{numeric <- T}
-
-                               ###
-                               if(numeric){
-
-                                 f_param <- self$model_n$params[[f_name]]
-
-                                 yhatobs <- as.matrix(self$model_n$data_n[,ifelse(colnames(self$model_n$data_n)==f_name,F,T)]) %*% f_param$coef
-
-                                 df <- lapply(context, FUN=function(x){
-                                   if(class(x ) %in% c("factor", "ordered", "character")){
-                                     x <- as.factor(x)
-                                     x  <- as.integer(x)
-                                   }
-                                   x
-                                 })
-                                 context <- as.data.frame(df)
-
-                                 yhatmis <- as.matrix(context[!ry, , drop = FALSE]) %*% f_param$beta
-
-
-                                 idx  <- .Call("_mice_matcher", PACKAGE = "mice", yhatobs, yhatmis,self$param_set$values$donors)
-                                 feature[!ry] <- self$model_n$data_n[,f_name][idx]
-                               }
-
-                               if (factor){
-
-
-                                 feature[!ry] <- self$model_n$params[[f_name]]$predict(TaskClassif$new('test',as.data.frame(cbind(feature,context))[!ry,],'feature'))$response
-
-                               }
-
-
-                               if (factor_2){
-
-
-                                feature[!ry] <- self$model_n$params[[f_name]]$predict(TaskClassif$new('test',as.data.frame(cbind(feature,context))[!ry,],'feature'))$response
-
-                               }
-                               return(feature)
-                                }}}
-
-
-
-
-                             )
+                                     )
 )
-#  test_pmm <- PipeOpPmm$new()
+
+  test_pmm <- PipeOpPmm$new()
 # # #
-#   gr <- test_pmm %>>% lrn('classif.rpart')
+   gr <- test_pmm %>>% lrn('classif.rpart')
 # # #
-#  grln <- GraphLearner$new(gr)
+  grln <- GraphLearner$new(gr)
 # # # glrn$encapsulate =c(train='evalute',predict='evalute')
 # # #
 # # # glrn
@@ -284,7 +270,7 @@ PipeOpPmm <-  R6::R6Class("pmm_imputation",lock_objects=FALSE,
 # #
 # #
 # #
-#  resample(TaskClassif$new('t',df,colnames(df)[ncol(df)]),grln,rsmp('cv',folds=10))
 
-
+test_pmm$train(list(task))
+  resample(task,grln,rsmp('cv',folds=10))
 
