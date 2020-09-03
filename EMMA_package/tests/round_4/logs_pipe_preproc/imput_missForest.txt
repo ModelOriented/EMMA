@@ -1,0 +1,995 @@
+INFO  [11:30:00.315] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 1/5) 
+INFO  [11:30:43.936] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 2/5) 
+INFO  [11:31:16.189] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 3/5) 
+INFO  [11:31:54.567] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 4/5) 
+INFO  [11:32:51.663] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3802: chscase_whale (Supervised Classification)
+* Learner: imput_missForest.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.01323671 
+
+
+INFO  [11:33:58.717] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 54: hepatitis (Supervised Classification)' (iter 1/5) 
+INFO  [11:35:22.039] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 54: hepatitis (Supervised Classification)' (iter 2/5) 
+INFO  [11:36:47.805] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 54: hepatitis (Supervised Classification)' (iter 3/5) 
+INFO  [11:38:53.358] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 54: hepatitis (Supervised Classification)' (iter 4/5) 
+INFO  [11:40:40.254] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 54: hepatitis (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 54: hepatitis (Supervised Classification)
+* Learner: imput_missForest.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1483871 
+
+
+INFO  [11:42:28.331] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 1/5) 
+INFO  [11:43:27.276] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 2/5) 
+INFO  [11:44:18.740] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 3/5) 
+INFO  [11:45:07.079] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 4/5) 
+INFO  [11:46:01.565] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3547: cars (Supervised Classification)
+* Learner: imput_missForest.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2362541 
+
+
+INFO  [11:46:47.269] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3705: autoHorse (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+INFO  [11:49:01.788] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3705: autoHorse (Supervised Classification)' (iter 2/5) 
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+INFO  [11:51:29.874] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3705: autoHorse (Supervised Classification)' (iter 3/5) 
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+INFO  [11:53:29.121] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3705: autoHorse (Supervised Classification)' (iter 4/5) 
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+INFO  [11:55:20.834] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3705: autoHorse (Supervised Classification)' (iter 5/5) 
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+Ostrzeżenie w poleceniu 'randomForest.default(x = obsX, y = obsY, ntree = ntree, mtry = mtry, ':
+  The response has five or fewer unique values.  Are you sure you want to do regression?
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3705: autoHorse (Supervised Classification)
+* Learner: imput_missForest.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.07317073 
+
+
+INFO  [11:57:30.037] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 1/5) 
+INFO  [11:57:33.841] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 2/5) 
+INFO  [11:57:37.457] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 3/5) 
+INFO  [11:57:40.277] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 4/5) 
+INFO  [11:57:42.728] Applying learner 'imput_missForest.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3604: pharynx (Supervised Classification)
+* Learner: imput_missForest.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1846154 
+
+
+Successful evaluation: 5/5 tasks
+
+
