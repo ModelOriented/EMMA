@@ -16,9 +16,7 @@
 #' \item \code{k} :: \code{intiger(1)}\cr
 #' Threshold for convergence, default \code{5}.
 #' \item \code{numFUN} :: \code{function(){}}\cr
-#' Function for aggregating the k Nearest Neighbors in case of numerical variables. It can be any function with input=numeric_vector and output=atomic_object, default \code{median}.
-#' \item \code{col_0_1} :: \code{logical(1)}\cr
-#' Decides whether to add a bonus column informing where values were imputed. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
+#' Function for aggregating the k Nearest Neighbours in the case of a numerical variable.  Can be ever function with input=numeric_vector and output=atomic_object, default \code{median}.
 #' \item \code{catFUN} :: \code{function(){}}\cr
 #' Function for aggregating the k Nearest Neighbours in case of categorical variables. It can be any function with input=not_numeric_vector and output=atomic_object, default \code{VIM::maxCat}
 #' \item \code{out_fill} :: \code{character(1)}\cr
@@ -31,15 +29,15 @@
 PipeOpVIM_kNN <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,
                            inherit = PipeOpImpute,
                            public = list(
-                             initialize = function(id = "imput_VIM_kNN", k=5,numFun=median,catFun=VIM::maxCat,col_0_1=FALSE,out_file=NULL
+                             initialize = function(id = "imput_VIM_kNN", k=5,numFun=median,catFun=VIM::maxCat,out_file=NULL
                              ) {
-                               super$initialize(id, whole_task_dependent=TRUE,param_vals = list(k=k,numFun=numFun,catFun=catFun,col_0_1=col_0_1,out_file=out_file ),
+                               super$initialize(id, whole_task_dependent=TRUE,param_vals = list(k=k,numFun=numFun,catFun=catFun,out_file=out_file ),
                                                 param_set= ParamSet$new(list(
 
                                                   'k'=ParamInt$new('k',lower = 1,upper = Inf,default = 5,tags='VIM_kNN'),
                                                   'numFun'=ParamUty$new('numFun',default = median,tags = 'VIM_kNN'),
                                                   'catFun'=ParamUty$new('catFun',default = VIM::maxCat,tags = 'VIM_kNN'),
-                                                  'col_0_1'=ParamLgl$new('col_0_1',default = FALSE,tags = 'VIM_kNN'),
+
                                                   'out_file'=ParamUty$new('out_file',default = NULL,tags = 'VIM_kNN')
 
                                                 ))
@@ -74,7 +72,7 @@ PipeOpVIM_kNN <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,
 
 
                                  data_imputed <- autotune_VIM_kNN(data_to_impute,percent_of_missing ,k =self$param_set$values$k,numFun = self$param_set$values$numFun,
-                                                                  catFun = self$param_set$values$catFun,col_0_1 = self$param_set$values$col_0_1,out_file =self$param_set$values$out_file)
+                                                                  catFun = self$param_set$values$catFun,out_file =self$param_set$values$out_file)
 
 
 
@@ -123,7 +121,7 @@ PipeOpVIM_kNN <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,
 
 
                                  data_imputed <- autotune_VIM_kNN(data_to_impute,percent_of_missing ,k =self$param_set$values$k,numFun = self$param_set$values$numFun,
-                                                                  catFun = self$param_set$values$catFun,col_0_1 = self$param_set$values$col_0_1,out_file =self$param_set$values$out_file)
+                                                                  catFun = self$param_set$values$catFun,,out_file =self$param_set$values$out_file)
 
 
 

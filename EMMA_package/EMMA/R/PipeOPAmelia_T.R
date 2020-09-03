@@ -84,7 +84,9 @@ PipeOpAmelia_T <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
                                                                        empir = self$param_set$values$empir,m=self$param_set$values$m,
                                                                        out_file=self$param_set$values$out_file)
 
-                                       task$cbind(as.data.table(cbind(targer,data_imputed)))
+                                       data_imputed <-  cbind(data_imputed,task$row_ids)
+                                       colnames(data_imputed)[ncol(data_imputed)] <- task$backend$primary_key
+                                       task$cbind(as.data.table(data_imputed))
 
                                      },
                                      .predict_task=function(task){
@@ -110,7 +112,9 @@ PipeOpAmelia_T <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
                                                                        out_file=self$param_set$values$out_file)
 
 
-                                       task$cbind(as.data.table(cbind(targer,data_imputed)))
+                                       data_imputed <-  cbind(data_imputed,task$row_ids)
+                                       colnames(data_imputed)[ncol(data_imputed)] <- task$backend$primary_key
+                                       task$cbind(as.data.table(data_imputed))
 
 
 

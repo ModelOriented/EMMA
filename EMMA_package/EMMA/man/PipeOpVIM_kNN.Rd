@@ -20,9 +20,7 @@ Identifier of resulting object, default \code{"imput_VIM_kNN"}.
 \item \code{k} :: \code{intiger(1)}\cr
 Threshold for convergence, default \code{5}.
 \item \code{numFUN} :: \code{function(){}}\cr
-Function for aggregating the k Nearest Neighbors in case of numerical variables. It can be any function with input=numeric_vector and output=atomic_object, default \code{median}.
-\item \code{col_0_1} :: \code{logical(1)}\cr
-Decides whether to add a bonus column informing where values were imputed. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
+Function for aggregating the k Nearest Neighbours in the case of a numerical variable.  Can be ever function with input=numeric_vector and output=atomic_object, default \code{median}.
 \item \code{catFUN} :: \code{function(){}}\cr
 Function for aggregating the k Nearest Neighbours in case of categorical variables. It can be any function with input=not_numeric_vector and output=atomic_object, default \code{VIM::maxCat}
 \item \code{out_fill} :: \code{character(1)}\cr
@@ -59,7 +57,6 @@ Output log file location. If file already exists log message will be added. If N
   k = 5,
   numFun = median,
   catFun = VIM::maxCat,
-  col_0_1 = FALSE,
   out_file = NULL
 )}\if{html}{\out{</div>}}
 }

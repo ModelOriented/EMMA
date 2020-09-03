@@ -93,6 +93,23 @@ missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=TRU
       final[,i] <- as.integer(final[,i])
     }
 
+    for (i in colnames(df)[(col_type=='factor')]){
+
+      if(!setequal(as.character(unique(na.omit(df[,i]))),levels(final[,i]))){
+
+        reg_exp <- paste0('.*',i)
+        levels(final[,i]) <- substr(sub(reg_exp, "", levels(final[,i])),start = 2,stop = 9999)
+      }
+    }
+
+    for (i in colnames(df)[(col_type=='factor')]){
+
+      if(!setequal(levels(na.omit(df[,i])),levels(final[,i]))){
+
+        levels(final[,i]) <- c(levels(na.omit(df[,i])))
+      }
+    }
+
   return(final)}
   },error=function(e){
     if(!is.null(out_file)){
@@ -104,9 +121,13 @@ missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=TRU
     if(FMAD){final <-missMDA::MIFAMD(df,ncp = set_ncp)$completeObs }
     if(MCA){final <- missMDA::MIMCA(df,ncp = set_ncp)$completeObs}
     if(PCA){final <- missMDA::MIPCA(df,ncp=set_ncp)$completeObs}
-    return(final$res.MI)
+    final <- final$res.MI
+
+
+    return(final)
   }
 }
+
 
 
 

@@ -53,24 +53,24 @@ autotune_VIM_regrImp <- function(df,col_type,percent_of_missing,col_0_1=F,robust
       final <- VIM::regressionImp(as.formula(full_formula),final,robust = robust,mod_cat = mod_cat,imp_var = F)
       WORK <- TRUE
 
-    },error=function(e){error <- e})
+    },error=function(e){error <<- e})
 
     if(!WORK & sum(percent_of_missing==0 & (col_type=='numeric' | col_type =='integer'))>0){
       tryCatch({
       final <-  VIM::regressionImp(as.formula(numeric_formula),final,robust = robust,mod_cat = mod_cat,imp_var = F)
-      WORK <- TRUE},error=function(e){error <- e})
+      WORK <- TRUE},error=function(e){error <<- e})
     }
     if (!WORK){
       tryCatch({
       part_formula <- paste(colnames(df)[i],paste(colnames(df)[percent_of_missing==0][1],collapse = '+'),sep = '~')
       final <-  VIM::regressionImp(as.formula(part_formula),final,robust = robust,mod_cat = mod_cat,imp_var = F)
-      WORK <- TRUE},error=function(e){error <- e})
+      WORK <- TRUE},error=function(e){error <<- e})
     }
     if (!WORK & sum(percent_of_missing==0 & (col_type=='numeric' | col_type =='integer'))>0){
       tryCatch({
       numeric_part_formula <- paste(colnames(df)[i],paste(colnames(df)[percent_of_missing==0 & (col_type=='numeric' | col_type =='integer')][1],collapse = '+'),sep = '~')
       final <-  VIM::regressionImp(as.formula(part_formula),final,robust = robust,mod_cat = mod_cat,imp_var = F)
-      WORK <- TRUE},error=function(e){error <- e})
+      WORK <- TRUE},error=function(e){error <<- e})
 
     }
     if (!WORK){
@@ -106,10 +106,11 @@ autotune_VIM_regrImp <- function(df,col_type,percent_of_missing,col_0_1=F,robust
 
   }
   # converting back to integer
+  if(exists('final')){
   for (i in colnames(final)[col_type=='integer']){
     final[,i] <- as.integer(final[,i])
   }
-
+  }
 
   return(final)
 

@@ -28,9 +28,7 @@ Variable indicating if the time effects of polytime should vary across the cross
 \item \code{empir} :: \code{double(1)}\cr
 Number indicating level of the empirical (or ridge) prior. This prior shrinks the covariances of the data, but keeps the means and variances the same for problems of high missingness, small N's or large correlations among the variables. Should be kept small, perhaps 0.5 to 1 percent of the rows of the data; a reasonable upper bound is around 10 percent of the rows of the data. If empir is not set, empir=nrow(df)*0.015, default \code{NULL}.
 \item \code{parallel} :: \code{double(1)}\cr
-If true parallel calculations are used, default \code{TRUE}.
-\item \code{col_0_1} :: \code{logical(1)}\cr
-Decides whether to add a bonus column informing where values were imputed. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
+If true parallel calculation is used, default \code{TRUE}.
 \item \code{out_fill} :: \code{character(1)}\cr
 Output log file location. If file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
 }
@@ -62,7 +60,6 @@ Output log file location. If file already exists log message will be added. If N
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PipeOpAmelia$new(
   id = "imput_Amelia",
-  col_0_1 = FALSE,
   polytime = NULL,
   splinetime = NULL,
   intercs = FALSE,

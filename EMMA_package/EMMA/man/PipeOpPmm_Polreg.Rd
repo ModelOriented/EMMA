@@ -31,7 +31,7 @@ number of donors for pmm , default \code{5}.
 }
 
 \section{Super classes}{
-\code{\link[mlr3pipelines:PipeOp]{mlr3pipelines::PipeOp}} -> \code{\link[mlr3pipelines:PipeOpImpute]{mlr3pipelines::PipeOpImpute}} -> \code{pmm_imputation}
+\code{\link[mlr3pipelines:PipeOp]{mlr3pipelines::PipeOp}} -> \code{\link[mlr3pipelines:PipeOpTaskPreproc]{mlr3pipelines::PipeOpTaskPreproc}} -> \code{mice_self_imputation}
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -54,7 +54,7 @@ number of donors for pmm , default \code{5}.
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{PipeOpPmm$new(id = "imput_pmm", m = 5, donors = 5)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{PipeOpPmm$new(id = "imput_mice_self", m = 5)}\if{html}{\out{</div>}}
 }
 
 }

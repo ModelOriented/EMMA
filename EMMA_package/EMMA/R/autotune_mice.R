@@ -150,7 +150,7 @@ random_param_mice_search <- function(low_corr=0,up_corr=1,methods_random = c('pm
 #' @param percent_of_missing numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)
 #' @param low_corr double betwen 0,1 default 0 lower boundry of correlation set.
 #' @param up_corr double between 0,1 default 1 upper boundary of correlation set. Both of these parameters work the same for a fraction of features.
-#' @param methods_random set of methods to chose. Default 'pmm'. If seted on NULL defoult method is used : By default, the method uses pmm, predictive mean matching (numeric data) logreg, logistic regression imputation (binary data, factor with 2 levels) polyreg, polytomous regression imputation for unordered categorical data (factor > 2 levels) polr, proportional odds model for (ordered, > 2 levels).
+#' @param methods_random set of methods to chose. Default 'pmm'. If seted on NULL this methods are used predictive mean matching (numeric data) logreg, logistic regression imputation (binary data, factor with 2 levels) polyreg, polytomous regression imputation for unordered categorical data (factor > 2 levels) polr, proportional odds model for (ordered, > 2 levels).
 #' @param iter number of iteration for randomSearch.
 #' @param random.seed random seed.
 #' @param optimize if user wont to optimize.
@@ -167,6 +167,58 @@ random_param_mice_search <- function(low_corr=0,up_corr=1,methods_random = c('pm
 autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,set_cor=0.5,set_method='pmm',percent_of_missing,low_corr=0,up_corr=1,methods_random=c('pmm'),iter,random.seed=123,optimize = T,correlation=T,return_one=T,col_0_1 = F ,verbose=FALSE,out_file=NULL){
 
   if(sum(is.na(df))==0){return(df)}
+
+
+  #### Bonus single column imputation
+  single_col_imp <- function(df,index_y,methode){
+
+    #### selecting imputation function
+    function_to_impute <- 0
+    if(!is.null(methode)){
+      if(methode=='pmm'){function_to_impute <- mice::mice.impute.pmm}
+      if(methode=='midastouch'){function_to_impute <- mice::mice.impute.midastouch}
+      if(methode=='sample'){function_to_impute <- mice::mice.impute.sample}
+      if(methode=='cart'){function_to_impute <- mice::mice.impute.cart}
+      if(methode=='rf'){function_to_impute <- mice::mice.impute.rf}
+
+    }
+    if(is.null(methode)){
+      if(class(df[,index_y])=='factor'){
+        if(length(levels(df[,index_y]))==2){
+          function_to_impute <- mice::mice.impute.logreg
+        }
+        else{function_to_impute <- mice::mice.impute.polyreg}
+      }
+      if(class(df[,index_y])=='order'){function_to_impute <- mice::mice.impute.polr}
+      if(is(df[,index_y],'numeric')){function_to_impute <- mice::mice.impute.pmm}
+
+    }
+
+
+    #### Prepering data frame
+    df_n <- df
+    df_n <- lapply(df_n, function(x){
+      if(class(x)=='factor'){return(as.integer(x))}
+      return(x)
+    })
+    df_n <- as.data.frame(df_n)
+
+    #### imputation
+    vector_to_impute <- df[,index_y]
+
+    ry <- !is.na(vector_to_impute)
+
+    x <- as.matrix(df_n[,-index_y])
+
+    vector_to_impute[!ry] <- function_to_impute(vector_to_impute,ry,x)
+    return(vector_to_impute)
+
+  }
+
+
+
+
+
 
   formula_cre <- formula_creating(df,col_miss,col_no_miss,col_type,percent_of_missing)
   formula <- formula_cre[1]
@@ -223,12 +275,34 @@ autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,set_cor=0
   if (return_one){
     imputed_dataset <- mice::complete(imp_final)
     # If user chose to return 0,1 columns
+    if(optimize){
+      for (i in (1:ncol(df))[percent_of_missing>0]){
+        if(sum(is.na(imputed_dataset[,i]))>0){
+          imputed_dataset[,i] <- single_col_imp(imputed_dataset,i,params[[2]])
+        }
+      }
+    }
+    if(!optimize){
+      for (i in (1:ncol(df))[percent_of_missing>0]){
+        if(sum(is.na(imputed_dataset[,i]))>0){
+          imputed_dataset[,i] <- single_col_imp(imputed_dataset,i,set_method)
+        }
+      }
+    }
+
+
     if (col_0_1 ){
       where_imputed <- as.data.frame(imp_final$where)[,imp_final$nmis>0]
       colnames(where_imputed) <- paste(colnames(where_imputed),'where',sep = '_')
       imputed_dataset <- cbind(imputed_dataset,where_imputed*1)
     }
+    for (i in colnames(df)[(col_type=='factor')]){
 
+      if(!setequal(levels(na.omit(df[,i])),levels(imputed_dataset[,i]))){
+
+        levels(imputed_dataset[,i]) <- c(levels(na.omit(df[,i])))
+      }
+    }
     return(imputed_dataset)
   }
   if(!return_one){
