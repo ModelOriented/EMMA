@@ -13,16 +13,16 @@ library(mlr3oml)
 
 # pipes <- c(PipeOpMissMDA_MFA, PipeOpMissMDA_PCA_MCA_FMAD)
 
-pipes <- c(PipeOpmissForest_T, PipeOpMice_T, PipeOpmissRanger_T)
+pipes <- c(PipeOpmissForest, PipeOpMice, PipeOpmissRanger)
 
 
 tasks <- read.csv("EMMA_package/tests/round_3/task_sample.csv")
-tasks <- tasks[sample(10, 5), ]
+tasks <- tasks[tasks$task.id %in% c(3802, 54, 3547, 3705, 3604), ]
 
 for (j in 1:(length(pipes))) {
   positive <- 0
   id <- pipes[[j]]$new()$id
-  f <- file(paste("EMMA_package/tests/round_4/logs_pipe_preproc/", id, ".txt", sep = ""), open = "a")
+  f <- file(paste("EMMA_package/tests/round_4/logs/", id, ".txt", sep = ""), open = "a")
   
   for (i in tasks$task.id) {
     
