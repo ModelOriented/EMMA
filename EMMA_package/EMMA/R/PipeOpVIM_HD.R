@@ -25,12 +25,12 @@
 PipeOpVIM_HD <-  R6::R6Class("VIM_HD_imputation",lock_objects=FALSE,
                            inherit = PipeOpImpute,  # inherit from PipeOp
                            public = list(
-                             initialize = function(id = "imput_VIM_HD",col_0_1= FALSE,out_file=NULL
+                             initialize = function(id = "imput_VIM_HD",out_file=NULL
                              ) {
-                               super$initialize(id, whole_task_dependent=TRUE, param_vals = list( col_0_1=col_0_1,out_file=out_file),
+                               super$initialize(id, whole_task_dependent=TRUE, param_vals = list( out_file=out_file),
                                                 param_set= ParamSet$new(list(
 
-                                                  'col_0_1'=ParamLgl$new('col_0_1',default = F,tags='VIM_HD'),
+
                                                   'out_file'=ParamUty$new('out_file',default = NULL,tags = 'VIM_HD')
 
 
@@ -66,7 +66,7 @@ PipeOpVIM_HD <-  R6::R6Class("VIM_HD_imputation",lock_objects=FALSE,
 
 
 
-                                 data_imputed <- autotune_VIM_hotdeck(data_to_impute,percent_of_missing,self$param_set$values$col_0_1,
+                                 data_imputed <- autotune_VIM_hotdeck(data_to_impute,percent_of_missing,
                                                                       out_file =self$param_set$values$out_file)
 
 
@@ -115,7 +115,7 @@ PipeOpVIM_HD <-  R6::R6Class("VIM_HD_imputation",lock_objects=FALSE,
 
 
 
-                                 data_imputed <- autotune_VIM_hotdeck(data_to_impute,percent_of_missing,self$param_set$values$col_0_1,
+                                 data_imputed <- autotune_VIM_hotdeck(data_to_impute,percent_of_missing,
                                                                       out_file =self$param_set$values$out_file)
 
 

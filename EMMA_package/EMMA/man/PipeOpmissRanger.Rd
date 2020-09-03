@@ -20,9 +20,7 @@ Identifier of resulting object, default \code{"imput_missRanger"}.
 \item \code{mtry} :: \code{integer(1)}\cr
 Sample fraction used by missRanger. This param isn't optimized automatically. If NULL default value from ranger package will be used, \code{NULL}.
 \item \code{num.trees} :: \code{integer(1)}\cr
-Number of trees. If optimize=TRUE, params set: seq(10, num.trees, iter) will be used, default \code{500}.
-\item \code{col_0_1} :: \code{logical(1)}\cr
-Decides whether to add a bonus column informing where values were imputed. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
+Number of trees. If optimize == TRUE. Param set seq(10,num.trees,iter) will be used, default \code{500}
 \item \code{pmm.k} :: \code{integer(1)}\cr
 Number of candidate non-missing values to sample from in the predictive mean matching step. 0 to avoid this step. If optimize=TRUE params set: sample(1:pmm.k, iter) will be used. If pmm.k=0, missRanger is the same as missForest, default \code{5}.
 \item \code{random.seed} :: \code{integer(1)}\cr
@@ -69,7 +67,6 @@ Output log file location. If file already exists log message will be added. If N
   pmm.k = 5,
   optimize = F,
   iter = 10,
-  col_0_1 = F,
   out_file = NULL
 )}\if{html}{\out{</div>}}
 }

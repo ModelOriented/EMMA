@@ -25,9 +25,7 @@
 #' \item \code{empir} :: \code{double(1)}\cr
 #' Number indicating level of the empirical (or ridge) prior. This prior shrinks the covariances of the data, but keeps the means and variances the same for problems of high missingness, small N's or large correlations among the variables. Should be kept small, perhaps 0.5 to 1 percent of the rows of the data; a reasonable upper bound is around 10 percent of the rows of the data. If empir is not set, empir=nrow(df)*0.015, default \code{NULL}.
 #' \item \code{parallel} :: \code{double(1)}\cr
-#' If true parallel calculations are used, default \code{TRUE}.
-#' \item \code{col_0_1} :: \code{logical(1)}\cr
-#' Decides whether to add a bonus column informing where values were imputed. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
+#' If true parallel calculation is used, default \code{TRUE}.
 #' \item \code{out_fill} :: \code{character(1)}\cr
 #' Output log file location. If file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
 #'}
@@ -37,16 +35,16 @@
 PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
                                  inherit = PipeOpImpute,  # inherit from PipeOp
                                  public = list(
-                                   initialize = function(id = "imput_Amelia", col_0_1=FALSE,polytime=NULL,splinetime=NULL,intercs=FALSE,empir=NULL,m=3,parallel=TRUE,out_file=NULL
+                                   initialize = function(id = "imput_Amelia", polytime=NULL,splinetime=NULL,intercs=FALSE,empir=NULL,m=3,parallel=TRUE,out_file=NULL
                                    ) {
-                                     super$initialize(id, whole_task_dependent=TRUE,param_vals = list(col_0_1=col_0_1,polytime=polytime,splinetime=splinetime,intercs=intercs,empir=empir,m=m,parallel=parallel,out_file=out_file),
+                                     super$initialize(id, whole_task_dependent=TRUE,param_vals = list(polytime=polytime,splinetime=splinetime,intercs=intercs,empir=empir,m=m,parallel=parallel,out_file=out_file),
                                                       param_set= ParamSet$new(list(
                                                         'polytime'=ParamUty$new('polytime', default = NULL, tags = 'amelia'),
                                                         'splinetime'=ParamUty$new('splinetime',default = NULL,tags='amelia'),
                                                         'empir'=ParamUty$new('empir',default = NULL,tags='amelia'),
                                                         'parallel'=ParamLgl$new('parallel',default = TRUE,tags = 'amelia'),
                                                         'intercs'=ParamLgl$new('intercs',default = FALSE,tags='amelia'),
-                                                        'col_0_1'=ParamLgl$new('col_0_1',default = F,tags='amelia'),
+
                                                         'm'=ParamInt$new('m',lower = 1,upper = Inf,default = 3,tags='amelia'),
                                                         'out_file'=ParamUty$new('out_file',default = NULL,tags = 'amelia')
 
@@ -88,7 +86,7 @@ PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
                                          col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
 
-                                         data_imputed <- autotune_Amelia(data_to_impute,col_type,percent_of_missing,col_0_1 = self$param_set$values$col_0_1,
+                                         data_imputed <- autotune_Amelia(data_to_impute,col_type,percent_of_missing,
                                                                          parallel = self$param_set$values$parallel,polytime = self$param_set$values$polytime,
                                                                          splinetime = self$param_set$values$splinetime, intercs = self$param_set$values$intercs,
                                                                          empir = self$param_set$values$empir,m=self$param_set$values$m,
@@ -141,7 +139,7 @@ PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
                                          col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
 
-                                         data_imputed <- autotune_Amelia(data_to_impute,col_type,percent_of_missing,col_0_1 = self$param_set$values$col_0_1,
+                                         data_imputed <- autotune_Amelia(data_to_impute,col_type,percent_of_missing,
                                                                          parallel = self$param_set$values$parallel,polytime = self$param_set$values$polytime,
                                                                          splinetime = self$param_set$values$splinetime, intercs = self$param_set$values$intercs,
                                                                          empir = self$param_set$values$empir,m=self$param_set$values$m,
@@ -203,8 +201,6 @@ mlr_pipeops$add("Amelia_imputation", PipeOpAmelia)
 #
 #
 # #
-
-
 
 
 #  resample(task,graph_learner,rsmp("holdout"))
