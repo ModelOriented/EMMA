@@ -24,7 +24,7 @@ Vector with \emph{number of trees} values for grid search, used only when optimi
 \item \code{mtry_set} :: \code{integer(1)}\cr
 Vector with \emph{number of variables} values randomly sampled at each split, used only when optimize=TRUE, default \code{NULL}.
 \item \code{parallel} :: \code{logical(1)}\cr
-If TRUE parallel calculations are used, default \code{FALSE}
+If TRUE parallel calculations are used, default \code{FALSE}.
 \item \code{col_0_1} :: \code{logical(1)}\cr
 Decides whether to add a bonus column informing where values were imputed. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
 \item \code{ntree} :: \code{integer(1)}\cr

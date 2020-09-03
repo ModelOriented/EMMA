@@ -269,21 +269,21 @@ PipeOpPmm <-  R6::R6Class("mice_self_imputation",lock_objects=FALSE,
                                      )
 )
 #
-  test_pmm <- PipeOpPmm$new()
+#   test_pmm <- PipeOpPmm$new()
+# # # # #
+#     gr <- test_pmm %>>% lrn('classif.rpart')
+# # # # #
+#    grln <- GraphLearner$new(gr)
+# # # # # glrn$encapsulate =c(train='evalute',predict='evalute')
+# # # # #
+# # # # # glrn
+# # # # #
+# # # # # summary(as.data.frame(test_task$data()))
+# # # # # sum(is.na(df))
 # # # #
-    gr <- test_pmm %>>% lrn('classif.rpart')
 # # # #
-   grln <- GraphLearner$new(gr)
-# # # # glrn$encapsulate =c(train='evalute',predict='evalute')
 # # # #
-# # # # glrn
-# # # #
-# # # # summary(as.data.frame(test_task$data()))
-# # # # sum(is.na(df))
-# # #
-# # #
-# # #
-#
-# test_pmm$train(list(task))
-   resample(task,grln,rsmp('cv',folds=10))
+# #
+# # test_pmm$train(list(task))
+#    resample(task,grln,rsmp('cv',folds=10))
 

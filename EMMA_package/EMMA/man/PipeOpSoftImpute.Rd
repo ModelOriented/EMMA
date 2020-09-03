@@ -27,8 +27,6 @@ Two algorithms are implements, type="svd" or the default type="als". The "svd" a
 Threshold for convergence, default \code{1e-5}
 \item \code{maxit} :: \code{integer(1)}\cr
 Maximum number of iterations, default \code{100}.
-\item \code{col_0_1} :: \code{logical(1)}\cr
-Decides if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
 \item \code{cat_Fun} :: \code{function(){}}\cr
 Function for aggregating the k Nearest Neighbours in the case of a categorical variable. Can be ever function with input=not_numeric_vector and output=atomic_object  default \code{VIM::maxCat}
 \item \code{out_fill} :: \code{character(1)}\cr
@@ -62,7 +60,6 @@ Output log file location if file already exists log message will be added. If NU
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PipeOpSoftImpute$new(
   id = "imput_softImpute",
-  col_0_1 = F,
   cat_Fun = VIM::maxCat,
   lambda = 0,
   rank.max = 2,

@@ -22,8 +22,6 @@ Identifier of resulting object, default \code{"imput_missMDA_MCA_PCA_FMAD"}.
 If true number of dimensions used to predict the missing entries will be optimized. If False by default ncp = 2 it's used ,default \code{TRUE}.
 \item \code{set_ncp} :: \code{integer(1)}\cr
 integer >0. Number of dimensions used by algortims. Used only if optimize_ncp = Flase, default \code{2}.
-\item \code{col_0_1} :: \code{logical(1)}\cr
-Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
 \item \code{ncp.max} :: \code{integer(1)}\cr
 Number corresponding to the maximum number of components to test, default \code{5}.
 \item \code{random.seed} :: \code{integer(1)}\cr
@@ -69,7 +67,6 @@ Output log file location if file already exists log message will be added. If NU
   id = "imput_missMDA_MCA_PCA_FMAD",
   optimize_ncp = T,
   set_ncp = 2,
-  col_0_1 = F,
   ncp.max = 5,
   random.seed = 123,
   maxiter = 998,

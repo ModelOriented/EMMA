@@ -21,8 +21,6 @@ Identifier of resulting object, default \code{"imput_VIM_IRMI"}.
 Threshold for convergency, default \code{5}.
 \item \code{maxit} :: \code{integer(1)}\cr
 Maximum number of iterations, default \code{100}
-\item \code{col_0_1} :: \code{logical(1)}\cr
-Decides if add bonus column informing where imputation has been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
 \item \code{step} :: \code{logical(1)}\cr
 Stepwise model selection is applied when the parameter is set to TRUE, default \code{FALSE}.
 \item \code{robust} :: \code{logical(1)}\cr
@@ -68,7 +66,6 @@ Output log file location if file already exists log message will be added. If NU
   robust = FALSE,
   init.method = "kNN",
   force = FALSE,
-  col_0_1 = FALSE,
   out_file = NULL
 )}\if{html}{\out{</div>}}
 }

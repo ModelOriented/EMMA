@@ -22,8 +22,6 @@ Identifier of resulting object, default \code{"imput_missMDA_MFA"}.
 Number of dimensions used by algorithm, default \code{2}.
 \item \code{random.seed} :: \code{integer(1)}\cr
 Random seed, default \code{123}.
-\item \code{col_0_1} :: \code{logical(1)}\cr
-Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
 \item \code{maxiter} :: \code{integer(1)}\cr
 Maximal number of iteration in algorithm, default \code{998}.
 \item \code{coeff.ridge} :: \code{integer(1)}\cr
@@ -63,7 +61,6 @@ Output log file location if file already exists log message will be added. If NU
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PipeOpMissMDA_MFA$new(
   id = "imput_missMDA_MFA",
-  col_0_1 = F,
   ncp = 2,
   random.seed = 123,
   maxiter = 998,

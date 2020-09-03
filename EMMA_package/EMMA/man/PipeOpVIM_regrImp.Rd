@@ -21,8 +21,6 @@ Identifier of resulting object, default \code{"imput_VIM_regrImp"}.
 TRUE/FALSE if robust regression should be used, default \code{FALSE}.
 \item \code{mod_cat} :: \code{logical(1)}\cr
 TTRUE/FALSE if TRUE for categorical variables the level with the highest prediction probability is selected, otherwise it is sampled according to the probabilities, default \code{FALSE}.
-\item \code{col_0_1} :: \code{logical(1)}\cr
-Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
 \item \code{use_imputed} :: \code{logical(1)}\cr
 TRUE/FALSe if TURE already imputed columns will be used to impute another, default \code{FALSE}.
 \item \code{out_fill} :: \code{character(1)}\cr
@@ -56,7 +54,6 @@ Output log file location if file already exists log message will be added. If NU
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PipeOpVIM_regrImp$new(
   id = "imput_VIM_regrImp",
-  col_0_1 = FALSE,
   robust = FALSE,
   mod_cat = FALSE,
   use_imputed = FALSE,

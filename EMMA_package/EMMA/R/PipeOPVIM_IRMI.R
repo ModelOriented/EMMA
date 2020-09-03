@@ -17,8 +17,6 @@
 #' Threshold for convergency, default \code{5}.
 #' \item \code{maxit} :: \code{integer(1)}\cr
 #' Maximum number of iterations, default \code{100}
-#' \item \code{col_0_1} :: \code{logical(1)}\cr
-#' Decides if add bonus column informing where imputation has been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
 #' \item \code{step} :: \code{logical(1)}\cr
 #' Stepwise model selection is applied when the parameter is set to TRUE, default \code{FALSE}.
 #' \item \code{robust} :: \code{logical(1)}\cr
@@ -38,14 +36,14 @@
 PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
                              inherit = PipeOpImpute,  # inherit from PipeOp
                              public = list(
-                               initialize = function(id = "imput_VIM_IRMI",eps=5,maxit=100,step=FALSE,robust=FALSE,init.method='kNN',force=FALSE,col_0_1= FALSE,
+                               initialize = function(id = "imput_VIM_IRMI",eps=5,maxit=100,step=FALSE,robust=FALSE,init.method='kNN',force=FALSE,
                                                      out_file=NULL
                                ) {
-                                 super$initialize(id, whole_task_dependent=TRUE, param_vals = list( col_0_1=col_0_1,eps=eps,maxit=maxit,step=step,robust=robust,
+                                 super$initialize(id, whole_task_dependent=TRUE, param_vals = list( eps=eps,maxit=maxit,step=step,robust=robust,
                                                                                                     init.method=init.method,force=force,out_file=out_file),
                                                   param_set= ParamSet$new(list(
 
-                                                    'col_0_1'=ParamLgl$new('col_0_1',default = F,tags='VIM_IRMI'),
+
                                                     'eps'=ParamDbl$new('eps',lower = 0,upper = Inf,default = 5,tags = 'VIM_IRMI'),
                                                     'maxit'=ParamInt$new('maxit',lower = 10,upper = Inf,default = 100,tags = 'VIM_IRMI'),
                                                     'step'=ParamLgl$new('step',default = FALSE,tags = 'VIM_IRMI'),
@@ -87,7 +85,7 @@ PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
 
 
                                    data_imputed <- autotune_VIM_Irmi(data_to_impute,col_type,percent_of_missing,eps = self$param_set$values$eps,maxit = self$param_set$values$maxit,
-                                                                     step = self$param_set$values$step,robust = self$param_set$values$robust,col_0_1 = self$param_set$values$col_0_1,
+                                                                     step = self$param_set$values$step,robust = self$param_set$values$robust,
                                                                      init.method = self$param_set$values$init.method,force = self$param_set$values$force,
                                                                      out_file =self$param_set$values$out_file)
 
@@ -138,7 +136,7 @@ PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
 
 
                                    data_imputed <- autotune_VIM_Irmi(data_to_impute,col_type,percent_of_missing,eps = self$param_set$values$eps,maxit = self$param_set$values$maxit,
-                                                                     step = self$param_set$values$step,robust = self$param_set$values$robust,col_0_1 = self$param_set$values$col_0_1,
+                                                                     step = self$param_set$values$step,robust = self$param_set$values$robust,
                                                                      init.method = self$param_set$values$init.method,force = self$param_set$values$force,
                                                                      out_file =self$param_set$values$out_file)
 

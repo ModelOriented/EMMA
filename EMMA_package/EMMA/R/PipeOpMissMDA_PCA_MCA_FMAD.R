@@ -18,8 +18,6 @@
 #' If true number of dimensions used to predict the missing entries will be optimized. If False by default ncp = 2 it's used ,default \code{TRUE}.
 #' \item \code{set_ncp} :: \code{integer(1)}\cr
 #' integer >0. Number of dimensions used by algortims. Used only if optimize_ncp = Flase, default \code{2}.
-#' \item \code{col_0_1} :: \code{logical(1)}\cr
-#' Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
 #' \item \code{ncp.max} :: \code{integer(1)}\cr
 #' Number corresponding to the maximum number of components to test, default \code{5}.
 #' \item \code{random.seed} :: \code{integer(1)}\cr
@@ -41,10 +39,10 @@
 PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",lock_objects=FALSE,
                            inherit = PipeOpImpute,  # inherit from PipeOp
                            public = list(
-                             initialize = function(id = "imput_missMDA_MCA_PCA_FMAD", optimize_ncp = T, set_ncp=2,col_0_1=F,ncp.max=5,random.seed=123,maxiter=998,
+                             initialize = function(id = "imput_missMDA_MCA_PCA_FMAD", optimize_ncp = T, set_ncp=2,ncp.max=5,random.seed=123,maxiter=998,
                                                    coeff.ridge=1,threshold=1e-06,method='Regularized',out_file=NULL
                              ) {
-                               super$initialize(id,whole_task_dependent=TRUE, param_vals = list(optimize_ncp=optimize_ncp,set_ncp=set_ncp,col_0_1=col_0_1,ncp.max=ncp.max,random.seed=random.seed,
+                               super$initialize(id,whole_task_dependent=TRUE, param_vals = list(optimize_ncp=optimize_ncp,set_ncp=set_ncp,ncp.max=ncp.max,random.seed=random.seed,
                                                                       maxiter=maxiter,coeff.ridge=coeff.ridge,threshold=threshold,method=method,out_file=out_file),
                                                 param_set= ParamSet$new(list(
 
@@ -59,8 +57,7 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
 
 
                                                   'random.seed'=ParamInt$new('random.seed',-Inf,Inf,default = 123,tags='PCA_MCA_FMAD'),
-                                                  'optimize_ncp'=ParamLgl$new('optimize_ncp',default = T,tags='PCA_MCA_FMAD'),
-                                                  'col_0_1'=ParamLgl$new('col_0_1',default = F,tags='PCA_MCA_FMAD')
+                                                  'optimize_ncp'=ParamLgl$new('optimize_ncp',default = T,tags='PCA_MCA_FMAD')
 
                                                 ))
                                )
@@ -94,7 +91,7 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
                                  data_imputed <- missMDA_FMAD_MCA_PCA(data_to_impute,col_type,percent_of_missing,optimize_ncp = self$param_set$values$optimize_ncp,
-                                                                      set_ncp = self$param_set$values$set_ncp,col_0_1 = self$param_set$values$col_0_1,
+                                                                      set_ncp = self$param_set$values$set_ncp,
                                                                       ncp.max = self$param_set$values$ncp.max, random.seed = self$param_set$values$random.seed,
                                                                       maxiter =  self$param_set$values$maxiter,coeff.ridge =  self$param_set$values$coeff.ridge,
                                                                       threshold =  self$param_set$values$threshold,method =  self$param_set$values$method,
@@ -148,7 +145,7 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
                                  data_imputed <- missMDA_FMAD_MCA_PCA(data_to_impute,col_type,percent_of_missing,optimize_ncp = self$param_set$values$optimize_ncp,
-                                                                      set_ncp = self$param_set$values$set_ncp,col_0_1 = self$param_set$values$col_0_1,
+                                                                      set_ncp = self$param_set$values$set_ncp,
                                                                       ncp.max = self$param_set$values$ncp.max, random.seed = self$param_set$values$random.seed,
                                                                       maxiter =  self$param_set$values$maxiter,coeff.ridge =  self$param_set$values$coeff.ridge,
                                                                       threshold =  self$param_set$values$threshold,method =  self$param_set$values$method,

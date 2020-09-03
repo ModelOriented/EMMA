@@ -18,8 +18,6 @@
 #' Number of dimensions used by algorithm, default \code{2}.
 #' \item \code{random.seed} :: \code{integer(1)}\cr
 #' Random seed, default \code{123}.
-#' \item \code{col_0_1} :: \code{logical(1)}\cr
-#' Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
 #' \item \code{maxiter} :: \code{integer(1)}\cr
 #' Maximal number of iteration in algorithm, default \code{998}.
 #' \item \code{coeff.ridge} :: \code{integer(1)}\cr
@@ -40,10 +38,10 @@
 PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
                                            inherit = PipeOpImpute,  # inherit from PipeOp
                                            public = list(
-                                             initialize = function(id = "imput_missMDA_MFA",col_0_1=F,ncp=2,random.seed=123,maxiter=998,
+                                             initialize = function(id = "imput_missMDA_MFA",ncp=2,random.seed=123,maxiter=998,
                                                                    coeff.ridge=1,threshold=1e-06,method='Regularized',out_file=NULL
                                              ) {
-                                               super$initialize(id,whole_task_dependent=TRUE, param_vals = list(col_0_1=col_0_1,ncp=ncp,random.seed=random.seed,
+                                               super$initialize(id,whole_task_dependent=TRUE, param_vals = list(ncp=ncp,random.seed=random.seed,
                                                                                       maxiter=maxiter,coeff.ridge=coeff.ridge,threshold=threshold,method=method,
                                                                                       out_file=out_file),
                                                                 param_set= ParamSet$new(list(
@@ -57,9 +55,9 @@ PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
 
 
                                                                   'random.seed'=ParamInt$new('random.seed',-Inf,Inf,default = 123,tags='MFA'),
-                                                                  'out_file'=ParamUty$new('out_file',default = NULL,tags = 'MFA'),
+                                                                  'out_file'=ParamUty$new('out_file',default = NULL,tags = 'MFA')
 
-                                                                  'col_0_1'=ParamLgl$new('col_0_1',default = F,tags='MFA')
+
 
                                                                 )),
 
@@ -92,7 +90,7 @@ PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
                                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
                                                  data_imputed <- missMDA_MFA(data_to_impute,col_type,percent_of_missing,random.seed = self$param_set$values$random.seed,
-                                                                             ncp = self$param_set$values$ncp,col_0_1 = self$param_set$values$col_0_1,
+                                                                             ncp = self$param_set$values$ncp,
                                                                              maxiter =  self$param_set$values$maxiter,coeff.ridge =  self$param_set$values$coeff.ridge,
                                                                              threshold =  self$param_set$values$threshold,method =  self$param_set$values$method,
                                                                              out_file =self$param_set$values$out_file)
@@ -145,7 +143,7 @@ PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
                                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
                                                  data_imputed <- missMDA_MFA(data_to_impute,col_type,percent_of_missing,random.seed = self$param_set$values$random.seed,
-                                                                             ncp = self$param_set$values$ncp,col_0_1 = self$param_set$values$col_0_1,
+                                                                             ncp = self$param_set$values$ncp,
                                                                              maxiter =  self$param_set$values$maxiter,coeff.ridge =  self$param_set$values$coeff.ridge,
                                                                              threshold =  self$param_set$values$threshold,method =  self$param_set$values$method,
                                                                              out_file =self$param_set$values$out_file)

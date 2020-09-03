@@ -38,8 +38,6 @@
 #' If set TRUE correlation is used, if set FALSE then fraction of features, default \code{TRUE}.
 #' \item \code{col_0_1} :: \code{logical(1)}\cr
 #' Decides whether to add a bonus column informing where values were imputed. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
-#' \item \code{out_fill} :: \code{character(1)}\cr
-#' Output log file location. If file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
 #'}
 #'
 #' @export
@@ -48,11 +46,11 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                               public = list(
                                 initialize = function(id = "imput_mice", m=5,maxit=5,set_cor=0.5,
                                                       set_method='pmm',low_corr=0,up_corr=1,
-                                                      methods_random=c('pmm'),iter=5,random.seed=123,optimize = F,correlation=F,col_0_1=F,out_file=NULL
+                                                      methods_random=c('pmm'),iter=5,random.seed=123,optimize = F,correlation=F,out_file=NULL
                                                       ) {
                                   super$initialize(id, whole_task_dependent=TRUE,param_vals = list( m=m,maxit=maxit,set_cor=set_cor,
                                                                           set_method=set_method,low_corr=low_corr,up_corr=up_corr,
-                                                                          methods_random=methods_random,iter=iter,random.seed=random.seed,optimize = optimize,correlation=correlation,col_0_1=col_0_1,
+                                                                          methods_random=methods_random,iter=iter,random.seed=random.seed,optimize = optimize,correlation=correlation,
                                                                           out_file=out_file),
                                                    param_set= ParamSet$new(list(
                                     'set_cor'=ParamDbl$new('set_cor', lower = 0, upper = 1, special_vals = list(), default = 0.5, tags = 'mice'),
@@ -65,7 +63,6 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                     'methods_random'=ParamFct$new('methods_random',levels=c('pmm','midastouch','sample','cart'),default = c('pmm'),tag='mice'),
                                     'random.seed'=ParamInt$new('random.seed',-Inf,Inf,default = 123,tags='mice'),
                                     'optimize'=ParamLgl$new('optimize',default = F,tags='mice'),
-                                    'col_0_1'=ParamLgl$new('col_0_1',default = F,tags='mice'),
                                     'correlation'=ParamLgl$new('correlation',default = F,tags='mice'),
                                     'out_file'=ParamUty$new('out_file',default = NULL,tags = 'mice')
 
@@ -106,7 +103,7 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                                                   set_cor = self$param_set$values$set_cor,set_method = self$param_set$values$set_method,
                                                                   methods_random = self$param_set$values$methods_random,random.seed = self$param_set$values$random.seed,
                                                                   optimize = self$param_set$values$optimize,
-                                                                  correlation = self$param_set$values$correlation,col_0_1 = self$param_set$values$col_0_1,verbose = F,
+                                                                  correlation = self$param_set$values$correlation,verbose = F,
                                                                   out_file =self$param_set$values$out_file,return_one = T
                                     )
 
@@ -162,7 +159,7 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                                                   set_cor = self$param_set$values$set_cor,set_method = self$param_set$values$set_method,
                                                                   methods_random = self$param_set$values$methods_random,random.seed = self$param_set$values$random.seed,
                                                                   optimize = self$param_set$values$optimize,
-                                                                  correlation = self$param_set$values$correlation,col_0_1 = self$param_set$values$col_0_1,verbose = F,
+                                                                  correlation = self$param_set$values$correlation,verbose = F,
                                                                   out_file =self$param_set$values$out_file,return_one = T
                                     )
 

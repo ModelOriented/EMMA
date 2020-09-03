@@ -17,8 +17,6 @@
 #' TRUE/FALSE if robust regression should be used, default \code{FALSE}.
 #' \item \code{mod_cat} :: \code{logical(1)}\cr
 #' TTRUE/FALSE if TRUE for categorical variables the level with the highest prediction probability is selected, otherwise it is sampled according to the probabilities, default \code{FALSE}.
-#' \item \code{col_0_1} :: \code{logical(1)}\cr
-#' Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
 #' \item \code{use_imputed} :: \code{logical(1)}\cr
 #' TRUE/FALSe if TURE already imputed columns will be used to impute another, default \code{FALSE}.
 #' \item \code{out_fill} :: \code{character(1)}\cr
@@ -32,13 +30,13 @@
 PipeOpVIM_regrImp <-  R6::R6Class("VIM_regrImp_imputation",lock_objects=FALSE,
                              inherit = PipeOpImpute,  # inherit from PipeOp
                              public = list(
-                               initialize = function(id = "imput_VIM_regrImp",col_0_1= FALSE,robust=FALSE,mod_cat=FALSE,use_imputed=FALSE,out_file=NULL
+                               initialize = function(id = "imput_VIM_regrImp",robust=FALSE,mod_cat=FALSE,use_imputed=FALSE,out_file=NULL
                                ) {
-                                 super$initialize(id, whole_task_dependent=TRUE, param_vals = list( col_0_1=col_0_1,robust=robust,mod_cat=mod_cat,
+                                 super$initialize(id, whole_task_dependent=TRUE, param_vals = list( robust=robust,mod_cat=mod_cat,
                                                                                                     use_imputed=use_imputed,out_file=out_file),
                                                   param_set= ParamSet$new(list(
 
-                                                    'col_0_1'=ParamLgl$new('col_0_1',default = F,tags='VIM_regrImp'),
+
                                                     'robust'=ParamLgl$new('robust',default = F,tags = 'VIM_regrImp'),
                                                     'mod_cat'=ParamLgl$new('mod_cat',default = F,tags='VIM_regrImp'),
                                                     'use_imputed'=ParamLgl$new('use_imputed',default = F,tags = 'VIM_regrImp'),
@@ -78,7 +76,7 @@ PipeOpVIM_regrImp <-  R6::R6Class("VIM_regrImp_imputation",lock_objects=FALSE,
 
 
                                    data_imputed <- autotune_VIM_regrImp(data_to_impute,percent_of_missing = percent_of_missing,col_type = col_type,
-                                                                        col_0_1 = self$param_set$values$col_0_1,robust = self$param_set$values$robust,
+                                                                       robust = self$param_set$values$robust,
                                                                         mod_cat = self$param_set$values$mod_cat , use_imputed = self$param_set$values$use_imputed,
                                                                         out_file = self$param_set$values$out_file)
 
@@ -129,7 +127,7 @@ PipeOpVIM_regrImp <-  R6::R6Class("VIM_regrImp_imputation",lock_objects=FALSE,
 
 
                                    data_imputed <- autotune_VIM_regrImp(data_to_impute,percent_of_missing = percent_of_missing,col_type = col_type,
-                                                                        col_0_1 = self$param_set$values$col_0_1,robust = self$param_set$values$robust,
+                                                                    robust = self$param_set$values$robust,
                                                                         mod_cat = self$param_set$values$mod_cat , use_imputed = self$param_set$values$use_imputed,
                                                                         out_file = self$param_set$values$out_file)
 

@@ -23,8 +23,6 @@
 #' Threshold for convergence, default \code{1e-5}
 #' \item \code{maxit} :: \code{integer(1)}\cr
 #' Maximum number of iterations, default \code{100}.
-#' \item \code{col_0_1} :: \code{logical(1)}\cr
-#' Decides if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
 #' \item \code{cat_Fun} :: \code{function(){}}\cr
 #' Function for aggregating the k Nearest Neighbours in the case of a categorical variable. Can be ever function with input=not_numeric_vector and output=atomic_object  default \code{VIM::maxCat}
 #' \item \code{out_fill} :: \code{character(1)}\cr
@@ -38,15 +36,15 @@
 PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
                                inherit = PipeOpImpute,  # inherit from PipeOp
                                public = list(
-                                 initialize = function(id = "imput_softImpute",col_0_1=F,cat_Fun=VIM::maxCat,lambda=0,rank.max=2,type='als',thresh=1e-5,maxit=100,
+                                 initialize = function(id = "imput_softImpute",cat_Fun=VIM::maxCat,lambda=0,rank.max=2,type='als',thresh=1e-5,maxit=100,
                                                        out_file=NULL
                                  ) {
-                                   super$initialize(id, whole_task_dependent=TRUE, param_vals = list( col_0_1=col_0_1,cat_Fun=cat_Fun,lambda=lambda,
+                                   super$initialize(id, whole_task_dependent=TRUE, param_vals = list( cat_Fun=cat_Fun,lambda=lambda,
                                                                                                       rank.max=rank.max,type=type,thresh=thresh,maxit=maxit,
                                                                                                       out_file=out_file),
                                                     param_set= ParamSet$new(list(
 
-                                                      'col_0_1'=ParamLgl$new('col_0_1',default = F,tags='softImpute'),
+
                                                       'cat_Fun'=ParamUty$new('cat_Fun',default = VIM::maxCat,tags = 'softImpute'),
                                                       'lambda'=ParamUty$new('lambda',default = 0,tags = 'softImpute'),
                                                       'rank.max'=ParamUty$new('rank.max',default = 2,tags = 'softImpute'),
@@ -88,7 +86,7 @@ PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
 
 
                                      data_imputed <- autotune_softImpute(data_to_impute,percent_of_missing = percent_of_missing,col_type = col_type,
-                                                                         col_0_1 = self$param_set$values$col_0_1,cat_Fun = self$param_set$values$cat_Fun,
+                                                                        cat_Fun = self$param_set$values$cat_Fun,
                                                                          lambda = self$param_set$values$lambda,rank.max = self$param_set$values$rank.max,
                                                                          type = self$param_set$values$type,thresh = self$param_set$values$thresh,
                                                                          maxit = self$param_set$values$maxit,out_file =self$param_set$values$out_file)
@@ -140,7 +138,7 @@ PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
 
 
                                      data_imputed <- autotune_softImpute(data_to_impute,percent_of_missing = percent_of_missing,col_type = col_type,
-                                                                         col_0_1 = self$param_set$values$col_0_1,cat_Fun = self$param_set$values$cat_Fun,
+                                                                     cat_Fun = self$param_set$values$cat_Fun,
                                                                          lambda = self$param_set$values$lambda,rank.max = self$param_set$values$rank.max,
                                                                          type = self$param_set$values$type,thresh = self$param_set$values$thresh,
                                                                          maxit = self$param_set$values$maxit,out_file =self$param_set$values$out_file)

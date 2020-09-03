@@ -41,8 +41,6 @@ If set TRUE, function will optimize parameters of imputation automatically. If p
 If set TRUE correlation is used, if set FALSE then fraction of features, default \code{TRUE}.
 \item \code{col_0_1} :: \code{logical(1)}\cr
 Decides whether to add a bonus column informing where values were imputed. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
-\item \code{out_fill} :: \code{character(1)}\cr
-Output log file location. If file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
 }
 }
 
@@ -83,7 +81,6 @@ Output log file location. If file already exists log message will be added. If N
   random.seed = 123,
   optimize = F,
   correlation = F,
-  col_0_1 = F,
   out_file = NULL
 )}\if{html}{\out{</div>}}
 }
