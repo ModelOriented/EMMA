@@ -2,19 +2,19 @@
 #' @name PipeOpVIM_IRMI
 #'
 #' @description
-#' Implements IRMI methods as mlr3 pipeline more about VIM_IRMI \code{\link{autotune_VIM_Irmi}}
+#' Implements IRMI methods as mlr3 pipeline, more about VIM_IRMI \code{\link{autotune_VIM_Irmi}}.
 #'
 #' @section Input and Output Channels:
 #' Input and output channels are inherited from \code{\link{PipeOpImpute}}.
 #'
 #'
 #' @section Parameters:
-#' The parameters are the parameters inherited from [`PipeOpImpute`], as well as: \cr
+#' The parameters include inherited from [`PipeOpImpute`], as well as: \cr
 #' \itemize{
 #' \item \code{id} :: \code{character(1)}\cr
 #' Identifier of resulting object, default \code{"imput_VIM_IRMI"}.
 #' \item \code{eps} :: \code{double(1)}\cr
-#' Threshold for convergency, default \code{5}.
+#' Threshold for convergence, default \code{5}.
 #' \item \code{maxit} :: \code{integer(1)}\cr
 #' Maximum number of iterations, default \code{100}
 #' \item \code{step} :: \code{logical(1)}\cr
@@ -24,9 +24,9 @@
 #' \item \code{init.method} :: \code{character(1)}\cr
 #' Method for initialization of missing values (kNN or median), default \code{'kNN'}.
 #' \item \code{force} :: \code{logical(1)}\cr
-#' If TRUE, the algorithm tries to find a solution in any case, possible by using different robust methods automatically. (should be set FALSE for simulation), default \code{FALSE}.
+#' If TRUE, the algorithm tries to find a solution in any case by using different robust methods automatically (should be set FALSE for simulation), default \code{FALSE}.
 #' \item \code{out_fill} :: \code{character(1)}\cr
-#' Output log file location if file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
+#' Output log file location. If file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
 #'}
 #'
 #' @export

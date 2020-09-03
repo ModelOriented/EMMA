@@ -3,14 +3,14 @@
 #' @name PipeOpmissMDA_MFA
 #'
 #' @description
-#' Implements MFA methods as mlr3 pipeline more about MFA \code{\link{missMDA_MFA}}
+#' Implements MFA methods as mlr3 pipeline, more about MFA \code{\link{missMDA_MFA}}.
 #'
 #' @section Input and Output Channels:
 #' Input and output channels are inherited from \code{\link{PipeOpImpute}}.
 #'
 #'
 #' @section Parameters:
-#' The parameters are the parameters inherited from [`PipeOpImpute`], as well as: \cr
+#' The parameters include inherited from [`PipeOpImpute`], as well as: \cr
 #' \itemize{
 #' \item \code{id} :: \code{character(1)}\cr
 #' Identifier of resulting object, default \code{"imput_missMDA_MFA"}.
@@ -21,13 +21,13 @@
 #' \item \code{maxiter} :: \code{integer(1)}\cr
 #' Maximal number of iteration in algorithm, default \code{998}.
 #' \item \code{coeff.ridge} :: \code{integer(1)}\cr
-#' Value use in Regularized method, default \code{1}.
+#' Value used in \emph{Regularized} method, default \code{1}.
 #' \item \code{threshold} :: \code{double(1)}\cr
 #' Threshold for convergence, default \code{1e-06}.
 #' \item \code{method} :: \code{character(1)}\cr
 #' Method used in imputation algorithm, default \code{'Regularized'}.
 #' \item \code{out_fill} :: \code{character(1)}\cr
-#' Output log file location if file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
+#' Output log file location. If file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
 #'}
 #'
 #' @export

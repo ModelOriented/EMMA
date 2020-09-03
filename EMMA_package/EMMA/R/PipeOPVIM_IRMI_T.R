@@ -9,16 +9,16 @@
 #'
 #'
 #' @section Parameters:
-#' The parameters are the parameters inherited from [`PipeOpTaskPreproc`], as well as: \cr
+#' The parameters include inherited from [`PipeOpTaskPreproc`], as well as: \cr
 #' \itemize{
 #' \item \code{id} :: \code{character(1)}\cr
 #' Identifier of resulting object, default \code{"imput_VIM_IRMI"}.
 #' \item \code{eps} :: \code{double(1)}\cr
-#' Threshold for convergency, default \code{5}.
+#' Threshold for convergence, default \code{5}.
 #' \item \code{maxit} :: \code{integer(1)}\cr
-#' Maximum number of iterations, default \code{100}
+#' Maximum number of iterations, default \code{100}.
 #' \item \code{col_0_1} :: \code{logical(1)}\cr
-#' Decides if add bonus column informing where imputation has been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
+#' Decides whether to add a bonus column informing where values were imputed. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
 #' \item \code{step} :: \code{logical(1)}\cr
 #' Stepwise model selection is applied when the parameter is set to TRUE, default \code{FALSE}.
 #' \item \code{robust} :: \code{logical(1)}\cr
@@ -26,9 +26,9 @@
 #' \item \code{init.method} :: \code{character(1)}\cr
 #' Method for initialization of missing values (kNN or median), default \code{'kNN'}.
 #' \item \code{force} :: \code{logical(1)}\cr
-#' If TRUE, the algorithm tries to find a solution in any case, possible by using different robust methods automatically. (should be set FALSE for simulation), default \code{FALSE}.
+#' If TRUE, the algorithm tries to find a solution in any case by using different robust methods automatically (should be set FALSE for simulation), default \code{FALSE}.
 #' \item \code{out_fill} :: \code{character(1)}\cr
-#' Output log file location if file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
+#' Output log file location. If file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
 #'}
 #'
 #' @export

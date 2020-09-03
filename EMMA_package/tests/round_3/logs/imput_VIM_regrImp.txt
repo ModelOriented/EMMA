@@ -1,0 +1,243 @@
+INFO  [10:15:19.731] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '2079' (iter 1/5) 
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+INFO  [10:15:21.352] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '2079' (iter 2/5) 
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+INFO  [10:15:23.246] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '2079' (iter 3/5) 
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+INFO  [10:15:24.927] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '2079' (iter 4/5) 
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+INFO  [10:15:26.767] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '2079' (iter 5/5) 
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+
+
+<ResampleResult> of 5 iterations
+* Task: 2079
+* Learner: imput_VIM_regrImp.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.8125207 
+
+
+INFO  [10:15:29.516] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '35' (iter 1/5) 
+INFO  [10:15:30.551] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '35' (iter 2/5) 
+INFO  [10:15:31.658] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '35' (iter 3/5) 
+INFO  [10:15:32.764] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '35' (iter 4/5) 
+INFO  [10:15:33.832] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '35' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 35
+* Learner: imput_VIM_regrImp.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.03265457 
+
+
+INFO  [10:15:35.852] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3802' (iter 1/5) 
+INFO  [10:15:36.330] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3802' (iter 2/5) 
+INFO  [10:15:36.770] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3802' (iter 3/5) 
+INFO  [10:15:37.283] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3802' (iter 4/5) 
+INFO  [10:15:37.688] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3802' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3802
+* Learner: imput_VIM_regrImp.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.0931401 
+
+
+INFO  [10:15:39.171] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3705' (iter 1/5) 
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+INFO  [10:15:39.842] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3705' (iter 2/5) 
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+INFO  [10:15:41.162] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3705' (iter 3/5) 
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+INFO  [10:15:41.962] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3705' (iter 4/5) 
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+INFO  [10:15:42.668] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3705' (iter 5/5) 
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+
+
+<ResampleResult> of 5 iterations
+* Task: 3705
+* Learner: imput_VIM_regrImp.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.5756098 
+
+
+INFO  [10:15:44.746] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3807' (iter 1/5) 
+INFO  [10:15:45.276] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3807' (iter 2/5) 
+INFO  [10:15:45.753] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3807' (iter 3/5) 
+INFO  [10:15:46.350] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3807' (iter 4/5) 
+INFO  [10:15:46.900] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3807' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3807
+* Learner: imput_VIM_regrImp.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2923077 
+
+
+INFO  [10:15:48.372] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3604' (iter 1/5) 
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])': group ‘4’ is empty
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])': group ‘4’ is empty
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])': group ‘4’ is empty
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])': group ‘4’ is empty
+[1] "Error in apply(pre, 1, function(x) sample(1:length(x), 1, prob = x)): 'dim(X)' musi mieć dodatnią długość\n"
+[1] "Error in apply(pre, 1, function(x) sample(1:length(x), 1, prob = x)): 'dim(X)' musi mieć dodatnią długość\n"
+Error in apply(pre, 1, function(x) sample(1:length(x), 1, prob = x)) : 
+  'dim(X)' musi mieć dodatnią długość
+
+
+INFO  [10:15:49.695] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '190403' (iter 1/5) 
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])':
+  groups ‘afrique sub saharienne’ ‘afro americain’ ‘asie du sud est’ ‘hispanique’ are empty
+INFO  [10:15:50.386] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '190403' (iter 2/5) 
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])':
+  groups ‘afro americain’ ‘asie du sud est’ ‘hispanique’ are empty
+INFO  [10:15:51.085] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '190403' (iter 3/5) 
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])':
+  groups ‘afro americain’ ‘asie du sud est’ ‘hispanique’ are empty
+INFO  [10:15:51.811] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '190403' (iter 4/5) 
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])':
+  groups ‘afrique sub saharienne’ ‘afro americain’ ‘asie du sud est’ are empty
+INFO  [10:15:52.520] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '190403' (iter 5/5) 
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])':
+  groups ‘afro americain’ ‘asie du sud est’ are empty
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])': group ‘metisse’ is empty
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])': group ‘metisse’ is empty
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])': group ‘metisse’ is empty
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])': group ‘metisse’ is empty
+[1] "Error in apply(pre, 1, function(x) sample(1:length(x), 1, prob = x)): 'dim(X)' musi mieć dodatnią długość\n"
+[1] "Error in apply(pre, 1, function(x) sample(1:length(x), 1, prob = x)): 'dim(X)' musi mieć dodatnią długość\n"
+Error in apply(pre, 1, function(x) sample(1:length(x), 1, prob = x)) : 
+  'dim(X)' musi mieć dodatnią długość
+
+
+INFO  [10:15:54.488] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '54' (iter 1/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [10:15:55.540] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '54' (iter 2/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [10:15:56.784] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '54' (iter 3/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [10:15:57.725] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '54' (iter 4/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [10:15:58.518] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '54' (iter 5/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+
+
+<ResampleResult> of 5 iterations
+* Task: 54
+* Learner: imput_VIM_regrImp.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1354839 
+
+
+INFO  [10:16:00.966] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3547' (iter 1/5) 
+INFO  [10:16:01.729] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3547' (iter 2/5) 
+INFO  [10:16:02.472] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3547' (iter 3/5) 
+INFO  [10:16:03.182] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3547' (iter 4/5) 
+INFO  [10:16:03.867] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3547' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3547
+* Learner: imput_VIM_regrImp.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.4867811 
+
+
+INFO  [10:16:05.925] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '5' (iter 1/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [10:16:12.679] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '5' (iter 2/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [10:16:18.562] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '5' (iter 3/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [10:16:25.201] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '5' (iter 4/5) 
+Error in lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs,  : 
+  one multinomial or binomial class has 1 or 0 observations; not allowed
+
+
+Successful evaluation: 7/10 tasks
+
+

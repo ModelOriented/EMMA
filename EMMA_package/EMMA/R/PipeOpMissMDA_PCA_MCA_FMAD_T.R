@@ -3,37 +3,37 @@
 #' @name PipeOpmissMDA_PCA_MCA_FMAD_T
 #'
 #' @description
-#' Implements PCA, MCA, FMAD methods as mlr3 pipeline more about methods \code{\link{missMDA_FMAD_MCA_PCA}}
+#' Implements PCA, MCA, FMAD methods as mlr3 pipeline, more about methods \code{\link{missMDA_FMAD_MCA_PCA}}.
 #'
 #' @section Input and Output Channels:
 #' Input and output channels are inherited from \code{\link{PipeOpTaskPreproc}}.
 #'
 #'
 #' @section Parameters:
-#' The parameters are the parameters inherited from [`PipeOpTaskPreproc`], as well as: \cr
+#' The parameters include inherited from [`PipeOpTaskPreproc`], as well as: \cr
 #' \itemize{
 #' \item \code{id} :: \code{character(1)}\cr
 #' Identifier of resulting object, default \code{"imput_missMDA_MCA_PCA_FMAD"}.
 #' \item \code{optimize_ncp} :: \code{logical(1)}\cr
-#' If true number of dimensions used to predict the missing entries will be optimized. If False by default ncp = 2 it's used ,default \code{TRUE}.
+#' If TRUE, parameter \emph{number of dimensions}, used to predict the missing values, will be optimized. If FALSE, by default ncp=2 is used, default \code{TRUE}.
 #' \item \code{set_ncp} :: \code{integer(1)}\cr
-#' integer >0. Number of dimensions used by algortims. Used only if optimize_ncp = Flase, default \code{2}.
+#' Integer >0. Number of dimensions used by algorithm. Parameter used only if optimize_ncp=FALSE, default \code{2}.
 #' \item \code{col_0_1} :: \code{logical(1)}\cr
-#' Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
+#' Decides whether to add a bonus column informing where values were imputed. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
 #' \item \code{ncp.max} :: \code{integer(1)}\cr
-#' Number corresponding to the maximum number of components to test, default \code{5}.
+#' Number corresponding to the maximum number of components to test when optimize_ncp=TRUE, default \code{5}.
 #' \item \code{random.seed} :: \code{integer(1)}\cr
 #' Random seed, default \code{123}.
 #' \item \code{maxiter} :: \code{integer(1)}\cr
-#' Maximal number of iteration in algortihm, default \code{998}.
+#' Maximal number of iteration in algorithm, default \code{998}.
 #' \item \code{coeff.ridge} :: \code{double(1)}\cr
-#' Value use in Regularized method, default \code{1}.
+#' Value used in \emph{Regularized} method, default \code{1}.
 #' \item \code{threshold} :: \code{double(1)}\cr
 #' Threshold for convergence, default \code{1e-6}.
 #' \item \code{method} :: \code{character(1)}\cr
-#' Method used in imputation algoritm, default \code{'Regularized'}
+#' Method used in imputation algorithm, default \code{'Regularized'}.
 #' \item \code{out_fill} :: \code{character(1)}\cr
-#' Output log file location if file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
+#' Output log file location. If file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
 #'}
 #'
 #' @export
