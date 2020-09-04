@@ -1,0 +1,248 @@
+LOG_Amelia_empir_test2020-09-04
+-------------------df___939---------------------------------
+-------------------empir:__0.01---------------------------------
+Imputation on whole dataset  :OK
+-------------------df___939---------------------------------
+-------------------empir:__0.02---------------------------------
+Imputation on whole dataset  :OK
+-------------------df___939---------------------------------
+-------------------empir:__0.03---------------------------------
+Imputation on whole dataset  :OK
+-------------------df___939---------------------------------
+-------------------empir:__0.04---------------------------------
+Imputation on whole dataset  :OK
+-------------------df___939---------------------------------
+-------------------empir:__0.05---------------------------------
+Imputation on whole dataset  :OK
+-------------------df___939---------------------------------
+-------------------empir:__0.06---------------------------------
+Imputation on whole dataset  :OK
+-------------------df___939---------------------------------
+-------------------empir:__0.07---------------------------------
+Imputation on whole dataset  :OK
+-------------------df___939---------------------------------
+-------------------empir:__0.08---------------------------------
+Imputation on whole dataset  :OK
+-------------------df___939---------------------------------
+-------------------empir:__0.09---------------------------------
+Imputation on whole dataset  :OK
+-------------------df___939---------------------------------
+-------------------empir:__0.1---------------------------------
+Imputation on whole dataset  :OK
+-------------------df___939---------------------------------
+-------------------empir:__0.11---------------------------------
+Imputation on whole dataset  :OK
+-------------------df___939---------------------------------
+-------------------empir:__0.12---------------------------------
+Imputation on whole dataset  :OK
+-------------------df___939---------------------------------
+-------------------empir:__0.13---------------------------------
+Imputation on whole dataset  :OK
+-------------------df___840---------------------------------
+-------------------empir:__0.01---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___840---------------------------------
+-------------------empir:__0.02---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___840---------------------------------
+-------------------empir:__0.03---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___840---------------------------------
+-------------------empir:__0.04---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___840---------------------------------
+-------------------empir:__0.05---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___840---------------------------------
+-------------------empir:__0.06---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___840---------------------------------
+-------------------empir:__0.07---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___840---------------------------------
+-------------------empir:__0.08---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___840---------------------------------
+-------------------empir:__0.09---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___840---------------------------------
+-------------------empir:__0.1---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___840---------------------------------
+-------------------empir:__0.11---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___840---------------------------------
+-------------------empir:__0.12---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___840---------------------------------
+-------------------empir:__0.13---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___738---------------------------------
+-------------------empir:__0.01---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___738---------------------------------
+-------------------empir:__0.02---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___738---------------------------------
+-------------------empir:__0.03---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___738---------------------------------
+-------------------empir:__0.04---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___738---------------------------------
+-------------------empir:__0.05---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___738---------------------------------
+-------------------empir:__0.06---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___738---------------------------------
+-------------------empir:__0.07---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___738---------------------------------
+-------------------empir:__0.08---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___738---------------------------------
+-------------------empir:__0.09---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___738---------------------------------
+-------------------empir:__0.1---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___738---------------------------------
+-------------------empir:__0.11---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___738---------------------------------
+-------------------empir:__0.12---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___738---------------------------------
+-------------------empir:__0.13---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___55---------------------------------
+-------------------empir:__0.01---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___55---------------------------------
+-------------------empir:__0.02---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___55---------------------------------
+-------------------empir:__0.03---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___55---------------------------------
+-------------------empir:__0.04---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___55---------------------------------
+-------------------empir:__0.05---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___55---------------------------------
+-------------------empir:__0.06---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___55---------------------------------
+-------------------empir:__0.07---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___55---------------------------------
+-------------------empir:__0.08---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___55---------------------------------
+-------------------empir:__0.09---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___55---------------------------------
+-------------------empir:__0.1---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___55---------------------------------
+-------------------empir:__0.11---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___55---------------------------------
+-------------------empir:__0.12---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___55---------------------------------
+-------------------empir:__0.13---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___455---------------------------------
+-------------------empir:__0.01---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___455---------------------------------
+-------------------empir:__0.02---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___455---------------------------------
+-------------------empir:__0.03---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___455---------------------------------
+-------------------empir:__0.04---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___455---------------------------------
+-------------------empir:__0.05---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___455---------------------------------
+-------------------empir:__0.06---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___455---------------------------------
+-------------------empir:__0.07---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___455---------------------------------
+-------------------empir:__0.08---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___455---------------------------------
+-------------------empir:__0.09---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___455---------------------------------
+-------------------empir:__0.1---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___455---------------------------------
+-------------------empir:__0.11---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___455---------------------------------
+-------------------empir:__0.12---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
+-------------------df___455---------------------------------
+-------------------empir:__0.13---------------------------------
+Imputation on whole dataset  :Error in doTryCatch(return(expr), name, parentenv, handler): ERROR
+
