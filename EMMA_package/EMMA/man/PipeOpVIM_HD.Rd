@@ -46,7 +46,7 @@ Output log file location. If file already exists log message will be added. If N
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{PipeOpVIM_HD$new(id = "imput_VIM_HD", col_0_1 = FALSE, out_file = NULL)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{PipeOpVIM_HD$new(id = "imput_VIM_HD", out_file = NULL)}\if{html}{\out{</div>}}
 }
 
 }

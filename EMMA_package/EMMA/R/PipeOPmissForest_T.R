@@ -97,7 +97,9 @@ PipeOpmissForest_T <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                                                      maxiter=self$param_set$values$maxiter,maxnodes=self$param_set$values$maxnodes,verbose = F,
                                                                      out_file =self$param_set$values$out_file)
 
-                                 task$cbind(as.data.table(cbind(targer,data_imputed)))
+                                 data_imputed <-  cbind(data_imputed,task$row_ids)
+                                 colnames(data_imputed)[ncol(data_imputed)] <- task$backend$primary_key
+                                 task$cbind(as.data.table(data_imputed))
 
                                },
                                .predict_task=function(task){
@@ -125,7 +127,9 @@ PipeOpmissForest_T <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
 
 
 
-                                 task$cbind(as.data.table(cbind(targer,data_imputed)))
+                                 data_imputed <-  cbind(data_imputed,task$row_ids)
+                                 colnames(data_imputed)[ncol(data_imputed)] <- task$backend$primary_key
+                                 task$cbind(as.data.table(data_imputed))
 
 
 

@@ -85,7 +85,9 @@ PipeOpmissRanger_T <-  R6::R6Class("missRanger_imputation",lock_objects=FALSE,
                                                                      out_file = self$param_set$values$out_file,optimize = self$param_set$values$optimize,
                                                                      iter = self$param_set$values$iter,pmm.k = self$param_set$values$pmm.k)
 
-                                 task$cbind(as.data.table(cbind(targer,data_imputed)))
+                                 data_imputed <-  cbind(data_imputed,task$row_ids)
+                                 colnames(data_imputed)[ncol(data_imputed)] <- task$backend$primary_key
+                                 task$cbind(as.data.table(data_imputed))
 
                                },
                                .predict_task=function(task){
@@ -112,7 +114,9 @@ PipeOpmissRanger_T <-  R6::R6Class("missRanger_imputation",lock_objects=FALSE,
 
 
 
-                                 task$cbind(as.data.table(cbind(targer,data_imputed)))
+                                 data_imputed <-  cbind(data_imputed,task$row_ids)
+                                 colnames(data_imputed)[ncol(data_imputed)] <- task$backend$primary_key
+                                 task$cbind(as.data.table(data_imputed))
 
 
 

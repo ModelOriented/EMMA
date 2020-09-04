@@ -25,8 +25,6 @@ Vector with \emph{number of trees} values for grid search, used only when optimi
 Vector with \emph{number of variables} values randomly sampled at each split, used only when optimize=TRUE, default \code{NULL}.
 \item \code{parallel} :: \code{logical(1)}\cr
 If TRUE parallel calculations are used, default \code{FALSE}.
-\item \code{col_0_1} :: \code{logical(1)}\cr
-Decides whether to add a bonus column informing where values were imputed. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
 \item \code{ntree} :: \code{integer(1)}\cr
 ntree from missForest function, default \code{100}.
 \item \code{optimize} :: \code{logical(1)}\cr
@@ -72,7 +70,6 @@ Output log file location. If file already exists log message will be added. If N
   ntree_set = c(100, 200, 500, 1000),
   mtry_set = NULL,
   parallel = F,
-  col_0_1 = FALSE,
   mtry = NULL,
   ntree = 100,
   optimize = FALSE,

@@ -21,7 +21,13 @@ autotune_VIM_kNN <- function(df,percent_of_missing,k=5,numFun=median,catFun=VIM:
   if(!is.null(out_file)){
     write('VIM_kNN',file = out_file,append = T)
   }
-  print(k)
+  if(sum(percent_of_missing==100)>0){
+    if(!is.null(out_file)){
+      write('Feature contains only NA',file = out_file,append = T)
+    }
+    stop('Feature contains only NA')
+  }
+
   tryCatch({
   final <-  VIM::kNN(df,k=k,numFun = numFun,catFun = catFun,imp_var = F)
   if(!is.null(out_file)){

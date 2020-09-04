@@ -17,9 +17,7 @@
 #' \item \code{mtry} :: \code{integer(1)}\cr
 #' Sample fraction used by missRanger. This param isn't optimized automatically. If NULL default value from ranger package will be used, \code{NULL}.
 #' \item \code{num.trees} :: \code{integer(1)}\cr
-#' Number of trees. If optimize=TRUE, params set: seq(10, num.trees, iter) will be used, default \code{500}.
-#' \item \code{col_0_1} :: \code{logical(1)}\cr
-#' Decides whether to add a bonus column informing where values were imputed. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
+#' Number of trees. If optimize == TRUE. Param set seq(10,num.trees,iter) will be used, default \code{500}
 #' \item \code{pmm.k} :: \code{integer(1)}\cr
 #' Number of candidate non-missing values to sample from in the predictive mean matching step. 0 to avoid this step. If optimize=TRUE params set: sample(1:pmm.k, iter) will be used. If pmm.k=0, missRanger is the same as missForest, default \code{5}.
 #' \item \code{random.seed} :: \code{integer(1)}\cr
@@ -40,10 +38,10 @@ PipeOpmissRanger <-  R6::R6Class("missRanger_imputation",lock_objects=FALSE,
                            inherit = PipeOpImpute,
                            public = list(
                              initialize = function(id = "imput_missRanger", maxiter = 10,random.seed=123,mtry=NULL,num.trees=500,
-                                                   pmm.k=5,optimize=F,iter=10,col_0_1=F,out_file=NULL
+                                                   pmm.k=5,optimize=F,iter=10,out_file=NULL
                              ) {
                                super$initialize(id, whole_task_dependent=TRUE,param_vals = list( maxiter=maxiter,random.seed=random.seed,mtry=mtry,num.trees=num.trees,
-                                                                                                 pmm.k=pmm.k,iter=iter,optimize=optimize,col_0_1=col_0_1,out_file=out_file),
+                                                                                                 pmm.k=pmm.k,iter=iter,optimize=optimize,out_file=out_file),
                                                 param_set= ParamSet$new(list(
                                                   'maxiter'= ParamInt$new('maxiter',lower = 1,upper = Inf,default = 10,tags = 'missRanger'),
                                                   'random.seed'=ParamInt$new('random.seed',default = 123,tags = 'missRanger'),
@@ -52,7 +50,7 @@ PipeOpmissRanger <-  R6::R6Class("missRanger_imputation",lock_objects=FALSE,
                                                   'pmm.k'=ParamInt$new('pmm.k',lower = 0,upper = Inf,default = 5,tags = 'missRagner'),
                                                   'optimize'=ParamLgl$new('optimize',default = F,tags = 'missRagner'),
                                                   'iter'=ParamInt$new('iter',lower = 1,upper = Inf,default = 10,tags = 'missRanger'),
-                                                  'col_0_1'=ParamLgl$new('col_0_1',default = F,tags = 'missRanger'),
+
                                                   'out_file'=ParamUty$new('out_file',default = NULL,tags = 'missRanger')
 
                                                 ))
@@ -87,7 +85,7 @@ PipeOpmissRanger <-  R6::R6Class("missRanger_imputation",lock_objects=FALSE,
 
                                  data_imputed <- autotune_missRanger(data_to_impute,percent_of_missing,maxiter = self$param_set$values$maxiter,
                                                                      random.seed = self$param_set$values$random.seed,mtry = self$param_set$values$mtry,
-                                                                     num.trees = self$param_set$values$num.trees,col_0_1 = self$param_set$values$col_0_1,
+                                                                     num.trees = self$param_set$values$num.trees,
                                                                      out_file = self$param_set$values$out_file,optimize = self$param_set$values$optimize,
                                                                      iter = self$param_set$values$iter,pmm.k = self$param_set$values$pmm.k)
 
@@ -138,7 +136,7 @@ PipeOpmissRanger <-  R6::R6Class("missRanger_imputation",lock_objects=FALSE,
 
                                  data_imputed <- autotune_missRanger(data_to_impute,percent_of_missing,maxiter = self$param_set$values$maxiter,
                                                                      random.seed = self$param_set$values$random.seed,mtry = self$param_set$values$mtry,
-                                                                     num.trees = self$param_set$values$num.trees,col_0_1 = self$param_set$values$col_0_1,
+                                                                     num.trees = self$param_set$values$num.trees,
                                                                      out_file = self$param_set$values$out_file,optimize = self$param_set$values$optimize,
                                                                      iter = self$param_set$values$iter,pmm.k = self$param_set$values$pmm.k)
 
