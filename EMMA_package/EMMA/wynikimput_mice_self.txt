@@ -1,0 +1,350 @@
+INFO  [12:50:19.499] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '2079' (iter 1/5) 
+Error in nnet.default(X, Y, w, mask = mask, size = 0, skip = TRUE, softmax = TRUE,  : 
+  too many (1168) weights
+
+
+INFO  [12:50:20.305] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '35' (iter 1/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [12:50:23.896] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '35' (iter 2/5) 
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie w poleceniu 'nnet::multinom(data = data)': group ‘1’ is empty
+INFO  [12:50:27.609] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '35' (iter 3/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [12:50:31.243] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '35' (iter 4/5) 
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [12:50:34.925] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '35' (iter 5/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+
+
+<ResampleResult> of 5 iterations
+* Task: 35
+* Learner: imput_mice_self.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.02736024 
+
+
+INFO  [12:50:39.084] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '3802' (iter 1/5) 
+Error in get("state", pos_state) : nie znaleziono obiektu 'state'
+
+
+INFO  [12:50:39.584] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '3705' (iter 1/5) 
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie w poleceniu 'nnet::multinom(data = data)': group ‘mfi’ is empty
+Ostrzeżenie: glm.fit: algorithm did not converge
+INFO  [12:50:41.133] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '3705' (iter 2/5) 
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie w poleceniu 'nnet::multinom(data = data)': group ‘spfi’ is empty
+Ostrzeżenie: glm.fit: algorithm did not converge
+INFO  [12:50:42.735] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '3705' (iter 3/5) 
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie w poleceniu 'nnet::multinom(data = data)': group ‘dohcv’ is empty
+Ostrzeżenie: glm.fit: algorithm did not converge
+INFO  [12:50:44.303] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '3705' (iter 4/5) 
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie w poleceniu 'nnet::multinom(data = data)': group ‘jaguar’ is empty
+INFO  [12:50:45.823] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '3705' (iter 5/5) 
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie w poleceniu 'nnet::multinom(data = data)': group ‘mercury’ is empty
+
+
+<ResampleResult> of 5 iterations
+* Task: 3705
+* Learner: imput_mice_self.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.04878049 
+
+
+INFO  [12:50:47.967] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '3807' (iter 1/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [12:50:48.788] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '3807' (iter 2/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [12:50:49.579] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '3807' (iter 3/5) 
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [12:50:50.443] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '3807' (iter 4/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [12:50:51.226] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '3807' (iter 5/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+
+
+<ResampleResult> of 5 iterations
+* Task: 3807
+* Learner: imput_mice_self.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2153846 
+
+
+INFO  [12:50:52.638] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '3604' (iter 1/5) 
+Error in nnet.default(X, Y, w, mask = mask, size = 0, skip = TRUE, softmax = TRUE,  : 
+  too many (1020) weights
+
+
+INFO  [12:50:53.186] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '190403' (iter 1/5) 
+Ostrzeżenie w poleceniu 'nnet::multinom(data = data)':
+  groups ‘Hispanique’ ‘Afro Americain’ are empty
+Ostrzeżenie w poleceniu 'nnet::multinom(data = data)':
+  groups ‘Hispanique’ ‘Afro Americain’ are empty
+Ostrzeżenie w poleceniu 'nnet::multinom(data = data)':
+  groups ‘Hispanique’ ‘Afro Americain’ are empty
+Ostrzeżenie w poleceniu 'nnet::multinom(data = data)':
+  groups ‘Hispanique’ ‘Afro Americain’ are empty
+Ostrzeżenie w poleceniu 'nnet::multinom(data = data)':
+  groups ‘Hispanique’ ‘Afro Americain’ are empty
+Ostrzeżenie w poleceniu 'nnet::multinom(data = data)':
+  groups ‘Hispanique’ ‘Afro Americain’ are empty
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie w poleceniu 'nnet::multinom(data = data)':
+  group ‘Plusieurs fois par jour’ is empty
+INFO  [12:50:55.253] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '190403' (iter 2/5) 
+Ostrzeżenie w poleceniu 'nnet::multinom(data = data)':
+  group ‘Asie du Sud est’ is empty
+Ostrzeżenie w poleceniu 'nnet::multinom(data = data)':
+  group ‘Asie du Sud est’ is empty
+Ostrzeżenie w poleceniu 'nnet::multinom(data = data)':
+  group ‘Asie du Sud est’ is empty
+Ostrzeżenie w poleceniu 'nnet::multinom(data = data)':
+  group ‘Asie du Sud est’ is empty
+Ostrzeżenie w poleceniu 'nnet::multinom(data = data)':
+  group ‘Asie du Sud est’ is empty
+Ostrzeżenie w poleceniu 'nnet::multinom(data = data)':
+  group ‘Asie du Sud est’ is empty
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [12:50:57.329] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '190403' (iter 3/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie w poleceniu 'nnet::multinom(data = data)': group ‘Jamais’ is empty
+INFO  [12:50:59.466] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '190403' (iter 4/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie w poleceniu 'nnet::multinom(data = data)': group ‘Jamais’ is empty
+INFO  [12:51:01.689] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '190403' (iter 5/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie w poleceniu 'nnet::multinom(data = data)': group ‘Jamais’ is empty
+
+
+<ResampleResult> of 5 iterations
+* Task: 190403
+* Learner: imput_mice_self.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.05439024 
+
+
+INFO  [12:51:04.435] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '54' (iter 1/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [12:51:09.580] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '54' (iter 2/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [12:51:13.990] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '54' (iter 3/5) 
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [12:51:19.337] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '54' (iter 4/5) 
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [12:51:24.214] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '54' (iter 5/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+
+
+<ResampleResult> of 5 iterations
+* Task: 54
+* Learner: imput_mice_self.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1677419 
+
+
+INFO  [12:51:29.187] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '3547' (iter 1/5) 
+Error in nnet.default(X, Y, w, mask = mask, size = 0, skip = TRUE, softmax = TRUE,  : 
+  too many (1595) weights
+
+
+INFO  [12:51:30.043] Applying learner 'imput_mice_self.encodeimpact.classif.glmnet' on task '5' (iter 1/5) 
+Error in solve.default(xtx + diag(pen)) : 
+  procedura Lapack dgesv: system jest dokładnie osobliwy: U[77,77] = 0
+
+
+Successful evaluation: 5/10 tasks
+
+

@@ -118,7 +118,7 @@ PipeOpPmm <-  R6::R6Class("mice_self_imputation",lock_objects=FALSE,
 
                                              idx  <- .Call("_mice_matcher", PACKAGE = "mice", yhatobs, yhatmis,5)
 
-                                             data_to_impute[,j][!ry] <- numeric_df[,j][ry][idx]
+                                             data_to_impute[,j][!ry] <- data_to_impute[,j][ry][idx]
 
 
                                            }

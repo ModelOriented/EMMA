@@ -12,7 +12,7 @@
 #' @param polytime parameter pass to amelia function
 #' @param splinetime parameter pass to amelia finction
 #' @param intercs parameter pass to amleia function
-#' @param empir parameter pass to amelia function. If empir dont set empir=nrow(df)*0.015.
+#' @param empir parameter pass to amelia function as empir in Amelia == empir*nrow(df). If empir dont set empir=nrow(df)*0.015.
 #' @param verbose If true function will print on console.
 #' @param return_one Decide if one dataset or amelia object will be returned.
 #' @param out_file  Output log file location if file already exists log message will be added. If NULL no log will be produced.
@@ -45,8 +45,9 @@ autotune_Amelia <- function(df,col_type,percent_of_missing,col_0_1=FALSE,paralle
   # Amelia Run
   tryCatch({
     if (is.null(empir) ){
-      empir <- n_row*0.015
+      empir <- 0.015
     }
+    empir <- empir*n_row
     final <- Amelia::amelia(df,m=m,noms = categorical_col,parallel = parallel,p2s = as.numeric(verbose),empri = empir,polytime = polytime,splinetime = splinetime,intercs = intercs)
     if (return_one){
       for (i in final$imputations){
