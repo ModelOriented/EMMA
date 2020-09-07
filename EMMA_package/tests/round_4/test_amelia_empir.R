@@ -11,26 +11,24 @@ library(mlr3oml)
 source("datasets_store/preprocess.R")
 ####Setings#####
 
-out_file <- 'EMMA_package/tests/round_4/logs_amelia_empir/log_amelia_empir.txt' #out put file location
+out_file <- 'EMMA_package/tests/round_4/logs_amelia_empir/log_amelia_empir_3.txt' #out put file location
 n <- 10 # Number of try for RandomSearch
 # datasets ID for test
 tasks <- read.csv("EMMA_package/tests/round_3/task_sample.csv")
-tasks <- tasks[tasks$task.id %in% c(3802, 54, 3547, 3705, 3604), ]
 datasets <- tasks$data.id
 
 error_csv_location <- 'EMMA_package/tests/round_4/logs_amelia_empir/log_amelia_empir_errors.csv'
 
 #### LOG CRESTING #####
 write(paste0('LOG_Amelia_empir_test',Sys.Date()),file = out_file)
-
+sum_csv <- c()
 #### TEST LOOP ###
 for (id in datasets){
 
   df_oml <- getOMLDataSet(id)
   df <- preprocess(df_oml, 0.9)[[1]]
 
-  n_rows <- nrow(df)
-  empir_set <- seq(0.01, 0.13, by = 0.01)
+  empir_set <- seq(0.015, 0.15, by = 0.01)
   
   for (empir in empir_set) {
     
@@ -46,19 +44,20 @@ for (id in datasets){
     pipe_imp <- PipeOpAmelia$new(empir = empir)
     pipe_model <- lrn("classif.glmnet")
     pipe_encoding <- PipeOpEncodeImpact$new()
-    graph <- pipe_imp %>>% pipe_encoding %>>% po("removeconstants") %>>% pipe_model
+    graph <- po("removeconstants") %>>% pipe_imp %>>% pipe_encoding %>>% pipe_model
     graph_learner <- GraphLearner$new(graph)
     set.seed(123)
     split <- rsmp("cv", folds = 5)
     rr <- resample(task, graph_learner, split)
-    rr$aggregate(msr("classif.ce"))
+    score <- rr$aggregate(msr("classif.ce"))
     
     write('OK',file = out_file,append = T)
-    
+    sum_csv <- rbind(sum_csv, c(id, empir, score))
   },error=function(e){
     write(as.character(e),file = out_file,append = T)
-
+    sum_csv <- rbind(sum_csv, c(id, empir, 0))
   })
   }
 }
 
+write.csv(sum_csv, file = "EMMA_package/tests/round_4/logs_amelia_empir/summary2.csv")
