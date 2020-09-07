@@ -4,7 +4,7 @@
 \alias{PipeOpVIM_kNN}
 \title{PipeOpVIM_kNN}
 \description{
-Implements KNN methods as mlr3 pipeline more about VIM_KNN \code{\link{autotune_VIM_kNN}}
+Implements KNN methods as mlr3 pipeline, more about VIM_KNN \code{\link{autotune_VIM_kNN}}.
 }
 \section{Input and Output Channels}{
 
@@ -13,18 +13,18 @@ Input and output channels are inherited from \code{\link{PipeOpImpute}}.
 
 \section{Parameters}{
 
-The parameters are the parameters inherited from [`PipeOpImpute`], as well as: \cr
+The parameters include inherited from [`PipeOpImpute`], as well as: \cr
 \itemize{
 \item \code{id} :: \code{character(1)}\cr
 Identifier of resulting object, default \code{"imput_VIM_kNN"}.
 \item \code{k} :: \code{intiger(1)}\cr
-Threshold for convergency, default \code{5}.
+Threshold for convergence, default \code{5}.
 \item \code{numFUN} :: \code{function(){}}\cr
 Function for aggregating the k Nearest Neighbours in the case of a numerical variable.  Can be ever function with input=numeric_vector and output=atomic_object, default \code{median}.
 \item \code{catFUN} :: \code{function(){}}\cr
-Function for aggregating the k Nearest Neighbours in the case of a categorical variable.  Can be ever function with input=not_numeric_vector and output=atomic_object, default \code{VIM::maxCat}
+Function for aggregating the k Nearest Neighbours in case of categorical variables. It can be any function with input=not_numeric_vector and output=atomic_object, default \code{VIM::maxCat}
 \item \code{out_fill} :: \code{character(1)}\cr
-Output log file location if file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
+Output log file location. If file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
 }
 }
 

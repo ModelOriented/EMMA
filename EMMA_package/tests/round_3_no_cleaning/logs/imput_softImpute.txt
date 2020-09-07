@@ -1,0 +1,169 @@
+INFO  [09:29:56.697] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '2079' (iter 1/5) 
+INFO  [09:29:58.594] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '2079' (iter 2/5) 
+INFO  [09:30:00.198] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '2079' (iter 3/5) 
+INFO  [09:30:01.897] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '2079' (iter 4/5) 
+INFO  [09:30:03.662] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '2079' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 2079
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.8398051 
+
+
+INFO  [09:30:06.641] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '35' (iter 1/5) 
+[1] "Not enought numeric"
+Error in cat(x, file = file, sep = c(rep.int(sep, ncolumns - 1), "\n"),  : 
+  niepoprawne połączenie
+
+
+INFO  [09:30:07.612] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3802' (iter 1/5) 
+INFO  [09:30:07.782] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3802' (iter 2/5) 
+INFO  [09:30:08.177] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3802' (iter 3/5) 
+INFO  [09:30:08.339] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3802' (iter 4/5) 
+INFO  [09:30:09.046] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3802' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3802
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2872464 
+
+
+INFO  [09:30:10.460] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3705' (iter 1/5) 
+INFO  [09:30:11.042] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3705' (iter 2/5) 
+INFO  [09:30:11.604] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3705' (iter 3/5) 
+INFO  [09:30:12.182] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3705' (iter 4/5) 
+INFO  [09:30:12.739] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3705' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3705
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.4097561 
+
+
+INFO  [09:30:14.320] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3807' (iter 1/5) 
+INFO  [09:30:14.856] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3807' (iter 2/5) 
+INFO  [09:30:15.095] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3807' (iter 3/5) 
+INFO  [09:30:15.636] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3807' (iter 4/5) 
+INFO  [09:30:15.916] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3807' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3807
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.3538462 
+
+
+INFO  [09:30:17.678] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3604' (iter 1/5) 
+[1] "Not enought numeric"
+Error in cat(x, file = file, sep = c(rep.int(sep, ncolumns - 1), "\n"),  : 
+  niepoprawne połączenie
+
+
+INFO  [09:30:18.692] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '190403' (iter 1/5) 
+INFO  [09:30:19.415] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '190403' (iter 2/5) 
+INFO  [09:30:20.016] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '190403' (iter 3/5) 
+INFO  [09:30:20.659] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '190403' (iter 4/5) 
+INFO  [09:30:21.295] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '190403' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 190403
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.05939024 
+
+
+INFO  [09:30:23.038] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '54' (iter 1/5) 
+INFO  [09:30:23.677] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '54' (iter 2/5) 
+INFO  [09:30:24.228] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '54' (iter 3/5) 
+INFO  [09:30:24.869] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '54' (iter 4/5) 
+INFO  [09:30:25.457] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '54' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 54
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+       0.2 
+
+
+INFO  [09:30:27.214] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3547' (iter 1/5) 
+INFO  [09:30:27.783] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3547' (iter 2/5) 
+INFO  [09:30:28.355] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3547' (iter 3/5) 
+INFO  [09:30:29.012] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3547' (iter 4/5) 
+INFO  [09:30:29.676] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3547' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3547
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2635351 
+
+
+INFO  [09:30:31.432] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '5' (iter 1/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [09:30:38.691] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '5' (iter 2/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [09:30:45.891] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '5' (iter 3/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [09:30:54.393] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '5' (iter 4/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [09:31:01.442] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '5' (iter 5/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+
+
+<ResampleResult> of 5 iterations
+* Task: 5
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.5996337 
+
+
+Successful evaluation: 8/10 tasks
+
+

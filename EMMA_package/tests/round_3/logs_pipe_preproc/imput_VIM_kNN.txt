@@ -1,0 +1,182 @@
+INFO  [10:29:19.828] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '2079' (iter 1/5) 
+INFO  [10:29:21.863] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '2079' (iter 2/5) 
+INFO  [10:29:23.898] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '2079' (iter 3/5) 
+INFO  [10:29:26.243] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '2079' (iter 4/5) 
+INFO  [10:29:28.320] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '2079' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 2079
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.3641938 
+
+
+INFO  [10:29:31.476] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '35' (iter 1/5) 
+INFO  [10:29:32.564] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '35' (iter 2/5) 
+INFO  [10:29:33.587] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '35' (iter 3/5) 
+INFO  [10:29:34.614] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '35' (iter 4/5) 
+Ostrzeżenie w poleceniu 'VIM::kNN(df, k = k, numFun = numFun, catFun = catFun, imp_var = F)':
+  Nothing to impute, because no NA are present (also after using makeNA)
+INFO  [10:29:35.932] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '35' (iter 5/5) 
+Ostrzeżenie w poleceniu 'VIM::kNN(df, k = k, numFun = numFun, catFun = catFun, imp_var = F)':
+  Nothing to impute, because no NA are present (also after using makeNA)
+
+
+<ResampleResult> of 5 iterations
+* Task: 35
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.03287671 
+
+
+INFO  [10:29:38.199] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3802' (iter 1/5) 
+INFO  [10:29:38.644] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3802' (iter 2/5) 
+INFO  [10:29:39.196] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3802' (iter 3/5) 
+INFO  [10:29:39.628] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3802' (iter 4/5) 
+INFO  [10:29:40.171] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3802' (iter 5/5) 
+Ostrzeżenie w poleceniu 'VIM::kNN(df, k = k, numFun = numFun, catFun = catFun, imp_var = F)':
+  Nothing to impute, because no NA are present (also after using makeNA)
+
+
+<ResampleResult> of 5 iterations
+* Task: 3802
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.0131401 
+
+
+INFO  [10:29:41.858] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3705' (iter 1/5) 
+INFO  [10:29:42.526] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3705' (iter 2/5) 
+INFO  [10:29:43.180] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3705' (iter 3/5) 
+INFO  [10:29:43.790] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3705' (iter 4/5) 
+INFO  [10:29:44.401] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3705' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3705
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.04878049 
+
+
+INFO  [10:29:46.120] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3807' (iter 1/5) 
+INFO  [10:29:46.362] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3807' (iter 2/5) 
+INFO  [10:29:47.073] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3807' (iter 3/5) 
+INFO  [10:29:47.653] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3807' (iter 4/5) 
+INFO  [10:29:48.490] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3807' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3807
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1923077 
+
+
+INFO  [10:29:50.674] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3604' (iter 1/5) 
+Ostrzeżenie w poleceniu 'VIM::kNN(df, k = k, numFun = numFun, catFun = catFun, imp_var = F)':
+  Nothing to impute, because no NA are present (also after using makeNA)
+INFO  [10:29:51.666] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3604' (iter 2/5) 
+Ostrzeżenie w poleceniu 'VIM::kNN(df, k = k, numFun = numFun, catFun = catFun, imp_var = F)':
+  Nothing to impute, because no NA are present (also after using makeNA)
+INFO  [10:29:52.356] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3604' (iter 3/5) 
+Ostrzeżenie w poleceniu 'VIM::kNN(df, k = k, numFun = numFun, catFun = catFun, imp_var = F)':
+  Nothing to impute, because no NA are present (also after using makeNA)
+INFO  [10:29:53.535] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3604' (iter 4/5) 
+INFO  [10:29:54.075] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3604' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3604
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1897436 
+
+
+INFO  [10:29:56.107] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '190403' (iter 1/5) 
+INFO  [10:29:57.054] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '190403' (iter 2/5) 
+INFO  [10:29:57.803] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '190403' (iter 3/5) 
+INFO  [10:29:58.467] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '190403' (iter 4/5) 
+INFO  [10:29:59.075] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '190403' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 190403
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.05551282 
+
+
+INFO  [10:30:00.654] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '54' (iter 1/5) 
+INFO  [10:30:01.290] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '54' (iter 2/5) 
+INFO  [10:30:01.998] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '54' (iter 3/5) 
+INFO  [10:30:02.673] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '54' (iter 4/5) 
+INFO  [10:30:03.382] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '54' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 54
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1419355 
+
+
+INFO  [10:30:05.443] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3547' (iter 1/5) 
+INFO  [10:30:06.401] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3547' (iter 2/5) 
+INFO  [10:30:07.225] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3547' (iter 3/5) 
+INFO  [10:30:07.868] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3547' (iter 4/5) 
+INFO  [10:30:08.620] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3547' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3547
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2536886 
+
+
+INFO  [10:30:10.987] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '5' (iter 1/5) 
+Error in lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs,  : 
+  one multinomial or binomial class has 1 or 0 observations; not allowed
+
+
+Successful evaluation: 9/10 tasks
+
+

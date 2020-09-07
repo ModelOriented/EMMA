@@ -4,7 +4,7 @@
 \alias{PipeOpmissRanger}
 \title{PipeOpmissRanger}
 \description{
-Implements missRanger methods as mlr3 pipeline more about missRanger \code{\link{autotune_missRanger}}
+Implements missRanger methods as mlr3 pipeline, more about missRanger \code{\link{autotune_missRanger}}.
 }
 \section{Input and Output Channels}{
 
@@ -13,24 +13,24 @@ Input and output channels are inherited from \code{\link{PipeOpImpute}}.
 
 \section{Parameters}{
 
-The parameters are the parameters inherited from [`PipeOpImpute`], as well as: \cr
+The parameters include inherited from [`PipeOpImpute`], as well as: \cr
 \itemize{
 \item \code{id} :: \code{character(1)}\cr
 Identifier of resulting object, default \code{"imput_missRanger"}.
 \item \code{mtry} :: \code{integer(1)}\cr
-sample fraction use by missRanger. This param isn't optimized automatically. If NULL default value from ranger package will be used, \code{NULL}.
+Sample fraction used by missRanger. This param isn't optimized automatically. If NULL default value from ranger package will be used, \code{NULL}.
 \item \code{num.trees} :: \code{integer(1)}\cr
 Number of trees. If optimize == TRUE. Param set seq(10,num.trees,iter) will be used, default \code{500}
 \item \code{pmm.k} :: \code{integer(1)}\cr
-Number of candidate non-missing values to sample from in the predictive meanmatching step. 0 to avoid this step. If optimize == TRUE param set sample(1:pmm.k,iter) will be used. If pmm.k==0 missRanger == missForest, default \code{5}.
+Number of candidate non-missing values to sample from in the predictive mean matching step. 0 to avoid this step. If optimize=TRUE params set: sample(1:pmm.k, iter) will be used. If pmm.k=0, missRanger is the same as missForest, default \code{5}.
 \item \code{random.seed} :: \code{integer(1)}\cr
 Random seed, default \code{123}.
 \item \code{iter} :: \code{integer(1)}\cr
-Number of iteration for a random search, default \code{10}.
+Number of iterations for a random search, default \code{10}.
 \item \code{optimize} :: \code{logical(1)}\cr
-If set TRUE function will optimize parametrs of imputation automaticlly. If parametrs will be tune by other methode shoude be set as FALSE, default \code{FALSE}.
+If set TRUE, function will optimize parameters of imputation automatically. If parameters will be tuned by other method, should be set to FALSE, default \code{FALSE}.
 \item \code{out_fill} :: \code{character(1)}\cr
-Output log file location if file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
+Output log file location. If file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
 }
 }
 

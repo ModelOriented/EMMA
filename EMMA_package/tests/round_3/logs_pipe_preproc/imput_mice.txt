@@ -1,0 +1,195 @@
+INFO  [10:25:20.396] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '2079' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 400
+Ostrzeżenie: Number of logged events: 250
+INFO  [10:25:32.505] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '2079' (iter 2/5) 
+Ostrzeżenie: Number of logged events: 400
+Ostrzeżenie: Number of logged events: 300
+INFO  [10:25:45.287] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '2079' (iter 3/5) 
+Ostrzeżenie: Number of logged events: 300
+Ostrzeżenie: Number of logged events: 400
+INFO  [10:26:01.031] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '2079' (iter 4/5) 
+Ostrzeżenie: Number of logged events: 400
+Ostrzeżenie: Number of logged events: 300
+INFO  [10:26:16.009] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '2079' (iter 5/5) 
+Ostrzeżenie: Number of logged events: 400
+Ostrzeżenie: Number of logged events: 300
+
+
+<ResampleResult> of 5 iterations
+* Task: 2079
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.4210517 
+
+
+INFO  [10:26:33.534] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '35' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 25
+Ostrzeżenie: Number of logged events: 50
+INFO  [10:26:36.396] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '35' (iter 2/5) 
+Ostrzeżenie: Number of logged events: 25
+Ostrzeżenie: Number of logged events: 50
+INFO  [10:26:39.749] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '35' (iter 3/5) 
+INFO  [10:26:41.560] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '35' (iter 4/5) 
+Ostrzeżenie: Number of logged events: 25
+Ostrzeżenie: Number of logged events: 50
+INFO  [10:26:44.186] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '35' (iter 5/5) 
+Ostrzeżenie: Number of logged events: 55
+
+
+<ResampleResult> of 5 iterations
+* Task: 35
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.0409478 
+
+
+INFO  [10:26:50.801] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3802' (iter 1/5) 
+INFO  [10:26:51.806] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3802' (iter 2/5) 
+INFO  [10:26:52.505] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3802' (iter 3/5) 
+INFO  [10:26:53.319] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3802' (iter 4/5) 
+INFO  [10:26:53.937] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3802' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3802
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.01304348 
+
+
+INFO  [10:26:55.914] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3705' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 112
+Ostrzeżenie: Number of logged events: 236
+INFO  [10:26:59.509] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3705' (iter 2/5) 
+Ostrzeżenie: Number of logged events: 100
+Ostrzeżenie: Number of logged events: 110
+INFO  [10:27:02.326] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3705' (iter 3/5) 
+Ostrzeżenie: Number of logged events: 169
+Ostrzeżenie: Number of logged events: 55
+INFO  [10:27:04.945] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3705' (iter 4/5) 
+Error in solve.default(xtx + diag(pen)) : 
+  system jest obliczeniowo osobliwy: numer odwrotnego warunku = 2.11713e-16
+
+
+INFO  [10:27:06.977] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3807' (iter 1/5) 
+INFO  [10:27:07.865] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3807' (iter 2/5) 
+INFO  [10:27:08.897] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3807' (iter 3/5) 
+INFO  [10:27:09.770] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3807' (iter 4/5) 
+INFO  [10:27:10.626] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3807' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3807
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2461538 
+
+
+INFO  [10:27:13.578] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3604' (iter 1/5) 
+INFO  [10:27:14.279] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3604' (iter 2/5) 
+INFO  [10:27:14.900] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3604' (iter 3/5) 
+INFO  [10:27:15.620] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3604' (iter 4/5) 
+INFO  [10:27:16.461] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3604' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3604
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1897436 
+
+
+INFO  [10:27:18.416] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '190403' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 25
+Ostrzeżenie: Number of logged events: 55
+INFO  [10:27:19.951] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '190403' (iter 2/5) 
+Ostrzeżenie: Number of logged events: 55
+INFO  [10:27:21.650] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '190403' (iter 3/5) 
+Ostrzeżenie: Number of logged events: 30
+INFO  [10:27:22.863] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '190403' (iter 4/5) 
+Ostrzeżenie: Number of logged events: 55
+INFO  [10:27:23.998] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '190403' (iter 5/5) 
+Ostrzeżenie: Number of logged events: 55
+
+
+<ResampleResult> of 5 iterations
+* Task: 190403
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.08051282 
+
+
+INFO  [10:27:26.754] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '54' (iter 1/5) 
+INFO  [10:27:28.451] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '54' (iter 2/5) 
+INFO  [10:27:30.278] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '54' (iter 3/5) 
+Ostrzeżenie: Number of logged events: 100
+INFO  [10:27:32.288] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '54' (iter 4/5) 
+INFO  [10:27:34.150] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '54' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 54
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1483871 
+
+
+INFO  [10:27:36.918] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3547' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 50
+INFO  [10:27:38.053] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3547' (iter 2/5) 
+INFO  [10:27:39.079] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3547' (iter 3/5) 
+Ostrzeżenie: Number of logged events: 50
+INFO  [10:27:40.006] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3547' (iter 4/5) 
+Ostrzeżenie: Number of logged events: 50
+INFO  [10:27:41.307] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3547' (iter 5/5) 
+Ostrzeżenie: Number of logged events: 50
+
+
+<ResampleResult> of 5 iterations
+* Task: 3547
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2514604 
+
+
+INFO  [10:27:44.025] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '5' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 76
+Error in lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs,  : 
+  one multinomial or binomial class has 1 or 0 observations; not allowed
+
+
+Successful evaluation: 8/10 tasks
+
+
