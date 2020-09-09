@@ -1,0 +1,157 @@
+INFO  [19:36:11.760] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '2079' (iter 1/5) 
+INFO  [19:36:16.523] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '2079' (iter 2/5) 
+INFO  [19:36:19.286] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '2079' (iter 3/5) 
+INFO  [19:36:22.353] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '2079' (iter 4/5) 
+INFO  [19:36:25.452] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '2079' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 2079
+* Learner: imput_missMDA_MFA.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.8396213 
+
+
+INFO  [19:36:29.533] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '35' (iter 1/5) 
+INFO  [19:36:31.304] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '35' (iter 2/5) 
+INFO  [19:36:32.947] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '35' (iter 3/5) 
+INFO  [19:36:34.735] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '35' (iter 4/5) 
+INFO  [19:36:36.110] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '35' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 35
+* Learner: imput_missMDA_MFA.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.03009996 
+
+
+INFO  [19:36:38.833] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '3802' (iter 1/5) 
+INFO  [19:36:39.060] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '3802' (iter 2/5) 
+INFO  [19:36:39.298] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '3802' (iter 3/5) 
+INFO  [19:36:39.536] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '3802' (iter 4/5) 
+INFO  [19:36:39.745] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '3802' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3802
+* Learner: imput_missMDA_MFA.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1709179 
+
+
+INFO  [19:36:41.241] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '3705' (iter 1/5) 
+Error in apply(tabdisj[, (vec[i] + 1):vec[i + 1]], 1, which.max) : 
+  'dim(X)' musi mieć dodatnią długość
+
+
+INFO  [19:36:42.878] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '3807' (iter 1/5) 
+INFO  [19:36:43.210] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '3807' (iter 2/5) 
+INFO  [19:36:43.537] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '3807' (iter 3/5) 
+INFO  [19:36:43.744] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '3807' (iter 4/5) 
+INFO  [19:36:44.071] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '3807' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3807
+* Learner: imput_missMDA_MFA.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.3461538 
+
+
+INFO  [19:36:45.575] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '3604' (iter 1/5) 
+INFO  [19:36:45.807] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '3604' (iter 2/5) 
+INFO  [19:36:46.176] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '3604' (iter 3/5) 
+INFO  [19:36:46.819] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '3604' (iter 4/5) 
+INFO  [19:36:47.040] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '3604' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3604
+* Learner: imput_missMDA_MFA.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2205128 
+
+
+INFO  [19:36:48.607] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '190403' (iter 1/5) 
+INFO  [19:36:49.149] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '190403' (iter 2/5) 
+INFO  [19:36:49.789] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '190403' (iter 3/5) 
+INFO  [19:36:50.377] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '190403' (iter 4/5) 
+INFO  [19:36:51.284] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '190403' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 190403
+* Learner: imput_missMDA_MFA.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.08128205 
+
+
+INFO  [19:36:53.010] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '54' (iter 1/5) 
+INFO  [19:36:53.445] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '54' (iter 2/5) 
+INFO  [19:36:53.978] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '54' (iter 3/5) 
+INFO  [19:36:54.837] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '54' (iter 4/5) 
+INFO  [19:36:55.287] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '54' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 54
+* Learner: imput_missMDA_MFA.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1483871 
+
+
+INFO  [19:36:56.997] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '3547' (iter 1/5) 
+INFO  [19:36:57.498] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '3547' (iter 2/5) 
+INFO  [19:36:58.030] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '3547' (iter 3/5) 
+INFO  [19:36:58.476] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '3547' (iter 4/5) 
+INFO  [19:36:58.915] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '3547' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3547
+* Learner: imput_missMDA_MFA.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+  0.367299 
+
+
+INFO  [19:37:00.878] Applying learner 'imput_missMDA_MFA.encodeimpact.classif.glmnet' on task '5' (iter 1/5) 
+Error in apply(tabdisj[, (vec[i] + 1):vec[i + 1]], 1, which.max) : 
+  'dim(X)' musi mieć dodatnią długość
+
+
+Successful evaluation: 8/10 tasks
+
+

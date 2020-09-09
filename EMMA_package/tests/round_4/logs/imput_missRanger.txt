@@ -1,0 +1,202 @@
+INFO  [13:05:31.485] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 1/5) 
+INFO  [13:05:33.516] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 2/5) 
+INFO  [13:05:34.811] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 3/5) 
+INFO  [13:05:37.049] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 4/5) 
+INFO  [13:05:38.521] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3802: chscase_whale (Supervised Classification)
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2022222 
+
+
+INFO  [13:05:41.853] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3705: autoHorse (Supervised Classification)' (iter 1/5) 
+INFO  [13:05:45.514] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3705: autoHorse (Supervised Classification)' (iter 2/5) 
+INFO  [13:05:48.417] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3705: autoHorse (Supervised Classification)' (iter 3/5) 
+INFO  [13:05:51.361] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3705: autoHorse (Supervised Classification)' (iter 4/5) 
+INFO  [13:05:54.824] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3705: autoHorse (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3705: autoHorse (Supervised Classification)
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.3463415 
+
+
+INFO  [13:05:58.925] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+INFO  [13:06:00.060] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 2/5) 
+INFO  [13:06:01.002] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 3/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0, 4.
+INFO  [13:06:01.966] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 4/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 4.
+INFO  [13:06:03.243] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3604: pharynx (Supervised Classification)
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1948718 
+
+
+INFO  [13:06:05.202] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 54: hepatitis (Supervised Classification)' (iter 1/5) 
+INFO  [13:06:13.559] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 54: hepatitis (Supervised Classification)' (iter 2/5) 
+INFO  [13:06:19.974] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 54: hepatitis (Supervised Classification)' (iter 3/5) 
+INFO  [13:06:27.219] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 54: hepatitis (Supervised Classification)' (iter 4/5) 
+INFO  [13:06:34.343] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 54: hepatitis (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 54: hepatitis (Supervised Classification)
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.3290323 
+
+
+INFO  [13:06:42.454] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 1/5) 
+INFO  [13:06:43.812] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 2/5) 
+INFO  [13:06:45.453] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 3/5) 
+INFO  [13:06:46.676] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 4/5) 
+INFO  [13:06:48.269] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3547: cars (Supervised Classification)
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.5880157 
+
+
+Successful evaluation: 5/5 tasks
+
+

@@ -13,10 +13,10 @@ source("datasets_store/preprocess.R")
 # pipes <- c(PipeOpAmelia_T, PipeOpVIM_IRMI_T, PipeOpmissForest_T, PipeOpMice_T, PipeOpSoftImpute_T,
 #            PipeOpVIM_HD_T, PipeOpVIM_kNN_T, PipeOpVIM_regrImp_T, PipeOpmissRanger_T)
 
-#pipes <- c(PipeOpMissMDA_MFA, PipeOpMissMDA_PCA_MCA_FMAD)
+pipes <- c(PipeOpMissMDA_MFA, PipeOpMissMDA_PCA_MCA_FMAD)
 
-pipes <- c(PipeOpAmelia, PipeOpVIM_IRMI, PipeOpmissForest, PipeOpMice, PipeOpSoftImpute,
-           PipeOpVIM_HD, PipeOpVIM_kNN, PipeOpVIM_regrImp, PipeOpmissRanger)
+# pipes <- c(PipeOpAmelia, PipeOpVIM_IRMI, PipeOpmissForest, PipeOpMice, PipeOpSoftImpute,
+#            PipeOpVIM_HD, PipeOpVIM_kNN, PipeOpVIM_regrImp, PipeOpmissRanger)
 
 
 # library(dplyr)
@@ -47,7 +47,7 @@ tasks <- read.csv("EMMA_package/tests/round_3/task_sample.csv")
 for (j in 1:(length(pipes))) {
   positive <- 0
   id <- pipes[[j]]$new()$id
-  f <- file(paste("EMMA_package/tests/round_3/logs/", id, ".txt", sep = ""), open = "a")
+  f <- file(paste("EMMA_package/tests/round_3_no_cleaning/logs/", id, ".txt", sep = ""), open = "a")
   for (i in tasks$task.id) {
     
     #Take pipe
@@ -64,68 +64,8 @@ for (j in 1:(length(pipes))) {
     
     task_oml <- getOMLTask(i)
     df_oml <- task_oml$input$data.set
-    df_clean <- preprocess(df_oml)
-    task <- TaskClassif$new(id = as.character(task_oml$task.id), backend = df_clean$df, target = task_oml$input$target.features)
-    
-    sink(f, type = "output")
-    sink(f, type = "message")
-    options(warn = 1)
-    
-    try({
-      rr <- resample(task, graph_learner, split)
-    })
-    
-    if(exists("rr")){
-      pred <- rr$prediction()
-      if(length(pred$missing)==0){
-        positive <- positive+1
-        write(file = f, "\n")
-        rr$print()
-        write(file = f, "\n")
-        print(rr$aggregate(msr("classif.ce")))
-      }else{
-        write(file = f, "\n")
-        rr$print()
-        write(file = f, "PROBABLY LEFT MISSINGS AFTER IMPUTATION!")
-      }
-    }
-    
-    write(file = f, "\n")
-    sink(type = "message")
-    sink(type = "output")
-    rm(list = "rr")
-  }
-  write(file = f, paste("Successful evaluation: ", as.character(positive), "/10 tasks", sep = ""))
-  write(file = f, "\n")
-  close(f)
-}
-
-
-pipes <- c(PipeOpAmelia_T, PipeOpVIM_IRMI_T, PipeOpmissForest_T, PipeOpMice_T, PipeOpSoftImpute_T,
-           PipeOpVIM_HD_T, PipeOpVIM_kNN_T, PipeOpVIM_regrImp_T, PipeOpmissRanger_T)
-
-
-for (j in 1:(length(pipes))) {
-  positive <- 0
-  f <- file(paste("EMMA_package/tests/round_3/logs_pipe_preproc/", pipe_imp$id, ".txt", sep = ""), open = "a")
-  for (i in tasks$task.id) {
-    
-    #Take pipe
-    pipe_imp <- pipes[[j]]$new()
-    
-    #Build simple model
-    pipe_model <- lrn("classif.glmnet")
-    pipe_encoding <- PipeOpEncodeImpact$new()
-    graph <- pipe_imp %>>% pipe_encoding %>>% pipe_model
-    graph_learner <- GraphLearner$new(graph)
-    split <- rsmp("cv", folds = 5)
-    
-    #Test
-    
-    task_oml <- getOMLTask(i)
-    df_oml <- task_oml$input$data.set
-    df_clean <- preprocess(df_oml)
-    task <- TaskClassif$new(id = as.character(task_oml$task.id), backend = df_clean$df, target = task_oml$input$target.features)
+    #df_clean <- preprocess(df_oml)
+    task <- TaskClassif$new(id = as.character(task_oml$task.id), backend = df_oml$data, target = task_oml$input$target.features)
     
     sink(f, type = "output")
     sink(f, type = "message")
