@@ -1,0 +1,335 @@
+INFO  [17:09:59.031] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '2079' (iter 1/5) 
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+INFO  [17:10:00.416] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '2079' (iter 2/5) 
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+INFO  [17:10:01.905] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '2079' (iter 3/5) 
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+INFO  [17:10:03.318] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '2079' (iter 4/5) 
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+INFO  [17:10:05.037] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '2079' (iter 5/5) 
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+
+
+<ResampleResult> of 5 iterations
+* Task: 2079
+* Learner: imput_VIM_regrImp.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                    learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.1418919
+2: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.1224490
+3: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.1224490
+4: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.2448980
+5: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.1156463
+
+
+classif.ce 
+ 0.8505332 
+
+
+INFO  [17:10:06.679] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '35' (iter 1/5) 
+INFO  [17:10:07.320] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '35' (iter 2/5) 
+INFO  [17:10:07.963] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '35' (iter 3/5) 
+INFO  [17:10:08.632] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '35' (iter 4/5) 
+INFO  [17:10:09.308] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '35' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 35
+* Learner: imput_VIM_regrImp.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                    learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>      35 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.9594595
+2: <TaskClassif[44]>      35 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.9726027
+3: <TaskClassif[44]>      35 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.9863014
+4: <TaskClassif[44]>      35 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   1.0000000
+5: <TaskClassif[44]>      35 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.9452055
+
+
+classif.ce 
+0.02728619 
+
+
+INFO  [17:10:10.461] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3802' (iter 1/5) 
+INFO  [17:10:10.636] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3802' (iter 2/5) 
+INFO  [17:10:10.769] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3802' (iter 3/5) 
+INFO  [17:10:10.926] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3802' (iter 4/5) 
+INFO  [17:10:11.073] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3802' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3802
+* Learner: imput_VIM_regrImp.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                    learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.9782609
+2: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.5000000
+3: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.9782609
+4: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.4222222
+5: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.9777778
+
+
+classif.ce 
+ 0.2286957 
+
+
+INFO  [17:10:11.747] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3705' (iter 1/5) 
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+INFO  [17:10:12.073] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3705' (iter 2/5) 
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+INFO  [17:10:12.410] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3705' (iter 3/5) 
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+INFO  [17:10:12.801] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3705' (iter 4/5) 
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+INFO  [17:10:13.110] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3705' (iter 5/5) 
+Ostrzeżenie w poleceniu 'predict.lm(mod, newdata = tmp)':
+  prediction from a rank-deficient fit may be misleading
+
+
+<ResampleResult> of 5 iterations
+* Task: 3705
+* Learner: imput_VIM_regrImp.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                    learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3705 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.6097561
+2: <TaskClassif[44]>    3705 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.5609756
+3: <TaskClassif[44]>    3705 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.6829268
+4: <TaskClassif[44]>    3705 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.4878049
+5: <TaskClassif[44]>    3705 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.3902439
+
+
+classif.ce 
+ 0.4536585 
+
+
+INFO  [17:10:14.004] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3807' (iter 1/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [17:10:14.225] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3807' (iter 2/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [17:10:14.471] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3807' (iter 3/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [17:10:14.688] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3807' (iter 4/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [17:10:14.942] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3807' (iter 5/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+
+
+<ResampleResult> of 5 iterations
+* Task: 3807
+* Learner: imput_VIM_regrImp.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                    learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.4230769
+2: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.6153846
+3: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.7307692
+4: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.8076923
+5: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.4230769
+
+
+classif.ce 
+       0.4 
+
+
+INFO  [17:10:15.698] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3604' (iter 1/5) 
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])': group ‘0’ is empty
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])': group ‘0’ is empty
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])': group ‘0’ is empty
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])': group ‘0’ is empty
+[1] "Error in apply(pre, 1, function(x) sample(1:length(x), 1, prob = x)): 'dim(X)' musi mieć dodatnią długość\n"
+[1] "Error in apply(pre, 1, function(x) sample(1:length(x), 1, prob = x)): 'dim(X)' musi mieć dodatnią długość\n"
+Error in apply(pre, 1, function(x) sample(1:length(x), 1, prob = x)) : 
+  'dim(X)' musi mieć dodatnią długość
+
+
+INFO  [17:10:16.325] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '190403' (iter 1/5) 
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])':
+  groups ‘Hispanique’ ‘Afro Americain’ ‘Asie du Sud est’ are empty
+INFO  [17:10:16.664] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '190403' (iter 2/5) 
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])':
+  group ‘Afro Americain’ is empty
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])':
+  groups ‘Hispanique’ ‘Asie du Sud est’ are empty
+INFO  [17:10:16.995] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '190403' (iter 3/5) 
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])':
+  groups ‘Afrique sub saharienne’ ‘Afro Americain’ ‘Asie du Sud est’ are empty
+INFO  [17:10:17.350] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '190403' (iter 4/5) 
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])':
+  group ‘Asie du Sud est’ is empty
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])':
+  groups ‘Afrique sub saharienne’ ‘Metisse’ ‘Afro Americain’ are empty
+INFO  [17:10:17.717] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '190403' (iter 5/5) 
+Ostrzeżenie w poleceniu 'multinom(form, data[TFna, ])':
+  groups ‘Hispanique’ ‘Metisse’ ‘Afro Americain’ ‘Asie du Sud est’ are empty
+
+
+<ResampleResult> of 5 iterations
+* Task: 190403
+* Learner: imput_VIM_regrImp.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                    learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.8780488
+2: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.8292683
+3: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.9500000
+4: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   1.0000000
+5: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.9500000
+
+
+classif.ce 
+0.07853659 
+
+
+INFO  [17:10:18.582] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '54' (iter 1/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [17:10:18.972] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '54' (iter 2/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [17:10:19.365] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '54' (iter 3/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [17:10:19.726] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '54' (iter 4/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+INFO  [17:10:20.072] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '54' (iter 5/5) 
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: algorithm did not converge
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+Ostrzeżenie: glm.fit: fitted probabilities numerically 0 or 1 occurred
+
+
+<ResampleResult> of 5 iterations
+* Task: 54
+* Learner: imput_VIM_regrImp.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                    learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>      54 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.3225806
+2: <TaskClassif[44]>      54 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.9032258
+3: <TaskClassif[44]>      54 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.5161290
+4: <TaskClassif[44]>      54 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.3548387
+5: <TaskClassif[44]>      54 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.9354839
+
+
+classif.ce 
+ 0.3935484 
+
+
+INFO  [17:10:21.023] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3547' (iter 1/5) 
+INFO  [17:10:21.335] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3547' (iter 2/5) 
+INFO  [17:10:21.620] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3547' (iter 3/5) 
+INFO  [17:10:22.025] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3547' (iter 4/5) 
+INFO  [17:10:22.323] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '3547' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3547
+* Learner: imput_VIM_regrImp.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                    learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.7926829
+2: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.6913580
+3: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.7037037
+4: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.7777778
+5: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.7160494
+
+
+classif.ce 
+ 0.2636856 
+
+
+INFO  [17:10:23.299] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '5' (iter 1/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [17:10:28.999] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '5' (iter 2/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [17:10:35.527] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '5' (iter 3/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [17:10:41.487] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '5' (iter 4/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [17:10:47.397] Applying learner 'imput_VIM_regrImp.encodeimpact.classif.glmnet' on task '5' (iter 5/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+
+
+<ResampleResult> of 5 iterations
+* Task: 5
+* Learner: imput_VIM_regrImp.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                    learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>       5 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.3516484
+2: <TaskClassif[44]>       5 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.1318681
+3: <TaskClassif[44]>       5 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.5000000
+4: <TaskClassif[44]>       5 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.4111111
+5: <TaskClassif[44]>       5 <GraphLearner[31]> imput_VIM_regrImp.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.1000000
+
+
+classif.ce 
+ 0.7010745 
+
+
+Successful evaluation: 9/10 tasks
+
+

@@ -1,0 +1,274 @@
+INFO  [17:07:57.053] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '2079' (iter 1/5) 
+INFO  [17:07:58.277] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '2079' (iter 2/5) 
+INFO  [17:07:59.696] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '2079' (iter 3/5) 
+INFO  [17:08:01.017] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '2079' (iter 4/5) 
+Ostrzeżenie: from glmnet Fortran code (error code -100); Convergence for 100th lambda value not reached after maxit=100000 iterations; solutions for larger lambdas returned
+INFO  [17:08:05.346] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '2079' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 2079
+* Learner: imput_VIM_HD.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                               learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.1418919
+2: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.1224490
+3: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.1224490
+4: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.2448980
+5: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.1156463
+
+
+classif.ce 
+ 0.8505332 
+
+
+INFO  [17:08:06.867] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '35' (iter 1/5) 
+INFO  [17:08:07.527] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '35' (iter 2/5) 
+INFO  [17:08:08.222] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '35' (iter 3/5) 
+INFO  [17:08:08.952] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '35' (iter 4/5) 
+INFO  [17:08:09.655] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '35' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 35
+* Learner: imput_VIM_HD.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                               learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>      35 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.9594595
+2: <TaskClassif[44]>      35 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.9726027
+3: <TaskClassif[44]>      35 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.9863014
+4: <TaskClassif[44]>      35 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   1.0000000
+5: <TaskClassif[44]>      35 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.9452055
+
+
+classif.ce 
+0.02728619 
+
+
+INFO  [17:08:10.774] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3802' (iter 1/5) 
+INFO  [17:08:10.948] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3802' (iter 2/5) 
+INFO  [17:08:11.093] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3802' (iter 3/5) 
+INFO  [17:08:11.248] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3802' (iter 4/5) 
+INFO  [17:08:11.376] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3802' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3802
+* Learner: imput_VIM_HD.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                               learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.9782609
+2: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.5000000
+3: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.9782609
+4: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.4222222
+5: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.9777778
+
+
+classif.ce 
+ 0.2286957 
+
+
+INFO  [17:08:11.981] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3705' (iter 1/5) 
+INFO  [17:08:12.293] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3705' (iter 2/5) 
+INFO  [17:08:12.575] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3705' (iter 3/5) 
+INFO  [17:08:12.884] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3705' (iter 4/5) 
+INFO  [17:08:13.158] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3705' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3705
+* Learner: imput_VIM_HD.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                               learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3705 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.6097561
+2: <TaskClassif[44]>    3705 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.5609756
+3: <TaskClassif[44]>    3705 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.6829268
+4: <TaskClassif[44]>    3705 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.4878049
+5: <TaskClassif[44]>    3705 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.6097561
+
+
+classif.ce 
+ 0.4097561 
+
+
+INFO  [17:08:13.881] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3807' (iter 1/5) 
+INFO  [17:08:14.106] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3807' (iter 2/5) 
+INFO  [17:08:14.316] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3807' (iter 3/5) 
+INFO  [17:08:14.540] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3807' (iter 4/5) 
+INFO  [17:08:14.750] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3807' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3807
+* Learner: imput_VIM_HD.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                               learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.4230769
+2: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.8461538
+3: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.5384615
+4: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.3846154
+5: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.4230769
+
+
+classif.ce 
+ 0.4769231 
+
+
+INFO  [17:08:15.414] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3604' (iter 1/5) 
+INFO  [17:08:15.720] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3604' (iter 2/5) 
+INFO  [17:08:15.924] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3604' (iter 3/5) 
+INFO  [17:08:16.189] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3604' (iter 4/5) 
+INFO  [17:08:16.386] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3604' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3604
+* Learner: imput_VIM_HD.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                               learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3604 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.6923077
+2: <TaskClassif[44]>    3604 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.6923077
+3: <TaskClassif[44]>    3604 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.7179487
+4: <TaskClassif[44]>    3604 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.6410256
+5: <TaskClassif[44]>    3604 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.7948718
+
+
+classif.ce 
+ 0.2923077 
+
+
+INFO  [17:08:17.106] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '190403' (iter 1/5) 
+INFO  [17:08:17.386] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '190403' (iter 2/5) 
+INFO  [17:08:17.696] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '190403' (iter 3/5) 
+INFO  [17:08:18.014] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '190403' (iter 4/5) 
+INFO  [17:08:18.363] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '190403' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 190403
+* Learner: imput_VIM_HD.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                               learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.8780488
+2: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.8292683
+3: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.9500000
+4: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   1.0000000
+5: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.9500000
+
+
+classif.ce 
+0.07853659 
+
+
+INFO  [17:08:19.144] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '54' (iter 1/5) 
+INFO  [17:08:19.433] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '54' (iter 2/5) 
+INFO  [17:08:19.762] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '54' (iter 3/5) 
+INFO  [17:08:20.089] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '54' (iter 4/5) 
+INFO  [17:08:20.363] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '54' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 54
+* Learner: imput_VIM_HD.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                               learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>      54 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.2903226
+2: <TaskClassif[44]>      54 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.8709677
+3: <TaskClassif[44]>      54 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.6129032
+4: <TaskClassif[44]>      54 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.4516129
+5: <TaskClassif[44]>      54 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.8064516
+
+
+classif.ce 
+ 0.3935484 
+
+
+INFO  [17:08:21.166] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3547' (iter 1/5) 
+INFO  [17:08:21.450] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3547' (iter 2/5) 
+INFO  [17:08:21.721] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3547' (iter 3/5) 
+INFO  [17:08:22.000] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3547' (iter 4/5) 
+INFO  [17:08:22.293] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '3547' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3547
+* Learner: imput_VIM_HD.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                               learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.7926829
+2: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.6913580
+3: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.7037037
+4: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.7777778
+5: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.7160494
+
+
+classif.ce 
+ 0.2636856 
+
+
+INFO  [17:08:23.097] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '5' (iter 1/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [17:08:29.360] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '5' (iter 2/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [17:08:36.486] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '5' (iter 3/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [17:08:42.964] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '5' (iter 4/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [17:08:49.305] Applying learner 'imput_VIM_HD.encodeimpact.classif.glmnet' on task '5' (iter 5/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+
+
+<ResampleResult> of 5 iterations
+* Task: 5
+* Learner: imput_VIM_HD.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                               learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>       5 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.3516484
+2: <TaskClassif[44]>       5 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.1318681
+3: <TaskClassif[44]>       5 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.4777778
+4: <TaskClassif[44]>       5 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.4000000
+5: <TaskClassif[44]>       5 <GraphLearner[31]> imput_VIM_HD.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.1000000
+
+
+classif.ce 
+ 0.7077411 
+
+
+Successful evaluation: 10/10 tasks
+
+

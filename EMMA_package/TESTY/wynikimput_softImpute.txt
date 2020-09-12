@@ -1,0 +1,233 @@
+INFO  [17:07:07.349] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '2079' (iter 1/5) 
+INFO  [17:07:09.011] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '2079' (iter 2/5) 
+INFO  [17:07:10.306] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '2079' (iter 3/5) 
+INFO  [17:07:11.546] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '2079' (iter 4/5) 
+INFO  [17:07:12.972] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '2079' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 2079
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                   learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.1418919
+2: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.1224490
+3: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.1224490
+4: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.2448980
+5: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.1156463
+
+
+classif.ce 
+ 0.8505332 
+
+
+INFO  [17:07:14.613] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '35' (iter 1/5) 
+[1] "Not enought numeric"
+Error in cat(x, file = file, sep = c(rep.int(sep, ncolumns - 1), "\n"),  : 
+  niepoprawne połączenie
+
+
+INFO  [17:07:15.211] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3802' (iter 1/5) 
+INFO  [17:07:15.359] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3802' (iter 2/5) 
+INFO  [17:07:15.484] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3802' (iter 3/5) 
+INFO  [17:07:15.644] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3802' (iter 4/5) 
+INFO  [17:07:15.770] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3802' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3802
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                   learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.9782609
+2: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.5000000
+3: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.9782609
+4: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.4222222
+5: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.9777778
+
+
+classif.ce 
+ 0.2286957 
+
+
+INFO  [17:07:16.512] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3705' (iter 1/5) 
+INFO  [17:07:16.808] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3705' (iter 2/5) 
+INFO  [17:07:17.044] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3705' (iter 3/5) 
+INFO  [17:07:17.303] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3705' (iter 4/5) 
+INFO  [17:07:17.541] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3705' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3705
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                   learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3705 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.6097561
+2: <TaskClassif[44]>    3705 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.5609756
+3: <TaskClassif[44]>    3705 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.6829268
+4: <TaskClassif[44]>    3705 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.4878049
+5: <TaskClassif[44]>    3705 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.6097561
+
+
+classif.ce 
+ 0.4097561 
+
+
+INFO  [17:07:18.401] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3807' (iter 1/5) 
+INFO  [17:07:18.622] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3807' (iter 2/5) 
+INFO  [17:07:18.814] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3807' (iter 3/5) 
+INFO  [17:07:19.021] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3807' (iter 4/5) 
+INFO  [17:07:19.216] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3807' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3807
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                   learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.4230769
+2: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.6923077
+3: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.7307692
+4: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.8076923
+5: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.4230769
+
+
+classif.ce 
+ 0.3846154 
+
+
+INFO  [17:07:20.043] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3604' (iter 1/5) 
+[1] "Not enought numeric"
+Error in cat(x, file = file, sep = c(rep.int(sep, ncolumns - 1), "\n"),  : 
+  niepoprawne połączenie
+
+
+INFO  [17:07:20.668] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '190403' (iter 1/5) 
+INFO  [17:07:20.946] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '190403' (iter 2/5) 
+INFO  [17:07:21.182] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '190403' (iter 3/5) 
+INFO  [17:07:21.488] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '190403' (iter 4/5) 
+INFO  [17:07:21.767] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '190403' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 190403
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                   learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.8780488
+2: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.8292683
+3: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.9750000
+4: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   1.0000000
+5: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.9500000
+
+
+classif.ce 
+0.07353659 
+
+
+INFO  [17:07:22.684] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '54' (iter 1/5) 
+INFO  [17:07:22.934] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '54' (iter 2/5) 
+INFO  [17:07:23.216] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '54' (iter 3/5) 
+INFO  [17:07:23.463] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '54' (iter 4/5) 
+INFO  [17:07:23.727] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '54' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 54
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                   learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>      54 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.1612903
+2: <TaskClassif[44]>      54 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.9032258
+3: <TaskClassif[44]>      54 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.1935484
+4: <TaskClassif[44]>      54 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.1612903
+5: <TaskClassif[44]>      54 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.8709677
+
+
+classif.ce 
+ 0.5419355 
+
+
+INFO  [17:07:24.634] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3547' (iter 1/5) 
+INFO  [17:07:24.898] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3547' (iter 2/5) 
+INFO  [17:07:25.157] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3547' (iter 3/5) 
+INFO  [17:07:25.401] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3547' (iter 4/5) 
+INFO  [17:07:25.748] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3547' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3547
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                   learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.7926829
+2: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.6913580
+3: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.7037037
+4: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.7777778
+5: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.7160494
+
+
+classif.ce 
+ 0.2636856 
+
+
+INFO  [17:07:26.728] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '5' (iter 1/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [17:07:32.433] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '5' (iter 2/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [17:07:38.912] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '5' (iter 3/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [17:07:44.825] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '5' (iter 4/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [17:07:50.512] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '5' (iter 5/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+
+
+<ResampleResult> of 5 iterations
+* Task: 5
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                   learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>       5 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.3296703
+2: <TaskClassif[44]>       5 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.1318681
+3: <TaskClassif[44]>       5 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.4888889
+4: <TaskClassif[44]>       5 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.3666667
+5: <TaskClassif[44]>       5 <GraphLearner[31]> imput_softImpute.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.1000000
+
+
+classif.ce 
+ 0.7165812 
+
+
+Successful evaluation: 8/10 tasks
+
+

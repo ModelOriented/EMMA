@@ -1,0 +1,300 @@
+INFO  [17:10:54.315] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '2079' (iter 1/5) 
+INFO  [17:10:58.520] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '2079' (iter 2/5) 
+INFO  [17:11:02.923] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '2079' (iter 3/5) 
+INFO  [17:11:07.328] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '2079' (iter 4/5) 
+INFO  [17:11:11.499] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '2079' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 2079
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                   learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.1418919
+2: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.1224490
+3: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.1224490
+4: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.2448980
+5: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.1156463
+
+
+classif.ce 
+ 0.8505332 
+
+
+INFO  [17:11:16.186] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '35' (iter 1/5) 
+INFO  [17:11:17.031] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '35' (iter 2/5) 
+INFO  [17:11:17.806] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '35' (iter 3/5) 
+INFO  [17:11:18.703] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '35' (iter 4/5) 
+INFO  [17:11:19.555] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '35' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 35
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                   learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>      35 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.9594595
+2: <TaskClassif[44]>      35 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.9726027
+3: <TaskClassif[44]>      35 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.9863014
+4: <TaskClassif[44]>      35 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   1.0000000
+5: <TaskClassif[44]>      35 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.9452055
+
+
+classif.ce 
+0.02728619 
+
+
+INFO  [17:11:21.083] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3802' (iter 1/5) 
+INFO  [17:11:21.931] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3802' (iter 2/5) 
+INFO  [17:11:22.564] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3802' (iter 3/5) 
+INFO  [17:11:23.192] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3802' (iter 4/5) 
+INFO  [17:11:23.628] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3802' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3802
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                   learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.9782609
+2: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.5000000
+3: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.9782609
+4: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.4222222
+5: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.9777778
+
+
+classif.ce 
+ 0.2286957 
+
+
+INFO  [17:11:25.086] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3705' (iter 1/5) 
+INFO  [17:11:26.058] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3705' (iter 2/5) 
+INFO  [17:11:27.184] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3705' (iter 3/5) 
+INFO  [17:11:28.059] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3705' (iter 4/5) 
+INFO  [17:11:28.827] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3705' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3705
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                   learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3705 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.6097561
+2: <TaskClassif[44]>    3705 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.5609756
+3: <TaskClassif[44]>    3705 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.6829268
+4: <TaskClassif[44]>    3705 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.4878049
+5: <TaskClassif[44]>    3705 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.6097561
+
+
+classif.ce 
+ 0.4097561 
+
+
+INFO  [17:11:30.368] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3807' (iter 1/5) 
+INFO  [17:11:31.129] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3807' (iter 2/5) 
+INFO  [17:11:32.317] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3807' (iter 3/5) 
+INFO  [17:11:33.284] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3807' (iter 4/5) 
+INFO  [17:11:34.312] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3807' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3807
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                   learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.4230769
+2: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.6153846
+3: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.4615385
+4: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.8076923
+5: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.4230769
+
+
+classif.ce 
+ 0.4538462 
+
+
+INFO  [17:11:35.695] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3604' (iter 1/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+INFO  [17:11:36.036] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3604' (iter 2/5) 
+INFO  [17:11:36.336] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3604' (iter 3/5) 
+INFO  [17:11:36.657] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3604' (iter 4/5) 
+INFO  [17:11:36.954] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3604' (iter 5/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.
+
+
+<ResampleResult> of 5 iterations
+* Task: 3604
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                   learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3604 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.6923077
+2: <TaskClassif[44]>    3604 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.6923077
+3: <TaskClassif[44]>    3604 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.7179487
+4: <TaskClassif[44]>    3604 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.6410256
+5: <TaskClassif[44]>    3604 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.7948718
+
+
+classif.ce 
+ 0.2923077 
+
+
+INFO  [17:11:37.948] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '190403' (iter 1/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Hispanique, Afro Americain, Asie du Sud est.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Hispanique, Afro Americain, Asie du Sud est.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Hispanique, Afro Americain, Asie du Sud est.
+INFO  [17:11:38.316] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '190403' (iter 2/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Afro Americain.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Afro Americain.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Afro Americain.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Hispanique, Asie du Sud est.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Hispanique, Asie du Sud est.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Hispanique, Asie du Sud est.
+INFO  [17:11:38.656] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '190403' (iter 3/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Afrique sub saharienne, Afro Americain, Asie du Sud est.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Afrique sub saharienne, Afro Americain, Asie du Sud est.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Afrique sub saharienne, Afro Americain, Asie du Sud est.
+INFO  [17:11:39.082] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '190403' (iter 4/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Asie du Sud est.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Asie du Sud est.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Asie du Sud est.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Afrique sub saharienne, Metisse, Afro Americain.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Afrique sub saharienne, Metisse, Afro Americain.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Afrique sub saharienne, Metisse, Afro Americain.
+INFO  [17:11:39.462] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '190403' (iter 5/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Hispanique, Metisse, Afro Americain, Asie du Sud est.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Hispanique, Metisse, Afro Americain, Asie du Sud est.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Hispanique, Metisse, Afro Americain, Asie du Sud est.
+
+
+<ResampleResult> of 5 iterations
+* Task: 190403
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                   learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.8780488
+2: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.8292683
+3: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.9750000
+4: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   1.0000000
+5: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.9500000
+
+
+classif.ce 
+0.07353659 
+
+
+INFO  [17:11:40.514] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '54' (iter 1/5) 
+INFO  [17:11:41.794] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '54' (iter 2/5) 
+INFO  [17:11:43.374] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '54' (iter 3/5) 
+INFO  [17:11:44.932] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '54' (iter 4/5) 
+INFO  [17:11:46.639] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '54' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 54
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                   learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>      54 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.2903226
+2: <TaskClassif[44]>      54 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.8387097
+3: <TaskClassif[44]>      54 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.3548387
+4: <TaskClassif[44]>      54 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.3548387
+5: <TaskClassif[44]>      54 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.8709677
+
+
+classif.ce 
+ 0.4580645 
+
+
+INFO  [17:11:48.801] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3547' (iter 1/5) 
+INFO  [17:11:49.408] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3547' (iter 2/5) 
+INFO  [17:11:49.977] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3547' (iter 3/5) 
+INFO  [17:11:50.561] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3547' (iter 4/5) 
+INFO  [17:11:51.152] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '3547' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3547
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                   learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.7926829
+2: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.6913580
+3: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.7037037
+4: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.7777778
+5: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.7160494
+
+
+classif.ce 
+ 0.2636856 
+
+
+INFO  [17:11:52.528] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '5' (iter 1/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [17:12:02.861] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '5' (iter 2/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [17:12:12.574] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '5' (iter 3/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [17:12:21.509] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '5' (iter 4/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+INFO  [17:12:30.327] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task '5' (iter 5/5) 
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+
+
+<ResampleResult> of 5 iterations
+* Task: 5
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                                   learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>       5 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.3626374
+2: <TaskClassif[44]>       5 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.1208791
+3: <TaskClassif[44]>       5 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.5000000
+4: <TaskClassif[44]>       5 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.4000000
+5: <TaskClassif[44]>       5 <GraphLearner[31]> imput_missRanger.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.1000000
+
+
+classif.ce 
+ 0.7032967 
+
+
+Successful evaluation: 10/10 tasks
+
+

@@ -37,7 +37,7 @@ autotune_Amelia(
 
 \item{intercs}{parameter pass to amleia function}
 
-\item{empir}{parameter pass to amelia function. If empir dont set empir=nrow(df)*0.015.}
+\item{empir}{parameter pass to amelia function as empir in Amelia == empir*nrow(df). If empir dont set empir=nrow(df)*0.015.}
 
 \item{verbose}{If true function will print on console.}
 

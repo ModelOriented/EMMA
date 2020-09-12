@@ -1,0 +1,311 @@
+INFO  [16:55:14.391] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '2079' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 450
+Ostrzeżenie: Number of logged events: 350
+INFO  [16:55:35.219] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '2079' (iter 2/5) 
+Ostrzeżenie: Number of logged events: 450
+Ostrzeżenie: Number of logged events: 350
+INFO  [16:55:53.877] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '2079' (iter 3/5) 
+Ostrzeżenie: Number of logged events: 450
+Ostrzeżenie: Number of logged events: 350
+INFO  [16:56:11.957] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '2079' (iter 4/5) 
+Ostrzeżenie: Number of logged events: 350
+Ostrzeżenie: Number of logged events: 425
+INFO  [16:56:29.409] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '2079' (iter 5/5) 
+Ostrzeżenie: Number of logged events: 450
+Ostrzeżenie: Number of logged events: 300
+
+
+<ResampleResult> of 5 iterations
+* Task: 2079
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                             learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.1418919
+2: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.1224490
+3: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.1224490
+4: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.2448980
+5: <TaskClassif[44]>    2079 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.1156463
+
+
+classif.ce 
+ 0.8505332 
+
+
+INFO  [16:56:48.289] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '35' (iter 1/5) 
+INFO  [16:56:49.426] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '35' (iter 2/5) 
+Ostrzeżenie: Number of logged events: 55
+INFO  [16:56:51.505] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '35' (iter 3/5) 
+Ostrzeżenie: Number of logged events: 25
+Ostrzeżenie: Number of logged events: 50
+INFO  [16:56:53.209] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '35' (iter 4/5) 
+INFO  [16:56:54.353] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '35' (iter 5/5) 
+Ostrzeżenie: Number of logged events: 25
+Ostrzeżenie: Number of logged events: 25
+
+
+<ResampleResult> of 5 iterations
+* Task: 35
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                             learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>      35 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.9594595
+2: <TaskClassif[44]>      35 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.9726027
+3: <TaskClassif[44]>      35 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.9863014
+4: <TaskClassif[44]>      35 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   1.0000000
+5: <TaskClassif[44]>      35 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.9452055
+
+
+classif.ce 
+0.02728619 
+
+
+INFO  [16:56:56.849] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3802' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 25
+Ostrzeżenie: Number of logged events: 25
+INFO  [16:56:57.408] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3802' (iter 2/5) 
+Ostrzeżenie: Number of logged events: 25
+INFO  [16:56:57.745] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3802' (iter 3/5) 
+Ostrzeżenie: Number of logged events: 25
+Ostrzeżenie: Number of logged events: 25
+INFO  [16:56:58.298] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3802' (iter 4/5) 
+Ostrzeżenie: Number of logged events: 25
+INFO  [16:56:58.639] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3802' (iter 5/5) 
+Ostrzeżenie: Number of logged events: 25
+Ostrzeżenie: Number of logged events: 25
+
+
+<ResampleResult> of 5 iterations
+* Task: 3802
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                             learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.9782609
+2: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.5000000
+3: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.9782609
+4: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.4222222
+5: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.9777778
+
+
+classif.ce 
+ 0.2286957 
+
+
+INFO  [16:56:59.970] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3705' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 195
+Ostrzeżenie: Number of logged events: 146
+INFO  [16:57:02.668] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3705' (iter 2/5) 
+Ostrzeżenie: Number of logged events: 178
+Ostrzeżenie: Number of logged events: 140
+INFO  [16:57:05.640] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3705' (iter 3/5) 
+Ostrzeżenie: Number of logged events: 249
+Ostrzeżenie: Number of logged events: 196
+INFO  [16:57:08.918] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3705' (iter 4/5) 
+Ostrzeżenie: Number of logged events: 163
+Ostrzeżenie: Number of logged events: 110
+INFO  [16:57:11.585] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3705' (iter 5/5) 
+Error in solve.default(xtx + diag(pen)) : 
+  system jest obliczeniowo osobliwy: numer odwrotnego warunku = 2.16546e-16
+
+
+INFO  [16:57:12.657] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3807' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 1
+INFO  [16:57:13.409] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3807' (iter 2/5) 
+INFO  [16:57:14.282] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3807' (iter 3/5) 
+INFO  [16:57:15.089] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3807' (iter 4/5) 
+INFO  [16:57:15.950] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3807' (iter 5/5) 
+Ostrzeżenie: Number of logged events: 1
+
+
+<ResampleResult> of 5 iterations
+* Task: 3807
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+PROBABLY LEFT MISSINGS AFTER IMPUTATION!
+
+
+INFO  [16:57:17.500] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3604' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 25
+INFO  [16:57:17.910] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3604' (iter 2/5) 
+INFO  [16:57:18.283] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3604' (iter 3/5) 
+Ostrzeżenie: Number of logged events: 55
+INFO  [16:57:19.584] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3604' (iter 4/5) 
+INFO  [16:57:19.966] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3604' (iter 5/5) 
+Ostrzeżenie: Number of logged events: 55
+
+
+<ResampleResult> of 5 iterations
+* Task: 3604
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                             learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3604 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.6923077
+2: <TaskClassif[44]>    3604 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.6923077
+3: <TaskClassif[44]>    3604 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.7179487
+4: <TaskClassif[44]>    3604 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.6410256
+5: <TaskClassif[44]>    3604 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.7948718
+
+
+classif.ce 
+ 0.2923077 
+
+
+INFO  [16:57:22.281] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '190403' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 55
+INFO  [16:57:23.213] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '190403' (iter 2/5) 
+Ostrzeżenie: Number of logged events: 25
+Ostrzeżenie: Number of logged events: 55
+INFO  [16:57:24.290] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '190403' (iter 3/5) 
+Ostrzeżenie: Number of logged events: 55
+INFO  [16:57:25.364] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '190403' (iter 4/5) 
+Ostrzeżenie: Number of logged events: 25
+Ostrzeżenie: Number of logged events: 55
+INFO  [16:57:26.574] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '190403' (iter 5/5) 
+Ostrzeżenie: Number of logged events: 30
+
+
+<ResampleResult> of 5 iterations
+* Task: 190403
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                             learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.8780488
+2: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.8292683
+3: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.9750000
+4: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   1.0000000
+5: <TaskClassif[44]>  190403 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.9500000
+
+
+classif.ce 
+0.07353659 
+
+
+INFO  [16:57:28.414] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '54' (iter 1/5) 
+INFO  [16:57:30.601] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '54' (iter 2/5) 
+Ostrzeżenie: Number of logged events: 30
+INFO  [16:57:33.057] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '54' (iter 3/5) 
+INFO  [16:57:34.982] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '54' (iter 4/5) 
+Ostrzeżenie: Number of logged events: 30
+INFO  [16:57:36.567] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '54' (iter 5/5) 
+Ostrzeżenie: Number of logged events: 63
+
+
+<ResampleResult> of 5 iterations
+* Task: 54
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                             learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>      54 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.5161290
+2: <TaskClassif[44]>      54 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.8387097
+3: <TaskClassif[44]>      54 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.5161290
+4: <TaskClassif[44]>      54 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.1935484
+5: <TaskClassif[44]>      54 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.9354839
+
+
+classif.ce 
+       0.4 
+
+
+INFO  [16:57:39.460] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3547' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 79
+Ostrzeżenie: Number of logged events: 55
+INFO  [16:57:49.939] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3547' (iter 2/5) 
+Ostrzeżenie: Number of logged events: 80
+Ostrzeżenie: Number of logged events: 55
+INFO  [16:57:59.107] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3547' (iter 3/5) 
+Ostrzeżenie: Number of logged events: 84
+Ostrzeżenie: Number of logged events: 92
+INFO  [16:58:10.404] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3547' (iter 4/5) 
+Ostrzeżenie: Number of logged events: 85
+Ostrzeżenie: Number of logged events: 105
+INFO  [16:58:24.111] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '3547' (iter 5/5) 
+Ostrzeżenie: Number of logged events: 94
+Ostrzeżenie: Number of logged events: 81
+
+
+<ResampleResult> of 5 iterations
+* Task: 3547
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                             learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.7926829
+2: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.6913580
+3: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.7037037
+4: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.7777778
+5: <TaskClassif[44]>    3547 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.7160494
+
+
+classif.ce 
+ 0.2636856 
+
+
+INFO  [16:58:41.477] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '5' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 119
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+Ostrzeżenie: Number of logged events: 181
+INFO  [17:00:16.053] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '5' (iter 2/5) 
+Ostrzeżenie: Number of logged events: 106
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+Ostrzeżenie: Number of logged events: 226
+INFO  [17:01:52.443] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '5' (iter 3/5) 
+Ostrzeżenie: Number of logged events: 133
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+Ostrzeżenie: Number of logged events: 180
+INFO  [17:03:31.839] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '5' (iter 4/5) 
+Ostrzeżenie: Number of logged events: 166
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+Ostrzeżenie: Number of logged events: 154
+INFO  [17:05:06.652] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task '5' (iter 5/5) 
+Ostrzeżenie: Number of logged events: 106
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+Ostrzeżenie: Number of logged events: 234
+
+
+<ResampleResult> of 5 iterations
+* Task: 5
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                             learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>       5 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.2527473
+2: <TaskClassif[44]>       5 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.1318681
+3: <TaskClassif[44]>       5 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.5111111
+4: <TaskClassif[44]>       5 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.4000000
+5: <TaskClassif[44]>       5 <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.1000000
+
+
+classif.ce 
+ 0.7208547 
+
+
+Successful evaluation: 8/10 tasks
+
+
