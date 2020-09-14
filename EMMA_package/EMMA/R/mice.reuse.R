@@ -47,7 +47,7 @@ mice.reuse <- function(mids, newdata, maxit = 5, printFlag = TRUE, seed = NA){
 
   # Set up a mids object for the newdata, but set all variables to missing
   all_miss <- matrix(TRUE, rows, cols, dimnames = list(seq_len(rows), nm))
-  mids.new <- mice(newdata, mids$m, where = all_miss, maxit = 0)
+  mids.new <- mice(newdata, mids$m, where = all_miss, maxit = 0,predictorMatrix = mids$predictorMatrix)
 
   # Combine the old (trained) and the new mids objects
   mids.comb <- mids.append(mids, mids.new)

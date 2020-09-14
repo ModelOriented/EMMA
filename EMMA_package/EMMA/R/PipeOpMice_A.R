@@ -170,20 +170,20 @@ PipeOpmice_A <-  R6::R6Class("mice_A_imputation",lock_objects=FALSE,
 
 mlr_pipeops$add("miceA_imputation", PipeOpmice_A)
 
-
- w <- PipeOpmice_A$new(set_cor=0.5)
- gr <- w %>>% lrn('classif.rpart')
- gr <- GraphLearner$new(gr)
-
-gr
- resample(task,gr,rsmp('cv',folds=736))
 #
-# library(testthat)
-
-#w <- mice::mice(test[-sap,])
-
-
-#d <- mice.reuse(w,test[sap,]
-
-w <- mice(iris)
-w$predictorMatrix
+#  w <- PipeOpmice_A$new(set_cor=0.5)
+#  gr <- w %>>% lrn('classif.rpart')
+#  gr <- GraphLearner$new(gr)
+#
+# gr
+#  resample(task,gr,rsmp('cv',folds=736))
+# #
+# # library(testthat)
+#
+# #w <- mice::mice(test[-sap,])
+#
+#
+# #d <- mice.reuse(w,test[sap,]
+#
+# w <- mice(iris)
+# w$predictorMatrix
