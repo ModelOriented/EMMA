@@ -120,6 +120,7 @@ PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
 
                                      },
                                      .impute=function(feature, type, model, context){
+                                       print(feature)
                                        imp_function <- function(data_to_impute){
 
 
@@ -181,7 +182,7 @@ PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
                                          self$imputed_predict <- FALSE
                                        }
                                        self$train_s <- FALSE
-
+                                       print(feature)
                                        return(feature)
                                      }
 
@@ -197,10 +198,6 @@ mlr_pipeops$add("Amelia_imputation", PipeOpAmelia)
 # op <- PipeOpAmelia$new()
 # pipe <- op %>>% learner_po
 # grln <- GraphLearner$new(pipe)
-# # pipe$train(test_task)
-#
-#
-# #
 
 
 #  resample(task,graph_learner,rsmp("holdout"))

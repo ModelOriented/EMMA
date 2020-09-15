@@ -9,7 +9,9 @@ License: What license is it under?
 Depends:
     mlr3,
     mlr3pipelines,
-    paradox
+    paradox,
+    testthat,
+    mice
 Imports:
     mlr3learners,
     missForest,

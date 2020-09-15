@@ -1,0 +1,236 @@
+INFO  [16:49:47.504] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task '2079' (iter 1/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variables (or variable with levels) Altitude, Frosts, Latitude40__11, Latitude39__50, Latitude40__57, Latitude41__12, Latitude40__36, Latitude41__08, Latitude41__16, Latitude40__00, LocalitySouthern_Hawkes_Bay, LocalityCentral_Hawkes_Bay_(coastal), LocalityCentral_Wairarapa, LocalitySouth_Wairarapa, LocalitySouthern_Hawkes_Bay_(coastal), Map_RefN145_874/586, Map_RefN142_377/957, Map_RefN158_344/626, Map_RefN162_081/300, Map_RefN158_343/625, Map_RefN151_912/221, Map_RefN162_097/424, Map_RefN166_063/197, Map_RefN146_273/737, Map_RefN151_922/226, Rainfall, Year are perfectly collinear with another variable in the data.
+
+Ostrzeżenie: from glmnet Fortran code (error code -90); Convergence for 90th lambda value not reached after maxit=100000 iterations; solutions for larger lambdas returned
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variables (or variable with levels) Altitude, Frosts, Latitude40__11, Latitude39__50, Latitude40__57, Latitude41__12, Latitude40__36, Latitude41__08, Latitude41__16, Latitude40__00, LocalitySouthern_Hawkes_Bay, LocalityCentral_Hawkes_Bay_(coastal), LocalityCentral_Wairarapa, LocalitySouth_Wairarapa, LocalitySouthern_Hawkes_Bay_(coastal), Map_RefN145_874/586, Map_RefN142_377/957, Map_RefN158_344/626, Map_RefN162_081/300, Map_RefN158_343/625, Map_RefN151_912/221, Map_RefN162_097/424, Map_RefN166_063/197, Map_RefN146_273/737, Map_RefN151_922/226, Rainfall, Year are perfectly collinear with another variable in the data.
+
+Amelia Error Code:  34 
+ The number of observations in too low to estimate the number of 
+ parameters.  You can either remove some variables, reduce 
+ the order of the time polynomial, or increase the empirical prior. 
+Error in try({ : ERROR
+
+
+INFO  [16:49:59.693] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task '35' (iter 1/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable vacuolisation_and_damage_of_basal_layer3 is perfectly collinear with another variable in the data.
+
+Ostrzeżenie w poleceniu 'amelia.prep(x = x, m = m, idvars = idvars, empri = empri, ts = ts, ':
+  You have a small number of observations, relative to the number, of variables in the imputation model.  Consider removing some variables, or reducing the order of time polynomials to reduce the number of parameters.
+INFO  [16:50:00.707] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task '35' (iter 2/5) 
+Ostrzeżenie w poleceniu 'amelia.prep(x = x, m = m, idvars = idvars, empri = empri, ts = ts, ':
+  You have a small number of observations, relative to the number, of variables in the imputation model.  Consider removing some variables, or reducing the order of time polynomials to reduce the number of parameters.
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variables (or variable with levels) disappearance_of_the_granular_layer3, focal_hypergranulosis3, melanin_incontinence3, munro_microabcess3, oral_mucosal_involvement3, perifollicular_parakeratosis2, perifollicular_parakeratosis3, scalp_involvement1, scalp_involvement2, scalp_involvement3, spongiform_pustule1, spongiform_pustule2, spongiform_pustule3, spongiosis1, spongiosis2, spongiosis3, thinning_of_the_suprapapillary_epidermis1, thinning_of_the_suprapapillary_epidermis2, thinning_of_the_suprapapillary_epidermis3, vacuolisation_and_damage_of_basal_layer2, vacuolisation_and_damage_of_basal_layer3 are perfectly collinear with another variable in the data.
+
+Amelia Error Code:  34 
+ The number of observations in too low to estimate the number of 
+ parameters.  You can either remove some variables, reduce 
+ the order of the time polynomial, or increase the empirical prior. 
+Error in try({ : ERROR
+
+
+INFO  [16:50:02.112] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task '3802' (iter 1/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable col_7 is perfectly collinear with another variable in the data.
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable col_7 is perfectly collinear with another variable in the data.
+
+INFO  [16:50:02.304] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task '3802' (iter 2/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable col_7 is perfectly collinear with another variable in the data.
+
+INFO  [16:50:02.445] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task '3802' (iter 3/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable col_7 is perfectly collinear with another variable in the data.
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable col_7 is perfectly collinear with another variable in the data.
+
+INFO  [16:50:02.642] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task '3802' (iter 4/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable col_7 is perfectly collinear with another variable in the data.
+
+INFO  [16:50:02.785] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task '3802' (iter 5/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable col_7 is perfectly collinear with another variable in the data.
+
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable col_7 is perfectly collinear with another variable in the data.
+
+
+
+<ResampleResult> of 5 iterations
+* Task: 3802
+* Learner: imput_Amelia.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                               learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_Amelia.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.9782609
+2: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_Amelia.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.5000000
+3: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_Amelia.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.9782609
+4: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_Amelia.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.4222222
+5: <TaskClassif[44]>    3802 <GraphLearner[31]> imput_Amelia.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.9777778
+
+
+classif.ce 
+ 0.2286957 
+
+
+INFO  [16:50:03.632] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task '3705' (iter 1/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  
+
+The number of categories in one of the variables marked nominal has greater than 10 categories. Check nominal specification.
+
+
+Error in `contrasts<-`(`*tmp*`, value = contr.funs[1 + isOF[nn]]) : 
+  contrasts can be applied only to factors with 2 or more levels
+
+
+INFO  [16:50:04.299] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task '3807' (iter 1/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable still_alive1 is perfectly collinear with another variable in the data.
+
+Ostrzeżenie w poleceniu 'amelia.prep(x = x, m = m, idvars = idvars, empri = empri, ts = ts, ':
+  You have a small number of observations, relative to the number, of variables in the imputation model.  Consider removing some variables, or reducing the order of time polynomials to reduce the number of parameters.
+INFO  [16:50:04.573] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task '3807' (iter 2/5) 
+Ostrzeżenie w poleceniu 'amelia.prep(x = x, m = m, idvars = idvars, empri = empri, ts = ts, ':
+  You have a small number of observations, relative to the number, of variables in the imputation model.  Consider removing some variables, or reducing the order of time polynomials to reduce the number of parameters.
+INFO  [16:50:04.789] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task '3807' (iter 3/5) 
+Ostrzeżenie w poleceniu 'amelia.prep(x = x, m = m, idvars = idvars, empri = empri, ts = ts, ':
+  You have a small number of observations, relative to the number, of variables in the imputation model.  Consider removing some variables, or reducing the order of time polynomials to reduce the number of parameters.
+INFO  [16:50:05.129] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task '3807' (iter 4/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable still_alive1 is perfectly collinear with another variable in the data.
+
+Ostrzeżenie w poleceniu 'amelia.prep(x = x, m = m, idvars = idvars, empri = empri, ts = ts, ':
+  You have a small number of observations, relative to the number, of variables in the imputation model.  Consider removing some variables, or reducing the order of time polynomials to reduce the number of parameters.
+INFO  [16:50:05.348] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task '3807' (iter 5/5) 
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variable still_alive1 is perfectly collinear with another variable in the data.
+
+Ostrzeżenie w poleceniu 'amelia.prep(x = x, m = m, idvars = idvars, empri = empri, ts = ts, ':
+  You have a small number of observations, relative to the number, of variables in the imputation model.  Consider removing some variables, or reducing the order of time polynomials to reduce the number of parameters.
+
+warning: chol(): given matrix is not symmetric
+
+warning: chol(): given matrix is not symmetric
+
+warning: chol(): given matrix is not symmetric
+
+
+<ResampleResult> of 5 iterations
+* Task: 3807
+* Learner: imput_Amelia.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task task_id            learner                               learner_id         resampling resampling_id iteration prediction classif.acc
+1: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_Amelia.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         1  <list[1]>   0.4615385
+2: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_Amelia.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         2  <list[1]>   0.6538462
+3: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_Amelia.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         3  <list[1]>   0.7307692
+4: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_Amelia.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         4  <list[1]>   0.6538462
+5: <TaskClassif[44]>    3807 <GraphLearner[31]> imput_Amelia.encodeimpact.classif.glmnet <ResamplingCV[19]>            cv         5  <list[1]>   0.8846154
+
+
+classif.ce 
+ 0.3230769 
+
+
+INFO  [16:50:06.583] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task '3604' (iter 1/5) 
+Amelia Error Code:  36 
+ The number of categories in the nominal variable 'Entry' is greater than one-third of the observations. 
+Error in try({ : ERROR
+
+
+INFO  [16:50:07.196] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task '190403' (iter 1/5) 
+Ostrzeżenie w poleceniu 'amelia.prep(x = x, m = m, idvars = idvars, empri = empri, ts = ts, ':
+  You have a small number of observations, relative to the number, of variables in the imputation model.  Consider removing some variables, or reducing the order of time polynomials to reduce the number of parameters.
+Ostrzeżenie w poleceniu 'amcheck(x = x, m = m, idvars = numopts$idvars, priors = priors, ':
+  The variables (or variable with levels) plats_prets_a_consommerOccasionnellement, plats_prets_a_consommerPlusieurs fois par semaine, plats_prets_a_consommerUne fois par jour, poissonOccasionnellement, poissonUne fois par jour, poissonJamais, produits_laitiersUne fois par jour, produits_laitiersPlusieurs fois par semaine, produits_sucresOccasionnellement, produits_sucresPlusieurs fois par semaine, produits_sucresUne fois par jour, produits_sucresPlusieurs fois par jour, riz_pates_semoule_pommes_de_terreOccasionnellement, riz_pates_semoule_pommes_de_terrePlusieurs fois par jour, riz_pates_semoule_pommes_de_terrePlusieurs fois par semaine, viande_ou_oeufsPlusieurs fois par semaine, viande_ou_oeufsPlusieurs fois par jour, viande_ou_oeufsOccasionnellement are perfectly collinear with another variable in the data.
+
+Amelia Error Code:  34 
+ The number of observations in too low to estimate the number of 
+ parameters.  You can either remove some variables, reduce 
+ the order of the time polynomial, or increase the empirical prior. 
+Error in try({ : ERROR
+
+
+INFO  [16:50:08.150] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task '54' (iter 1/5) 
+Amelia Error Code:  34 
+ The number of observations in too low to estimate the number of 
+ parameters.  You can either remove some variables, reduce 
+ the order of the time polynomial, or increase the empirical prior. 
+Error in try({ : ERROR
+
+
+INFO  [16:50:09.001] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task '3547' (iter 1/5) 
+Amelia Error Code:  36 
+ The number of categories in the nominal variable 'name' is greater than one-third of the observations. 
+Error in try({ : ERROR
+
+
+INFO  [16:50:09.684] Applying learner 'imput_Amelia.encodeimpact.classif.glmnet' on task '5' (iter 1/5) 
+Amelia Error Code:  43 
+ You have a variable in your dataset that does not vary.  Please remove this variable. Variables that do not vary:  chAVF_RPwaveExists, chAVL_RRwaveExists, chAVL_SPwave, chAVL_SPwaveAmp, chDIII_RRwaveExists, chDI_SPwave, chDI_SPwaveAmp, chV4_DD_RPwaveExists, chV4_RPwaveExists, chV5_RPwaveExists, chV5_RRwaveExists, chV5_RTwaveExists, chV5_SPwave, chV5_SPwaveAmp, chV6_DD_RPwaveExists, chV6_RTwaveExists, chV6_SPwave, chV6_SPwaveAmp 
+Error in try({ : ERROR
+
+
+Successful evaluation: 2/10 tasks
+
+
