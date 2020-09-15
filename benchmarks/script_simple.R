@@ -23,33 +23,37 @@ set.seed(123)
 #Tasks
 tasks <- read.csv(task_csv)
 
+
 #Pipelines
 devtools::install_github("https://github.com/ModelOriented/EMMA", subdir = "/EMMA_package/EMMA")
 library(EMMA)
 
 #Flexible below, modify to evaluate right approach (a/b/c)
-pipes_packages <- c(PipeOpAmelia, PipeOpmissForest, PipeOpMice, PipeOpSoftImpute, PipeOpmissRanger, 
-                      PipeOpVIM_IRMI, PipeOpVIM_HD, PipeOpVIM_kNN, PipeOpVIM_regrImp, PipeOpMissMDA_MFA, PipeOpMissMDA_PCA_MCA_FMAD)
+pipes_simple_num <- c(PipeOpImputeMean, PipeOpImputeMedian, PipeOpImputeHist)
+pipes_simple_fac <- c(PipeOpImputeSample, PipeOpImputeMode, PipeOpImputeOOR)
 
-pipes_simple <- c()
-
-pipes <- c(pipes_packages, pipes_simple)
+pipes <- expand.grid(pipes_simple_num, pipes_simple_fac)
 
 err_file <- file(error_out, open = "wt")
 
 for (task_id in tasks$task.id) {
   
-  for (j in 1:length(pipes)) {
+  for (j in 1:nrow(pipes)) {
   
-    #Take pipe
-    pipe_imp <- pipes[[j]]$new()
+    #Take pipes
+    pipe_num <- pipes[[j, 1]]
+    pipe_num <- pipe_num$new()
+    
+    pipe_fac <- pipes[[j, 2]]
+    pipe_fac <- pipe_fac$new(param_vals = list("affect_columns" = selector_type(c("factor", "character"))))
     
     #Build model
     pipe_model <- lrn("classif.glmnet")
      
     graph <- po("removeconstants", id = "removeconstants_before") %>>% 
       po("collapsefactors", target_level_count = 20L) %>>%
-      pipe_imp %>>%
+      pipe_num %>>%
+      pipe_fac %>>%
       po("removeconstants", id = "removeconstants_after") %>>% 
       po("encodeimpact") %>>%
       pipe_model
@@ -77,7 +81,7 @@ for (task_id in tasks$task.id) {
       scores <- rr$score(msr("classif.acc"))
       scores <- scores[, c("iteration", "classif.acc")]
       scores$task <- task_id
-      scores$imputer <- pipe_imp$id
+      scores$imputer <- paste(pipe_num$id, pipe_fac$id, sep = "_")
       
       write.table(scores, result_csv, sep = ",", col.names = !file.exists(result_csv), append = T)
       })
