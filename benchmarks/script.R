@@ -2,8 +2,8 @@
 
 #Output files
 
-result_csv <- "~/Pulpit/test.csv"
-error_out <- "~/Pulpit/error_log.txt"
+result_csv <- "~/home/user/result.csv"
+error_out <- "~/home/user/error_log.txt"
 
 #Packages
 library(OpenML)
@@ -35,17 +35,21 @@ tasks <- filter(all_tasks,
 #Pipelines
 devtools::install_github("https://github.com/ModelOriented/EMMA", subdir = "/EMMA_package/EMMA")
 library(EMMA)
+
+#Flexible below, modify to evaluate right approach (a/b/c)
 pipes_packages <- c(PipeOpAmelia, PipeOpmissForest, PipeOpMice, PipeOpSoftImpute, PipeOpmissRanger, 
-                      PipeOpVIM_IRMI, PipeOpVIM_HD, PipeOpVIM_kNN, PipeOpVIM_regrImp)
+                      PipeOpVIM_IRMI, PipeOpVIM_HD, PipeOpVIM_kNN, PipeOpVIM_regrImp, PipeOpMissMDA_MFA, PipeOpMissMDA_PCA_MCA_FMAD)
 
 pipes_simple <- c()
 
 pipes <- c(pipes_packages, pipes_simple)
 
-for (task_id in 50) {
+err_file <- file(error_out, open = "wt")
+
+for (task_id in tasks$task.id) {
   
-  #for (j in 1:length(pipes)) {
-  for (j in 1) {
+  for (j in 1:length(pipes)) {
+  
     #Take pipe
     pipe_imp <- pipes[[j]]$new()
     
@@ -60,27 +64,32 @@ for (task_id in 50) {
       pipe_model
       
     graph_learner <- GraphLearner$new(graph)
+    
+    #Error handling
+    graph_learner$encapsulate = c(train = "callr", predict = "callr")
+    
     split <- rsmp("cv", folds = 5)
     
     #Task
     oml_task <- OMLTask$new(task_id)
     task <- oml_task$task
     
-    tryCatch({
+    sink(err_file, type = "message")
+    try({
       rr <- resample(task, graph_learner, split)
-    }, error = function(e) {
-      writeLines(paste(as.character(task_id), as.character(pipe_imp$id), "\n"), error_out)
-      writeLines(paste(as.character(e), "\n"), error_out)
     })
+    sink(type = "message")
     
     
     if(exists("rr")){
+      try({
       scores <- rr$score(msr("classif.acc"))
       scores <- scores[, c("iteration", "classif.acc")]
       scores$task <- task_id
       scores$imputer <- pipe_imp$id
       
       write.table(scores, result_csv, sep = ",", col.names = !file.exists(result_csv), append = T)
+      })
     }
     
     rm(list = "rr")
@@ -88,5 +97,5 @@ for (task_id in 50) {
 }
 
 
-close(error_out)
+close(err_file)
 
