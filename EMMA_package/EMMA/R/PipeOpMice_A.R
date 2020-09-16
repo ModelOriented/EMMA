@@ -30,9 +30,7 @@
   #'}
   #'
   #' @export
-
-
-  PipeOpMice_A <-  R6::R6Class("mice_A_imputation",lock_objects=FALSE,
+  PipeOpMice_A <- R6::R6Class("mice_A_imputation",lock_objects=FALSE,
                                     inherit = PipeOpImpute,  # inherit from PipeOp
                                     public = list(
                                       initialize = function(id = "imput_mice_A",set_cor=0.5,m=5,maxit=5,random.seed=123,correlation=F
