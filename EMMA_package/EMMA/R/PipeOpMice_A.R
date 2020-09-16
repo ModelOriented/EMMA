@@ -205,12 +205,12 @@ PipeOpMice_A <-  R6::R6Class("mice_A_imputation",lock_objects=FALSE,
 mlr_pipeops$add("miceA_imputation", PipeOpMice_A)
 
 #
-  w <- PipeOpMice_A$new(set_cor=1)
-  gr <- w %>>% lrn('classif.rpart')
-  gr <- GraphLearner$new(gr)
+  #w <- PipeOpMice_A$new(set_cor=1)
+  #gr <- w %>>% lrn('classif.rpart')
+  #gr <- GraphLearner$new(gr)
 #
 # gr
-  resample(task,gr,rsmp('cv',folds=746))
+  #resample(task,gr,rsmp('cv',folds=746))
 # # #
 # # # library(testthat)
 #
