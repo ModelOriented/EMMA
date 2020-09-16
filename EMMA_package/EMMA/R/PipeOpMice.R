@@ -19,13 +19,13 @@
 #' \item \code{maxit} :: \code{integer(1)}\cr
 #' Maximum number of iterations for mice, default \code{5}.
 #' \item \code{set_corr} :: \code{double(1)}\cr
-#' Correlation or fraction of features used when optimize=FALSE. When correlation=FALSE, it represents a fraction of features to use in imputation for each variable, default \code{0.5}.
+#' Correlation or fraction of features used when optimize=FALSE. When correlation=FALSE, it represents a fraction of case to use in imputation for each variable, default \code{0.5}.
 #' \item \code{set_method} :: \code{character(1)}\cr
 #' Method used if optimize=FALSE. If NULL default method is used (more in methods_random section), default \code{'pmm'}.
 #' \item \code{low_corr} :: \code{double(1)}\cr
 #' Double between 0-1. Lower boundary of correlation used in inner optimization (used only when optimize=TRUE), default \code{0}.
 #' \item \code{up_corr} :: \code{double(1)}\cr
-#' Double between 0-1. Upper boundary of correlation used in inner optimization (used only when optimize=TRUE). Both of these parameters work the same for a fraction of features if correlation=FALSE,default \code{1}.
+#' Double between 0-1. Upper boundary of correlation used in inner optimization (used only when optimize=TRUE). Both of these parameters work the same for a fraction of case if correlation=FALSE,default \code{1}.
 #' \item \code{methods_random} :: \code{character(1)}\cr
 #' set of methods to chose. Default 'pmm'. If seted on NULL this methods are used predictive mean matching (numeric data) logreg, logistic regression imputation (binary data, factor with 2 levels) polyreg, polytomous regression imputation for unordered categorical data (factor > 2 levels) polr, proportional odds model for (ordered, > 2 levels).
 #' \item \code{iter} :: \code{integer(1)}\cr
@@ -35,9 +35,7 @@
 #' \item \code{optimize} :: \code{logical(1)}\cr
 #' If set TRUE, function will optimize parameters of imputation automatically. If parameters will be tuned by other method, should be set to FALSE, default \code{FALSE}.
 #' \item \code{correlation} :: \code{logical(1)}\cr
-#' If set TRUE correlation is used, if set FALSE then fraction of features, default \code{TRUE}.
-#' \item \code{col_0_1} :: \code{logical(1)}\cr
-#' Decides whether to add a bonus column informing where values were imputed. 0 - value was in dataset, 1 - value was imputed, default \code{FALSE}.
+#' If set TRUE correlation is used, if set FALSE then fraction of case, default \code{TRUE}.
 #'}
 #'
 #' @export
