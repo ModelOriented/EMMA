@@ -25,7 +25,7 @@ tasks <- read.csv(task_csv)
 
 
 #Pipelines
-devtools::install_github("https://github.com/ModelOriented/EMMA", subdir = "/EMMA_package/EMMA")
+devtools::install_github("https://github.com/ModelOriented/EMMA", subdir = "/EMMA_package/EMMA", upgrade = FALSE)
 library(EMMA)
 
 #Flexible below, modify to evaluate right approach (a/b/c)
