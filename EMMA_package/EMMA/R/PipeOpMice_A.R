@@ -149,7 +149,7 @@ PipeOpMice_A <-  R6::R6Class("mice_A_imputation",lock_objects=FALSE,
                                             data_train <- mice::complete(self$model)
                                             data_train <- rbind(data_train,data_to_impute[,self$state$context_cols])
 
-                                            data_to_impute <- mice.reuse(self$model,data_to_impute,maxit=self$param_set$maxit,printFlag = T)$`1`[nrow(data_train),]
+                                            data_to_impute <- mice.reuse(self$model,data_train,maxit=self$param_set$maxit,printFlag = T)$`1`[nrow(data_train),]
                                           }else{
                                           data_imputed <- mice.reuse(self$model,data_to_impute,maxit=self$param_set$values$maxit,printFlag = T)$`1`
                                           }
@@ -204,13 +204,13 @@ PipeOpMice_A <-  R6::R6Class("mice_A_imputation",lock_objects=FALSE,
 
 mlr_pipeops$add("miceA_imputation", PipeOpMice_A)
 
-# #
-#   w <- PipeOpmice_A$new(set_cor=1)
-#   gr <- w %>>% lrn('classif.rpart')
-#   gr <- GraphLearner$new(gr)
-# #
-# # gr
-#   resample(task,gr,rsmp('cv',folds=746))
+#
+  w <- PipeOpMice_A$new(set_cor=1)
+  gr <- w %>>% lrn('classif.rpart')
+  gr <- GraphLearner$new(gr)
+#
+# gr
+  resample(task,gr,rsmp('cv',folds=746))
 # # #
 # # # library(testthat)
 #
@@ -263,14 +263,14 @@ mice.reuse <- function(mids, newdata, maxit = 5, printFlag = TRUE, seed = NA){
   # Check that the newdata is the same as the old data
   rows <- nrow(newdata)
   cols <- ncol(newdata)
-  expect_equal(cols, ncol(mids$data))
+  testthat::expect_equal(cols, ncol(mids$data))
 
   nm <- names(newdata)
-  expect_equal(nm, names(mids$data))
+  testthat::expect_equal(nm, names(mids$data))
 
   # Set up a mids object for the newdata, but set all variables to missing
   all_miss <- matrix(TRUE, rows, cols, dimnames = list(seq_len(rows), nm))
-  mids.new <- mice(newdata, mids$m, where = all_miss, maxit = 0,predictorMatrix = mids$predictorMatrix)
+  mids.new <- mice::mice(newdata, mids$m, where = all_miss, maxit = 0,predictorMatrix = mids$predictorMatrix)
 
   # Combine the old (trained) and the new mids objects
   mids.comb <- mids.append(mids, mids.new)
@@ -307,7 +307,7 @@ mice.reuse <- function(mids, newdata, maxit = 5, printFlag = TRUE, seed = NA){
                            else cond_imp)
 
   # Run the procedure for a few times
-  mids.comb <- mice.mids(mids.comb, maxit = maxit, printFlag = printFlag)
+  mids.comb <- mice::mice.mids(mids.comb, maxit = maxit, printFlag = printFlag)
 
   # Return the imputed test dataset
   res <- lapply(complete(mids.comb, "all"), function(x) x[new_idx, ])
@@ -339,11 +339,11 @@ mids.append <- function(x, y){
   #    a new mids object that contains all of `x` and the additional data in `y`
 
 
-  expect_equal(names(x$data), names(y$data))
+  testthat::expect_equal(names(x$data), names(y$data))
   app <- x
 
   miss_xy <- intersect(names(x$nmis), names(y$nmis))
-  expect_true(all(names(y$nmis) %in% miss_xy))
+  testthat::expect_true(all(names(y$nmis) %in% miss_xy))
 
   # Append `data`
   app$data <- rbind(x$data, y$data)
