@@ -179,30 +179,21 @@
                                             data_to_impute <- as.data.frame(data_to_impute)[,self$state$context_cols]
                                             self$data_imputed <- imp_function(data_to_impute)
 
-
-
-                                            self$imputed_predict <- TRUE
-                                          }
-
-
-                                          if (self$imputed_predict & self$flag=='predict' ){
-                                            feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
-
-                                          }
-
-                                          if(self$column_counter == 0 & self$flag=='train'){
-                                            feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
-                                            self$flag <- 'predict'
-                                            self$imputed_predict <- FALSE
-                                          }
-                                          self$train_s <- FALSE
-
-                                          return(feature)
+                                        if(self$column_counter == 0 & self$flag=='train'){
+                                          feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
+                                          self$flag <- 'predict'
+                                          self$imputed_predict <- FALSE
                                         }
-                                      )
-  )
+                                        self$train_s <- FALSE
 
-  mlr_pipeops$add("miceA_imputation", PipeOpMice_A)
+                                        return(feature)
+                                      }
+                                    )
+)
+
+mlr_pipeops$add("miceA_imputation", PipeOpMice_A)
+
+
 
   #
   #   w <- PipeOpMice_A$new(m=1)
