@@ -14,7 +14,7 @@
 #' \item \code{id} :: \code{character(1)}\cr
 #' Identifier of resulting object, default `"impute_sample_B"`.
 #'}
-#'
+#' @import data.table
 #' @export
 
 PipeOpSample_B = R6::R6Class("Sample_B_imputation",
@@ -37,7 +37,7 @@ PipeOpSample_B = R6::R6Class("Sample_B_imputation",
                                    if (length(fvals) < 10) {  # don't bother with table if vector is short
                                      return(fvals)
                                    }
-                                   tab = data.table::data.table(fvals)[, .N, by = "fvals"]
+                                   tab = data.table(fvals)[, .N, by = "fvals"]
                                    if (nrow(tab) > length(fvals) / 2) {
                                      # memory usage of count table is larger than memory usage of just the values
                                      return(fvals)
@@ -45,9 +45,8 @@ PipeOpSample_B = R6::R6Class("Sample_B_imputation",
                                    model = tab$fvals
                                    attr(model, "probabilities") = tab$N / sum(tab$N)
                                    model
-                                   
                                  }
-                                 
+                                   
                                  model <- train_model(feature, type, context)
 
                                  if (type %in% c("factor", "ordered")) {
