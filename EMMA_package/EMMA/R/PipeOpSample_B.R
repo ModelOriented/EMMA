@@ -37,7 +37,7 @@ PipeOpSample_B = R6::R6Class("Sample_B_imputation",
                                    if (length(fvals) < 10) {  # don't bother with table if vector is short
                                      return(fvals)
                                    }
-                                   tab = data.table(fvals)[, .N, by = "fvals"]
+                                   tab = data.table::data.table(fvals)data.table::[, .N, by = "fvals"]
                                    if (nrow(tab) > length(fvals) / 2) {
                                      # memory usage of count table is larger than memory usage of just the values
                                      return(fvals)
@@ -64,4 +64,6 @@ PipeOpSample_B = R6::R6Class("Sample_B_imputation",
                                }
                              )
 )
+
+mlr_pipeops$add("impute_sample_B", PipeOpSample_B)
 
