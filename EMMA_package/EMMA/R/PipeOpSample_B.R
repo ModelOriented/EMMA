@@ -42,8 +42,8 @@ PipeOpSample_B = R6::R6Class("Sample_B_imputation",
                                      # memory usage of count table is larger than memory usage of just the values
                                      return(fvals)
                                    }
-                                   model = tab$fvals
-                                   attr(model, "probabilities") = tab$N / sum(tab$N)
+                                   model <-  tab$fvals
+                                   attr(model, "probabilities") <-  tab$N / sum(tab$N)
                                    model
                                  }
                                    
