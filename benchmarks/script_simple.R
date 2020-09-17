@@ -15,6 +15,7 @@ library(mlr3pipelines)
 library(paradox)
 library(mlr3learners)
 library(mlr3oml)
+library(future)
 
 #Benchmark
 
@@ -23,14 +24,16 @@ set.seed(123)
 #Tasks
 tasks <- read.csv(task_csv)
 
-
 #Pipelines
-devtools::install_github("https://github.com/ModelOriented/EMMA", subdir = "/EMMA_package/EMMA", upgrade = FALSE)
+devtools::install_github("https://github.com/ModelOriented/EMMA", subdir = "/EMMA_package/EMMA", force = TRUE, upgrade = FALSE)
 library(EMMA)
 
 #Flexible below, modify to evaluate right approach (a/b/c)
-pipes_simple_num <- c(PipeOpImputeMean, PipeOpImputeMedian, PipeOpImputeHist)
-pipes_simple_fac <- c(PipeOpImputeSample, PipeOpImputeMode, PipeOpImputeOOR)
+# pipes_simple_num <- c(PipeOpImputeMean, PipeOpImputeMedian, PipeOpImputeHist)
+# pipes_simple_fac <- c(PipeOpImputeSample, PipeOpImputeMode, PipeOpImputeOOR)
+
+pipes_simple_num <- c(PipeOpMean_B, PipeOpMedian_B, PipeOpHist_B)
+pipes_simple_fac <- c(PipeOpSample_B, PipeOpMode_B, PipeOpOOR_B)
 
 pipes <- expand.grid(pipes_simple_num, pipes_simple_fac)
 
@@ -71,6 +74,7 @@ for (task_id in tasks$task.id) {
     
     sink(err_file, type = "message")
     try({
+      future::plan("multicore")
       rr <- resample(task, graph_learner, split)
     })
     sink(type = "message")
