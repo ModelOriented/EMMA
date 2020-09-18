@@ -2,8 +2,8 @@
 
 #Output files
 
-result_csv <- "/data/user/result.csv"
-error_out <- "/data/user/error_log.txt"
+result_csv <- "/data/user/result_packages.csv"
+error_out <- "/data/user/error_log_packages.txt"
 task_csv <- "/data/user/benchmark/tasks.csv"
 
 #Packages
@@ -15,11 +15,9 @@ library(mlr3pipelines)
 library(paradox)
 library(mlr3learners)
 library(mlr3oml)
-library(future)
+library(mcparallelDo)
 
 #Benchmark
-
-set.seed(123)
 
 #Tasks
 tasks <- read.csv(task_csv)
@@ -29,19 +27,18 @@ devtools::install_github("https://github.com/ModelOriented/EMMA", subdir = "/EMM
 library(EMMA)
 
 #Flexible below, modify to evaluate right approach (a/b/c)
-pipes_packages <- c(PipeOpAmelia, PipeOpmissForest, PipeOpMice, PipeOpSoftImpute, PipeOpmissRanger, 
-                      PipeOpVIM_IRMI, PipeOpVIM_HD, PipeOpVIM_kNN, PipeOpVIM_regrImp, PipeOpMissMDA_MFA, PipeOpMissMDA_PCA_MCA_FMAD)
-
-pipes_simple <- c()
-
-pipes <- c(pipes_packages, pipes_simple)
+pipes <- c(PipeOpAmelia, PipeOpmissForest, PipeOpMice, PipeOpSoftImpute, PipeOpmissRanger,
+           PipeOpVIM_IRMI, PipeOpVIM_HD, PipeOpVIM_kNN, PipeOpVIM_regrImp, PipeOpMissMDA_MFA, PipeOpMissMDA_PCA_MCA_FMAD,
+           PipeOpMice_A)
 
 err_file <- file(error_out, open = "wt")
 
 for (task_id in tasks$task.id) {
   
   for (j in 1:length(pipes)) {
-  
+    
+    set.seed(1)
+    
     #Take pipe
     pipe_imp <- pipes[[j]]$new()
     
@@ -57,9 +54,6 @@ for (task_id in tasks$task.id) {
       
     graph_learner <- GraphLearner$new(graph)
     
-    #Error handling
-    graph_learner$encapsulate = c(train = "callr", predict = "callr")
-    
     split <- rsmp("cv", folds = 5)
     
     #Task
@@ -68,14 +62,18 @@ for (task_id in tasks$task.id) {
     
     sink(err_file, type = "message")
     try({
-      future::plan("multicore")
-      rr <- resample(task, graph_learner, split)
+      mcparallelDo(
+      resample(task, graph_learner, split), targetValue = "paral_res"
+      )
     })
-    sink(type = "message")
     
+    while (!mcparallelDoCheck()) {
+      Sys.sleep(5)
+    }
     
-    if(exists("rr")){
+    if(is.environment(paral_res)){
       try({
+      rr <- paral_res  
       scores <- rr$score(msr("classif.acc"))
       scores <- scores[, c("iteration", "classif.acc")]
       scores$task <- task_id
@@ -83,9 +81,13 @@ for (task_id in tasks$task.id) {
       
       write.table(scores, result_csv, sep = ",", col.names = !file.exists(result_csv), append = T)
       })
+    }else{
+      write(paral_res, file = err_file, append = TRUE)
     }
     
-    rm(list = "rr")
+    sink(type = "message")
+    
+    rm(list = c("paral_res", "rr"))
   }
 }
 
