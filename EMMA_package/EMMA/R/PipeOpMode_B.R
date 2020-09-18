@@ -33,7 +33,7 @@ PipeOpMode_B = R6::R6Class("Mode_B_imputation",
 
                                feature_no_na = feature[!is.na(feature)]
 
-                               feature[is.na(feature)]  <- data.table::as.data.table(feature_no_na)[, data.table::.N, by = list(feature_no_na)][get("N") == max(get("N"))]$feature_no_na[1]
+                               feature[is.na(feature)]  <- data.table(feature_no_na)[, .N, by = list(feature_no_na)][get("N") == max(get("N"))]$feature_no_na[1]
                                feature
                              }
                            )
