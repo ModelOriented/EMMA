@@ -1,0 +1,5 @@
+"task.id","data.id","name","target.feature","number.of.features","number.of.instances","number.of.missing.values"
+3945,1111,"KDDCup09_appetency","APPETENCY",231,50000,8024152
+3946,1112,"KDDCup09_churn","CHURN",231,50000,8024152
+3948,1114,"KDDCup09_upselling","UPSELLING",231,50000,8024152
+168336,41162,"kick","IsBadBuy",33,72983,149271

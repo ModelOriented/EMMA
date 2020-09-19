@@ -2,8 +2,8 @@
 
 #Output files
 
-result_csv <- "/data/user/result.csv"
-error_out <- "/data/user/error_log.txt"
+result_csv <- "/data/user/result_simple.csv"
+error_out <- "/data/user/error_log_simple.txt"
 task_csv <- "/data/user/benchmark/tasks.csv"
 
 #Packages
@@ -18,28 +18,34 @@ library(mlr3oml)
 
 #Benchmark
 
-set.seed(123)
-
 #Tasks
 tasks <- read.csv(task_csv)
 
-
 #Pipelines
-devtools::install_github("https://github.com/ModelOriented/EMMA", subdir = "/EMMA_package/EMMA", upgrade = FALSE)
+devtools::install_github("https://github.com/ModelOriented/EMMA", subdir = "/EMMA_package/EMMA", force = TRUE, upgrade = FALSE)
 library(EMMA)
 
 #Flexible below, modify to evaluate right approach (a/b/c)
 pipes_simple_num <- c(PipeOpImputeMean, PipeOpImputeMedian, PipeOpImputeHist)
 pipes_simple_fac <- c(PipeOpImputeSample, PipeOpImputeMode, PipeOpImputeOOR)
 
-pipes <- expand.grid(pipes_simple_num, pipes_simple_fac)
+simple_a <- expand.grid(pipes_simple_num, pipes_simple_fac)
+
+pipes_simple_num <- c(PipeOpMean_B, PipeOpMedian_B, PipeOpHist_B)
+pipes_simple_fac <- c(PipeOpSample_B, PipeOpMode_B, PipeOpOOR_B)
+
+simple_b <- expand.grid(pipes_simple_num, pipes_simple_fac)
+
+pipes <- rbind(simple_a, simple_b)
 
 err_file <- file(error_out, open = "wt")
 
 for (task_id in tasks$task.id) {
   
   for (j in 1:nrow(pipes)) {
-  
+    
+    set.seed(1)
+    
     #Take pipes
     pipe_num <- pipes[[j, 1]]
     pipe_num <- pipe_num$new()

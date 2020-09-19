@@ -24,8 +24,5 @@
 3871,1008,"analcatdata_reviewer","binaryClass",9,379,1368
 3881,1018,"ipums_la_99-small","binaryClass",57,8844,34843
 3886,1023,"soybean","binaryClass",36,683,2337
-3945,1111,"KDDCup09_appetency","APPETENCY",231,50000,8024152
-3946,1112,"KDDCup09_churn","CHURN",231,50000,8024152
-3948,1114,"KDDCup09_upselling","UPSELLING",231,50000,8024152
 125920,23381,"dresses-sales","Class",13,500,835
-168336,41162,"kick","IsBadBuy",33,72983,149271
+

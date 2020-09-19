@@ -30,9 +30,7 @@
   #'}
   #'
   #' @export
-
-
-  PipeOpMice_A <-  R6::R6Class("mice_A_imputation",lock_objects=FALSE,
+  PipeOpMice_A <- R6::R6Class("mice_A_imputation",lock_objects=FALSE,
                                     inherit = PipeOpImpute,  # inherit from PipeOp
                                     public = list(
                                       initialize = function(id = "imput_mice_A",set_cor=0.5,m=5,maxit=5,random.seed=123,correlation=F
@@ -178,6 +176,9 @@
 
                                             data_to_impute <- as.data.frame(data_to_impute)[,self$state$context_cols]
                                             self$data_imputed <- imp_function(data_to_impute)
+                                            
+                                             self$imputed_predict <- TRUE
+                                            }
 
                                         if(self$column_counter == 0 & self$flag=='train'){
                                           feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]

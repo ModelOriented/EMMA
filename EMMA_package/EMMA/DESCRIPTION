@@ -22,7 +22,8 @@ Imports:
     VIM,
     softImpute,
     missRanger,
-    mice 
+    mice,
+    data.table
 Remotes: github::mlr-org/mlr3pipelines
 Encoding: UTF-8
 LazyData: true

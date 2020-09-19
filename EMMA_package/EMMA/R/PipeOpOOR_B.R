@@ -36,24 +36,39 @@ PipeOpOOR_B = R6::R6Class("OOR_B_imputation",
                              NULL
                             },
                             .impute = function(feature, type, model, context) {
-
-
-                              if (type %in% c("factor", "ordered", "character")) {
-                                return(".MISSING")  # early exit
+                              
+                              train_imputer <- function(feature, type, context){
+                                
+                                if (type %in% c("factor", "ordered", "character")) {
+                                  return(".MISSING")  # early exit
+                                }
+                                
+                                offset = self$param_set$values$offset + self$param_set$values$multiplier * diff(range(feature, na.rm = TRUE))
+                                oor = if (self$param_set$values$min) {
+                                  min(feature, na.rm = TRUE) - offset
+                                } else {
+                                  max(feature, na.rm = TRUE) + offset
+                                }
+                                
+                                if (type == "integer") {
+                                  oor = as.integer(round(oor))
+                                }
+                                oor
                               }
+                              
+                              model <- train_imputer(feature, type, context)
 
-                              offset = self$param_set$values$offset + self$param_set$values$multiplier * diff(range(feature, na.rm = TRUE))
-                              oor = if (self$param_set$values$min) {
-                                min(feature, na.rm = TRUE) - offset
+                              if (type %in% c("factor", "ordered")) {
+                                # in some edge cases there may be levels during training that are missing during predict.
+                                levels(feature) = c(levels(feature), as.character(model))
+                              }
+                              if (length(model) == 1) {
+                                feature[is.na(feature)] = model
                               } else {
-                                max(feature, na.rm = TRUE) + offset
+                                outlen = sum(is.na(feature))
+                                feature[is.na(feature)] = sample(model, outlen, replace = TRUE, prob = attr(model, "probabilities"))
                               }
-
-                              if (type == "integer") {
-                                oor = as.integer(round(oor))
-                              }
-
-                              feature[is.na(feature)] <- oor
+                              feature
 
                             }
                           )
