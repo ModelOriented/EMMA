@@ -147,9 +147,9 @@
                                               data_train <- mice::complete(self$model)
                                               data_train <- rbind(data_train,data_to_impute[,self$state$context_cols])
 
-                                              data_imputed <- EMMA::mice.reuse(self$model,data_train,maxit=self$param_set$values$maxit,printFlag = T)$`1`[nrow(data_train),]
+                                              data_imputed <- mice.reuse(self$model,data_train,maxit=self$param_set$values$maxit,printFlag = T)$`1`[nrow(data_train),]
                                             }else{
-                                            data_imputed <- EMMA::mice.reuse(self$model,data_to_impute,maxit=self$param_set$values$maxit,printFlag = T)$`1`
+                                            data_imputed <- mice.reuse(self$model,data_to_impute,maxit=self$param_set$values$maxit,printFlag = T)$`1`
                                             }
 
 
@@ -302,7 +302,8 @@ mlr_pipeops$add("miceA_imputation", PipeOpMice_A)
     mids.comb <- mice::mice.mids(mids.comb, maxit = maxit, printFlag = printFlag)
 
     # Return the imputed test dataset
-    res <- lapply(complete(mids.comb, "all"), function(x) x[new_idx, ])
+
+    res <- lapply(mice::complete(mids.comb, "all"), function(x) x[new_idx, ])
     class(res) <- c("mild", "list")
     res
   }
