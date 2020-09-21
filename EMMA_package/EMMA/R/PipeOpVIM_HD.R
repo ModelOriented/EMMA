@@ -27,7 +27,7 @@ PipeOpVIM_HD <-  R6::R6Class("VIM_HD_imputation",lock_objects=FALSE,
                            public = list(
                              initialize = function(id = "imput_VIM_HD",out_file=NULL
                              ) {
-                               super$initialize(id, whole_task_dependent=TRUE, param_vals = list( out_file=out_file),
+                               super$initialize(id, whole_task_dependent=TRUE,packages='EMMA', param_vals = list( out_file=out_file),
                                                 param_set= ParamSet$new(list(
 
 
@@ -66,7 +66,8 @@ PipeOpVIM_HD <-  R6::R6Class("VIM_HD_imputation",lock_objects=FALSE,
 
 
 
-                                 data_imputed <- autotune_VIM_hotdeck(data_to_impute,percent_of_missing,
+
+                                 data_imputed <- EMMA::autotune_VIM_hotdeck(data_to_impute,percent_of_missing,
                                                                       out_file =self$param_set$values$out_file)
 
 
@@ -114,8 +115,7 @@ PipeOpVIM_HD <-  R6::R6Class("VIM_HD_imputation",lock_objects=FALSE,
                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
 
-
-                                 data_imputed <- autotune_VIM_hotdeck(data_to_impute,percent_of_missing,
+                                 data_imputed <- EMMA::autotune_VIM_hotdeck(data_to_impute,percent_of_missing,
                                                                       out_file =self$param_set$values$out_file)
 
 

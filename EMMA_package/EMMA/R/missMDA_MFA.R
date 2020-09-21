@@ -20,6 +20,7 @@
 #'
 #' @import missMDA
 #' @return Return one data.frame with imputed values.
+#' @export
 
 
 

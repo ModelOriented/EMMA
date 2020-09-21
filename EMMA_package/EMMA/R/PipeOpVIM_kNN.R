@@ -31,7 +31,7 @@ PipeOpVIM_kNN <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,
                            public = list(
                              initialize = function(id = "imput_VIM_kNN", k=5,numFun=median,catFun=VIM::maxCat,out_file=NULL
                              ) {
-                               super$initialize(id, whole_task_dependent=TRUE,param_vals = list(k=k,numFun=numFun,catFun=catFun,out_file=out_file ),
+                               super$initialize(id, whole_task_dependent=TRUE,packages='EMMA',param_vals = list(k=k,numFun=numFun,catFun=catFun,out_file=out_file ),
                                                 param_set= ParamSet$new(list(
 
                                                   'k'=ParamInt$new('k',lower = 1,upper = Inf,default = 5,tags='VIM_kNN'),
@@ -71,7 +71,7 @@ PipeOpVIM_kNN <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,
                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
 
-                                 data_imputed <- autotune_VIM_kNN(data_to_impute,percent_of_missing ,k =self$param_set$values$k,numFun = self$param_set$values$numFun,
+                                 data_imputed <- EMMA::autotune_VIM_kNN(data_to_impute,percent_of_missing ,k =self$param_set$values$k,numFun = self$param_set$values$numFun,
                                                                   catFun = self$param_set$values$catFun,out_file =self$param_set$values$out_file)
 
 
@@ -120,7 +120,7 @@ PipeOpVIM_kNN <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,
                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
 
-                                 data_imputed <- autotune_VIM_kNN(data_to_impute,percent_of_missing ,k =self$param_set$values$k,numFun = self$param_set$values$numFun,
+                                 data_imputed <-EMMA::autotune_VIM_kNN(data_to_impute,percent_of_missing ,k =self$param_set$values$k,numFun = self$param_set$values$numFun,
                                                                   catFun = self$param_set$values$catFun,,out_file =self$param_set$values$out_file)
 
 

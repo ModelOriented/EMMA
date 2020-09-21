@@ -44,7 +44,7 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                              initialize = function(id = "imput_missForest", cores=NULL,ntree_set=c(100,200,500,1000),mtry_set=NULL,parallel=F
                                                   ,mtry=NULL,ntree=100,optimize=FALSE,maxiter=20,maxnodes=NULL,out_file=NULL
                              ) {
-                               super$initialize(id,whole_task_dependent=TRUE,param_vals = list(cores =cores,ntree_set =ntree_set,mtry_set=mtry_set,parallel=parallel,
+                               super$initialize(id,whole_task_dependent=TRUE,packages='EMMA',param_vals = list(cores =cores,ntree_set =ntree_set,mtry_set=mtry_set,parallel=parallel,
                                                                       mtry=mtry,ntree=ntree,optimize=optimize,
                                                                       maxiter=maxiter,maxnodes=maxnodes,out_file=out_file),
                                                 param_set= ParamSet$new(list(
@@ -94,7 +94,7 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
 
-                                 data_imputed <- autotune_missForest(data_to_impute,col_type,percent_of_missing = percent_of_missing,cores = self$param_set$values$cores,
+                                 data_imputed <- EMMA::autotune_missForest(data_to_impute,col_type,percent_of_missing = percent_of_missing,cores = self$param_set$values$cores,
                                                                      ntree_set = self$param_set$values$ntree_set,mtry_set = self$param_set$values$mtry_set,
                                                                      parallel = self$param_set$values$parallel,
                                                                      optimize = self$param_set$values$optimize,
@@ -150,7 +150,7 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
 
-                                 data_imputed <- autotune_missForest(data_to_impute,col_type,percent_of_missing = percent_of_missing,cores = self$param_set$values$cores,
+                                 data_imputed <- EMMA::autotune_missForest(data_to_impute,col_type,percent_of_missing = percent_of_missing,cores = self$param_set$values$cores,
                                                                      ntree_set = self$param_set$values$ntree_set,mtry_set = self$param_set$values$mtry_set,
                                                                      parallel = self$param_set$values$parallel,
                                                                      optimize = self$param_set$values$optimize,
