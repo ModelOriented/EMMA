@@ -37,7 +37,7 @@ PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
                                  public = list(
                                    initialize = function(id = "imput_Amelia", polytime=NULL,splinetime=NULL,intercs=FALSE,empir=NULL,m=3,parallel=TRUE,out_file=NULL
                                    ) {
-                                     super$initialize(id, whole_task_dependent=TRUE,param_vals = list(polytime=polytime,splinetime=splinetime,intercs=intercs,empir=empir,m=m,parallel=parallel,out_file=out_file),
+                                     super$initialize(id, whole_task_dependent=TRUE,packages='EMMA',param_vals = list(polytime=polytime,splinetime=splinetime,intercs=intercs,empir=empir,m=m,parallel=parallel,out_file=out_file),
                                                       param_set= ParamSet$new(list(
                                                         'polytime'=ParamUty$new('polytime', default = NULL, tags = 'amelia'),
                                                         'splinetime'=ParamUty$new('splinetime',default = NULL,tags='amelia'),
@@ -86,7 +86,7 @@ PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
                                          col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
 
-                                         data_imputed <- autotune_Amelia(data_to_impute,col_type,percent_of_missing,
+                                         data_imputed <- EMMA::autotune_Amelia(data_to_impute,col_type,percent_of_missing,
                                                                          parallel = self$param_set$values$parallel,polytime = self$param_set$values$polytime,
                                                                          splinetime = self$param_set$values$splinetime, intercs = self$param_set$values$intercs,
                                                                          empir = self$param_set$values$empir,m=self$param_set$values$m,
@@ -140,7 +140,7 @@ PipeOpAmelia <-  R6::R6Class("Amelia_imputation",lock_objects=FALSE,
                                          col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
 
-                                         data_imputed <- autotune_Amelia(data_to_impute,col_type,percent_of_missing,
+                                         data_imputed <- EMMA::autotune_Amelia(data_to_impute,col_type,percent_of_missing,
                                                                          parallel = self$param_set$values$parallel,polytime = self$param_set$values$polytime,
                                                                          splinetime = self$param_set$values$splinetime, intercs = self$param_set$values$intercs,
                                                                          empir = self$param_set$values$empir,m=self$param_set$values$m,

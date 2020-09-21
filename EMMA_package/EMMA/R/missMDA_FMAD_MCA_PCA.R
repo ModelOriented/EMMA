@@ -21,6 +21,7 @@
 #' @import missMDA
 #'
 #' @return Retrun one imputed data.frame if retrun_one=True or list of imputed data.frames if retrun_one=False.
+#' @export
 
 
 

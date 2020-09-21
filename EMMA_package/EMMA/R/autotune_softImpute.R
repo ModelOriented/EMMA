@@ -16,9 +16,11 @@
 #' @param out_file Output log file location if file already exists log message will be added. If NULL no log will be produced.
 #'
 #' @import softImpute
+#' @importFrom softImpute complete
 #' @imports VIM
 #'
 #' @return Return one data.frame with imputed values.
+#' @export
 
 
 

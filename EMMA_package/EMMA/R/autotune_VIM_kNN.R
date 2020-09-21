@@ -14,6 +14,7 @@
 #' @import VIM
 #' @param col_0_1 decide if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False.
 #'
+#'@export
 
 
 

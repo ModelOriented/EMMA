@@ -39,7 +39,7 @@ PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
                                  initialize = function(id = "imput_softImpute",cat_Fun=VIM::maxCat,lambda=0,rank.max=2,type='als',thresh=1e-5,maxit=100,
                                                        out_file=NULL
                                  ) {
-                                   super$initialize(id, whole_task_dependent=TRUE, param_vals = list( cat_Fun=cat_Fun,lambda=lambda,
+                                   super$initialize(id, whole_task_dependent=TRUE,packages='EMMA', param_vals = list( cat_Fun=cat_Fun,lambda=lambda,
                                                                                                       rank.max=rank.max,type=type,thresh=thresh,maxit=maxit,
                                                                                                       out_file=out_file),
                                                     param_set= ParamSet$new(list(
@@ -85,7 +85,7 @@ PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
 
 
 
-                                     data_imputed <- autotune_softImpute(data_to_impute,percent_of_missing = percent_of_missing,col_type = col_type,
+                                     data_imputed <- EMMA::autotune_softImpute(data_to_impute,percent_of_missing = percent_of_missing,col_type = col_type,
                                                                         cat_Fun = self$param_set$values$cat_Fun,
                                                                          lambda = self$param_set$values$lambda,rank.max = self$param_set$values$rank.max,
                                                                          type = self$param_set$values$type,thresh = self$param_set$values$thresh,
@@ -137,7 +137,7 @@ PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
 
 
 
-                                     data_imputed <- autotune_softImpute(data_to_impute,percent_of_missing = percent_of_missing,col_type = col_type,
+                                     data_imputed <- EMMA::autotune_softImpute(data_to_impute,percent_of_missing = percent_of_missing,col_type = col_type,
                                                                      cat_Fun = self$param_set$values$cat_Fun,
                                                                          lambda = self$param_set$values$lambda,rank.max = self$param_set$values$rank.max,
                                                                          type = self$param_set$values$type,thresh = self$param_set$values$thresh,

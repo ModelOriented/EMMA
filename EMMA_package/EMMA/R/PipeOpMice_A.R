@@ -35,7 +35,7 @@
                                     public = list(
                                       initialize = function(id = "imput_mice_A",set_cor=0.5,m=5,maxit=5,random.seed=123,correlation=F
                                       ) {
-                                        super$initialize(id,whole_task_dependent=TRUE, param_vals = list(set_cor=set_cor,m=m,maxit=maxit,random.seed=random.seed,correlation=correlation),
+                                        super$initialize(id,whole_task_dependent=TRUE,packages='EMMA', param_vals = list(set_cor=set_cor,m=m,maxit=maxit,random.seed=random.seed,correlation=correlation),
                                                          param_set= ParamSet$new(list(
 
 
@@ -147,9 +147,9 @@
                                               data_train <- mice::complete(self$model)
                                               data_train <- rbind(data_train,data_to_impute[,self$state$context_cols])
 
-                                              data_imputed <- mice.reuse(self$model,data_train,maxit=self$param_set$values$maxit,printFlag = T)$`1`[nrow(data_train),]
+                                              data_imputed <- EMMA::mice.reuse(self$model,data_train,maxit=self$param_set$values$maxit,printFlag = T)$`1`[nrow(data_train),]
                                             }else{
-                                            data_imputed <- mice.reuse(self$model,data_to_impute,maxit=self$param_set$values$maxit,printFlag = T)$`1`
+                                            data_imputed <- EMMA::mice.reuse(self$model,data_to_impute,maxit=self$param_set$values$maxit,printFlag = T)$`1`
                                             }
 
 
@@ -176,7 +176,7 @@
 
                                             data_to_impute <- as.data.frame(data_to_impute)[,self$state$context_cols]
                                             self$data_imputed <- imp_function(data_to_impute)
-                                            
+
                                              self$imputed_predict <- TRUE
                                             }
 
