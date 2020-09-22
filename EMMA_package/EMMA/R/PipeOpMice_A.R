@@ -2,26 +2,6 @@
 
 
 
-  #
-  #   w <- PipeOpMice_A$new(m=1)
-  #   gr <- w %>>% lrn('classif.rpart')
-  #   gr <- GraphLearner$new(gr)
-  # #
-  # # gr
-  #   resample(task,gr,rsmp('cv',folds=746))
-  # # #
-  # # # library(testthat)
-  #
-  # #w <- mice::mice(test[-sap,])
-  #
-  #
-  # #d <- mice.reuse(w,test[sap,]
-  #
-  # w <- mice(iris)
-  # w$predictorMatrix
-
-
-
   #' @title PipeOpMice_A
   #'
   #' @name PipeOpMice_A
@@ -109,9 +89,9 @@
 
                                       if(self$param_set$values$correlation){
                                         model <- mice::mice(data_to_impute,m = self$param_set$values$m,maxit = self$param_set$values$maxit,
-                                                            printFlag = T,seed = self$param_set$values$random.seed,predictorMatrix =mice::quickpred(data_to_impute, mincor=self$param_set$values$set_cor,method = 'spearman'))}
+                                                            printFlag = F,seed = self$param_set$values$random.seed,predictorMatrix =mice::quickpred(data_to_impute, mincor=self$param_set$values$set_cor,method = 'spearman'))}
                                       else{ model <- mice::mice(data_to_impute,m = self$param_set$values$m,maxit = self$param_set$values$maxit,
-                                                                printFlag = T,seed = self$param_set$values$random.seed,predictorMatrix =mice::quickpred(data_to_impute, minpuc=self$param_set$values$set_cor,method = 'spearman'))}
+                                                                printFlag = F,seed = self$param_set$values$random.seed,predictorMatrix =mice::quickpred(data_to_impute, minpuc=self$param_set$values$set_cor,method = 'spearman'))}
                                       data_imputed <- mice::complete(model)
 
 
@@ -171,11 +151,13 @@
                                         data_train <- mice::complete(self$model)
                                         data_train <- rbind(data_train,data_to_impute[,self$state$context_cols])
 
-                                        data_imputed <- EMMA::mice.reuse(self$model,data_train,maxit=self$param_set$values$maxit,printFlag = T)$`1`[nrow(data_train),]
-                                      }else{
-                                        data_imputed <- EMMA::mice.reuse(self$model,data_to_impute,maxit=self$param_set$values$maxit,printFlag = T)$`1`
-                                      }
+                                        data_imputed <- EMMA::mice.reuse(self$model,data_train,maxit=self$param_set$values$maxit,printFlag = F)$`1`[nrow(data_train),]
 
+                                      }else{
+
+                                        data_imputed <- EMMA::mice.reuse(self$model,data_to_impute,maxit=self$param_set$values$maxit,printFlag = F)$`1`
+
+                                      }
 
 
 
@@ -204,6 +186,10 @@
                                       self$imputed_predict <- TRUE
                                     }
 
+                                    if (self$imputed_predict & self$flag=='predict' ){
+                                      feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
+
+                                    }
                                     if(self$column_counter == 0 & self$flag=='train'){
                                       feature <- self$data_imputed[,setdiff(colnames(self$data_imputed),colnames(context))]
                                       self$flag <- 'predict'
