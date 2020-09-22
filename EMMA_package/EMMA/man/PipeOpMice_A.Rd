@@ -63,7 +63,8 @@ If set TRUE correlation is used, if set FALSE then fraction of case, default \co
   m = 5,
   maxit = 5,
   random.seed = 123,
-  correlation = F
+  correlation = F,
+  methods = NULL
 )}\if{html}{\out{</div>}}
 }
 

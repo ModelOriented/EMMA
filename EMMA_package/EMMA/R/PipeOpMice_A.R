@@ -1,7 +1,3 @@
-
-
-
-
   #' @title PipeOpMice_A
   #'
   #' @name PipeOpMice_A
@@ -37,9 +33,9 @@
   PipeOpMice_A <- R6::R6Class("mice_A_imputation",lock_objects=FALSE,
                               inherit = PipeOpImpute,  # inherit from PipeOp
                               public = list(
-                                initialize = function(id = "imput_mice_A",set_cor=0.5,m=5,maxit=5,random.seed=123,correlation=F
+                                initialize = function(id = "imput_mice_A",set_cor=0.5,m=5,maxit=5,random.seed=123,correlation=F,methods=NULL
                                 ) {
-                                  super$initialize(id,whole_task_dependent=TRUE,packages='EMMA', param_vals = list(set_cor=set_cor,m=m,maxit=maxit,random.seed=random.seed,correlation=correlation),
+                                  super$initialize(id,whole_task_dependent=TRUE,packages='EMMA', param_vals = list(set_cor=set_cor,methods =methods ,m=m,maxit=maxit,random.seed=random.seed,correlation=correlation),
                                                    param_set= ParamSet$new(list(
 
 
@@ -47,6 +43,7 @@
 
                                                      'm'=ParamInt$new('m',lower = 1,upper = Inf,default = 2,tags='mice'),
                                                      'maxit'=ParamInt$new('maxit',lower = 5,upper = 100,default = 5,tags='mice'),
+                                                     'methods'=ParamUty$new('methods',default = NULL,tags='mice'),
 
 
 
@@ -88,9 +85,9 @@
                                       col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
                                       if(self$param_set$values$correlation){
-                                        model <- mice::mice(data_to_impute,m = self$param_set$values$m,maxit = self$param_set$values$maxit,
+                                        model <- mice::mice(data_to_impute,method = self$param_set$values$methods,m = self$param_set$values$m,maxit = self$param_set$values$maxit,
                                                             printFlag = F,seed = self$param_set$values$random.seed,predictorMatrix =mice::quickpred(data_to_impute, mincor=self$param_set$values$set_cor,method = 'spearman'))}
-                                      else{ model <- mice::mice(data_to_impute,m = self$param_set$values$m,maxit = self$param_set$values$maxit,
+                                      else{ model <- mice::mice(data_to_impute,method = self$param_set$values$methods,m = self$param_set$values$m,maxit = self$param_set$values$maxit,
                                                                 printFlag = F,seed = self$param_set$values$random.seed,predictorMatrix =mice::quickpred(data_to_impute, minpuc=self$param_set$values$set_cor,method = 'spearman'))}
                                       data_imputed <- mice::complete(model)
 
@@ -151,11 +148,11 @@
                                         data_train <- mice::complete(self$model)
                                         data_train <- rbind(data_train,data_to_impute[,self$state$context_cols])
 
-                                        data_imputed <- EMMA::mice.reuse(self$model,data_train,maxit=self$param_set$values$maxit,printFlag = F)$`1`[nrow(data_train),]
+                                        data_imputed <- EMMA::mice.reuse(newdata = self$model,mids = data_train, maxit=self$param_set$values$maxit,printFlag = F)$`1`[nrow(data_train),]
 
                                       }else{
 
-                                        data_imputed <- EMMA::mice.reuse(self$model,data_to_impute,maxit=self$param_set$values$maxit,printFlag = F)$`1`
+                                        data_imputed <- EMMA::mice.reuse(mids = self$model,newdata = data_to_impute,maxit=self$param_set$values$maxit,printFlag = F)$`1`
 
                                       }
 
