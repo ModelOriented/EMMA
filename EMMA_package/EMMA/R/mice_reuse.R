@@ -1,3 +1,5 @@
+
+
 #' @export
 mice.reuse <- function(mids, newdata,maxit = 5, printFlag = TRUE, seed = NA){
   methods <- mids$method
@@ -46,10 +48,11 @@ mice.reuse <- function(mids, newdata,maxit = 5, printFlag = TRUE, seed = NA){
 
   # Set up a mids object for the newdata, but set all variables to missing
   all_miss <- matrix(TRUE, rows, cols, dimnames = list(seq_len(rows), nm))
-  mids.new <- mice::mice(newdata, mids$m,method = methods, where = all_miss, maxit = 0,predictorMatrix = mids$predictorMatrix)
-
+  mids.new <- mice::mice(newdata, mids$m,where = all_miss, maxit = 0,predictorMatrix = mids$predictorMatrix)
+  mids.new$method <- methods
   # Combine the old (trained) and the new mids objects
   mids.comb <- mids.append(mids, mids.new)
+
   new_idx <- mids.comb$app_idx
   mids.comb <- mids.comb$mids
 
@@ -83,11 +86,14 @@ mice.reuse <- function(mids, newdata,maxit = 5, printFlag = TRUE, seed = NA){
                            else cond_imp)
 
   # Run the procedure for a few times
+
   mids.comb <- mice::mice.mids(mids.comb, maxit = maxit, printFlag = printFlag)
 
   # Return the imputed test dataset
 
-  res <- lapply(mice::complete(mids.comb, "all"), function(x) x[new_idx, ])
+  res <- lapply(mice::complete(mids.comb, "all"), function(x){
+    x[new_idx, ]}
+    )
   class(res) <- c("mild", "list")
   res
 }
@@ -145,7 +151,9 @@ mids.append <- function(x, y){
   app$where <- rbind(x$where, y$where)
   rownames(app$where) <- rownames(app$data)
 
-  list(mids = app, app_idx = setNames(y_idx, NULL))
+  res<- list(mids = app, app_idx = setNames(y_idx, NULL))
+  res$method <- x$method
+  res
 }
 
 #' @export
