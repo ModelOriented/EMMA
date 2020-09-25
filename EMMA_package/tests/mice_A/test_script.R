@@ -1,5 +1,5 @@
 #Packages
-#devtools::install_github("https://github.com/jjanborowka/EMMA/", subdir = "EMMA_package/EMMA")
+devtools::install_github("https://github.com/ModelOriented/EMMA/", subdir = "EMMA_package/EMMA", upgrade = FALSE)
 library(EMMA)
 library(mlr3)
 library(mlr3pipelines)
@@ -12,13 +12,13 @@ pipes <- PipeOpMice_A
 methods <- c("pmm", "midastouch", "sample", "cart", "rf")
 
 tasks <- read.csv("EMMA_package/tests/round_3/task_sample.csv")
-result_csv <- "EMMA_package/tests/mice_A/result.csv"
+result_csv <- "EMMA_package/tests/mice_A/result2.csv"
 
 for (method in methods) {
   
   positive <- 0
   id <- paste(pipes$new()$id, method, sep = "_")
-  f <- file(paste("EMMA_package/tests/mice_A/logs/", id, ".txt", sep = ""), open = "a")
+  f <- file(paste("EMMA_package/tests/mice_A/logs2/", id, ".txt", sep = ""), open = "a")
   
   for (i in tasks$task.id) {
     
