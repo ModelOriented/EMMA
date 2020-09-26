@@ -93,6 +93,17 @@
 
 
 
+                                      for (i in colnames(data_to_impute)[(col_type=='factor')]){
+
+                                        if(!setequal(levels(na.omit(data_to_impute[,i])),levels(data_imputed[,i]))){
+
+                                          levels(data_imputed[,i]) <- c(levels(na.omit(data_to_impute[,i])))
+                                        }
+                                      }
+                                      for (i in colnames(data_imputed)[col_type=='integer']){
+                                        data_imputed[,i] <- as.integer(data_imputed[,i])
+                                      }
+
 
 
                                       return(list('data'=data_imputed
@@ -155,9 +166,18 @@
                                         data_imputed <- EMMA::mice.reuse(mids = self$model,newdata = data_to_impute,maxit=self$param_set$values$maxit,printFlag = F)$`1`
 
                                       }
+                                      for (i in colnames(data_to_impute)[(col_type=='factor')]){
 
+                                        if(!setequal(levels(na.omit(data_to_impute[,i])),levels(data_imputed[,i]))){
 
+                                          levels(data_imputed[,i]) <- c(levels(na.omit(data_to_impute[,i])))
+                                        }
+                                      }
+                                      for (i in colnames(data_to_impute)[col_type=='integer']){
+                                        data_imputed[,i] <- as.integer(data_imputed[,i])
+                                      }
 
+                                      print(sum(is.na(data_imputed)))
                                       return(data_imputed)
                                     }
                                     if (self$imputed){
