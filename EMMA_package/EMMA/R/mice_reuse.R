@@ -1,7 +1,41 @@
-##set_test_A<- mice.reuse(mids = model,newdata = set_test,maxit = 5,seed =123 )$`1`
+#' @title Reuseble mice function
+#' @description Reuse a previously fit multivariate imputation by chained equations to
+#' impute values for previously unseen data without changing the imputation
+#' fit (i.e. solely use the original training data to guide the imputation
+#' models).
+#'
+#' Note: see https://github.com/stefvanbuuren/mice/issues/32 for discussion
+#'
+#'
+#'
+#' @param mids : mids object
+#'    An object of class mids, typically produces by a previous call to mice() or mice.mids()
+#'  newdata : data.frame
+#'    Previously unseen data of the same structur as used to generate `mids`
+#' @param maxit : integer scalar
+#'    The number of additional Gibbs sampling iterations to refine the new imputations
+#'  printFlag : logical scalar
+#'    A Boolean flag. If TRUE, diagnostic information during the Gibbs sampling iterations
+#'    will be written to the command window. The default is TRUE.
+#'  seed : integer scalar
+#'    An integer that is used as argument by the set.seed() for offsetting the random
+#'    number generator. Default is to use the last seed value stored in `mids`
+#'
+#' @return
+#'
+#' data : list of data.frames
+#'   the imputations of newdata
+#'
+#'
+#'  lastSeedValue : integer vector
+#'    the random seed at the end of the procedure
 #' @export
+#' @author Patrick Rockenschaub git https://github.com/prockenschaub
 mice.reuse <- function(mids, newdata,maxit = 5, printFlag = TRUE, seed = NA){
-  methods <- mids$method
+  newdata <- as.data.frame(lapply(newdata,function(x){
+    if (is(x,'numeric')){return(as.numeric(x))}
+        return(x)
+  }))
   # Reuse a previously fit multivariate imputation by chained equations to
   # impute values for previously unseen data without changing the imputation
   # fit (i.e. solely use the original training data to guide the imputation
@@ -29,7 +63,7 @@ mice.reuse <- function(mids, newdata,maxit = 5, printFlag = TRUE, seed = NA){
   #  data : list of data.frames
   #    the imputations of newdata
   #  lastSeedValue : integer vector
-  #    the random seed at the end of the procedure
+  #    the random seed at the end of the procedure#
 
   if(is.na(seed)){
     assign(".Random.seed", mids$lastSeedValue, pos = 1)
@@ -200,6 +234,7 @@ fetch_data <- function(){
 
   get('actual_data', pos = parent.frame(5))
 }
+
 
 
 

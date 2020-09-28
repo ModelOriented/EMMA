@@ -177,7 +177,7 @@
                                         data_imputed[,i] <- as.integer(data_imputed[,i])
                                       }
 
-                                      print(sum(is.na(data_imputed)))
+
                                       return(data_imputed)
                                     }
                                     if (self$imputed){
