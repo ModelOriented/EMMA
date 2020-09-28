@@ -55,7 +55,7 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                     'iter'=ParamInt$new('iter',lower = 1,upper = Inf,default = 5,tags='mice'),
                                     'm'=ParamInt$new('m',lower = 1,upper = Inf,default = 2,tags='mice'),
                                     'maxit'=ParamInt$new('maxit',lower = 5,upper = 100,default = 5,tags='mice'),
-                                    'set_method'=ParamFct$new('set_method',levels = c('pmm','midastouch','sample','cart'),default = 'pmm',tags='mice'),
+                                    'set_method'=ParamFct$new('set_method',levels = c('pmm','midastouch','sample','cart','rf'),default = 'pmm',tags='mice'),
                                     'low_corr'=ParamDbl$new('low_corr',lower = 0,upper = 1,default = 0,tags='mice'),
                                     'up_corr'=ParamDbl$new('up_corr',lower = 0,upper = 1,default = 1,tags='mice'),
                                     'methods_random'=ParamFct$new('methods_random',levels=c('pmm','midastouch','sample','cart'),default = c('pmm'),tag='mice'),
@@ -163,7 +163,7 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
 
 
 
-
+                                    print(sum(is.na(data_imputed)))
 
                                     return(data_imputed)
                                   }
