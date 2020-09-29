@@ -236,5 +236,5 @@ fetch_data <- function(){
 }
 
 
-
+#set_test_A <- mice.reuse(model,set_test)$`1`
 

@@ -14,30 +14,30 @@
 #' \item \code{id} :: \code{character(1)}\cr
 #' Identifier of resulting object, default `"impute_sample_B"`.
 #'}
-#' 
+#'
 #' @export
 
 PipeOpSample_B = R6::R6Class("Sample_B_imputation",
                              inherit = PipeOpImpute,
                              public = list(
                                initialize = function(id = "impute_sample_B", param_vals = list()) {
-                                 super$initialize(id, param_vals = param_vals, packages = "stats", feature_types = c("factor", "integer", "logical", "numeric", "ordered"))
+                                 super$initialize(id, param_vals = param_vals, packages = c("stats","data.table"), feature_types = c("factor", "integer", "logical", "numeric", "ordered"))
                                }
                              ),
                              private = list(
                                .train_imputer = function(feature, type, context) {
                                NULL
                                },
-                               
+
                                .impute = function(feature, type, model, context) {
-                                 
+
                                  train_model <- function(feature, type, context){
-                                 
+
                                    fvals = feature[!is.na(feature)]
                                    if (length(fvals) < 10) {  # don't bother with table if vector is short
                                      return(fvals)
                                    }
-                                   tab <- data.table(fvals)[, .N, by = "fvals"]
+                                   tab <- data.table::data.table(fvals)[, .N, by = "fvals"]
                                    if (nrow(tab) > length(fvals) / 2) {
                                      # memory usage of count table is larger than memory usage of just the values
                                      return(fvals)
@@ -46,7 +46,7 @@ PipeOpSample_B = R6::R6Class("Sample_B_imputation",
                                    attr(model, "probabilities") <-  tab$N / sum(tab$N)
                                    model
                                  }
-                                   
+
                                  model <- train_model(feature, type, context)
 
                                  if (type %in% c("factor", "ordered")) {
