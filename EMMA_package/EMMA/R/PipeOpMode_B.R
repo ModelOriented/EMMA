@@ -14,7 +14,7 @@
 #' \item \code{id} :: \code{character(1)}\cr
 #' Identifier of resulting object, default `"impute_mode_B"`.
 #'}
-#'
+#' @importFrom data.table .N
 #' @export
 
 
