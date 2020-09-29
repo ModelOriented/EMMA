@@ -1,8 +1,9 @@
 Folder Structure: 
 
  - EMMA Folder with package files.
- - TESTY Folder contains R scripts used to testing functions in EMMA.
- - tests Folder contains full test results and script form testing EMMA.
- - diagram.pdf Diagram showing EMMA structure 
+ - TESTY Folder contains R scripts used to test functions in EMMA.
+ - performance_tests Folder contains full test results and script from testing EMMA.
+ - unit_tests Folder contains scripts with unit tests (in future tests might be automatized)
+ - diagram.pdf Diagram showing EMMA structure
 
-Package can be intall using devtools::install_github("https://github.com/jjanborowka/EMMA/", subdir = "EMMA_package/EMMA") .
+Package can be installed using devtools::install_github("https://github.com/jjanborowka/EMMA/", subdir = "EMMA_package/EMMA").
