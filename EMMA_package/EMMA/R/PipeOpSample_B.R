@@ -14,7 +14,7 @@
 #' \item \code{id} :: \code{character(1)}\cr
 #' Identifier of resulting object, default `"impute_sample_B"`.
 #'}
-#'
+#' @importFrom data.table .N
 #' @export
 
 PipeOpSample_B = R6::R6Class("Sample_B_imputation",
