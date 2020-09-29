@@ -15,7 +15,6 @@ library(mlr3pipelines)
 library(paradox)
 library(mlr3learners)
 library(mlr3oml)
-library(mcparallelDo)
 
 #Benchmark
 
@@ -23,21 +22,18 @@ library(mcparallelDo)
 tasks <- read.csv(task_csv)
 
 #Pipelines
-devtools::install_github("https://github.com/ModelOriented/EMMA", subdir = "/EMMA_package/EMMA", upgrade = FALSE, force = TRUE)
+devtools::install_github("https://github.com/ModelOriented/EMMA", subdir = "/EMMA_package/EMMA", upgrade = FALSE)
 library(EMMA)
 
 #Flexible below, modify to evaluate right approach (a/b/c)
 pipes <- c(PipeOpAmelia, PipeOpmissForest, PipeOpMice, PipeOpSoftImpute, PipeOpmissRanger,
-           PipeOpVIM_IRMI, PipeOpVIM_HD, PipeOpVIM_kNN, PipeOpVIM_regrImp, PipeOpMissMDA_MFA, PipeOpMissMDA_PCA_MCA_FMAD,
-           PipeOpMice_A)
+           PipeOpVIM_IRMI, PipeOpVIM_HD, PipeOpVIM_kNN, PipeOpVIM_regrImp, PipeOpMissMDA_MFA, PipeOpMissMDA_PCA_MCA_FMAD)
 
 err_file <- file(error_out, open = "wt")
 
 for (task_id in tasks$task.id) {
   
   for (j in 1:length(pipes)) {
-    
-    set.seed(1)
     
     #Take pipe
     pipe_imp <- pipes[[j]]$new()
@@ -61,33 +57,29 @@ for (task_id in tasks$task.id) {
     task <- oml_task$task
     
     sink(err_file, type = "message")
+    
     try({
-      mcparallelDo(
-      resample(task, graph_learner, split), targetValue = "paral_res"
-      )
+
+      mlr3misc::encapsulate("callr", {
+        set.seed(1)
+        rr <- resample(task, graph_learner, split)
+        }, .pkgs = "EMMA")
     })
     
-    while (!mcparallelDoCheck()) {
-      Sys.sleep(5)
-    }
-    
-    if(is.environment(paral_res)){
+    if(exists("rr")){
       try({
-      rr <- paral_res  
       scores <- rr$score(msr("classif.acc"))
       scores <- scores[, c("iteration", "classif.acc")]
       scores$task <- task_id
       scores$imputer <- pipe_imp$id
       
       write.table(scores, result_csv, sep = ",", col.names = !file.exists(result_csv), append = T)
+      rm(list = c("rr"))
       })
-    }else{
-      write(paral_res, file = err_file, append = TRUE)
     }
     
     sink(type = "message")
     
-    rm(list = c("paral_res", "rr"))
   }
 }
 
