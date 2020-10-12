@@ -2,14 +2,14 @@
 Evaluation of Methods for dealing with Missing data in Machine Learning algorithms
 
 # Motivation 
-EMMA is mlr3 extensions create to help dealing with missing data. More about EMMA can be read here: [Imputing missing data in mlr3 with EMMA](https://medium.com/responsibleml/imputing-missing-data-with-emma-ed4cbc27510c). 
+Package is mlr3 extensions create to help dealing with missing data. More about EMMA can be read here: [Imputing missing data in mlr3 with EMMA](https://medium.com/responsibleml/imputing-missing-data-with-emma-ed4cbc27510c). 
 
 # Installation 
 EMMA can be install using 
 ```
 devtools::install_github("https://github.com/jjanborowka/EMMA/", subdir = "EMMA_package/EMMA")
 ```
-EMMA is not yet available on CRAN. 
+Package is not yet available on CRAN. 
 
 # Example
 EMMA working example using mlr3 
