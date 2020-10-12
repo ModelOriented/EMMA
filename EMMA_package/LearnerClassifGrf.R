@@ -1,9 +1,24 @@
-#' @title Bootstraped regression forest with dummy encoding
+#' @title Bootstraped regression forest
 #'
 #' @name LearnerClassifGrf.Rd
 #'
 #' @description
-#' Boosted regression forest using dummy encoder from \code{\link[recipes:step_dummy]{step_dummy}}. Forest is created with package \code{\link[grf:boosted_regression_forest]{boosted_regression_forest}}
+#' The algorithm used in this learner is available here \code{\link[grf:boosted_regression_forest]{boosted_regression_forest}}
+#'
+#' \itemize{
+#' \item \code{id} :: \code{character(1)}\cr
+#' Identifier of resulting object, default `"classif.grf"`.
+#' \item \code{num.trees} :: \code{integer(1)}\cr
+#' Number of trees grown in the forest. Note: Getting accurate confidence intervals generally requires more trees than getting accurate predictions. Default  \code{2000}.
+#' \item \code{sample.fractions} :: \code{double(1)}\cr
+#' Fraction of the data used to build each tree. Default  \code{0.5}.
+#' \item \code{mtry} :: \code{integer(1)}\cr
+#' Number of variables tried for each split. Default is √ p + 20 where p is the number of variables.
+#' \item \code{alpha} :: \code{integer(1)}\cr
+#' A tuning parameter that controls the maximum imbalance of a split. Default is 0.05.
+#'}
+#'
+#'
 #'
 #' @templateVar id classif.grf
 #'
@@ -31,8 +46,8 @@ LearnerClassifGrf = R6::R6Class("LearnerClassifGrf",
                                        super$initialize(
 
                                          id = "classif.grf",
-                                         packages = c("grf","recipes"),
-                                         feature_types = c("numeric","logical","integer",'factor'),
+                                         packages = "grf",
+                                         feature_types = c("numeric","logical","integer"),
                                          predict_types = "response",
                                          param_set = ps,
                                          properties = c( "twoclass")
@@ -54,18 +69,18 @@ LearnerClassifGrf = R6::R6Class("LearnerClassifGrf",
                                        target <- target[,task$target_names,drop=T]
 
                                        # Data encoding
-                                       vars <- colnames(data_to_train)
-
-                                       encoder <- recipe(data_to_train) %>% update_role(all_of(vars), new_role = "predictor") %>% step_dummy(all_predictors(),one_hot = F)
-
-                                       encoder_model <- prep(encoder,training =data_to_train)
-
-                                       self$state = list(
-                                         dummy_encode = encoder_model
-                                       )
-
-                                       data_to_train<- bake(encoder_model, data_to_train)
-
+                                       # vars <- colnames(data_to_train)
+                                       #
+                                       # encoder <- recipe(data_to_train) %>% update_role(all_of(vars), new_role = "predictor") %>% step_dummy(all_predictors(),one_hot = F)
+                                       #
+                                       # encoder_model <- prep(encoder,training =data_to_train)
+                                       #
+                                       # self$state = list(
+                                       #   dummy_encode = encoder_model
+                                       # )
+                                       #
+                                       # data_to_train<- bake(encoder_model, data_to_train)
+                                       #
 
 
                                        if(class(target)=='factor'){
@@ -83,7 +98,7 @@ LearnerClassifGrf = R6::R6Class("LearnerClassifGrf",
 
                                      .predict = function(task) {
                                        data_to_predict <-  as.data.frame(task$data(cols = task$feature_names))
-                                       data_to_predict<- bake(self$state$dummy_encode,data_to_predict)
+                                       # data_to_predict<- bake(self$state$dummy_encode,data_to_predict)
 
 
 
@@ -100,45 +115,7 @@ LearnerClassifGrf = R6::R6Class("LearnerClassifGrf",
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#   d <- LearnerClassifGrf$new()
-#  gr <-   d
-#  grlr <- GraphLearner$new(gr)
-# #
-#  w<- resample(task,grlr,rsmp('cv',folds=5))
-# #
-#  w$aggregate(msr('classif.acc'))
-# #
-# # library(mlr3oml)
-# # for (i in tasks$task.id){
-#
-# # d <- LearnerClassifGrf$new()
-# # gr <-  d
-# # grlr <- GraphLearner$new(gr)
-# #
-#  task <- mlr3oml::OMLTask$new(id = 3704)
-#  task <- task$task
-# #
-# tryCatch({
+# gr <- PipeOpEncodeImpact$new() %>>% LearnerClassifGrf$new()
+# grlr <- GraphLearner$new(gr)
 # w<- resample(task,grlr,rsmp('cv',folds=5))
-# },error=function(e){
-#   print(as.character(e))
-# })
-#
-#
-#
-#
-# }
+# w$aggregate(msr('classif.acc'))
