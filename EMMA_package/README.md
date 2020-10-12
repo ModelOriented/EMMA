@@ -5,5 +5,6 @@ Folder Structure:
  - performance_tests Folder contains full test results and script from testing EMMA.
  - unit_tests Folder contains scripts with unit tests (in future tests might be automatized)
  - diagram.pdf Diagram showing EMMA structure
+ - LearnerClassifGrf.R Learner for mlr3 implementing boosted regression forest from grf package
 
 Package can be installed using devtools::install_github("https://github.com/jjanborowka/EMMA/", subdir = "EMMA_package/EMMA").
