@@ -108,7 +108,7 @@ p3
 ```{r patterns_in_instances_fraction}
 data$fraction <- round(100*data$no_of_patterns/data$no_instances, digits = 1)
 
-ggplot(data, aes(fraction))+
+p4 <- ggplot(data, aes(fraction))+
   geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, 100, 5))+
   xlab("no_of_patterns/no_of_instances [%]")+
   ylab("% of datasets")+
@@ -116,6 +116,7 @@ ggplot(data, aes(fraction))+
   scale_x_continuous(breaks = seq(0, 100, by = 5))+
   scale_y_continuous(breaks = seq(0, 0.8, 0.1), labels = seq(0, 80, 10), limits = c(0, 0.75))+
   theme_linedraw()
+p4
 ```
 
 - The figure above presents a dispersion of missings' pattern among datasets.
@@ -126,7 +127,7 @@ the number of instances in datasets.
 ### *Figure 5*
 
 ```{r variables_in_patterns}
-ggplot(patterns, aes(var_per))+
+p5 <- ggplot(patterns, aes(var_per))+
   geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, 100, 5))+
   xlab("% of variables in pattern")+
   ylab("% of patterns")+
@@ -134,6 +135,7 @@ ggplot(patterns, aes(var_per))+
   scale_x_continuous(breaks = seq(0, 100, 5))+
   scale_y_continuous(breaks = seq(0, 0.60, 0.10), labels = seq(0, 60, 10))+
   theme_linedraw()
+p5
 ```
 
 - Percentage of variables in the pattern means a fraction of variables in dataset's row which have missing values.  
@@ -164,7 +166,7 @@ p6
 ### *Figure 7*
 
 ```{r percentage_instances_in_patterns}
-ggplot(patterns, aes(x = row_per))+
+p7 <- ggplot(patterns, aes(x = row_per))+
   geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, max(patterns$row_per), 2))+
   xlab("% of instances in pattern")+
   ylab("% of patterns")+
@@ -172,6 +174,7 @@ ggplot(patterns, aes(x = row_per))+
   scale_x_continuous(breaks = seq(0, max(patterns$row_per), 4))+
   scale_y_continuous(breaks = seq(0, 1, 0.25), labels = seq(0, 100, 25))+
   theme_linedraw()
+p7
 ```
 
 - Almost all patterns seem to cover an only very small fraction of dataset's instances.
@@ -179,7 +182,7 @@ ggplot(patterns, aes(x = row_per))+
 ### *Figure 8*
 
 ```{r average_percentage_instances_pattern}
-group_by(patterns, id)%>%
+p8 <- group_by(patterns, id)%>%
   summarise("average" = mean(row_per))%>%
 ggplot(aes(x = average))+
   geom_histogram(aes(y = stat(count/sum(count))), fill='#2b8cbe', breaks = seq(0, max(patterns$row_per), 2))+
@@ -189,6 +192,7 @@ ggplot(aes(x = average))+
   scale_x_continuous(breaks = seq(0, max(patterns$row_per), 4))+
   scale_y_continuous(breaks = seq(0, 0.5, 0.1), labels = seq(0, 50, 10))+
   theme_linedraw()
+p8
 ```
 
 - Calculating the average of a number of instances in patterns for each dataset help to see more diversity.
