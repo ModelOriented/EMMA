@@ -163,7 +163,7 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
 
 
 
-                                    print(sum(is.na(data_imputed)))
+
 
                                     return(data_imputed)
                                   }
