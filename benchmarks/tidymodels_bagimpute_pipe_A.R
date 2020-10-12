@@ -1,9 +1,9 @@
 library(tidymodels)
 
-PipeOpTidyBagimpute = R6::R6Class("PipeOpTidyBagimpute",
+PipeOpTidyBagimpute_A = R6::R6Class("PipeOpTidyBagimpute_A",
                                 inherit = mlr3pipelines::PipeOpTaskPreproc,
                                 public = list(
-                                  initialize = function(id = "impute_tidy_bagimpute") {
+                                  initialize = function(id = "impute_tidy_bagimpute_A") {
                                     super$initialize(id = id)
                                   }
                                 ),
@@ -34,4 +34,4 @@ PipeOpTidyBagimpute = R6::R6Class("PipeOpTidyBagimpute",
                                 )
 )
 
-mlr_pipeops$add("tidy_bagimpute", PipeOpTidyBagimpute)
+mlr_pipeops$add("tidy_bagimpute_A", PipeOpTidyBagimpute_A)
