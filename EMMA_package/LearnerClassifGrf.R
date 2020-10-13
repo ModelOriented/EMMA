@@ -47,10 +47,10 @@ LearnerClassifGrf = R6::R6Class("LearnerClassifGrf",
 
                                          id = "classif.grf",
                                          packages = "grf",
+                                         predict_types = c("response","prob"),
                                          feature_types = c("numeric","logical","integer"),
-                                         predict_types = "response",
                                          param_set = ps,
-                                         properties = c( "twoclass")
+                                         properties = "twoclass"
 
                                        )
                                      }
@@ -102,20 +102,27 @@ LearnerClassifGrf = R6::R6Class("LearnerClassifGrf",
 
 
 
-                                       pred <- predict(self$model,(data_to_predict))
+                                       pred <- predict(self$model,(data_to_predict))$predictions
+
+                                      pred <- ifelse(pred>1,1,pred)
+                                      pred <- ifelse(pred<0,0,pred)
 
 
-
-
-                                       pred <- self$state$levels[ifelse(round(pred)<0.5,1,2)]
-                                       PredictionClassif$new(task = task,response = pred)
+                                       response <- self$state$levels[ifelse(round(pred)<0.5,1,2)]
+                                       prob <- matrix(ncol = 2,nrow = length(pred))
+                                       colnames(prob) <- self$state$levels
+                                       prob[,1] <- 1-pred
+                                       prob[,2] <- pred
+                                       PredictionClassif$new(task = task,response = response,prob = prob)
                                      }
                                    )
 )
 
-
-
-# gr <- PipeOpEncodeImpact$new() %>>% LearnerClassifGrf$new()
-# grlr <- GraphLearner$new(gr)
-# w<- resample(task,grlr,rsmp('cv',folds=5))
+#
+# d <- LearnerClassifGrf$new()
+# d$predict_type <- 'prob'
+#  gr <- PipeOpEncodeImpact$new() %>>% d
+#  grlr <- GraphLearner$new(gr)
+# grlr
+#  w<- resample(task,grlr,rsmp('cv',folds=5),store_models = T)
 # w$aggregate(msr('classif.acc'))
