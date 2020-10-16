@@ -2,27 +2,26 @@
 
 #Output files
 
-result_csv <- "benchmarks/trial_4/mice_glm.csv"
-error_out <- "benchmarks/trial_4/error_mice_glm.txt"
-task_csv <- "benchmarks/tasks.csv"
+result_csv <- "/data/user/result_mice.csv"
+error_out <- "/data/user/error_log_mice.txt"
+task_csv <- "/data/user/benchmark/tasks.csv"
 
-# result_csv <- "/data/user/trial_4/mice.csv"
-# error_out <- "/data/user/trial_4/error_mice.txt"
-# task_csv <- "/data/user/benchmark/tasks.csv"
-
+# result_csv <- "~/Pulpit/result_mice.csv"
+# error_out <- "~/Pulpit/error_log_mice.txt"
+# task_csv <- "benchmarks/tasks.csv"
 
 #Packages
-library(OpenML)
-library(dplyr)
-library(devtools)
-library(mlr3)
-library(mlr3pipelines)
-library(paradox)
+# library(OpenML)
+# library(dplyr)
+# library(devtools)
+# library(mlr3)
+# library(mlr3pipelines)
+# library(paradox)
 library(mlr3learners)
 library(mlr3oml)
+
 devtools::install_github("https://github.com/ModelOriented/EMMA/", subdir = "EMMA_package/EMMA", upgrade = FALSE)
 library(EMMA)
-library(xgboost)
 
 #Benchmark
 
@@ -35,10 +34,9 @@ pipes <- c(PipeOpMice_A, PipeOpMice)
 methods <- c("pmm", "midastouch", "sample", "cart", "rf")
 
 #Learners
-#learners <- c(lrn("classif.glmnet"), lrn("classif.ranger"), lrn("classif.rpart"), lrn("classif.naive_bayes"), lrn("classif.xgboost"))
 learners <- c(lrn("classif.glmnet"))
 
-err_file <- file(error_out, open = "wt")
+err_file <- file(error_out, "w")
 
 for (task_id in tasks$task.id) {
   
@@ -84,6 +82,7 @@ for (task_id in tasks$task.id) {
         }
         
         graph_learner <- GraphLearner$new(graph)
+        graph_learner$predict_type <- "prob"
         
         split <- rsmp("cv", folds = 5)
         
@@ -91,19 +90,25 @@ for (task_id in tasks$task.id) {
         oml_task <- OMLTask$new(task_id)
         task <- oml_task$task
         
-        sink(err_file, type = "message")
+        
         try({
           
           mlr3misc::encapsulate("callr", {
+            sink(err_file)
+            sink(err_file, type = "message")
             set.seed(1)
             rr <- resample(task, graph_learner, split)
+            sink()
+            sink(type="message")
           }, .pkgs = "EMMA")
         })
+        sink()
+        sink(type="message")
         
         if(exists("rr")){
           try({
-            scores <- rr$score(msr("classif.acc"))
-            scores <- scores[, c("iteration", "classif.acc")]
+            scores <- rr$score(measures = c(msr("classif.auc"), msr("classif.acc"), msr("classif.fbeta")))
+            scores <- scores[, c("iteration", "classif.acc", "classif.auc", "classif.fbeta")]
             scores$task <- task_id
             scores$imputer <- id
             scores$model <- model$id
@@ -112,9 +117,6 @@ for (task_id in tasks$task.id) {
             rm(list = c("rr"))
           })
         }
-        
-        sink(type = "message")
-
       }
     }
   }
