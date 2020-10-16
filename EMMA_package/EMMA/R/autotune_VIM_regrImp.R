@@ -19,6 +19,7 @@
 #' @import VIM
 #'
 #' @return Return one data.frame with imputed values.
+#' @export
 autotune_VIM_regrImp <- function(df,col_type,percent_of_missing,col_0_1=F,robust=F,mod_cat=F,use_imputed=F,out_file=NULL){
   if (!is.null(out_file)){
     write('regrImp',file = out_file,append = T)

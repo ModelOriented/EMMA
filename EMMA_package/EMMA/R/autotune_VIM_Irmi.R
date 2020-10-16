@@ -17,6 +17,7 @@
 #' @import VIM
 #'
 #' @return Return one data.frame with imputed values.
+#' @export
 autotune_VIM_Irmi <- function(df,col_type,percent_of_missing,eps=5,maxit=100,step=FALSE,robust=FALSE,init.method='kNN',force=FALSE,col_0_1=FALSE,out_file=NULL){
 
   if(!is.null(out_file)){

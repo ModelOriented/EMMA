@@ -37,7 +37,7 @@
 #' \item \code{correlation} :: \code{logical(1)}\cr
 #' If set TRUE correlation is used, if set FALSE then fraction of case, default \code{TRUE}.
 #'}
-#'
+#' @import mice
 #' @export
 PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                               inherit = PipeOpImpute,
@@ -46,7 +46,7 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                                       set_method='pmm',low_corr=0,up_corr=1,
                                                       methods_random=c('pmm'),iter=5,random.seed=123,optimize = F,correlation=F,out_file=NULL
                                                       ) {
-                                  super$initialize(id, whole_task_dependent=TRUE,param_vals = list( m=m,maxit=maxit,set_cor=set_cor,
+                                  super$initialize(id, whole_task_dependent=TRUE,packages='EMMA',param_vals = list( m=m,maxit=maxit,set_cor=set_cor,
                                                                           set_method=set_method,low_corr=low_corr,up_corr=up_corr,
                                                                           methods_random=methods_random,iter=iter,random.seed=random.seed,optimize = optimize,correlation=correlation,
                                                                           out_file=out_file),
@@ -55,7 +55,7 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                     'iter'=ParamInt$new('iter',lower = 1,upper = Inf,default = 5,tags='mice'),
                                     'm'=ParamInt$new('m',lower = 1,upper = Inf,default = 2,tags='mice'),
                                     'maxit'=ParamInt$new('maxit',lower = 5,upper = 100,default = 5,tags='mice'),
-                                    'set_method'=ParamFct$new('set_method',levels = c('pmm','midastouch','sample','cart'),default = 'pmm',tags='mice'),
+                                    'set_method'=ParamFct$new('set_method',levels = c('pmm','midastouch','sample','cart','rf'),default = 'pmm',tags='mice'),
                                     'low_corr'=ParamDbl$new('low_corr',lower = 0,upper = 1,default = 0,tags='mice'),
                                     'up_corr'=ParamDbl$new('up_corr',lower = 0,upper = 1,default = 1,tags='mice'),
                                     'methods_random'=ParamFct$new('methods_random',levels=c('pmm','midastouch','sample','cart'),default = c('pmm'),tag='mice'),
@@ -94,7 +94,7 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                     col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                     col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
-                                    data_imputed <- autotune_mice(data_to_impute,col_miss = col_miss,col_no_miss = col_no_miss,col_type = col_type,
+                                    data_imputed <- EMMA::autotune_mice(data_to_impute,col_miss = col_miss,col_no_miss = col_no_miss,col_type = col_type,
                                                                   percent_of_missing = percent_of_missing,m=self$param_set$values$m,iter=self$param_set$values$iter,
                                                                   maxit = self$param_set$values$maxit,
                                                                   low_corr = self$param_set$values$low_corr,up_corr = self$param_set$values$up_corr,
@@ -150,7 +150,7 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
                                     col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                     col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
-                                    data_imputed <- autotune_mice(data_to_impute,col_miss = col_miss,col_no_miss = col_no_miss,col_type = col_type,
+                                    data_imputed <- EMMA::autotune_mice(data_to_impute,col_miss = col_miss,col_no_miss = col_no_miss,col_type = col_type,
                                                                   percent_of_missing = percent_of_missing,m=self$param_set$values$m,iter=self$param_set$values$iter,
                                                                   maxit = self$param_set$values$maxit,
                                                                   low_corr = self$param_set$values$low_corr,up_corr = self$param_set$values$up_corr,

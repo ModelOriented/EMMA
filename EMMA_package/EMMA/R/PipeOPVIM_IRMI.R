@@ -39,7 +39,7 @@ PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
                                initialize = function(id = "imput_VIM_IRMI",eps=5,maxit=100,step=FALSE,robust=FALSE,init.method='kNN',force=FALSE,
                                                      out_file=NULL
                                ) {
-                                 super$initialize(id, whole_task_dependent=TRUE, param_vals = list( eps=eps,maxit=maxit,step=step,robust=robust,
+                                 super$initialize(id, whole_task_dependent=TRUE,packages='EMMA', param_vals = list( eps=eps,maxit=maxit,step=step,robust=robust,
                                                                                                     init.method=init.method,force=force,out_file=out_file),
                                                   param_set= ParamSet$new(list(
 
@@ -84,7 +84,7 @@ PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
 
 
 
-                                   data_imputed <- autotune_VIM_Irmi(data_to_impute,col_type,percent_of_missing,eps = self$param_set$values$eps,maxit = self$param_set$values$maxit,
+                                   data_imputed <- EMMA::autotune_VIM_Irmi(data_to_impute,col_type,percent_of_missing,eps = self$param_set$values$eps,maxit = self$param_set$values$maxit,
                                                                      step = self$param_set$values$step,robust = self$param_set$values$robust,
                                                                      init.method = self$param_set$values$init.method,force = self$param_set$values$force,
                                                                      out_file =self$param_set$values$out_file)
@@ -135,7 +135,7 @@ PipeOpVIM_IRMI <-  R6::R6Class("VIM_IRMI_imputation",lock_objects=FALSE,
 
 
 
-                                   data_imputed <- autotune_VIM_Irmi(data_to_impute,col_type,percent_of_missing,eps = self$param_set$values$eps,maxit = self$param_set$values$maxit,
+                                   data_imputed <- EMMA::autotune_VIM_Irmi(data_to_impute,col_type,percent_of_missing,eps = self$param_set$values$eps,maxit = self$param_set$values$maxit,
                                                                      step = self$param_set$values$step,robust = self$param_set$values$robust,
                                                                      init.method = self$param_set$values$init.method,force = self$param_set$values$force,
                                                                      out_file =self$param_set$values$out_file)

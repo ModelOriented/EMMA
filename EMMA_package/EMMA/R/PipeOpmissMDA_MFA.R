@@ -41,7 +41,7 @@ PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
                                              initialize = function(id = "imput_missMDA_MFA",ncp=2,random.seed=123,maxiter=998,
                                                                    coeff.ridge=1,threshold=1e-06,method='Regularized',out_file=NULL
                                              ) {
-                                               super$initialize(id,whole_task_dependent=TRUE, param_vals = list(ncp=ncp,random.seed=random.seed,
+                                               super$initialize(id,whole_task_dependent=TRUE,packages='EMMA', param_vals = list(ncp=ncp,random.seed=random.seed,
                                                                                       maxiter=maxiter,coeff.ridge=coeff.ridge,threshold=threshold,method=method,
                                                                                       out_file=out_file),
                                                                 param_set= ParamSet$new(list(
@@ -89,7 +89,7 @@ PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
                                                  col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
-                                                 data_imputed <- missMDA_MFA(data_to_impute,col_type,percent_of_missing,random.seed = self$param_set$values$random.seed,
+                                                 data_imputed <- EMMA::missMDA_MFA(data_to_impute,col_type,percent_of_missing,random.seed = self$param_set$values$random.seed,
                                                                              ncp = self$param_set$values$ncp,
                                                                              maxiter =  self$param_set$values$maxiter,coeff.ridge =  self$param_set$values$coeff.ridge,
                                                                              threshold =  self$param_set$values$threshold,method =  self$param_set$values$method,
@@ -143,7 +143,7 @@ PipeOpMissMDA_MFA <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
                                                  col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
-                                                 data_imputed <- missMDA_MFA(data_to_impute,col_type,percent_of_missing,random.seed = self$param_set$values$random.seed,
+                                                 data_imputed <- EMMA::missMDA_MFA(data_to_impute,col_type,percent_of_missing,random.seed = self$param_set$values$random.seed,
                                                                              ncp = self$param_set$values$ncp,
                                                                              maxiter =  self$param_set$values$maxiter,coeff.ridge =  self$param_set$values$coeff.ridge,
                                                                              threshold =  self$param_set$values$threshold,method =  self$param_set$values$method,

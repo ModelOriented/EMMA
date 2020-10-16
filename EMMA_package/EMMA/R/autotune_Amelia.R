@@ -20,6 +20,7 @@
 #' @import Amelia
 #'
 #' @return Return one data.frame with imputed values or amelia object.
+#' @export
 
 
 

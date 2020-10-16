@@ -32,7 +32,7 @@ PipeOpVIM_regrImp <-  R6::R6Class("VIM_regrImp_imputation",lock_objects=FALSE,
                              public = list(
                                initialize = function(id = "imput_VIM_regrImp",robust=FALSE,mod_cat=FALSE,use_imputed=FALSE,out_file=NULL
                                ) {
-                                 super$initialize(id, whole_task_dependent=TRUE, param_vals = list( robust=robust,mod_cat=mod_cat,
+                                 super$initialize(id, whole_task_dependent=TRUE,packages='EMMA', param_vals = list( robust=robust,mod_cat=mod_cat,
                                                                                                     use_imputed=use_imputed,out_file=out_file),
                                                   param_set= ParamSet$new(list(
 
@@ -75,7 +75,7 @@ PipeOpVIM_regrImp <-  R6::R6Class("VIM_regrImp_imputation",lock_objects=FALSE,
 
 
 
-                                   data_imputed <- autotune_VIM_regrImp(data_to_impute,percent_of_missing = percent_of_missing,col_type = col_type,
+                                   data_imputed <- EMMA::autotune_VIM_regrImp(data_to_impute,percent_of_missing = percent_of_missing,col_type = col_type,
                                                                        robust = self$param_set$values$robust,
                                                                         mod_cat = self$param_set$values$mod_cat , use_imputed = self$param_set$values$use_imputed,
                                                                         out_file = self$param_set$values$out_file)
@@ -126,7 +126,7 @@ PipeOpVIM_regrImp <-  R6::R6Class("VIM_regrImp_imputation",lock_objects=FALSE,
 
 
 
-                                   data_imputed <- autotune_VIM_regrImp(data_to_impute,percent_of_missing = percent_of_missing,col_type = col_type,
+                                   data_imputed <- EMMA::autotune_VIM_regrImp(data_to_impute,percent_of_missing = percent_of_missing,col_type = col_type,
                                                                     robust = self$param_set$values$robust,
                                                                         mod_cat = self$param_set$values$mod_cat , use_imputed = self$param_set$values$use_imputed,
                                                                         out_file = self$param_set$values$out_file)

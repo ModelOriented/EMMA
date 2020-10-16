@@ -10,6 +10,7 @@
 #' @param col_0_1 decide if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False.
 #' @param out_file  Output log file location if file already exists log message will be added. If NULL no log will be produced.
 #' @return Return data.frame with imputed values.
+#' @export
 
 autotune_VIM_hotdeck <- function(df,percent_of_missing,col_0_1=FALSE,out_file=NULL){
 

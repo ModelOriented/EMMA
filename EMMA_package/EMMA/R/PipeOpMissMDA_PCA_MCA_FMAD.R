@@ -42,7 +42,7 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
                              initialize = function(id = "imput_missMDA_MCA_PCA_FMAD", optimize_ncp = T, set_ncp=2,ncp.max=5,random.seed=123,maxiter=998,
                                                    coeff.ridge=1,threshold=1e-06,method='Regularized',out_file=NULL
                              ) {
-                               super$initialize(id,whole_task_dependent=TRUE, param_vals = list(optimize_ncp=optimize_ncp,set_ncp=set_ncp,ncp.max=ncp.max,random.seed=random.seed,
+                               super$initialize(id,whole_task_dependent=TRUE, packages='EMMA',param_vals = list(optimize_ncp=optimize_ncp,set_ncp=set_ncp,ncp.max=ncp.max,random.seed=random.seed,
                                                                       maxiter=maxiter,coeff.ridge=coeff.ridge,threshold=threshold,method=method,out_file=out_file),
                                                 param_set= ParamSet$new(list(
 
@@ -90,7 +90,7 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
                                  col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
-                                 data_imputed <- missMDA_FMAD_MCA_PCA(data_to_impute,col_type,percent_of_missing,optimize_ncp = self$param_set$values$optimize_ncp,
+                                 data_imputed <- EMMA::missMDA_FMAD_MCA_PCA(data_to_impute,col_type,percent_of_missing,optimize_ncp = self$param_set$values$optimize_ncp,
                                                                       set_ncp = self$param_set$values$set_ncp,
                                                                       ncp.max = self$param_set$values$ncp.max, random.seed = self$param_set$values$random.seed,
                                                                       maxiter =  self$param_set$values$maxiter,coeff.ridge =  self$param_set$values$coeff.ridge,
@@ -144,7 +144,7 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
                                  col_miss <- colnames(data_to_impute)[percent_of_missing>0]
                                  col_no_miss <- colnames(data_to_impute)[percent_of_missing==0]
 
-                                 data_imputed <- missMDA_FMAD_MCA_PCA(data_to_impute,col_type,percent_of_missing,optimize_ncp = self$param_set$values$optimize_ncp,
+                                 data_imputed <- EMMA::missMDA_FMAD_MCA_PCA(data_to_impute,col_type,percent_of_missing,optimize_ncp = self$param_set$values$optimize_ncp,
                                                                       set_ncp = self$param_set$values$set_ncp,
                                                                       ncp.max = self$param_set$values$ncp.max, random.seed = self$param_set$values$random.seed,
                                                                       maxiter =  self$param_set$values$maxiter,coeff.ridge =  self$param_set$values$coeff.ridge,
