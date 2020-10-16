@@ -80,5 +80,3 @@ PipeOpSimulateMissings = R6::R6Class("PipeOpSimulateMissings",
                                          
                                        }
                                      ))
-
-mlr_pipeops$add("simulate_missings", PipeOpSimulateMissings)

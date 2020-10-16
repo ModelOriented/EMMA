@@ -159,9 +159,3 @@ PipeOpmice_A <-  R6::R6Class("missMDA_MFAimputation",lock_objects=FALSE,
                                       }
                                     )
 )
-
-mlr_pipeops$add("miceA_imputation", PipeOpmice_A)
-
-
-
-

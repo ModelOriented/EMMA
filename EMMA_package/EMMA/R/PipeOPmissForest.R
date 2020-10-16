@@ -200,7 +200,3 @@ PipeOpmissForest <-  R6::R6Class("missForest_imputation",lock_objects=FALSE,
 
                            )
 )
-
-mlr_pipeops$add("missForest_imputation", PipeOpmissForest)
-
-
