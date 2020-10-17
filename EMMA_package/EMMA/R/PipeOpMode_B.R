@@ -13,30 +13,29 @@
 #' \itemize{
 #' \item \code{id} :: \code{character(1)}\cr
 #' Identifier of resulting object, default `"impute_mode_B"`.
-#'}
+#' }
 #' @importFrom data.table .N
 #' @export
 
 
 PipeOpMode_B = R6::R6Class("Mode_B_imputation",
-                           inherit = PipeOpImpute,
-                           public = list(
-                             initialize = function(id = "impute_mode_B", param_vals = list()) {
-                               super$initialize(id, param_vals = param_vals,packages = 'data.table', feature_types = c("factor", "integer", "logical", "numeric", "ordered"))
-                             }
-                           ),
-                           private = list(
-                             .train_imputer = function(feature, type, context) {
-                               NULL
-                             },
-                             .impute = function(feature, type, model, context) {
+  inherit = PipeOpImpute,
+  public = list(
+    initialize = function(id = "impute_mode_B", param_vals = list()) {
+      super$initialize(id, param_vals = param_vals, packages = "data.table", feature_types = c("factor", "integer", "logical", "numeric", "ordered"))
+    }
+  ),
+  private = list(
+    .train_imputer = function(feature, type, context) {
+      NULL
+    },
+    .impute = function(feature, type, model, context) {
+      feature_no_na = feature[!is.na(feature)]
 
-                               feature_no_na = feature[!is.na(feature)]
-
-                               feature[is.na(feature)]  <- data.table::data.table(feature_no_na)[, .N, by = list(feature_no_na)][get("N") == max(get("N"))]$feature_no_na[1]
-                               feature
-                             }
-                           )
+      feature[is.na(feature)] <- data.table::data.table(feature_no_na)[, .N, by = list(feature_no_na)][get("N") == max(get("N"))]$feature_no_na[1]
+      feature
+    }
+  )
 )
 
 

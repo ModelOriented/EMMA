@@ -1,4 +1,5 @@
 register_emma = function() {
+
   x = utils::getFromNamespace("mlr_pipeops", ns = "mlr3pipelines")
 
   x$add("Amelia_imputation", PipeOpAmelia)
@@ -20,7 +21,7 @@ register_emma = function() {
   x$add("missMDA_MFAimputation", PipeOpMissMDA_MFA)
   x$add("missRanger_imputation", PipeOpmissRanger)
   x$add("simulate_missings", PipeOpSimulateMissings)
-  x$add("softImpute_imputation",PipeOpSoftImpute)
+  x$add("softImpute_imputation", PipeOpSoftImpute)
 }
 
 .onLoad = function(libname, pkgname) { # nolint

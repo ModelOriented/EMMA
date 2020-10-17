@@ -24,95 +24,103 @@
 
 
 
-missMDA_MFA <- function(df,col_type,percent_of_missing,random.seed=123,ncp =2 ,col_0_1=F,maxiter=1000,
-                        coeff.ridge=1,threshold=1e-6,method='Regularized',out_file=NULL){
+missMDA_MFA <- function(df, col_type, percent_of_missing, random.seed = 123, ncp = 2, col_0_1 = F, maxiter = 1000,
+  coeff.ridge = 1, threshold = 1e-6, method = "Regularized", out_file = NULL) {
 
-  if(!is.null(out_file)){
-    write('MFA',file = out_file,append = T)
+  if (!is.null(out_file)) {
+    write("MFA", file = out_file, append = T)
   }
 
-  if (sum(is.na(df))==0){return(df)}
+  if (sum(is.na(df)) == 0) {
+    return(df)
+  }
 
-  #Creating gropus
-  col_type_simpler <-  ifelse(col_type=='factor','n','s')
+  # Creating gropus
+  col_type_simpler <- ifelse(col_type == "factor", "n", "s")
 
 
   groups <- c(99999999)
-  type <- c('remove')
+  type <- c("remove")
   counter <- 1
-  for (i in 1:(length(col_type_simpler)-1)){
-    flag <- col_type_simpler[i+1]
+  for (i in 1:(length(col_type_simpler) - 1)) {
+    flag <- col_type_simpler[i + 1]
 
 
-    if (flag ==col_type_simpler[i]){
-      counter <- counter +1
-      if (i +1 == length(col_type_simpler)){groups <- c(groups,counter)
-      type <- c(type,col_type_simpler[i+1])}
+    if (flag == col_type_simpler[i]) {
+      counter <- counter + 1
+      if (i + 1 == length(col_type_simpler)) {
+        groups <- c(groups, counter)
+        type <- c(type, col_type_simpler[i + 1])
+      }
     }
-    if (flag !=col_type_simpler[i]){
-      groups <- c(groups,counter)
-      type <- c(type,col_type_simpler[i])
+    if (flag != col_type_simpler[i]) {
+      groups <- c(groups, counter)
+      type <- c(type, col_type_simpler[i])
       counter <- 1
-      if (i +1 == length(col_type_simpler)){groups <- c(groups,counter)
-      type <- c(type,col_type_simpler[i+1])}
-    }}
+      if (i + 1 == length(col_type_simpler)) {
+        groups <- c(groups, counter)
+        type <- c(type, col_type_simpler[i + 1])
+      }
+    }
+  }
   groups <- groups[-1]
   type <- type[-1]
-  if (length(groups )==1 ){
+  if (length(groups) == 1) {
 
-    groups <- c(floor(groups/2),groups-floor(groups/2))
-    type <- rep(type[1],2)
+    groups <- c(floor(groups / 2), groups - floor(groups / 2))
+    type <- rep(type[1], 2)
   }
-# Imputation
+  # Imputation
   no_ok <- FALSE
 
 
   tryCatch({
-# tryning with selected ncp
-    final <-  missMDA::imputeMFA(df,group = groups,type = type,ncp = ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge)$completeObs
-
-    },error = function(e){no_ok <<- TRUE}
-    )
-  tryCatch({
-    #trying with ncp =1
-  if (no_ok | !exists('final')){final <-  missMDA::imputeMFA(df,group = groups,type = type,ncp = 1,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge)$completeObs}
-  if (!is.null(out_file)){
-    write('  OK',file = out_file,append = T)
-
+    # tryning with selected ncp
+    final <- missMDA::imputeMFA(df, group = groups, type = type, ncp = ncp, method = method, threshold = threshold, maxiter = maxiter, coeff.ridge = coeff.ridge)$completeObs
+  }, error = function(e) {
+    no_ok <<- TRUE
   }
-  },error=function(e){
-    if(!is.null(out_file)){
-      write(as.character(e),file = out_file,append = T)
+  )
+  tryCatch({
+    # trying with ncp =1
+    if (no_ok | !exists("final")) {
+      final <- missMDA::imputeMFA(df, group = groups, type = type, ncp = 1, method = method, threshold = threshold, maxiter = maxiter, coeff.ridge = coeff.ridge)$completeObs
+    }
+    if (!is.null(out_file)) {
+      write("  OK", file = out_file, append = T)
+
+    }
+  }, error = function(e) {
+    if (!is.null(out_file)) {
+      write(as.character(e), file = out_file, append = T)
     }
     stop(e)
   })
-  for (i in colnames(df)[(col_type=='factor')]){
+  for (i in colnames(df)[(col_type == "factor")]) {
 
-    if(!setequal(as.character(unique(na.omit(df[,i]))),levels(final[,i]))){
+    if (!setequal(as.character(unique(na.omit(df[, i]))), levels(final[, i]))) {
 
-      reg_exp <- paste0('.*',i)
-      levels(final[,i]) <- substr(sub(reg_exp, "", levels(final[,i])),start = 2,stop = 9999)
+      reg_exp <- paste0(".*", i)
+      levels(final[, i]) <- substr(sub(reg_exp, "", levels(final[, i])), start = 2, stop = 9999)
     }
   }
-  for (i in colnames(df)[(col_type=='factor')]){
+  for (i in colnames(df)[(col_type == "factor")]) {
 
-    if(!setequal(levels(na.omit(df[,i])),levels(final[,i]))){
+    if (!setequal(levels(na.omit(df[, i])), levels(final[, i]))) {
 
-      levels(final[,i]) <- c(levels(na.omit(df[,i])))
+      levels(final[, i]) <- c(levels(na.omit(df[, i])))
     }
   }
-    # adding 0_1 columns
+  # adding 0_1 columns
 
-if (col_0_1){
-  columns_with_missing <-  (as.data.frame(is.na(df))*1)[,percent_of_missing>0]
-  colnames(columns_with_missing) <- paste(colnames(columns_with_missing),'where',sep='_')
-  final <- cbind(final,columns_with_missing)
-}
-for (i in colnames(final)[col_type=='integer']){
-    final[,i] <- as.integer(final[,i])
+  if (col_0_1) {
+    columns_with_missing <- (as.data.frame(is.na(df)) * 1)[, percent_of_missing > 0]
+    colnames(columns_with_missing) <- paste(colnames(columns_with_missing), "where", sep = "_")
+    final <- cbind(final, columns_with_missing)
+  }
+  for (i in colnames(final)[col_type == "integer"]) {
+    final[, i] <- as.integer(final[, i])
   }
 
-return(final)
+  return(final)
 }
-
-

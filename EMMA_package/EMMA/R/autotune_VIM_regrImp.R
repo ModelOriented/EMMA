@@ -20,77 +20,92 @@
 #'
 #' @return Return one data.frame with imputed values.
 #' @export
-autotune_VIM_regrImp <- function(df,col_type,percent_of_missing,col_0_1=F,robust=F,mod_cat=F,use_imputed=F,out_file=NULL){
-  if (!is.null(out_file)){
-    write('regrImp',file = out_file,append = T)
+autotune_VIM_regrImp <- function(df, col_type, percent_of_missing, col_0_1 = F, robust = F, mod_cat = F, use_imputed = F, out_file = NULL) {
+
+  if (!is.null(out_file)) {
+    write("regrImp", file = out_file, append = T)
   }
   tryCatch({
-  # Cheking if imputation can be perform
-  if(sum(percent_of_missing==0)==0){
-    stop('No values with no missing values')
-  }
-
-  if (sum(is.na(df))==0){return(df)}
-  int_col_names <- c()
-  # Converting integer to numeric
-  final <- lapply(df, function(x){
-
-    if(class(x)=='integer'){
-      return(as.numeric(x))
-
+    # Cheking if imputation can be perform
+    if (sum(percent_of_missing == 0) == 0) {
+      stop("No values with no missing values")
     }
-    else{return(x)}
-  })
+
+    if (sum(is.na(df)) == 0) {
+      return(df)
+    }
+    int_col_names <- c()
+    # Converting integer to numeric
+    final <- lapply(df, function(x) {
+      if (class(x) == "integer") {
+        return(as.numeric(x))
+
+      }
+      else {
+        return(x)
+      }
+    })
 
 
-  final <- as.data.frame(final)
-  iter_columns <-  (1:ncol(df))[percent_of_missing>0]
-  for (i in iter_columns ){
-    error <- NULL
-    WORK <- FALSE
-    full_formula <- paste(colnames(df)[i],paste(colnames(df)[percent_of_missing==0],collapse = '+'),sep = '~')
-    numeric_formula <- paste(colnames(df)[i],paste(colnames(df)[percent_of_missing==0 & (col_type=='numeric' | col_type =='integer')],collapse = '+'),sep = '~')
-    tryCatch({
-      final <- VIM::regressionImp(as.formula(full_formula),final,robust = robust,mod_cat = mod_cat,imp_var = F)
-      WORK <- TRUE
-
-    },error=function(e){error <<- e})
-
-    if(!WORK & sum(percent_of_missing==0 & (col_type=='numeric' | col_type =='integer'))>0){
+    final <- as.data.frame(final)
+    iter_columns <- (1:ncol(df))[percent_of_missing > 0]
+    for (i in iter_columns) {
+      error <- NULL
+      WORK <- FALSE
+      full_formula <- paste(colnames(df)[i], paste(colnames(df)[percent_of_missing == 0], collapse = "+"), sep = "~")
+      numeric_formula <- paste(colnames(df)[i], paste(colnames(df)[percent_of_missing == 0 & (col_type == "numeric" | col_type == "integer")], collapse = "+"), sep = "~")
       tryCatch({
-      final <-  VIM::regressionImp(as.formula(numeric_formula),final,robust = robust,mod_cat = mod_cat,imp_var = F)
-      WORK <- TRUE},error=function(e){error <<- e})
-    }
-    if (!WORK){
-      tryCatch({
-      part_formula <- paste(colnames(df)[i],paste(colnames(df)[percent_of_missing==0][1],collapse = '+'),sep = '~')
-      final <-  VIM::regressionImp(as.formula(part_formula),final,robust = robust,mod_cat = mod_cat,imp_var = F)
-      WORK <- TRUE},error=function(e){error <<- e})
-    }
-    if (!WORK & sum(percent_of_missing==0 & (col_type=='numeric' | col_type =='integer'))>0){
-      tryCatch({
-      numeric_part_formula <- paste(colnames(df)[i],paste(colnames(df)[percent_of_missing==0 & (col_type=='numeric' | col_type =='integer')][1],collapse = '+'),sep = '~')
-      final <-  VIM::regressionImp(as.formula(part_formula),final,robust = robust,mod_cat = mod_cat,imp_var = F)
-      WORK <- TRUE},error=function(e){error <<- e})
+        final <- VIM::regressionImp(as.formula(full_formula), final, robust = robust, mod_cat = mod_cat, imp_var = F)
+        WORK <- TRUE
+      }, error = function(e) {
+        error <<- e
+      })
+
+      if (!WORK & sum(percent_of_missing == 0 & (col_type == "numeric" | col_type == "integer")) > 0) {
+        tryCatch({
+          final <- VIM::regressionImp(as.formula(numeric_formula), final, robust = robust, mod_cat = mod_cat, imp_var = F)
+          WORK <- TRUE
+        }, error = function(e) {
+          error <<- e
+        })
+      }
+      if (!WORK) {
+        tryCatch({
+          part_formula <- paste(colnames(df)[i], paste(colnames(df)[percent_of_missing == 0][1], collapse = "+"), sep = "~")
+          final <- VIM::regressionImp(as.formula(part_formula), final, robust = robust, mod_cat = mod_cat, imp_var = F)
+          WORK <- TRUE
+        }, error = function(e) {
+          error <<- e
+        })
+      }
+      if (!WORK & sum(percent_of_missing == 0 & (col_type == "numeric" | col_type == "integer")) > 0) {
+        tryCatch({
+          numeric_part_formula <- paste(colnames(df)[i], paste(colnames(df)[percent_of_missing == 0 & (col_type == "numeric" | col_type == "integer")][1], collapse = "+"), sep = "~")
+          final <- VIM::regressionImp(as.formula(part_formula), final, robust = robust, mod_cat = mod_cat, imp_var = F)
+          WORK <- TRUE
+        }, error = function(e) {
+          error <<- e
+        })
+
+      }
+      if (!WORK) {
+        print(as.character(error))
+        stop(error)
+      }
+
+
+      if (use_imputed) {
+        percent_of_missing[i] <- 0
+      }
+
 
     }
-    if (!WORK){
-      print(as.character(error))
-      stop(error)}
-
-
-    if(use_imputed){
-      percent_of_missing[i] <- 0
+    if (!is.null(out_file)) {
+      write("  OK", file = out_file, append = T)
     }
-
-
-  }
-  if(!is.null(out_file)){
-    write('  OK',file = out_file,append = T)
-  }
-  },error=function(e){
-    if(!is.null(out_file)){
-      write(as.character(e),file = out_file,append = T)
+  }, error = function(e) {
+    if (!is.null(out_file)) {
+      write(as.character(e), file = out_file, append = T)
     }
     print(as.character(e))
     stop(e)
@@ -99,18 +114,18 @@ autotune_VIM_regrImp <- function(df,col_type,percent_of_missing,col_0_1=F,robust
 
 
 
-  if(col_0_1){
+  if (col_0_1) {
 
-    columns_with_missing <-  (as.data.frame(is.na(df))*1)[,percent_of_missing>0]
-    colnames(columns_with_missing) <- paste(colnames(columns_with_missing),'where',sep='_')
-    final <- cbind(final,columns_with_missing)
+    columns_with_missing <- (as.data.frame(is.na(df)) * 1)[, percent_of_missing > 0]
+    colnames(columns_with_missing) <- paste(colnames(columns_with_missing), "where", sep = "_")
+    final <- cbind(final, columns_with_missing)
 
   }
   # converting back to integer
-  if(exists('final')){
-  for (i in colnames(final)[col_type=='integer']){
-    final[,i] <- as.integer(final[,i])
-  }
+  if (exists("final")) {
+    for (i in colnames(final)[col_type == "integer"]) {
+      final[, i] <- as.integer(final[, i])
+    }
   }
 
   return(final)
@@ -118,8 +133,3 @@ autotune_VIM_regrImp <- function(df,col_type,percent_of_missing,col_0_1=F,robust
 
 
 }
-
-
-
-
-

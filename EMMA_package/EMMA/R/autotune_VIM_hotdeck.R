@@ -12,31 +12,30 @@
 #' @return Return data.frame with imputed values.
 #' @export
 
-autotune_VIM_hotdeck <- function(df,percent_of_missing,col_0_1=FALSE,out_file=NULL){
-
-  if(!is.null(out_file)){
-    write('VIM_HD',file = out_file,append = T)
+autotune_VIM_hotdeck <- function(df, percent_of_missing, col_0_1 = FALSE, out_file = NULL) {
+  if (!is.null(out_file)) {
+    write("VIM_HD", file = out_file, append = T)
   }
   tryCatch({
-  final <- VIM::hotdeck(df,imp_var = FALSE)
-  if(!is.null(out_file)){
-    write('  OK',file = out_file,append = T)
-  }},error=function(e){
-    if(!is.null(out_file)){
-      write(as.character(e),file = out_file,append = T)
+    final <- VIM::hotdeck(df, imp_var = FALSE)
+    if (!is.null(out_file)) {
+      write("  OK", file = out_file, append = T)
+    }
+  }, error = function(e) {
+    if (!is.null(out_file)) {
+      write(as.character(e), file = out_file, append = T)
     }
     stop(e)
   }
 
   )
-  if (col_0_1){
-    columns_with_missing <-  (as.data.frame(is.na(df))*1)[,percent_of_missing>0]
-    colnames(columns_with_missing) <- paste(colnames(columns_with_missing),'where',sep='_')
-    final <- cbind(final,columns_with_missing)
+  if (col_0_1) {
+    columns_with_missing <- (as.data.frame(is.na(df)) * 1)[, percent_of_missing > 0]
+    colnames(columns_with_missing) <- paste(colnames(columns_with_missing), "where", sep = "_")
+    final <- cbind(final, columns_with_missing)
   }
   return(final)
 
 
 
 }
-

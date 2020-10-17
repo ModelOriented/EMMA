@@ -14,18 +14,19 @@
 #' @details ---
 #' @return Return list of data.frame or NULLs if the imputation method didn't work.
 
-single_set_Pipeline <- function(df,id,col_type,percent_of_missing,out_file_location,single_set=TRUE,cores=NULL){
+single_set_Pipeline <- function(df, id, col_type, percent_of_missing, out_file_location, single_set = TRUE, cores = NULL) {
 
-  col_miss <- colnames(df)[percent_of_missing>0]
-    col_no_miss <- colnames(df)[percent_of_missing==0]
+  col_miss <- colnames(df)[percent_of_missing > 0]
+  col_no_miss <- colnames(df)[percent_of_missing == 0]
   # creating log_file
-  if (single_set){
-  out_file_location <- paste0(out_file_location,paste0('log_',id))
+  if (single_set) {
+    out_file_location <- paste0(out_file_location, paste0("log_", id))
 
-  write(paste0('LOG_FROM',Sys.Date()),file = out_file_location)}
+    write(paste0("LOG_FROM", Sys.Date()), file = out_file_location)
+  }
 
-  write(paste0('Dataset id :',id),file = out_file_location,append = T)
-  #if some imputation faile
+  write(paste0("Dataset id :", id), file = out_file_location, append = T)
+  # if some imputation faile
   mice_result <- NULL
   missMDA_result_1 <- NULL
   missMDA_result_2 <- NULL
@@ -34,82 +35,142 @@ single_set_Pipeline <- function(df,id,col_type,percent_of_missing,out_file_locat
   VIM_IRMI <- NULL
   VIM_KNN <- NULL
   VIM_REGRIMP <- NULL
-  softImpute_res<- NULL
+  softImpute_res <- NULL
   missRanger_res <- NULL
-  cat('Mice :',file = out_file_location,append = T)
+  cat("Mice :", file = out_file_location, append = T)
   tryCatch({
-  mice_result <- autotune_mice(df,col_miss=col_miss,col_no_miss=col_no_miss,percent_of_missing=percent_of_missing,col_type = col_type,iter = 5,verbose = F)
-  if (sum(is.na(mice_result))==0){write('OK',file = out_file_location,append = TRUE)}
-  else{ write('NO Errors and no all data imputed',file = out_file_location,append =  TRUE )}
-  },error = function(e) { write(as.character(e),file=out_file_location,append = TRUE)})
+    mice_result <- autotune_mice(df, col_miss = col_miss, col_no_miss = col_no_miss, percent_of_missing = percent_of_missing, col_type = col_type, iter = 5, verbose = F)
+    if (sum(is.na(mice_result)) == 0) {
+      write("OK", file = out_file_location, append = TRUE)
+    }
+    else {
+      write("NO Errors and no all data imputed", file = out_file_location, append = TRUE)
+    }
+  }, error = function(e) {
+    write(as.character(e), file = out_file_location, append = TRUE)
+  })
 
 
-  cat('missMDA_FMAD_MCA_PCA :',file = out_file_location,append = TRUE,sep = '')
+  cat("missMDA_FMAD_MCA_PCA :", file = out_file_location, append = TRUE, sep = "")
   tryCatch({
-  missMDA_result_1 <- missMDA_FMAD_MCA_PCA(df,col_type,percent_of_missing)
-  if (sum(is.na(missMDA_result_1))==0){write('OK',file = out_file_location,append = TRUE)}
-  else{ write('NO Errors and no all data imputed',file = out_file_location ,append = TRUE )}
-  },error = function(e) { write(as.character(e),file=out_file_location,append = TRUE)})
+    missMDA_result_1 <- missMDA_FMAD_MCA_PCA(df, col_type, percent_of_missing)
+    if (sum(is.na(missMDA_result_1)) == 0) {
+      write("OK", file = out_file_location, append = TRUE)
+    }
+    else {
+      write("NO Errors and no all data imputed", file = out_file_location, append = TRUE)
+    }
+  }, error = function(e) {
+    write(as.character(e), file = out_file_location, append = TRUE)
+  })
 
 
-  cat('missMDA_MFA :',file = out_file_location,append = TRUE,sep='')
+  cat("missMDA_MFA :", file = out_file_location, append = TRUE, sep = "")
   tryCatch({
-  missMDA_result_2 <- missMDA_MFA(df,col_type,percent_of_missing)
-  if (sum(is.na(missMDA_result_2))==0){write('OK',file = out_file_location,append = TRUE)}
-  else{ write('NO Errors and no all data imputed',file = out_file_location,append =  TRUE )}
-  },error = function(e) { write(as.character(e),file=out_file_location,append = TRUE)})
+    missMDA_result_2 <- missMDA_MFA(df, col_type, percent_of_missing)
+    if (sum(is.na(missMDA_result_2)) == 0) {
+      write("OK", file = out_file_location, append = TRUE)
+    }
+    else {
+      write("NO Errors and no all data imputed", file = out_file_location, append = TRUE)
+    }
+  }, error = function(e) {
+    write(as.character(e), file = out_file_location, append = TRUE)
+  })
 
-  cat('missForest :',file = out_file_location,append = TRUE,sep='')
+  cat("missForest :", file = out_file_location, append = TRUE, sep = "")
   tryCatch({
-  missForest_result <- autotune_missForest(df,percent_of_missing,cores = cores,verbose = F)
-  if (sum(is.na(missForest_result))==0){write('OK',file = out_file_location,append = TRUE)}
-  else{ write('NO Errors and no all data imputed',file = out_file_location ,append = TRUE )}
-  },error = function(e) { write(as.character(e),file=out_file_location,append = TRUE)})
+    missForest_result <- autotune_missForest(df, percent_of_missing, cores = cores, verbose = F)
+    if (sum(is.na(missForest_result)) == 0) {
+      write("OK", file = out_file_location, append = TRUE)
+    }
+    else {
+      write("NO Errors and no all data imputed", file = out_file_location, append = TRUE)
+    }
+  }, error = function(e) {
+    write(as.character(e), file = out_file_location, append = TRUE)
+  })
 
-  cat('VIM_HD :',file = out_file_location,append = TRUE,sep='')
+  cat("VIM_HD :", file = out_file_location, append = TRUE, sep = "")
   tryCatch({
-    VIM_HD <- autotune_VIM_hotdeck(df,percent_of_missing)
-    if (sum(is.na(VIM_HD))==0){write('OK',file = out_file_location,append = TRUE)}
-    else{ write('NO Errors and no all data imputed',file = out_file_location ,append = TRUE )}
-  },error = function(e) { write(as.character(e),file=out_file_location,append = TRUE)})
+    VIM_HD <- autotune_VIM_hotdeck(df, percent_of_missing)
+    if (sum(is.na(VIM_HD)) == 0) {
+      write("OK", file = out_file_location, append = TRUE)
+    }
+    else {
+      write("NO Errors and no all data imputed", file = out_file_location, append = TRUE)
+    }
+  }, error = function(e) {
+    write(as.character(e), file = out_file_location, append = TRUE)
+  })
 
-  cat('VIM_KNN :',file = out_file_location,append = TRUE,sep='')
+  cat("VIM_KNN :", file = out_file_location, append = TRUE, sep = "")
   tryCatch({
-    VIM_KNN <- autotune_VIM_kNN(df,percent_of_missing)
-    if (sum(is.na(VIM_KNN))==0){write('OK',file = out_file_location,append = TRUE)}
-    else{ write('NO Errors and no all data imputed',file = out_file_location ,append = TRUE )}
-  },error = function(e) { write(as.character(e),file=out_file_location,append = TRUE)})
+    VIM_KNN <- autotune_VIM_kNN(df, percent_of_missing)
+    if (sum(is.na(VIM_KNN)) == 0) {
+      write("OK", file = out_file_location, append = TRUE)
+    }
+    else {
+      write("NO Errors and no all data imputed", file = out_file_location, append = TRUE)
+    }
+  }, error = function(e) {
+    write(as.character(e), file = out_file_location, append = TRUE)
+  })
 
-  cat('VIM_Irmi :',file = out_file_location,append = TRUE,sep='')
+  cat("VIM_Irmi :", file = out_file_location, append = TRUE, sep = "")
   tryCatch({
-    VIM_IRMI <- autotune_VIM_Irmi(df,percent_of_missing)
-    if (sum(is.na(VIM_IRMI))==0){write('OK',file = out_file_location,append = TRUE)}
-    else{ write('NO Errors and no all data imputed',file = out_file_location ,append = TRUE )}
-  },error = function(e) { write(as.character(e),file=out_file_location,append = TRUE)})
+    VIM_IRMI <- autotune_VIM_Irmi(df, percent_of_missing)
+    if (sum(is.na(VIM_IRMI)) == 0) {
+      write("OK", file = out_file_location, append = TRUE)
+    }
+    else {
+      write("NO Errors and no all data imputed", file = out_file_location, append = TRUE)
+    }
+  }, error = function(e) {
+    write(as.character(e), file = out_file_location, append = TRUE)
+  })
 
-  cat('VIM_regrImp :',file = out_file_location,append = TRUE,sep='')
+  cat("VIM_regrImp :", file = out_file_location, append = TRUE, sep = "")
   tryCatch({
-    VIM_REGRIMP<- autotune_VIM_regrImp(df,percent_of_missing = percent_of_missing,col_type = col_type)
-    if (sum(is.na(VIM_REGRIMP))==0){write('OK',file = out_file_location,append = TRUE)}
-    else{ write('NO Errors and no all data imputed',file = out_file_location ,append = TRUE )}
-  },error = function(e) { write(as.character(e),file=out_file_location,append = TRUE)})
+    VIM_REGRIMP <- autotune_VIM_regrImp(df, percent_of_missing = percent_of_missing, col_type = col_type)
+    if (sum(is.na(VIM_REGRIMP)) == 0) {
+      write("OK", file = out_file_location, append = TRUE)
+    }
+    else {
+      write("NO Errors and no all data imputed", file = out_file_location, append = TRUE)
+    }
+  }, error = function(e) {
+    write(as.character(e), file = out_file_location, append = TRUE)
+  })
 
-  cat('softImpute :',file = out_file_location,append = TRUE,sep='')
+  cat("softImpute :", file = out_file_location, append = TRUE, sep = "")
   tryCatch({
-    softImpute_res <- autotune_softImpute(df,percent_of_missing,col_type)
-    if (sum(is.na(softImpute_res))==0){write('OK',file = out_file_location,append = TRUE)}
-    else{ write('NO Errors and no all data imputed',file = out_file_location ,append = TRUE )}
-  },error = function(e) { write(as.character(e),file=out_file_location,append = TRUE)})
+    softImpute_res <- autotune_softImpute(df, percent_of_missing, col_type)
+    if (sum(is.na(softImpute_res)) == 0) {
+      write("OK", file = out_file_location, append = TRUE)
+    }
+    else {
+      write("NO Errors and no all data imputed", file = out_file_location, append = TRUE)
+    }
+  }, error = function(e) {
+    write(as.character(e), file = out_file_location, append = TRUE)
+  })
 
-  cat('missRanger :',file = out_file_location,append = TRUE,sep='')
+  cat("missRanger :", file = out_file_location, append = TRUE, sep = "")
   tryCatch({
-    missRanger_res <- autotune_missRanger(df,percent_of_missing)
-    if (sum(is.na(missRanger_res))==0){write('OK',file = out_file_location,append = TRUE)}
-    else{ write('NO Errors and no all data imputed',file = out_file_location ,append = TRUE )}
-  },error = function(e) { write(as.character(e),file=out_file_location,append = TRUE)})
+    missRanger_res <- autotune_missRanger(df, percent_of_missing)
+    if (sum(is.na(missRanger_res)) == 0) {
+      write("OK", file = out_file_location, append = TRUE)
+    }
+    else {
+      write("NO Errors and no all data imputed", file = out_file_location, append = TRUE)
+    }
+  }, error = function(e) {
+    write(as.character(e), file = out_file_location, append = TRUE)
+  })
 
-  write('----------------------',file = out_file_location,append = TRUE)
-  return(list(mice_result,missMDA_result_1,missMDA_result_2,missForest_result))
+  write("----------------------", file = out_file_location, append = TRUE)
+  return(list(mice_result, missMDA_result_1, missMDA_result_2, missForest_result))
 
 }
 
@@ -138,9 +199,3 @@ single_set_Pipeline <- function(df,id,col_type,percent_of_missing,out_file_locat
 #
 # test <- Pipeline(df,id,col_type,percent_of_missing,out_file_location = '/home/jan/Pulpit/')
 # library(missMDA)
-
-
-
-
-
-

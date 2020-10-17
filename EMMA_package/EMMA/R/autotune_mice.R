@@ -13,58 +13,68 @@
 #' @return List with formula object[1] and information if its no numeric value in dataset[2].
 
 
-formula_creating <- function(df,col_miss,col_no_miss,col_type,percent_of_missing){
+formula_creating <- function(df, col_miss, col_no_miss, col_type, percent_of_missing) {
 
 
   # Flags if no numeric value in df
-  no_numeric <-  T
 
-  #If df contains numeric values
-  if  ('numeric' %in% col_type | 'intiger' %in% col_type){
+  no_numeric <- T
+
+  # If df contains numeric values
+  if ("numeric" %in% col_type | "intiger" %in% col_type) {
     no_numeric <- F
-    numeric_columns <- colnames(df)[ifelse('numeric' == col_type | 'intiger' == col_type,T,F)]
+    numeric_columns <- colnames(df)[ifelse("numeric" == col_type | "intiger" == col_type, T, F)]
 
-    #If some numeric columns don't contain missing data
-    numeric_no_missing <- intersect(numeric_columns,colnames(df)[percent_of_missing==0])
-    if (length(numeric_no_missing)>0){
+    # If some numeric columns don't contain missing data
+    numeric_no_missing <- intersect(numeric_columns, colnames(df)[percent_of_missing == 0])
+    if (length(numeric_no_missing) > 0) {
       predicted_value <- numeric_no_missing[1]
-      if (sum(percent_of_missing>0)>=3){
-        columns_missing  <-  as.data.frame(cbind(percent_of_missing,colnames(df)))
-        columns_missing <- columns_missing[order(as.numeric(as.character(columns_missing$percent_of_missing)),decreasing = TRUE),]
+      if (sum(percent_of_missing > 0) >= 3) {
+        columns_missing <- as.data.frame(cbind(percent_of_missing, colnames(df)))
+        columns_missing <- columns_missing[order(as.numeric(as.character(columns_missing$percent_of_missing)), decreasing = TRUE), ]
         predicting_values <- columns_missing$V2[1:3]
       }
-      else{ predicting_values <- col_miss}
+      else {
+        predicting_values <- col_miss
+      }
 
     }
 
-    else{
-      columns_missing_type <- as.data.frame(cbind(percent_of_missing,colnames(df),col_type))
-      columns_missing_type_n_i <- columns_missing_type[columns_missing_type$col_type=='numeric' | columns_missing_type$col_type == 'initger',]
-      if (length(row.names(columns_missing_type_n_i))>=1) {
-        predicted_value <- columns_missing_type_n_i[order(columns_missing_type$percent_of_missing),'V2'][1]}
-      else {no_numeric <-  T }
-      if (length(row.names(columns_missing_type[-1,]))>=3){
-        predicting_values <-  columns_missing_type[order(as.numeric(as.character(columns_missing_type$percent_of_missing)),decreasing = T),'V2'][1:3]
+    else {
+      columns_missing_type <- as.data.frame(cbind(percent_of_missing, colnames(df), col_type))
+      columns_missing_type_n_i <- columns_missing_type[columns_missing_type$col_type == "numeric" | columns_missing_type$col_type == "initger", ]
+      if (length(row.names(columns_missing_type_n_i)) >= 1) {
+        predicted_value <- columns_missing_type_n_i[order(columns_missing_type$percent_of_missing), "V2"][1]
       }
-      else{predicting_values <-setdiff(col_miss,as.character(predicted_value))}
+      else {
+        no_numeric <- T
+      }
+      if (length(row.names(columns_missing_type[-1, ])) >= 3) {
+        predicting_values <- columns_missing_type[order(as.numeric(as.character(columns_missing_type$percent_of_missing)), decreasing = T), "V2"][1:3]
+      }
+      else {
+        predicting_values <- setdiff(col_miss, as.character(predicted_value))
+      }
     }
 
 
   }
   # If df don't contains numeric values
-  if (no_numeric){
+  if (no_numeric) {
     predicted_value <- col_no_miss[1]
-    if (sum(percent_of_missing>0)>=3){
-      columns_missing  <-  as.data.frame(cbind(percent_of_missing,colnames(df)))
-      columns_missing <- columns_missing[order(as.numeric(as.character(columns_missing$percent_of_missing)),decreasing = TRUE),]
+    if (sum(percent_of_missing > 0) >= 3) {
+      columns_missing <- as.data.frame(cbind(percent_of_missing, colnames(df)))
+      columns_missing <- columns_missing[order(as.numeric(as.character(columns_missing$percent_of_missing)), decreasing = TRUE), ]
       predicting_values <- columns_missing$V2[1:3]
     }
-    else{ predicting_values <- col_miss}
+    else {
+      predicting_values <- col_miss
+    }
   }
 
 
 
-  return(list(as.formula(paste(as.character(predicted_value),paste(as.character(predicting_values),collapse = '+'),sep='~')),no_numeric))
+  return(list(as.formula(paste(as.character(predicted_value), paste(as.character(predicting_values), collapse = "+"), sep = "~")), no_numeric))
 
 }
 
@@ -88,46 +98,51 @@ formula_creating <- function(df,col_miss,col_no_miss,col_type,percent_of_missing
 #'
 #' @return List with best correlation (or fraction ) at first place, best method at second, and results of every iteration at 3.
 
-random_param_mice_search <- function(low_corr=0,up_corr=1,methods_random = c('pmm'),df,formula,no_numeric,iter,random.seed=123,correlation=T){
+random_param_mice_search <- function(low_corr = 0, up_corr = 1, methods_random = c("pmm"), df, formula, no_numeric, iter, random.seed = 123, correlation = T) {
 
   set.seed(random.seed)
-  corr <- runif(iter,0,1)
-  if (!is.null(methods_random)){
-  met <- sample(methods_random,iter,replace = T)
-}
-  if(is.null(methods_random)){
+  corr <- runif(iter, 0, 1)
+  if (!is.null(methods_random)) {
+    met <- sample(methods_random, iter, replace = T)
+  }
+  if (is.null(methods_random)) {
     met <- NULL
   }
   # Performing random search and saving result
-  result <- rep(1,iter)
+  result <- rep(1, iter)
 
-  for (i in 1:iter){
+  for (i in 1:iter) {
     skip_to_next <- F
 
     tryCatch(
       {
-        if (correlation){
-          inputation <- mice::mice(df,method = met[i],pred=mice::quickpred(df, mincor=corr[i],method = 'spearman'),seed = random.seed)}
-        if (!correlation){
-          inputation <- mice::mice(df,method = met[i],pred=mice::quickpred(df, minpuc=corr[i],method = 'spearman'),seed = random.seed)
+        if (correlation) {
+          inputation <- mice::mice(df, method = met[i], pred = mice::quickpred(df, mincor = corr[i], method = "spearman"), seed = random.seed)
+        }
+        if (!correlation) {
+          inputation <- mice::mice(df, method = met[i], pred = mice::quickpred(df, minpuc = corr[i], method = "spearman"), seed = random.seed)
         }
 
-        if (as.logical(no_numeric[1])){
-          fit <- with(inputation,glm(as.formula(as.character(formula)),family = binomial))
+        if (as.logical(no_numeric[1])) {
+          fit <- with(inputation, glm(as.formula(as.character(formula)), family = binomial))
         }
-        if (!as.logical(no_numeric[1])){
+        if (!as.logical(no_numeric[1])) {
 
-          fit <- with(inputation,expr = lm((as.formula(as.character(formula)))))
+          fit <- with(inputation, expr = lm((as.formula(as.character(formula)))))
         }
         result[i] <- mean(mice::tidy(mice::pool(fit))$fmi)
-
-      }, error = function(e) { skip_to_next <<- TRUE})
-    if(skip_to_next) { next }
+      },
+      error = function(e) {
+        skip_to_next <<- TRUE
+      })
+    if (skip_to_next) {
+      next
+    }
 
   }
 
   # Returning result
-  return(list(corr[which.min(result)],met[which.min(result)],result))
+  return(list(corr[which.min(result)], met[which.min(result)], result))
 
 }
 
@@ -166,53 +181,74 @@ random_param_mice_search <- function(low_corr=0,up_corr=1,methods_random = c('pm
 #' @importFrom mice complete
 #' @return Return imputed datasets or mids object containing multi imputation datasets.
 #' @export
-autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,set_cor=0.5,set_method='pmm',percent_of_missing,low_corr=0,up_corr=1,methods_random=c('pmm'),iter,random.seed=123,optimize = T,correlation=T,return_one=T,col_0_1 = F ,verbose=FALSE,out_file=NULL){
+autotune_mice <- function(df, m = 5, maxit = 5, col_miss, col_no_miss, col_type, set_cor = 0.5, set_method = "pmm", percent_of_missing, low_corr = 0, up_corr = 1, methods_random = c("pmm"), iter, random.seed = 123, optimize = T, correlation = T, return_one = T, col_0_1 = F, verbose = FALSE, out_file = NULL) {
 
-  if(sum(is.na(df))==0){return(df)}
+  if (sum(is.na(df)) == 0) {
+    return(df)
+  }
 
 
   #### Bonus single column imputation
-  single_col_imp <- function(df,index_y,methode){
+  single_col_imp <- function(df, index_y, methode) {
 
     #### selecting imputation function
+
     function_to_impute <- 0
-    if(!is.null(methode)){
-      if(methode=='pmm'){function_to_impute <- mice::mice.impute.pmm}
-      if(methode=='midastouch'){function_to_impute <- mice::mice.impute.midastouch}
-      if(methode=='sample'){function_to_impute <- mice::mice.impute.sample}
-      if(methode=='cart'){function_to_impute <- mice::mice.impute.cart}
-      if(methode=='rf'){function_to_impute <- mice::mice.impute.rf}
+    if (!is.null(methode)) {
+      if (methode == "pmm") {
+        function_to_impute <- mice::mice.impute.pmm
+      }
+      if (methode == "midastouch") {
+        function_to_impute <- mice::mice.impute.midastouch
+      }
+      if (methode == "sample") {
+        function_to_impute <- mice::mice.impute.sample
+      }
+      if (methode == "cart") {
+        function_to_impute <- mice::mice.impute.cart
+      }
+      if (methode == "rf") {
+        function_to_impute <- mice::mice.impute.rf
+      }
 
     }
-    if(is.null(methode)){
-      if(class(df[,index_y])=='factor'){
-        if(length(levels(df[,index_y]))==2){
+    if (is.null(methode)) {
+      if (class(df[, index_y]) == "factor") {
+        if (length(levels(df[, index_y])) == 2) {
           function_to_impute <- mice::mice.impute.logreg
         }
-        else{function_to_impute <- mice::mice.impute.polyreg}
+        else {
+          function_to_impute <- mice::mice.impute.polyreg
+        }
       }
-      if(class(df[,index_y])=='order'){function_to_impute <- mice::mice.impute.polr}
-      if(is(df[,index_y],'numeric')){function_to_impute <- mice::mice.impute.pmm}
+      if (class(df[, index_y]) == "order") {
+        function_to_impute <- mice::mice.impute.polr
+      }
+      if (is(df[, index_y], "numeric")) {
+        function_to_impute <- mice::mice.impute.pmm
+      }
 
     }
 
 
     #### Prepering data frame
     df_n <- df
-    df_n <- lapply(df_n, function(x){
-      if(class(x)=='factor'){return(as.integer(x))}
+    df_n <- lapply(df_n, function(x) {
+      if (class(x) == "factor") {
+        return(as.integer(x))
+      }
       return(x)
     })
     df_n <- as.data.frame(df_n)
 
     #### imputation
-    vector_to_impute <- df[,index_y]
+    vector_to_impute <- df[, index_y]
 
     ry <- !is.na(vector_to_impute)
 
-    x <- as.matrix(df_n[,-index_y])
+    x <- as.matrix(df_n[, -index_y])
 
-    vector_to_impute[!ry] <- function_to_impute(vector_to_impute,ry,x)
+    vector_to_impute[!ry] <- function_to_impute(vector_to_impute, ry, x)
     return(vector_to_impute)
 
   }
@@ -222,92 +258,92 @@ autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,set_cor=0
 
 
 
-  formula_cre <- formula_creating(df,col_miss,col_no_miss,col_type,percent_of_missing)
+  formula_cre <- formula_creating(df, col_miss, col_no_miss, col_type, percent_of_missing)
   formula <- formula_cre[1]
   no_numeric <- as.logical(formula_cre[2])
 
   # If user chose to optimise no numeric dataset
   tryCatch({
-  if (optimize){
-    if(!is.null(out_file)){
-      write('MICE',file = out_file,append = T)
-    }
-    params <- random_param_mice_search(df=df,low_corr = low_corr,up_corr = up_corr,methods_random = methods_random,formula = formula,no_numeric = no_numeric,random.seed = random.seed,iter=iter,correlation = correlation)
-    #If user chose to use correlation
-    if (!is.null(out_file)){
+    if (optimize) {
+      if (!is.null(out_file)) {
+        write("MICE", file = out_file, append = T)
+      }
+      params <- random_param_mice_search(df = df, low_corr = low_corr, up_corr = up_corr, methods_random = methods_random, formula = formula, no_numeric = no_numeric, random.seed = random.seed, iter = iter, correlation = correlation)
+      # If user chose to use correlation
+      if (!is.null(out_file)) {
 
-    write('correlation    method',file = out_file,append = T)
-    write(c(params[[1]],params[[2]]),file = out_file,append = T)
-
-    }
-
-    if (correlation){
-
-      imp_final <- mice::mice(df,printFlag = verbose,m=m,maxit = maxit,method = (params[[2]]),pred=mice::quickpred(df, mincor=(params[[1]]),method = 'spearman'),seed = random.seed)
+        write("correlation    method", file = out_file, append = T)
+        write(c(params[[1]], params[[2]]), file = out_file, append = T)
 
       }
-    if (!correlation){
-      imp_final <- mice::mice(df,printFlag = verbose,m=m,maxit = maxit,method = (params[[2]]),pred=mice::quickpred(df, minpuc = (params[[1]]),method = 'spearman'),seed = random.seed)
-    }
+
+      if (correlation) {
+
+        imp_final <- mice::mice(df, printFlag = verbose, m = m, maxit = maxit, method = (params[[2]]), pred = mice::quickpred(df, mincor = (params[[1]]), method = "spearman"), seed = random.seed)
+
+      }
+      if (!correlation) {
+        imp_final <- mice::mice(df, printFlag = verbose, m = m, maxit = maxit, method = (params[[2]]), pred = mice::quickpred(df, minpuc = (params[[1]]), method = "spearman"), seed = random.seed)
+      }
 
 
 
     }
 
 
-  if (!optimize){
+    if (!optimize) {
 
-    if (correlation){
-      imp_final <- mice::mice(df,printFlag = verbose,m=m,maxit = maxit,method = set_method,pred=mice::quickpred(df, mincor=set_cor,method = 'spearman'),seed = random.seed)
+      if (correlation) {
+        imp_final <- mice::mice(df, printFlag = verbose, m = m, maxit = maxit, method = set_method, pred = mice::quickpred(df, mincor = set_cor, method = "spearman"), seed = random.seed)
+      }
+      if (!correlation) {
+        imp_final <- mice::mice(df, printFlag = verbose, m = m, maxit = maxit, method = set_method, pred = mice::quickpred(df, minpuc = set_cor, method = "spearman"), seed = random.seed)
+      }
     }
-    if (!correlation){
-      imp_final <- mice::mice(df,printFlag = verbose,m=m,maxit = maxit,method = set_method,pred=mice::quickpred(df, minpuc = set_cor,method = 'spearman'),seed = random.seed)
+    if (!is.null(out_file)) {
+      write("OK", file = out_file, append = T)
     }
-  }
-  if(!is.null(out_file)){
-    write('OK',file = out_file,append = T)
-  }
-  },error=function(e){
-    if(!is.null(out_file)){
-      write(as.character(e),file = out_file,append = T)
+  }, error = function(e) {
+    if (!is.null(out_file)) {
+      write(as.character(e), file = out_file, append = T)
     }
     stop(e)
   })
   # If user chose to return one dataset
-  if (return_one){
+  if (return_one) {
     imputed_dataset <- mice::complete(imp_final)
     # If user chose to return 0,1 columns
-    if(optimize){
-      for (i in (1:ncol(df))[percent_of_missing>0]){
-        if(sum(is.na(imputed_dataset[,i]))>0){
-          imputed_dataset[,i] <- single_col_imp(imputed_dataset,i,params[[2]])
+    if (optimize) {
+      for (i in (1:ncol(df))[percent_of_missing > 0]) {
+        if (sum(is.na(imputed_dataset[, i])) > 0) {
+          imputed_dataset[, i] <- single_col_imp(imputed_dataset, i, params[[2]])
         }
       }
     }
-    if(!optimize){
-      for (i in (1:ncol(df))[percent_of_missing>0]){
-        if(sum(is.na(imputed_dataset[,i]))>0){
-          imputed_dataset[,i] <- single_col_imp(imputed_dataset,i,set_method)
+    if (!optimize) {
+      for (i in (1:ncol(df))[percent_of_missing > 0]) {
+        if (sum(is.na(imputed_dataset[, i])) > 0) {
+          imputed_dataset[, i] <- single_col_imp(imputed_dataset, i, set_method)
         }
       }
     }
 
 
-    if (col_0_1 ){
-      where_imputed <- as.data.frame(imp_final$where)[,imp_final$nmis>0]
-      colnames(where_imputed) <- paste(colnames(where_imputed),'where',sep = '_')
-      imputed_dataset <- cbind(imputed_dataset,where_imputed*1)
+    if (col_0_1) {
+      where_imputed <- as.data.frame(imp_final$where)[, imp_final$nmis > 0]
+      colnames(where_imputed) <- paste(colnames(where_imputed), "where", sep = "_")
+      imputed_dataset <- cbind(imputed_dataset, where_imputed * 1)
     }
-    for (i in colnames(df)[(col_type=='factor')]){
+    for (i in colnames(df)[(col_type == "factor")]) {
 
-      if(!setequal(levels(na.omit(df[,i])),levels(imputed_dataset[,i]))){
+      if (!setequal(levels(na.omit(df[, i])), levels(imputed_dataset[, i]))) {
 
-        levels(imputed_dataset[,i]) <- c(levels(na.omit(df[,i])))
+        levels(imputed_dataset[, i]) <- c(levels(na.omit(df[, i])))
       }
     }
     return(imputed_dataset)
   }
-  if(!return_one){
+  if (!return_one) {
     return(imp_final)
   }
 
@@ -315,6 +351,3 @@ autotune_mice <- function(df,m=5,maxit=5,col_miss,col_no_miss,col_type,set_cor=0
 
 
 }
-
-
-

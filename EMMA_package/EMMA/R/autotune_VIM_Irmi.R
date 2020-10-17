@@ -18,30 +18,29 @@
 #'
 #' @return Return one data.frame with imputed values.
 #' @export
-autotune_VIM_Irmi <- function(df,col_type,percent_of_missing,eps=5,maxit=100,step=FALSE,robust=FALSE,init.method='kNN',force=FALSE,col_0_1=FALSE,out_file=NULL){
+autotune_VIM_Irmi <- function(df, col_type, percent_of_missing, eps = 5, maxit = 100, step = FALSE, robust = FALSE, init.method = "kNN", force = FALSE, col_0_1 = FALSE, out_file = NULL) {
 
-  if(!is.null(out_file)){
-    write('VIM_IRMI',file = out_file,append = T)
+  if (!is.null(out_file)) {
+    write("VIM_IRMI", file = out_file, append = T)
   }
 
   tryCatch({
-
-    final <- VIM::irmi(df,eps=eps,maxit = maxit,step = step,robust = robust,init.method = init.method,force = force,imp_var = F)
-    if(!is.null(out_file)){
-      write('  OK ',file = out_file,append = T)
+    final <- VIM::irmi(df, eps = eps, maxit = maxit, step = step, robust = robust, init.method = init.method, force = force, imp_var = F)
+    if (!is.null(out_file)) {
+      write("  OK ", file = out_file, append = T)
     }
-  },error = function(e){
-    if(!is.null((out_file))){
-      write(as.character(e),file = out_file,append = T)
-        write('IRMI dont work on selcted params runing on defoult',file = out_file,append = T)
+  }, error = function(e) {
+    if (!is.null((out_file))) {
+      write(as.character(e), file = out_file, append = T)
+      write("IRMI dont work on selcted params runing on defoult", file = out_file, append = T)
     }
-    print('IRMI dont work on selcted params runing on defoult')
+    print("IRMI dont work on selcted params runing on defoult")
 
     tryCatch({
-    final <- VIM::irmi(df,imp_var = F)},error=function(e){
-
-      if(!is.null((out_file))){
-        write(as.character(e),file = out_file,append = T)
+      final <- VIM::irmi(df, imp_var = F)
+    }, error = function(e) {
+      if (!is.null((out_file))) {
+        write(as.character(e), file = out_file, append = T)
 
       }
       stop(e)
@@ -50,21 +49,18 @@ autotune_VIM_Irmi <- function(df,col_type,percent_of_missing,eps=5,maxit=100,ste
 
 
 
-  if(col_0_1){
+  if (col_0_1) {
 
-    columns_with_missing <-  (as.data.frame(is.na(df))*1)[,percent_of_missing>0]
-    colnames(columns_with_missing) <- paste(colnames(columns_with_missing),'where',sep='_')
-    final <- cbind(final,columns_with_missing)
+    columns_with_missing <- (as.data.frame(is.na(df)) * 1)[, percent_of_missing > 0]
+    colnames(columns_with_missing) <- paste(colnames(columns_with_missing), "where", sep = "_")
+    final <- cbind(final, columns_with_missing)
 
   }
-  for (i in colnames(final)[col_type=='integer']){
-    final[,i] <- as.integer(final[,i])
+  for (i in colnames(final)[col_type == "integer"]) {
+    final[, i] <- as.integer(final[, i])
   }
 
 
   return(final)
 
 }
-
-
-

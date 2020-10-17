@@ -21,13 +21,13 @@ simulate_missings(
 
 \item{per_variables_missings}{Percentage of variables which will have missing values.}
 
-\item{variables_with_missings}{Only when `per_variables_missings` is `NULL`. 
+\item{variables_with_missings}{Only when `per_variables_missings` is `NULL`.
 Vector of column indexes where missings will be generated.}
 }
 \value{
 Dataset with generated missings.
 }
 \description{
-Function generates random missing values in given dataset 
+Function generates random missing values in given dataset
 according to set parameters.
 }

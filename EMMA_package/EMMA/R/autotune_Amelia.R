@@ -24,65 +24,70 @@
 
 
 
-autotune_Amelia <- function(df,col_type,percent_of_missing,col_0_1=FALSE,parallel=TRUE,polytime=NULL,splinetime=NULL,intercs=FALSE,
-                            empir=NULL,verbose=FALSE,return_one=TRUE,m=3,out_file=NULL) {
-  if(!is.null(out_file)){write('Amelia  ',file = out_file,append = T)}
+autotune_Amelia <- function(df, col_type, percent_of_missing, col_0_1 = FALSE, parallel = TRUE, polytime = NULL, splinetime = NULL, intercs = FALSE,
+  empir = NULL, verbose = FALSE, return_one = TRUE, m = 3, out_file = NULL) {
+
+  if (!is.null(out_file)) {
+    write("Amelia  ", file = out_file, append = T)
+  }
   col_0_1 <- F
 
-  if (sum(is.na(df))==0){return(df)}
+  if (sum(is.na(df)) == 0) {
+    return(df)
+  }
   # prepering information about categorical column
-  categorical_col <-  colnames(df)[ifelse(col_type=='factor',T,F)]
-  if(length(categorical_col)==0){categorical_col <- NULL}
+  categorical_col <- colnames(df)[ifelse(col_type == "factor", T, F)]
+  if (length(categorical_col) == 0) {
+    categorical_col <- NULL
+  }
 
   # seting parallel options
-  if(parallel){
-    parallel <- 'multicore'
+  if (parallel) {
+    parallel <- "multicore"
   }
-  if( 'multicore'!=parallel){
-    parallel <- 'no'
+  if ("multicore" != parallel) {
+    parallel <- "no"
   }
-  n_row <- length(df[,1])
+  n_row <- length(df[, 1])
 
   # Amelia Run
   tryCatch({
-    if (is.null(empir) ){
+    if (is.null(empir)) {
       empir <- 0.015
     }
-    empir <- empir*n_row
-    final <- Amelia::amelia(df,m=m,noms = categorical_col,parallel = parallel,p2s = as.numeric(verbose),empri = empir,polytime = polytime,splinetime = splinetime,intercs = intercs)
-    if (return_one){
-      for (i in final$imputations){
-        if(!is.null(i)){
+    empir <- empir * n_row
+    final <- Amelia::amelia(df, m = m, noms = categorical_col, parallel = parallel, p2s = as.numeric(verbose), empri = empir, polytime = polytime, splinetime = splinetime, intercs = intercs)
+    if (return_one) {
+      for (i in final$imputations) {
+        if (!is.null(i)) {
           final <- i
           break
-          }
         }
+      }
     }
-  # Avoiding situtation when amelia dont impute and dont throwe errors            c
-  if(class(final)!='data.frame' & class(final)!='amelia'){
-    stop('ERROR')
-  }
-
-  },error=function(e){
-    if(!is.null(out_file)){
-      write(as.character(e),file = out_file,append = T)
+    # Avoiding situtation when amelia dont impute and dont throwe errors            c
+    if (class(final) != "data.frame" & class(final) != "amelia") {
+      stop("ERROR")
+    }
+  }, error = function(e) {
+    if (!is.null(out_file)) {
+      write(as.character(e), file = out_file, append = T)
     }
     stop(e)
   })
-  #adding 0_1 col
-  if(col_0_1 & return_one){
+  # adding 0_1 col
+  if (col_0_1 & return_one) {
 
-      columns_with_missing <-  (as.data.frame(is.na(df))*1)[,percent_of_missing>0]
-      colnames(columns_with_missing) <- paste(colnames(columns_with_missing),'where',sep='_')
-      final <- cbind(final,columns_with_missing)
+    columns_with_missing <- (as.data.frame(is.na(df)) * 1)[, percent_of_missing > 0]
+    colnames(columns_with_missing) <- paste(colnames(columns_with_missing), "where", sep = "_")
+    final <- cbind(final, columns_with_missing)
 
   }
 
-  for (i in colnames(final)[col_type=='integer']){
-    final[,i] <- as.integer(final[,i])
+  for (i in colnames(final)[col_type == "integer"]) {
+    final[, i] <- as.integer(final[, i])
   }
 
   return(final)
 
 }
-

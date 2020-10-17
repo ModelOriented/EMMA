@@ -24,86 +24,86 @@
 
 
 
-autotune_softImpute <- function(df,percent_of_missing,col_type,col_0_1=F,cat_Fun=VIM::maxCat,lambda=0,rank.max=2,type='als',thresh=1e-5,maxit=100,out_file=NULL){
+autotune_softImpute <- function(df, percent_of_missing, col_type, col_0_1 = F, cat_Fun = VIM::maxCat, lambda = 0, rank.max = 2, type = "als", thresh = 1e-5, maxit = 100, out_file = NULL) {
+
   column_order <- colnames(df)
-  if(sum(is.na(df))==0){return(df)}
+  if (sum(is.na(df)) == 0) {
+    return(df)
+  }
 
 
 
-  #Prepering matrix
-  matrix <- as.matrix(df[,ifelse(col_type=='numeric' | col_type=='integer',TRUE,FALSE),drop=F])
-  if(!is.null(out_file)){
-      write('softImpute',file = out_file,append = T)
+  # Prepering matrix
+  matrix <- as.matrix(df[, ifelse(col_type == "numeric" | col_type == "integer", TRUE, FALSE), drop = F])
+  if (!is.null(out_file)) {
+    write("softImpute", file = out_file, append = T)
   }
   tryCatch({
-  if(is.null(lambda)){
-    lambda <- floor(softImpute::lambda0(matrix,thresh = thresh,maxit = maxit))
-  }
-    if(is.null(rank.max)){
-      rank.max <- min(dim(matrix))-1
-      if(rank.max<=0){rank.max <- 1}
+    if (is.null(lambda)) {
+      lambda <- floor(softImpute::lambda0(matrix, thresh = thresh, maxit = maxit))
     }
-  #Numeric Imputation
-  if (sum(col_type=='numeric' | col_type=='integer')>1){
-  result <- softImpute::softImpute(matrix,lambda = lambda,rank.max = 2,thresh = thresh,maxit = maxit)
-  final <- softImpute::complete(matrix,result)
-
-  }
-  else {
-    print('Not enought numeric')
-    if(!is.null(out_file)){
-      write('Not engouht numeric impute with function',file = out_file,append = T)
+    if (is.null(rank.max)) {
+      rank.max <- min(dim(matrix)) - 1
+      if (rank.max <= 0) {
+        rank.max <- 1
+      }
     }
-    j <- colnames(df)[col_type=='numeric' | col_type=='integer']
-    col_to_imp <- df[,j,drop=F]
-    col_to_imp[is.na(col_to_imp),] <- cat_Fun(na.omit(col_to_imp[[j]]))
-    j <- col_to_imp
-    final <- j}
+    # Numeric Imputation
+    if (sum(col_type == "numeric" | col_type == "integer") > 1) {
+      result <- softImpute::softImpute(matrix, lambda = lambda, rank.max = 2, thresh = thresh, maxit = maxit)
+      final <- softImpute::complete(matrix, result)
+
+    }
+    else {
+      print("Not enought numeric")
+      if (!is.null(out_file)) {
+        write("Not engouht numeric impute with function", file = out_file, append = T)
+      }
+      j <- colnames(df)[col_type == "numeric" | col_type == "integer"]
+      col_to_imp <- df[, j, drop = F]
+      col_to_imp[is.na(col_to_imp), ] <- cat_Fun(na.omit(col_to_imp[[j]]))
+      j <- col_to_imp
+      final <- j
+    }
 
 
-  #Categorical Imputation
-  iter_vec <- colnames(df)[col_type=='factor' & percent_of_missing>0]
-  for (i in iter_vec){
-    col_to_imp <- df[,i]
-    col_to_imp[is.na(col_to_imp)] <- cat_Fun(col_to_imp[!is.na(col_to_imp)])
-    df[,i] <- col_to_imp
-  }
+    # Categorical Imputation
+    iter_vec <- colnames(df)[col_type == "factor" & percent_of_missing > 0]
+    for (i in iter_vec) {
+      col_to_imp <- df[, i]
+      col_to_imp[is.na(col_to_imp)] <- cat_Fun(col_to_imp[!is.na(col_to_imp)])
+      df[, i] <- col_to_imp
+    }
 
-  #conecting df back
+    # conecting df back
 
 
-  final <- cbind(as.data.frame(final),df[,ifelse(col_type=='numeric' | col_type=='integer',F,T),drop=F])
+    final <- cbind(as.data.frame(final), df[, ifelse(col_type == "numeric" | col_type == "integer", F, T), drop = F])
 
-  final <- final[,column_order]
-  if(!is.null(out_file)){
-    write('OK',file = out_file,append = T)
-  }
-  },error=function(e){
-    if(is.null(out_file)){
-    write(as.character(e),file = out_file,append = T)
+    final <- final[, column_order]
+    if (!is.null(out_file)) {
+      write("OK", file = out_file, append = T)
+    }
+  }, error = function(e) {
+    if (is.null(out_file)) {
+      write(as.character(e), file = out_file, append = T)
     }
     stop(e)
   })
 
-  if(col_0_1){
+  if (col_0_1) {
 
-    columns_with_missing <-  (as.data.frame(is.na(df))*1)[,percent_of_missing>0]
-    colnames(columns_with_missing) <- paste(colnames(columns_with_missing),'where',sep='_')
-    final <- cbind(final,columns_with_missing)
+    columns_with_missing <- (as.data.frame(is.na(df)) * 1)[, percent_of_missing > 0]
+    colnames(columns_with_missing) <- paste(colnames(columns_with_missing), "where", sep = "_")
+    final <- cbind(final, columns_with_missing)
 
   }
   # converting back to integer
-  for (i in colnames(final)[col_type=='integer']){
-    final[,i] <- as.integer(final[,i])
+  for (i in colnames(final)[col_type == "integer"]) {
+    final[, i] <- as.integer(final[, i])
   }
   return(final)
 
 
 
 }
-
-
-
-
-
-
