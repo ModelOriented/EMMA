@@ -218,8 +218,3 @@
                                   }
                                 )
   )
-
-  mlr_pipeops$add("miceA_imputation", PipeOpMice_A)
-
-
-

@@ -183,7 +183,6 @@ PipeOpSoftImpute <-  R6::R6Class("softImpute_imputation",lock_objects=FALSE,
 
                                )
 )
-mlr_pipeops$add("softImpute_imputation",PipeOpSoftImpute)
 
 #resample(TaskClassif$new('t',as.data.frame(task$data()),'binaryClass'),graph_learner,rsmp("holdout"))
 # d<- PipeOpSoftImpute$new()

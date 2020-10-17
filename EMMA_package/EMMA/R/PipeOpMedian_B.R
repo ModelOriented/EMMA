@@ -39,7 +39,6 @@ PipeOpMedian_B = R6::R6Class("Median_B_imputation",
                              )
 )
 
-mlr_pipeops$add("impute_median_B", PipeOpMedian_B)
 
 # m <- PipeOpImputeMedian_B$new()
 #

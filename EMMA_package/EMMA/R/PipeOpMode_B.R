@@ -39,7 +39,6 @@ PipeOpMode_B = R6::R6Class("Mode_B_imputation",
                            )
 )
 
-mlr_pipeops$add("impute_mode_B", PipeOpMode_B)
 
 # m <- PipeOpImputeMode_B$new()
 #

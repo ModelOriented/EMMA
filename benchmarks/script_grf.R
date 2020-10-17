@@ -2,13 +2,13 @@
 
 #Output files
 
-result_csv <- "/data/user/result_packages.csv"
-error_out <- "/data/user/error_log_packages.txt"
-task_csv <- "/data/user/benchmark/tasks.csv"
+# result_csv <- "/data/user/result_grf.csv"
+# error_out <- "/data/user/error_log_grf.txt"
+# task_csv <- "/data/user/benchmark/tasks.csv"
 
-# result_csv <- "~/Pulpit/result_packages.csv"
-# error_out <- "~/Pulpit/error_log_packages.txt"
-# task_csv <- "benchmarks/tasks.csv"
+result_csv <- "~/Pulpit/result_grf.csv"
+error_out <- "~/Pulpit/error_log_grf.txt"
+task_csv <- "benchmarks/tasks.csv"
 
 #Packages
 # library(OpenML)
@@ -30,28 +30,19 @@ devtools::install_github("https://github.com/ModelOriented/EMMA", subdir = "/EMM
 library(EMMA)
 
 #Flexible below, modify to evaluate right approach (a/b/c)
-pipes <- c(PipeOpAmelia, PipeOpmissForest, PipeOpSoftImpute, PipeOpmissRanger,
-           PipeOpVIM_IRMI, PipeOpVIM_HD, PipeOpVIM_kNN, PipeOpVIM_regrImp, 
-           PipeOpMissMDA_MFA, PipeOpMissMDA_PCA_MCA_FMAD)
+pipe_model <- LearnerClassifGrf
 
 err_file <- file(error_out, "w")
 
-for (task_id in tasks$task.id) {
-  
-  for (j in 1:length(pipes)) {
-  
-    #Take pipe
-    pipe_imp <- pipes[[j]]$new()
+for (task_id in tasks$task.id[c(5,6)]) {
+      
+    pipe_grf <- pipe_model$new()  
     
-    #Build model
-    pipe_model <- lrn("classif.glmnet")
-     
     graph <- po("removeconstants", id = "removeconstants_before") %>>% 
       po("collapsefactors", target_level_count = 20L) %>>%
-      pipe_imp %>>%
       po("removeconstants", id = "removeconstants_after") %>>% 
       po("encodeimpact") %>>%
-      pipe_model
+      pipe_grf
       
     graph_learner <- GraphLearner$new(graph)
     graph_learner$predict_type <- "prob"
@@ -80,14 +71,14 @@ for (task_id in tasks$task.id) {
       scores <- rr$score(measures = c(msr("classif.auc"), msr("classif.acc"), msr("classif.fbeta")))
       scores <- scores[, c("iteration", "classif.acc", "classif.auc", "classif.fbeta")]
       scores$task <- task_id
-      scores$imputer <- pipe_imp$id
-      scores$model <- pipe_model$id
+      scores$imputer <- pipe_grf$id
+      scores$model <- pipe_grf$id
       
       write.table(scores, result_csv, sep = ",", col.names = !file.exists(result_csv), append = T)
       rm(list = c("rr"))
       })
       
-    }
+    
   }
 }
 

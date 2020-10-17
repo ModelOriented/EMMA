@@ -162,7 +162,3 @@ PipeOpVIM_kNN <-  R6::R6Class("VIM_kNN_imputation",lock_objects=FALSE,
                              }
                            )
 )
-mlr_pipeops$add("VIM_kNN_imputation", PipeOpVIM_kNN)
-
-
-

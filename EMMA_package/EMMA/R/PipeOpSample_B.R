@@ -63,6 +63,3 @@ PipeOpSample_B = R6::R6Class("Sample_B_imputation",
                                }
                              )
 )
-
-mlr_pipeops$add("impute_sample_B", PipeOpSample_B)
-

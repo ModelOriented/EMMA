@@ -157,7 +157,3 @@ PipeOpVIM_HD <-  R6::R6Class("VIM_HD_imputation",lock_objects=FALSE,
 
                            )
 )
-mlr_pipeops$add("VIM_HD_imputation", PipeOpVIM_HD)
-
-
-

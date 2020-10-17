@@ -74,7 +74,6 @@ PipeOpOOR_B = R6::R6Class("OOR_B_imputation",
                           )
 )
 
-mlr_pipeops$add("impute_oor_B", PipeOpOOR_B)
 
 
 # m <- PipeOpImputeOOR_B$new()

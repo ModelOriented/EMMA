@@ -46,7 +46,6 @@ PipeOpHist_B = R6::R6Class("Hist_B_imputation",
                            )
 )
 
-mlr_pipeops$add("impute_hist_B", PipeOpHist_B)
 
 # m <- PipeOpImputeHist_B$new()
 #
@@ -58,4 +57,3 @@ mlr_pipeops$add("impute_hist_B", PipeOpHist_B)
 # test <- iris
 # test$Sepal.Width[sample(1:150,50)] <- NA
 # task_numeric<- TaskClassif$new('d',test,"Species")
-
