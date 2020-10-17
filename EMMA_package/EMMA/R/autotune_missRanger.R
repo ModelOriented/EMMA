@@ -22,51 +22,56 @@
 
 
 
-autotune_missRanger <- function(df,percent_of_missing,maxiter=10,random.seed=123,mtry=NULL,num.trees=500,verbose=F,col_0_1=F,out_file=NULL,pmm.k=5,optimize=T,iter=10){
+autotune_missRanger <- function(df, percent_of_missing, maxiter = 10, random.seed = 123, mtry = NULL, num.trees = 500, verbose = F, col_0_1 = F, out_file = NULL, pmm.k = 5, optimize = T, iter = 10) {
 
-  if(!is.null(out_file)){
-    write('missRanger',file = out_file,append = T)
+  if (!is.null(out_file)) {
+    write("missRanger", file = out_file, append = T)
   }
-  if(sum(is.na(df))==0){return(df)}
-  if(sum(percent_of_missing==100)>0){
-    if(!is.null(out_file)){
-      write('Feature contains only NA',file = out_file,append = T)
+  if (sum(is.na(df)) == 0) {
+    return(df)
+  }
+  if (sum(percent_of_missing == 100) > 0) {
+    if (!is.null(out_file)) {
+      write("Feature contains only NA", file = out_file, append = T)
     }
-    stop('Feature contains only NA')
+    stop("Feature contains only NA")
   }
 
-  if(!is.null(pmm.k)){
-    if(!optimize & pmm.k==0){
-      print('missForest will be use')
+  if (!is.null(pmm.k)) {
+    if (!optimize & pmm.k == 0) {
+      print("missForest will be use")
     }
   }
 
   tryCatch({
-
-    if (optimize){
+    if (optimize) {
       # random param set preper
 
 
 
-      num.trees <- floor(seq.int(10,num.trees,iter))
-      pmm.k <- sample(1:pmm.k,iter,replace = T)
+      num.trees <- floor(seq.int(10, num.trees, iter))
+      pmm.k <- sample(1:pmm.k, iter, replace = T)
 
 
       # random param search
-      best_param <- c(500,5)
+      best_param <- c(500, 5)
       best_oob <- 1
-      for (i in 1:iter){
+      for (i in 1:iter) {
         go_next <- FALSE
         tryCatch({
-        out <- capture.output(result <- missRanger::missRanger(df,maxiter = maxiter,seed = random.seed,num.trees=num.trees[i],verbose = 2,pmm.k = pmm.k[i]))
+          out <- capture.output(result <- missRanger::missRanger(df, maxiter = maxiter, seed = random.seed, num.trees = num.trees[i], verbose = 2, pmm.k = pmm.k[i]))
 
-        # Reading oob from last iteration
-        curent_oob <- mean(as.numeric(strsplit(out[[length(out)]], split='\t')[[1]][-1]))
-        },error=function(e){go_next <<- TRUE})
-        if(go_next){next}
-        if (curent_oob<=best_oob){
+          # Reading oob from last iteration
+          curent_oob <- mean(as.numeric(strsplit(out[[length(out)]], split = "\t")[[1]][-1]))
+        }, error = function(e) {
+          go_next <<- TRUE
+        })
+        if (go_next) {
+          next
+        }
+        if (curent_oob <= best_oob) {
           best_oob <- curent_oob
-          best_param <- c(num.trees[i],pmm.k[i])
+          best_param <- c(num.trees[i], pmm.k[i])
         }
 
       }
@@ -74,22 +79,26 @@ autotune_missRanger <- function(df,percent_of_missing,maxiter=10,random.seed=123
       num.trees <- best_param[1]
       pmm.k <- best_param[2]
 
-      if(!is.null(out_file)){
-        write(best_param,file = out_file,append = T)
+      if (!is.null(out_file)) {
+        write(best_param, file = out_file, append = T)
       }
-    if(!is.null(mtry)){
-      final <- missRanger::missRanger(df,maxiter = maxiter,seed = random.seed,num.trees=num.trees,sample.fraction=mtry,verbose = as.numeric(verbose),pmm.k = pmm.k)
-    }
-   else{final <- missRanger::missRanger(df,maxiter = maxiter,seed = random.seed,num.trees=num.trees,verbose = as.numeric(verbose),pmm.k = pmm.k)}
-
-
-    }
-    if(!optimize){
-      if (is.null(mtry)){
-
-        final <- missRanger::missRanger(df,maxiter = maxiter,seed = random.seed,num.trees=num.trees,verbose = as.numeric(verbose),pmm.k = pmm.k)
+      if (!is.null(mtry)) {
+        final <- missRanger::missRanger(df, maxiter = maxiter, seed = random.seed, num.trees = num.trees, sample.fraction = mtry, verbose = as.numeric(verbose), pmm.k = pmm.k)
       }
-      else{final <- missRanger::missRanger(df,maxiter = maxiter,seed = random.seed,num.trees=num.trees,verbose = as.numeric(verbose),sample.fraction=mtry/ncol(df),pmm.k = pmm.k)}
+      else {
+        final <- missRanger::missRanger(df, maxiter = maxiter, seed = random.seed, num.trees = num.trees, verbose = as.numeric(verbose), pmm.k = pmm.k)
+      }
+
+
+    }
+    if (!optimize) {
+      if (is.null(mtry)) {
+
+        final <- missRanger::missRanger(df, maxiter = maxiter, seed = random.seed, num.trees = num.trees, verbose = as.numeric(verbose), pmm.k = pmm.k)
+      }
+      else {
+        final <- missRanger::missRanger(df, maxiter = maxiter, seed = random.seed, num.trees = num.trees, verbose = as.numeric(verbose), sample.fraction = mtry / ncol(df), pmm.k = pmm.k)
+      }
 
 
     }
@@ -100,29 +109,23 @@ autotune_missRanger <- function(df,percent_of_missing,maxiter=10,random.seed=123
 
 
 
-    if(!is.null(out_file)){
-      write('OK',file = out_file,append = T)
+    if (!is.null(out_file)) {
+      write("OK", file = out_file, append = T)
     }
-  },error=function(e){
-    if(!is.null(out_file)){
-      write(as.character(e),file = out_file,append = T)
+  }, error = function(e) {
+    if (!is.null(out_file)) {
+      write(as.character(e), file = out_file, append = T)
     }
     stop(e)
   })
-        if (col_0_1){
-          columns_with_missing <-  (as.data.frame(is.na(df))*1)[,percent_of_missing>0]
-          colnames(columns_with_missing) <- paste(colnames(columns_with_missing),'where',sep='_')
-          final <- cbind(final,columns_with_missing)
-        }
+  if (col_0_1) {
+    columns_with_missing <- (as.data.frame(is.na(df)) * 1)[, percent_of_missing > 0]
+    colnames(columns_with_missing) <- paste(colnames(columns_with_missing), "where", sep = "_")
+    final <- cbind(final, columns_with_missing)
+  }
   return(final)
 
 
 
 
 }
-
-
-
-
-
-

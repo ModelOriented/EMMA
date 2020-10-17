@@ -4,7 +4,7 @@
 \alias{PipeOpSimulateMissings}
 \title{PipeOpSimulateMissings}
 \description{
-Generates MCAR missing values in mlr3 pipeline according to set parameters. 
+Generates MCAR missing values in mlr3 pipeline according to set parameters.
 Missings are inserted to task data once during first training.
 }
 \section{Input and Output Channels}{

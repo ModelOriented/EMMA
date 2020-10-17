@@ -24,134 +24,148 @@
 #'
 #' @return Return data.frame with imputed values.
 #' @export
-autotune_missForest <-function(df,col_type,percent_of_missing,cores=NULL,ntree_set =c(100,200,500,1000),mtry_set=NULL,parallel=TRUE,col_0_1=FALSE,
-                               optimize=TRUE,ntree=100,mtry=NULL,verbose=FALSE,maxiter=20,maxnodes=NULL,out_file=NULL){
+autotune_missForest <- function(df, col_type, percent_of_missing, cores = NULL, ntree_set = c(100, 200, 500, 1000), mtry_set = NULL, parallel = TRUE, col_0_1 = FALSE,
+  optimize = TRUE, ntree = 100, mtry = NULL, verbose = FALSE, maxiter = 20, maxnodes = NULL, out_file = NULL) {
 
   # Checking if parallel backed is runing and starting it if not
- do_things <- function(df,col_type,percent_of_missing,cores=NULL,ntree_set =c(100,200,500,1000),mtry_set=NULL,parallel=TRUE,col_0_1=FALSE,
-                       optimize=TRUE,ntree=100,mtry=NULL,maxiter=20,maxnodes=NULL,out_file=NULL){
-  if(is.null(cores)){
-  if (parallel){
-    veribles = ncol(df)
-    if (ceiling(parallel::detectCores()/2)>=veribles){cores <- (veribles-2)}
-    doParallel::registerDoParallel(cores = cores)
-  }
-  }
-  if(!is.null(cores)){
-    if (parallel){
-      veribles = ncol(df)
-      if (cores>=veribles){cores <- (veribles-2)}
-      doParallel::registerDoParallel(cores = cores)
-    }
-  }
+  do_things <- function(df, col_type, percent_of_missing, cores = NULL, ntree_set = c(100, 200, 500, 1000), mtry_set = NULL, parallel = TRUE, col_0_1 = FALSE,
+    optimize = TRUE, ntree = 100, mtry = NULL, maxiter = 20, maxnodes = NULL, out_file = NULL) {
 
-  # Prepering mtry_set if not given
-  if (is.null(mtry_set)){
-    mtry_set <- 1:4
-    mtry_set[1] <- floor(sqrt(ncol(df)))
-    if (mtry_set[1]>1){
-      mtry_set[2] <- ceiling(mtry_set[1]/2)
-      vector <- (mtry_set[1]:ncol(df))
-      mtry_set[3] <- floor(length(vector)/3)
-      mtry_set[4] <- floor(2*length(vector)/3)
+    if (is.null(cores)) {
+      if (parallel) {
+        veribles = ncol(df)
+        if (ceiling(parallel::detectCores() / 2) >= veribles) {
+          cores <- (veribles - 2)
+        }
+        doParallel::registerDoParallel(cores = cores)
+      }
     }
-    else{
-      vector <- (mtry_set[1]:ncol(df))
-      mtry_set[2] <- floor(length(vector)/4)
-      mtry_set[3] <- floor(2*length(vector)/4)
-      mtry_set[4] <- floor(3*length(vector)/4)
+    if (!is.null(cores)) {
+      if (parallel) {
+        veribles = ncol(df)
+        if (cores >= veribles) {
+          cores <- (veribles - 2)
+        }
+        doParallel::registerDoParallel(cores = cores)
+      }
     }
 
-  }
-  # If parallel=TRUE
-  parallelize <- 'no'
-  if (parallel){
-    parallelize <-  'forest'}
-  if (!is.null(cores)){
-  if(cores<=1){parallelize <- 'no'}}
+    # Prepering mtry_set if not given
+    if (is.null(mtry_set)) {
+      mtry_set <- 1:4
+      mtry_set[1] <- floor(sqrt(ncol(df)))
+      if (mtry_set[1] > 1) {
+        mtry_set[2] <- ceiling(mtry_set[1] / 2)
+        vector <- (mtry_set[1]:ncol(df))
+        mtry_set[3] <- floor(length(vector) / 3)
+        mtry_set[4] <- floor(2 * length(vector) / 3)
+      }
+      else {
+        vector <- (mtry_set[1]:ncol(df))
+        mtry_set[2] <- floor(length(vector) / 4)
+        mtry_set[3] <- floor(2 * length(vector) / 4)
+        mtry_set[4] <- floor(3 * length(vector) / 4)
+      }
 
-
-  if(!is.null(out_file)){
-    write('missForest',file = out_file,append = T)
-  }
-  if(sum(percent_of_missing==100)>0){
-    if(!is.null(out_file)){
-      write('column with only missing values error',file = out_file,append = T)
     }
-    stop('column with only missing values error')
-  }
-  tryCatch({
- if (optimize){
-  # Grid search using mean OBBerror
-  best_params <-  c(-11,-11)
-  best_OBB <- 10
-  for (i in ntree_set)
-  {
-    for (j in mtry_set){
-      skip_to_next <- FALSE
+    # If parallel=TRUE
+    parallelize <- "no"
+    if (parallel) {
+      parallelize <- "forest"
+    }
+    if (!is.null(cores)) {
+      if (cores <= 1) {
+        parallelize <- "no"
+      }
+    }
 
-      tryCatch({
-        iteration <-  mean(missForest::missForest(df,maxiter = maxiter,ntree = i,mtry = j,parallelize=parallelize,maxnodes = maxnodes,verbose = verbose)$OOBerror)
-        if (iteration<best_OBB){
-          best_OBB <- iteration
-          best_params[1] <- i
-          best_params[2] <- j
+
+    if (!is.null(out_file)) {
+      write("missForest", file = out_file, append = T)
+    }
+    if (sum(percent_of_missing == 100) > 0) {
+      if (!is.null(out_file)) {
+        write("column with only missing values error", file = out_file, append = T)
+      }
+      stop("column with only missing values error")
+    }
+    tryCatch({
+      if (optimize) {
+        # Grid search using mean OBBerror
+        best_params <- c(-11, -11)
+        best_OBB <- 10
+        for (i in ntree_set)
+        {
+          for (j in mtry_set) {
+            skip_to_next <- FALSE
+
+            tryCatch({
+              iteration <- mean(missForest::missForest(df, maxiter = maxiter, ntree = i, mtry = j, parallelize = parallelize, maxnodes = maxnodes, verbose = verbose)$OOBerror)
+              if (iteration < best_OBB) {
+                best_OBB <- iteration
+                best_params[1] <- i
+                best_params[2] <- j
+              }
+            }, error = function(e) {
+              skip_to_next <<- TRUE
+            })
+
+            if (skip_to_next) {
+              next
+            }
+          }
         }
 
+        # fianl imputation
 
-
-      }, error = function(e) { skip_to_next <<- TRUE})
-
-      if(skip_to_next) { next }
+        final <- missForest::missForest(df, maxiter = maxiter, maxnodes = maxnodes, ntree = best_params[1], mtry = best_params[2], parallelize = parallelize, verbose = verbose)$ximp
+      }
+      if (!optimize) {
+        if (is.null(mtry)) {
+          final <- missForest::missForest(df, maxiter = maxiter, ntree = ntree, maxnodes = maxnodes, mtry = floor(sqrt(ncol(df))), parallelize = parallelize, verbose = verbose)$ximp
+        }
+        else {
+          final <- missForest::missForest(df, maxiter = maxiter, ntree = ntree, maxnodes = maxnodes, mtry = mtry, parallelize = parallelize, verbose = verbose)$ximp
+        }
+      }
+      if (!is.null(out_file)) {
+        write(c(best_params[1], best_params[2]), file = out_file, append = T)
+        write(" OK", file = out_file, append = T)
+      }
+    }, error = function(e) {
+      if (!is.null(out_file)) {
+        write(as.character(e), file = out_file, append = T)
+      }
+      stop(e)
+    })
+    # adding 0_1_cols
+    if (col_0_1) {
+      columns_with_missing <- (as.data.frame(is.na(df)) * 1)[, percent_of_missing > 0]
+      colnames(columns_with_missing) <- paste(colnames(columns_with_missing), "where", sep = "_")
+      final <- cbind(final, columns_with_missing)
     }
-  }
 
-  #fianl imputation
-
-  final <- missForest::missForest(df,maxiter = maxiter,maxnodes = maxnodes,ntree = best_params[1],mtry = best_params[2],parallelize=parallelize,verbose = verbose)$ximp
-}
-  if (!optimize){
-    if (is.null(mtry)){
-    final <- missForest::missForest(df,maxiter = maxiter,ntree = ntree,maxnodes = maxnodes,mtry = floor(sqrt(ncol(df))),parallelize = parallelize,verbose = verbose)$ximp}
-    else{ final <- missForest::missForest(df,maxiter = maxiter,ntree = ntree,maxnodes = maxnodes,mtry = mtry,parallelize = parallelize,verbose = verbose)$ximp}
-  }
-  if(!is.null(out_file)){
-    write(c(best_params[1],best_params[2]),file = out_file,append = T)
-    write(' OK',file = out_file,append = T)
-  }
-
-  },error=function(e){
-    if(!is.null(out_file)){
-      write(as.character(e),file = out_file,append = T)
+    # turn off paralllel
+    if (parallel) {
+      foreach::registerDoSEQ()
     }
-    stop(e)
-  })
-  #adding 0_1_cols
-  if (col_0_1){
-    columns_with_missing <-  (as.data.frame(is.na(df))*1)[,percent_of_missing>0]
-    colnames(columns_with_missing) <- paste(colnames(columns_with_missing),'where',sep='_')
-    final <- cbind(final,columns_with_missing)
+
+
+    return(final)
   }
 
-  # turn off paralllel
-  if (parallel){
-    foreach::registerDoSEQ()
+  if (verbose) {
+    return(do_things(
+      df = df, col_type = col_type, percent_of_missing = percent_of_missing, cores = cores, ntree_set = ntree_set, mtry_set = mtry_set, parallel = parallel, col_0_1 = col_0_1,
+      optimize = optimize, ntree = ntree, mtry = mtry, maxiter = maxiter, maxnodes = maxnodes, out_file = out_file))
   }
-
-
-  return(final)}
-
-  if (verbose){return(do_things(df=df,col_type=col_type,percent_of_missing=percent_of_missing,cores=cores,ntree_set =ntree_set,mtry_set=mtry_set,parallel=parallel,col_0_1=col_0_1,
-                                optimize=optimize,ntree=ntree,mtry=mtry,maxiter=maxiter,maxnodes=maxnodes,out_file=out_file))}
-  if(!verbose){
-    capture.output(final <- do_things(df=df,col_type=col_type,percent_of_missing=percent_of_missing,cores=cores,ntree_set =ntree_set,mtry_set=mtry_set,parallel=parallel,col_0_1=col_0_1,
-                                      optimize=optimize,ntree=ntree,mtry=mtry,maxiter=maxiter,maxnodes=maxnodes,out_file=out_file))
-    for (i in colnames(final)[col_type=='integer']){
-      final[,i] <- as.integer(final[,i])
+  if (!verbose) {
+    capture.output(final <- do_things(
+      df = df, col_type = col_type, percent_of_missing = percent_of_missing, cores = cores, ntree_set = ntree_set, mtry_set = mtry_set, parallel = parallel, col_0_1 = col_0_1,
+      optimize = optimize, ntree = ntree, mtry = mtry, maxiter = maxiter, maxnodes = maxnodes, out_file = out_file))
+    for (i in colnames(final)[col_type == "integer"]) {
+      final[, i] <- as.integer(final[, i])
     }
     return(final)
   }
-  }
-
-
-
+}
