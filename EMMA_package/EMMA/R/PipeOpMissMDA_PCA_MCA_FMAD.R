@@ -194,7 +194,6 @@ PipeOpMissMDA_PCA_MCA_FMAD <-  R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",loc
 )
 
 
-mlr_pipeops$add("missMDA_MCA_PCA_FMAD_imputation", PipeOpMissMDA_PCA_MCA_FMAD)
 
 
 # test <- PipeOpMissMDA_PCA_MCA_FMAD$new()
@@ -202,4 +201,3 @@ mlr_pipeops$add("missMDA_MCA_PCA_FMAD_imputation", PipeOpMissMDA_PCA_MCA_FMAD)
 # glrn = GraphLearner$new(graph)
 
 # resample(test_task,glrn,rsmp('cv',folds=2L))
-

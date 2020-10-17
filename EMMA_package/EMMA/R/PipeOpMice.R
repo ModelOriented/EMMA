@@ -206,7 +206,3 @@ PipeOpMice <-  R6::R6Class("mice_imputation",lock_objects=FALSE,
 
                               )
 )
-mlr_pipeops$add("mice_imputation", PipeOpMice)
-
-
-

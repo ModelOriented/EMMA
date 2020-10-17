@@ -39,6 +39,3 @@ PipeOpMean_B <-  R6::R6Class("Mean_B_imputation",
                                    }
                                  )
                              )
-
-mlr_pipeops$add("impute_mean_B", PipeOpMean_B)
-
