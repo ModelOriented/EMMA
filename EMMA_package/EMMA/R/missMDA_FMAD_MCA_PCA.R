@@ -25,113 +25,142 @@
 
 
 
-missMDA_FMAD_MCA_PCA <- function(df,col_type,percent_of_missing,optimize_ncp=TRUE,set_ncp=2,col_0_1=FALSE,ncp.max=5,return_one = TRUE,random.seed=123,maxiter=998,
-                                 coeff.ridge=1,threshold=1e-6,method='Regularized',out_file=NULL){
+missMDA_FMAD_MCA_PCA <- function(df, col_type, percent_of_missing, optimize_ncp = TRUE, set_ncp = 2, col_0_1 = FALSE, ncp.max = 5, return_one = TRUE, random.seed = 123, maxiter = 998,
+  coeff.ridge = 1, threshold = 1e-6, method = "Regularized", out_file = NULL) {
 
+  if (sum(is.na(df)) == 0) {
+    return(df)
+  }
 
-  if (sum(is.na(df))==0){return(df)}
-
-  #Flags informing about data type
-  FMAD <-  FALSE # mix
-  MCA <-  FALSE # categorical
+  # Flags informing about data type
+  FMAD <- FALSE # mix
+  MCA <- FALSE # categorical
   PCA <- FALSE # numeric
 
-  if ('factor' %in% col_type & ( 'numeric' %in%col_type | 'integer' %in%col_type)){FMAD <- TRUE  }
-  if ('factor' %in%col_type & !( 'numeric' %in% col_type | 'integer' %in% col_type)){MCA <- TRUE}
-  if ( !('factor' %in%col_type) & ( 'numeric' %in%col_type | 'integer' %in%col_type)){PCA <-TRUE }
+  if ("factor" %in% col_type & ("numeric" %in% col_type | "integer" %in% col_type)) {
+    FMAD <- TRUE
+  }
+  if ("factor" %in% col_type & !("numeric" %in% col_type | "integer" %in% col_type)) {
+    MCA <- TRUE
+  }
+  if (!("factor" %in% col_type) & ("numeric" %in% col_type | "integer" %in% col_type)) {
+    PCA <- TRUE
+  }
 
-  if(!is.null(out_file)){
+  if (!is.null(out_file)) {
 
-    write('FMAD MCA PCA',file = out_file,append = T)
+    write("FMAD MCA PCA", file = out_file, append = T)
   }
 
 
   tryCatch({
-  # If optimize_npc set True
-  if (optimize_ncp){
-    Fail <- FALSE
-    tryCatch({
-    if(FMAD){set_ncp <-missMDA::estim_ncpFAMD(df,method = method,ncp.max = ncp.max)$ncp }
-    if(MCA){set_ncp <- missMDA::estim_ncpMCA(df,method = method,ncp.max = ncp.max)$ncp}
-    if(PCA){set_ncp <- missMDA::estim_ncpPCA(df,method = method,ncp.max = ncp.max)$ncp}
-    },error = function(e) { Fail <<- TRUE})
-    if (Fail){print('Fail to estimate ncp')
+    # If optimize_npc set True
+    if (optimize_ncp) {
+      Fail <- FALSE
+      tryCatch({
+        if (FMAD) {
+          set_ncp <- missMDA::estim_ncpFAMD(df, method = method, ncp.max = ncp.max,verbose = FALSE)$ncp
+        }
+        if (MCA) {
+          set_ncp <- missMDA::estim_ncpMCA(df, method = method, ncp.max = ncp.max,verbose = FALSE)$ncp
+        }
+        if (PCA) {
+          set_ncp <- missMDA::estim_ncpPCA(df, method = method, ncp.max = ncp.max,verbose = FALSE)$ncp
+        }
+      }, error = function(e) {
+        Fail <<- TRUE
+      })
+      if (Fail) {
+        print("Fail to estimate ncp")
 
-      if(!is.null(out_file)){
+        if (!is.null(out_file)) {
 
-        write('Fail to estimate ncp',file = out_file,append = T)
-      }}
-  }
-
-  if (return_one){
-  # imputation
-  tryCatch({
-  if(FMAD){final <-missMDA::imputeFAMD(df,ncp = set_ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs }
-  if(MCA){final <- missMDA::imputeMCA(df,ncp = set_ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs}
-  if(PCA){final <- missMDA::imputePCA(df,ncp=set_ncp,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs}
-    if(!is.null(out_file)){
-      write(paste0('ncp :',set_ncp),file = out_file,append = T)
-    }
-  },error=function(e){
-    if(FMAD){final <-missMDA::imputeFAMD(df,ncp = 1,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs }
-    if(MCA){final <- missMDA::imputeMCA(df,ncp = 1,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs}
-    if(PCA){final <- missMDA::imputePCA(df,ncp=1 ,method = method,threshold = threshold,maxiter = maxiter,coeff.ridge = coeff.ridge,seed = random.seed)$completeObs}
-    if(!is.null(out_file)){
-      write('ncp:1',file = out_file,append = T)
-    }
-  })
-  if(!is.null(out_file)){
-    write('  OK',file = out_file,append = T)
-  }
-
-  # adding 0,1 cols
-    if (col_0_1){
-    columns_with_missing <-  (as.data.frame(is.na(df))*1)[,percent_of_missing>0]
-    colnames(columns_with_missing) <- paste(colnames(columns_with_missing),'where',sep='_')
-    final <- cbind(final,columns_with_missing)
-    }
-    for (i in colnames(final)[col_type=='integer']){
-      final[,i] <- as.integer(final[,i])
-    }
-
-    for (i in colnames(df)[(col_type=='factor')]){
-
-      if(!setequal(as.character(unique(na.omit(df[,i]))),levels(final[,i]))){
-
-        reg_exp <- paste0('.*',i)
-        levels(final[,i]) <- substr(sub(reg_exp, "", levels(final[,i])),start = 2,stop = 9999)
+          write("Fail to estimate ncp", file = out_file, append = T)
+        }
       }
     }
 
-    for (i in colnames(df)[(col_type=='factor')]){
-
-      if(!setequal(levels(na.omit(df[,i])),levels(final[,i]))){
-
-        levels(final[,i]) <- c(levels(na.omit(df[,i])))
+    if (return_one) {
+      # imputation
+      tryCatch({
+        if (FMAD) {
+          final <- missMDA::imputeFAMD(df, ncp = set_ncp, method = method, threshold = threshold, maxiter = maxiter, coeff.ridge = coeff.ridge, seed = random.seed)$completeObs
+        }
+        if (MCA) {
+          final <- missMDA::imputeMCA(df, ncp = set_ncp, method = method, threshold = threshold, maxiter = maxiter, coeff.ridge = coeff.ridge, seed = random.seed)$completeObs
+        }
+        if (PCA) {
+          final <- missMDA::imputePCA(df, ncp = set_ncp, method = method, threshold = threshold, maxiter = maxiter, coeff.ridge = coeff.ridge, seed = random.seed)$completeObs
+        }
+        if (!is.null(out_file)) {
+          write(paste0("ncp :", set_ncp), file = out_file, append = T)
+        }
+      }, error = function(e) {
+        if (FMAD) {
+          final <- missMDA::imputeFAMD(df, ncp = 1, method = method, threshold = threshold, maxiter = maxiter, coeff.ridge = coeff.ridge, seed = random.seed)$completeObs
+        }
+        if (MCA) {
+          final <- missMDA::imputeMCA(df, ncp = 1, method = method, threshold = threshold, maxiter = maxiter, coeff.ridge = coeff.ridge, seed = random.seed)$completeObs
+        }
+        if (PCA) {
+          final <- missMDA::imputePCA(df, ncp = 1, method = method, threshold = threshold, maxiter = maxiter, coeff.ridge = coeff.ridge, seed = random.seed)$completeObs
+        }
+        if (!is.null(out_file)) {
+          write("ncp:1", file = out_file, append = T)
+        }
+      })
+      if (!is.null(out_file)) {
+        write("  OK", file = out_file, append = T)
       }
-    }
 
-  return(final)}
-  },error=function(e){
-    if(!is.null(out_file)){
-      write(as.character(e),file = out_file,append = T)
+      # adding 0,1 cols
+      if (col_0_1) {
+        columns_with_missing <- (as.data.frame(is.na(df)) * 1)[, percent_of_missing > 0]
+        colnames(columns_with_missing) <- paste(colnames(columns_with_missing), "where", sep = "_")
+        final <- cbind(final, columns_with_missing)
+      }
+      for (i in colnames(final)[col_type == "integer"]) {
+        final[, i] <- as.integer(final[, i])
+      }
+
+      for (i in colnames(df)[(col_type == "factor")]) {
+
+        if (!setequal(as.character(unique(na.omit(df[, i]))), levels(final[, i]))) {
+
+          reg_exp <- paste0(".*", i)
+          levels(final[, i]) <- substr(sub(reg_exp, "", levels(final[, i])), start = 2, stop = 9999)
+        }
+      }
+
+      for (i in colnames(df)[(col_type == "factor")]) {
+
+        if (!setequal(levels(na.omit(df[, i])), levels(final[, i]))) {
+
+          levels(final[, i]) <- c(levels(na.omit(df[, i])))
+        }
+      }
+
+      return(final)
+    }
+  }, error = function(e) {
+    if (!is.null(out_file)) {
+      write(as.character(e), file = out_file, append = T)
     }
     stop(e)
   })
-  if (!return_one){
-    if(FMAD){final <-missMDA::MIFAMD(df,ncp = set_ncp)$completeObs }
-    if(MCA){final <- missMDA::MIMCA(df,ncp = set_ncp)$completeObs}
-    if(PCA){final <- missMDA::MIPCA(df,ncp=set_ncp)$completeObs}
+  if (!return_one) {
+    if (FMAD) {
+      final <- missMDA::MIFAMD(df, ncp = set_ncp)$completeObs
+    }
+    if (MCA) {
+      final <- missMDA::MIMCA(df, ncp = set_ncp)$completeObs
+    }
+    if (PCA) {
+      final <- missMDA::MIPCA(df, ncp = set_ncp)$completeObs
+    }
     final <- final$res.MI
 
 
     return(final)
   }
 }
-
-
-
-
-
-
-

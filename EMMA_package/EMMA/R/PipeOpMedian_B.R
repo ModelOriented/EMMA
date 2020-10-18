@@ -13,33 +13,31 @@
 #' \itemize{
 #' \item \code{id} :: \code{character(1)}\cr
 #' Identifier of resulting object, default `"impute_median_B"`.
-#'}
+#' }
 #'
 #' @export
 
 PipeOpMedian_B = R6::R6Class("Median_B_imputation",
-                             inherit = PipeOpImpute,
-                             public = list(
-                               initialize = function(id = "impute_median_B", param_vals = list()) {
-                                 super$initialize(id, param_vals = param_vals, packages = "stats", feature_types = c("numeric", "integer"))
-                               }
-                             ),
-                             private = list(
-                               .train_imputer = function(feature, type, context) {
-                               NULL
-                               },
-                               .impute = function(feature, type, model, context) {
-
-                                 med = stats::median(feature, na.rm = TRUE)
-                                 if (type == "integer") {
-                                   med = as.integer(round(med))
-                                 }
-                                 feature[is.na(feature)] <- med
-                               }
-                             )
+  inherit = PipeOpImpute,
+  public = list(
+    initialize = function(id = "impute_median_B", param_vals = list()) {
+      super$initialize(id, param_vals = param_vals, packages = "stats", feature_types = c("numeric", "integer"))
+    }
+  ),
+  private = list(
+    .train_imputer = function(feature, type, context) {
+      NULL
+    },
+    .impute = function(feature, type, model, context) {
+      med = stats::median(feature, na.rm = TRUE)
+      if (type == "integer") {
+        med = as.integer(round(med))
+      }
+      feature[is.na(feature)] <- med
+    }
+  )
 )
 
-mlr_pipeops$add("impute_median_B", PipeOpMedian_B)
 
 # m <- PipeOpImputeMedian_B$new()
 #

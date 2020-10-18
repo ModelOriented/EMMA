@@ -31,10 +31,13 @@
 #'    the random seed at the end of the procedure
 #' @export
 #' @author Patrick Rockenschaub git https://github.com/prockenschaub
-mice.reuse <- function(mids, newdata,maxit = 5, printFlag = TRUE, seed = NA){
-  newdata <- as.data.frame(lapply(newdata,function(x){
-    if (is(x,'numeric')){return(as.numeric(x))}
-        return(x)
+mice.reuse <- function(mids, newdata, maxit = 5, printFlag = TRUE, seed = NA) {
+
+  newdata <- as.data.frame(lapply(newdata, function(x) {
+    if (is(x, "numeric")) {
+      return(as.numeric(x))
+    }
+    return(x)
   }))
   # Reuse a previously fit multivariate imputation by chained equations to
   # impute values for previously unseen data without changing the imputation
@@ -65,7 +68,7 @@ mice.reuse <- function(mids, newdata,maxit = 5, printFlag = TRUE, seed = NA){
   #  lastSeedValue : integer vector
   #    the random seed at the end of the procedure#
 
-  if(is.na(seed)){
+  if (is.na(seed)) {
     assign(".Random.seed", mids$lastSeedValue, pos = 1)
   } else {
     set.seed(seed)
@@ -81,9 +84,9 @@ mice.reuse <- function(mids, newdata,maxit = 5, printFlag = TRUE, seed = NA){
 
   # Set up a mids object for the newdata, but set all variables to missing
   all_miss <- matrix(TRUE, rows, cols, dimnames = list(seq_len(rows), nm))
-  mids.new <- mice::mice(newdata, mids$m,where = all_miss, maxit = 0,predictorMatrix = mids$predictorMatrix)
+  mids.new <- mice::mice(newdata, mids$m, where = all_miss, maxit = 0, predictorMatrix = mids$predictorMatrix)
   # Combine the old (trained) and the new mids objects
-  mids.comb <- mids.append(mids, mids.new)
+  mids.comb <- EMMA::mids.append(mids, mids.new)
 
   new_idx <- mids.comb$app_idx
   mids.comb <- mids.comb$mids
@@ -97,10 +100,10 @@ mice.reuse <- function(mids, newdata,maxit = 5, printFlag = TRUE, seed = NA){
 
   # Also make sure all observed variables in the newdata are set to their
   # true values in the imputations
-  for(j in names(mids.comb$imp)){
-    for(i in seq_len(mids.comb$m)){
+  for (j in names(mids.comb$imp)) {
+    for (i in seq_len(mids.comb$m)) {
       mids.comb$imp[[j]][, i] <-
-        replace_overimputes(actual_data, mids.comb$imp, j, i)
+        EMMA::replace_overimputes(actual_data, mids.comb$imp, j, i)
     }
   }
 
@@ -113,9 +116,15 @@ mice.reuse <- function(mids, newdata,maxit = 5, printFlag = TRUE, seed = NA){
   # to replace those values that we did observe with their actual values that
   # we stored in the variable `actual_data` after each sampling.
   cond_imp <- "imp[[j]][, i] <- replace_overimputes(fetch_data(), imp, j, i)"
-  mids.comb$post <- sapply(mids.comb$post,
-                           function(x) if(x != "") paste0(x, "; ", cond_imp)
-                           else cond_imp)
+  mids.comb$post <- sapply(
+    mids.comb$post,
+    function(x) {
+      if (x != "") {
+        paste0(x, "; ", cond_imp)
+      } else {
+        cond_imp
+      }
+    })
 
   # Run the procedure for a few times
 
@@ -123,15 +132,16 @@ mice.reuse <- function(mids, newdata,maxit = 5, printFlag = TRUE, seed = NA){
 
   # Return the imputed test dataset
 
-  res <- lapply(mice::complete(mids.comb, "all"), function(x){
-    x[new_idx, ]}
-    )
+  res <- lapply(mice::complete(mids.comb, "all"), function(x) {
+    x[new_idx, ]
+  }
+  )
   class(res) <- c("mild", "list")
   res
 }
 
 #' @export
-mids.append <- function(x, y){
+mids.append <- function(x, y) {
   # Append one mids object to another. Both objects are expected to have
   # the same variables.
   #
@@ -153,7 +163,6 @@ mids.append <- function(x, y){
   #  mids object
   #    a new mids object that contains all of `x` and the additional data in `y`
 
-
   testthat::expect_equal(names(x$data), names(y$data))
   app <- x
 
@@ -167,8 +176,8 @@ mids.append <- function(x, y){
   names(y_idx) <- rownames(y$data)
 
   # Append `imp` and `nmis`
-  for(i in names(x$imp)){
-    if(i %in% miss_xy){
+  for (i in names(x$imp)) {
+    if (i %in% miss_xy) {
       # Imputations
       app_imp <- y$imp[[i]]
       rownames(app_imp) <- y_idx[rownames(app_imp)]
@@ -183,13 +192,13 @@ mids.append <- function(x, y){
   app$where <- rbind(x$where, y$where)
   rownames(app$where) <- rownames(app$data)
 
-  res<- list(mids = app, app_idx = setNames(y_idx, NULL))
+  res <- list(mids = app, app_idx = setNames(y_idx, NULL))
   res$method <- x$method
   res
 }
 
 #' @export
-replace_overimputes <- function(data, imp, j, i){
+replace_overimputes <- function(data, imp, j, i) {
   # Replace all overimputed data points in the mice imputation
   # of one variable. Overimputed data points are those data
   # that were not missing in the original but were marked for
@@ -208,6 +217,7 @@ replace_overimputes <- function(data, imp, j, i){
   #    the number of the current imputation (can be 1:m)
 
   # Find those values that weren't missing but imputed
+
   overlap <- base::intersect(
     rownames(data[!is.na(data[, j]), j, drop = FALSE]),
     rownames(imp[[j]])
@@ -219,7 +229,7 @@ replace_overimputes <- function(data, imp, j, i){
 }
 
 #' @export
-fetch_data <- function(){
+fetch_data <- function() {
   # Retrieve the main imputation object when within the
   # `mice:::sampler` post-imputation calling environment
   # and return the data object (including missingness)
@@ -232,9 +242,8 @@ fetch_data <- function(){
   #  data.frame
   #    the original, non-imputed dataset of the mids object
 
-  get('actual_data', pos = parent.frame(5))
+  get("actual_data", pos = parent.frame(5))
 }
 
 
-#set_test_A <- mice.reuse(model,set_test)$`1`
-
+# set_test_A <- mice.reuse(model,set_test)$`1`
