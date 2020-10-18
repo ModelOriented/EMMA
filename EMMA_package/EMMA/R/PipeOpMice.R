@@ -101,8 +101,8 @@ PipeOpMice <- R6::R6Class("mice_imputation",
           set_cor = self$param_set$values$set_cor, set_method = self$param_set$values$set_method,
           methods_random = self$param_set$values$methods_random, random.seed = self$param_set$values$random.seed,
           optimize = self$param_set$values$optimize,
-          correlation = self$param_set$values$correlation, verbose = F,
-          out_file = self$param_set$values$out_file, return_one = T
+          correlation = self$param_set$values$correlation, verbose = FALSE,
+          out_file = self$param_set$values$out_file, return_one = TRUE
         )
 
 
@@ -118,7 +118,9 @@ PipeOpMice <- R6::R6Class("mice_imputation",
         self$imputed <- TRUE
         data_to_impute <- cbind(feature, context)
 
-        self$data_imputed <- imp_function(data_to_impute)
+
+        self$data_imputed<- imp_function(data_to_impute)
+
         colnames(self$data_imputed) <- self$state$context_cols
 
       }

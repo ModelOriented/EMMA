@@ -67,7 +67,7 @@ autotune_Amelia <- function(df, col_type, percent_of_missing, col_0_1 = FALSE, p
     }
     # Avoiding situtation when amelia dont impute and dont throwe errors            c
     if (class(final) != "data.frame" & class(final) != "amelia") {
-      stop("ERROR")
+      stop("ERROR no error msg")
     }
   }, error = function(e) {
     if (!is.null(out_file)) {
