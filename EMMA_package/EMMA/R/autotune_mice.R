@@ -310,7 +310,9 @@ autotune_mice <- function(df, m = 5, maxit = 5, col_miss, col_no_miss, col_type,
     stop(e)
   })
   # If user chose to return one dataset
+
   if (return_one) {
+
     imputed_dataset <- mice::complete(imp_final)
     # If user chose to return 0,1 columns
     if (optimize) {

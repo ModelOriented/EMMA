@@ -59,13 +59,13 @@ missMDA_FMAD_MCA_PCA <- function(df, col_type, percent_of_missing, optimize_ncp 
       Fail <- FALSE
       tryCatch({
         if (FMAD) {
-          set_ncp <- missMDA::estim_ncpFAMD(df, method = method, ncp.max = ncp.max)$ncp
+          set_ncp <- missMDA::estim_ncpFAMD(df, method = method, ncp.max = ncp.max,verbose = FALSE)$ncp
         }
         if (MCA) {
-          set_ncp <- missMDA::estim_ncpMCA(df, method = method, ncp.max = ncp.max)$ncp
+          set_ncp <- missMDA::estim_ncpMCA(df, method = method, ncp.max = ncp.max,verbose = FALSE)$ncp
         }
         if (PCA) {
-          set_ncp <- missMDA::estim_ncpPCA(df, method = method, ncp.max = ncp.max)$ncp
+          set_ncp <- missMDA::estim_ncpPCA(df, method = method, ncp.max = ncp.max,verbose = FALSE)$ncp
         }
       }, error = function(e) {
         Fail <<- TRUE

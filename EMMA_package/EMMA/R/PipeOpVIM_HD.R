@@ -87,11 +87,27 @@ PipeOpVIM_HD <- R6::R6Class("VIM_HD_imputation",
         self$imputed <- FALSE
       }
       self$train_s <- TRUE
-      return(NULL)
+
+      self$action <- 3
+
+
+      return(list('data_imputed'=self$data_imputed,'train_s'=self$train_s,'flag'=self$flag,'imputed_predict'=self$imputed_predict,'imputed'=self$imputed,'column_counter'=self$column_counter))
 
     },
     .impute = function(feature, type, model, context) {
 
+      if(is.null(self$action)){
+
+
+        self$train_s <- model$train_s
+        self$flag <- model$flag
+        self$imputed_predict <- model$imputed_predict
+        self$action <- 3
+        self$data_imputed <- model$data_imputed
+        self$impited <- model$imputed
+        self$column_counter <- model$column_counter
+
+      }
       imp_function <- function(data_to_impute) {
 
         data_to_impute <- as.data.frame(data_to_impute)
