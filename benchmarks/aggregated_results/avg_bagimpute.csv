@@ -1,0 +1,11 @@
+"imputer","model","approach","mean_acc","mean_auc","mean_f1"
+"impute_tidy_bagimpute","classif.glmnet","A",0.805444766469628,0.842421428767611,0.797999831900155
+"impute_tidy_bagimpute","classif.glmnet","B",0.793076845765563,0.831235432620118,0.801829115034834
+"impute_tidy_bagimpute","classif.naive_bayes","A",0.744564863197697,0.826524943819998,0.751640887050906
+"impute_tidy_bagimpute","classif.naive_bayes","B",0.685582962276653,0.809154377122963,0.72641136798638
+"impute_tidy_bagimpute","classif.ranger","A",0.817135867030087,0.853267695079209,0.812381983388851
+"impute_tidy_bagimpute","classif.ranger","B",0.794445595331344,0.833696911003064,0.806335271839749
+"impute_tidy_bagimpute","classif.rpart","A",0.799358584338464,0.790982610679263,0.790082319791224
+"impute_tidy_bagimpute","classif.rpart","B",0.776774085185062,0.758535228781244,0.786289580738974
+"impute_tidy_bagimpute","classif.xgboost","A",0.797254547803645,0.829665879367486,0.7822613482658
+"impute_tidy_bagimpute","classif.xgboost","B",0.786479137732586,0.802112364457172,0.792059829845097
