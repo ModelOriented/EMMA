@@ -55,7 +55,7 @@ for (task_id in tasks$task.id) {
 
     graph_learner <- GraphLearner$new(graph)
     graph_learner$predict_type <- "prob"
-    graph_learner$encapsulate <- c(train='callr',predict='callr')
+    graph_learner$encapsulate <- c(train='evaluate',predict='evaluate')
     split <- rsmp("cv", folds = 5)
 
     #Task
