@@ -1,0 +1,212 @@
+imput_missForest classif.glmnet Task 51: trains (Supervised Classification)
+"iteration" "msg"
+"1" 1 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"2" 2 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"3" 3 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"4" 4 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"5" 5 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+imput_missForest classif.glmnet Task 3852: anneal (Supervised Classification)
+"iteration" "msg"
+imput_softImpute classif.glmnet Task 51: trains (Supervised Classification)
+"iteration" "msg"
+imput_softImpute classif.glmnet Task 55: vote (Supervised Classification)
+"iteration" "msg"
+imput_softImpute classif.glmnet Task 3852: anneal (Supervised Classification)
+"iteration" "msg"
+imput_softImpute classif.glmnet Task 3871: analcatdata_reviewer (Supervised Classification)
+"iteration" "msg"
+imput_softImpute classif.glmnet Task 3886: soybean (Supervised Classification)
+"iteration" "msg"
+imput_missRanger classif.glmnet Task 4: labor (Supervised Classification)
+"iteration" "msg"
+"1" 1 "Dropped unused factor level(s) in dependent variable: no."
+"2" 2 "Dropped unused factor level(s) in dependent variable: ret_allw."
+"3" 3 "Dropped unused factor level(s) in dependent variable: full."
+"4" 4 "Dropped unused factor level(s) in dependent variable: none."
+"5" 5 "Dropped unused factor level(s) in dependent variable: no."
+imput_missRanger classif.glmnet Task 51: trains (Supervised Classification)
+"iteration" "msg"
+"1" 1 "Dropped unused factor level(s) in dependent variable: ellipse."
+"2" 2 "Dropped unused factor level(s) in dependent variable: trianglod."
+"3" 3 "Dropped unused factor level(s) in dependent variable: 0."
+"4" 4 "Dropped unused factor level(s) in dependent variable: 2."
+"5" 5 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+imput_missRanger classif.glmnet Task 3626: analcatdata_uktrainacc (Supervised Classification)
+"iteration" "msg"
+"1" 1 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"2" 2 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"3" 3 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"4" 4 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"5" 5 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+imput_missRanger classif.glmnet Task 3852: anneal (Supervised Classification)
+"iteration" "msg"
+"1" 1 "Dropped unused factor level(s) in dependent variable: U."
+"2" 2 "Dropped unused factor level(s) in dependent variable: U."
+"3" 3 "Dropped unused factor level(s) in dependent variable: U."
+"4" 4 "Dropped unused factor level(s) in dependent variable: U."
+"5" 5 "Dropped unused factor level(s) in dependent variable: U."
+imput_VIM_IRMI classif.glmnet Task 4: labor (Supervised Classification)
+"iteration" "msg"
+"1" 1 "glm.fit: algorithm did not converge"
+"2" 2 "no non-missing arguments to min; returning Inf"
+"3" 3 "glm.fit: fitted probabilities numerically 0 or 1 occurred"
+"4" 4 "glm.fit: algorithm did not converge"
+"5" 5 "glm.fit: algorithm did not converge"
+imput_VIM_IRMI classif.glmnet Task 25: colic (Supervised Classification)
+"iteration" "msg"
+"1" 4 "glm.fit: algorithm did not converge"
+imput_VIM_IRMI classif.glmnet Task 51: trains (Supervised Classification)
+"iteration" "msg"
+"1" 1 "prediction from a rank-deficient fit may be misleading"
+"2" 4 "prediction from a rank-deficient fit may be misleading"
+"3" 5 "prediction from a rank-deficient fit may be misleading"
+imput_VIM_IRMI classif.glmnet Task 54: hepatitis (Supervised Classification)
+"iteration" "msg"
+"1" 4 "glm.fit: algorithm did not converge"
+imput_VIM_IRMI classif.glmnet Task 55: vote (Supervised Classification)
+"iteration" "msg"
+imput_VIM_IRMI classif.glmnet Task 3021: sick (Supervised Classification)
+"iteration" "msg"
+imput_VIM_IRMI classif.glmnet Task 3722: hungarian (Supervised Classification)
+"iteration" "msg"
+imput_VIM_IRMI classif.glmnet Task 3852: anneal (Supervised Classification)
+"iteration" "msg"
+"1" 2 "groups ‘1’ ‘2’ are empty"
+imput_VIM_IRMI classif.glmnet Task 3856: kdd_ipums_la_97-small (Supervised Classification)
+"iteration" "msg"
+imput_VIM_IRMI classif.glmnet Task 3865: ipums_la_98-small (Supervised Classification)
+"iteration" "msg"
+imput_VIM_IRMI classif.glmnet Task 3870: bridges (Supervised Classification)
+"iteration" "msg"
+"1" 3 "glm.fit: fitted probabilities numerically 0 or 1 occurred"
+imput_VIM_IRMI classif.glmnet Task 3871: analcatdata_reviewer (Supervised Classification)
+"iteration" "msg"
+imput_VIM_IRMI classif.glmnet Task 3881: ipums_la_99-small (Supervised Classification)
+"iteration" "msg"
+imput_VIM_IRMI classif.glmnet Task 3886: soybean (Supervised Classification)
+"iteration" "msg"
+"1" 1 "group ‘3’ is empty"
+"2" 2 "group ‘3’ is empty"
+"3" 3 "group ‘3’ is empty"
+"4" 4 "group ‘3’ is empty"
+"5" 5 "group ‘3’ is empty"
+imput_VIM_IRMI classif.glmnet Task 125920: dresses-sales (Supervised Classification)
+"iteration" "msg"
+"1" 5 "group ‘1’ is empty"
+imput_VIM_kNN classif.glmnet Task 51: trains (Supervised Classification)
+"iteration" "msg"
+"1" 1 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"2" 2 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"3" 3 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"4" 4 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"5" 5 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+imput_VIM_kNN classif.glmnet Task 3852: anneal (Supervised Classification)
+"iteration" "msg"
+imput_VIM_regrImp classif.glmnet Task 4: labor (Supervised Classification)
+"iteration" "msg"
+imput_VIM_regrImp classif.glmnet Task 25: colic (Supervised Classification)
+"iteration" "msg"
+"1" 1 "Item 2 has 294 rows but longest item has 295; recycled with remainder."
+"2" 2 "Item 2 has 294 rows but longest item has 295; recycled with remainder."
+"3" 5 "prediction from a rank-deficient fit may be misleading"
+imput_VIM_regrImp classif.glmnet Task 51: trains (Supervised Classification)
+"iteration" "msg"
+"1" 1 "group ‘rectanglod’ is empty"
+"2" 3 "group ‘0’ is empty"
+imput_VIM_regrImp classif.glmnet Task 55: vote (Supervised Classification)
+"iteration" "msg"
+imput_VIM_regrImp classif.glmnet Task 3021: sick (Supervised Classification)
+"iteration" "msg"
+imput_VIM_regrImp classif.glmnet Task 3722: hungarian (Supervised Classification)
+"iteration" "msg"
+imput_VIM_regrImp classif.glmnet Task 3852: anneal (Supervised Classification)
+"iteration" "msg"
+"1" 2 "groups ‘R’ ‘V’ are empty"
+imput_VIM_regrImp classif.glmnet Task 3870: bridges (Supervised Classification)
+"iteration" "msg"
+imput_VIM_regrImp classif.glmnet Task 3871: analcatdata_reviewer (Supervised Classification)
+"iteration" "msg"
+imput_VIM_regrImp classif.glmnet Task 3886: soybean (Supervised Classification)
+"iteration" "msg"
+imput_VIM_regrImp classif.glmnet Task 125920: dresses-sales (Supervised Classification)
+"iteration" "msg"
+"1" 1 "groups ‘character’ ‘floral’ ‘leapord’ ‘leopard’ ‘none’ are empty"
+"2" 2 "group ‘summer’ is empty"
+"3" 3 "group ‘leapord’ is empty"
+"4" 4 "group ‘none’ is empty"
+"5" 5 "group ‘character’ is empty"
+imput_missMDA_MFA classif.glmnet Task 4: labor (Supervised Classification)
+"iteration" "msg"
+imput_missMDA_MFA classif.glmnet Task 25: colic (Supervised Classification)
+"iteration" "msg"
+imput_missMDA_MFA classif.glmnet Task 51: trains (Supervised Classification)
+"iteration" "msg"
+"1" 1 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"2" 2 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"3" 3 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"4" 4 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"5" 5 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+imput_missMDA_MFA classif.glmnet Task 3021: sick (Supervised Classification)
+"iteration" "msg"
+imput_missMDA_MFA classif.glmnet Task 3626: analcatdata_uktrainacc (Supervised Classification)
+"iteration" "msg"
+"1" 1 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"2" 2 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"3" 3 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"4" 4 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"5" 5 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+imput_missMDA_MFA classif.glmnet Task 3722: hungarian (Supervised Classification)
+"iteration" "msg"
+"1" 1 "Item 1 has 59 rows but longest item has 235; recycled with remainder."
+"2" 3 "Item 1 has 59 rows but longest item has 235; recycled with remainder."
+imput_missMDA_MFA classif.glmnet Task 3852: anneal (Supervised Classification)
+"iteration" "msg"
+imput_missMDA_MFA classif.glmnet Task 3856: kdd_ipums_la_97-small (Supervised Classification)
+"iteration" "msg"
+imput_missMDA_MFA classif.glmnet Task 3865: ipums_la_98-small (Supervised Classification)
+"iteration" "msg"
+imput_missMDA_MFA classif.glmnet Task 3870: bridges (Supervised Classification)
+"iteration" "msg"
+imput_missMDA_MFA classif.glmnet Task 3881: ipums_la_99-small (Supervised Classification)
+"iteration" "msg"
+imput_missMDA_MFA classif.glmnet Task 3886: soybean (Supervised Classification)
+"iteration" "msg"
+"1" 5 "Stopped after  998  iterations"
+imput_missMDA_MFA classif.glmnet Task 125920: dresses-sales (Supervised Classification)
+"iteration" "msg"
+imput_missMDA_MCA_PCA_FMAD classif.glmnet Task 4: labor (Supervised Classification)
+"iteration" "msg"
+"1" 3 "Stopped after  998  iterations"
+imput_missMDA_MCA_PCA_FMAD classif.glmnet Task 25: colic (Supervised Classification)
+"iteration" "msg"
+imput_missMDA_MCA_PCA_FMAD classif.glmnet Task 51: trains (Supervised Classification)
+"iteration" "msg"
+"1" 1 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"2" 2 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"3" 3 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"4" 4 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"5" 5 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+imput_missMDA_MCA_PCA_FMAD classif.glmnet Task 3021: sick (Supervised Classification)
+"iteration" "msg"
+imput_missMDA_MCA_PCA_FMAD classif.glmnet Task 3626: analcatdata_uktrainacc (Supervised Classification)
+"iteration" "msg"
+"1" 1 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"2" 2 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"3" 3 "Stopped after  1000  iterations"
+"4" 4 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+"5" 5 "one multinomial or binomial class has fewer than 8  observations; dangerous ground"
+imput_missMDA_MCA_PCA_FMAD classif.glmnet Task 3675: pbc (Supervised Classification)
+"iteration" "msg"
+imput_missMDA_MCA_PCA_FMAD classif.glmnet Task 3722: hungarian (Supervised Classification)
+"iteration" "msg"
+imput_missMDA_MCA_PCA_FMAD classif.glmnet Task 3852: anneal (Supervised Classification)
+"iteration" "msg"
+imput_missMDA_MCA_PCA_FMAD classif.glmnet Task 3856: kdd_ipums_la_97-small (Supervised Classification)
+"iteration" "msg"
+imput_missMDA_MCA_PCA_FMAD classif.glmnet Task 3865: ipums_la_98-small (Supervised Classification)
+"iteration" "msg"
+imput_missMDA_MCA_PCA_FMAD classif.glmnet Task 3870: bridges (Supervised Classification)
+"iteration" "msg"
+imput_missMDA_MCA_PCA_FMAD classif.glmnet Task 3881: ipums_la_99-small (Supervised Classification)
+"iteration" "msg"
+imput_missMDA_MCA_PCA_FMAD classif.glmnet Task 3886: soybean (Sup
