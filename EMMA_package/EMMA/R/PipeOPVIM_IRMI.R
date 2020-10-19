@@ -37,7 +37,7 @@ PipeOpVIM_IRMI <- R6::R6Class("VIM_IRMI_imputation",
   lock_objects = FALSE,
   inherit = PipeOpImpute, # inherit from PipeOp
   public = list(
-    initialize = function(id = "imput_VIM_IRMI", eps = 5, maxit = 100, step = FALSE, robust = FALSE, init.method = "kNN", force = FALSE,
+    initialize = function(id = "impute_VIM_IRMI_B", eps = 5, maxit = 100, step = FALSE, robust = FALSE, init.method = "kNN", force = FALSE,
       out_file = NULL) {
       super$initialize(id,
         whole_task_dependent = TRUE, packages = "EMMA", param_vals = list(
@@ -193,3 +193,4 @@ PipeOpVIM_IRMI <- R6::R6Class("VIM_IRMI_imputation",
 
   )
 )
+
