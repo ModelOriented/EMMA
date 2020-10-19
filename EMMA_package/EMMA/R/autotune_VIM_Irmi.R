@@ -25,7 +25,7 @@ autotune_VIM_Irmi <- function(df, col_type, percent_of_missing, eps = 5, maxit =
   }
 
   tryCatch({
-    final <- VIM::irmi(df, eps = eps, maxit = maxit, step = step, robust = robust, init.method = init.method, force = force, imp_var = F)
+    final <- irmi(df, eps = eps, maxit = maxit, step = step, robust = robust, init.method = init.method, force = force, imp_var = F)
     if (!is.null(out_file)) {
       write("  OK ", file = out_file, append = T)
     }

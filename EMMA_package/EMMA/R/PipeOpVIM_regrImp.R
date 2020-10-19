@@ -71,12 +71,12 @@ PipeOpVIM_regrImp <- R6::R6Class("VIM_regrImp_imputation",
 
 
 
+
         data_imputed <- EMMA::autotune_VIM_regrImp(data_to_impute,
           percent_of_missing = percent_of_missing, col_type = col_type,
           robust = self$param_set$values$robust,
           mod_cat = self$param_set$values$mod_cat, use_imputed = self$param_set$values$use_imputed,
           out_file = self$param_set$values$out_file)
-
 
 
         return(data_imputed)
@@ -116,7 +116,7 @@ PipeOpVIM_regrImp <- R6::R6Class("VIM_regrImp_imputation",
         self$imputed_predict <- model$imputed_predict
         self$action <- 3
         self$data_imputed <- model$data_imputed
-        self$impited <- model$imputed
+        self$imputed <- model$imputed
         self$column_counter <- model$column_counter
 
       }
@@ -183,4 +183,5 @@ PipeOpVIM_regrImp <- R6::R6Class("VIM_regrImp_imputation",
 
   )
 )
+
 
