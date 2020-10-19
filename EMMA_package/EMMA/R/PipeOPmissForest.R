@@ -42,7 +42,7 @@ PipeOpmissForest <- R6::R6Class("missForest_imputation",
   lock_objects = FALSE,
   inherit = PipeOpImpute, # inherit from PipeOp
   public = list(
-    initialize = function(id = "imput_missForest", cores = NULL, ntree_set = c(100, 200, 500, 1000), mtry_set = NULL, parallel = F
+    initialize = function(id = "impute_missForest_B", cores = NULL, ntree_set = c(100, 200, 500, 1000), mtry_set = NULL, parallel = F
       , mtry = NULL, ntree = 100, optimize = FALSE, maxiter = 20, maxnodes = NULL, out_file = NULL) {
       super$initialize(id,
         whole_task_dependent = TRUE, packages = "EMMA", param_vals = list(

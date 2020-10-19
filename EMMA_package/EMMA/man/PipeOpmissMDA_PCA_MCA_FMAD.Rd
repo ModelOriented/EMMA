@@ -64,7 +64,7 @@ Output log file location. If file already exists log message will be added. If N
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PipeOpMissMDA_PCA_MCA_FMAD$new(
-  id = "imput_missMDA_MCA_PCA_FMAD",
+  id = "impute_missMDA_MCA_PCA_FMAD_B",
   optimize_ncp = T,
   set_ncp = 2,
   ncp.max = 5,

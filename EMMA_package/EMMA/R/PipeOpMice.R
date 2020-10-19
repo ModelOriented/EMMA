@@ -43,7 +43,7 @@ PipeOpMice <- R6::R6Class("mice_imputation",
   lock_objects = FALSE,
   inherit = PipeOpImpute,
   public = list(
-    initialize = function(id = "imput_mice", m = 5, maxit = 5, set_cor = 0.5,
+    initialize = function(id = "impute_mice_B", m = 5, maxit = 5, set_cor = 0.5,
       set_method = "pmm", low_corr = 0, up_corr = 1,
       methods_random = c("pmm"), iter = 5, random.seed = 123, optimize = F, correlation = F, out_file = NULL) {
 

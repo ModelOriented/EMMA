@@ -26,7 +26,7 @@ PipeOpVIM_HD <- R6::R6Class("VIM_HD_imputation",
   lock_objects = FALSE,
   inherit = PipeOpImpute, # inherit from PipeOp
   public = list(
-    initialize = function(id = "imput_VIM_HD", out_file = NULL) {
+    initialize = function(id = "impute_VIM_HD_B", out_file = NULL) {
       super$initialize(id,
         whole_task_dependent = TRUE, packages = "EMMA", param_vals = list(out_file = out_file),
         param_set = ParamSet$new(list(
@@ -166,3 +166,4 @@ PipeOpVIM_HD <- R6::R6Class("VIM_HD_imputation",
 
   )
 )
+

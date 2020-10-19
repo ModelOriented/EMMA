@@ -53,7 +53,7 @@ Output log file location. If file already exists log message will be added. If N
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PipeOpVIM_regrImp$new(
-  id = "imput_VIM_regrImp",
+  id = "impute_VIM_regrImp_B",
   robust = FALSE,
   mod_cat = FALSE,
   use_imputed = FALSE,

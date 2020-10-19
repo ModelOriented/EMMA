@@ -53,7 +53,7 @@ Output log file location. If file already exists log message will be added. If N
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PipeOpVIM_kNN$new(
-  id = "imput_VIM_kNN",
+  id = "impute_VIM_kNN_B",
   k = 5,
   numFun = median,
   catFun = VIM::maxCat,

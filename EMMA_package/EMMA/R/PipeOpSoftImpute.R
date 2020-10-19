@@ -37,7 +37,7 @@ PipeOpSoftImpute <- R6::R6Class("softImpute_imputation",
   lock_objects = FALSE,
   inherit = PipeOpImpute, # inherit from PipeOp
   public = list(
-    initialize = function(id = "imput_softImpute", cat_Fun = VIM::maxCat, lambda = 0, rank.max = 2, type = "als", thresh = 1e-5, maxit = 100,
+    initialize = function(id = "impute_softImpute_B", cat_Fun = VIM::maxCat, lambda = 0, rank.max = 2, type = "als", thresh = 1e-5, maxit = 100,
       out_file = NULL) {
       super$initialize(id,
         whole_task_dependent = TRUE, packages = "EMMA", param_vals = list(
@@ -196,6 +196,3 @@ PipeOpSoftImpute <- R6::R6Class("softImpute_imputation",
   )
 )
 
-# resample(TaskClassif$new('t',as.data.frame(task$data()),'binaryClass'),graph_learner,rsmp("holdout"))
-# d<- PipeOpSoftImpute$new()
-# d$train(list(task))

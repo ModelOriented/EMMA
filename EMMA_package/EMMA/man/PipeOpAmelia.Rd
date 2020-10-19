@@ -59,7 +59,7 @@ Output log file location. If file already exists log message will be added. If N
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PipeOpAmelia$new(
-  id = "imput_Amelia",
+  id = "impute_Amelia_B",
   polytime = NULL,
   splinetime = NULL,
   intercs = FALSE,
