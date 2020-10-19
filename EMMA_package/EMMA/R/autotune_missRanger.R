@@ -94,7 +94,7 @@ autotune_missRanger <- function(df, percent_of_missing, maxiter = 10, random.see
     if (!optimize) {
       if (is.null(mtry)) {
 
-        final <- missRanger(df, maxiter = maxiter, seed = random.seed, num.trees = num.trees, verbose = as.numeric(verbose), pmm.k = pmm.k)
+        final <- missRanger::missRanger(df, maxiter = maxiter, seed = random.seed, num.trees = num.trees, verbose = as.numeric(verbose), pmm.k = pmm.k)
       }
       else {
         final <- missRanger::missRanger(df, maxiter = maxiter, seed = random.seed, num.trees = num.trees, verbose = as.numeric(verbose), sample.fraction = mtry / ncol(df), pmm.k = pmm.k)
