@@ -59,7 +59,7 @@ Output log file location. If file already exists log message will be added. If N
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PipeOpSoftImpute$new(
-  id = "imput_softImpute",
+  id = "impute_softImpute_B",
   cat_Fun = VIM::maxCat,
   lambda = 0,
   rank.max = 2,

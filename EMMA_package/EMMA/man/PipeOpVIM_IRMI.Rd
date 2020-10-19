@@ -59,7 +59,7 @@ Output log file location. If file already exists log message will be added. If N
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PipeOpVIM_IRMI$new(
-  id = "imput_VIM_IRMI",
+  id = "impute_VIM_IRMI_B",
   eps = 5,
   maxit = 100,
   step = FALSE,

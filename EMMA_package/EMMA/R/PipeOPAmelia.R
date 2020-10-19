@@ -36,7 +36,7 @@ PipeOpAmelia <- R6::R6Class("Amelia_imputation",
   lock_objects = FALSE,
   inherit = PipeOpImpute, # inherit from PipeOp
   public = list(
-    initialize = function(id = "imput_Amelia", polytime = NULL, splinetime = NULL, intercs = FALSE, empir = NULL, m = 3, parallel = TRUE, out_file = NULL) {
+    initialize = function(id = "impute_Amelia_B", polytime = NULL, splinetime = NULL, intercs = FALSE, empir = NULL, m = 3, parallel = TRUE, out_file = NULL) {
 
       super$initialize(id,
         whole_task_dependent = TRUE, packages = "EMMA", param_vals = list(polytime = polytime, splinetime = splinetime, intercs = intercs, empir = empir, m = m, parallel = parallel, out_file = out_file),
@@ -204,12 +204,3 @@ PipeOpAmelia <- R6::R6Class("Amelia_imputation",
   )
 )
 
-
-# test_task <- TaskClassif$new('test',df,'binaryClass')
-# op <- PipeOpAmelia$new()
-# pipe <- op %>>% learner_po
-# grln <- GraphLearner$new(pipe)
-
-
-#  resample(task,graph_learner,rsmp("holdout"))
-#

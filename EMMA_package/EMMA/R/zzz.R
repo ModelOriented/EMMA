@@ -14,7 +14,6 @@ register_emma = function() {
   x$add("impute_oor_B", PipeOpOOR_B)
   x$add("impute_sample_B", PipeOpSample_B)
   x$add("miceA_imputation", PipeOpMice_A)
-  x$add("miceA_imputation", PipeOpmice_A)
   x$add("mice_imputation", PipeOpMice)
   x$add("missForest_imputation", PipeOpmissForest)
   x$add("missMDA_MCA_PCA_FMAD_imputation", PipeOpMissMDA_PCA_MCA_FMAD)

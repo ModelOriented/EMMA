@@ -38,10 +38,3 @@ PipeOpMode_B = R6::R6Class("Mode_B_imputation",
   )
 )
 
-
-# m <- PipeOpImputeMode_B$new()
-#
-#
-# gr <- m%>>% PipeOpEncodeImpact$new() %>>% lrn('classif.glmnet')
-# grlr <- GraphLearner$new(gr)
-# resample(task,grlr,rsmp('cv'))

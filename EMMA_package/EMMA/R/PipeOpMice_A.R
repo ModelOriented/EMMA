@@ -34,7 +34,7 @@ PipeOpMice_A <- R6::R6Class("mice_A_imputation",
   lock_objects = FALSE,
   inherit = PipeOpImpute, # inherit from PipeOp
   public = list(
-    initialize = function(id = "imput_mice_A", set_cor = 0.5, m = 5, maxit = 5, random.seed = 123, correlation = F, methods = NULL) {
+    initialize = function(id = "impute_mice_A", set_cor = 0.5, m = 5, maxit = 5, random.seed = 123, correlation = F, methods = NULL) {
       super$initialize(id,
         whole_task_dependent = TRUE, packages = "EMMA", param_vals = list(set_cor = set_cor, methods = methods, m = m, maxit = maxit, random.seed = random.seed, correlation = correlation),
         param_set = ParamSet$new(list(

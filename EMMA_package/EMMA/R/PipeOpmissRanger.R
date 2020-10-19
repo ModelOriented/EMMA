@@ -38,7 +38,7 @@ PipeOpmissRanger <- R6::R6Class("missRanger_imputation",
   lock_objects = FALSE,
   inherit = PipeOpImpute,
   public = list(
-    initialize = function(id = "imput_missRanger", maxiter = 10, random.seed = 123, mtry = NULL, num.trees = 500,
+    initialize = function(id = "impute_missRanger_B", maxiter = 10, random.seed = 123, mtry = NULL, num.trees = 500,
       pmm.k = 5, optimize = F, iter = 10, out_file = NULL) {
       super$initialize(id,
         whole_task_dependent = TRUE, packages = "EMMA", param_vals = list(
@@ -199,3 +199,4 @@ PipeOpmissRanger <- R6::R6Class("missRanger_imputation",
 
   )
 )
+
