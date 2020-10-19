@@ -135,7 +135,7 @@ PipeOpMissMDA_MFA <- R6::R6Class("missMDA_MFAimputation",
         self$imputed_predict <- model$imputed_predict
         self$action <- 3
         self$data_imputed <- model$data_imputed
-        self$impited <- model$imputed
+        self$imputed <- model$imputed
         self$column_counter <- model$column_counter
 
       }

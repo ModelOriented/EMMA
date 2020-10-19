@@ -49,6 +49,7 @@ autotune_VIM_regrImp <- function(df, col_type, percent_of_missing, col_0_1 = F, 
 
     final <- as.data.frame(final)
     iter_columns <- (1:ncol(df))[percent_of_missing > 0]
+
     for (i in iter_columns) {
       error <- NULL
       WORK <- FALSE
@@ -81,7 +82,7 @@ autotune_VIM_regrImp <- function(df, col_type, percent_of_missing, col_0_1 = F, 
       if (!WORK & sum(percent_of_missing == 0 & (col_type == "numeric" | col_type == "integer")) > 0) {
         tryCatch({
           numeric_part_formula <- paste(colnames(df)[i], paste(colnames(df)[percent_of_missing == 0 & (col_type == "numeric" | col_type == "integer")][1], collapse = "+"), sep = "~")
-          final <- VIM::regressionImp(as.formula(part_formula), final, robust = robust, mod_cat = mod_cat, imp_var = F)
+          final <- VIM::regressionImp(as.formula(numeric_part_formula), final, robust = robust, mod_cat = mod_cat, imp_var = F)
           WORK <- TRUE
         }, error = function(e) {
           error <<- e
