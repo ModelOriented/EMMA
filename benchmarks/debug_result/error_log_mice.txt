@@ -1,0 +1,627 @@
+imput_mice_A_pmm classif.glmnet Task 4: labor (Supervised Classification)
+"iteration" "msg"
+"1" 2 "NA/NaN/Inf in foreign function call (arg 5)"
+Error in assert_binary(truth, prob = prob, positive = positive, na_value = na_value): Assertion on 'prob' failed: Contains missing values (element 9).
+
+imput_mice_A_pmm classif.glmnet Task 25: colic (Supervised Classification)
+"iteration" "msg"
+Error in assert_binary(truth, prob = prob, positive = positive, na_value = na_value): Assertion on 'prob' failed: Contains missing values (element 1).
+
+imput_mice_A_pmm classif.glmnet Task 51: trains (Supervised Classification)
+"iteration" "msg"
+"1" 3 "NA/NaN/Inf in foreign function call (arg 5)"
+"2" 4 "NA/NaN/Inf in foreign function call (arg 5)"
+"3" 5 "nothing left to impute"
+imput_mice_A_pmm classif.glmnet Task 3021: sick (Supervised Classification)
+"iteration" "msg"
+Error in assert_binary(truth, prob = prob, positive = positive, na_value = na_value): Assertion on 'prob' failed: Contains missing values (element 1).
+
+imput_mice_A_pmm classif.glmnet Task 3626: analcatdata_uktrainacc (Supervised Classification)
+"iteration" "msg"
+"1" 1 "nothing left to impute"
+"2" 3 "nothing left to impute"
+"3" 4 "nothing left to impute"
+"4" 5 "nothing left to impute"
+imput_mice_A_pmm classif.glmnet Task 3856: kdd_ipums_la_97-small (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "argument is of length zero"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "system is computationally singular: reciprocal condition number = 2.68883e-17"
+imput_mice_A_pmm classif.glmnet Task 3865: ipums_la_98-small (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "argument is of length zero"
+"3" 3 "system is computationally singular: reciprocal condition number = 1.06791e-17"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_A_pmm classif.glmnet Task 3881: ipums_la_99-small (Supervised Classification)
+"iteration" "msg"
+"1" 1 "system is computationally singular: reciprocal condition number = 5.32719e-18"
+"2" 2 "argument is of length zero"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_A_pmm classif.glmnet Task 3886: soybean (Supervised Classification)
+"iteration" "msg"
+Error in assert_binary(truth, prob = prob, positive = positive, na_value = na_value): Assertion on 'prob' failed: Contains missing values (element 132).
+
+imput_mice_A_midastouch classif.glmnet Task 4: labor (Supervised Classification)
+"iteration" "msg"
+"1" 1 "Lapack routine dgesv: system is exactly singular: U[1,1] = 0"
+"2" 2 "argument is of length zero"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_A_midastouch classif.glmnet Task 25: colic (Supervised Classification)
+"iteration" "msg"
+Error in assert_binary(truth, prob = prob, positive = positive, na_value = na_value): Assertion on 'prob' failed: Contains missing values (element 1).
+
+imput_mice_A_midastouch classif.glmnet Task 51: trains (Supervised Classification)
+"iteration" "msg"
+"1" 1 "Lapack routine dgesv: system is exactly singular: U[1,1] = 0"
+"2" 2 "Lapack routine dgesv: system is exactly singular: U[1,1] = 0"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_A_midastouch classif.glmnet Task 54: hepatitis (Supervised Classification)
+"iteration" "msg"
+"1" 1 "NA/NaN/Inf in foreign function call (arg 5)"
+"2" 2 "NA/NaN/Inf in foreign function call (arg 5)"
+"3" 3 "NA/NaN/Inf in foreign function call (arg 5)"
+"4" 4 "NA/NaN/Inf in foreign function call (arg 5)"
+"5" 5 "NA/NaN/Inf in foreign function call (arg 5)"
+imput_mice_A_midastouch classif.glmnet Task 55: vote (Supervised Classification)
+"iteration" "msg"
+"1" 1 "NA/NaN/Inf in foreign function call (arg 5)"
+"2" 2 "NA/NaN/Inf in foreign function call (arg 5)"
+"3" 3 "NA/NaN/Inf in foreign function call (arg 5)"
+"4" 4 "NA/NaN/Inf in foreign function call (arg 5)"
+"5" 5 "number of columns of matrices must match (see arg 2)"
+imput_mice_A_midastouch classif.glmnet Task 3021: sick (Supervised Classification)
+"iteration" "msg"
+"1" 1 "NA/NaN/Inf in foreign function call (arg 5)"
+"2" 2 "NA/NaN/Inf in foreign function call (arg 5)"
+"3" 3 "NA/NaN/Inf in foreign function call (arg 5)"
+"4" 4 "NA/NaN/Inf in foreign function call (arg 5)"
+"5" 5 "NA/NaN/Inf in foreign function call (arg 5)"
+imput_mice_A_midastouch classif.glmnet Task 3561: profb (Supervised Classification)
+"iteration" "msg"
+"1" 1 "NA/NaN/Inf in foreign function call (arg 5)"
+"2" 2 "NA/NaN/Inf in foreign function call (arg 5)"
+"3" 3 "NA/NaN/Inf in foreign function call (arg 5)"
+"4" 4 "NA/NaN/Inf in foreign function call (arg 5)"
+"5" 5 "NA/NaN/Inf in foreign function call (arg 5)"
+imput_mice_A_midastouch classif.glmnet Task 3626: analcatdata_uktrainacc (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "Lapack routine dgesv: system is exactly singular: U[1,1] = 0"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_A_midastouch classif.glmnet Task 3675: pbc (Supervised Classification)
+"iteration" "msg"
+"1" 1 "NA/NaN/Inf in foreign function call (arg 5)"
+"2" 2 "NA/NaN/Inf in foreign function call (arg 5)"
+"3" 3 "NA/NaN/Inf in foreign function call (arg 5)"
+"4" 4 "NA/NaN/Inf in foreign function call (arg 5)"
+"5" 5 "NA/NaN/Inf in foreign function call (arg 5)"
+imput_mice_A_midastouch classif.glmnet Task 3719: fishcatch (Supervised Classification)
+"iteration" "msg"
+"1" 1 "NA/NaN/Inf in foreign function call (arg 5)"
+"2" 2 "NA/NaN/Inf in foreign function call (arg 5)"
+"3" 3 "NA/NaN/Inf in foreign function call (arg 5)"
+"4" 4 "NA/NaN/Inf in foreign function call (arg 5)"
+"5" 5 "NA/NaN/Inf in foreign function call (arg 5)"
+imput_mice_A_midastouch classif.glmnet Task 3722: hungarian (Supervised Classification)
+"iteration" "msg"
+"1" 1 "NA/NaN/Inf in foreign function call (arg 5)"
+"2" 2 "NA/NaN/Inf in foreign function call (arg 5)"
+"3" 3 "NA/NaN/Inf in foreign function call (arg 5)"
+"4" 4 "NA/NaN/Inf in foreign function call (arg 5)"
+"5" 5 "NA/NaN/Inf in foreign function call (arg 5)"
+imput_mice_A_midastouch classif.glmnet Task 3807: echoMonths (Supervised Classification)
+"iteration" "msg"
+"1" 1 "NA/NaN/Inf in foreign function call (arg 5)"
+"2" 2 "NA/NaN/Inf in foreign function call (arg 5)"
+"3" 3 "NA/NaN/Inf in foreign function call (arg 5)"
+"4" 4 "NA/NaN/Inf in foreign function call (arg 5)"
+"5" 5 "NA/NaN/Inf in foreign function call (arg 5)"
+imput_mice_A_midastouch classif.glmnet Task 3852: anneal (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "number of columns of matrices must match (see arg 2)"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_A_midastouch classif.glmnet Task 3856: kdd_ipums_la_97-small (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "argument is of length zero"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "system is computationally singular: reciprocal condition number = 6.22034e-18"
+imput_mice_A_midastouch classif.glmnet Task 3865: ipums_la_98-small (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "argument is of length zero"
+"3" 3 "system is computationally singular: reciprocal condition number = 2.36407e-19"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_A_midastouch classif.glmnet Task 3870: bridges (Supervised Classification)
+"iteration" "msg"
+"1" 1 "NA/NaN/Inf in foreign function call (arg 5)"
+"2" 2 "NA/NaN/Inf in foreign function call (arg 5)"
+"3" 3 "NA/NaN/Inf in foreign function call (arg 5)"
+"4" 4 "NA/NaN/Inf in foreign function call (arg 5)"
+"5" 5 "NA/NaN/Inf in foreign function call (arg 5)"
+imput_mice_A_midastouch classif.glmnet Task 3871: analcatdata_reviewer (Supervised Classification)
+"iteration" "msg"
+"1" 1 "NA/NaN/Inf in foreign function call (arg 5)"
+"2" 2 "NA/NaN/Inf in foreign function call (arg 5)"
+"3" 3 "NA/NaN/Inf in foreign function call (arg 5)"
+"4" 4 "NA/NaN/Inf in foreign function call (arg 5)"
+"5" 5 "NA/NaN/Inf in foreign function call (arg 5)"
+imput_mice_A_midastouch classif.glmnet Task 3881: ipums_la_99-small (Supervised Classification)
+"iteration" "msg"
+"1" 1 "system is computationally singular: reciprocal condition number = 1.23129e-19"
+"2" 2 "argument is of length zero"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_A_midastouch classif.glmnet Task 3886: soybean (Supervised Classification)
+"iteration" "msg"
+"1" 1 "NA/NaN/Inf in foreign function call (arg 5)"
+"2" 2 "NA/NaN/Inf in foreign function call (arg 5)"
+"3" 3 "NA/NaN/Inf in foreign function call (arg 5)"
+"4" 4 "NA/NaN/Inf in foreign function call (arg 5)"
+"5" 5 "NA/NaN/Inf in foreign function call (arg 5)"
+imput_mice_A_midastouch classif.glmnet Task 125920: dresses-sales (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "argument is of length zero"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "number of columns of matrices must match (see arg 2)"
+imput_mice_A_sample classif.glmnet Task 4: labor (Supervised Classification)
+"iteration" "msg"
+"1" 2 "NA/NaN/Inf in foreign function call (arg 5)"
+Error in assert_binary(truth, prob = prob, positive = positive, na_value = na_value): Assertion on 'prob' failed: Contains missing values (element 9).
+
+imput_mice_A_sample classif.glmnet Task 25: colic (Supervised Classification)
+"iteration" "msg"
+Error in assert_binary(truth, prob = prob, positive = positive, na_value = na_value): Assertion on 'prob' failed: Contains missing values (element 1).
+
+imput_mice_A_sample classif.glmnet Task 3021: sick (Supervised Classification)
+"iteration" "msg"
+Error in assert_binary(truth, prob = prob, positive = positive, na_value = na_value): Assertion on 'prob' failed: Contains missing values (element 1).
+
+imput_mice_A_sample classif.glmnet Task 3881: ipums_la_99-small (Supervised Classification)
+"iteration" "msg"
+Error in assert_binary(truth, prob = prob, positive = positive, na_value = na_value): Assertion on 'prob' failed: Contains missing values (element 1).
+
+imput_mice_A_sample classif.glmnet Task 3886: soybean (Supervised Classification)
+"iteration" "msg"
+Error in assert_binary(truth, prob = prob, positive = positive, na_value = na_value): Assertion on 'prob' failed: Contains missing values (element 132).
+
+imput_mice_A_sample classif.glmnet Task 51: trains (Supervised Classification)
+"iteration" "msg"
+"1" 3 "NA/NaN/Inf in foreign function call (arg 5)"
+"2" 4 "NA/NaN/Inf in foreign function call (arg 5)"
+"3" 5 "nothing left to impute"
+imput_mice_A_sample classif.glmnet Task 3626: analcatdata_uktrainacc (Supervised Classification)
+"iteration" "msg"
+"1" 1 "nothing left to impute"
+"2" 3 "nothing left to impute"
+"3" 4 "nothing left to impute"
+"4" 5 "nothing left to impute"
+imput_mice_A_cart classif.glmnet Task 4: labor (Supervised Classification)
+"iteration" "msg"
+"1" 2 "NA/NaN/Inf in foreign function call (arg 5)"
+Error in assert_binary(truth, prob = prob, positive = positive, na_value = na_value): Assertion on 'prob' failed: Contains missing values (element 9).
+
+imput_mice_A_cart classif.glmnet Task 25: colic (Supervised Classification)
+"iteration" "msg"
+Error in assert_binary(truth, prob = prob, positive = positive, na_value = na_value): Assertion on 'prob' failed: Contains missing values (element 1).
+
+imput_mice_A_cart classif.glmnet Task 3021: sick (Supervised Classification)
+"iteration" "msg"
+Error in assert_binary(truth, prob = prob, positive = positive, na_value = na_value): Assertion on 'prob' failed: Contains missing values (element 1).
+
+imput_mice_A_cart classif.glmnet Task 3881: ipums_la_99-small (Supervised Classification)
+"iteration" "msg"
+Error in assert_binary(truth, prob = prob, positive = positive, na_value = na_value): Assertion on 'prob' failed: Contains missing values (element 1).
+
+imput_mice_A_cart classif.glmnet Task 3886: soybean (Supervised Classification)
+"iteration" "msg"
+Error in assert_binary(truth, prob = prob, positive = positive, na_value = na_value): Assertion on 'prob' failed: Contains missing values (element 132).
+
+imput_mice_A_cart classif.glmnet Task 51: trains (Supervised Classification)
+"iteration" "msg"
+"1" 3 "NA/NaN/Inf in foreign function call (arg 5)"
+"2" 4 "NA/NaN/Inf in foreign function call (arg 5)"
+"3" 5 "nothing left to impute"
+imput_mice_A_cart classif.glmnet Task 3626: analcatdata_uktrainacc (Supervised Classification)
+"iteration" "msg"
+"1" 1 "nothing left to impute"
+"2" 3 "nothing left to impute"
+"3" 4 "nothing left to impute"
+"4" 5 "nothing left to impute"
+imput_mice_A_rf classif.glmnet Task 4: labor (Supervised Classification)
+"iteration" "msg"
+"1" 2 "NA/NaN/Inf in foreign function call (arg 5)"
+"2" 3 NA
+Error in assert_binary(truth, prob = prob, positive = positive, na_value = na_value): Assertion on 'prob' failed: Contains missing values (element 9).
+
+imput_mice_A_rf classif.glmnet Task 25: colic (Supervised Classification)
+"iteration" "msg"
+Error in assert_binary(truth, prob = prob, positive = positive, na_value = na_value): Assertion on 'prob' failed: Contains missing values (element 1).
+
+imput_mice_A_rf classif.glmnet Task 55: vote (Supervised Classification)
+"iteration" "msg"
+"1" 5 "NAs in foreign function call (arg 6)"
+imput_mice_A_rf classif.glmnet Task 3021: sick (Supervised Classification)
+"iteration" "msg"
+Error in assert_binary(truth, prob = prob, positive = positive, na_value = na_value): Assertion on 'prob' failed: Contains missing values (element 1).
+
+imput_mice_A_rf classif.glmnet Task 3722: hungarian (Supervised Classification)
+"iteration" "msg"
+"1" 3 "Can't have empty classes in y."
+imput_mice_A_rf classif.glmnet Task 3852: anneal (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "Can't have empty classes in y."
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_A_rf classif.glmnet Task 3856: kdd_ipums_la_97-small (Supervised Classification)
+"iteration" "msg"
+"1" 1 "Can't have empty classes in y."
+"2" 4 "Can't have empty classes in y."
+imput_mice_A_rf classif.glmnet Task 3881: ipums_la_99-small (Supervised Classification)
+"iteration" "msg"
+Error in assert_binary(truth, prob = prob, positive = positive, na_value = na_value): Assertion on 'prob' failed: Contains missing values (element 1).
+
+imput_mice_A_rf classif.glmnet Task 3886: soybean (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "Can't have empty classes in y."
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_A_rf classif.glmnet Task 125920: dresses-sales (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "argument is of length zero"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "Can't have empty classes in y."
+imput_mice_A_rf classif.glmnet Task 51: trains (Supervised Classification)
+"iteration" "msg"
+"1" 1 "Can't have empty classes in y."
+"2" 2 "Can't have empty classes in y."
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_A_rf classif.glmnet Task 3626: analcatdata_uktrainacc (Supervised Classification)
+"iteration" "msg"
+"1" 1 "nothing left to impute"
+"2" 2 NA
+"3" 3 "nothing left to impute"
+"4" 4 "nothing left to impute"
+"5" 5 "nothing left to impute"
+imput_mice_pmm classif.glmnet Task 4: labor (Supervised Classification)
+"iteration" "msg"
+"1" 1 "NA/NaN/Inf in 'x'"
+"2" 2 "NA/NaN/Inf in 'x'"
+"3" 3 "NA/NaN/Inf in 'x'"
+"4" 4 "NA/NaN/Inf in 'x'"
+"5" 5 "NA/NaN/Inf in 'x'"
+imput_mice_pmm classif.glmnet Task 51: trains (Supervised Classification)
+"iteration" "msg"
+"1" 2 "Supplied 2 items to be assigned to 8 items of column 'length_4'. If you wish to 'recycle' the RHS please use rep() to make this intent clear to readers of your code."
+"2" 3 "Supplied 2 items to be assigned to 8 items of column 'length_4'. If you wish to 'recycle' the RHS please use rep() to make this intent clear to readers of your code."
+"3" 4 "object 'state' not found"
+"4" 5 "nothing left to impute"
+imput_mice_pmm classif.glmnet Task 3626: analcatdata_uktrainacc (Supervised Classification)
+"iteration" "msg"
+"1" 1 "nothing left to impute"
+"2" 2 "object 'state' not found"
+"3" 3 "nothing left to impute"
+"4" 4 "nothing left to impute"
+"5" 5 "nothing left to impute"
+imput_mice_pmm classif.glmnet Task 3852: anneal (Supervised Classification)
+"iteration" "msg"
+"1" 1 "NA/NaN/Inf in 'x'"
+"2" 2 "Lapack routine dgesv: system is exactly singular: U[5,5] = 0"
+"3" 3 "NA/NaN/Inf in 'x'"
+"4" 4 "NA/NaN/Inf in 'x'"
+"5" 5 "NA/NaN/Inf in 'x'"
+imput_mice_pmm classif.glmnet Task 3856: kdd_ipums_la_97-small (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "argument is of length zero"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "system is computationally singular: reciprocal condition number = 2.68883e-17"
+imput_mice_pmm classif.glmnet Task 3865: ipums_la_98-small (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "argument is of length zero"
+"3" 3 "system is computationally singular: reciprocal condition number = 1.06791e-17"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_pmm classif.glmnet Task 3881: ipums_la_99-small (Supervised Classification)
+"iteration" "msg"
+"1" 1 "system is computationally singular: reciprocal condition number = 5.32719e-18"
+"2" 2 "argument is of length zero"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_midastouch classif.glmnet Task 4: labor (Supervised Classification)
+"iteration" "msg"
+"1" 1 "Lapack routine dgesv: system is exactly singular: U[1,1] = 0"
+"2" 2 "argument is of length zero"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_midastouch classif.glmnet Task 51: trains (Supervised Classification)
+"iteration" "msg"
+"1" 1 "Lapack routine dgesv: system is exactly singular: U[1,1] = 0"
+"2" 2 "Lapack routine dgesv: system is exactly singular: U[1,1] = 0"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_midastouch classif.glmnet Task 54: hepatitis (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "argument is of length zero"
+"3" 3 "argument is of length zero"
+"4" 4 "missing value where TRUE/FALSE needed"
+"5" 5 "argument is of length zero"
+imput_mice_midastouch classif.glmnet Task 55: vote (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "argument is of length zero"
+"3" 3 "missing value where TRUE/FALSE needed"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_midastouch classif.glmnet Task 3021: sick (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "missing value where TRUE/FALSE needed"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_midastouch classif.glmnet Task 3561: profb (Supervised Classification)
+"iteration" "msg"
+"1" 1 "NA/NaN/Inf in foreign function call (arg 5)"
+"2" 2 "NA/NaN/Inf in foreign function call (arg 5)"
+"3" 3 "NA/NaN/Inf in foreign function call (arg 5)"
+"4" 4 "NA/NaN/Inf in foreign function call (arg 5)"
+"5" 5 "NA/NaN/Inf in foreign function call (arg 5)"
+imput_mice_midastouch classif.glmnet Task 3626: analcatdata_uktrainacc (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "Lapack routine dgesv: system is exactly singular: U[1,1] = 0"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_midastouch classif.glmnet Task 3675: pbc (Supervised Classification)
+"iteration" "msg"
+"1" 1 "missing value where TRUE/FALSE needed"
+"2" 2 "argument is of length zero"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_midastouch classif.glmnet Task 3719: fishcatch (Supervised Classification)
+"iteration" "msg"
+"1" 1 "NA/NaN/Inf in foreign function call (arg 5)"
+"2" 2 "NA/NaN/Inf in foreign function call (arg 5)"
+"3" 3 "NA/NaN/Inf in foreign function call (arg 5)"
+"4" 4 "NA/NaN/Inf in foreign function call (arg 5)"
+"5" 5 "NA/NaN/Inf in foreign function call (arg 5)"
+imput_mice_midastouch classif.glmnet Task 3722: hungarian (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "argument is of length zero"
+"3" 3 "argument is of length zero"
+"4" 4 "missing value where TRUE/FALSE needed"
+"5" 5 "argument is of length zero"
+imput_mice_midastouch classif.glmnet Task 3761: hip (Supervised Classification)
+"iteration" "msg"
+"1" 1 "Lapack routine dgesv: system is exactly singular: U[1,1] = 0"
+"2" 2 "Lapack routine dgesv: system is exactly singular: U[1,1] = 0"
+imput_mice_midastouch classif.glmnet Task 3793: colleges_usnews (Supervised Classification)
+"iteration" "msg"
+"1" 1 "Processed output task during prediction of imput_mice does not match output task during training."
+"2" 2 "Processed output task during prediction of imput_mice does not match output task during training."
+"3" 3 "Processed output task during prediction of imput_mice does not match output task during training."
+"4" 4 "Processed output task during prediction of imput_mice does not match output task during training."
+"5" 5 "Processed output task during prediction of imput_mice does not match output task during training."
+imput_mice_midastouch classif.glmnet Task 3807: echoMonths (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "argument is of length zero"
+"3" 3 "missing value where TRUE/FALSE needed"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_midastouch classif.glmnet Task 3852: anneal (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "number of columns of matrices must match (see arg 2)"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_midastouch classif.glmnet Task 3856: kdd_ipums_la_97-small (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "argument is of length zero"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "system is computationally singular: reciprocal condition number = 6.22034e-18"
+imput_mice_midastouch classif.glmnet Task 3865: ipums_la_98-small (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "argument is of length zero"
+"3" 3 "system is computationally singular: reciprocal condition number = 2.36407e-19"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_midastouch classif.glmnet Task 3870: bridges (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "argument is of length zero"
+"3" 3 "missing value where TRUE/FALSE needed"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_midastouch classif.glmnet Task 3871: analcatdata_reviewer (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "argument is of length zero"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "missing value where TRUE/FALSE needed"
+imput_mice_midastouch classif.glmnet Task 3881: ipums_la_99-small (Supervised Classification)
+"iteration" "msg"
+"1" 1 "system is computationally singular: reciprocal condition number = 1.23129e-19"
+"2" 2 "argument is of length zero"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_midastouch classif.glmnet Task 3886: soybean (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "missing value where TRUE/FALSE needed"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_midastouch classif.glmnet Task 125920: dresses-sales (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "argument is of length zero"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "number of columns of matrices must match (see arg 2)"
+imput_mice_cart classif.glmnet Task 54: hepatitis (Supervised Classification)
+"iteration" "msg"
+"1" 3 "Processed output task during prediction of imput_mice does not match output task during training."
+"2" 4 "Processed output task during prediction of imput_mice does not match output task during training."
+"3" 5 "Processed output task during prediction of imput_mice does not match output task during training."
+imput_mice_cart classif.glmnet Task 3021: sick (Supervised Classification)
+"iteration" "msg"
+"1" 1 "Processed output task during prediction of imput_mice does not match output task during training."
+"2" 2 "Processed output task during prediction of imput_mice does not match output task during training."
+"3" 3 "Processed output task during prediction of imput_mice does not match output task during training."
+"4" 4 "Processed output task during prediction of imput_mice does not match output task during training."
+"5" 5 "Processed output task during prediction of imput_mice does not match output task during training."
+imput_mice_cart classif.glmnet Task 3722: hungarian (Supervised Classification)
+"iteration" "msg"
+"1" 1 "Processed output task during prediction of imput_mice does not match output task during training."
+"2" 2 "Processed output task during prediction of imput_mice does not match output task during training."
+"3" 3 "Processed output task during prediction of imput_mice does not match output task during training."
+"4" 4 "Processed output task during prediction of imput_mice does not match output task during training."
+"5" 5 "Processed output task during prediction of imput_mice does not match output task during training."
+imput_mice_cart classif.glmnet Task 3793: colleges_usnews (Supervised Classification)
+"iteration" "msg"
+"1" 1 "Processed output task during prediction of imput_mice does not match output task during training."
+"2" 2 "Processed output task during prediction of imput_mice does not match output task during training."
+"3" 3 "Processed output task during prediction of imput_mice does not match output task during training."
+"4" 4 "Processed output task during prediction of imput_mice does not match output task during training."
+"5" 5 "Processed output task during prediction of imput_mice does not match output task during training."
+imput_mice_cart classif.glmnet Task 51: trains (Supervised Classification)
+"iteration" "msg"
+"1" 2 "nothing left to impute"
+"2" 3 "nothing left to impute"
+"3" 4 "nothing left to impute"
+"4" 5 "nothing left to impute"
+imput_mice_cart classif.glmnet Task 3626: analcatdata_uktrainacc (Supervised Classification)
+"iteration" "msg"
+"1" 1 "nothing left to impute"
+"2" 3 "nothing left to impute"
+"3" 4 "nothing left to impute"
+"4" 5 "nothing left to impute"
+imput_mice_rf classif.glmnet Task 4: labor (Supervised Classification)
+"iteration" "msg"
+"1" 1 "Can't have empty classes in y."
+"2" 2 "Can't have empty classes in y."
+"3" 3 "NA not permitted in predictors"
+"4" 4 "Can't have empty classes in y."
+"5" 5 "Need at least two classes to do classification."
+imput_mice_rf classif.glmnet Task 25: colic (Supervised Classification)
+"iteration" "msg"
+"1" 2 "Can't have empty classes in y."
+"2" 3 "Can't have empty classes in y."
+"3" 5 "Can't have empty classes in y."
+imput_mice_rf classif.glmnet Task 55: vote (Supervised Classification)
+"iteration" "msg"
+"1" 5 "NAs in foreign function call (arg 6)"
+imput_mice_rf classif.glmnet Task 3722: hungarian (Supervised Classification)
+"iteration" "msg"
+"1" 1 "Can't have empty classes in y."
+"2" 2 "Can't have empty classes in y."
+"3" 3 "Can't have empty classes in y."
+"4" 4 "Can't have empty classes in y."
+"5" 5 "Can't have empty classes in y."
+imput_mice_rf classif.glmnet Task 3561: profb (Supervised Classification)
+"iteration" "msg"
+"1" 4 "Can't have empty classes in y."
+imput_mice_rf classif.glmnet Task 3852: anneal (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "Can't have empty classes in y."
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_rf classif.glmnet Task 3856: kdd_ipums_la_97-small (Supervised Classification)
+"iteration" "msg"
+"1" 1 "Can't have empty classes in y."
+"2" 2 "Can't have empty classes in y."
+"3" 3 "Can't have empty classes in y."
+"4" 4 "Can't have empty classes in y."
+"5" 5 "Can't have empty classes in y."
+imput_mice_rf classif.glmnet Task 3865: ipums_la_98-small (Supervised Classification)
+"iteration" "msg"
+"1" 2 "Can't have empty classes in y."
+"2" 3 "Can't have empty classes in y."
+"3" 4 "Can't have empty classes in y."
+imput_mice_rf classif.glmnet Task 3870: bridges (Supervised Classification)
+"iteration" "msg"
+"1" 2 "Can't have empty classes in y."
+"2" 5 "Can't have empty classes in y."
+imput_mice_rf classif.glmnet Task 3871: analcatdata_reviewer (Supervised Classification)
+"iteration" "msg"
+"1" 4 "Can't have empty classes in y."
+imput_mice_rf classif.glmnet Task 3881: ipums_la_99-small (Supervised Classification)
+"iteration" "msg"
+"1" 1 "Can't have empty classes in y."
+"2" 3 "Can't have empty classes in y."
+"3" 5 "Can't have empty classes in y."
+imput_mice_rf classif.glmnet Task 3886: soybean (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "Can't have empty classes in y."
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_rf classif.glmnet Task 125920: dresses-sales (Supervised Classification)
+"iteration" "msg"
+"1" 1 "argument is of length zero"
+"2" 2 "argument is of length zero"
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "Can't have empty classes in y."
+imput_mice_rf classif.glmnet Task 51: trains (Supervised Classification)
+"iteration" "msg"
+"1" 1 "Can't have empty classes in y."
+"2" 2 "Can't have empty classes in y."
+"3" 3 "argument is of length zero"
+"4" 4 "argument is of length zero"
+"5" 5 "argument is of length zero"
+imput_mice_rf classif.glmnet Task 3626: analcatdata_uktrainacc (Supervised Classification)
+"iteration" "msg"
+"1" 1 "nothing left to impute"
+"2" 2 "missing values in newdata"
+"3" 3 "nothing left to impute"
+"4" 4 "nothing left to impute"
+"5" 5 "nothing left to impute"
