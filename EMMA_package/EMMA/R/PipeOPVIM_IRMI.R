@@ -115,12 +115,12 @@ PipeOpVIM_IRMI <- R6::R6Class("VIM_IRMI_imputation",
       self$action <- 3
 
 
-      return(list('data_imputed'=self$data_imputed,'train_s'=self$train_s,'flag'=self$flag,'imputed_predict'=self$imputed_predict,'imputed'=self$imputed,'column_counter'=self$column_counter))
+      return(list("data_imputed" = self$data_imputed, "train_s" = self$train_s, "flag" = self$flag, "imputed_predict" = self$imputed_predict, "imputed" = self$imputed, "column_counter" = self$column_counter))
 
     },
     .impute = function(feature, type, model, context) {
 
-      if(is.null(self$action)){
+      if (is.null(self$action)) {
 
 
         self$train_s <- model$train_s
@@ -193,4 +193,3 @@ PipeOpVIM_IRMI <- R6::R6Class("VIM_IRMI_imputation",
 
   )
 )
-

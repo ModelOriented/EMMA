@@ -37,4 +37,3 @@ PipeOpMedian_B = R6::R6Class("Median_B_imputation",
     }
   )
 )
-

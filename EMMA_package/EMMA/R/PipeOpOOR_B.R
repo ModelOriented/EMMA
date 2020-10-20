@@ -71,4 +71,3 @@ PipeOpOOR_B = R6::R6Class("OOR_B_imputation",
     }
   )
 )
-

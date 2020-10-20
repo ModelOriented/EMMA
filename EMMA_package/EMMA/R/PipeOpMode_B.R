@@ -37,4 +37,3 @@ PipeOpMode_B = R6::R6Class("Mode_B_imputation",
     }
   )
 )
-

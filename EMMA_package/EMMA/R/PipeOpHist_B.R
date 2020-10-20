@@ -43,4 +43,3 @@ PipeOpHist_B = R6::R6Class("Hist_B_imputation",
     }
   )
 )
-
