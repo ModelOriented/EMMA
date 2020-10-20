@@ -1,4 +1,5 @@
 "imputer","approach","positive"
+"imput_Amelia","B",4
 "imput_missForest","B",22
 "imput_missMDA_MCA_PCA_FMAD","B",10
 "imput_missMDA_MFA","B",11
@@ -8,4 +9,3 @@
 "imput_VIM_IRMI","B",9
 "imput_VIM_kNN","B",22
 "imput_VIM_regrImp","B",13
-"imputmelia","A",4
