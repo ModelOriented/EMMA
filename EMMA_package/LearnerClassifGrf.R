@@ -118,11 +118,4 @@ LearnerClassifGrf = R6::R6Class("LearnerClassifGrf",
                                    )
 )
 
-#
-# d <- LearnerClassifGrf$new()
-# d$predict_type <- 'prob'
-#  gr <- PipeOpEncodeImpact$new() %>>% d
-#  grlr <- GraphLearner$new(gr)
-# grlr
-#  w<- resample(task,grlr,rsmp('cv',folds=5),store_models = T)
-# w$aggregate(msr('classif.acc'))
+

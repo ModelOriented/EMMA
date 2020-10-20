@@ -27,7 +27,7 @@
 #' \item \code{up_corr} :: \code{double(1)}\cr
 #' Double between 0-1. Upper boundary of correlation used in inner optimization (used only when optimize=TRUE). Both of these parameters work the same for a fraction of case if correlation=FALSE,default \code{1}.
 #' \item \code{methods_random} :: \code{character(1)}\cr
-#' set of methods to chose. Default 'pmm'. If seted on NULL this methods are used predictive mean matching (numeric data) logreg, logistic regression imputation (binary data, factor with 2 levels) polyreg, polytomous regression imputation for unordered categorical data (factor > 2 levels) polr, proportional odds model for (ordered, > 2 levels).
+#' set of methods to chose. Avalible methods is {pmm,cart,rf,midastouch,sample} Default 'pmm'. If seted on NULL this methods are used predictive mean matching (numeric data) logreg, logistic regression imputation (binary data, factor with 2 levels) polyreg, polytomous regression imputation for unordered categorical data (factor > 2 levels) polr, proportional odds model for (ordered, > 2 levels).
 #' \item \code{iter} :: \code{integer(1)}\cr
 #' Number of iteration for random search, default \code{5}.
 #' \item \code{random.seed} :: \code{integer(1)}\cr
@@ -48,7 +48,7 @@ PipeOpMice <- R6::R6Class("mice_imputation",
       methods_random = c("pmm"), iter = 5, random.seed = 123, optimize = F, correlation = F, out_file = NULL) {
 
       super$initialize(id,
-        whole_task_dependent = TRUE, packages = c("EMMA",'mice'), param_vals = list(
+        whole_task_dependent = TRUE, packages = c("EMMA", "mice"), param_vals = list(
           m = m, maxit = maxit, set_cor = set_cor,
           set_method = set_method, low_corr = low_corr, up_corr = up_corr,
           methods_random = methods_random, iter = iter, random.seed = random.seed, optimize = optimize, correlation = correlation,
@@ -58,10 +58,10 @@ PipeOpMice <- R6::R6Class("mice_imputation",
           "iter" = ParamInt$new("iter", lower = 1, upper = Inf, default = 5, tags = "mice"),
           "m" = ParamInt$new("m", lower = 1, upper = Inf, default = 2, tags = "mice"),
           "maxit" = ParamInt$new("maxit", lower = 5, upper = 100, default = 5, tags = "mice"),
-          "set_method" = ParamFct$new("set_method", levels = c("pmm", "midastouch", "sample", "cart", "rf"), default = "pmm", tags = "mice"),
+          "set_method" = ParamUty$new("set_method", default = "pmm", tags = "mice"),
           "low_corr" = ParamDbl$new("low_corr", lower = 0, upper = 1, default = 0, tags = "mice"),
           "up_corr" = ParamDbl$new("up_corr", lower = 0, upper = 1, default = 1, tags = "mice"),
-          "methods_random" = ParamFct$new("methods_random", levels = c("pmm", "midastouch", "sample", "cart"), default = c("pmm"), tag = "mice"),
+          "methods_random" = ParamUty$new("methods_random", default = c("pmm"), tag = "mice"),
           "random.seed" = ParamInt$new("random.seed", -Inf, Inf, default = 123, tags = "mice"),
           "optimize" = ParamLgl$new("optimize", default = F, tags = "mice"),
           "correlation" = ParamLgl$new("correlation", default = F, tags = "mice"),
@@ -78,6 +78,7 @@ PipeOpMice <- R6::R6Class("mice_imputation",
 
     }), private = list(
     .train_imputer = function(feature, type, context) {
+
       imp_function <- function(data_to_impute) {
 
         data_to_impute <- as.data.frame(data_to_impute)
@@ -119,7 +120,7 @@ PipeOpMice <- R6::R6Class("mice_imputation",
         data_to_impute <- cbind(feature, context)
 
 
-        self$data_imputed<- imp_function(data_to_impute)
+        self$data_imputed <- imp_function(data_to_impute)
 
         colnames(self$data_imputed) <- self$state$context_cols
 
@@ -136,21 +137,21 @@ PipeOpMice <- R6::R6Class("mice_imputation",
       self$action <- 3
 
 
-      return(list('data_imputed'=self$data_imputed,'train_s'=self$train_s,'flag'=self$flag,'imputed_predict'=self$imputed_predict,'imputed'=self$imputed,'column_counter'=self$column_counter))
+      return(list("data_imputed" = self$data_imputed, "train_s" = self$train_s, "flag" = self$flag, "imputed_predict" = self$imputed_predict, "imputed" = self$imputed, "column_counter" = self$column_counter))
 
     },
     .impute = function(feature, type, model, context) {
 
-      if(is.null(self$action)){
+      if (is.null(self$action)) {
 
 
-      self$train_s <- model$train_s
-      self$flag <- model$flag
-      self$imputed_predict <- model$imputed_predict
-      self$action <- 3
-      self$data_imputed <- model$data_imputed
-      self$imputed <- model$imputed
-      self$column_counter <- model$column_counter
+        self$train_s <- model$train_s
+        self$flag <- model$flag
+        self$imputed_predict <- model$imputed_predict
+        self$action <- 3
+        self$data_imputed <- model$data_imputed
+        self$imputed <- model$imputed
+        self$column_counter <- model$column_counter
 
       }
 

@@ -25,9 +25,10 @@
 
 
 autotune_softImpute <- function(df, percent_of_missing, col_type, col_0_1 = F, cat_Fun = VIM::maxCat, lambda = 0, rank.max = 2, type = "als", thresh = 1e-5, maxit = 100, out_file = NULL) {
- if(sum(col_type == "numeric" | col_type == "integer") < 2){
-   print('Not enought numeric for softimpute given function will be used')
- }
+
+  if (sum(col_type == "numeric" | col_type == "integer") < 2) {
+    print("Not enought numeric for softimpute given function will be used")
+  }
 
 
   column_order <- colnames(df)
@@ -63,12 +64,13 @@ autotune_softImpute <- function(df, percent_of_missing, col_type, col_0_1 = F, c
       if (!is.null(out_file)) {
         write("Not engouht numeric impute with function", file = out_file, append = T)
       }
-      if(sum(col_type == "numeric" | col_type == "integer")>0){
-      j <- colnames(df)[col_type == "numeric" | col_type == "integer"]
-      col_to_imp <- df[, j, drop = F]
-      col_to_imp[is.na(col_to_imp), ] <- cat_Fun(na.omit(col_to_imp[[j]]))
-      j <- col_to_imp
-      final <- j}
+      if (sum(col_type == "numeric" | col_type == "integer") > 0) {
+        j <- colnames(df)[col_type == "numeric" | col_type == "integer"]
+        col_to_imp <- df[, j, drop = F]
+        col_to_imp[is.na(col_to_imp), ] <- cat_Fun(na.omit(col_to_imp[[j]]))
+        j <- col_to_imp
+        final <- j
+      }
     }
 
 
@@ -82,10 +84,12 @@ autotune_softImpute <- function(df, percent_of_missing, col_type, col_0_1 = F, c
 
     # conecting df back
 
-    if(exists('final')){
-    final <- cbind(as.data.frame(final), df[, ifelse(col_type == "numeric" | col_type == "integer", F, T), drop = F])
+    if (exists("final")) {
+      final <- cbind(as.data.frame(final), df[, ifelse(col_type == "numeric" | col_type == "integer", F, T), drop = F])
     }
-    else{final <- df[, ifelse(col_type == "numeric" | col_type == "integer", F, T), drop = F] }
+    else {
+      final <- df[, ifelse(col_type == "numeric" | col_type == "integer", F, T), drop = F]
+    }
     final <- final[, column_order]
     if (!is.null(out_file)) {
       write("OK", file = out_file, append = T)
