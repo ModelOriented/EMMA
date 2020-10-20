@@ -31,7 +31,7 @@ PipeOpVIM_regrImp <- R6::R6Class("VIM_regrImp_imputation",
   lock_objects = FALSE,
   inherit = PipeOpImpute, # inherit from PipeOp
   public = list(
-    initialize = function(id = "imput_VIM_regrImp", robust = FALSE, mod_cat = FALSE, use_imputed = FALSE, out_file = NULL) {
+    initialize = function(id = "impute_VIM_regrImp_B", robust = FALSE, mod_cat = FALSE, use_imputed = FALSE, out_file = NULL) {
       super$initialize(id,
         whole_task_dependent = TRUE, packages = "EMMA", param_vals = list(
           robust = robust, mod_cat = mod_cat,

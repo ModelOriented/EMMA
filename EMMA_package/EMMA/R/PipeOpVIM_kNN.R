@@ -30,7 +30,7 @@ PipeOpVIM_kNN <- R6::R6Class("VIM_kNN_imputation",
   lock_objects = FALSE,
   inherit = PipeOpImpute,
   public = list(
-    initialize = function(id = "imput_VIM_kNN", k = 5, numFun = median, catFun = VIM::maxCat, out_file = NULL) {
+    initialize = function(id = "impute_VIM_kNN_B", k = 5, numFun = median, catFun = VIM::maxCat, out_file = NULL) {
       super$initialize(id,
         whole_task_dependent = TRUE, packages = "EMMA", param_vals = list(k = k, numFun = numFun, catFun = catFun, out_file = out_file),
         param_set = ParamSet$new(list(

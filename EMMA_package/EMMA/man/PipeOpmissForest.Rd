@@ -65,7 +65,7 @@ Output log file location. If file already exists log message will be added. If N
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PipeOpmissForest$new(
-  id = "imput_missForest",
+  id = "impute_missForest_B",
   cores = NULL,
   ntree_set = c(100, 200, 500, 1000),
   mtry_set = NULL,

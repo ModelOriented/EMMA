@@ -71,12 +71,3 @@ PipeOpOOR_B = R6::R6Class("OOR_B_imputation",
     }
   )
 )
-
-
-
-# m <- PipeOpImputeOOR_B$new()
-#
-#
-# gr <- m%>>% PipeOpEncodeImpact$new() %>>% lrn('classif.glmnet')
-# grlr <- GraphLearner$new(gr)
-# resample(task,grlr,rsmp('cv'))

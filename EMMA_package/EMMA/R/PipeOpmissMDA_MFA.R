@@ -39,7 +39,7 @@ PipeOpMissMDA_MFA <- R6::R6Class("missMDA_MFAimputation",
   lock_objects = FALSE,
   inherit = PipeOpImpute, # inherit from PipeOp
   public = list(
-    initialize = function(id = "imput_missMDA_MFA", ncp = 2, random.seed = 123, maxiter = 998,
+    initialize = function(id = "impute_missMDA_MFA_B", ncp = 2, random.seed = 123, maxiter = 998,
       coeff.ridge = 1, threshold = 1e-06, method = "Regularized", out_file = NULL) {
       super$initialize(id,
         whole_task_dependent = TRUE, packages = "EMMA", param_vals = list(
@@ -208,5 +208,3 @@ PipeOpMissMDA_MFA <- R6::R6Class("missMDA_MFAimputation",
     }
   )
 )
-
-

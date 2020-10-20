@@ -60,7 +60,7 @@ Output log file location. If file already exists log message will be added. If N
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PipeOpMissMDA_MFA$new(
-  id = "imput_missMDA_MFA",
+  id = "impute_missMDA_MFA_B",
   ncp = 2,
   random.seed = 123,
   maxiter = 998,

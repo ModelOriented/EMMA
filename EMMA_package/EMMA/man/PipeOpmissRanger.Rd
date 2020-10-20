@@ -59,7 +59,7 @@ Output log file location. If file already exists log message will be added. If N
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PipeOpmissRanger$new(
-  id = "imput_missRanger",
+  id = "impute_missRanger_B",
   maxiter = 10,
   random.seed = 123,
   mtry = NULL,

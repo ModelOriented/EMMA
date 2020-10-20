@@ -67,7 +67,7 @@ If set TRUE correlation is used, if set FALSE then fraction of case, default \co
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PipeOpMice$new(
-  id = "imput_mice",
+  id = "impute_mice_B",
   m = 5,
   maxit = 5,
   set_cor = 0.5,

@@ -40,7 +40,7 @@ PipeOpMissMDA_PCA_MCA_FMAD <- R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",
   lock_objects = FALSE,
   inherit = PipeOpImpute, # inherit from PipeOp
   public = list(
-    initialize = function(id = "imput_missMDA_MCA_PCA_FMAD", optimize_ncp = T, set_ncp = 2, ncp.max = 5, random.seed = 123, maxiter = 998,
+    initialize = function(id = "impute_missMDA_MCA_PCA_FMAD_B", optimize_ncp = T, set_ncp = 2, ncp.max = 5, random.seed = 123, maxiter = 998,
       coeff.ridge = 1, threshold = 1e-06, method = "Regularized", out_file = NULL) {
 
       super$initialize(id,
@@ -207,12 +207,3 @@ PipeOpMissMDA_PCA_MCA_FMAD <- R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",
 
   )
 )
-
-
-
-
-# test <- PipeOpMissMDA_PCA_MCA_FMAD$new()
-# graph =  test %>>% learner_po
-# glrn = GraphLearner$new(graph)
-
-# resample(test_task,glrn,rsmp('cv',folds=2L))

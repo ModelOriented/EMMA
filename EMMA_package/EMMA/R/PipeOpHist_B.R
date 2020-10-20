@@ -43,15 +43,3 @@ PipeOpHist_B = R6::R6Class("Hist_B_imputation",
     }
   )
 )
-
-
-# m <- PipeOpImputeHist_B$new()
-#
-#
-# gr <- m%>>% PipeOpEncodeImpact$new() %>>% lrn('classif.glmnet')
-# grlr <- GraphLearner$new(gr)
-# resample(task_numeric,grlr,rsmp('cv'))
-#
-# test <- iris
-# test$Sepal.Width[sample(1:150,50)] <- NA
-# task_numeric<- TaskClassif$new('d',test,"Species")
