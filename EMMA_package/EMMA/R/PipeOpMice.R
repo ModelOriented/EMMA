@@ -136,8 +136,8 @@ PipeOpMice <- R6::R6Class("mice_imputation",
 
       self$action <- 3
 
-
-      return(list("data_imputed" = self$data_imputed, "train_s" = self$train_s, "flag" = self$flag, "imputed_predict" = self$imputed_predict, "imputed" = self$imputed, "column_counter" = self$column_counter))
+      model <- list("data_imputed" = self$data_imputed, "train_s" = self$train_s, "flag" = self$flag, "imputed_predict" = self$imputed_predict, "imputed" = self$imputed, "column_counter" = self$column_counter)
+      return(model)
 
     },
     .impute = function(feature, type, model, context) {
@@ -150,7 +150,7 @@ PipeOpMice <- R6::R6Class("mice_imputation",
         self$imputed_predict <- model$imputed_predict
         self$action <- 3
         self$data_imputed <- model$data_imputed
-        self$imputed <- model$imputed
+        self$imputed <- F
         self$column_counter <- model$column_counter
 
       }
@@ -194,13 +194,16 @@ PipeOpMice <- R6::R6Class("mice_imputation",
 
 
       }
+
       if ((nrow(self$data_imputed) != nrow(context) | !self$train_s) & self$flag == "train") {
         self$imputed_predict <- FALSE
         self$flag <- "predict"
       }
 
       if (!self$imputed_predict) {
+
         data_to_impute <- cbind(feature, context)
+
 
         self$data_imputed <- imp_function(data_to_impute)
 

@@ -146,13 +146,13 @@ PipeOpMice_A <- R6::R6Class("mice_A_imputation",
       if (is.null(self$action)) {
 
         self$model <- model$model
-        self$train_s <- model$train_s
-        self$flag <- model$flag
-        self$imputed_predict <- model$imputed_predict
+        self$train_s <- T
+        self$flag <- 'train'
+        self$imputed_predict <- T
         self$action <- 3
         self$data_imputed <- model$data_imputed
-        self$impited <- model$imputed
-        self$column_counter <- model$column_counter
+        self$imputed <- F
+        self$column_counter <- 0
 
       }
       imp_function <- function(data_to_impute) {

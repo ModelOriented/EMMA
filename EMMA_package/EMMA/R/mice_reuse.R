@@ -115,7 +115,7 @@ mice.reuse <- function(mids, newdata, maxit = 5, printFlag = TRUE, seed = NA) {
   # (https://stefvanbuuren.name/fimd/sec-knowledge.html)
   # to replace those values that we did observe with their actual values that
   # we stored in the variable `actual_data` after each sampling.
-  cond_imp <- "imp[[j]][, i] <- replace_overimputes(fetch_data(), imp, j, i)"
+  cond_imp <- "imp[[j]][, i] <- EMMA::replace_overimputes(EMMA::fetch_data(), imp, j, i)"
   mids.comb$post <- sapply(
     mids.comb$post,
     function(x) {
