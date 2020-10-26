@@ -20,7 +20,7 @@ autotune_rMIDAS(
 
 \item{col_type}{Columns type in data frame}
 
-\item{path}{haracter string, path to python binary if type == "auto", path to virtualenv if type == "virtualenv", or the name of a Conda environment if type=="condaenv". More information aboute Pythone enviroment can be found in Detalis.}
+\item{path}{character string, path to python binary if type == "auto", path to virtualenv if type == "virtualenv", or the name of a Conda environment if type=="condaenv". More information aboute Pythone enviroment can be found in Detalis.}
 
 \item{type}{character string, one of 'auto' (for python binary),'virtualenv', or 'condaenv. More information aboute Pythone enviroment can be found in Detalis.}
 
@@ -53,5 +53,5 @@ The function requires a Python environment created with package reticulate. The 
 
 }
 \author{
-Thomas Robinson ,, Ranjit Lall ORCID iD, Alex Stenlake [
+Thomas Robinson , Ranjit Lall, Alex Stenlake
 }
