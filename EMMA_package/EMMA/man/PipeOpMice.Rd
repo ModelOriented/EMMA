@@ -30,7 +30,7 @@ Double between 0-1. Lower boundary of correlation used in inner optimization (us
 \item \code{up_corr} :: \code{double(1)}\cr
 Double between 0-1. Upper boundary of correlation used in inner optimization (used only when optimize=TRUE). Both of these parameters work the same for a fraction of case if correlation=FALSE,default \code{1}.
 \item \code{methods_random} :: \code{character(1)}\cr
-set of methods to chose. Default 'pmm'. If seted on NULL this methods are used predictive mean matching (numeric data) logreg, logistic regression imputation (binary data, factor with 2 levels) polyreg, polytomous regression imputation for unordered categorical data (factor > 2 levels) polr, proportional odds model for (ordered, > 2 levels).
+set of methods to chose. Avalible methods {"pmm", "midastouch", "sample", "cart", "rf"} Default 'pmm'. If seted on NULL this methods are used predictive mean matching (numeric data) logreg, logistic regression imputation (binary data, factor with 2 levels) polyreg, polytomous regression imputation for unordered categorical data (factor > 2 levels) polr, proportional odds model for (ordered, > 2 levels).
 \item \code{iter} :: \code{integer(1)}\cr
 Number of iteration for random search, default \code{5}.
 \item \code{random.seed} :: \code{integer(1)}\cr
