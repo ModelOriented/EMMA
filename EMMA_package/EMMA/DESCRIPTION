@@ -23,7 +23,8 @@ Imports:
     softImpute,
     missRanger,
     mice,
-    data.table
+    data.table,
+    rMIDAS
 Remotes: github::mlr-org/mlr3pipelines
 Encoding: UTF-8
 LazyData: true
