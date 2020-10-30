@@ -24,7 +24,7 @@
 #'
 #' @return Return data.frame with imputed values.
 #' @export
-autotune_missForest <- function(df, col_type, percent_of_missing, cores = NULL, ntree_set = c(100, 200, 500, 1000), mtry_set = NULL, parallel = TRUE, col_0_1 = FALSE,
+autotune_missForest <- function(df, col_type, percent_of_missing, cores = NULL, ntree_set = c(100, 200, 500, 1000), mtry_set = NULL, parallel = FALSE, col_0_1 = FALSE,
   optimize = TRUE, ntree = 100, mtry = NULL, verbose = FALSE, maxiter = 20, maxnodes = NULL, out_file = NULL) {
 
   # Checking if parallel backed is runing and starting it if not

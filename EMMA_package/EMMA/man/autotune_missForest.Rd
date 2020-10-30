@@ -11,7 +11,7 @@ autotune_missForest(
   cores = NULL,
   ntree_set = c(100, 200, 500, 1000),
   mtry_set = NULL,
-  parallel = TRUE,
+  parallel = FALSE,
   col_0_1 = FALSE,
   optimize = TRUE,
   ntree = 100,
