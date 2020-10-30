@@ -195,7 +195,7 @@ PipeOpAmelia <- R6::R6Class("Amelia_imputation",
         self$imputed_predict <- FALSE
       }
       self$train_s <- FALSE
-      print(feature)
+
       return(feature)
     }
 
