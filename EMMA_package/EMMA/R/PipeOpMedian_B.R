@@ -15,6 +15,15 @@
 #' Identifier of resulting object, default `"impute_median_B"`.
 #' }
 #'
+#' @examples
+#' {
+#'   graph <- PipeOpMedian_B$new() %>>% mlr3learners::LearnerClassifGlmnet$new()
+#'   graph_learner <- GraphLearner$new(graph)
+#'
+#'   # Task with NA
+#'
+#'   resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
+#' }
 #' @export
 
 PipeOpMedian_B = R6::R6Class("Median_B_imputation",

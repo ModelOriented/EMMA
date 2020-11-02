@@ -30,6 +30,13 @@
 #' Output log file location. If file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
 #' }
 #'
+#' @examples
+#' {
+#'   graph <- PipeOpAmelia$new() %>>% mlr3learners::LearnerClassifGlmnet$new()
+#'   graph_learner <- GraphLearner$new(graph)
+#'
+#'   resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
+#' }
 #' @export
 
 PipeOpAmelia <- R6::R6Class("Amelia_imputation",
@@ -128,7 +135,7 @@ PipeOpAmelia <- R6::R6Class("Amelia_imputation",
 
 
         self$train_s <- T
-        self$flag <- 'train'
+        self$flag <- "train"
         self$imputed_predict <- T
         self$action <- 3
         self$data_imputed <- model$data_imputed

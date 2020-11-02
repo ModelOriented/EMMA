@@ -14,6 +14,15 @@
 #' \item \code{id} :: \code{character(1)}\cr
 #' Identifier of resulting object, default `"impute_mode_B"`.
 #' }
+#' @examples
+#' {
+#'   graph <- PipeOpMode_B$new() %>>% mlr3learners::LearnerClassifGlmnet$new()
+#'   graph_learner <- GraphLearner$new(graph)
+#'
+#'   # Task with NA
+#'
+#'   resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
+#' }
 #' @importFrom data.table .N
 #' @export
 

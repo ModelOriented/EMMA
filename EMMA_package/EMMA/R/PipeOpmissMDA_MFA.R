@@ -30,6 +30,16 @@
 #' Output log file location. If file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
 #' }
 #'
+#'
+#' @examples
+#' {
+#'   graph <- PipeOpMissMDA_MFA$new() %>>% mlr3learners::LearnerClassifGlmnet$new()
+#'   graph_learner <- GraphLearner$new(graph)
+#'
+#'   # Task with NA
+#'
+#'   resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
+#' }
 #' @export
 
 
@@ -106,8 +116,9 @@ PipeOpMissMDA_MFA <- R6::R6Class("missMDA_MFAimputation",
         self$column_counter <- ncol(context) + 1
         self$imputed <- TRUE
         data_to_impute <- cbind(feature, context)
+        colnames(data_to_impute)[1] <- setdiff(self$state$context_cols, colnames(data_to_impute))
         self$data_imputed <- imp_function(data_to_impute)
-        colnames(self$data_imputed) <- self$state$context_cols
+
 
       }
       if (self$imputed) {
@@ -131,7 +142,7 @@ PipeOpMissMDA_MFA <- R6::R6Class("missMDA_MFAimputation",
 
 
         self$train_s <- T
-        self$flag <- 'train'
+        self$flag <- "train"
         self$imputed_predict <- T
         self$action <- 3
         self$data_imputed <- model$data_imputed

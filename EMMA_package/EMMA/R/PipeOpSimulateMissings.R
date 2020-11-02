@@ -22,6 +22,13 @@
 #' Only when `per_variables_missings` is `NULL`. Vector of indexes of columns in which missings will be generated.
 #' }
 #'
+#' @examples
+#' {
+#'   task_NA <- PipeOpSimulateMissings$new()$train(list(tsk("iris")))[[1]]
+#'
+#'   # check
+#'   sum(task_NA$missings()) > 0
+#' }
 #' @export
 
 PipeOpSimulateMissings = R6::R6Class("PipeOpSimulateMissings",

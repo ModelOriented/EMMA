@@ -20,6 +20,16 @@ Identifier of resulting object, default `"impute_OOR_B"`.
 }
 }
 
+\examples{
+{
+  graph <- PipeOpOOR_B$new() \%>>\% mlr3learners::LearnerClassifGlmnet$new()
+  graph_learner <- GraphLearner$new(graph)
+
+  # Task with NA
+
+  resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
+}
+}
 \section{Super classes}{
 \code{\link[mlr3pipelines:PipeOp]{mlr3pipelines::PipeOp}} -> \code{\link[mlr3pipelines:PipeOpImpute]{mlr3pipelines::PipeOpImpute}} -> \code{OOR_B_imputation}
 }

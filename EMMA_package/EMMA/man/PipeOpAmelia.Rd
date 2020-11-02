@@ -34,6 +34,14 @@ Output log file location. If file already exists log message will be added. If N
 }
 }
 
+\examples{
+{
+  graph <- PipeOpAmelia$new() \%>>\% mlr3learners::LearnerClassifGlmnet$new()
+  graph_learner <- GraphLearner$new(graph)
+
+  resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
+}
+}
 \section{Super classes}{
 \code{\link[mlr3pipelines:PipeOp]{mlr3pipelines::PipeOp}} -> \code{\link[mlr3pipelines:PipeOpImpute]{mlr3pipelines::PipeOpImpute}} -> \code{Amelia_imputation}
 }

@@ -177,11 +177,34 @@ random_param_mice_search <- function(low_corr = 0, up_corr = 1, methods_random =
 #' @param set_method Method used if optimize=False. If NULL default method is used (more in methods_random section ).
 #' @param verbose If FALSE function didn't print on console.
 #' @param out_file  Output log file location if file already exists log message will be added. If NULL no log will be produced.
+#'
+#' @examples
+#' {
+#'   raw_data <- mice::nhanes2
+#'
+#'   col_type <- 1:ncol(raw_data)
+#'   for (i in col_type) {
+#'     col_type[i] <- class(raw_data[, i])
+#'   }
+#'
+#'   percent_of_missing <- 1:ncol(raw_data)
+#'   for (i in percent_of_missing) {
+#'     percent_of_missing[i] <- 100 * (sum(is.na(raw_data[, i])) / nrow(raw_data))
+#'   }
+#'   col_no_miss <- colnames(raw_data)[percent_of_missing == 0]
+#'   col_miss <- colnames(raw_data)[percent_of_missing > 0]
+#'   imp_data <- autotune_mice(raw_data, optimize = FALSE, iter = 2, col_type = col_type, percent_of_missing = percent_of_missing,
+#'    col_no_miss = col_no_miss, col_miss = col_miss)
+#'
+#'   # Check if all missing value was imputed
+#'   sum(is.na(imp_data)) == 0
+#'   # TRUE
+#' }
 #' @import mice
 #' @importFrom mice complete
 #' @return Return imputed datasets or mids object containing multi imputation datasets.
 #' @export
-autotune_mice <- function(df, m = 5, maxit = 5, col_miss, col_no_miss, col_type, set_cor = 0.5, set_method = "pmm", percent_of_missing, low_corr = 0, up_corr = 1, methods_random = c("pmm"), iter, random.seed = 123, optimize = T, correlation = T, return_one = T, col_0_1 = F, verbose = FALSE, out_file = NULL) {
+autotune_mice <- function(df, m = 5, maxit = 5, col_miss, col_no_miss, col_type, set_cor = 0.5, set_method = "pmm", percent_of_missing, low_corr = 0, up_corr = 1, methods_random = c("pmm"), iter, random.seed = 123, optimize = TRUE, correlation = TRUE, return_one = TRUE, col_0_1 = FALSE, verbose = FALSE, out_file = NULL) {
 
   if (sum(is.na(df)) == 0) {
     return(df)

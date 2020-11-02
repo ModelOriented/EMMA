@@ -19,10 +19,10 @@ autotune_mice(
   methods_random = c("pmm"),
   iter,
   random.seed = 123,
-  optimize = T,
-  correlation = T,
-  return_one = T,
-  col_0_1 = F,
+  optimize = TRUE,
+  correlation = TRUE,
+  return_one = TRUE,
+  col_0_1 = FALSE,
   verbose = FALSE,
   out_file = NULL
 )
@@ -76,4 +76,27 @@ Function impute missing data using mice functions. First perform  random search 
 categorical values are available). Using glm its problematic. Function allows users to skip optimization in that case but it can lead to errors.
 Function optimize prediction matrix and method. Other mice parameters like number of sets(m) or max number of iterations(maxit) should be set
 as hight as possible for best results(higher values are required more time to perform imputation). If u chose to use one inputted dataset m is not important. More information can be found in \code{\link{random_param_mice_search}} and \code{\link{formula_creating}} and \code{\link[mice]{mice}}.
+}
+\examples{
+{
+  raw_data <- mice::nhanes2
+
+  col_type <- 1:ncol(raw_data)
+  for (i in col_type) {
+    col_type[i] <- class(raw_data[, i])
+  }
+
+  percent_of_missing <- 1:ncol(raw_data)
+  for (i in percent_of_missing) {
+    percent_of_missing[i] <- 100 * (sum(is.na(raw_data[, i])) / nrow(raw_data))
+  }
+  col_no_miss <- colnames(raw_data)[percent_of_missing == 0]
+  col_miss <- colnames(raw_data)[percent_of_missing > 0]
+  imp_data <- autotune_mice(raw_data, optimize = FALSE, iter = 2, col_type = col_type, percent_of_missing = percent_of_missing,
+   col_no_miss = col_no_miss, col_miss = col_miss)
+
+  # Check if all missing value was imputed
+  sum(is.na(imp_data)) == 0
+  # TRUE
+}
 }

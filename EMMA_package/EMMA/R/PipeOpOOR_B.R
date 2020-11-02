@@ -15,6 +15,16 @@
 #' Identifier of resulting object, default `"impute_OOR_B"`.
 #' }
 #'
+#'
+#' @examples
+#' {
+#'   graph <- PipeOpOOR_B$new() %>>% mlr3learners::LearnerClassifGlmnet$new()
+#'   graph_learner <- GraphLearner$new(graph)
+#'
+#'   # Task with NA
+#'
+#'   resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
+#' }
 #' @export
 
 PipeOpOOR_B = R6::R6Class("OOR_B_imputation",

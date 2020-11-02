@@ -50,3 +50,29 @@ Return data.frame with imputed values.
 \description{
 Function use missRenger package for data imputation. Function use OBBerror (more in missForest documentation) to perform random search.
 }
+\examples{
+{
+  raw_data <- data.frame(
+    a = as.factor(sample(c("red", "yellow", "blue", NA), 1000, replace = TRUE)),
+    b = as.integer(1:1000),
+    c = as.factor(sample(c("YES", "NO", NA), 1000, replace = TRUE)),
+    d = runif(1000, 1, 10),
+    e = as.factor(sample(c("YES", "NO"), 1000, replace = TRUE)),
+    f = as.factor(sample(c("male", "female", "trans", "other", NA), 1000, replace = TRUE)))
+
+  # Prepering col_type
+  col_type <- c("factor", "integer", "factor", "numeric", "factor", "factor")
+
+  percent_of_missing <- 1:6
+  for (i in percent_of_missing) {
+    percent_of_missing[i] <- 100 * (sum(is.na(raw_data[, i])) / nrow(raw_data))
+  }
+
+
+  imp_data <- autotune_missRanger(raw_data, percent_of_missing)
+
+  # Check if all missing value was imputed
+  sum(is.na(imp_data)) == 0
+  # TRUE
+}
+}

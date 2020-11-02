@@ -60,3 +60,28 @@ User can choose whether to return one imputed dataset or list or imputed dataset
 \details{
 Function use different algorithm to adjust for variable types in df. For only numeric data PCA will be used. MCA for only categorical and FMAD for mixed. If optimize==TRUE function will try to find optimal ncp if its not possible default ncp=2 will be used. In some cases ncp=1 will be used if ncp=2 don't work. For multiple imputations, if set ncp don't work error will be return.
 }
+\examples{
+{
+  raw_data <- data.frame(
+    a = as.factor(sample(c("red", "yellow", "blue", NA), 1000, replace = TRUE)),
+    b = as.integer(1:1000),
+    c = as.factor(sample(c("YES", "NO", NA), 1000, replace = TRUE)),
+    d = runif(1000, 1, 10),
+    e = as.factor(sample(c("YES", "NO"), 1000, replace = TRUE)),
+    f = as.factor(sample(c("male", "female", "trans", "other", NA), 1000, replace = TRUE)))
+
+  # Prepering col_type
+  col_type <- c("factor", "integer", "factor", "numeric", "factor", "factor")
+
+  percent_of_missing <- 1:6
+  for (i in percent_of_missing) {
+    percent_of_missing[i] <- 100 * (sum(is.na(raw_data[, i])) / nrow(raw_data))
+  }
+
+
+  imp_data <- missMDA_FMAD_MCA_PCA(raw_data, col_type, percent_of_missing, optimize_ncp = FALSE)
+  # Check if all missing value was imputed
+  sum(is.na(imp_data)) == 0
+  # TRUE
+}
+}

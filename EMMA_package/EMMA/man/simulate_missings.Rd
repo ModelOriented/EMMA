@@ -31,3 +31,11 @@ Dataset with generated missings.
 Function generates random missing values in given dataset
 according to set parameters.
 }
+\examples{
+{
+  data_NA <- simulate_missings(iris, 20)
+
+  # check
+  sum(is.na(data_NA)) > 0
+}
+}

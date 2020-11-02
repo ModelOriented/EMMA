@@ -20,6 +20,14 @@ Identifier of resulting object, default \code{"imput_mean_B"}.
 }
 }
 
+\examples{
+{
+  graph <- PipeOpMean_B$new() \%>>\% mlr3learners::LearnerClassifGlmnet$new()
+  graph_learner <- GraphLearner$new(graph)
+
+  resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
+}
+}
 \section{Super classes}{
 \code{\link[mlr3pipelines:PipeOp]{mlr3pipelines::PipeOp}} -> \code{\link[mlr3pipelines:PipeOpImpute]{mlr3pipelines::PipeOpImpute}} -> \code{Mean_B_imputation}
 }

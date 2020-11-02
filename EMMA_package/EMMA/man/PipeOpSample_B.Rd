@@ -20,6 +20,16 @@ Identifier of resulting object, default `"impute_sample_B"`.
 }
 }
 
+\examples{
+{
+  graph <- PipeOpSample_B$new() \%>>\% mlr3learners::LearnerClassifGlmnet$new()
+  graph_learner <- GraphLearner$new(graph)
+
+  # Task with NA
+
+  resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
+}
+}
 \section{Super classes}{
 \code{\link[mlr3pipelines:PipeOp]{mlr3pipelines::PipeOp}} -> \code{\link[mlr3pipelines:PipeOpImpute]{mlr3pipelines::PipeOpImpute}} -> \code{Sample_B_imputation}
 }
