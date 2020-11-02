@@ -21,6 +21,7 @@ register_emma = function() {
   x$add("missRanger_imputation", PipeOpmissRanger)
   x$add("simulate_missings", PipeOpSimulateMissings)
   x$add("softImpute_imputation", PipeOpSoftImpute)
+  x$add("simulate_missings", PipeOpSimulateMissings)
 }
 
 .onLoad = function(libname, pkgname) { # nolint

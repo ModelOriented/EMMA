@@ -20,6 +20,30 @@
 #' @param out_file  Output log file location if file already exists log message will be added. If NULL no log will be produced.
 #' @import missMDA
 #'
+#' @examples
+#' {
+#'   raw_data <- data.frame(
+#'     a = as.factor(sample(c("red", "yellow", "blue", NA), 1000, replace = TRUE)),
+#'     b = as.integer(1:1000),
+#'     c = as.factor(sample(c("YES", "NO", NA), 1000, replace = TRUE)),
+#'     d = runif(1000, 1, 10),
+#'     e = as.factor(sample(c("YES", "NO"), 1000, replace = TRUE)),
+#'     f = as.factor(sample(c("male", "female", "trans", "other", NA), 1000, replace = TRUE)))
+#'
+#'   # Prepering col_type
+#'   col_type <- c("factor", "integer", "factor", "numeric", "factor", "factor")
+#'
+#'   percent_of_missing <- 1:6
+#'   for (i in percent_of_missing) {
+#'     percent_of_missing[i] <- 100 * (sum(is.na(raw_data[, i])) / nrow(raw_data))
+#'   }
+#'
+#'
+#'   imp_data <- missMDA_FMAD_MCA_PCA(raw_data, col_type, percent_of_missing, optimize_ncp = FALSE)
+#'   # Check if all missing value was imputed
+#'   sum(is.na(imp_data)) == 0
+#'   # TRUE
+#' }
 #' @return Retrun one imputed data.frame if retrun_one=True or list of imputed data.frames if retrun_one=False.
 #' @export
 

@@ -61,3 +61,29 @@ Function use missForest package for data imputation. OBBerror (more in  \code{\l
 Function try to use parallel backend if it's possible. Half of the available cores are used or number pass as cores param. (Number of used cores can't be higher then number of variables in df. If it happened a number of cores will be set at ncol(df)-2 unless this number is <= 0 then cores =1).  To perform parallel calculation function use  \code{\link[doParallel]{registerDoParallel}} to create parallel backend.
 Creating backend can have significant time cost so for very small df cores=1 can speed up calculation. After calculation function turns off parallel backend. \cr \cr   Gride search is used to chose a sample for each tree and the number of trees can be turn off. Params in grid search have significant influence on imputation quality but function should work on any reasonable values of this parameter.
 }
+\examples{
+{
+  raw_data <- data.frame(
+    a = as.factor(sample(c("red", "yellow", "blue", NA), 1000, replace = TRUE)),
+    b = as.integer(1:1000),
+    c = as.factor(sample(c("YES", "NO", NA), 1000, replace = TRUE)),
+    d = runif(1000, 1, 10),
+    e = as.factor(sample(c("YES", "NO"), 1000, replace = TRUE)),
+    f = as.factor(sample(c("male", "female", "trans", "other", NA), 1000, replace = TRUE)))
+
+  # Prepering col_type
+  col_type <- c("factor", "integer", "factor", "numeric", "factor", "factor")
+
+  percent_of_missing <- 1:6
+  for (i in percent_of_missing) {
+    percent_of_missing[i] <- 100 * (sum(is.na(raw_data[, i])) / nrow(raw_data))
+  }
+
+
+  imp_data <- autotune_missForest(raw_data, col_type, percent_of_missing, optimize = FALSE)
+
+  # Check if all missing value was imputed
+  sum(is.na(imp_data)) == 0
+  # TRUE
+}
+}

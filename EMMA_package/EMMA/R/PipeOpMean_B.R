@@ -15,6 +15,13 @@
 #' Identifier of resulting object, default \code{"imput_mean_B"}.
 #' }
 #'
+#' @examples
+#' {
+#'   graph <- PipeOpMean_B$new() %>>% mlr3learners::LearnerClassifGlmnet$new()
+#'   graph_learner <- GraphLearner$new(graph)
+#'
+#'   resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
+#' }
 #' @export
 
 

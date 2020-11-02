@@ -10,7 +10,15 @@
 #' @param variables_with_missings Only when `per_variables_missings` is `NULL`.
 #' Vector of column indexes where missings will be generated.
 #'
+#' @examples
+#' {
+#'   data_NA <- simulate_missings(iris, 20)
+#'
+#'   # check
+#'   sum(is.na(data_NA)) > 0
+#' }
 #' @return Dataset with generated missings.
+#' @export
 
 simulate_missings <- function(df,
   per_missings,

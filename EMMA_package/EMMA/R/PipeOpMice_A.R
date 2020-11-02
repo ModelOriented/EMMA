@@ -28,7 +28,15 @@
 #' \item \code{correlation} :: \code{logical(1)}\cr
 #' If set TRUE correlation is used, if set FALSE then fraction of case, default \code{TRUE}.
 #' }
+#' @examples
+#' {
+#'   graph <- PipeOpMice_A$new() %>>% mlr3learners::LearnerClassifGlmnet$new()
+#'   graph_learner <- GraphLearner$new(graph)
 #'
+#'   # Task with NA
+#'
+#'   resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
+#' }
 #' @export
 PipeOpMice_A <- R6::R6Class("mice_A_imputation",
   lock_objects = FALSE,
@@ -147,7 +155,7 @@ PipeOpMice_A <- R6::R6Class("mice_A_imputation",
 
         self$model <- model$model
         self$train_s <- T
-        self$flag <- 'train'
+        self$flag <- "train"
         self$imputed_predict <- T
         self$action <- 3
         self$data_imputed <- model$data_imputed
@@ -174,10 +182,10 @@ PipeOpMice_A <- R6::R6Class("mice_A_imputation",
           data_train <- mice::complete(self$model)
           data_train <- rbind(data_train, data_to_impute[, self$state$context_cols])
 
-          data_imputed <- EMMA::mice.reuse(newdata = self$model, mids = data_train, maxit = self$param_set$values$maxit, printFlag = F)$`1`[nrow(data_train), ]
+          data_imputed <- EMMA::mice.reuse(newdata = self$model, mids = data_train, maxit = self$param_set$values$maxit, printFlag = FALSE)$`1`[nrow(data_train), ]
 
         } else {
-          data_imputed <- EMMA::mice.reuse(mids = self$model, newdata = data_to_impute, maxit = self$param_set$values$maxit, printFlag = F)$`1`
+          data_imputed <- EMMA::mice.reuse(mids = self$model, newdata = data_to_impute, maxit = self$param_set$values$maxit, printFlag = FALSE)$`1`
         }
         for (i in colnames(data_to_impute)[(col_type == "factor")]) {
 

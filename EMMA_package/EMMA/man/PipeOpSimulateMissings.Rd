@@ -26,6 +26,14 @@ Only when `per_variables_missings` is `NULL`. Vector of indexes of columns in wh
 }
 }
 
+\examples{
+{
+  task_NA <- PipeOpSimulateMissings$new()$train(list(tsk("iris")))[[1]]
+
+  # check
+  sum(task_NA$missings()) > 0
+}
+}
 \section{Super classes}{
 \code{\link[mlr3pipelines:PipeOp]{mlr3pipelines::PipeOp}} -> \code{\link[mlr3pipelines:PipeOpTaskPreproc]{mlr3pipelines::PipeOpTaskPreproc}} -> \code{PipeOpSimulateMissings}
 }

@@ -14,7 +14,13 @@
 #' \item \code{id} :: \code{character(1)}\cr
 #' Identifier of resulting object, default `"impute_hist_B"`.
 #' }
+#' @examples
+#' {
+#'   graph <- PipeOpHist_B$new() %>>% mlr3learners::LearnerClassifGlmnet$new()
+#'   graph_learner <- GraphLearner$new(graph)
 #'
+#'   resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
+#' }
 #' @export
 PipeOpHist_B = R6::R6Class("Hist_B_imputation",
   inherit = PipeOpImpute,

@@ -46,3 +46,29 @@ Function impute one column per iteration to allow more control of imputation. Al
 4. col to impute ~ first of numeric columns without missing \cr
 For example, if formula 1 and 2 can't be used algorithm will try with formula 3. If all formula can't be used function will be stoped and error form tries with formula 4 or 3 presented. In some case, setting use_imputed on TRUE can solve this problem but in general its lower quality of imputation.
 }
+\examples{
+{
+  raw_data <- data.frame(
+    a = as.factor(sample(c("red", "yellow", "blue", NA), 1000, replace = TRUE)),
+    b = as.integer(1:1000),
+    c = as.factor(sample(c("YES", "NO", NA), 1000, replace = TRUE)),
+    d = runif(1000, 1, 10),
+    e = as.factor(sample(c("YES", "NO"), 1000, replace = TRUE)),
+    f = as.factor(sample(c("male", "female", "trans", "other", NA), 1000, replace = TRUE)))
+
+  # Prepering col_type
+  col_type <- c("factor", "integer", "factor", "numeric", "factor", "factor")
+
+  percent_of_missing <- 1:6
+  for (i in percent_of_missing) {
+    percent_of_missing[i] <- 100 * (sum(is.na(raw_data[, i])) / nrow(raw_data))
+  }
+
+
+  imp_data <- autotune_VIM_regrImp(raw_data, col_type, percent_of_missing)
+
+  # Check if all missing value was imputed
+  sum(is.na(imp_data)) == 0
+  # TRUE
+}
+}

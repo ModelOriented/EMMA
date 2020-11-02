@@ -37,6 +37,15 @@
 #' \item \code{correlation} :: \code{logical(1)}\cr
 #' If set TRUE correlation is used, if set FALSE then fraction of case, default \code{TRUE}.
 #' }
+#' @examples
+#' {
+#'   graph <- PipeOpMice$new() %>>% mlr3learners::LearnerClassifGlmnet$new()
+#'   graph_learner <- GraphLearner$new(graph)
+#'
+#'   # Task with NA
+#'
+#'   resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
+#' }
 #' @import mice
 #' @export
 PipeOpMice <- R6::R6Class("mice_imputation",
