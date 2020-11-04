@@ -21,6 +21,8 @@ autotune_VIM_Irmi(
 \arguments{
 \item{df}{data.frame. Df to impute with column names and without target column.}
 
+\item{col_type}{character vector. Vector containing column type names.}
+
 \item{percent_of_missing}{numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)}
 
 \item{eps}{threshold for convergency}
@@ -73,4 +75,7 @@ Function can work with various different times depending on data size and struct
   sum(is.na(imp_data)) == 0
   # TRUE
 }
+}
+\references{
+Alexander Kowarik, Matthias Templ (2016). Imputation with the R Package VIM. Journal of Statistical Software, 74(7), 1-16. doi:10.18637/jss.v074.i07
 }

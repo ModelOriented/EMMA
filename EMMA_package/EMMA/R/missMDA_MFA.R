@@ -43,6 +43,7 @@
 #'   sum(is.na(imp_data)) == 0
 #'   # TRUE
 #' }
+#' @references   Julie Josse, Francois Husson (2016). missMDA: A Package for Handling Missing Values in Multivariate Data Analysis. Journal of Statistical Software, 70(1), 1-31. doi:10.18637/jss.v070.i01
 #' @import missMDA
 #' @return Return one data.frame with imputed values.
 #' @export

@@ -12,6 +12,7 @@
 #' @param mtry_set integer vector. Vector contains numbers of variables randomly sampled at each split.
 #' @param parallel logical. If TRUE parallel calculation is using.
 #' @param optimize optimize inside function
+#' @param col_type character vector. Vector containing column type names.
 #' @param ntree ntree from missForest function
 #' @param mtry mtry form missforest function
 #' @param verbose If FALSE funtion didn't print on console.
@@ -48,6 +49,10 @@
 #'   # TRUE
 #' }
 #' @return Return data.frame with imputed values.
+#'
+#' @references Daniel J. Stekhoven (2013). missForest: Nonparametric Missing Value Imputation using Random Forest. R package version 1.4.
+#' Stekhoven D. J., & Buehlmann, P. (2012). MissForest - non-parametric missing value imputation for mixed-type data. Bioinformatics, 28(1), 112-118.
+#'
 #' @export
 autotune_missForest <- function(df, col_type, percent_of_missing, cores = NULL, ntree_set = c(100, 200, 500, 1000), mtry_set = NULL, parallel = FALSE, col_0_1 = FALSE,
   optimize = TRUE, ntree = 100, mtry = NULL, verbose = FALSE, maxiter = 20, maxnodes = NULL, out_file = NULL) {
@@ -185,7 +190,7 @@ autotune_missForest <- function(df, col_type, percent_of_missing, cores = NULL, 
       optimize = optimize, ntree = ntree, mtry = mtry, maxiter = maxiter, maxnodes = maxnodes, out_file = out_file))
   }
   if (!verbose) {
-    capture.output(final <- do_things(
+     utils::capture.output(final <- do_things(
       df = df, col_type = col_type, percent_of_missing = percent_of_missing, cores = cores, ntree_set = ntree_set, mtry_set = mtry_set, parallel = parallel, col_0_1 = col_0_1,
       optimize = optimize, ntree = ntree, mtry = mtry, maxiter = maxiter, maxnodes = maxnodes, out_file = out_file))
     for (i in colnames(final)[col_type == "integer"]) {

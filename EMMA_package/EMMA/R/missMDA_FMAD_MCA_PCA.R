@@ -19,7 +19,7 @@
 #' @param threshold threshold for convergence.
 #' @param out_file  Output log file location if file already exists log message will be added. If NULL no log will be produced.
 #' @import missMDA
-#'
+#' @references   Julie Josse, Francois Husson (2016). missMDA: A Package for Handling Missing Values in Multivariate Data Analysis. Journal of Statistical Software, 70(1), 1-31. doi:10.18637/jss.v070.i01
 #' @examples
 #' {
 #'   raw_data <- data.frame(

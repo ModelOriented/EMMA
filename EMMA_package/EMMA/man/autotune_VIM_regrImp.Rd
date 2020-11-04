@@ -72,3 +72,6 @@ For example, if formula 1 and 2 can't be used algorithm will try with formula 3.
   # TRUE
 }
 }
+\references{
+Alexander Kowarik, Matthias Templ (2016). Imputation with the R Package VIM. Journal of Statistical Software, 74(7), 1-16. doi:10.18637/jss.v074.i07
+}

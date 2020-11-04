@@ -92,7 +92,8 @@ as hight as possible for best results(higher values are required more time to pe
   }
   col_no_miss <- colnames(raw_data)[percent_of_missing == 0]
   col_miss <- colnames(raw_data)[percent_of_missing > 0]
-  imp_data <- autotune_mice(raw_data, optimize = FALSE, iter = 2, col_type = col_type, percent_of_missing = percent_of_missing,
+  imp_data <- autotune_mice(raw_data, optimize = FALSE, iter = 2,
+   col_type = col_type, percent_of_missing = percent_of_missing,
    col_no_miss = col_no_miss, col_miss = col_miss)
 
   # Check if all missing value was imputed

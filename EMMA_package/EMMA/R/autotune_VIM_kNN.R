@@ -7,8 +7,8 @@
 #' @param df data.frame. Df to impute with column names and without  target column.
 #' @param percent_of_missing numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)
 #' @param k Value of k use if optimize=FALSE
-#' @param numFUN function for aggregating the k Nearest Neighbours in the case of a numerical variable. Default median.
-#' @param catFUN function for aggregating the k Nearest Neighbours in the case of a categorical variable. Default mode.
+#' @param numFun function for aggregating the k Nearest Neighbours in the case of a numerical variable. Default median.
+#' @param catFun function for aggregating the k Nearest Neighbours in the case of a categorical variable. Default mode.
 #' @param out_file  Output log file location if file already exists log message will be added. If NULL no log will be produced.
 #'
 #' @examples
@@ -38,12 +38,12 @@
 #' }
 #' @import VIM
 #' @param col_0_1 decide if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False.
-#'
+#' @references  Alexander Kowarik, Matthias Templ (2016). Imputation with the R Package VIM. Journal of Statistical Software, 74(7), 1-16. doi:10.18637/jss.v074.i07
 #' @export
 
 
 
-autotune_VIM_kNN <- function(df, percent_of_missing, k = 5, numFun = median, catFun = VIM::maxCat, col_0_1 = FALSE, out_file = NULL) {
+autotune_VIM_kNN <- function(df, percent_of_missing, k = 5, numFun = stats::median, catFun = VIM::maxCat, col_0_1 = FALSE, out_file = NULL) {
   if (!is.null(out_file)) {
     write("VIM_kNN", file = out_file, append = T)
   }

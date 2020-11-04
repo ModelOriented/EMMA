@@ -47,3 +47,6 @@ Function perform hotdeck function from VIM package. Any tunable parameters aren'
   # TRUE
 }
 }
+\references{
+Alexander Kowarik, Matthias Templ (2016). Imputation with the R Package VIM. Journal of Statistical Software, 74(7), 1-16. doi:10.18637/jss.v074.i07
+}

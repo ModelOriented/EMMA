@@ -80,3 +80,6 @@ chosen parameters.
   # TRUE
 }
 }
+\references{
+James Honaker, Gary King, Matthew Blackwell (2011). Amelia II: A Program for Missing Data. Journal of Statistical Software, 45(7), 1-47. URL http://www.jstatsoft.org/v45/i07/.
+}

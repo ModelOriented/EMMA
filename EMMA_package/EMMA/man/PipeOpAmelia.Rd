@@ -4,7 +4,7 @@
 \alias{PipeOpAmelia}
 \title{PipeOpAmelia}
 \description{
-Implements EMB methods as mlr3 pipeline more about Amelia \code{\link{autotune_Amelia}} or \url{https://cran.r-project.org/web/packages/Amelia/Amelia.pdf}
+Implements EMB methods as mlr3 pipeline more about Amelia \code{\link{autotune_Amelia}} or \url{https://cran.r-project.org/package=Amelia}
 }
 \section{Input and Output Channels}{
 

@@ -1,6 +1,6 @@
 Package: EMMA
 Type: Package
-Title: Evaluation of Methods for dealing with Missing data in Machine Learning algorithms
+Title: Evaluation of Methods for Dealing with Missing Data in Machine Learning Algorithms
 Version: 0.4.0
 Author: Jan Borowski, Piotr Fic
 Maintainer: Jan Borowski <janborowka7@gmail.com>
@@ -20,10 +20,10 @@ Imports:
     VIM,
     softImpute,
     missRanger,
+    methods,
     mice,
     data.table,
-    rMIDAS
-Remotes: github::mlr-org/mlr3pipelines
+    foreach
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1.9000

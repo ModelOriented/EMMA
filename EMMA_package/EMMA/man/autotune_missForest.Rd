@@ -25,6 +25,8 @@ autotune_missForest(
 \arguments{
 \item{df}{data.frame. Df to impute with column names.}
 
+\item{col_type}{character vector. Vector containing column type names.}
+
 \item{percent_of_missing}{numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)}
 
 \item{cores}{integer.  Number of threads used by parallel calculations. By default approximately half of available CPU cores.}
@@ -86,4 +88,8 @@ Creating backend can have significant time cost so for very small df cores=1 can
   sum(is.na(imp_data)) == 0
   # TRUE
 }
+}
+\references{
+Daniel J. Stekhoven (2013). missForest: Nonparametric Missing Value Imputation using Random Forest. R package version 1.4.
+Stekhoven D. J., & Buehlmann, P. (2012). MissForest - non-parametric missing value imputation for mixed-type data. Bioinformatics, 28(1), 112-118.
 }

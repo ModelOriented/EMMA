@@ -85,3 +85,6 @@ Function use different algorithm to adjust for variable types in df. For only nu
   # TRUE
 }
 }
+\references{
+Julie Josse, Francois Husson (2016). missMDA: A Package for Handling Missing Values in Multivariate Data Analysis. Journal of Statistical Software, 70(1), 1-31. doi:10.18637/jss.v070.i01
+}

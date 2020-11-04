@@ -8,6 +8,7 @@
 #' @param percent_of_missing numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)
 #' @param col_0_1 Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).
 #' @param eps threshold for convergency
+#' @param col_type character vector. Vector containing column type names.
 #' @param maxit maximum number of iterations
 #' @param step  stepwise model selection is applied when the parameter is set to TRUE
 #' @param robust if TRUE, robust regression methods will be applied (it's impossible to set step=TRUE and robust=TRUE at the same time)
@@ -15,7 +16,7 @@
 #' @param force if TRUE, the algorithm tries to find a solution in any case, possible by using different robust methods automatically. (should be set FALSE for simulation)
 #' @param out_file  Output log file location if file already exists log message will be added. If NULL no log will be produced.
 #' @import VIM
-#'
+#' @references    Alexander Kowarik, Matthias Templ (2016). Imputation with the R Package VIM. Journal of Statistical Software, 74(7), 1-16. doi:10.18637/jss.v074.i07
 #' @examples
 #' {
 #'   raw_data <- data.frame(

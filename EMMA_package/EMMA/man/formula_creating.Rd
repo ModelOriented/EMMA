@@ -4,7 +4,7 @@
 \alias{formula_creating}
 \title{Creating a formula for use in mice imputation evaluation.}
 \usage{
-formula_creating(df,coll_miss,coll_no_miss,coll_type,percent_of_missing)
+formula_creating(df, col_miss, col_no_miss, col_type, percent_of_missing)
 }
 \arguments{
 \item{df}{data.frame. Data frame to impute missing values with column names.}
@@ -26,4 +26,7 @@ Function is used in \code{\link{autotune_mice}} but can be use sepraetly.
 \details{
 Function create a formula as follows. It creates one of the formulas its next possible formula impossible possible formula is created: \cr 1. Numeric no missing ~ 3 numeric with most missing \cr 2. Numeric no missing ~ all available numeric with missing \cr 3. Numeric with less missing ~ 3 numeric with most missing \cr 4. Numeric with less missing ~ all available numeric with missing \cr 5. No numeric no missing ~ 3 most missing no numeric \cr 6. No numeric no missing ~ all available no numeric with missing \cr 7. No numeric with less missing ~ 3 no numeric with most missing \cr 8. No numeric with less missing ~ all available no numeric with missing.
 \cr For example, if its impossible to create formula 1 and 2 formula 3 will be created but if it's possible to create formula 1 and 5 formula 1 will be created.
+}
+\references{
+Stef van Buuren, Karin Groothuis-Oudshoorn (2011). mice: Multivariate Imputation by Chained Equations in R. Journal of Statistical Software, 45(3), 1-67. URL https://www.jstatsoft.org/v45/i03/.
 }

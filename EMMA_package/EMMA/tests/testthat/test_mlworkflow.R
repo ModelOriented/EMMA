@@ -1,5 +1,6 @@
 library(testthat)
 library(EMMA)
+library(mlr3learners)
 context("Testing full workflow with learners")
 # Prepering test set
 raw_data <- data.frame(

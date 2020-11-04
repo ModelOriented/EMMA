@@ -8,18 +8,21 @@ mice.reuse(mids, newdata, maxit = 5, printFlag = TRUE, seed = NA)
 }
 \arguments{
 \item{mids}{: mids object
-  An object of class mids, typically produces by a previous call to mice() or mice.mids()
-newdata : data.frame
-  Previously unseen data of the same structur as used to generate `mids`}
+An object of class mids, typically produces by a previous call to mice() or mice.mids()}
+
+\item{newdata}{: data.frame
+Previously unseen data of the same structur as used to generate `mids`}
 
 \item{maxit}{: integer scalar
-  The number of additional Gibbs sampling iterations to refine the new imputations
-printFlag : logical scalar
-  A Boolean flag. If TRUE, diagnostic information during the Gibbs sampling iterations
-  will be written to the command window. The default is TRUE.
-seed : integer scalar
-  An integer that is used as argument by the set.seed() for offsetting the random
-  number generator. Default is to use the last seed value stored in `mids`}
+The number of additional Gibbs sampling iterations to refine the new imputations}
+
+\item{printFlag}{: logical scalar
+A Boolean flag. If TRUE, diagnostic information during the Gibbs sampling iterations
+will be written to the command window. The default is TRUE.}
+
+\item{seed}{: integer scalar
+An integer that is used as argument by the set.seed() for offsetting the random
+number generator. Default is to use the last seed value stored in `mids`}
 }
 \value{
 data : list of data.frames

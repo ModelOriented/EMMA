@@ -25,6 +25,8 @@ random_param_mice_search(
 
 \item{df}{data frame to input.}
 
+\item{formula}{first product of formula_creating() funtion. For example formula_creating(...)[1]}
+
 \item{no_numeric}{second product of formula_creating() function.}
 
 \item{iter}{number of iteration for randomSearch.}
@@ -32,8 +34,6 @@ random_param_mice_search(
 \item{random.seed}{radnom seed.}
 
 \item{correlation}{If True correlation is using if Fales fraction of features. Default True.}
-
-\item{formule}{first product of formula_creating() funtion. For example formula_creating(...)[1]}
 }
 \value{
 List with best correlation (or fraction ) at first place, best method at second, and results of every iteration at 3.
