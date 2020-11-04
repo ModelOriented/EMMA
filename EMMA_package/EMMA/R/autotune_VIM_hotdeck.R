@@ -9,7 +9,7 @@
 #' @import VIM
 #' @param col_0_1 decide if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False.
 #' @param out_file  Output log file location if file already exists log message will be added. If NULL no log will be produced.
-#'
+#' @references    Alexander Kowarik, Matthias Templ (2016). Imputation with the R Package VIM. Journal of Statistical Software, 74(7), 1-16. doi:10.18637/jss.v074.i07
 #' @examples
 #' {
 #'   raw_data <- data.frame(

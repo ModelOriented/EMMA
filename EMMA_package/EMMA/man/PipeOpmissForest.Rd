@@ -41,7 +41,7 @@ Output log file location. If file already exists log message will be added. If N
 }
 
 \examples{
-{
+\dontrun{
   graph <- PipeOpmissForest$new() \%>>\% mlr3learners::LearnerClassifGlmnet$new()
   graph_learner <- GraphLearner$new(graph)
 

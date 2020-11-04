@@ -9,7 +9,8 @@
 #' @param col_type character vector. A vector containing column type names.
 #' @param percent_of_missing numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)
 #' @import mice
-#' @usage formula_creating(df,coll_miss,coll_no_miss,coll_type,percent_of_missing)
+#'
+#' @references Stef van Buuren, Karin Groothuis-Oudshoorn (2011). mice: Multivariate Imputation by Chained Equations in R. Journal of Statistical Software, 45(3), 1-67. URL https://www.jstatsoft.org/v45/i03/.
 #' @return List with formula object[1] and information if its no numeric value in dataset[2].
 
 
@@ -74,7 +75,7 @@ formula_creating <- function(df, col_miss, col_no_miss, col_type, percent_of_mis
 
 
 
-  return(list(as.formula(paste(as.character(predicted_value), paste(as.character(predicting_values), collapse = "+"), sep = "~")), no_numeric))
+  return(list(stats::as.formula(paste(as.character(predicted_value), paste(as.character(predicting_values), collapse = "+"), sep = "~")), no_numeric))
 
 }
 
@@ -89,7 +90,7 @@ formula_creating <- function(df, col_miss, col_no_miss, col_type, percent_of_mis
 #' @param up_corr double between 0,1 default 1 upper boundary of correlation set. Both of these parameters work the same for a fraction of features.
 #' @param methods_random set of methods to chose. Default 'pmm'.
 #' @param df data frame to input.
-#' @param formule first product of formula_creating() funtion. For example formula_creating(...)[1]
+#' @param formula first product of formula_creating() funtion. For example formula_creating(...)[1]
 #' @param no_numeric second product of formula_creating() function.
 #' @param iter number of iteration for randomSearch.
 #' @param random.seed radnom seed.
@@ -124,11 +125,11 @@ random_param_mice_search <- function(low_corr = 0, up_corr = 1, methods_random =
         }
 
         if (as.logical(no_numeric[1])) {
-          fit <- with(inputation, glm(as.formula(as.character(formula)), family = binomial))
+          fit <- with(inputation, glm(stats::as.formula(as.character(formula)), family = binomial))
         }
         if (!as.logical(no_numeric[1])) {
 
-          fit <- with(inputation, expr = lm((as.formula(as.character(formula)))))
+          fit <- with(inputation, expr = lm((stats::as.formula(as.character(formula)))))
         }
         result[i] <- mean(mice::tidy(mice::pool(fit))$fmi)
       },
@@ -178,6 +179,7 @@ random_param_mice_search <- function(low_corr = 0, up_corr = 1, methods_random =
 #' @param verbose If FALSE function didn't print on console.
 #' @param out_file  Output log file location if file already exists log message will be added. If NULL no log will be produced.
 #'
+#'
 #' @examples
 #' {
 #'   raw_data <- mice::nhanes2
@@ -193,7 +195,8 @@ random_param_mice_search <- function(low_corr = 0, up_corr = 1, methods_random =
 #'   }
 #'   col_no_miss <- colnames(raw_data)[percent_of_missing == 0]
 #'   col_miss <- colnames(raw_data)[percent_of_missing > 0]
-#'   imp_data <- autotune_mice(raw_data, optimize = FALSE, iter = 2, col_type = col_type, percent_of_missing = percent_of_missing,
+#'   imp_data <- autotune_mice(raw_data, optimize = FALSE, iter = 2,
+#'    col_type = col_type, percent_of_missing = percent_of_missing,
 #'    col_no_miss = col_no_miss, col_miss = col_miss)
 #'
 #'   # Check if all missing value was imputed
@@ -247,7 +250,7 @@ autotune_mice <- function(df, m = 5, maxit = 5, col_miss, col_no_miss, col_type,
       if (class(df[, index_y]) == "order") {
         function_to_impute <- mice::mice.impute.polr
       }
-      if (is(df[, index_y], "numeric")) {
+      if (methods::is(df[, index_y], "numeric")) {
         function_to_impute <- mice::mice.impute.pmm
       }
 
@@ -361,9 +364,9 @@ autotune_mice <- function(df, m = 5, maxit = 5, col_miss, col_no_miss, col_type,
     }
     for (i in colnames(df)[(col_type == "factor")]) {
 
-      if (!setequal(levels(na.omit(df[, i])), levels(imputed_dataset[, i]))) {
+      if (!setequal(levels(stats::na.omit(df[, i])), levels(imputed_dataset[, i]))) {
 
-        levels(imputed_dataset[, i]) <- c(levels(na.omit(df[, i])))
+        levels(imputed_dataset[, i]) <- c(levels(stats::na.omit(df[, i])))
       }
     }
     return(imputed_dataset)

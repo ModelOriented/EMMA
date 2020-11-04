@@ -76,3 +76,6 @@ Function use missRenger package for data imputation. Function use OBBerror (more
   # TRUE
 }
 }
+\references{
+Michael Mayer (2019). missRanger: Fast Imputation of Missing Values. R package version 2.1.0. https://CRAN.R-project.org/package=missRanger
+}

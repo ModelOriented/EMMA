@@ -10,14 +10,14 @@
 #'
 #' @param mids : mids object
 #'    An object of class mids, typically produces by a previous call to mice() or mice.mids()
-#'  newdata : data.frame
+#' @param newdata : data.frame
 #'    Previously unseen data of the same structur as used to generate `mids`
 #' @param maxit : integer scalar
 #'    The number of additional Gibbs sampling iterations to refine the new imputations
-#'  printFlag : logical scalar
+#' @param printFlag : logical scalar
 #'    A Boolean flag. If TRUE, diagnostic information during the Gibbs sampling iterations
 #'    will be written to the command window. The default is TRUE.
-#'  seed : integer scalar
+#' @param  seed : integer scalar
 #'    An integer that is used as argument by the set.seed() for offsetting the random
 #'    number generator. Default is to use the last seed value stored in `mids`
 #'
@@ -34,7 +34,7 @@
 mice.reuse <- function(mids, newdata, maxit = 5, printFlag = TRUE, seed = NA) {
 
   newdata <- as.data.frame(lapply(newdata, function(x) {
-    if (is(x, "numeric")) {
+    if (methods::is(x, "numeric")) {
       return(as.numeric(x))
     }
     return(x)
@@ -139,7 +139,24 @@ mice.reuse <- function(mids, newdata, maxit = 5, printFlag = TRUE, seed = NA) {
   class(res) <- c("mild", "list")
   res
 }
-
+#' @title Joining mice objects. Used in mice.reuse.
+#'
+#' @description   Append one mids object to another. Both objects are expected to have the same variables.
+#'
+#' @details{  Only the data specific aspects are copied (i.e. $data, $imp, $where,
+#'       $nmis), all other information in `y` is discarded. Therefore, only
+#'       the imputation model of `x` is kept and `y` must not contain missing
+#'       data in variables that did not have missing data in `x` (but the
+#'       reverse is allowed).
+#'}
+#'
+#' @param x mids object provides both data and specification of imputation procedure
+#' @param y mids object only data information will be retained in the combined object
+#'
+#' @return
+#'    mids object
+#'    a new mids object that contains all of `x` and the additional data in `y`
+#'
 #' @export
 mids.append <- function(x, y) {
   # Append one mids object to another. Both objects are expected to have
@@ -192,11 +209,20 @@ mids.append <- function(x, y) {
   app$where <- rbind(x$where, y$where)
   rownames(app$where) <- rownames(app$data)
 
-  res <- list(mids = app, app_idx = setNames(y_idx, NULL))
+  res <- list(mids = app, app_idx = stats::setNames(y_idx, NULL))
   res$method <- x$method
   res
 }
-
+#' @title Replace overimputes. Used in mice.reuse.
+#' @description{ Replace all overimputed data points in the mice imputation
+#' of one variable. Overimputed data points are those data
+#' that were not missing in the original but were marked for
+#' imputation manually and imputed by the imputation procedure.
+#'}
+#' @param data  data.frame the original, non-imputed dataset (mids$data)
+#' @param  imp list of data.frames all imputations stored in the mids object
+#' @param j  character scalar the name of the variable whose imputations should be replaced
+#' @param  i character or integer scalar the number of the current imputation (can be 1:m)
 #' @export
 replace_overimputes <- function(data, imp, j, i) {
   # Replace all overimputed data points in the mice imputation
@@ -228,6 +254,17 @@ replace_overimputes <- function(data, imp, j, i) {
   imp[[j]][, i]
 }
 
+
+#' @title Fetch data. Used in mice.reuse.
+#' @description { Retrieve the main imputation object when within the
+#' `mice:::sampler` post-imputation calling environment
+#' and return the data object (including missingness)
+#' stored within.
+#'}
+#'
+#' @return
+#'  data.frame
+#'    the original, non-imputed dataset of the mids object
 #' @export
 fetch_data <- function() {
   # Retrieve the main imputation object when within the
@@ -246,4 +283,4 @@ fetch_data <- function() {
 }
 
 
-# set_test_A <- mice.reuse(model,set_test)$`1`
+

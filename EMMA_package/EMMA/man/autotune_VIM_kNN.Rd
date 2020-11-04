@@ -8,7 +8,7 @@ autotune_VIM_kNN(
   df,
   percent_of_missing,
   k = 5,
-  numFun = median,
+  numFun = stats::median,
   catFun = VIM::maxCat,
   col_0_1 = FALSE,
   out_file = NULL
@@ -21,13 +21,13 @@ autotune_VIM_kNN(
 
 \item{k}{Value of k use if optimize=FALSE}
 
+\item{numFun}{function for aggregating the k Nearest Neighbours in the case of a numerical variable. Default median.}
+
+\item{catFun}{function for aggregating the k Nearest Neighbours in the case of a categorical variable. Default mode.}
+
 \item{col_0_1}{decide if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False.}
 
 \item{out_file}{Output log file location if file already exists log message will be added. If NULL no log will be produced.}
-
-\item{numFUN}{function for aggregating the k Nearest Neighbours in the case of a numerical variable. Default median.}
-
-\item{catFUN}{function for aggregating the k Nearest Neighbours in the case of a categorical variable. Default mode.}
 }
 \description{
 Function perform kNN function from VIM packge.
@@ -59,4 +59,7 @@ Function perform kNN function from VIM packge.
   sum(is.na(imp_data)) == 0
   # TRUE
 }
+}
+\references{
+Alexander Kowarik, Matthias Templ (2016). Imputation with the R Package VIM. Journal of Statistical Software, 74(7), 1-16. doi:10.18637/jss.v074.i07
 }

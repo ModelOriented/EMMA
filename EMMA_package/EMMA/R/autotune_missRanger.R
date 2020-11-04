@@ -17,6 +17,8 @@
 #' @param col_0_1 decide if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False.
 #' @import missRanger
 #'
+#' @references Michael Mayer (2019). missRanger: Fast Imputation of Missing Values. R package version 2.1.0. https://CRAN.R-project.org/package=missRanger
+#'
 #' @examples
 #' {
 #'   raw_data <- data.frame(
@@ -85,7 +87,7 @@ autotune_missRanger <- function(df, percent_of_missing, maxiter = 10, random.see
       for (i in 1:iter) {
         go_next <- FALSE
         tryCatch({
-          out <- capture.output(result <- missRanger::missRanger(df, maxiter = maxiter, seed = random.seed, num.trees = num.trees[i], verbose = 2, pmm.k = pmm.k[i]))
+          out <- utils::capture.output(result <- missRanger::missRanger(df, maxiter = maxiter, seed = random.seed, num.trees = num.trees[i], verbose = 2, pmm.k = pmm.k[i]))
 
           # Reading oob from last iteration
           curent_oob <- mean(as.numeric(strsplit(out[[length(out)]], split = "\t")[[1]][-1]))

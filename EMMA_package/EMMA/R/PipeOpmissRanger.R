@@ -31,7 +31,7 @@
 #' }
 #'
 #' @examples
-#' {
+#' \dontrun{
 #'   graph <- PipeOpmissRanger$new() %>>% mlr3learners::LearnerClassifGlmnet$new()
 #'   graph_learner <- GraphLearner$new(graph)
 #'

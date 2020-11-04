@@ -3,7 +3,7 @@
 #' @name PipeOpAmelia
 #'
 #' @description
-#' Implements EMB methods as mlr3 pipeline more about Amelia \code{\link{autotune_Amelia}} or \url{https://cran.r-project.org/web/packages/Amelia/Amelia.pdf}
+#' Implements EMB methods as mlr3 pipeline more about Amelia \code{\link{autotune_Amelia}} or \url{https://cran.r-project.org/package=Amelia}
 #'
 #' @section Input and Output Channels:
 #' Input and output channels are inherited from \code{\link{PipeOpImpute}}.
@@ -29,6 +29,18 @@
 #' \item \code{out_fill} :: \code{character(1)}\cr
 #' Output log file location. If file already exists log message will be added. If NULL no log will be produced, default \code{NULL}.
 #' }
+#'
+#' @import mlr3
+#' @import mlr3pipelines
+#' @import paradox
+#'
+#' @importFrom methods is
+#' @importFrom stats as.formula
+#' @importFrom stats median
+#' @importFrom stats na.omit
+#' @importFrom stats runif
+#' @importFrom stats setNames
+#' @importFrom utils capture.output
 #'
 #' @examples
 #' {

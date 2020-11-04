@@ -76,3 +76,6 @@ Function use algorithm base on matrix whats meaning if only one numeric column e
   # TRUE
 }
 }
+\references{
+Trevor Hastie and Rahul Mazumder (2015). softImpute: Matrix Completion via Iterative Soft-Thresholded SVD. R package version 1.4. https://CRAN.R-project.org/package=softImpute
+}

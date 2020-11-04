@@ -19,6 +19,8 @@
 #' @importFrom softImpute complete
 #' @imports VIM
 #'
+#' @references Trevor Hastie and Rahul Mazumder (2015). softImpute: Matrix Completion via Iterative Soft-Thresholded SVD. R package version 1.4. https://CRAN.R-project.org/package=softImpute
+#'
 #' @examples
 #' {
 #'   raw_data <- data.frame(
@@ -92,7 +94,7 @@ autotune_softImpute <- function(df, percent_of_missing, col_type, col_0_1 = F, c
       if (sum(col_type == "numeric" | col_type == "integer") > 0) {
         j <- colnames(df)[col_type == "numeric" | col_type == "integer"]
         col_to_imp <- df[, j, drop = F]
-        col_to_imp[is.na(col_to_imp), ] <- cat_Fun(na.omit(col_to_imp[[j]]))
+        col_to_imp[is.na(col_to_imp), ] <- cat_Fun(stats::na.omit(col_to_imp[[j]]))
         j <- col_to_imp
         final <- j
       }
