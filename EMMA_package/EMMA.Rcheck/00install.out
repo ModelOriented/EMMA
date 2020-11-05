@@ -1,0 +1,23 @@
+* installing *source* package ‘EMMA’ ...
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+Ostrzeżenie: replacing previous import ‘VIM::nrmse’ by ‘missForest::nrmse’ when loading ‘EMMA’
+Ostrzeżenie: replacing previous import ‘mice::complete’ by ‘softImpute::complete’ when loading ‘EMMA’
+Ostrzeżenie: replacing previous import ‘softImpute::complete’ by ‘mice::complete’ when loading ‘EMMA’
+Ostrzeżenie: replacing previous import ‘mice::complete’ by ‘softImpute::complete’ when loading ‘EMMA’
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+Ostrzeżenie: replacing previous import ‘VIM::nrmse’ by ‘missForest::nrmse’ when loading ‘EMMA’
+Ostrzeżenie: replacing previous import ‘mice::complete’ by ‘softImpute::complete’ when loading ‘EMMA’
+Ostrzeżenie: replacing previous import ‘softImpute::complete’ by ‘mice::complete’ when loading ‘EMMA’
+Ostrzeżenie: replacing previous import ‘mice::complete’ by ‘softImpute::complete’ when loading ‘EMMA’
+** testing if installed package can be loaded from final location
+Ostrzeżenie: replacing previous import ‘VIM::nrmse’ by ‘missForest::nrmse’ when loading ‘EMMA’
+Ostrzeżenie: replacing previous import ‘mice::complete’ by ‘softImpute::complete’ when loading ‘EMMA’
+Ostrzeżenie: replacing previous import ‘softImpute::complete’ by ‘mice::complete’ when loading ‘EMMA’
+Ostrzeżenie: replacing previous import ‘mice::complete’ by ‘softImpute::complete’ when loading ‘EMMA’
+** testing if installed package keeps a record of temporary installation path
+* DONE (EMMA)

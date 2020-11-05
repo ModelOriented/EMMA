@@ -1,0 +1,829 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.25)  5 NOV 2020 09:33
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Rd2.tex
+(./Rd2.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-05-15>
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2019/12/20 v1.4l Standard LaTeX document class
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@chapter=\count168
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+\c@figure=\count174
+\c@table=\count175
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(/usr/share/R/share/texmf/tex/latex/Rd.sty
+Package: Rd 
+
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip49
+\LTright=\skip50
+\LTpre=\skip51
+\LTpost=\skip52
+\LTchunksize=\count176
+\LTcapwidth=\dimen135
+\LT@head=\box45
+\LT@firsthead=\box46
+\LT@foot=\box47
+\LT@lastfoot=\box48
+\LT@cols=\count177
+\LT@rows=\count178
+\c@LT@tables=\count179
+\c@LT@chunks=\count180
+\LT@p@ftn=\toks15
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup4
+\symboldletters=\mathgroup5
+\symboldsymbols=\mathgroup6
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 209.
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks16
+\verbatim@line=\toks17
+\verbatim@in@stream=\read2
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+\ldescriptionwidth=\skip53
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks18
+\inpenc@posthook=\toks19
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-05-05 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count181
+\l__pdf_internal_box=\box49
+)
+(./Rd2.aux)
+\openout1 = `Rd2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Trying to load font information for OML+cmtt on input line 
+20.
+LaTeX Font Info:    No file OMLcmtt.fd. on input line 20.
+
+
+LaTeX Font Warning: Font shape `OML/cmtt/m/n' undefined
+(Font)              using `OML/cmm/m/it' instead
+(Font)              for symbol `textless' on input line 20.
+
+(./Rd2.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 1.
+ [1
+
+
+{/home/jan/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+\tf@toc=\write3
+\openout3 = `Rd2.toc'.
+
+ [2]
+Overfull \hbox (0.35706pt too wide) in paragraph at lines 79--80
+[]\OT1/cmr/m/n/10 parameter pass to amelia func-tion as em-pir in Amelia == em-
+pir*nrow(df).
+ []
+
+[3]
+Overfull \hbox (34.75089pt too wide) in paragraph at lines 108--108
+ []    \OT1/cmtt/m/n/9 f = as.factor(sample(c("male", "female", "trans", "other
+", NA), 1000, replace = TRUE)))[] 
+ []
+
+[4] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 302--304
+
+ []
+
+[7]
+Overfull \hbox (34.75089pt too wide) in paragraph at lines 324--324
+ []    \OT1/cmtt/m/n/9 f = as.factor(sample(c("male", "female", "trans", "other
+", NA), 1000, replace = TRUE)))[] 
+ []
+
+
+Overfull \hbox (34.75089pt too wide) in paragraph at lines 335--335
+ []  \OT1/cmtt/m/n/9 imp_data <- autotune_missForest(raw_data, col_type, percen
+t_of_missing, optimize = FALSE)[] 
+ []
+
+[8] [9]
+Overfull \hbox (34.75089pt too wide) in paragraph at lines 414--414
+ []    \OT1/cmtt/m/n/9 f = as.factor(sample(c("male", "female", "trans", "other
+", NA), 1000, replace = TRUE)))[] 
+ []
+
+[10]
+Overfull \hbox (60.87459pt too wide) in paragraph at lines 472--473
+[]\OT1/cmr/m/n/10 This re-stricts the rank of the so-lu-tion. De-foult 2 if set
+ as NULL rank.max=min(dim(X))-
+ []
+
+
+Overfull \hbox (25.57689pt too wide) in paragraph at lines 493--494
+\OT1/cmr/m/n/10 Soft-Thresholded SVD. R pack-age ver-sion 1.4. https://CRAN.R-p
+roject.org/package=softImpute 
+ []
+
+[11]
+Overfull \hbox (34.75089pt too wide) in paragraph at lines 505--505
+ []    \OT1/cmtt/m/n/9 f = as.factor(sample(c("male", "female", "trans", "other
+", NA), 1000, replace = TRUE)))[] 
+ []
+
+
+Overfull \hbox (14.27731pt too wide) in paragraph at lines 533--533
+ []\OT1/cmtt/m/n/10 autotune_VIM_hotdeck(df, percent_of_missing, col_0_1 = FALS
+E, out_file = NULL)[] 
+ []
+
+[12]
+Overfull \hbox (34.75089pt too wide) in paragraph at lines 566--566
+ []    \OT1/cmtt/m/n/9 f = as.factor(sample(c("male", "female", "trans", "other
+", NA), 1000, replace = TRUE)))[] 
+ []
+
+[13] [14]
+Overfull \hbox (34.75089pt too wide) in paragraph at lines 657--657
+ []    \OT1/cmtt/m/n/9 f = as.factor(sample(c("male", "female", "trans", "other
+", NA), 1000, replace = TRUE)))[] 
+ []
+
+[15]
+Overfull \hbox (34.75089pt too wide) in paragraph at lines 730--730
+ []    \OT1/cmtt/m/n/9 f = as.factor(sample(c("male", "female", "trans", "other
+", NA), 1000, replace = TRUE)))[] 
+ []
+
+[16] [17]
+Overfull \hbox (34.75089pt too wide) in paragraph at lines 817--817
+ []    \OT1/cmtt/m/n/9 f = as.factor(sample(c("male", "female", "trans", "other
+", NA), 1000, replace = TRUE)))[] 
+ []
+
+[18] [19]
+Overfull \hbox (80.91045pt too wide) in paragraph at lines 894--895
+\OT1/cmr/m/n/10 Chained Equa-tions in R. Jour-nal of Sta-tis-ti-cal Soft-ware, 
+45(3), 1-67. URL https://www.jstatsoft.org/v45/i03/. 
+ []
+
+[20] [21]
+Overfull \hbox (41.56506pt too wide) in paragraph at lines 1047--1048
+[]\OT1/cmr/m/n/10 Retrun one im-puted data.frame if retrun[]one=True or list of
+ im-puted data.frames if retrun[]one=False. 
+ []
+
+
+Overfull \hbox (24.29115pt too wide) in paragraph at lines 1051--1052
+\OT1/cmr/m/n/10 Mul-ti-vari-ate Data Anal-y-sis. Jour-nal of Sta-tis-ti-cal Sof
+t-ware, 70(1), 1-31. doi:10.18637/jss.v070.i01 
+ []
+
+[22]
+Overfull \hbox (34.75089pt too wide) in paragraph at lines 1063--1063
+ []    \OT1/cmtt/m/n/9 f = as.factor(sample(c("male", "female", "trans", "other
+", NA), 1000, replace = TRUE)))[] 
+ []
+
+
+Overfull \hbox (58.37561pt too wide) in paragraph at lines 1074--1074
+ []  \OT1/cmtt/m/n/9 imp_data <- missMDA_FMAD_MCA_PCA(raw_data, col_type, perce
+nt_of_missing, optimize_ncp = FALSE)[] 
+ []
+
+[23]
+Overfull \hbox (24.29115pt too wide) in paragraph at lines 1142--1143
+\OT1/cmr/m/n/10 Mul-ti-vari-ate Data Anal-y-sis. Jour-nal of Sta-tis-ti-cal Sof
+t-ware, 70(1), 1-31. doi:10.18637/jss.v070.i01 
+ []
+
+[24]
+Overfull \hbox (34.75089pt too wide) in paragraph at lines 1154--1154
+ []    \OT1/cmtt/m/n/9 f = as.factor(sample(c("male", "female", "trans", "other
+", NA), 1000, replace = TRUE)))[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1187--1188
+
+ []
+
+[25]
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
+1220.
+ (/home/jan/.TinyTeX/texmf-dist/tex/latex/base/ts1cmtt.fd
+File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 1220.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 1220.
+
+! Undefined control sequence.
+l.1230 \hypertarget
+                   {method-new}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.1253 \hypertarget
+                   {method-clone}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 1304--1305
+
+ []
+
+! Undefined control sequence.
+l.1333 \hypertarget
+                   {method-new}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[27]
+! Undefined control sequence.
+l.1347 \hypertarget
+                   {method-clone}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1398--1399
+
+ []
+
+[28]
+! Undefined control sequence.
+l.1427 \hypertarget
+                   {method-new}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.1441 \hypertarget
+                   {method-clone}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1492--1493
+
+ []
+
+[29]
+! Undefined control sequence.
+l.1521 \hypertarget
+                   {method-new}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.1535 \hypertarget
+                   {method-clone}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1588--1589
+
+ []
+
+[30]
+Overfull \hbox (17.36496pt too wide) in paragraph at lines 1597--1599
+\OT1/cmr/m/n/10 Cor-re-la-tion or frac-tion of fea-tures used when op-ti-mize=F
+ALSE. When cor-re-la-tion=FALSE,
+ []
+
+[31]
+! Undefined control sequence.
+l.1639 \hypertarget
+                   {method-new}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.1667 \hypertarget
+                   {method-clone}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 1724--1725
+
+ []
+
+
+Overfull \hbox (17.36496pt too wide) in paragraph at lines 1733--1735
+\OT1/cmr/m/n/10 Cor-re-la-tion or frac-tion of fea-tures used when op-ti-mize=F
+ALSE. When cor-re-la-tion=FALSE,
+ []
+
+! Undefined control sequence.
+l.1763 \hypertarget
+                   {method-new}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[33]
+! Undefined control sequence.
+l.1785 \hypertarget
+                   {method-clone}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (12.56055pt too wide) in paragraph at lines 1828--1829
+[]\OT1/cmr/m/n/10 Implements miss-For-est meth-ods as mlr3 pipeline more about 
+miss-For-est \OT1/cmtt/m/n/10 autotune[]missForest 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1838--1839
+
+ []
+
+[34]
+! Undefined control sequence.
+l.1887 \hypertarget
+                   {method-new}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[35]
+! Undefined control sequence.
+l.1913 \hypertarget
+                   {method-clone}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1968--1969
+
+ []
+
+[36]
+! Undefined control sequence.
+l.2011 \hypertarget
+                   {method-new}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.2034 \hypertarget
+                   {method-clone}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[37]
+Overfull \hbox (52.11952pt too wide) in paragraph at lines 2078--2079
+[]\OT1/cmr/m/n/10 Implements PCA, MCA, FMAD meth-ods as mlr3 pipeline, more abo
+ut meth-ods \OT1/cmtt/m/n/10 missMDA[]FMAD[]MCA[]PCA\OT1/cmr/m/n/10 . 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2088--2089
+
+ []
+
+[38]
+Overfull \hbox (38.64723pt too wide) in paragraph at lines 2117--2118
+[]\OT1/cmtt/m/n/10 mlr3pipelines::PipeOp \OT1/cmr/m/n/10 -> \OT1/cmtt/m/n/10 ml
+r3pipelines::PipeOpImpute \OT1/cmr/m/n/10 -> \OT1/cmtt/m/n/10 missMDA[]MCA[]PCA
+[]FMAD[]imputation 
+ []
+
+! Undefined control sequence.
+l.2135 \hypertarget
+                   {method-new}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.2160 \hypertarget
+                   {method-clone}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[39]
+Overfull \hbox (25.301pt too wide) in paragraph at lines 2190--2190
+ []  \OT1/cmtt/m/n/9 graph <- PipeOpMissMDA_PCA_MCA_FMAD$new() %>>% mlr3learner
+s::LearnerClassifGlmnet$new()[] 
+ []
+
+
+Overfull \hbox (27.11615pt too wide) in paragraph at lines 2203--2204
+[]\OT1/cmr/m/n/10 Implements mis-s-Ranger meth-ods as mlr3 pipeline, more about
+ mis-s-Ranger \OT1/cmtt/m/n/10 autotune[]missRanger\OT1/cmr/m/n/10 . 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2213--2214
+
+ []
+
+[40]
+! Undefined control sequence.
+l.2256 \hypertarget
+                   {method-new}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.2280 \hypertarget
+                   {method-clone}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 2334--2335
+
+ []
+
+! Undefined control sequence.
+l.2363 \hypertarget
+                   {method-new}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.2377 \hypertarget
+                   {method-clone}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 2430--2431
+
+ []
+
+! Undefined control sequence.
+l.2459 \hypertarget
+                   {method-new}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.2473 \hypertarget
+                   {method-clone}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 2526--2527
+
+ []
+
+! Undefined control sequence.
+l.2555 \hypertarget
+                   {method-new}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[44]
+! Undefined control sequence.
+l.2569 \hypertarget
+                   {method-clone}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[45]
+Overfull \hbox (23.52742pt too wide) in paragraph at lines 2639--2640
+[]\OT1/cmtt/m/n/10 mlr3pipelines::PipeOp \OT1/cmr/m/n/10 -> \OT1/cmtt/m/n/10 ml
+r3pipelines::PipeOpTaskPreproc \OT1/cmr/m/n/10 -> \OT1/cmtt/m/n/10 PipeOpSimula
+teMissings 
+ []
+
+! Undefined control sequence.
+l.2657 \hypertarget
+                   {method-new}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.2674 \hypertarget
+                   {method-clone}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[46]
+Overfull \hbox (24.33847pt too wide) in paragraph at lines 2715--2716
+[]\OT1/cmr/m/n/10 Implements Soft-Im-pute meth-ods as mlr3 pipeline, more about
+ Soft-Im-pute \OT1/cmtt/m/n/10 autotune[]softImpute\OT1/cmr/m/n/10 . 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2725--2726
+
+ []
+
+
+Overfull \hbox (5.30017pt too wide) in paragraph at lines 2730--2732
+\OT1/cmr/m/n/10 Nuclear-norm reg-u-lar-iza-tion pa-ram-e-ter. If lambda=0, the 
+al-go-rithm re-verts to "hardIm-
+ []
+
+LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
+2740.
+(/usr/share/R/share/texmf/tex/latex/omscmtt.fd
+File: omscmtt.fd 
+)
+LaTeX Font Info:    Font shape `OMS/cmtt/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2740.
+
+ [47]
+! Undefined control sequence.
+l.2768 \hypertarget
+                   {method-new}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.2791 \hypertarget
+                   {method-clone}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (3.71716pt too wide) in paragraph at lines 2834--2835
+[]\OT1/cmr/m/n/10 Implements Hot Deck meth-ods as mlr3 pipeline more about VIM[
+]HD \OT1/cmtt/m/n/10 autotune[]VIM[]hotdeck 
+ []
+
+[48]
+Underfull \hbox (badness 10000) in paragraph at lines 2844--2845
+
+ []
+
+! Undefined control sequence.
+l.2875 \hypertarget
+                   {method-new}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.2889 \hypertarget
+                   {method-clone}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[49]
+Underfull \hbox (badness 10000) in paragraph at lines 2942--2943
+
+ []
+
+[50]
+! Undefined control sequence.
+l.2985 \hypertarget
+                   {method-new}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.3008 \hypertarget
+                   {method-clone}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[51]
+Underfull \hbox (badness 10000) in paragraph at lines 3061--3062
+
+ []
+
+! Undefined control sequence.
+l.3098 \hypertarget
+                   {method-new}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[52]
+! Undefined control sequence.
+l.3118 \hypertarget
+                   {method-clone}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (39.08948pt too wide) in paragraph at lines 3161--3162
+[]\OT1/cmr/m/n/10 Implements Re-gres-sion Im-pu-ta-tion meth-ods as mlr3 pipeli
+ne, more about RI \OT1/cmtt/m/n/10 autotune[]VIM[]regrImp\OT1/cmr/m/n/10 . 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3171--3172
+
+ []
+
+[53]
+! Undefined control sequence.
+l.3208 \hypertarget
+                   {method-new}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.3228 \hypertarget
+                   {method-clone}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[54]
+Overfull \hbox (21.77017pt too wide) in paragraph at lines 3300--3301
+[]\OT1/cmr/m/n/10 first prod-uct of for-mula[]creating() fun-tion. For ex-am-pl
+e for-mula[]creating(...)[1] 
+ []
+
+[55] [56] [57] (./Rd2.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1036 strings out of 482424
+ 14453 string characters out of 5948610
+ 249170 words of memory out of 5000000
+ 16818 multiletter control sequences out of 15000+600000
+ 543023 words of font info for 60 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 27i,8n,34p,823b,521s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/jan/.TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tctt1000.600pk> </
+home/jan/.TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></home/j
+an/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/jan/.Ti
+nyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/jan/.TinyTeX/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/jan/.TinyTeX/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/jan/.TinyTeX/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb></home/jan/.TinyTeX/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr6.pfb></home/jan/.TinyTeX/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr7.pfb></home/jan/.TinyTeX/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsl10.pfb></home/jan/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmss12.pfb></home/jan/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb></home/jan/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><
+/home/jan/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/
+jan/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></home/jan/.Ti
+nyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on Rd2.pdf (57 pages, 271684 bytes).
+PDF statistics:
+ 257 PDF objects out of 1000 (max. 8388607)
+ 178 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
