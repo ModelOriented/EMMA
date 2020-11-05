@@ -69,6 +69,11 @@ autotune_VIM_Irmi <- function(df, col_type, percent_of_missing, eps = 5, maxit =
         write(as.character(e), file = out_file, append = T)
 
       }
+
+      if(as.character(e)=="argument of length 0")
+      {
+        print("Problem with not working algorithm not an easy way to solve")
+      }
       stop(e)
     })
   })

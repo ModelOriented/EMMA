@@ -144,6 +144,9 @@ autotune_missRanger <- function(df, percent_of_missing, maxiter = 10, random.see
     if (!is.null(out_file)) {
       write(as.character(e), file = out_file, append = T)
     }
+    if(as.character(e)=="sum(ok <- !is.na(xtrain) & !is.na(ytrain)) >= 1L is not TRUE"){
+      print("Problem inside ranger package no easy way to solve")
+    }
     stop(e)
   })
   if (col_0_1) {

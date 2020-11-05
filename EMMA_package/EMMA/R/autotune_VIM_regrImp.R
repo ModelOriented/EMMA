@@ -135,7 +135,18 @@ autotune_VIM_regrImp <- function(df, col_type, percent_of_missing, col_0_1 = F, 
       write(as.character(e), file = out_file, append = T)
     }
     print(as.character(e))
+    if(as.character(e)=="dim(X) must have a positive lengthdim(X) must have a positive length"){
+      print("Problem caused by one problematic column removing it should solve the problem ")
+    }
+
+    if(as.character(e)=="argument of length 0"){
+
+      print("No column without missing values")
+    }
+
     stop(e)
+
+
 
   })
 

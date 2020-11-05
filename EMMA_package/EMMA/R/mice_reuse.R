@@ -32,7 +32,7 @@
 #' @export
 #' @author Patrick Rockenschaub git https://github.com/prockenschaub
 mice.reuse <- function(mids, newdata, maxit = 5, printFlag = TRUE, seed = NA) {
-
+  tryCatch({
   newdata <- as.data.frame(lapply(newdata, function(x) {
     if (methods::is(x, "numeric")) {
       return(as.numeric(x))
@@ -137,7 +137,24 @@ mice.reuse <- function(mids, newdata, maxit = 5, printFlag = TRUE, seed = NA) {
   }
   )
   class(res) <- c("mild", "list")
+  if(sum(is.na(res$`1`))>0){stop("Missing left after imputation")}
+
   res
+
+  },error=function(e){
+    e <- as.character(e)
+
+    if(e=="argument of length 0"){
+    print("Problem probably with algorithm implementation")
+    }
+
+    if(e=="nothing left to impute"){
+      print("To much constant and colinar veribles ")
+    }
+
+
+    stop(e)
+  })
 }
 #' @title Joining mice objects. Used in mice.reuse.
 #'

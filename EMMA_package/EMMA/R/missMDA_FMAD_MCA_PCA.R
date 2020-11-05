@@ -170,6 +170,29 @@ missMDA_FMAD_MCA_PCA <- function(df, col_type, percent_of_missing, optimize_ncp 
     if (!is.null(out_file)) {
       write(as.character(e), file = out_file, append = T)
     }
+
+    if(as.character(e)=="infinite or missing values in 'x'"){
+      print("Some columns contain only one variable with NA. Problem appears when sd can't be calculated from some column.")
+    }
+
+    if(as.character(e)=="missing value where TRUE/FALSE needed"){
+      print("Problem probably with algorithm implementation ")
+    }
+
+
+    if(as.character(e)=="algorithm fails to converge"){
+      print("The algorithm fails to converge. Changing params don't solve this problem.")
+    }
+
+    if(as.character(e)=="dim(X) must have a positive length"){
+      print("Problem probably with algorithm implementation ")
+    }
+
+    if(as.character(e)=="argument is of length zero"){
+      print("Problem probably with algorithm implementation ")
+    }
+
+
     stop(e)
   })
   if (!return_one) {

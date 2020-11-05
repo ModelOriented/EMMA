@@ -209,6 +209,8 @@ random_param_mice_search <- function(low_corr = 0, up_corr = 1, methods_random =
 #' @export
 autotune_mice <- function(df, m = 5, maxit = 5, col_miss, col_no_miss, col_type, set_cor = 0.5, set_method = "pmm", percent_of_missing, low_corr = 0, up_corr = 1, methods_random = c("pmm"), iter, random.seed = 123, optimize = TRUE, correlation = TRUE, return_one = TRUE, col_0_1 = FALSE, verbose = FALSE, out_file = NULL) {
 
+
+
   if (sum(is.na(df)) == 0) {
     return(df)
   }
@@ -329,12 +331,7 @@ autotune_mice <- function(df, m = 5, maxit = 5, col_miss, col_no_miss, col_type,
     if (!is.null(out_file)) {
       write("OK", file = out_file, append = T)
     }
-  }, error = function(e) {
-    if (!is.null(out_file)) {
-      write(as.character(e), file = out_file, append = T)
-    }
-    stop(e)
-  })
+
   # If user chose to return one dataset
 
   if (return_one) {
@@ -369,9 +366,40 @@ autotune_mice <- function(df, m = 5, maxit = 5, col_miss, col_no_miss, col_type,
         levels(imputed_dataset[, i]) <- c(levels(stats::na.omit(df[, i])))
       }
     }
+
+
     return(imputed_dataset)
   }
+
+
+    #ERRORS
+  },error=function(e){
+
+    e <- as.character(e)
+
+    if(e=="argument is of length zero"){
+      print("Probably a problem with algorithm implementation, mice function didn't work")
+    }
+    if(e=="nothing left to impute"){
+      print("To much constant and colinar veribles")
+    }
+
+    if(e=="Lapack routine dgesv: system is exactly singular: U[1,1] = 0"){
+      print("The mathematic error of the algorithm ")
+    }
+
+    if(e=="Can't have empty classes in y."){
+      print("Probably  internal problem with rf")
+    }
+
+    if (!is.null(out_file)) {
+      write(as.character(e), file = out_file, append = T)
+    }
+    stop(e)
+
+  })
   if (!return_one) {
+    if(sum(is.na(imp_final))>0){stop('Missing left after imputation')}
     return(imp_final)
   }
 

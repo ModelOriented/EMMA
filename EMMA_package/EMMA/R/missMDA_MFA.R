@@ -120,6 +120,19 @@ missMDA_MFA <- function(df, col_type, percent_of_missing, random.seed = 123, ncp
     if (!is.null(out_file)) {
       write(as.character(e), file = out_file, append = T)
     }
+
+    if(as.character(e)=="dim(X) must have a positive length"){
+      print("Problem probably with algorithm implementation ")
+    }
+
+
+
+    if(as.character(e)=="algorithm fails to converge"){
+      print("Problem probably with algorithm implementation ")
+    }
+
+
+
     stop(e)
   })
   for (i in colnames(df)[(col_type == "factor")]) {
