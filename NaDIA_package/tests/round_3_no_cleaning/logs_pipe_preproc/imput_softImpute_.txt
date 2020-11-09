@@ -1,0 +1,146 @@
+INFO  [09:48:22.026] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '2079' (iter 1/5) 
+INFO  [09:48:23.705] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '2079' (iter 2/5) 
+INFO  [09:48:25.220] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '2079' (iter 3/5) 
+INFO  [09:48:26.919] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '2079' (iter 4/5) 
+INFO  [09:48:28.701] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '2079' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 2079
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.3519305 
+
+
+INFO  [09:48:31.241] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '35' (iter 1/5) 
+[1] "Not enought numeric"
+Error in cat(x, file = file, sep = c(rep.int(sep, ncolumns - 1), "\n"),  : 
+  niepoprawne połączenie
+
+
+INFO  [09:48:32.224] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3802' (iter 1/5) 
+INFO  [09:48:32.666] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3802' (iter 2/5) 
+INFO  [09:48:32.857] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3802' (iter 3/5) 
+INFO  [09:48:33.503] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3802' (iter 4/5) 
+INFO  [09:48:33.921] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3802' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3802
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.0131401 
+
+
+INFO  [09:48:35.610] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3705' (iter 1/5) 
+INFO  [09:48:35.822] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3705' (iter 2/5) 
+INFO  [09:48:36.328] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3705' (iter 3/5) 
+INFO  [09:48:36.832] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3705' (iter 4/5) 
+INFO  [09:48:37.353] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3705' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3705
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.04878049 
+
+
+INFO  [09:48:38.841] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3807' (iter 1/5) 
+INFO  [09:48:39.320] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3807' (iter 2/5) 
+INFO  [09:48:39.802] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3807' (iter 3/5) 
+INFO  [09:48:40.297] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3807' (iter 4/5) 
+INFO  [09:48:40.770] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3807' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3807
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2076923 
+
+
+INFO  [09:48:42.645] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3604' (iter 1/5) 
+[1] "Not enought numeric"
+Error in cat(x, file = file, sep = c(rep.int(sep, ncolumns - 1), "\n"),  : 
+  niepoprawne połączenie
+
+
+INFO  [09:48:43.631] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '190403' (iter 1/5) 
+INFO  [09:48:43.942] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '190403' (iter 2/5) 
+INFO  [09:48:44.699] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '190403' (iter 3/5) 
+INFO  [09:48:45.211] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '190403' (iter 4/5) 
+INFO  [09:48:45.769] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '190403' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 190403
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.0645122 
+
+
+INFO  [09:48:47.310] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '54' (iter 1/5) 
+INFO  [09:48:47.795] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '54' (iter 2/5) 
+INFO  [09:48:48.302] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '54' (iter 3/5) 
+INFO  [09:48:48.808] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '54' (iter 4/5) 
+INFO  [09:48:49.308] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '54' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 54
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1677419 
+
+
+INFO  [09:48:50.830] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3547' (iter 1/5) 
+INFO  [09:48:51.367] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3547' (iter 2/5) 
+INFO  [09:48:51.899] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3547' (iter 3/5) 
+INFO  [09:48:52.457] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3547' (iter 4/5) 
+INFO  [09:48:52.973] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '3547' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3547
+* Learner: imput_softImpute.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+  0.253779 
+
+
+INFO  [09:48:54.600] Applying learner 'imput_softImpute.encodeimpact.classif.glmnet' on task '5' (iter 1/5) 
+Error in lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs,  : 
+  one multinomial or binomial class has 1 or 0 observations; not allowed
+
+
+Successful evaluation: 7/10 tasks
+
+

@@ -1,0 +1,545 @@
+INFO  [22:15:02.872] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 3rd_level_incomplete, Senior_cycle_incomplete-secondary_school.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 3rd_level_incomplete, Senior_cycle_incomplete-secondary_school.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 3rd_level_incomplete, Senior_cycle_incomplete-secondary_school.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 3rd_level_incomplete, Senior_cycle_incomplete-secondary_school.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 3rd_level_incomplete, Senior_cycle_incomplete-secondary_school.
+INFO  [22:15:04.360] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 2/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 3rd_level_incomplete.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 3rd_level_incomplete.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 3rd_level_incomplete.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 3rd_level_incomplete.
+INFO  [22:15:05.406] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 3/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Senior_cycle_incomplete-secondary_school.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Senior_cycle_incomplete-secondary_school.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Senior_cycle_incomplete-secondary_school.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Senior_cycle_incomplete-secondary_school.
+INFO  [22:15:06.448] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 4/5) 
+INFO  [22:15:07.236] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3543: irish (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3543: irish (Supervised Classification)
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+     0.008 
+
+
+INFO  [22:15:09.114] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3722: hungarian (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 3.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 6.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 3.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 6.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 3.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 6.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 3.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 6.
+INFO  [22:15:11.111] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3722: hungarian (Supervised Classification)' (iter 2/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 3.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 3.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 3.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 7.
+INFO  [22:15:13.400] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3722: hungarian (Supervised Classification)' (iter 3/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 3.
+Error in pmm(xtrain = fit$predictions, xtest = pred, ytrain = data[[v]][!v.na],  : 
+  zmienna sum(ok <- !is.na(xtrain) & !is.na(ytrain)) >= 1L nie ma wartości TRUE
+
+
+INFO  [22:15:15.669] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: o.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: o.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: o.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: o.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+INFO  [22:15:20.149] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 2/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: l, t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: gg.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: dd, o.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: l, t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: gg.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: dd, o.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: l, t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: gg.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: dd, o.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: l, t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: gg.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: dd, o.
+INFO  [22:15:23.731] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 3/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: r.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: j, n, o.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: r.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: j, n, o.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: r.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: j, n, o.
+INFO  [22:15:27.146] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 4/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: l, t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: gg.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: r.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: n, dd, o.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: l, t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: gg.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: r.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: n, dd, o.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: l, t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: gg.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: r.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: n, dd, o.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: l, t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: gg.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: r.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: n, dd, o.
+INFO  [22:15:31.881] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 29: credit-approval (Supervised Classification)' (iter 5/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: t.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: o.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: o.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: o.
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 29: credit-approval (Supervised Classification)
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1333333 
+
+
+INFO  [22:15:35.839] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 1/5) 
+INFO  [22:15:36.685] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 2/5) 
+INFO  [22:15:37.543] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 3/5) 
+INFO  [22:15:38.536] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 4/5) 
+INFO  [22:15:39.450] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3830: cars (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3830: cars (Supervised Classification)
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2659741 
+
+
+INFO  [22:15:41.630] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 14954: cylinder-bands (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.533, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.533, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.533, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: .200, 0.133, 0.167, 0.217, 0.25, 0.283, 0.467, 0.5, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 30, 37.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865, yes.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: naptha.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84, uddeholm.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: .200, 0.133, 0.167, 0.217, 0.25, 0.283, 0.467, 0.5, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 30, 37.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865, yes.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: naptha.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84, uddeholm.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: .200, 0.133, 0.167, 0.217, 0.25, 0.283, 0.467, 0.5, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 30, 37.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865, yes.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: naptha.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84, uddeholm.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+INFO  [22:15:53.946] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 14954: cylinder-bands (Supervised Classification)' (iter 2/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865, yes.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: .200, 0.133, 0.217, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84, uddeholm.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865, yes.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: .200, 0.133, 0.217, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84, uddeholm.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865, yes.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: .200, 0.133, 0.217, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84, uddeholm.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865, yes.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: .200, 0.133, 0.217, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84, uddeholm.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 37, 42, 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.25, 0.5, 0.533, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: naptha.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: southus.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 37, 42, 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.25, 0.5, 0.533, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: naptha.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: southus.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 37, 42, 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.25, 0.5, 0.533, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: naptha.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: southus.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 37, 42, 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.25, 0.5, 0.533, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: naptha.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: southus.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 37, 42, 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.25, 0.5, 0.533, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: naptha.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: southus.
+INFO  [22:16:12.083] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 14954: cylinder-bands (Supervised Classification)' (iter 3/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 30, 37, 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865, yes.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: .200, 0.133, 0.217, 0.25, 0.467, 0.533, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84, uddeholm.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 30, 37, 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865, yes.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: .200, 0.133, 0.217, 0.25, 0.467, 0.533, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84, uddeholm.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 30, 37, 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865, yes.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: .200, 0.133, 0.217, 0.25, 0.467, 0.533, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84, uddeholm.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 30, 37, 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865, yes.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: .200, 0.133, 0.217, 0.25, 0.467, 0.533, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84, uddeholm.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+INFO  [22:16:27.347] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 14954: cylinder-bands (Supervised Classification)' (iter 4/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.25, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.25, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.25, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 90, 95.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865, yes.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: .200, 0.133, 0.200, 0.217, 0.283, 0.433, 0.467, 0.533, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: naptha.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84, uddeholm.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 90, 95.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865, yes.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: .200, 0.133, 0.200, 0.217, 0.283, 0.433, 0.467, 0.533, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: naptha.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84, uddeholm.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 90, 95.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865, yes.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: .200, 0.133, 0.200, 0.217, 0.283, 0.433, 0.467, 0.533, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: naptha.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84, uddeholm.
+INFO  [22:16:39.426] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 14954: cylinder-bands (Supervised Classification)' (iter 5/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 37.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 37.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 37.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: .200, 0.133, 0.217, 0.25, 0.283, 0.533, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865, yes.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84, uddeholm.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: .200, 0.133, 0.217, 0.25, 0.283, 0.533, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865, yes.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84, uddeholm.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: .200, 0.133, 0.217, 0.25, 0.283, 0.533, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865, yes.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84, uddeholm.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 0.7.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 40.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: .200, 0.133, 0.217, 0.25, 0.283, 0.533, band.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 1865, yes.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 45.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 17.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: 84, uddeholm.
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 14954: cylinder-bands (Supervised Classification)
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.4481481 
+
+
+INFO  [22:16:53.296] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 1/5) 
+INFO  [22:16:53.990] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 2/5) 
+INFO  [22:16:54.709] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 3/5) 
+INFO  [22:16:55.420] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 4/5) 
+INFO  [22:16:56.061] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 48: heart-c (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 48: heart-c (Supervised Classification)
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+  0.304153 
+
+
+INFO  [22:16:57.803] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3561: profb (Supervised Classification)' (iter 1/5) 
+INFO  [22:16:58.431] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3561: profb (Supervised Classification)' (iter 2/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Thursday.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Thursday.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Thursday.
+INFO  [22:16:59.491] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3561: profb (Supervised Classification)' (iter 3/5) 
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Saturday.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Saturday.
+Ostrzeżenie: Dropped unused factor level(s) in dependent variable: Saturday.
+INFO  [22:17:00.201] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3561: profb (Supervised Classification)' (iter 4/5) 
+INFO  [22:17:00.920] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3561: profb (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3561: profb (Supervised Classification)
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.3452294 
+
+
+INFO  [22:17:02.762] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 1/5) 
+INFO  [22:17:06.025] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 2/5) 
+INFO  [22:17:08.714] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 3/5) 
+INFO  [22:17:11.996] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 4/5) 
+INFO  [22:17:15.655] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3675: pbc (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3675: pbc (Supervised Classification)
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.4374355 
+
+
+INFO  [22:17:19.610] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 1/5) 
+INFO  [22:17:20.035] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 2/5) 
+INFO  [22:17:20.330] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 3/5) 
+INFO  [22:17:20.972] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 4/5) 
+INFO  [22:17:21.404] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3847: analcatdata_draft (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3847: analcatdata_draft (Supervised Classification)
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.08756016 
+
+
+INFO  [22:17:23.062] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 1/5) 
+INFO  [22:17:24.226] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 2/5) 
+INFO  [22:17:25.602] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 3/5) 
+INFO  [22:17:27.074] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 4/5) 
+INFO  [22:17:28.535] Applying learner 'imput_missRanger.encodeimpact.classif.glmnet' on task 'Task 3838: autos (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3838: autos (Supervised Classification)
+* Learner: imput_missRanger.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.4926829 
+
+
+Successful evaluation: 9/10 tasks
+
+

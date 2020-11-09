@@ -1,0 +1,1314 @@
+INFO  [23:31:59.796] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 2079: eucalyptus (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 175
+INFO  [23:32:25.037] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 2079: eucalyptus (Supervised Classification)' (iter 2/5) 
+Ostrzeżenie: Number of logged events: 225
+INFO  [23:32:57.075] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 2079: eucalyptus (Supervised Classification)' (iter 3/5) 
+Ostrzeżenie: Number of logged events: 225
+INFO  [23:33:27.485] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 2079: eucalyptus (Supervised Classification)' (iter 4/5) 
+Ostrzeżenie: Number of logged events: 225
+INFO  [23:33:58.510] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 2079: eucalyptus (Supervised Classification)' (iter 5/5) 
+Ostrzeżenie: Number of logged events: 225
+Error : Processed output task during prediction of imput_mice_A does not match output task during training.
+
+
+INFO  [23:34:34.461] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 35: dermatology (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 25
+Error : Processed output task during prediction of imput_mice_A does not match output task during training.
+
+
+INFO  [23:34:38.424] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 1/5) 
+INFO  [23:34:40.287] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 2/5) 
+INFO  [23:34:42.202] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 3/5) 
+Error : Processed output task during prediction of imput_mice_A does not match output task during training.
+
+
+INFO  [23:34:45.045] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3705: autoHorse (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 125
+Ostrzeżenie: Number of logged events: 1
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Error : Processed output task during prediction of imput_mice_A does not match output task during training.
+
+
+INFO  [23:34:59.773] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3807: echoMonths (Supervised Classification)' (iter 1/5) 
+INFO  [23:35:03.343] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3807: echoMonths (Supervised Classification)' (iter 2/5) 
+Ostrzeżenie: Number of logged events: 1
+INFO  [23:35:07.112] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3807: echoMonths (Supervised Classification)' (iter 3/5) 
+Ostrzeżenie: Number of logged events: 1
+INFO  [23:35:10.661] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3807: echoMonths (Supervised Classification)' (iter 4/5) 
+INFO  [23:35:13.974] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3807: echoMonths (Supervised Classification)' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 3807: echoMonths (Supervised Classification)
+* Learner: removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+PROBABLY LEFT MISSINGS AFTER IMPUTATION!
+
+
+INFO  [23:35:19.927] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 1/5) 
+INFO  [23:35:20.817] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 2/5) 
+INFO  [23:35:22.201] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 3/5) 
+INFO  [23:35:23.288] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 4/5) 
+INFO  [23:35:24.510] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 5/5) 
+
+
+INFO  [23:35:27.291] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 190403: regime_alimentaire (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 25
+INFO  [23:35:29.672] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 190403: regime_alimentaire (Supervised Classification)' (iter 2/5) 
+INFO  [23:35:31.770] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 190403: regime_alimentaire (Supervised Classification)' (iter 3/5) 
+Ostrzeżenie: Number of logged events: 25
+INFO  [23:35:34.192] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 190403: regime_alimentaire (Supervised Classification)' (iter 4/5) 
+INFO  [23:35:36.095] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 190403: regime_alimentaire (Supervised Classification)' (iter 5/5) 
+
+
+INFO  [23:35:39.894] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 54: hepatitis (Supervised Classification)' (iter 1/5) 
+INFO  [23:35:46.700] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 54: hepatitis (Supervised Classification)' (iter 2/5) 
+Error : Processed output task during prediction of imput_mice_A does not match output task during training.
+
+
+INFO  [23:35:55.892] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 1/5) 
+INFO  [23:35:57.951] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 2/5) 
+INFO  [23:35:59.208] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 3/5) 
+INFO  [23:36:01.184] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 4/5) 
+INFO  [23:36:03.300] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 5/5) 
+
+
+INFO  [23:36:07.602] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 5: arrhythmia (Supervised Classification)' (iter 1/5) 
+Ostrzeżenie: Number of logged events: 81
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+Ostrzeżenie: Number of logged events: 47
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+INFO  [23:37:04.384] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 5: arrhythmia (Supervised Classification)' (iter 2/5) 
+Ostrzeżenie: Number of logged events: 133
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+Ostrzeżenie: from glmnet Fortran code (error code -31); Convergence for 31th lambda value not reached after maxit=100000 iterations; solutions for larger lambdas returned
+Ostrzeżenie: Number of logged events: 51
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+INFO  [23:38:15.078] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 5: arrhythmia (Supervised Classification)' (iter 3/5) 
+Ostrzeżenie: Number of logged events: 107
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+Ostrzeżenie: Number of logged events: 44
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+INFO  [23:39:23.995] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 5: arrhythmia (Supervised Classification)' (iter 4/5) 
+Ostrzeżenie: Number of logged events: 81
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+Ostrzeżenie: Number of logged events: 55
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 2L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+INFO  [23:40:33.300] Applying learner 'removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 5: arrhythmia (Supervised Classification)' (iter 5/5) 
+Ostrzeżenie: Number of logged events: 105
+Ostrzeżenie w poleceniu 'lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs, ':
+  one multinomial or binomial class has fewer than 8  observations; dangerous ground
+Ostrzeżenie: Number of logged events: 46
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+Ostrzeżenie w poleceniu '`[<-.factor`(`*tmp*`, iseq, value = c(1L, 1L, 1L, 1L, 1L, 1L, ':
+  niepoprawny poziom czynnika, wygenerowano wartość NA
+
+
+<ResampleResult> of 5 iterations
+* Task: Task 5: arrhythmia (Supervised Classification)
+* Learner: removeconstants_before.collapsefactors.imput_mice_A.removeconstants_after.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+PROBABLY LEFT MISSINGS AFTER IMPUTATION!
+
+
+Successful evaluation: 3/10 tasks
+
+

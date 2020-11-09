@@ -1,0 +1,133 @@
+INFO  [12:02:35.034] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 2079: eucalyptus (Supervised Classification)' (iter 1/5) 
+INFO  [12:03:28.236] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 2079: eucalyptus (Supervised Classification)' (iter 2/5) 
+INFO  [12:04:31.199] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 2079: eucalyptus (Supervised Classification)' (iter 3/5) 
+INFO  [12:05:28.479] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 2079: eucalyptus (Supervised Classification)' (iter 4/5) 
+INFO  [12:06:20.339] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 2079: eucalyptus (Supervised Classification)' (iter 5/5) 
+
+
+INFO  [12:07:08.209] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 35: dermatology (Supervised Classification)' (iter 1/5) 
+INFO  [12:07:16.905] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 35: dermatology (Supervised Classification)' (iter 2/5) 
+INFO  [12:07:25.679] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 35: dermatology (Supervised Classification)' (iter 3/5) 
+INFO  [12:07:34.244] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 35: dermatology (Supervised Classification)' (iter 4/5) 
+INFO  [12:07:42.107] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 35: dermatology (Supervised Classification)' (iter 5/5) 
+
+
+INFO  [12:07:51.862] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 1/5) 
+INFO  [12:07:53.160] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 2/5) 
+INFO  [12:07:55.023] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 3/5) 
+INFO  [12:07:56.286] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 4/5) 
+INFO  [12:07:57.477] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 5/5) 
+
+
+INFO  [12:07:59.961] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3705: autoHorse (Supervised Classification)' (iter 1/5) 
+Error in cbind(yval2, yprob, nodeprob) : 
+  liczby wierszy macierzy muszą być zgodne (zobacz argument 2)
+
+
+INFO  [12:08:04.279] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3807: echoMonths (Supervised Classification)' (iter 1/5) 
+INFO  [12:08:05.744] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3807: echoMonths (Supervised Classification)' (iter 2/5) 
+INFO  [12:08:07.332] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3807: echoMonths (Supervised Classification)' (iter 3/5) 
+INFO  [12:08:08.801] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3807: echoMonths (Supervised Classification)' (iter 4/5) 
+INFO  [12:08:10.641] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3807: echoMonths (Supervised Classification)' (iter 5/5) 
+
+
+INFO  [12:08:14.066] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 1/5) 
+INFO  [12:08:15.838] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 2/5) 
+INFO  [12:08:18.333] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 3/5) 
+INFO  [12:08:20.292] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 4/5) 
+INFO  [12:08:22.709] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 5/5) 
+
+
+INFO  [12:08:26.362] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 190403: regime_alimentaire (Supervised Classification)' (iter 1/5) 
+INFO  [12:08:29.501] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 190403: regime_alimentaire (Supervised Classification)' (iter 2/5) 
+INFO  [12:08:32.844] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 190403: regime_alimentaire (Supervised Classification)' (iter 3/5) 
+INFO  [12:08:36.311] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 190403: regime_alimentaire (Supervised Classification)' (iter 4/5) 
+INFO  [12:08:39.611] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 190403: regime_alimentaire (Supervised Classification)' (iter 5/5) 
+
+
+INFO  [12:08:45.582] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 54: hepatitis (Supervised Classification)' (iter 1/5) 
+INFO  [12:08:49.479] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 54: hepatitis (Supervised Classification)' (iter 2/5) 
+INFO  [12:08:52.808] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 54: hepatitis (Supervised Classification)' (iter 3/5) 
+INFO  [12:08:56.066] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 54: hepatitis (Supervised Classification)' (iter 4/5) 
+INFO  [12:08:59.355] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 54: hepatitis (Supervised Classification)' (iter 5/5) 
+
+
+INFO  [12:09:04.409] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 1/5) 
+INFO  [12:09:06.022] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 2/5) 
+INFO  [12:09:07.389] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 3/5) 
+INFO  [12:09:08.766] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 4/5) 
+INFO  [12:09:10.189] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 5/5) 
+
+
+INFO  [12:10:05.036] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 2079: eucalyptus (Supervised Classification)' (iter 1/5) 
+INFO  [12:10:43.280] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 2079: eucalyptus (Supervised Classification)' (iter 2/5) 
+INFO  [12:11:20.290] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 2079: eucalyptus (Supervised Classification)' (iter 3/5) 
+INFO  [12:12:03.265] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 2079: eucalyptus (Supervised Classification)' (iter 4/5) 
+Ostrzeżenie: from glmnet Fortran code (error code -99); Convergence for 99th lambda value not reached after maxit=100000 iterations; solutions for larger lambdas returned
+INFO  [12:12:51.702] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 2079: eucalyptus (Supervised Classification)' (iter 5/5) 
+Ostrzeżenie w poleceniu 'write.table(scores, result_csv, sep = ",", col.names = !file.exists(result_csv), ':
+  appending column names to file
+
+
+INFO  [12:13:29.453] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 35: dermatology (Supervised Classification)' (iter 1/5) 
+INFO  [12:13:37.301] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 35: dermatology (Supervised Classification)' (iter 2/5) 
+INFO  [12:13:45.191] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 35: dermatology (Supervised Classification)' (iter 3/5) 
+INFO  [12:13:52.954] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 35: dermatology (Supervised Classification)' (iter 4/5) 
+INFO  [12:14:00.661] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 35: dermatology (Supervised Classification)' (iter 5/5) 
+
+
+INFO  [12:14:10.782] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 1/5) 
+INFO  [12:14:11.969] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 2/5) 
+INFO  [12:14:13.334] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 3/5) 
+INFO  [12:14:14.479] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 4/5) 
+INFO  [12:14:15.676] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3802: chscase_whale (Supervised Classification)' (iter 5/5) 
+
+
+INFO  [12:14:18.324] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3705: autoHorse (Supervised Classification)' (iter 1/5) 
+Error in cbind(yval2, yprob, nodeprob) : 
+  liczby wierszy macierzy muszą być zgodne (zobacz argument 2)
+
+
+INFO  [12:14:22.165] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3807: echoMonths (Supervised Classification)' (iter 1/5) 
+INFO  [12:14:23.566] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3807: echoMonths (Supervised Classification)' (iter 2/5) 
+INFO  [12:14:25.168] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3807: echoMonths (Supervised Classification)' (iter 3/5) 
+INFO  [12:14:26.978] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3807: echoMonths (Supervised Classification)' (iter 4/5) 
+INFO  [12:14:28.443] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3807: echoMonths (Supervised Classification)' (iter 5/5) 
+
+
+INFO  [12:14:31.387] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 1/5) 
+INFO  [12:14:33.045] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 2/5) 
+INFO  [12:14:34.631] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 3/5) 
+INFO  [12:14:36.251] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 4/5) 
+INFO  [12:14:38.143] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3604: pharynx (Supervised Classification)' (iter 5/5) 
+
+
+INFO  [12:14:41.549] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 190403: regime_alimentaire (Supervised Classification)' (iter 1/5) 
+INFO  [12:14:44.773] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 190403: regime_alimentaire (Supervised Classification)' (iter 2/5) 
+INFO  [12:14:48.028] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 190403: regime_alimentaire (Supervised Classification)' (iter 3/5) 
+INFO  [12:14:51.244] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 190403: regime_alimentaire (Supervised Classification)' (iter 4/5) 
+INFO  [12:14:54.523] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 190403: regime_alimentaire (Supervised Classification)' (iter 5/5) 
+
+
+INFO  [12:14:59.502] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 54: hepatitis (Supervised Classification)' (iter 1/5) 
+INFO  [12:15:02.896] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 54: hepatitis (Supervised Classification)' (iter 2/5) 
+INFO  [12:15:06.270] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 54: hepatitis (Supervised Classification)' (iter 3/5) 
+INFO  [12:15:09.588] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 54: hepatitis (Supervised Classification)' (iter 4/5) 
+INFO  [12:15:12.911] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 54: hepatitis (Supervised Classification)' (iter 5/5) 
+
+
+INFO  [12:15:18.444] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 1/5) 
+INFO  [12:15:19.745] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 2/5) 
+INFO  [12:15:21.123] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 3/5) 
+INFO  [12:15:22.492] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 4/5) 
+INFO  [12:15:24.022] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 3547: cars (Supervised Classification)' (iter 5/5) 
+
+
+INFO  [12:15:27.750] Applying learner 'removeconstants_before.collapsefactors.impute_tidy_bagimpute.removeconstants_after.encodeimpact.classif.glmnet' on task 'Task 5: arrhythmia (Supervised Classification)' (iter 1/5) 
+Error in cbind(yval2, yprob, nodeprob) : 
+  liczby wierszy macierzy muszą być zgodne (zobacz argument 2)
+
+
+Successful evaluation: 8/10 tasks
+
+

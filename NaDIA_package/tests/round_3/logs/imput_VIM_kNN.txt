@@ -1,0 +1,170 @@
+INFO  [10:14:31.562] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '2079' (iter 1/5) 
+INFO  [10:14:33.606] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '2079' (iter 2/5) 
+INFO  [10:14:35.868] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '2079' (iter 3/5) 
+INFO  [10:14:37.749] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '2079' (iter 4/5) 
+INFO  [10:14:39.988] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '2079' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 2079
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.8030153 
+
+
+INFO  [10:14:42.970] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '35' (iter 1/5) 
+INFO  [10:14:44.069] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '35' (iter 2/5) 
+INFO  [10:14:45.213] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '35' (iter 3/5) 
+INFO  [10:14:46.406] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '35' (iter 4/5) 
+INFO  [10:14:47.552] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '35' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 35
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.03009996 
+
+
+INFO  [10:14:49.650] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3802' (iter 1/5) 
+INFO  [10:14:50.139] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3802' (iter 2/5) 
+INFO  [10:14:50.583] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3802' (iter 3/5) 
+INFO  [10:14:50.895] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3802' (iter 4/5) 
+INFO  [10:14:51.572] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3802' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3802
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.2849275 
+
+
+INFO  [10:14:53.258] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3705' (iter 1/5) 
+INFO  [10:14:53.877] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3705' (iter 2/5) 
+INFO  [10:14:54.525] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3705' (iter 3/5) 
+INFO  [10:14:55.134] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3705' (iter 4/5) 
+INFO  [10:14:55.762] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3705' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3705
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.4926829 
+
+
+INFO  [10:14:57.225] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3807' (iter 1/5) 
+INFO  [10:14:57.716] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3807' (iter 2/5) 
+INFO  [10:14:58.235] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3807' (iter 3/5) 
+INFO  [10:14:58.744] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3807' (iter 4/5) 
+INFO  [10:14:59.250] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3807' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3807
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.3461538 
+
+
+INFO  [10:15:00.624] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3604' (iter 1/5) 
+INFO  [10:15:00.889] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3604' (iter 2/5) 
+INFO  [10:15:01.527] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3604' (iter 3/5) 
+INFO  [10:15:02.000] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3604' (iter 4/5) 
+INFO  [10:15:02.474] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3604' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3604
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1897436 
+
+
+INFO  [10:15:03.931] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '190403' (iter 1/5) 
+INFO  [10:15:04.544] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '190403' (iter 2/5) 
+INFO  [10:15:05.185] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '190403' (iter 3/5) 
+INFO  [10:15:05.804] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '190403' (iter 4/5) 
+INFO  [10:15:06.365] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '190403' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 190403
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+0.07076923 
+
+
+INFO  [10:15:07.920] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '54' (iter 1/5) 
+INFO  [10:15:08.589] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '54' (iter 2/5) 
+INFO  [10:15:09.291] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '54' (iter 3/5) 
+INFO  [10:15:09.964] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '54' (iter 4/5) 
+INFO  [10:15:10.617] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '54' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 54
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.1483871 
+
+
+INFO  [10:15:12.203] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3547' (iter 1/5) 
+INFO  [10:15:12.816] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3547' (iter 2/5) 
+INFO  [10:15:13.503] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3547' (iter 3/5) 
+INFO  [10:15:14.256] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3547' (iter 4/5) 
+INFO  [10:15:14.825] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '3547' (iter 5/5) 
+
+
+<ResampleResult> of 5 iterations
+* Task: 3547
+* Learner: imput_VIM_kNN.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+classif.ce 
+ 0.4808491 
+
+
+INFO  [10:15:16.874] Applying learner 'imput_VIM_kNN.encodeimpact.classif.glmnet' on task '5' (iter 1/5) 
+Error in lognet(x, is.sparse, ix, jx, y, weights, offset, alpha, nobs,  : 
+  one multinomial or binomial class has 1 or 0 observations; not allowed
+
+
+Successful evaluation: 9/10 tasks
+
+

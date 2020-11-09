@@ -1,0 +1,59 @@
+INFO  [18:59:10.846] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 13: breast-cancer (Supervised Classification)' (iter 1/1) 
+Ostrzeżenie: Number of logged events: 25
+Ostrzeżenie: Number of logged events: 50
+
+
+<ResampleResult> of 1 iterations
+* Task: Task 13: breast-cancer (Supervised Classification)
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task                                            task_id            learner                             learner_id
+1: <TaskClassif[44]> Task 13: breast-cancer (Supervised Classification) <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet
+                resampling resampling_id iteration prediction classif.ce
+1: <ResamplingHoldout[19]>       holdout         1  <list[1]>  0.3157895
+
+
+
+INFO  [18:59:13.916] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3793: colleges_usnews (Supervised Classification)' (iter 1/1) 
+Ostrzeżenie: Number of logged events: 100
+
+
+<ResampleResult> of 1 iterations
+* Task: Task 3793: colleges_usnews (Supervised Classification)
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task                                                task_id            learner                             learner_id
+1: <TaskClassif[44]> Task 3793: colleges_usnews (Supervised Classification) <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet
+                resampling resampling_id iteration prediction classif.ce
+1: <ResamplingHoldout[19]>       holdout         1  <list[1]>  0.2396313
+
+
+
+INFO  [18:59:27.286] Applying learner 'imput_mice.encodeimpact.classif.glmnet' on task 'Task 3667: pbcseq (Supervised Classification)' (iter 1/1) 
+Ostrzeżenie: Number of logged events: 55
+Ostrzeżenie: Number of logged events: 30
+
+
+<ResampleResult> of 1 iterations
+* Task: Task 3667: pbcseq (Supervised Classification)
+* Learner: imput_mice.encodeimpact.classif.glmnet
+* Warnings: 0 in 0 iterations
+* Errors: 0 in 0 iterations
+
+
+                task                                       task_id            learner                             learner_id
+1: <TaskClassif[44]> Task 3667: pbcseq (Supervised Classification) <GraphLearner[31]> imput_mice.encodeimpact.classif.glmnet
+                resampling resampling_id iteration prediction classif.ce
+1: <ResamplingHoldout[19]>       holdout         1  <list[1]>  0.3410494
+
+
+
+Successful evaluation: 3/3 tasks
+
+
