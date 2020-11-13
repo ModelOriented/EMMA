@@ -7,4 +7,4 @@ Folder Structure:
  - diagram.pdf Diagram showing EMMA structure
  - LearnerClassifGrf.R Learner for mlr3 implementing boosted regression forest from grf package
 
-Package can be installed using devtools::install_github("https://github.com/jjanborowka/EMMA/", subdir = "EMMA_package/EMMA").
+Package can be installed using devtools::install_github("https://github.com/ModelOriented/EMMA/", subdir = "EMMA_package/EMMA").
