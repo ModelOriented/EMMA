@@ -1,0 +1,8 @@
+^.*\.Rproj$
+^\.Rproj.user$
+.RData
+.Rhistory
+NADIA.Rproj
+README.md
+^\.Rproj\.user$
+^doc$
