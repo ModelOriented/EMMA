@@ -27,20 +27,33 @@
 #' \item \code{learn_rate} :: \code{integer(1)}\cr
 #' A number, the learning rate γ (default = 0.0001), which controls the size of the weight adjustment in each training epoch. In general, higher values reduce training time at the expense of less accurate results.
 #' }
+#'  @examples
+#' \dontrun{
+#'
+#' # Using debug learner for example purpose
+#'
+#'   graph <- PipeOpAmelia$new() %>>% LearnerClassifDebug$new()
+#'   graph_learner <- GraphLearner$new(graph)
+#'
+#'   graph_learner$param_set$values$impute_Amelia_B.parallel <- FALSE``
+#'
+#'
+#'   resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
+#' }
 #' @export
 PipeOpMIDAS <- R6::R6Class("MIDAS_imputation",
                             lock_objects = FALSE,
                             inherit = PipeOpImpute, # inherit from PipeOp
                             public = list(
-                              initialize = function(id = "impute_MIDAS_B", path='impute',type='condaenv',training_epchos=10L,layer_structure = c(256, 256, 256),seed =123,learn_rate = 4e-04) {
+                              initialize = function(id = "impute_MIDAS_B", path='impute',type='conda',training_epchos=10L,layer_structure = c(256, 256, 256),seed =123,learn_rate = 4e-04) {
                                 super$initialize(id,
                                                  whole_task_dependent = TRUE, packages = "EMMA", param_vals = list(path=path,type=type,training_epchos=training_epchos,layer_structure=layer_structure,
                                                                                                                    seed=seed,learn_rate=learn_rate),
                                                  param_set = ParamSet$new(list(
-                                                   "path" = ParamFct$new("path", default = 'impute', tags = "MIDAS"),
-                                                   "type" = ParamFct$new("type", default = 'condaenv', tags = "MIDAS"),
+                                                   "path" = ParamUty$new("path", default = 'impute', tags = "MIDAS"),
+                                                   "type" = ParamUty$new("type", default = 'conda', tags = "MIDAS"),
                                                    'training_epchos' = ParamInt$new('training_epchos',default = 10L,tags = 'MIDAS'),
-                                                   'layer_structure' = ParamInt$new('layer_structure',default =c(256, 256, 256),tags = 'MIDAS' ),
+                                                   'layer_structure' = ParamUty$new('layer_structure',default =c(256, 256, 256),tags = 'MIDAS' ),
                                                    'seed' = ParamInt$new('seed',default = 123,tags = 'MIDAS'),
                                                    'learn_rate' = ParamDbl$new('learn_rate',lower = 0,upper = Inf,default = 4e-04,tags = 'MIDAS')
 
@@ -75,7 +88,7 @@ PipeOpMIDAS <- R6::R6Class("MIDAS_imputation",
 
 
 
-                                    data_imputed <- EMMA::autotune_rMIDAS(data_to_impute,col_type = col_type,path = self$param_set$values$path,type = self$param_set$values$type,
+                                    data_imputed <- autotune_rMIDAS(data_to_impute,col_type = col_type,path = self$param_set$values$path,type = self$param_set$values$type,
                                                                           training_epchos = self$param_set$values$training_epchos,layer_structure = self$param_set$values$layer_structure,
                                                                           seed =self$param_set$values$seed, learn_rate = self$param_set$values$learn_rate)$data
 
@@ -88,8 +101,9 @@ PipeOpMIDAS <- R6::R6Class("MIDAS_imputation",
                                     self$column_counter <- ncol(context) + 1
                                     self$imputed <- TRUE
                                     data_to_impute <- cbind(feature, context)
+                                    colnames(data_to_impute)[1] <- setdiff(self$state$context_cols,colnames(data_to_impute))
                                     self$data_imputed <- imp_function(data_to_impute)
-                                    colnames(self$data_imputed) <- self$state$context_cols
+
 
                                   }
                                   if (self$imputed) {
@@ -137,7 +151,7 @@ PipeOpMIDAS <- R6::R6Class("MIDAS_imputation",
                                     col_no_miss <- colnames(data_to_impute)[percent_of_missing == 0]
 
 
-                                    data_imputed <- EMMA::autotune_rMIDAS(data_to_impute,col_type = col_type,path = self$param_set$values$path,type = self$param_set$values$type,
+                                    data_imputed <- autotune_rMIDAS(data_to_impute,col_type = col_type,path = self$param_set$values$path,type = self$param_set$values$type,
                                                                           training_epchos = self$param_set$values$training_epchos,layer_structure = self$param_set$values$layer_structure,
                                                                           seed =self$param_set$values$seed, learn_rate = self$param_set$values$learn_rate)$data
 
@@ -150,6 +164,7 @@ PipeOpMIDAS <- R6::R6Class("MIDAS_imputation",
 
 
                                   }
+
                                   if ((nrow(self$data_imputed) != nrow(context) | !self$train_s) & (self$flag == "train")) {
                                     self$imputed_predict <- FALSE
                                     self$flag <- "predict"
@@ -180,3 +195,6 @@ PipeOpMIDAS <- R6::R6Class("MIDAS_imputation",
 
                               )
 )
+
+
+
