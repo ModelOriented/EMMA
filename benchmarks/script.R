@@ -2,9 +2,9 @@
 
 #Output files
 
-result_csv <- "/data/user/result_packages.csv"
-error_out <- "/data/user/error_log_packages.txt"
-task_csv <- "/data/user/benchmark/tasks.csv"
+result_csv <- "/home/jan/Pulpit/result_MIDAS.csv"
+error_out <- "/home/jan/Pulpit/error_midas.txt"
+
 
 # result_csv <- "~/Pulpit/result_packages.csv"
 # error_out <- "~/Pulpit/error_log_packages.txt"
@@ -23,20 +23,18 @@ library(mlr3oml)
 #Benchmark
 
 #Tasks
-tasks <- read.csv(task_csv)
+tasks <- c(4,25,50,51,54,55,3021,3557,3561,3626,3675,3704,3719,3722,3761,3793,3807,3852,3856,3865,3870,3871,3881,3886,125920)
 
 #Pipelines
-devtools::install_github("https://github.com/ModelOriented/EMMA", subdir = "/EMMA_package/EMMA", upgrade = FALSE)
-library(EMMA)
+#devtools::install_github("https://github.com/ModelOriented/EMMA", subdir = "/EMMA_package/EMMA", upgrade = FALSE)
+library(NADIA)
 
 #Flexible below, modify to evaluate right approach (a/b/c)
-pipes <- c(PipeOpAmelia, PipeOpmissForest, PipeOpSoftImpute, PipeOpmissRanger,
-           PipeOpVIM_IRMI, PipeOpVIM_HD, PipeOpVIM_kNN, PipeOpVIM_regrImp,
-           PipeOpMissMDA_MFA, PipeOpMissMDA_PCA_MCA_FMAD)
+pipes <- c(PipeOpMIDAS)
 
 err_file <- file(error_out, "w")
 
-for (task_id in tasks$task.id) {
+for (task_id in tasks) {
 
   for (j in 1:length(pipes)) {
 
@@ -59,18 +57,19 @@ for (task_id in tasks$task.id) {
     split <- rsmp("cv", folds = 5)
 
     #Task
+    next_step <- T
+    while(next_step){
+    tryCatch({
+    next_step <- T
     oml_task <- OMLTask$new(task_id)
     task <- oml_task$task
-
+    next_step <- F
+    })
+    }
     try({
-      mlr3misc::encapsulate("none", {
-        sink(err_file)
-        sink(err_file, type = "message")
-        set.seed(1)
+
         rr <- resample(task, graph_learner, split)
-        sink()
-        sink(type="message")
-        }, .pkgs = "EMMA")
+
     })
     sink()
     sink(type="message")
