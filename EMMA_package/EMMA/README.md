@@ -7,7 +7,7 @@ Package is mlr3 extensions create to help dealing with missing data. More about 
 # Installation 
 EMMA can be install using 
 ```
-devtools::install_github("https://github.com/ModelOriented/EMMA/", subdir = "EMMA_package/EMMA")
+devtools::install_github("https://github.com/jjanborowka/EMMA/", subdir = "EMMA_package/EMMA")
 ```
 Package is not yet available on CRAN. 
 
