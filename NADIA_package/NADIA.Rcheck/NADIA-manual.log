@@ -1,0 +1,820 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.25)  23 NOV 2020 20:55
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**\nonstopmode \input ./Rd2.tex \input ./Rd2.tex \input ./Rd2.tex \input ./Rd2.
+tex \input ./Rd2.tex
+(./Rd2.tex
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2019/12/20 v1.4l Standard LaTeX document class
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@chapter=\count168
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+\c@figure=\count174
+\c@table=\count175
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(/usr/share/R/share/texmf/tex/latex/Rd.sty
+Package: Rd 
+
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip49
+\LTright=\skip50
+\LTpre=\skip51
+\LTpost=\skip52
+\LTchunksize=\count176
+\LTcapwidth=\dimen135
+\LT@head=\box45
+\LT@firsthead=\box46
+\LT@foot=\box47
+\LT@lastfoot=\box48
+\LT@cols=\count177
+\LT@rows=\count178
+\c@LT@tables=\count179
+\c@LT@chunks=\count180
+\LT@p@ftn=\toks15
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup4
+\symboldletters=\mathgroup5
+\symboldsymbols=\mathgroup6
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 209.
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks16
+\verbatim@line=\toks17
+\verbatim@in@stream=\read2
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+\ldescriptionwidth=\skip53
+
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/inconsolata/zi4.sty
+Package: zi4 2019/05/17 v1.12
+
+`inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe)
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/home/jan/.TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/home/jan/.TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks18
+\XKV@tempa@toks=\toks19
+
+(/home/jan/.TinyTeX/texmf-dist/tex/generic/xkeyval/keyval.tex))
+\XKV@depth=\count181
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\zifour@ocount=\count182
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
+
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
+
+(/home/jan/.TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/home/jan/.TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+)
+\@linkdim=\dimen136
+\Hy@linkcounter=\count183
+\Hy@pagecounter=\count184
+
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count185
+Package hyperref Info: Hyper figures OFF on input line 4464.
+Package hyperref Info: Link nesting OFF on input line 4469.
+Package hyperref Info: Hyper index ON on input line 4472.
+Package hyperref Info: Plain pages OFF on input line 4479.
+Package hyperref Info: Backreferencing OFF on input line 4484.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4717.
+\c@Hy@tempcnt=\count186
+LaTeX Info: Redefining \url on input line 5076.
+\XeTeXLinkMargin=\dimen137
+
+(/home/jan/.TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/home/jan/.TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count187
+\Field@Width=\dimen138
+\Fld@charsize=\dimen139
+Package hyperref Info: Hyper figures OFF on input line 6347.
+Package hyperref Info: Link nesting OFF on input line 6352.
+Package hyperref Info: Hyper index ON on input line 6355.
+Package hyperref Info: backreferencing OFF on input line 6362.
+Package hyperref Info: Link coloring OFF on input line 6367.
+Package hyperref Info: Link coloring with OCG OFF on input line 6372.
+Package hyperref Info: PDF/A mode OFF on input line 6377.
+LaTeX Info: Redefining \ref on input line 6417.
+LaTeX Info: Redefining \pageref on input line 6421.
+
+(/home/jan/.TinyTeX/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count188
+\c@Item=\count189
+\c@Hfootnote=\count190
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
+
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+)
+\Fld@listcount=\count191
+\c@bookmark@seq@number=\count192
+
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/home/jan/.TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip54
+)
+
+Package hyperref Warning: Option `hyperindex' has already been used,
+(hyperref)                setting the option has no effect on input line 377.
+
+Package hyperref Info: Option `colorlinks' set `true' on input line 377.
+
+Package hyperref Warning: Option `pagebackref' has already been used,
+(hyperref)                setting the option has no effect on input line 377.
+
+Package hyperref Info: Option `linktocpage' set `true' on input line 377.
+Package hyperref Info: Option `plainpages' set `false' on input line 377.
+) (/home/jan/.TinyTeX/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks20
+\inpenc@posthook=\toks21
+)
+\@indexfile=\write3
+\openout3 = `Rd2.idx'.
+
+
+Writing index file Rd2.idx
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-05-05 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count193
+\l__pdf_internal_box=\box49
+)
+(/tmp/RtmpUE594w/Rd2pdffad8c376c2968/Rd2.aux)
+\openout1 = `Rd2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+\AtBeginShipoutBox=\box50
+Package hyperref Info: Link coloring ON on input line 8.
+
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/home/jan/.TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count194
+)
+LaTeX Info: Redefining \ref on input line 8.
+LaTeX Info: Redefining \pageref on input line 8.
+LaTeX Info: Redefining \nameref on input line 8.
+
+(/tmp/RtmpUE594w/Rd2pdffad8c376c2968/Rd2.out)
+(/tmp/RtmpUE594w/Rd2pdffad8c376c2968/Rd2.out)
+\@outlinefile=\write4
+\openout4 = `Rd2.out'.
+
+LaTeX Font Info:    Trying to load font information for OT1+zi4 on input line 2
+1.
+
+(/home/jan/.TinyTeX/texmf-dist/tex/latex/inconsolata/ot1zi4.fd
+File: ot1zi4.fd 2018/01/14 OT1/zi4 (Inconsolata)
+)
+LaTeX Font Info:    Font shape `OT1/zi4/m/n' will be
+(Font)              scaled to size 10.0pt on input line 21.
+LaTeX Font Info:    Trying to load font information for OML+zi4 on input line 2
+1.
+LaTeX Font Info:    No file OMLzi4.fd. on input line 21.
+
+
+LaTeX Font Warning: Font shape `OML/zi4/m/n' undefined
+(Font)              using `OML/cmm/m/it' instead
+(Font)              for symbol `textless' on input line 21.
+
+(/tmp/RtmpUE594w/Rd2pdffad8c376c2968/Rd2.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 1.
+ [1
+
+
+{/home/jan/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+\tf@toc=\write5
+\openout5 = `Rd2.toc'.
+
+ [2]
+Overfull \hbox (0.35706pt too wide) in paragraph at lines 82--83
+[]\OT1/cmr/m/n/10 parameter pass to amelia func-tion as em-pir in Amelia == em-
+pir*nrow(df).
+ []
+
+
+Overfull \hbox (2.01218pt too wide) in paragraph at lines 103--104
+\OT1/cmr/m/n/10 Data. Jour-nal of Sta-tis-ti-cal Soft-ware, 45(7), 1-47. URL ht
+tps://www.jstatsoft.org/v45/i07/. 
+ []
+
+[3]
+LaTeX Font Info:    Font shape `OT1/zi4/m/n' will be
+(Font)              scaled to size 9.0pt on input line 107.
+ [4] [5] [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 313--315
+
+ []
+
+[8] [9] [10]
+Overfull \hbox (60.87459pt too wide) in paragraph at lines 492--493
+[]\OT1/cmr/m/n/10 This re-stricts the rank of the so-lu-tion. De-foult 2 if set
+ as NULL rank.max=min(dim(X))-
+ []
+
+[11]
+Overfull \hbox (25.57689pt too wide) in paragraph at lines 517--518
+\OT1/cmr/m/n/10 Soft-Thresholded SVD. R pack-age ver-sion 1.4. https://CRAN.R-p
+roject.org/package=softImpute 
+ []
+
+[12] [13] [14] [15] [16] [17] [18] [19] [20]
+Overfull \hbox (80.91045pt too wide) in paragraph at lines 935--936
+\OT1/cmr/m/n/10 Chained Equa-tions in R. Jour-nal of Sta-tis-ti-cal Soft-ware, 
+45(3), 1-67. URL https://www.jstatsoft.org/v45/i03/. 
+ []
+
+[21] [22] [23]
+Overfull \hbox (41.56506pt too wide) in paragraph at lines 1088--1089
+[]\OT1/cmr/m/n/10 Retrun one im-puted data.frame if retrun[]one=True or list of
+ im-puted data.frames if retrun[]one=False. 
+ []
+
+
+Overfull \hbox (24.29115pt too wide) in paragraph at lines 1096--1097
+\OT1/cmr/m/n/10 Mul-ti-vari-ate Data Anal-y-sis. Jour-nal of Sta-tis-ti-cal Sof
+t-ware, 70(1), 1-31. doi:10.18637/jss.v070.i01 
+ []
+
+
+Overfull \hbox (23.25328pt too wide) in paragraph at lines 1119--1119
+ []  \OT1/zi4/m/n/9 imp_data <- missMDA_FMAD_MCA_PCA(raw_data, col_type, percen
+t_of_missing, optimize_ncp = FALSE)[] 
+ []
+
+[24] [25]
+Overfull \hbox (24.29115pt too wide) in paragraph at lines 1191--1192
+\OT1/cmr/m/n/10 Mul-ti-vari-ate Data Anal-y-sis. Jour-nal of Sta-tis-ti-cal Sof
+t-ware, 70(1), 1-31. doi:10.18637/jss.v070.i01 
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 1236--1237
+
+ []
+
+[27]
+LaTeX Font Info:    Trying to load font information for TS1+zi4 on input line 1
+269.
+ (/home/jan/.TinyTeX/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
+File: ts1zi4.fd 2018/01/14 TS1/zi4 (Inconsolata)
+)
+LaTeX Font Info:    Font shape `TS1/zi4/m/n' will be
+(Font)              scaled to size 10.0pt on input line 1269.
+ [28]
+Underfull \hbox (badness 10000) in paragraph at lines 1359--1360
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{method-new}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1388 \hypertarget{method-new}{}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{method-clone}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1402 \hypertarget{method-clone}{}
+                                    [29]
+Underfull \hbox (badness 10000) in paragraph at lines 1456--1457
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{method-new}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1485 \hypertarget{method-new}{}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{method-clone}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1499 \hypertarget{method-clone}{}
+                                    [30]
+Underfull \hbox (badness 10000) in paragraph at lines 1553--1554
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{method-new}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1582 \hypertarget{method-new}{}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{method-clone}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1596 \hypertarget{method-clone}{}
+                                    [31]
+Underfull \hbox (badness 10000) in paragraph at lines 1652--1653
+
+ []
+
+
+Overfull \hbox (17.36496pt too wide) in paragraph at lines 1661--1663
+\OT1/cmr/m/n/10 Cor-re-la-tion or frac-tion of fea-tures used when op-ti-mize=F
+ALSE. When cor-re-la-tion=FALSE,
+ []
+
+[32]pdfTeX warning (ext4): destination with the same identifier (name{method-ne
+w}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1703 \hypertarget{method-new}{}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{method-clone}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1731 \hypertarget{method-clone}{}
+                                    [33]
+Underfull \hbox (badness 10000) in paragraph at lines 1792--1793
+
+ []
+
+
+Overfull \hbox (17.36496pt too wide) in paragraph at lines 1801--1803
+\OT1/cmr/m/n/10 Cor-re-la-tion or frac-tion of fea-tures used when op-ti-mize=F
+ALSE. When cor-re-la-tion=FALSE,
+ []
+
+[34]pdfTeX warning (ext4): destination with the same identifier (name{method-ne
+w}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1831 \hypertarget{method-new}{}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{method-clone}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1853 \hypertarget{method-clone}{}
+                                    [35]
+Overfull \hbox (7.88142pt too wide) in paragraph at lines 1900--1901
+[]\OT1/cmr/m/n/10 Implements miss-For-est meth-ods as mlr3 pipeline more about 
+miss-For-est [][]\OT1/zi4/m/n/10 autotune[]missForest[][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1910--1911
+
+ []
+
+[36]pdfTeX warning (ext4): destination with the same identifier (name{method-ne
+w}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1959 \hypertarget{method-new}{}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{method-clone}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1985 \hypertarget{method-clone}{}
+                                    [37]
+Underfull \hbox (badness 10000) in paragraph at lines 2042--2043
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{method-new}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2085 \hypertarget{method-new}{}
+                                  [38]pdfTeX warning (ext4): destination with t
+he same identifier (name{method-clone}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.2108 \hypertarget{method-clone}{}
+                                   
+Overfull \hbox (47.33046pt too wide) in paragraph at lines 2155--2156
+[]\OT1/cmr/m/n/10 Implements PCA, MCA, FMAD meth-ods as mlr3 pipeline, more abo
+ut meth-ods [][]\OT1/zi4/m/n/10 missMDA[]FMAD[]MCA[]PCA[][][]\OT1/cmr/m/n/10 . 
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2165--2166
+
+ []
+
+[39]
+Overfull \hbox (19.18088pt too wide) in paragraph at lines 2194--2195
+[][][]\OT1/zi4/m/n/10 mlr3pipelines::PipeOp[][][] \OT1/cmr/m/n/10 -> [][]\OT1/z
+i4/m/n/10 mlr3pipelines::PipeOpImpute[][][] \OT1/cmr/m/n/10 -> \OT1/zi4/m/n/10 
+missMDA[]MCA[]PCA[]FMAD[]imputation 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{method-new}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2212 \hypertarget{method-new}{}
+                                  [40]pdfTeX warning (ext4): destination with t
+he same identifier (name{method-clone}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.2237 \hypertarget{method-clone}{}
+                                   
+Overfull \hbox (22.43703pt too wide) in paragraph at lines 2284--2285
+[]\OT1/cmr/m/n/10 Implements mis-s-Ranger meth-ods as mlr3 pipeline, more about
+ mis-s-Ranger [][]\OT1/zi4/m/n/10 autotune[]missRanger[][][]\OT1/cmr/m/n/10 . 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2294--2295
+
+ []
+
+[41]pdfTeX warning (ext4): destination with the same identifier (name{method-ne
+w}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2337 \hypertarget{method-new}{}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{method-clone}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2361 \hypertarget{method-clone}{}
+                                    [42]
+Underfull \hbox (badness 10000) in paragraph at lines 2417--2418
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{method-new}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2446 \hypertarget{method-new}{}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{method-clone}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2460 \hypertarget{method-clone}{}
+                                    [43]
+Underfull \hbox (badness 10000) in paragraph at lines 2515--2516
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{method-new}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2544 \hypertarget{method-new}{}
+                                  [44]pdfTeX warning (ext4): destination with t
+he same identifier (name{method-clone}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.2558 \hypertarget{method-clone}{}
+                                   
+Underfull \hbox (badness 10000) in paragraph at lines 2614--2615
+
+ []
+
+[45]pdfTeX warning (ext4): destination with the same identifier (name{method-ne
+w}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2643 \hypertarget{method-new}{}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{method-clone}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2657 \hypertarget{method-clone}{}
+                                    [46]
+Overfull \hbox (4.78085pt too wide) in paragraph at lines 2727--2728
+[][][]\OT1/zi4/m/n/10 mlr3pipelines::PipeOp[][][] \OT1/cmr/m/n/10 -> [][]\OT1/z
+i4/m/n/10 mlr3pipelines::PipeOpTaskPreproc[][][] \OT1/cmr/m/n/10 -> \OT1/zi4/m/
+n/10 PipeOpSimulateMissings 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{method-new}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2745 \hypertarget{method-new}{}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{method-clone}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2762 \hypertarget{method-clone}{}
+                                   
+Overfull \hbox (19.65935pt too wide) in paragraph at lines 2803--2804
+[]\OT1/cmr/m/n/10 Implements Soft-Im-pute meth-ods as mlr3 pipeline, more about
+ Soft-Im-pute [][]\OT1/zi4/m/n/10 autotune[]softImpute[][][]\OT1/cmr/m/n/10 . 
+ []
+
+[47]
+Underfull \hbox (badness 10000) in paragraph at lines 2813--2814
+
+ []
+
+
+Overfull \hbox (5.30017pt too wide) in paragraph at lines 2818--2820
+\OT1/cmr/m/n/10 Nuclear-norm reg-u-lar-iza-tion pa-ram-e-ter. If lambda=0, the 
+al-go-rithm re-verts to "hardIm-
+ []
+
+LaTeX Font Info:    Trying to load font information for OMS+zi4 on input line 2
+828.
+LaTeX Font Info:    No file OMSzi4.fd. on input line 2828.
+
+LaTeX Font Warning: Font shape `OMS/zi4/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 2828.
+
+[48]pdfTeX warning (ext4): destination with the same identifier (name{method-ne
+w}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2856 \hypertarget{method-new}{}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{method-clone}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2879 \hypertarget{method-clone}{}
+                                   
+Underfull \hbox (badness 10000) in paragraph at lines 2932--2933
+
+ []
+
+[49]pdfTeX warning (ext4): destination with the same identifier (name{method-ne
+w}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2963 \hypertarget{method-new}{}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{method-clone}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2977 \hypertarget{method-clone}{}
+                                    [50]
+Underfull \hbox (badness 10000) in paragraph at lines 3030--3031
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{method-new}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3073 \hypertarget{method-new}{}
+                                  [51]pdfTeX warning (ext4): destination with t
+he same identifier (name{method-clone}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.3096 \hypertarget{method-clone}{}
+                                   
+LaTeX Font Info:    Font shape `TS1/zi4/m/n' will be
+(Font)              scaled to size 9.0pt on input line 3131.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3150--3151
+
+ []
+
+[52]pdfTeX warning (ext4): destination with the same identifier (name{method-ne
+w}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3187 \hypertarget{method-new}{}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{method-clone}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3207 \hypertarget{method-clone}{}
+                                    [53]
+Overfull \hbox (34.23041pt too wide) in paragraph at lines 3250--3251
+[]\OT1/cmr/m/n/10 Implements Re-gres-sion Im-pu-ta-tion meth-ods as mlr3 pipeli
+ne, more about RI [][]\OT1/zi4/m/n/10 autotune[]VIM[]regrImp[][][]\OT1/cmr/m/n/
+10 . 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3260--3261
+
+ []
+
+[54]pdfTeX warning (ext4): destination with the same identifier (name{method-ne
+w}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3297 \hypertarget{method-new}{}
+                                 pdfTeX warning (ext4): destination with the sa
+me identifier (name{method-clone}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3317 \hypertarget{method-clone}{}
+                                    [55]
+Overfull \hbox (21.77017pt too wide) in paragraph at lines 3389--3390
+[]\OT1/cmr/m/n/10 first prod-uct of for-mula[]creating() fun-tion. For ex-am-pl
+e for-mula[]creating(...)[1] 
+ []
+
+[56] [57] (/tmp/RtmpUE594w/Rd2pdffad8c376c2968/Rd2.ind [58]
+
+LaTeX Font Warning: Font shape `OT1/zi4/m/it' undefined
+(Font)              using `OT1/zi4/m/n' instead on input line 82.
+
+LaTeX Font Info:    Font shape `OT1/zi4/m/it' will be
+(Font)              scaled to size 10.0pt on input line 85.
+[59
+
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3487.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3487.
+ (/tmp/RtmpUE594w/Rd2pdffad8c376c2968/Rd2.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3487.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3487.
+
+Package rerunfilecheck Info: File `Rd2.out' has not changed.
+(rerunfilecheck)             Checksum: D4352134DF2F01F0C23A201097B25E02;2672.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3487.
+ ) 
+Here is how much of TeX's memory you used:
+ 5859 strings out of 482424
+ 89917 string characters out of 5948610
+ 347137 words of memory out of 5000000
+ 21139 multiletter control sequences out of 15000+600000
+ 539537 words of font info for 48 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 44i,6n,40p,913b,693s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Rfn.mlr3pipelines::PipeOpTaskPreproc} has been re
+ferenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Rfn.PipeOpTaskPreproc} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Rfn.mlr3pipelines::PipeOpImpute} has been reference
+d but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Rfn.mlr3pipelines::PipeOp} has been referenced but 
+does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Rfn.PipeOpImpute} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Rfn.registerDoParallel} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Rfn.mice} has been referenced but does not exist, r
+eplaced by a fixed one
+
+{/home/jan/.TinyTeX/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc} </home/j
+an/.TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk>{/home/jan/.Ti
+nyTeX/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.enc}</home/jan/.TinyTeX/t
+exmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></home/jan/.TinyT
+eX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/jan/.TinyTeX/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/jan/.TinyTeX/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/jan/.TinyTeX/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr10.pfb></home/jan/.TinyTeX/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr12.pfb></home/jan/.TinyTeX/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsl10.pfb></home/jan/.TinyTeX/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmss12.pfb></home/jan/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></home/jan/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
+0.pfb>
+Output written on Rd2.pdf (59 pages, 265020 bytes).
+PDF statistics:
+ 1090 PDF objects out of 1200 (max. 8388607)
+ 1005 compressed objects within 11 object streams
+ 376 named destinations out of 1000 (max. 500000)
+ 305 words of extra memory for PDF output out of 10000 (max. 10000000)
+

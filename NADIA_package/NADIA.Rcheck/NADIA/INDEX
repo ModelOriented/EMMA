@@ -1,0 +1,51 @@
+PipeOpAmelia            PipeOpAmelia
+PipeOpHist_B            PipeOpHist_B
+PipeOpMean_B            PipeOpMean_B
+PipeOpMedian_B          PipeOpMedian_B
+PipeOpMice              PipeOpMice
+PipeOpMice_A            PipeOpMice_A
+PipeOpMode_B            PipeOpMode_B
+PipeOpOOR_B             PipeOpOOR_B
+PipeOpSample_B          PipeOpSample_B
+PipeOpSimulateMissings
+                        PipeOpSimulateMissings
+PipeOpSoftImpute        PipeOpSoftImpute
+PipeOpVIM_HD            PipeOpVIM_HD
+PipeOpVIM_IRMI          PipeOpVIM_IRMI
+PipeOpVIM_kNN           PipeOpVIM_kNN
+PipeOpVIM_regrImp       PipeOpVIM_regrImp
+PipeOpmissForest        PipeOpmissForest
+PipeOpmissMDA_MFA       PipeOpmissMDA_MFA
+PipeOpmissMDA_PCA_MCA_FMAD
+                        PipeOpmissMDA_PCA_MCA_FMAD
+PipeOpmissRanger        PipeOpmissRanger
+autotune_Amelia         Perform imputation using Amelia package and EMB
+                        algorithm.
+autotune_VIM_Irmi       Perform imputation using VIM package and irmi
+                        function
+autotune_VIM_hotdeck    Hot-Deck imputation using VIM package.
+autotune_VIM_kNN        K nearest neighbor imputation using VIM
+                        package.
+autotune_VIM_regrImp    Perform imputation using VIM package and
+                        regressionImp function.
+autotune_mice           Automatical tuning of parameters and imputation
+                        using mice package.
+autotune_missForest     Perform imputation using missForest form
+                        missForest package.
+autotune_missRanger     Perform imputation using missRenger form
+                        missRegnger package.
+autotune_softImpute     Perform imputation using softImpute package
+fetch_data              Fetch data. Used in mice.reuse.
+formula_creating        Creating a formula for use in mice imputation
+                        evaluation.
+mice.reuse              Reuseble mice function
+mids.append             Joining mice objects. Used in mice.reuse.
+missMDA_FMAD_MCA_PCA    Perform imputation using MCA, PCA, or FMAD
+                        algorithm.
+missMDA_MFA             Perform imputation using MFA algorithm.
+random_param_mice_search
+                        Performing randomSearch for selecting the best
+                        method and correlation or fraction of features
+                        used to create a prediction matrix.
+replace_overimputes     Replace overimputes. Used in mice.reuse.
+simulate_missings       Generate MCAR missings in dataset.
