@@ -23,20 +23,17 @@ library(mlr3oml)
 #Benchmark
 
 #Tasks
-tasks <- read.csv(task_csv)
-
+tasks <-tasks<- c(4,25,50,51,54,55,3021,3557,3561,3626,3675,3704,3719,3722,3761,3793,3807,3852,3856,3865,3870,3871,3881,3886,125920)
 #Pipelines
-devtools::install_github("https://github.com/ModelOriented/EMMA", subdir = "/EMMA_package/EMMA", upgrade = FALSE)
-library(EMMA)
+#devtools::install_github("https://github.com/ModelOriented/NADIA", subdir = "/NADIA_package/NADIA", upgrade = FALSE)
+library(NADIA)
 
 #Flexible below, modify to evaluate right approach (a/b/c)
-pipes <- c(PipeOpAmelia, PipeOpmissForest, PipeOpSoftImpute, PipeOpmissRanger,
-           PipeOpVIM_IRMI, PipeOpVIM_HD, PipeOpVIM_kNN, PipeOpVIM_regrImp,
-           PipeOpMissMDA_MFA, PipeOpMissMDA_PCA_MCA_FMAD)
+pipes <- c(PipeOpMIDAS)
 
 err_file <- file(error_out, "w")
 
-for (task_id in tasks$task.id) {
+for (task_id in tasks) {
 
   for (j in 1:length(pipes)) {
 
@@ -70,7 +67,7 @@ for (task_id in tasks$task.id) {
         rr <- resample(task, graph_learner, split)
         sink()
         sink(type="message")
-        }, .pkgs = "EMMA")
+        }, .pkgs = "NADIA")
     })
     sink()
     sink(type="message")
