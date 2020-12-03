@@ -8,9 +8,9 @@ Package is mlr3 extensions create to help dealing with missing data. More about 
 # Installation 
 NADIA can be install using 
 ```
-devtools::install_github("https://github.com/jjanborowka/NADIA/", subdir = "NaDIA_package/NADIA")
+install.packages("NADIA")
 ```
-Package is not yet available on CRAN. 
+
 
 # Example
 NADIA working example using mlr3 
