@@ -13,9 +13,9 @@ install.packages("NADIA")
 
 
 # Example
-NADIA working example using mlr3 
+NADIA example using mlr3 
 ``` 
-liblary(NADIA)
+library(NADIA)
 library(mlr3oml)
 task <- mlr3oml::OMLTask$new(55)
 task <- task$task
