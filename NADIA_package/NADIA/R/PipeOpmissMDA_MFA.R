@@ -17,7 +17,7 @@
 #' \item \code{ncp} :: \code{integer(1)}\cr
 #' Number of dimensions used by algorithm, default \code{2}.
 #' \item \code{random.seed} :: \code{integer(1)}\cr
-#' Random seed, default \code{123}.
+#' Integer, by default random.seed = NULL implies that missing values are initially imputed by the mean of each variable. Other values leads to a random initialization, default \code{NULL}.
 #' \item \code{maxiter} :: \code{integer(1)}\cr
 #' Maximal number of iteration in algorithm, default \code{998}.
 #' \item \code{coeff.ridge} :: \code{integer(1)}\cr
@@ -52,7 +52,7 @@ PipeOpMissMDA_MFA <- R6::R6Class("missMDA_MFAimputation",
   lock_objects = FALSE,
   inherit = PipeOpImpute, # inherit from PipeOp
   public = list(
-    initialize = function(id = "impute_missMDA_MFA_B", ncp = 2, random.seed = 123, maxiter = 998,
+    initialize = function(id = "impute_missMDA_MFA_B", ncp = 2, random.seed = NULL, maxiter = 998,
       coeff.ridge = 1, threshold = 1e-06, method = "Regularized", out_file = NULL) {
       super$initialize(id,
         whole_task_dependent = TRUE, packages = "NADIA", param_vals = list(
@@ -67,7 +67,7 @@ PipeOpMissMDA_MFA <- R6::R6Class("missMDA_MFAimputation",
           "method" = ParamFct$new("method", levels = c("Regularized", "EM"), default = "Regularized", tags = "MFA"),
 
 
-          "random.seed" = ParamInt$new("random.seed", -Inf, Inf, default = 123, tags = "MFA"),
+          "random.seed" = ParamUty$new("random.seed",  default = NULL, tags = "MFA"),
           "out_file" = ParamUty$new("out_file", default = NULL, tags = "MFA")
 
 

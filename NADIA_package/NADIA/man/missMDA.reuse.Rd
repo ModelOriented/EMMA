@@ -7,14 +7,15 @@
 missMDA.reuse(
   train_data,
   new_data,
-  col_type,
+  col_type = NULL,
   ncp,
-  mean_resample = FALSE,
-  random.seed = 123,
+  random.seed = NULL,
   maxiter = 998,
   coeff.ridge = 1,
   threshold = 1e-06,
-  method = "Regularized"
+  method = "Regularized",
+  MFA = FALSE,
+  MFA_Object = NULL
 )
 }
 \arguments{
@@ -26,9 +27,7 @@ missMDA.reuse(
 
 \item{ncp}{return when the training data set was imputed.}
 
-\item{mean_resample}{If TRUE average is used to initiate algorithm if FALSE random resampling is used. More about this can be found in detalist section.}
-
-\item{random.seed}{random seed.}
+\item{random.seed}{Integer, by default random.seed = NULL implies that missing values are initially imputed by the mean of each variable. Other values leads to a random initialization}
 
 \item{maxiter}{maximal number of iteration in algortihm.}
 
@@ -37,13 +36,14 @@ missMDA.reuse(
 \item{threshold}{threshold for convergence.}
 
 \item{method}{method used in imputation algoritm.}
+
+\item{MFA}{If TRUE MFA is used if not MCA, PCA, or FMAD algorithm.}
+
+\item{MFA_Object}{Object produce by missMDA_MFA required to perform MFA imputation.}
 }
 \description{
 The function allows the user access to missMDA imputation in the A approach.
 }
 \details{
-Function use the same trick as in mice.reuse (new data are changed in NA in imputation stage and added back after it ). Because missMDA use averages to initiate
-interactional algorithm. If we decided to use this approach all imputed data in one column will have the same values to avoid this problem. The function allows user to first
-randomly resample existing observation in new data from the training set. This is not entirely in the missMDA algorithm but it is still A approach. Becouse missMDA dont save
-crated model training has to be performed in this function.
+Function use the same trick as in mice.reuse (new data are changed in NA in imputation stage and added back after it ). Because in missMDA is impossible to completely ignore new rows. We set their weights on 1e-300 when weights in the training set equal 1.
 }

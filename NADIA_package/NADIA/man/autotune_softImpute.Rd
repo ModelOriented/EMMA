@@ -6,8 +6,8 @@
 \usage{
 autotune_softImpute(
   df,
-  percent_of_missing,
-  col_type,
+  percent_of_missing = NULL,
+  col_type = NULL,
   col_0_1 = FALSE,
   cat_Fun = VIM::maxCat,
   lambda = 0,

@@ -213,7 +213,7 @@ random_param_mice_search <- function(low_corr = 0, up_corr = 1, methods_random =
 #'
 #' @return Return imputed datasets or mids object containing multi imputation datasets.
 #' @export
-autotune_mice <- function(df, m = 5, maxit = 5, col_miss, col_no_miss, col_type, set_cor = 0.5, set_method = "pmm", percent_of_missing, low_corr = 0, up_corr = 1, methods_random = c("pmm"), iter, random.seed = 123, optimize = TRUE, correlation = TRUE, return_one = TRUE, col_0_1 = FALSE, verbose = FALSE, out_file = NULL) {
+autotune_mice <- function(df, m = 5, maxit = 5, col_miss=NULL, col_no_miss=NULL, col_type=NULL, set_cor = 0.5, set_method = "pmm", percent_of_missing=NULL, low_corr = 0, up_corr = 1, methods_random = c("pmm"), iter=5, random.seed = 123, optimize = TRUE, correlation = TRUE, return_one = TRUE, col_0_1 = FALSE, verbose = FALSE, out_file = NULL) {
 
 
 
@@ -221,7 +221,23 @@ autotune_mice <- function(df, m = 5, maxit = 5, col_miss, col_no_miss, col_type,
     return(df)
   }
 
+  # Column informations
+  if(is.null(col_type)){
+    col_type <- 1:ncol(df)
+    for ( i in col_type){
+      col_type[i] <- class(df[,i])
+    }
+  }
 
+  if(is.null(percent_of_missing)){
+    percent_of_missing <- 1:ncol(df)
+    for ( i in percent_of_missing){
+      percent_of_missing[i] <- sum(is.na(df[,i]))/nrow(df)
+    }
+  }
+
+  if(is.null(col_no_miss)){col_no_miss <- colnames(df)[percent_of_missing==0]}
+  if(is.null(col_miss)){col_miss <- colnames(df)[percent_of_missing>0]}
   #### Bonus single column imputation
   single_col_imp <- function(df, index_y, methode) {
 

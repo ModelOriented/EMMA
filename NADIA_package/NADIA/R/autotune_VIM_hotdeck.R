@@ -43,7 +43,16 @@
 #'
 #' @export
 
-autotune_VIM_hotdeck <- function(df, percent_of_missing, col_0_1 = FALSE, out_file = NULL) {
+autotune_VIM_hotdeck <- function(df, percent_of_missing=NULL, col_0_1 = FALSE, out_file = NULL) {
+
+
+  if(is.null(percent_of_missing)){
+    percent_of_missing <- 1:ncol(df)
+    for ( i in percent_of_missing){
+      percent_of_missing[i] <- sum(is.na(df[,i]))/nrow(df)
+    }
+  }
+
   if (!is.null(out_file)) {
     write("VIM_HD", file = out_file, append = TRUE)
   }

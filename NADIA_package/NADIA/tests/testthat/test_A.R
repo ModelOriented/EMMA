@@ -34,3 +34,19 @@ test_that("Testing mice A methods", {
   model <- mice(train_set, printFlag = FALSE)
   expect_equal(sum(is.na(mice.reuse(model, test_set, printFlag = FALSE)$`1`)), 0)
 })
+
+
+test_that("Testing missMDA in A approach",{
+
+  ###  Creating Pipe
+  expect_is(PipeOpMissMDA_PCA_MCA_FMAD_A$new(), "PipeOpImpute")
+
+  ### Cheking if its work corectly
+
+  grpah <- PipeOpMissMDA_PCA_MCA_FMAD_A$new() %>>% mlr3learners::LearnerClassifGlmnet$new()
+
+  learner <- GraphLearner$new(grpah)
+
+  expect_is(resample(tsk('pima'),learner,rsmp('cv',folds=5)),"ResampleResult")
+
+})

@@ -6,7 +6,7 @@
 \usage{
 autotune_VIM_kNN(
   df,
-  percent_of_missing,
+  percent_of_missing = NULL,
   k = 5,
   numFun = stats::median,
   catFun = VIM::maxCat,

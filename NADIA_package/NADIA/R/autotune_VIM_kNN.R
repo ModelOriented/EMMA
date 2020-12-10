@@ -45,7 +45,15 @@
 
 
 
-autotune_VIM_kNN <- function(df, percent_of_missing, k = 5, numFun = stats::median, catFun = VIM::maxCat, col_0_1 = FALSE, out_file = NULL) {
+autotune_VIM_kNN <- function(df, percent_of_missing=NULL, k = 5, numFun = stats::median, catFun = VIM::maxCat, col_0_1 = FALSE, out_file = NULL) {
+
+  if(is.null(percent_of_missing)){
+    percent_of_missing <- 1:ncol(df)
+    for ( i in percent_of_missing){
+      percent_of_missing[i] <- sum(is.na(df[,i]))/nrow(df)
+    }
+  }
+
   if (!is.null(out_file)) {
     write("VIM_kNN", file = out_file, append = TRUE)
   }

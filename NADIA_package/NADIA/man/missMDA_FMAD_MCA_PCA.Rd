@@ -6,8 +6,8 @@
 \usage{
 missMDA_FMAD_MCA_PCA(
   df,
-  col_type,
-  percent_of_missing,
+  col_type = NULL,
+  percent_of_missing = NULL,
   optimize_ncp = TRUE,
   set_ncp = 2,
   col_0_1 = FALSE,
@@ -18,7 +18,8 @@ missMDA_FMAD_MCA_PCA(
   coeff.ridge = 1,
   threshold = 1e-06,
   method = "Regularized",
-  out_file = NULL
+  out_file = NULL,
+  return_ncp = FALSE
 )
 }
 \arguments{
@@ -38,7 +39,7 @@ missMDA_FMAD_MCA_PCA(
 
 \item{return_one}{One or many imputed sets will be returned. Default True.}
 
-\item{random.seed}{random seed.}
+\item{random.seed}{integer, by default random.seed = NULL implies that missing values are initially imputed by the mean of each variable. Other values leads to a random initialization}
 
 \item{maxiter}{maximal number of iteration in algortihm.}
 
@@ -49,6 +50,8 @@ missMDA_FMAD_MCA_PCA(
 \item{method}{method used in imputation algoritm.}
 
 \item{out_file}{Output log file location if file already exists log message will be added. If NULL no log will be produced.}
+
+\item{return_ncp}{Function should return used ncp value}
 }
 \value{
 Retrun one imputed data.frame if retrun_one=True or list of imputed data.frames if retrun_one=False.

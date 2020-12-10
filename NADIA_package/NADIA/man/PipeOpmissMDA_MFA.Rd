@@ -21,7 +21,7 @@ Identifier of resulting object, default \code{"imput_missMDA_MFA"}.
 \item \code{ncp} :: \code{integer(1)}\cr
 Number of dimensions used by algorithm, default \code{2}.
 \item \code{random.seed} :: \code{integer(1)}\cr
-Random seed, default \code{123}.
+Integer, by default random.seed = NULL implies that missing values are initially imputed by the mean of each variable. Other values leads to a random initialization, default \code{NULL}.
 \item \code{maxiter} :: \code{integer(1)}\cr
 Maximal number of iteration in algorithm, default \code{998}.
 \item \code{coeff.ridge} :: \code{integer(1)}\cr
@@ -75,7 +75,7 @@ Output log file location. If file already exists log message will be added. If N
 \if{html}{\out{<div class="r">}}\preformatted{PipeOpMissMDA_MFA$new(
   id = "impute_missMDA_MFA_B",
   ncp = 2,
-  random.seed = 123,
+  random.seed = NULL,
   maxiter = 998,
   coeff.ridge = 1,
   threshold = 1e-06,

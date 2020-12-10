@@ -6,7 +6,7 @@
 \usage{
 autotune_missRanger(
   df,
-  percent_of_missing,
+  percent_of_missing = NULL,
   maxiter = 10,
   random.seed = 123,
   mtry = NULL,

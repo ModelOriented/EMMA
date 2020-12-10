@@ -22,6 +22,7 @@ register_nadia = function() {
   x$add("simulate_missings", PipeOpSimulateMissings)
   x$add("softImpute_imputation", PipeOpSoftImpute)
   x$add("simulate_missings", PipeOpSimulateMissings)
+  x$add("missMDA_MCA_PCA_FMAD_imputation_A", PipeOpMissMDA_PCA_MCA_FMAD_A)
 }
 
 .onLoad = function(libname, pkgname) { # nolint

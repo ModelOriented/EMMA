@@ -6,8 +6,8 @@
 \usage{
 autotune_VIM_regrImp(
   df,
-  col_type,
-  percent_of_missing,
+  col_type = NULL,
+  percent_of_missing = NULL,
   col_0_1 = FALSE,
   robust = FALSE,
   mod_cat = FALSE,
