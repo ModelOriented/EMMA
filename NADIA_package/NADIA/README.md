@@ -7,15 +7,15 @@ Package is mlr3 extensions create to help dealing with missing data. More about 
 
 # Installation 
 NADIA can be install using 
+``` 
+install.packages("NADIA")
 ```
-devtools::install_github("https://github.com/jjanborowka/NADIA/", subdir = "NaDIA_package/NADIA")
-```
-Package is not yet available on CRAN. 
+
 
 # Example
-NADIA working example using mlr3 
+NADIA example using mlr3 
 ``` 
-liblary(NADIA)
+library(NADIA)
 library(mlr3oml)
 task <- mlr3oml::OMLTask$new(55)
 task <- task$task
