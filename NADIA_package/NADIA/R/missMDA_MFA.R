@@ -9,14 +9,14 @@
 #' @param col_type character vector. Vector containing column type names.
 #' @param percent_of_missing numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)
 #' @param col_0_1 Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).
-#' @param random.seed random seed.
+#' @param random.seed integer, by default radndom.seed = NULL implies that missing values are initially imputed by the mean of each variable. Other values leads to a random initialization
 #' @param ncp Number of dimensions used by algorithm. Default 2.
 #' @param coeff.ridge Value use in Regularized method.
 #' @param out_file  Output log file location if file already exists log message will be added. If NULL no log will be produced.
 #' @param maxiter maximal number of iteration in algorithm.
 #' @param method used in imputation algorithm.
 #' @param threshold for convergence.
-#'
+#' @param imp_data If True data abute imputation requaierd for missMDA.reuse its return.
 #' @author{   Julie Josse, Francois Husson (2016)  \doi{10.18637/jss.v070.i01}}
 #'
 #' @examples
@@ -51,8 +51,24 @@
 
 
 
-missMDA_MFA <- function(df, col_type, percent_of_missing, random.seed = 123, ncp = 2, col_0_1 = FALSE, maxiter = 1000,
-  coeff.ridge = 1, threshold = 1e-6, method = "Regularized", out_file = NULL) {
+missMDA_MFA <- function(df, col_type=NULL, percent_of_missing=NULL, random.seed = NULL, ncp = 2, col_0_1 = FALSE, maxiter = 1000,
+  coeff.ridge = 1, threshold = 1e-6, method = "Regularized", out_file = NULL,imp_data=FALSE){
+
+  #Column informations
+  if(is.null(col_type)){
+    col_type <- 1:ncol(df)
+    for ( i in col_type){
+      col_type[i] <- class(df[,i])
+    }
+  }
+
+  if(is.null(percent_of_missing)){
+    percent_of_missing <- 1:ncol(df)
+    for ( i in percent_of_missing){
+      percent_of_missing[i] <- sum(is.na(df[,i]))/nrow(df)
+    }
+  }
+
 
   if (!is.null(out_file)) {
     write("MFA", file = out_file, append = TRUE)
@@ -112,6 +128,7 @@ missMDA_MFA <- function(df, col_type, percent_of_missing, random.seed = 123, ncp
     # trying with ncp =1
     if (no_ok | !exists("final")) {
       final <- missMDA::imputeMFA(df, group = groups, type = type, ncp = 1, method = method, threshold = threshold, maxiter = maxiter, coeff.ridge = coeff.ridge)$completeObs
+      ncp <- 1
     }
     if (!is.null(out_file)) {
       write("  OK", file = out_file, append = TRUE)
@@ -162,5 +179,6 @@ missMDA_MFA <- function(df, col_type, percent_of_missing, random.seed = 123, ncp
     final[, i] <- as.integer(final[, i])
   }
 
+  if(imp_data){return(list("data"=final,"groups"=groups,"type"= type,"ncp"=ncp))}
   return(final)
 }

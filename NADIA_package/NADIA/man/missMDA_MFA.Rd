@@ -6,16 +6,17 @@
 \usage{
 missMDA_MFA(
   df,
-  col_type,
-  percent_of_missing,
-  random.seed = 123,
+  col_type = NULL,
+  percent_of_missing = NULL,
+  random.seed = NULL,
   ncp = 2,
   col_0_1 = FALSE,
   maxiter = 1000,
   coeff.ridge = 1,
   threshold = 1e-06,
   method = "Regularized",
-  out_file = NULL
+  out_file = NULL,
+  imp_data = FALSE
 )
 }
 \arguments{
@@ -25,7 +26,7 @@ missMDA_MFA(
 
 \item{percent_of_missing}{numeric vector. Vector contatining percent of missing data in columns for example  c(0,1,0,0,11.3,..)}
 
-\item{random.seed}{random seed.}
+\item{random.seed}{integer, by default radndom.seed = NULL implies that missing values are initially imputed by the mean of each variable. Other values leads to a random initialization}
 
 \item{ncp}{Number of dimensions used by algorithm. Default 2.}
 
@@ -40,6 +41,8 @@ missMDA_MFA(
 \item{method}{used in imputation algorithm.}
 
 \item{out_file}{Output log file location if file already exists log message will be added. If NULL no log will be produced.}
+
+\item{imp_data}{If True data abute imputation requaierd for missMDA.reuse its return.}
 }
 \value{
 Return one data.frame with imputed values.

@@ -51,7 +51,23 @@
 
 
 
-autotune_softImpute <- function(df, percent_of_missing, col_type, col_0_1 = FALSE, cat_Fun = VIM::maxCat, lambda = 0, rank.max = 2, type = "als", thresh = 1e-5, maxit = 100, out_file = NULL) {
+autotune_softImpute <- function(df, percent_of_missing=NULL, col_type=NULL, col_0_1 = FALSE, cat_Fun = VIM::maxCat, lambda = 0, rank.max = 2, type = "als", thresh = 1e-5, maxit = 100, out_file = NULL) {
+
+
+  # Column informations
+  if(is.null(col_type)){
+    col_type <- 1:ncol(df)
+    for ( i in col_type){
+      col_type[i] <- class(df[,i])
+    }
+  }
+
+  if(is.null(percent_of_missing)){
+    percent_of_missing <- 1:ncol(df)
+    for ( i in percent_of_missing){
+      percent_of_missing[i] <- sum(is.na(df[,i]))/nrow(df)
+    }
+  }
 
   if (sum(col_type == "numeric" | col_type == "integer") < 2) {
     print("Not enought numeric for softimpute given function will be used")

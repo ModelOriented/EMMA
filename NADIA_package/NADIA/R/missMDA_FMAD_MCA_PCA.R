@@ -11,13 +11,14 @@
 #' @param set_ncp intiger >0. Number of dimensions used by algortims. Used only if optimize_ncp = Flase.
 #' @param col_0_1 Decaid if add bonus column informing where imputation been done. 0 - value was in dataset, 1 - value was imputed. Default False. (Works only for returning one dataset).
 #' @param return_one One or many imputed sets will be returned. Default True.
-#' @param random.seed random seed.
+#' @param random.seed integer, by default random.seed = NULL implies that missing values are initially imputed by the mean of each variable. Other values leads to a random initialization
 #' @param coeff.ridge Value use in Regularized method.
 #' @param ncp.max integer corresponding to the maximum number of components to test. Default 5.
 #' @param maxiter maximal number of iteration in algortihm.
 #' @param method method used in imputation algoritm.
 #' @param threshold threshold for convergence.
 #' @param out_file  Output log file location if file already exists log message will be added. If NULL no log will be produced.
+#' @param return_ncp Function should return used ncp value
 #' @import missMDA
 #' @references   Julie Josse, Francois Husson (2016). missMDA: A Package for Handling Missing Values in Multivariate Data Analysis. Journal of Statistical Software, 70(1), 1-31. doi:10.18637/jss.v070.i01
 #'
@@ -52,8 +53,23 @@
 
 
 
-missMDA_FMAD_MCA_PCA <- function(df, col_type, percent_of_missing, optimize_ncp = TRUE, set_ncp = 2, col_0_1 = FALSE, ncp.max = 5, return_one = TRUE, random.seed = 123, maxiter = 998,
-  coeff.ridge = 1, threshold = 1e-6, method = "Regularized", out_file = NULL) {
+missMDA_FMAD_MCA_PCA <- function(df, col_type=NULL, percent_of_missing=NULL, optimize_ncp = TRUE, set_ncp = 2, col_0_1 = FALSE, ncp.max = 5, return_one = TRUE, random.seed = 123, maxiter = 998,
+  coeff.ridge = 1, threshold = 1e-6, method = "Regularized", out_file = NULL,return_ncp = FALSE) {
+
+  #Column informations
+  if(is.null(col_type)){
+    col_type <- 1:ncol(df)
+    for ( i in col_type){
+      col_type[i] <- class(df[,i])
+    }
+  }
+
+  if(is.null(percent_of_missing)){
+    percent_of_missing <- 1:ncol(df)
+    for ( i in percent_of_missing){
+      percent_of_missing[i] <- sum(is.na(df[,i]))/nrow(df)
+    }
+  }
 
   if (sum(is.na(df)) == 0) {
     return(df)
@@ -165,6 +181,9 @@ missMDA_FMAD_MCA_PCA <- function(df, col_type, percent_of_missing, optimize_ncp 
           levels(final[, i]) <- c(levels(na.omit(df[, i])))
         }
       }
+      if (return_ncp){
+        return(list('ncp'=set_ncp,'data'=final))
+      }
 
       return(final)
     }
@@ -208,7 +227,9 @@ missMDA_FMAD_MCA_PCA <- function(df, col_type, percent_of_missing, optimize_ncp 
       final <- missMDA::MIPCA(df, ncp = set_ncp)$completeObs
     }
     final <- final$res.MI
-
+    if (return_ncp){
+      return(list('ncp'=set_ncp,'data'=final))
+    }
 
     return(final)
   }

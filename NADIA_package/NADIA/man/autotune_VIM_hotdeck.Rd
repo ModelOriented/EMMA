@@ -4,7 +4,12 @@
 \alias{autotune_VIM_hotdeck}
 \title{Hot-Deck imputation using VIM package.}
 \usage{
-autotune_VIM_hotdeck(df, percent_of_missing, col_0_1 = FALSE, out_file = NULL)
+autotune_VIM_hotdeck(
+  df,
+  percent_of_missing = NULL,
+  col_0_1 = FALSE,
+  out_file = NULL
+)
 }
 \arguments{
 \item{df}{data.frame. Df to impute with column names and without  target column.}

@@ -57,8 +57,26 @@
 #' Stekhoven D. J., & Buehlmann, P. (2012). MissForest - non-parametric missing value imputation for mixed-type data. Bioinformatics, 28(1), 112-118.
 #'
 #' @export
-autotune_missForest <- function(df, col_type, percent_of_missing, cores = NULL, ntree_set = c(100, 200, 500, 1000), mtry_set = NULL, parallel = FALSE, col_0_1 = FALSE,
+autotune_missForest <- function(df, col_type=NULL, percent_of_missing=NULL, cores = NULL, ntree_set = c(100, 200, 500, 1000), mtry_set = NULL, parallel = FALSE, col_0_1 = FALSE,
   optimize = TRUE, ntree = 100, mtry = NULL, verbose = FALSE, maxiter = 20, maxnodes = NULL, out_file = NULL) {
+
+
+
+  # Column informations
+  if(is.null(col_type)){
+    col_type <- 1:ncol(df)
+    for ( i in col_type){
+      col_type[i] <- class(df[,i])
+    }
+  }
+
+  if(is.null(percent_of_missing)){
+    percent_of_missing <- 1:ncol(df)
+    for ( i in percent_of_missing){
+      percent_of_missing[i] <- sum(is.na(df[,i]))/nrow(df)
+    }
+  }
+
 
   # Checking if parallel backed is runing and starting it if not
   do_things <- function(df, col_type, percent_of_missing, cores = NULL, ntree_set = c(100, 200, 500, 1000), mtry_set = NULL, parallel = TRUE, col_0_1 = FALSE,

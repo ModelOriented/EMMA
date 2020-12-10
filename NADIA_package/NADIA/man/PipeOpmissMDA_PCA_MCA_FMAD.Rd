@@ -25,7 +25,7 @@ integer >0. Number of dimensions used by algortims. Used only if optimize_ncp = 
 \item \code{ncp.max} :: \code{integer(1)}\cr
 Number corresponding to the maximum number of components to test when optimize_ncp=TRUE, default \code{5}.
 \item \code{random.seed} :: \code{integer(1)}\cr
-Random seed, default \code{123}.
+Integer, by default random.seed = NULL implies that missing values are initially imputed by the mean of each variable. Other values leads to a random initialization, default \code{NULL}.
 \item \code{maxiter} :: \code{integer(1)}\cr
 Maximal number of iteration in algorithm, default \code{998}.
 \item \code{coeff.ridge} :: \code{double(1)}\cr
@@ -82,7 +82,7 @@ Output log file location. If file already exists log message will be added. If N
   optimize_ncp = TRUE,
   set_ncp = 2,
   ncp.max = 5,
-  random.seed = 123,
+  random.seed = NULL,
   maxiter = 998,
   coeff.ridge = 1,
   threshold = 1e-06,

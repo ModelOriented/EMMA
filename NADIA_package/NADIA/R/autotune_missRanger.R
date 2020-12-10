@@ -50,7 +50,16 @@
 
 
 
-autotune_missRanger <- function(df, percent_of_missing, maxiter = 10, random.seed = 123, mtry = NULL, num.trees = 500, verbose = FALSE, col_0_1 = FALSE, out_file = NULL, pmm.k = 5, optimize = TRUE, iter = 10) {
+autotune_missRanger <- function(df, percent_of_missing=NULL, maxiter = 10, random.seed = 123, mtry = NULL, num.trees = 500, verbose = FALSE, col_0_1 = FALSE, out_file = NULL, pmm.k = 5, optimize = TRUE, iter = 10) {
+
+
+  if(is.null(percent_of_missing)){
+    percent_of_missing <- 1:ncol(df)
+    for ( i in percent_of_missing){
+      percent_of_missing[i] <- sum(is.na(df[,i]))/nrow(df)
+    }
+  }
+
 
   if (!is.null(out_file)) {
     write("missRanger", file = out_file, append = TRUE)

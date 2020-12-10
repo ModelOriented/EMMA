@@ -21,7 +21,7 @@
 #' \item \code{ncp.max} :: \code{integer(1)}\cr
 #' Number corresponding to the maximum number of components to test when optimize_ncp=TRUE, default \code{5}.
 #' \item \code{random.seed} :: \code{integer(1)}\cr
-#' Random seed, default \code{123}.
+#' Integer, by default random.seed = NULL implies that missing values are initially imputed by the mean of each variable. Other values leads to a random initialization, default \code{NULL}.
 #' \item \code{maxiter} :: \code{integer(1)}\cr
 #' Maximal number of iteration in algorithm, default \code{998}.
 #' \item \code{coeff.ridge} :: \code{double(1)}\cr
@@ -53,7 +53,7 @@ PipeOpMissMDA_PCA_MCA_FMAD <- R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",
   lock_objects = FALSE,
   inherit = PipeOpImpute, # inherit from PipeOp
   public = list(
-    initialize = function(id = "impute_missMDA_MCA_PCA_FMAD_B", optimize_ncp = TRUE, set_ncp = 2, ncp.max = 5, random.seed = 123, maxiter = 998,
+    initialize = function(id = "impute_missMDA_MCA_PCA_FMAD_B", optimize_ncp = TRUE, set_ncp = 2, ncp.max = 5, random.seed = NULL, maxiter = 998,
       coeff.ridge = 1, threshold = 1e-06, method = "Regularized", out_file = NULL) {
 
       super$initialize(id,
@@ -71,7 +71,7 @@ PipeOpMissMDA_PCA_MCA_FMAD <- R6::R6Class("missMDA_MCA_PCA_FMAD_imputation",
 
 
 
-          "random.seed" = ParamInt$new("random.seed", -Inf, Inf, default = 123, tags = "PCA_MCA_FMAD"),
+          "random.seed" = ParamUty$new("random.seed",  default = NULL, tags = "PCA_MCA_FMAD"),
           "optimize_ncp" = ParamLgl$new("optimize_ncp", default = TRUE, tags = "PCA_MCA_FMAD")
 
         ))

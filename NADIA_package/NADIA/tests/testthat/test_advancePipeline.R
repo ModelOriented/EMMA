@@ -33,6 +33,12 @@ test_that("Creting PipeLines", {
   # VIM_rergrImp
   expect_is(PipeOpVIM_regrImp$new(), "PipeOpImpute")
 
+  # missMDA FMAD...  A
+  expect_is(PipeOpMissMDA_PCA_MCA_FMAD_A$new(),"PipeOpImpute")
+
+  # missMDA MFA
+  expect_is(PipeOpMissMDA_MFA_A$new(),"PipeOpImpute")
+
 })
 
 raw_data <- data.frame(
@@ -88,4 +94,11 @@ test_that("Adavance pipe simple imputation ", {
 
   # missMDA MFA
   expect_equal(PipeOpMissMDA_MFA$new()$train(list(task))[[1]]$missings(), c("e" = 0, "d" = 0, "a" = 0, "b" = 0, "c" = 0, "f" = 0))
+
+  # missMDA FMAD ...  A
+  expect_equal(PipeOpMissMDA_PCA_MCA_FMAD_A$new(optimize_ncp = F)$train(list(task))[[1]]$missings(), c("e" = 0, "d" = 0, "a" = 0, "b" = 0, "c" = 0, "f" = 0))
+
+  # missMDA MFA A
+  expect_equal(PipeOpMissMDA_MFA_A$new()$train(list(task))[[1]]$missings(), c("e" = 0, "d" = 0, "a" = 0, "b" = 0, "c" = 0, "f" = 0))
+
 })

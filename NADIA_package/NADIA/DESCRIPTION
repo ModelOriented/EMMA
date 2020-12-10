@@ -28,6 +28,7 @@ Imports:
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1.9000
+BugReports: https://github.com/ModelOriented/EMMA/issues
 Suggests: 
     knitr,
     rmarkdown

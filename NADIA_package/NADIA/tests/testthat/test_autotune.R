@@ -297,3 +297,49 @@ test_that("Optimlaization test", {
   # missMDA FMAD
   expect_equal(sum(is.na(missMDA_FMAD_MCA_PCA(test_set, col_type = col_type, percent_of_missing = percent_of_missing, optimize_ncp = TRUE))), 0)
 })
+
+test_set <- as.data.frame(tsk('pima')$data())
+test_that("Pima set Amleia", {
+  # AMELIA
+  expect_equal(sum(is.na(autotune_Amelia(test_set, parallel = FALSE))), 0)
+})
+test_that("Pima set mice", {
+  # mice
+  expect_equal(sum(is.na(autotune_mice(test_set,  optimize = F))), 0)
+})
+test_that("Pima set missForest", {
+  # missForest
+  expect_equal(sum(is.na(autotune_missForest(test_set, parallel = FALSE, optimize = FALSE))), 0)
+})
+test_that("Pima set missRanger", {
+  # missRanger
+  expect_equal(sum(is.na(autotune_missRanger(test_set ))), 0)
+})
+test_that("Pima set softImpute", {
+  # SoftImpute
+  expect_equal(sum(is.na(autotune_softImpute(test_set))), 0)
+})
+test_that("Pima set VIM_HD", {
+  # VIM_hotdeck
+  expect_equal(sum(is.na(autotune_VIM_hotdeck(test_set))), 0)
+})
+test_that("Pima set VIM_irmi", {
+  # VIM_irmi
+  expect_equal(sum(is.na(autotune_VIM_Irmi(test_set ))), 0)
+})
+test_that("Pima set VIM_knn", {
+  # VIM_knn
+  expect_equal(sum(is.na(autotune_VIM_kNN(test_set ))), 0)
+})
+test_that("Pima set ViM_regrImp", {
+  # VIM_regImp
+  expect_equal(sum(is.na(autotune_VIM_regrImp(test_set))), 0)
+})
+test_that("Pima set missMDA FMAD", {
+  # missMDA FMAD...
+  expect_equal(sum(is.na(missMDA_FMAD_MCA_PCA(test_set,  optimize_ncp = FALSE))), 0)
+})
+test_that("Pima set missMDA MFA", {
+  # missMDA MFA
+  expect_equal(sum(is.na(missMDA_MFA(test_set))), 0)
+})
