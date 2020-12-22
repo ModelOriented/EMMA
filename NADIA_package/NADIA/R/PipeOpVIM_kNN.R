@@ -33,8 +33,6 @@
 #'   resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
 #' }
 #' @export
-
-
 PipeOpVIM_kNN <- R6::R6Class("VIM_kNN_imputation",
   lock_objects = FALSE,
   inherit = PipeOpImpute,

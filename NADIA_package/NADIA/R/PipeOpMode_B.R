@@ -27,8 +27,6 @@
 #' }
 #' @importFrom data.table .N
 #' @export
-
-
 PipeOpMode_B = R6::R6Class("Mode_B_imputation",
   inherit = PipeOpImpute,
   public = list(

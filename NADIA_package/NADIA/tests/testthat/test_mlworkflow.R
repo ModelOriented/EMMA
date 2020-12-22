@@ -53,6 +53,7 @@ for (i in imps) {
 
 
   test_that(paste0("Testing imputation with learner", i$id), {
+    skip_on_cran()
     graph <- i %>>% PipeOpEncodeImpact$new() %>>% mlr3learners::LearnerClassifGlmnet$new()
     graph_learner <- GraphLearner$new(graph)
 

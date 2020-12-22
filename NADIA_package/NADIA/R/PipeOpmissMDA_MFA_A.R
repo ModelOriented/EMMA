@@ -42,10 +42,6 @@
 #'   resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
 #' }
 #' @export
-
-
-
-
 PipeOpMissMDA_MFA_A <- R6::R6Class("missMDA_MFAimputation_A",
                                  lock_objects = FALSE,
                                  inherit = PipeOpImpute, # inherit from PipeOp

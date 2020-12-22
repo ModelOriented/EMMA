@@ -28,7 +28,6 @@
 #'   resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
 #' }
 #' @export
-
 PipeOpMedian_B = R6::R6Class("Median_B_imputation",
   inherit = PipeOpImpute,
   public = list(

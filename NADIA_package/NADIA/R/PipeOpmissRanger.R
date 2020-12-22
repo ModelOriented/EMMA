@@ -43,9 +43,6 @@
 #'   resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
 #' }
 #' @export
-
-
-
 PipeOpmissRanger <- R6::R6Class("missRanger_imputation",
   lock_objects = FALSE,
   inherit = PipeOpImpute,

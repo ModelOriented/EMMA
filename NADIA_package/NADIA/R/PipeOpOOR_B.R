@@ -29,7 +29,6 @@
 #'   resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
 #' }
 #' @export
-
 PipeOpOOR_B = R6::R6Class("OOR_B_imputation",
   inherit = PipeOpImpute,
   public = list(

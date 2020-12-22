@@ -49,7 +49,6 @@
 #'   resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
 #' }
 #' @export
-
 PipeOpmissForest <- R6::R6Class("missForest_imputation",
   lock_objects = FALSE,
   inherit = PipeOpImpute, # inherit from PipeOp
