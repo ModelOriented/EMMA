@@ -4,6 +4,7 @@ context("Testing avalible methods in mice.reuse")
 
 
 test_that("Testing mice A methods", {
+  skip_on_cran()
   test_set <- iris
   test_set$Sepal.Length[sample(1:150, 50)] <- NA
   test_set$Species[sample(1:150, 50)] <- NA

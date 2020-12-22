@@ -33,9 +33,6 @@
 #'   resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
 #' }
 #' @export
-
-
-
 PipeOpVIM_regrImp <- R6::R6Class("VIM_regrImp_imputation",
   lock_objects = FALSE,
   inherit = PipeOpImpute, # inherit from PipeOp

@@ -30,7 +30,6 @@
 #'   sum(task_NA$missings()) > 0
 #' }
 #' @export
-
 PipeOpSimulateMissings = R6::R6Class("PipeOpSimulateMissings",
   inherit = mlr3pipelines::PipeOpTaskPreproc,
   lock_objects = FALSE,

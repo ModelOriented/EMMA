@@ -40,9 +40,6 @@
 #'   'diabetes'), graph_learner, rsmp("cv",folds=2))
 #' }
 #' @export
-
-
-
 PipeOpVIM_IRMI <- R6::R6Class("VIM_IRMI_imputation",
   lock_objects = FALSE,
   inherit = PipeOpImpute, # inherit from PipeOp

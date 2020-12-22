@@ -4,7 +4,7 @@ Title: NA Data Imputation Algorithms
 Version: 0.4.1
 Author: Jan Borowski, Piotr Fic
 Maintainer: Jan Borowski <janborowka7@gmail.com>
-Description: Creates a uniform interface for several advanced imputations missing data methods. Every available method can be used as a part of 'mlr3' pipelines which allows easy tuning and performance evaluation. Most of the used functions work separately on the train and test sets ( imputation is trained on the training set and impute training data. After that imputation is again trained on the test set and impute test data).
+Description: Creates a uniform interface for several advanced imputations missing data methods. Every available method can be used as a part of 'mlr3' pipelines which allows easy tuning and performance evaluation. Most of the used functions work separately on the training and test sets (imputation is trained on the training set and impute training data. After that imputation is again trained on the test set and impute test data).
 License: GPL
 Depends:
     mlr3,
@@ -31,5 +31,7 @@ RoxygenNote: 7.1.1.9000
 BugReports: https://github.com/ModelOriented/EMMA/issues
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown, 
+    kableExtra,
+    magrittr
 VignetteBuilder: knitr

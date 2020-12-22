@@ -4,7 +4,7 @@ output: rmarkdown::html_vignette
 bibliography: "biblio.bib"
 link-citations: true
 vignette: >
-  %\VignetteIndexEntry{NADIA_basic_usage}
+  %\VignetteIndexEntry{NADIA examples and motivation}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -63,9 +63,9 @@ install.packages("NADIA")
 
 **mice** [@mice] (Multiple imputation using chain equations) is another popular package to work with missing data. In our implementation, we use linear models to evaluate and improve imputation, **mice** can be used in two possible approaches.
 
-**missMDA** [@missMDA] package implements methods especially useful when u want to use PCA or similar after imputation. Because of the number of methods, imputation from this package was separated into two functions: 
+**missMDA** [@missMDA] package implements methods, especially useful when you want to use PCA or similar after imputation. Because of the number of methods, imputation from this package was separated into two functions:
 
- - First function implements three complementary methods: 
+ - The first function implements three complementary methods:
  
     - *PCA* (Principal Components Analysis) used when data contains only continuous features 
     - *MCA* (Multiple Correspondence Analysis) used when data contains only categorical features 

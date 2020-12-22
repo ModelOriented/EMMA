@@ -6,3 +6,4 @@ NADIA.Rproj
 README.md
 ^\.Rproj\.user$
 ^doc$
+^Meta$

@@ -15,7 +15,6 @@
 #' Identifier of resulting object, default `"impute_sample_B"`.
 #' }
 #' @importFrom data.table .N
-#'
 #' @examples
 #' {
 #'   graph <- PipeOpSample_B$new() %>>% mlr3learners::LearnerClassifGlmnet$new()
@@ -26,7 +25,6 @@
 #'   resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
 #' }
 #' @export
-
 PipeOpSample_B = R6::R6Class("Sample_B_imputation",
   inherit = PipeOpImpute,
   public = list(

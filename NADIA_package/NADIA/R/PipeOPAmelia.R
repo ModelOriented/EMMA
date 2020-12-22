@@ -56,7 +56,6 @@
 #'   resample(tsk("pima"), graph_learner, rsmp("cv", folds = 3))
 #' }
 #' @export
-
 PipeOpAmelia <- R6::R6Class("Amelia_imputation",
   lock_objects = FALSE,
   inherit = PipeOpImpute, # inherit from PipeOp
